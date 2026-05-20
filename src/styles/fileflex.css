@@ -756,7 +756,7 @@ ul { list-style: none; }
    LEARNING CENTRE
    ============================================================ */
 #ff-learning {
-  background: var(--bg-section);
+  background: #2B2E37;
   padding: 90px 5vw;
 }
 
