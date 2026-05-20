@@ -661,6 +661,35 @@ ul { list-style: none; }
   padding: 90px 5vw;
 }
 
+#ff-key .ff-feature-card {
+  text-align: center;
+}
+
+#ff-key .ff-feature-icon {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+#ff-key .ff-feature-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  min-height: 0;
+}
+
+#ff-key .ff-feature-card p {
+  font-size: 16px;
+  color: #ffffff;
+  opacity: 1;
+  line-height: 1.6;
+}
+
+#ff-key .ff-feature-card a.read-more {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--orange);
+}
+
 /* ============================================================
    TECH STACK
    ============================================================ */
