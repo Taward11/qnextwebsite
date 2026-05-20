@@ -628,12 +628,13 @@ ul { list-style: none; }
 }
 
 .ff-feature-card h4 {
-  font-size: 2.15em;
+  font-size: clamp(1.4rem, 1.8vw, 2.15em);
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 15px;
   line-height: 1.2;
   text-align: center;
+  text-wrap: balance;
 }
 
 .ff-feature-card p {
@@ -670,9 +671,10 @@ ul { list-style: none; }
 }
 
 #ff-key .ff-feature-card h4 {
-  font-size: 2.15em;
+  font-size: clamp(1.4rem, 1.8vw, 2.15em);
   font-weight: 700;
   line-height: 1.2;
+  text-wrap: balance;
 }
 
 #ff-key .ff-feature-card p {
