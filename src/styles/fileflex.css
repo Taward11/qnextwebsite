@@ -546,9 +546,29 @@ ul { list-style: none; }
    TRANSFORM / FEATURES SECTION
    ============================================================ */
 #ff-transform {
+  position: relative;
   background: linear-gradient(180deg, rgb(230, 85, 31) 0%, rgb(200, 60, 10) 100%);
   color: #ffffff;
   padding: 100px 5vw;
+  overflow: hidden;
+}
+
+#ff-transform::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -390px;
+  transform: translateX(-50%);
+  width: 140%;
+  height: 460px;
+  background: var(--bg-darkest);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+#ff-transform > * {
+  position: relative;
+  z-index: 1;
 }
 
 #ff-transform .section-title,
