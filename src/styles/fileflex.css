@@ -169,14 +169,14 @@ ul { list-style: none; }
 
 .ff-hero__sub {
   font-size: 1.125rem;
-  color: #B0B0B0;
+  color: var(--white);
   margin-bottom: 2.5rem;
   line-height: 1.75;
 }
 
 .ff-hero__sub strong {
-  color: var(--white);
-  font-weight: 700;
+  color: #e8590a;
+  font-weight: 400;
 }
 
 .ff-btn-play {
