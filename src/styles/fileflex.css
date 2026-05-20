@@ -334,25 +334,26 @@ ul { list-style: none; }
 
 .ff-explore-nav__inner {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  gap: 1.125rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .ff-explore-nav__label {
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 600;
   color: var(--white);
-  white-space: nowrap;
-  flex-shrink: 0;
+  text-align: center;
+  width: 100%;
 }
 
 .ff-explore-nav__links {
   display: flex;
-  gap: 2rem;
+  gap: 50px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .ff-explore-nav__links a {
