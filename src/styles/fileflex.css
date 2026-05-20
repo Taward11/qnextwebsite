@@ -584,8 +584,8 @@ ul { list-style: none; }
 .ff-feature-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 80px;
-  max-width: 1200px;
+  gap: 40px;
+  max-width: 1320px;
   margin: 60px auto;
 }
 
