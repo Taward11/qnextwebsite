@@ -295,6 +295,12 @@ ul { list-style: none; }
   line-height: 1.75;
 }
 
+.ps-col p strong {
+  color: var(--white);
+  font-weight: 100;
+  font-size: 25px;
+}
+
 
 .btn-orange {
   display: inline-block;
