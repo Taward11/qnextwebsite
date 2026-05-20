@@ -188,7 +188,7 @@ ul { list-style: none; }
   font-size: 0.9375rem;
   font-weight: 600;
   padding: 0.9rem 2rem;
-  border-radius: 30px;
+  border-radius: 4px;
   transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
   cursor: pointer;
   border: none;
