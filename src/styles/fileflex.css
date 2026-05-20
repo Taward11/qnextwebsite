@@ -885,7 +885,10 @@ ul { list-style: none; }
   font-size: 14px;
   color: #B0B0B0;
   font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
 }
+
+#ff-footer * { font-family: 'Roboto', sans-serif; }
 
 .ff-footer__cols {
   display: grid;
@@ -915,7 +918,10 @@ ul { list-style: none; }
   margin: 0;
 }
 
-.ff-footer__col ul li { margin-bottom: 15px; }
+.ff-footer__col ul li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
 
 .ff-footer__col ul a {
   font-size: 14px;
