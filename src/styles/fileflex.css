@@ -471,8 +471,8 @@ ul { list-style: none; }
    USE CASES
    ============================================================ */
 #ff-use {
-  background: var(--bg-dark);
-  padding: 90px 5vw;
+  background: #2b2f3a;
+  padding: 90px 5vw 100px;
 }
 
 #ff-use .section-title {
