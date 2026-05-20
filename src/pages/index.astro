@@ -1,351 +1,484 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import '../styles/global.css';
+import '../styles/fileflex.css';
 ---
 
-<Layout title="Qnext Corp — SEO & AI Search for Enterprise">
+<Layout
+  title="FileFlex Enterprise - Securing the Data Layer of Zero Trust"
+  description="FileFlex Enterprise applies Zero Trust Data Access to unstructured data wherever it resides — without migration or VPN."
+>
 
-<a href="#main-content" class="sr-only">Skip to main content</a>
-
-<!-- NAV -->
-<nav aria-label="Main navigation">
-  <a href="/" class="nav-logo" aria-label="Qnext Corp home">Qnext<span>.</span></a>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#opportunity">Why Now</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#proof">Results</a></li>
-    <li><a href="#contact" class="nav-cta" aria-label="Get in contact with Qnext Corp">Get in Touch</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
-    <span></span><span></span><span></span>
-  </button>
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav id="ff-nav" aria-label="Main navigation">
+  <div class="ff-nav__inner">
+    <a href="/" class="ff-nav__logo" aria-label="FileFlex Enterprise home">
+      <img src="https://fileflex.com/wp-content/uploads/2015/03/fileflex-enterprise-logo-small.png" alt="FileFlex Enterprise" />
+    </a>
+    <div class="ff-nav__divider" aria-hidden="true"></div>
+    <span class="ff-nav__tagline">The Genius of Zero Trust Data Access™</span>
+    <ul class="ff-nav__links" id="ff-nav-links">
+      <li><a href="https://fileflex.com/the-challenge/">The Challenge</a></li>
+      <li><a href="https://fileflex.com/platform/">Platform</a></li>
+      <li><a href="https://fileflex.com/security-2/">Security</a></li>
+      <li><a href="https://fileflex.com/partner/">Partner</a></li>
+      <li><a href="https://fileflex.com/contact-us/">Support</a></li>
+      <li><a href="https://fileflex.com/company/blog/">Blog</a></li>
+      <li><a href="https://fileflex.com/fileflex-enterprise/try-plus/" class="ff-nav__cta">Try FileFlex</a></li>
+    </ul>
+    <button class="ff-nav__hamburger" id="ff-hamburger" aria-expanded="false" aria-controls="ff-nav-links" aria-label="Toggle navigation">
+      &#9776;
+    </button>
+  </div>
 </nav>
 
-<!-- HERO -->
-<main id="main-content">
-<section id="hero" aria-labelledby="hero-heading">
-  <div class="hero-bg" aria-hidden="true"></div>
-  <div class="hero-grid" aria-hidden="true"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow" aria-label="Enterprise SEO and AI Search Agency">Enterprise SEO &amp; AI Search Agency</div>
-    <h1 id="hero-heading">
-      Be found where<br />
-      your buyers <em>actually</em><br />
-      search today.
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="ff-hero" aria-labelledby="ff-hero-heading">
+  <div class="ff-hero__content">
+    <h1 id="ff-hero-heading">
+      Secure the <span class="text-orange"><em>Data Layer</em></span><br />
+      of Zero Trust
     </h1>
-    <p class="hero-sub">
-      Traditional SEO isn't enough anymore. Your Fortune 500 competitors are already optimizing for ChatGPT, Perplexity, and Google AI Overviews. Qnext Corp makes sure you're there first.
+    <p class="ff-hero__sub">
+      <strong>80% of All Corporate Data is Unstructured:</strong><br />
+      Identity Locked | Network Locked | Application Locked<br />
+      Data Remains <span class="underline">Wide Open</span>
     </p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Get a Strategy Brief</a>
-      <a href="#services" class="btn-ghost">See Our Services</a>
-    </div>
-    <div class="hero-trust">
-      <span class="hero-trust-label">Trusted by enterprise teams at</span>
-      <div class="trust-logos" aria-label="Client industries">
-        <span class="trust-logo">Financial Services</span>
-        <span class="trust-logo">Healthcare</span>
-        <span class="trust-logo">Technology</span>
-        <span class="trust-logo">Manufacturing</span>
-        <span class="trust-logo">Retail</span>
-      </div>
-    </div>
+    <button class="ff-btn-play" id="ff-play-btn" aria-label="Watch: The Missing Security Layer That Truly Matters">
+      <span class="play-icon" aria-hidden="true"></span>
+      Watch: The Missing Security Layer That Truly Matters
+    </button>
   </div>
 </section>
 
-<!-- OPPORTUNITY -->
-<section id="opportunity" aria-labelledby="opp-heading">
-  <div class="opp-grid">
-    <div>
-      <p class="section-label">The Shift Has Happened</p>
-      <h2 id="opp-heading">Search changed.<br /><em>Most enterprises haven't.</em></h2>
-      <p class="section-sub">
-        Over half of all searches now end without a click. AI answers are displacing traditional results. The companies winning attention are those built for both — and the window to act is closing.
-      </p>
-      <a href="#contact" class="btn-primary">Talk to a Strategist</a>
-    </div>
-    <div class="opp-stats fade-up" aria-label="Key industry statistics">
-      <div class="opp-stat">
-        <div class="opp-stat-num">62%</div>
-        <div class="opp-stat-label">of enterprise search queries now trigger an AI Overview before organic results</div>
-      </div>
-      <div class="opp-stat">
-        <div class="opp-stat-num">3.4×</div>
-        <div class="opp-stat-label">higher pipeline conversion for brands appearing in AI-generated answers</div>
-      </div>
-      <div class="opp-stat">
-        <div class="opp-stat-num">58%</div>
-        <div class="opp-stat-label">of B2B buyers use AI chat tools before ever contacting a vendor</div>
-      </div>
-      <div class="opp-stat">
-        <div class="opp-stat-num">90</div>
-        <div class="opp-stat-label">days — typical time to establish AI search authority in a new vertical</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" aria-labelledby="services-heading">
-  <p class="section-label">What We Do</p>
-  <h2 id="services-heading">Full-spectrum visibility.<br /><em>Every surface. Every engine.</em></h2>
-  <p class="section-sub">We combine deep technical SEO with forward-looking AI search strategy — so your brand dominates both what is and what's coming.</p>
-
-  <div class="services-grid fade-up">
-    <article class="service-card">
-      <div class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      </div>
-      <h3>Technical SEO at Scale</h3>
-      <p>Enterprise-grade crawl optimization, Core Web Vitals, structured data architecture, and international SEO for complex, multi-domain environments.</p>
-    </article>
-    <article class="service-card">
-      <div class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/><path d="M18 2v4h4"/></svg>
-      </div>
-      <h3>AI Search Optimization</h3>
-      <p>Position your brand as the authoritative source cited in ChatGPT, Perplexity, Gemini, and Google AI Overviews — where buyer intent is highest.</p>
-    </article>
-    <article class="service-card">
-      <div class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
-      </div>
-      <h3>Content Strategy &amp; Authority</h3>
-      <p>Topical authority mapping, expert-driven content programs, and entity optimization that signals expertise to both algorithms and AI models.</p>
-    </article>
-    <article class="service-card">
-      <div class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-      </div>
-      <h3>Competitive Intelligence</h3>
-      <p>Real-time visibility tracking across traditional SERP and AI surfaces. Know exactly where you stand and where your competitors are gaining ground.</p>
-    </article>
-    <article class="service-card">
-      <div class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-      </div>
-      <h3>Digital PR &amp; Link Acquisition</h3>
-      <p>High-authority link building and digital PR campaigns that strengthen domain authority and amplify your brand's trustworthiness signals at scale.</p>
-    </article>
-    <article class="service-card">
-      <div class="service-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      </div>
-      <h3>Executive Advisory</h3>
-      <p>Dedicated senior strategists embedded with your marketing leadership. Quarterly roadmaps, board-ready reporting, and direct access when it matters.</p>
-    </article>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process" aria-labelledby="process-heading">
-  <p class="section-label">How We Work</p>
-  <h2 id="process-heading">From audit to <em>authority</em> in 90 days.</h2>
-  <p class="section-sub">A proven enterprise onboarding track that moves fast without cutting corners.</p>
-  <div class="process-steps fade-up">
-    <div class="process-step">
-      <div class="step-num">01</div>
-      <h3>Discovery &amp; Audit</h3>
-      <p>We map your current technical health, content gaps, competitive landscape, and AI search presence across every major platform.</p>
-    </div>
-    <div class="process-step">
-      <div class="step-num">02</div>
-      <h3>Strategy &amp; Roadmap</h3>
-      <p>A prioritized 90-day roadmap aligned with your revenue targets — no vanity metrics, only initiatives that move pipeline.</p>
-    </div>
-    <div class="process-step">
-      <div class="step-num">03</div>
-      <h3>Execution</h3>
-      <p>Our team deploys in parallel streams: technical fixes, content production, link acquisition, and AI optimization simultaneously.</p>
-    </div>
-    <div class="process-step">
-      <div class="step-num">04</div>
-      <h3>Measure &amp; Scale</h3>
-      <p>Monthly reporting tied to business outcomes. We identify what's compounding and double down — then expand to new channels and markets.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PROOF -->
-<section id="proof" aria-labelledby="proof-heading">
-  <p class="section-label">Client Results</p>
-  <h2 id="proof-heading">The kind of outcomes<br /><em>CFOs notice.</em></h2>
-  <p class="section-sub">Real results from enterprise engagements. Details anonymized at client request.</p>
-
-  <div class="proof-grid fade-up">
-    <article class="proof-card">
-      <p class="proof-quote">Qnext didn't just improve our rankings — they repositioned our entire brand in the AI search ecosystem. Within six months we were the cited source in ChatGPT responses for our core category.</p>
-      <div class="proof-author">
-        <div class="proof-avatar" aria-hidden="true">CM</div>
-        <div>
-          <p class="proof-name">Chief Marketing Officer</p>
-          <p class="proof-title">Global Financial Services Firm</p>
+<!-- ============================================================
+     PROBLEM / SOLUTION
+     ============================================================ -->
+<section id="ff-problem" aria-labelledby="ff-problem-heading">
+  <h2 id="ff-problem-heading" class="section-title white">
+    Hackers Don't <u>Steal</u> Your Network.<br />
+    <span class="text-orange">They <u>Steal</u> Your Data.</span>
+  </h2>
+  <div class="ps-grid">
+    <div class="ps-col">
+      <div class="ps-row">
+        <div class="ps-text">
+          <h3 class="text-orange">The Problem:</h3>
+          <p class="white">
+            Today's Zero Trust Security Infrastructure Falls Short.
+            Today Zero Trust compliance stops at identity, networks, and applications.
+            Unstructured Data remains at risk.
+          </p>
+        </div>
+        <div class="ps-media">
+          <img src="https://fileflex.com/wp-content/uploads/2026/01/Screenshot__654_-removebg-preview.png" alt="The problem — unstructured data is exposed" loading="lazy" />
         </div>
       </div>
-    </article>
-    <article class="proof-card">
-      <p class="proof-quote">The technical depth is unlike any agency we've worked with. They fixed issues our internal team had flagged for years — and the impact on organic revenue was immediate and measurable.</p>
-      <div class="proof-author">
-        <div class="proof-avatar" aria-hidden="true">VP</div>
-        <div>
-          <p class="proof-name">VP of Digital Growth</p>
-          <p class="proof-title">Fortune 200 Healthcare System</p>
+    </div>
+    <div class="ps-col">
+      <div class="ps-row">
+        <div class="ps-text">
+          <h3 class="text-orange">The Solution:</h3>
+          <p class="white">
+            <strong>Zero Trust Data Security.</strong><br />
+            Zero Trust Data Access completes your Zero Trust strategy in the data layer.
+            It applies least privilege, just-in-time, and governance controls directly
+            to files wherever they reside — without moving them.
+          </p>
+          <a href="https://fileflex.com/blog/the-zero-trust-data-gap/" class="btn-orange">Learn More</a>
+        </div>
+        <div class="ps-media">
+          <img src="https://fileflex.com/wp-content/uploads/2026/01/this_too-removebg-preview.png" alt="The solution — Zero Trust Data Access" loading="lazy" />
         </div>
       </div>
-    </article>
-    <article class="proof-card">
-      <p class="proof-quote">Board-ready reporting, proactive strategy, and a team that genuinely understands enterprise complexity. Qnext operates like an extension of our in-house team — not a vendor.</p>
-      <div class="proof-author">
-        <div class="proof-avatar" aria-hidden="true">DG</div>
-        <div>
-          <p class="proof-name">Director of Growth</p>
-          <p class="proof-title">Enterprise SaaS, Series D</p>
-        </div>
-      </div>
-    </article>
-  </div>
-
-  <div class="result-banner fade-up" style="margin-top:1.5rem;" aria-label="Aggregate client results">
-    <div class="result-item">
-      <span class="result-num">+340%</span>
-      <span class="result-label">Average organic traffic growth</span>
-    </div>
-    <div class="result-divider" aria-hidden="true"></div>
-    <div class="result-item">
-      <span class="result-num">6.2×</span>
-      <span class="result-label">Average ROI on engagement</span>
-    </div>
-    <div class="result-divider" aria-hidden="true"></div>
-    <div class="result-item">
-      <span class="result-num">87%</span>
-      <span class="result-label">Clients achieve AI citation within 90 days</span>
-    </div>
-    <div class="result-divider" aria-hidden="true"></div>
-    <div class="result-item">
-      <span class="result-num">48hr</span>
-      <span class="result-label">Average response time for senior strategy</span>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" aria-labelledby="contact-heading">
-  <div class="contact-wrap">
-    <div class="contact-left">
-      <p class="section-label">Let's Talk</p>
-      <h2 id="contact-heading">Ready to lead<br /><em>your category</em>?</h2>
-      <p class="section-sub">Tell us about your business and we'll respond within one business day with a tailored assessment.</p>
-      <ul class="contact-features" aria-label="What to expect">
-        <li>
-          <div class="cf-check" aria-hidden="true"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div>
-          <span>Senior strategist assigned — not an account coordinator</span>
-        </li>
-        <li>
-          <div class="cf-check" aria-hidden="true"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div>
-          <span>Preliminary AI search audit included with first meeting</span>
-        </li>
-        <li>
-          <div class="cf-check" aria-hidden="true"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div>
-          <span>Strict NDA available before any information is shared</span>
-        </li>
-        <li>
-          <div class="cf-check" aria-hidden="true"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div>
-          <span>No long-term commitment required for initial engagement</span>
-        </li>
+<!-- ============================================================
+     EXPLORE NAV BAR
+     ============================================================ -->
+<div class="ff-explore-nav" aria-label="Page section navigation">
+  <div class="ff-explore-nav__inner">
+    <span class="ff-explore-nav__label">Explore FileFlex Enterprise</span>
+    <nav class="ff-explore-nav__links">
+      <a href="#ff-meet">Meet FileFlex Enterprise</a>
+      <a href="#ff-use">Use Cases</a>
+      <a href="#ff-transform">Transform Data Workflows</a>
+      <a href="#ff-key">Key Capabilities</a>
+      <a href="#ff-learning">Learning Centre</a>
+    </nav>
+  </div>
+</div>
+
+<!-- ============================================================
+     MEET FILEFLEX ENTERPRISE
+     ============================================================ -->
+<section id="ff-meet" aria-labelledby="ff-meet-heading">
+  <div class="ff-meet__wrap">
+    <h2 id="ff-meet-heading" class="ff-meet__title">
+      Meet FileFlex Enterprise: An easy to implement overlay service that applies Zero Trust Data Access to the data layer.
+    </h2>
+    <figure class="ff-meet__img">
+      <img src="https://fileflex.com/wp-content/uploads/2015/03/new-image.jpg" alt="FileFlex Enterprise Platform" loading="lazy" />
+    </figure>
+    <div class="ff-meet__cols">
+      <div class="ff-meet__col">
+        <h3 class="ff-meet__kicker">What it is</h3>
+        <ul class="ff-meet__list">
+          <li><strong>FileFlex Enterprise</strong> is a data security and productivity platform that overlays your existing infrastructure. It federates access across on-premises, Cloud, SharePoint, FTP, and NAS storage, enforcing Zero Trust Data Access policies without data migration.</li>
+          <li>Overlay service for hybrid data storage environments</li>
+          <li>Zero Trust enforcement at the unstructured data layer</li>
+          <li>Secure access, sharing, and collaboration without data duplication</li>
+          <li>Supports modern workflows like Virtual Data Rooms, large file access, and legacy system integration</li>
+        </ul>
+      </div>
+      <div class="ff-meet__col">
+        <h3 class="ff-meet__kicker">Zero Trust Access for Unstructured Data</h3>
+        <ul class="ff-meet__list ff-meet__list--tight">
+          <li><strong>Built for Zero Trust Data</strong><br /><span class="ff-meet__sub">A true Zero Trust platform and modern replacement for VPNs.</span></li>
+          <li><strong>Access data, not infrastructure</strong><br /><span class="ff-meet__sub">Users see only the files they're authorized to use — nothing more.</span></li>
+          <li><strong>Data never moves</strong><br /><span class="ff-meet__sub">No copying, syncing, or migration. Lower costs. No data sprawl.</span></li>
+          <li><strong>End-to-end encrypted</strong><br /><span class="ff-meet__sub">Encrypted in transit, never at rest outside the source.</span></li>
+          <li><strong>Full visibility and auditability</strong><br /><span class="ff-meet__sub">Real-time logging of every file transaction, anywhere.</span></li>
+          <li><strong>Plug-and-play Windows integration</strong><br /><span class="ff-meet__sub">Driver-level integration delivers seamless Zero Trust Data Access.</span></li>
+          <li><strong>Total control. Fast deployment.</strong><br /><span class="ff-meet__sub">100% centralized control over unstructured data — installed in a day.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ff-meet__cta">
+      <a href="https://fileflex.com/platform/" class="ff-btn ff-btn--orange">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     USE CASES
+     ============================================================ -->
+<section id="ff-use" aria-labelledby="ff-use-heading">
+  <div style="max-width:1100px; margin:0 auto;">
+    <h2 id="ff-use-heading" class="section-title">Trusted by Organizations to Deliver Real Outcomes</h2>
+    <nav class="ff-accordion" aria-label="Use case examples">
+      <div class="ff-accordion-item">
+        <a href="https://fileflex.com/financial-services/" class="ff-accordion-link">
+          <h3><strong>A Financial Institution:</strong> Zero Trust Virtual Data Rooms to centralize and secure mortgage workflows.</h3>
+          <span class="ff-accordion-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+      <div class="ff-accordion-item">
+        <a href="https://fileflex.com/nuclear-power-authority/" class="ff-accordion-link">
+          <h3><strong>A Nuclear Power Utility:</strong> FileFlex Zero Trust Data Access secures access to large technical libraries stored on legacy FTP servers.</h3>
+          <span class="ff-accordion-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+      <div class="ff-accordion-item">
+        <a href="https://fileflex.com/law-firm/" class="ff-accordion-link">
+          <h3><strong>A Law Firm:</strong> Low-cost, zero-trust data access to sensitive case files on legacy NAS devices.</h3>
+          <span class="ff-accordion-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+      <div class="ff-accordion-item">
+        <a href="https://fileflex.com/landscape-architecture-firm/" class="ff-accordion-link">
+          <h3><strong>A Landscape Architecture Firm:</strong> Fast, secure Zero Trust Data Access to massive project files without risky sync or cloud migration.</h3>
+          <span class="ff-accordion-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+      <div class="ff-accordion-item">
+        <a href="https://fileflex.com/hospital/" class="ff-accordion-link">
+          <h3><strong>A Hospital:</strong> Protecting Access and Sharing of Personal Health Information with ZTDA for Windows.</h3>
+          <span class="ff-accordion-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<!-- ============================================================
+     TRANSFORM DATA WORKFLOWS
+     ============================================================ -->
+<section id="ff-transform" aria-labelledby="ff-transform-heading">
+  <div style="max-width:1200px; margin:0 auto;">
+    <h2 id="ff-transform-heading" class="section-title">Transforming Data Workflows with Zero Trust Data Access</h2>
+    <div class="ff-feature-grid">
+      <div class="ff-feature-card">
+        <div class="ff-feature-icon">
+          <img src="https://fileflex.com/wp-content/uploads/2015/03/cola.png" alt="" aria-hidden="true" loading="lazy" />
+        </div>
+        <h4>Collaboration &amp; Sharing</h4>
+        <p>Secures internal and external collaboration without duplication or risky email attachments.</p>
+        <a href="https://fileflex.com/blog/top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business/" class="read-more">Read More →</a>
+      </div>
+      <div class="ff-feature-card">
+        <div class="ff-feature-icon">
+          <img src="https://fileflex.com/wp-content/uploads/2015/03/zero.png" alt="" aria-hidden="true" loading="lazy" />
+        </div>
+        <h4>Zero Trust Virtual Data Rooms</h4>
+        <p>Governed environments for sensitive workflows like mortgage approvals and M&amp;A. Reduce/Replace VPN with Zero Trust Data Access.</p>
+        <a href="https://fileflex.com/blog/top-13-reasons-to-adopt-zero-trust-secure-virtual-data-rooms/" class="read-more">Read More →</a>
+      </div>
+      <div class="ff-feature-card">
+        <div class="ff-feature-icon">
+          <img src="https://fileflex.com/wp-content/uploads/2015/03/ftp.png" alt="" aria-hidden="true" loading="lazy" />
+        </div>
+        <h4>FTP / MFP Replacement</h4>
+        <p>Modernize legacy file transfer systems with Zero Trust Data Access secure access.</p>
+        <a href="https://fileflex.com/blog/24-reasons-to-use-zero-trust-data-access-as-an-ftp-alternative/" class="read-more">Read More →</a>
+      </div>
+      <div class="ff-feature-card">
+        <div class="ff-feature-icon">
+          <img src="https://fileflex.com/wp-content/uploads/2015/03/reducw.png" alt="" aria-hidden="true" loading="lazy" />
+        </div>
+        <h4>Replace VPN</h4>
+        <p>A VPN alternative that delivers an IT-controlled chain of command using Zero Trust Data Access.</p>
+        <a href="https://fileflex.com/blog/a-vpn-alternative-zero-trust-data-access/" class="read-more">Read More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     KEY CAPABILITIES
+     ============================================================ -->
+<section id="ff-key" aria-labelledby="ff-key-heading">
+  <div style="max-width:1200px; margin:0 auto;">
+    <h2 id="ff-key-heading" class="section-title">Key Capabilities</h2>
+    <div class="ff-feature-grid">
+      <div class="ff-feature-card">
+        <div class="ff-feature-icon">
+          <img src="https://fileflex.com/wp-content/uploads/2026/01/im.png" alt="" aria-hidden="true" loading="lazy" />
+        </div>
+        <h4>Data Governance</h4>
+        <p>Maintain complete control over your organization's data — where it lives, who can access it, and what they can do with it — through centralized policies and on-demand auditability.</p>
+        <a href="https://fileflex.com/blog/data-governance-cybersecurity-and-zero-trust-data-access-the-essential-pillars-to-protect-data-assets/" class="read-more">Read More →</a>
+      </div>
+      <div class="ff-feature-card">
+        <div class="ff-feature-icon">
+          <img src="https://fileflex.com/wp-content/uploads/2026/01/img.png" alt="" aria-hidden="true" loading="lazy" />
+        </div>
+        <h4>Regulatory Compliance</h4>
+        <p>Reduces compliance risk by enforcing least-privilege access and providing detailed audit trails that align with GDPR, HIPAA, DORA, FFIEC, GLBA, NIST, CMMC and other standards.</p>
+        <a href="https://fileflex.com/blog/zero-trust-and-regulatory-compliance/" class="read-more">Read More →</a>
+      </div>
+      <div class="ff-feature-card">
+        <div class="ff-feature-icon">
+          <img src="https://fileflex.com/wp-content/uploads/2026/01/imga.png" alt="" aria-hidden="true" loading="lazy" />
+        </div>
+        <h4>Federated Hybrid Access</h4>
+        <p>Single-pane-of-glass access to files across on-premises storage, private cloud, legacy systems, and remote offices — without migration, VPNs, or network exposure.</p>
+        <a href="https://fileflex.com/blog/federated-hybrid-access-why-modern-organizations-cant-afford-to-ignore-it/" class="read-more">Read More →</a>
+      </div>
+      <div class="ff-feature-card">
+        <div class="ff-feature-icon">
+          <img src="https://fileflex.com/wp-content/uploads/2026/01/imgag.png" alt="" aria-hidden="true" loading="lazy" />
+        </div>
+        <h4>Complete Zero Trust Security</h4>
+        <p>Protects sensitive data with true Zero Trust Data Access — verifying every user, device, and request while ensuring files are never copied, synced, or exposed beyond policy.</p>
+        <a href="https://fileflex.com/blog/complete-zero-trust-security-framework/" class="read-more">Read More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TECH STACK
+     ============================================================ -->
+<section id="ff-tech" aria-labelledby="ff-tech-heading">
+  <h2 id="ff-tech-heading" class="ff-tech__title">
+    Seamlessly Extends Your Existing Zero Trust Stack to the Data Layer,<br />Where Breaches Actually Happen.
+  </h2>
+  <div class="ff-logo-grid">
+    <a href="https://fileflex.com/blog/top-reasons-to-add-zero-trust-data-access-to-illumio-core/" target="_blank" rel="noopener" aria-label="Illumio integration">
+      <img src="https://fileflex.com/wp-content/uploads/2025/12/Illumio-logo-grey.png" alt="Illumio" class="partner-logo" loading="lazy" />
+    </a>
+    <a href="https://fileflex.com/blog/achieving-end-to-end-zero-trust-with-zscaler-and-fileflex/" target="_blank" rel="noopener" aria-label="Zscaler integration">
+      <img src="https://fileflex.com/wp-content/uploads/2025/12/zscaler-logo-grey.png" alt="Zscaler" class="partner-logo" loading="lazy" />
+    </a>
+    <a href="https://fileflex.com/blog/extending-cisco-zero-trust-from-access-to-data/" target="_blank" rel="noopener" aria-label="Cisco integration">
+      <img src="https://fileflex.com/wp-content/uploads/2025/12/Cisco-logo-grey.png" alt="Cisco" class="partner-logo" loading="lazy" />
+    </a>
+    <a href="https://fileflex.com/blog/top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity/" target="_blank" rel="noopener" aria-label="Palo Alto Networks integration">
+      <img src="https://fileflex.com/wp-content/uploads/2025/12/Palo-Alto-logo-grey.png" alt="Palo Alto Networks" class="partner-logo" loading="lazy" />
+    </a>
+    <a href="https://fileflex.com/blog/extending-microsoft-entra-zero-trust-to-protect-your-data-with-zero-trust-data-access/" target="_blank" rel="noopener" aria-label="Microsoft integration">
+      <img src="https://fileflex.com/wp-content/uploads/2025/12/Microsoft-logo-grey.png" alt="Microsoft" class="partner-logo" loading="lazy" />
+    </a>
+    <a href="https://fileflex.com/blog/cloudflare-one-and-fileflex-enterprise-securing-apps-and-data-together/" target="_blank" rel="noopener" aria-label="Cloudflare integration">
+      <img src="https://fileflex.com/wp-content/uploads/2026/01/cloudfare.webp" alt="Cloudflare" class="partner-logo" loading="lazy" />
+    </a>
+  </div>
+</section>
+
+<!-- ============================================================
+     LEARNING CENTRE
+     ============================================================ -->
+<section id="ff-learning" aria-labelledby="ff-learning-heading">
+  <div style="max-width:1100px; margin:0 auto;">
+    <h2 id="ff-learning-heading" class="section-title">Learning Centre: ZTDA Deep Resources</h2>
+    <div class="ff-resource-grid">
+      <div class="ff-resource-col">
+        <div class="ff-resource-item">
+          <h4><a href="https://fileflex.com/blog/what-is-zero-trust-data-access-ztda/" target="_blank" rel="noopener">What is Zero Trust Data Access (ZTDA)?</a></h4>
+        </div>
+        <div class="ff-resource-item">
+          <h4><a href="https://fileflex.com/blog/the-zero-trust-data-gap/" target="_blank" rel="noopener">The Zero Trust Data Gap: Closing the Blind Spot in Modern Security Architectures</a></h4>
+        </div>
+      </div>
+      <div class="ff-resource-col">
+        <div class="ff-resource-item">
+          <h4><a href="https://fileflex.com/blog/complete-zero-trust-security-framework/" target="_blank" rel="noopener">How to Build a Complete Zero Trust Security Framework</a></h4>
+        </div>
+        <div class="ff-resource-item">
+          <h4><a href="https://fileflex.com/blog/the-zero-trust-maturity-model-ztmm-and-why-ztda-is-critical-to-reaching-optimal-maturity/" target="_blank" rel="noopener">The Zero Trust Maturity Model and the Role of ZTDA</a></h4>
+        </div>
+      </div>
+      <div class="ff-resource-col">
+        <div class="ff-resource-item">
+          <h4><a href="https://fileflex.com/blog/modernize-on-premises-storage-with-zero-trust-data-access/" target="_blank" rel="noopener">Modernize On-Premises Storage with Zero Trust Data Access</a></h4>
+        </div>
+        <div class="ff-resource-item">
+          <h4><a href="https://fileflex.com/blog/meeting-ffiec-guidelines-using-zero-trust-data-access/" target="_blank" rel="noopener">Zero Trust for FFIEC Compliance: Why ZTDA is the Missing Link</a></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FINAL CTA
+     ============================================================ -->
+<section id="ff-cta" aria-labelledby="ff-cta-heading">
+  <h2 id="ff-cta-heading" class="ff-cta__title">Launch a governed workflow in days – not months.</h2>
+  <div class="ff-cta__actions">
+    <a href="https://fileflex.com/demo-request/" target="_blank" class="ff-cta__btn">Book a Demo</a>
+    <a href="https://fileflex.com/fileflex-enterprise/temp/" target="_blank" class="ff-cta__btn">Launch a Pilot</a>
+    <a href="https://fileflex.com/pricing/" target="_blank" class="ff-cta__btn">Get a Quote</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer id="ff-footer" role="contentinfo">
+  <div class="ff-footer__cols">
+    <div class="ff-footer__col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="https://fileflex.com/new-company-page/">Company</a></li>
+        <li><a href="https://fileflex.com/company/media-relations-qnext/">Media Relations</a></li>
+        <li><a href="https://fileflex.com/company/blog/">Blog</a></li>
+        <li><a href="https://fileflex.com/blog/company/news/">News</a></li>
+        <li><a href="https://fileflex.com/company/careers/">Careers</a></li>
+        <li><a href="https://fileflex.com/webinars/">Webinars</a></li>
       </ul>
     </div>
-    <div>
-      <form class="contact-form" action="#" method="post" aria-labelledby="contact-heading" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first_name" placeholder="Jane" required autocomplete="given-name" />
-          </div>
-          <div class="form-group">
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last_name" placeholder="Smith" required autocomplete="family-name" />
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email">Work Email</label>
-          <input type="email" id="email" name="email" placeholder="jane@company.com" required autocomplete="email" />
-        </div>
-        <div class="form-group">
-          <label for="company">Company</label>
-          <input type="text" id="company" name="company" placeholder="Acme Corporation" autocomplete="organization" />
-        </div>
-        <div class="form-group">
-          <label for="role">Your Role</label>
-          <select id="role" name="role">
-            <option value="" disabled selected>Select your role</option>
-            <option>C-Suite / Executive</option>
-            <option>VP / Director</option>
-            <option>Head of Marketing / SEO</option>
-            <option>Digital / Growth Lead</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">What are you trying to solve?</label>
-          <textarea id="message" name="message" placeholder="Tell us about your current SEO challenges, goals, or what prompted you to reach out..."></textarea>
-        </div>
-        <button type="submit" class="form-submit">Send My Brief &rarr;</button>
-        <p class="form-note">No spam. No unsolicited follow-up calls. We respond within 1 business day.</p>
-      </form>
+    <div class="ff-footer__col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="https://fileflex.com/platform-2025/">Platform 2025</a></li>
+        <li><a href="https://fileflex.com/security-2025/">Security Features</a></li>
+        <li><a href="https://fileflex.com/the-challenge/">The Challenge</a></li>
+        <li><a href="https://fileflex.com/virtual-learning-centre/">Virtual Learning Centre</a></li>
+        <li><a href="https://fileflex.com/partner/">Partner</a></li>
+        <li><a href="https://fileflex.com/fileflex-enterprise/temp/">Try FileFlex Enterprise</a></li>
+        <li><a href="https://fileflex.com/pricing/">Pricing</a></li>
+      </ul>
+    </div>
+    <div class="ff-footer__col">
+      <h4>Features</h4>
+      <ul>
+        <li><a href="https://fileflex.com/manufacturing/">Manufacturing</a></li>
+        <li><a href="https://fileflex.com/government-and-military-contractors-2/">Government &amp; Military</a></li>
+        <li><a href="https://fileflex.com/architecture-engineering/">Architecture &amp; Engineering</a></li>
+        <li><a href="https://fileflex.com/law-firms/">Law Firms</a></li>
+        <li><a href="https://fileflex.com/accounting-and-consulting-firm/">Accounting &amp; Consulting</a></li>
+        <li><a href="https://fileflex.com/healthcare/">Healthcare</a></li>
+        <li><a href="https://fileflex.com/gdpr-compliance/">GDPR Compliance</a></li>
+        <li><a href="https://fileflex.com/hipaa-compliance/">HIPAA Compliance</a></li>
+      </ul>
+    </div>
+    <div class="ff-footer__col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="https://fileflex.com/contact-us/">Contact Us</a></li>
+        <li><a href="https://help.fileflex.com/" target="_blank" rel="noopener">Help Center ↗</a></li>
+        <li><a href="https://fileflex.com/support/faqs/">FAQs</a></li>
+        <li><a href="https://fileflex.com/knowledge-base/">Knowledge Base</a></li>
+        <li><a href="https://fileflex.com/downloads/">Client &amp; Connector Downloads</a></li>
+      </ul>
     </div>
   </div>
-</section>
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <a href="/" class="footer-logo" aria-label="Qnext Corp home">Qnext<span>.</span>Corp</a>
-  <p>&copy; 2025 Qnext Corp. All rights reserved.</p>
-  <nav aria-label="Footer navigation">
-    <ul class="footer-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#proof">Results</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="ff-footer__bottom">
+    <div class="ff-footer__logo-wrap">
+      <a href="https://fileflex.com/new-company-page/" class="ff-footer__logo" aria-label="Qnext Corp">
+        <img src="https://fileflex.com/wp-content/uploads/2015/03/qnextlogofooter.png" alt="Qnext Corp" loading="lazy" />
+      </a>
+      <span class="ff-footer__copy">Copyright &copy; Qnext Corp. All rights reserved.</span>
+    </div>
+    <div class="ff-footer__legal">
+      <a href="https://fileflex.com/terms-of-service">Legal</a>
+      <span>|</span>
+      <a href="https://fileflex.com/privacy-policy/">Privacy Policy</a>
+      <span>|</span>
+      <a href="https://fileflex.com/license-agreement/">License Agreement</a>
+    </div>
+    <div class="ff-footer__social" aria-label="Social media links">
+      <a href="https://www.facebook.com/fileflexenterprise" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://twitter.com/fileflex_" target="_blank" rel="noopener" aria-label="X / Twitter">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4l16 16M20 4 4 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/company/qnext/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://www.youtube.com/channel/UC4IZccCXCrkznADmg4NFz-w" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58a2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#111"/></svg>
+      </a>
+    </div>
+  </div>
 </footer>
+
+<!-- ============================================================
+     VIDEO MODAL
+     ============================================================ -->
+<div class="ff-modal-overlay" id="ff-modal" role="dialog" aria-modal="true" aria-label="Video player">
+  <div class="ff-modal">
+    <button class="ff-modal-close" id="ff-modal-close" aria-label="Close video">&times;</button>
+    <iframe id="ff-modal-iframe" src="" title="The Missing Security Layer That Truly Matters" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
 
 </Layout>
 
 <script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
-  hamburger.addEventListener('click', () => {
-    const open = navLinks.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', open);
-  });
-  navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-    });
+  const hamburger = document.getElementById('ff-hamburger');
+  const navLinks = document.getElementById('ff-nav-links');
+  hamburger?.addEventListener('click', () => {
+    const open = navLinks?.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(open));
   });
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-  }, { threshold: 0.12 });
+  const playBtn = document.getElementById('ff-play-btn');
+  const modal = document.getElementById('ff-modal');
+  const modalClose = document.getElementById('ff-modal-close');
+  const iframe = document.getElementById('ff-modal-iframe') as HTMLIFrameElement;
 
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
-    });
+  playBtn?.addEventListener('click', () => {
+    if (iframe) iframe.src = 'https://www.youtube-nocookie.com/embed/_9K6-YxINTQ?autoplay=1&rel=0&modestbranding=1';
+    modal?.classList.add('active');
+    document.body.style.overflow = 'hidden';
   });
 
-  document.querySelector('.contact-form').addEventListener('submit', e => {
-    e.preventDefault();
-    const btn = e.target.querySelector('.form-submit');
-    btn.textContent = 'Message Sent \u2713';
-    btn.style.background = '#00b89a';
-    btn.disabled = true;
-  });
+  function closeModal() {
+    modal?.classList.remove('active');
+    if (iframe) iframe.src = '';
+    document.body.style.overflow = '';
+  }
+
+  modalClose?.addEventListener('click', closeModal);
+  modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 </script>
