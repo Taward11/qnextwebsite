@@ -618,6 +618,7 @@ ul { list-style: none; }
   color: #ffffff;
   margin-bottom: 15px;
   line-height: 1.2;
+  text-align: center;
 }
 
 .ff-feature-card p {
