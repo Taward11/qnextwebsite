@@ -410,10 +410,11 @@ ul { list-style: none; }
 }
 
 .ff-meet__kicker {
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: 700;
-  color: var(--orange);
-  margin-bottom: 1rem;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 12px;
 }
 
 .ff-meet__list {
