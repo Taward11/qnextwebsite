@@ -370,8 +370,9 @@ ul { list-style: none; }
    MEET FILEFLEX
    ============================================================ */
 #ff-meet {
-  background: var(--bg-section);
+  background: #ffffff;
   padding: 90px 5vw;
+  color: #1a1a1a;
 }
 
 .ff-meet__wrap {
@@ -382,7 +383,7 @@ ul { list-style: none; }
 .ff-meet__title {
   font-size: clamp(1.3rem, 2.5vw, 1.8rem);
   font-weight: 700;
-  color: var(--white);
+  color: #1a1a1a;
   line-height: 1.4;
   margin-bottom: 2.5rem;
   text-align: center;
@@ -425,7 +426,7 @@ ul { list-style: none; }
 
 .ff-meet__list li {
   font-size: 0.9rem;
-  color: var(--text);
+  color: #1a1a1a;
   line-height: 1.65;
   padding-left: 1.25rem;
   position: relative;
@@ -443,7 +444,7 @@ ul { list-style: none; }
 }
 
 .ff-meet__sub {
-  color: var(--muted);
+  color: #555;
   font-size: 0.85rem;
 }
 
