@@ -15,7 +15,9 @@
   --text: #e0e0e0;
   --muted: #aaaaaa;
   --border: rgba(255,255,255,0.1);
-  --font: 'Inter', sans-serif;
+  --font: 'Roboto', system-ui, -apple-system, Arial, sans-serif;
+  --font-alt: 'Inter', 'Roboto', sans-serif;
+  --font-tagline: 'Montserrat', 'Roboto', sans-serif;
   --nav-h: 72px;
 }
 
@@ -76,8 +78,9 @@ ul { list-style: none; }
 }
 
 .ff-nav__tagline {
+  font-family: var(--font-tagline);
   font-size: 0.7rem;
-  font-weight: 600;
+  font-weight: 300;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--white);
@@ -134,19 +137,19 @@ ul { list-style: none; }
    ============================================================ */
 #ff-hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
-  padding: calc(var(--nav-h) + 80px) 10vw 80px 8vw;
-  background: url('https://fileflex.com/wp-content/uploads/2017/04/main-banner.jpg') center center / cover no-repeat;
+  padding: 180px 10vw 120px 8vw;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+              url('http://fileflex.com/wp-content/uploads/2015/03/iStock-1445140730-scaled.jpg');
+  background-size: cover;
+  background-position: 80% center;
   overflow: hidden;
 }
 
 #ff-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
+  display: none;
 }
 
 .ff-hero__content {
@@ -217,7 +220,7 @@ ul { list-style: none; }
 }
 
 #ff-problem .section-title {
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-size: clamp(1.75rem, 4vw, 3rem);
   font-weight: 700;
   color: var(--white);
   text-align: center;
@@ -440,7 +443,7 @@ ul { list-style: none; }
 }
 
 #ff-use .section-title {
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-size: clamp(1.75rem, 4vw, 3rem);
   font-weight: 700;
   color: var(--white);
   text-align: center;
@@ -506,7 +509,7 @@ ul { list-style: none; }
 
 #ff-transform .section-title,
 #ff-key .section-title {
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-size: clamp(1.75rem, 4vw, 3rem);
   font-weight: 700;
   color: var(--white);
   text-align: center;
@@ -637,7 +640,7 @@ ul { list-style: none; }
 }
 
 #ff-learning .section-title {
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-size: clamp(1.75rem, 4vw, 3rem);
   font-weight: 700;
   color: var(--white);
   text-align: center;
