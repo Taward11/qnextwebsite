@@ -357,9 +357,9 @@ ul { list-style: none; }
 }
 
 .ff-explore-nav__links a {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--white);
   transition: color 0.2s;
   white-space: nowrap;
 }
