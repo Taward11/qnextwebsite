@@ -595,11 +595,6 @@ ul { list-style: none; }
   border-radius: 0;
   padding: 0;
   text-align: left;
-  transition: transform 0.2s;
-}
-
-.ff-feature-card:hover {
-  transform: translateY(-4px);
 }
 
 .ff-feature-icon {
@@ -637,20 +632,8 @@ ul { list-style: none; }
   font-size: 0.825rem;
   font-weight: 600;
   color: #ffffff;
-  transition: opacity 0.2s;
 }
 
-.ff-feature-card a.read-more:hover { opacity: 0.8; }
-
-#ff-transform .ff-feature-card {
-  background: transparent;
-  border-color: rgba(255, 255, 255, 0.25);
-}
-
-#ff-transform .ff-feature-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: #ffffff;
-}
 
 /* ============================================================
    KEY CAPABILITIES
