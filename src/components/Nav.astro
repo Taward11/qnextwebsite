@@ -3,6 +3,7 @@ const { current } = Astro.props as { current?: string };
 const isPlatform = current === 'platform';
 const isSecurity = current === 'security';
 const isChallenge = current === 'challenge';
+const isPartner = current === 'partner';
 ---
 <nav id="ff-nav" aria-label="Main navigation">
   <input type="checkbox" id="ff-nav-toggle" class="ff-nav__toggle" aria-label="Toggle navigation" />
@@ -16,7 +17,7 @@ const isChallenge = current === 'challenge';
       <li><a href="/challenge" aria-current={isChallenge ? 'page' : undefined}>The Challenge</a></li>
       <li><a href="/platform" aria-current={isPlatform ? 'page' : undefined}>Platform</a></li>
       <li><a href="/security" aria-current={isSecurity ? 'page' : undefined}>Security</a></li>
-      <li><a href="https://fileflex.com/partner/">Partner</a></li>
+      <li><a href="/partner" aria-current={isPartner ? 'page' : undefined}>Partner</a></li>
       <li><a href="https://fileflex.com/contact-us/">Support</a></li>
       <li><a href="https://fileflex.com/company/blog/">Blog</a></li>
       <li><a href="https://fileflex.com/fileflex-enterprise/try-plus/" class="ff-nav__cta">Try FileFlex</a></li>
