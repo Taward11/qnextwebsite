@@ -2,21 +2,20 @@
    SECURITY PAGE — extends platform.css design system
    ============================================================ */
 
-/* HERO — tighter, centered variant */
+/* HERO — full-bleed background image, left-aligned content */
 #sec-hero {
-  background: linear-gradient(180deg, #0b1224 0%, #111a2f 100%);
+  position: relative;
   color: #fff;
-  padding: 120px 6vw 80px;
-  text-align: center;
+  padding: 140px 6vw 110px;
+  background:
+    linear-gradient(110deg, rgba(8,14,30,0.88) 0%, rgba(8,14,30,0.7) 55%, rgba(8,14,30,0.45) 100%),
+    url('/images/security/Panel1-city-web-e1744660611501.webp') center/cover no-repeat;
+  background-color: #0b1224;
 }
-#sec-hero .sec-hero__eyebrow {
-  display: inline-block;
-  font-family: var(--pf-font-display, 'Syne', sans-serif);
-  font-size: 14px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #ff8a3d;
-  margin: 0 0 18px;
+.sec-hero__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  text-align: left;
 }
 #sec-hero h1 {
   font-family: var(--pf-font-display, 'Syne', sans-serif);
@@ -24,33 +23,42 @@
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.01em;
-  margin: 0 auto 22px;
-  max-width: 980px;
+  margin: 0 0 22px;
+  max-width: 880px;
+  color: #fff;
 }
 #sec-hero .sec-hero__lede {
   font-size: clamp(16px, 1.4vw, 19px);
   line-height: 1.6;
-  color: #cbd3dd;
-  max-width: 780px;
-  margin: 0 auto 28px;
+  color: #d6deef;
+  max-width: 720px;
+  margin: 0 0 36px;
 }
-#sec-hero .sec-hero__tag {
-  font-family: var(--pf-font-display, 'Syne', sans-serif);
-  font-size: clamp(18px, 2vw, 24px);
-  font-weight: 600;
+#sec-hero .sec-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 30px;
+  background: #1c398e;
   color: #fff;
-  margin: 0 0 32px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: var(--pf-font-display, 'Syne', sans-serif);
+  font-size: 16px;
+  font-weight: 600;
   letter-spacing: 0.02em;
+  transition: background 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 18px rgba(28,57,142,0.45);
 }
-#sec-hero .sec-hero__ctas {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  flex-wrap: wrap;
+#sec-hero .sec-hero__btn:hover {
+  background: #2a4ec0;
+  transform: translateY(-1px);
 }
+#sec-hero .sec-hero__btn span { font-size: 14px; }
 
-/* PROBLEM section — two-column with bullets */
-#sec-problem .pf-section__inner { max-width: 1180px; }
+/* PROBLEM section — left-aligned */
+.sec-problem__inner { max-width: 1180px; text-align: left; }
+.sec-problem__inner .pf-lede { margin-left: 0; margin-right: 0; max-width: none; }
 .sec-problem__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -86,83 +94,70 @@
   line-height: 1.6;
   color: var(--pf-ink, #1a1f2c);
   font-weight: 500;
+  text-align: left;
 }
 
-/* WHY TRADITIONAL — chart + 3-step callouts */
-#sec-why {
-  background: #f6f8fb;
+/* THE GAP — two columns: Why Insufficient | Ecosystem */
+#sec-gap { background: #f6f8fb; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
 }
-.sec-why__chart {
-  margin: 28px 0 36px;
-  text-align: center;
-}
-.sec-why__chart img {
-  max-width: 920px;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-}
-.sec-why__steps {
+.sec-gap__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  margin-top: 24px;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 28px;
+  align-items: start;
 }
-.sec-why__step {
+.sec-gap__col {
   background: #fff;
   border: 1px solid #e6e9ef;
-  border-top: 4px solid #e8590a;
-  border-radius: 6px;
-  padding: 28px 24px;
-  text-align: center;
+  border-top: 4px solid #1c398e;
+  border-radius: 8px;
+  padding: 32px 30px;
+  display: flex;
+  flex-direction: column;
 }
-.sec-why__step h4 {
+.sec-gap__col:nth-child(2) { border-top-color: #e8590a; }
+.sec-gap__h {
   font-family: var(--pf-font-display, 'Syne', sans-serif);
-  font-size: 17px;
+  font-size: clamp(20px, 1.9vw, 24px);
   font-weight: 600;
-  margin: 0;
-  line-height: 1.4;
+  line-height: 1.25;
+  margin: 0 0 22px;
   color: var(--pf-ink, #1a1f2c);
 }
-
-/* ECOSYSTEM — image left, bullets right */
-.sec-eco__grid {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 48px;
-  align-items: center;
-  margin-top: 28px;
+.sec-gap__chart {
+  margin: 0 0 22px;
+  text-align: center;
 }
-.sec-eco__grid img {
-  width: 100%;
+.sec-gap__chart img {
+  max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 6px;
 }
-.sec-eco__list {
+.sec-gap__list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.sec-eco__list li {
-  padding: 14px 0 14px 36px;
+.sec-gap__list li {
   position: relative;
+  padding: 10px 0 10px 28px;
   border-bottom: 1px solid #e6e9ef;
-  font-size: 16px;
-  line-height: 1.55;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: var(--pf-ink, #1a1f2c);
 }
-.sec-eco__list li::before {
-  content: "✓";
+.sec-gap__list li:last-child { border-bottom: 0; }
+.sec-gap__list li::before {
+  content: "";
   position: absolute;
-  left: 4px; top: 12px;
-  width: 22px; height: 22px;
-  line-height: 22px;
-  text-align: center;
+  left: 4px; top: 17px;
+  width: 8px; height: 8px;
   background: #e8590a;
-  color: #fff;
   border-radius: 50%;
-  font-size: 13px;
-  font-weight: 700;
 }
 
 /* SIX PILLARS — Security Has Evolved */
@@ -277,8 +272,8 @@
 /* BLOG GRID */
 #sec-blogs { background: #f6f8fb; }
 #sec-blogs .pf-title,
-#sec-why .pf-title,
-#sec-reg .pf-title { color: var(--pf-ink, #1a1f2c); }
+#sec-reg .pf-title,
+#sec-problem .pf-title { color: var(--pf-ink, #1a1f2c); }
 .sec-blog__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -356,16 +351,14 @@
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .sec-problem__grid,
-  .sec-eco__grid { grid-template-columns: 1fr; gap: 32px; }
-  .sec-why__steps,
+  .sec-gap__grid { grid-template-columns: 1fr; gap: 28px; }
   .sec-pillars__grid,
   .sec-blog__grid { grid-template-columns: repeat(2, 1fr); }
   .sec-webinars__grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 600px) {
-  .sec-why__steps,
   .sec-pillars__grid,
   .sec-blog__grid,
   .sec-webinars__grid { grid-template-columns: 1fr; }
-  #sec-hero { padding: 90px 6vw 60px; }
+  #sec-hero { padding: 90px 6vw 70px; }
 }

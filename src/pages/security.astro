@@ -20,16 +20,16 @@ const { blogs, webinars } = cards;
      HERO
      ============================================================ -->
 <section id="sec-hero" aria-labelledby="sec-hero-heading">
-  <span class="sec-hero__eyebrow">Security</span>
-  <h1 id="sec-hero-heading">Security Built for Autonomous Threats — Not Yesterday's Perimeter</h1>
-  <p class="sec-hero__lede">
-    Get Zero Trust Data Access enforcement at the file layer, preventing unauthorized
-    movement, sharing, and exfiltration of sensitive data — without copying it to the cloud.
-  </p>
-  <p class="sec-hero__tag">Securing Files, Not Networks</p>
-  <div class="sec-hero__ctas">
-    <a class="pf-btn pf-btn--lg" href="https://fileflex.com/fileflex-enterprise/try-plus/">Book a Demo</a>
-    <a class="pf-btn pf-btn--lg pf-btn--outline" href="https://fileflex.com/contact-us/">Launch a Pilot</a>
+  <div class="sec-hero__inner">
+    <h1 id="sec-hero-heading">Security Built for Autonomous Threats — Not Yesterday's Perimeter</h1>
+    <p class="sec-hero__lede">
+      Get Zero Trust Data Access enforcement at the file layer, preventing unauthorized
+      movement, sharing, and exfiltration of sensitive data — without copying it to the cloud.
+    </p>
+    <a class="sec-hero__btn" href="#sec-modal" aria-label="Watch video: Securing Files, Not Networks">
+      <span aria-hidden="true">▶</span>
+      <strong>Securing Files, Not Networks</strong>
+    </a>
   </div>
 </section>
 
@@ -37,10 +37,10 @@ const { blogs, webinars } = cards;
      THE SECURITY PROBLEM HAS CHANGED
      ============================================================ -->
 <section id="sec-problem" class="pf-section pf-section--white" aria-labelledby="sec-problem-heading">
-  <div class="pf-section__inner">
-    <p class="pf-eyebrow pf-eyebrow--center">The Threat Landscape</p>
-    <h2 id="sec-problem-heading" class="pf-title pf-title--center">The Security Problem Has Changed</h2>
-    <p class="pf-lede pf-lede--center">
+  <div class="pf-section__inner sec-problem__inner">
+    <p class="pf-eyebrow">The Threat Landscape</p>
+    <h2 id="sec-problem-heading" class="pf-title">The Security Problem Has Changed</h2>
+    <p class="pf-lede">
       Traditional cybersecurity is no longer enough. AI-powered ransomware, autonomous
       exfiltration tools, and insider threats have shifted the battlefield: it's the data,
       not the infrastructure, that is most at risk.
@@ -55,7 +55,7 @@ const { blogs, webinars } = cards;
         <li>Cloud-first file sharing often duplicates sensitive data into unknown locations.</li>
       </ul>
     </div>
-    <p class="sec-problem__close" style="text-align:center;">
+    <p class="sec-problem__close">
       The solution is not just more security controls. It's a <strong>data-centric approach</strong>
       that enforces Zero Trust at the file level.
     </p>
@@ -63,39 +63,37 @@ const { blogs, webinars } = cards;
 </section>
 
 <!-- ============================================================
-     WHY TRADITIONAL CONTROLS ARE INSUFFICIENT
+     THE GAP — 2 columns: Why Traditional Insufficient | Ecosystem
      ============================================================ -->
-<section id="sec-why" class="pf-section" aria-labelledby="sec-why-heading">
+<section id="sec-gap" class="pf-section" aria-labelledby="sec-gap-heading">
   <div class="pf-section__inner">
     <p class="pf-eyebrow pf-eyebrow--center">The Gap</p>
-    <h2 id="sec-why-heading" class="pf-title pf-title--center">Why Traditional Controls Are Insufficient</h2>
-    <figure class="sec-why__chart">
-      <img src="/images/security/Why-existing-tools-are-insufficient-chart.webp" alt="Chart showing how existing security tools leave the data layer unprotected" loading="lazy" decoding="async" />
-    </figure>
-    <div class="sec-why__steps">
-      <div class="sec-why__step"><h4>Zero Trust Must Extend to the Data Layer</h4></div>
-      <div class="sec-why__step"><h4>The Data Layer Remains the Blind Spot</h4></div>
-      <div class="sec-why__step"><h4>This Is Where Zero-Trust Data Access Must Exist</h4></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     ECOSYSTEM COMPATIBILITY
-     ============================================================ -->
-<section id="sec-eco" class="pf-section pf-section--white" aria-labelledby="sec-eco-heading">
-  <div class="pf-section__inner">
-    <p class="pf-eyebrow pf-eyebrow--center">Works With Your Stack</p>
-    <h2 id="sec-eco-heading" class="pf-title pf-title--center">FileFlex Enterprise Works With Your Existing Ecosystem — Not Against It</h2>
-    <div class="sec-eco__grid">
-      <img src="/images/security/Data-access-gap.webp" alt="Diagram illustrating the data access gap that FileFlex closes between identity, network, and data layers" loading="lazy" decoding="async" />
-      <ul class="sec-eco__list">
-        <li>Microsoft tools remain central to collaboration.</li>
-        <li>Identity platforms like Entra and Okta still manage authentication.</li>
-        <li>Your ZTNA platforms continue to enforce microsegmentation.</li>
-        <li>Your DSPM platform still identifies sensitive information.</li>
-        <li>FileFlex Enterprise sits at the data access boundary, closing gaps left by traditional security and cloud file-sharing.</li>
-      </ul>
+    <h2 id="sec-gap-heading" class="pf-title pf-title--center sr-only">Closing the Data-Layer Gap</h2>
+    <div class="sec-gap__grid">
+      <div class="sec-gap__col">
+        <h3 class="sec-gap__h">Why Traditional Controls Are Insufficient</h3>
+        <figure class="sec-gap__chart">
+          <img src="/images/security/Why-existing-tools-are-insufficient-chart.webp" alt="Chart showing how existing security tools leave the data layer unprotected" loading="lazy" decoding="async" />
+        </figure>
+        <ul class="sec-gap__list">
+          <li>Zero Trust must extend to the data layer.</li>
+          <li>The data layer remains the blind spot.</li>
+          <li>This is where Zero-Trust Data Access must exist.</li>
+        </ul>
+      </div>
+      <div class="sec-gap__col">
+        <h3 class="sec-gap__h">FileFlex Enterprise Works With Your Existing Ecosystem — Not Against It</h3>
+        <figure class="sec-gap__chart">
+          <img src="/images/security/Data-access-gap.webp" alt="Diagram showing the data access gap that FileFlex closes between identity, network, and data layers" loading="lazy" decoding="async" />
+        </figure>
+        <ul class="sec-gap__list">
+          <li>Microsoft tools remain central to collaboration.</li>
+          <li>Identity platforms like Entra and Okta still manage authentication.</li>
+          <li>Your ZTNA platforms continue to enforce microsegmentation.</li>
+          <li>Your DSPM platform still identifies sensitive information.</li>
+          <li>FileFlex Enterprise sits at the data access boundary, closing gaps left by traditional security and cloud file-sharing.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -250,5 +248,16 @@ const { blogs, webinars } = cards;
     </div>
   </div>
 </section>
+
+<!-- ============================================================
+     VIDEO MODAL
+     ============================================================ -->
+<div class="pf-modal-overlay" id="sec-modal" role="dialog" aria-modal="true" aria-label="Video player">
+  <a class="pf-modal-backdrop" href="#!" aria-label="Close video"></a>
+  <div class="pf-modal">
+    <a class="pf-modal-close" href="#!" aria-label="Close video">&times;</a>
+    <iframe src="https://www.youtube-nocookie.com/embed/_9K6-YxINTQ?rel=0&modestbranding=1" title="The Missing Security Layer That Truly Matters" loading="lazy" allow="encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
 
 </Layout>
