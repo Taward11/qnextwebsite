@@ -15,9 +15,9 @@
   --text: #e0e0e0;
   --muted: #aaaaaa;
   --border: rgba(255,255,255,0.1);
-  --font: 'Roboto', system-ui, -apple-system, Arial, sans-serif;
-  --font-alt: 'Inter', 'Roboto', sans-serif;
-  --font-tagline: 'Montserrat', 'Roboto', sans-serif;
+  --font: 'Inter', system-ui, -apple-system, Arial, sans-serif;
+  --font-alt: 'Inter', system-ui, sans-serif;
+  --font-tagline: 'Inter', system-ui, sans-serif;
   --nav-h: 72px;
 }
 
@@ -54,11 +54,11 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   padding: 0 5vw;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.6;
 }
 
-#ff-nav * { font-family: 'Roboto', sans-serif; }
+#ff-nav * { font-family: 'Inter', sans-serif; }
 
 .ff-nav__inner {
   display: flex;
@@ -80,7 +80,7 @@ ul { list-style: none; }
 }
 
 .ff-nav__tagline {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.08em;
@@ -100,7 +100,7 @@ ul { list-style: none; }
 }
 
 .ff-nav__links a {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 13px;
   font-weight: 700;
   color: var(--white);
@@ -115,7 +115,7 @@ ul { list-style: none; }
   display: inline-block;
   background: var(--orange);
   color: var(--white) !important;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 13px;
   font-weight: 700;
   padding: 0.7rem 1.5rem;
@@ -728,7 +728,7 @@ ul { list-style: none; }
   max-width: 1200px;
   margin: 0 auto 40px;
   line-height: 1.25;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   text-wrap: balance;
 }
 
@@ -908,11 +908,11 @@ ul { list-style: none; }
   padding: 80px 5vw 40px;
   font-size: 14px;
   color: #B0B0B0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.6;
 }
 
-#ff-footer * { font-family: 'Roboto', sans-serif; }
+#ff-footer * { font-family: 'Inter', sans-serif; }
 
 .ff-footer__cols {
   display: grid;
@@ -932,7 +932,7 @@ ul { list-style: none; }
   margin: 0 0 25px;
   text-transform: none;
   letter-spacing: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .ff-footer__col ul {
@@ -950,7 +950,7 @@ ul { list-style: none; }
 }
 
 .ff-footer__col ul a {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.08;
