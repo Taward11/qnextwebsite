@@ -131,6 +131,18 @@ ul { list-style: none; }
   transform: translateY(-1px);
 }
 
+.ff-nav__toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .ff-nav__hamburger {
   display: none;
   background: none;
@@ -140,6 +152,8 @@ ul { list-style: none; }
   color: var(--white);
   font-size: 1.25rem;
   margin-left: auto;
+  line-height: 1;
+  user-select: none;
 }
 
 /* ============================================================
@@ -1037,7 +1051,16 @@ ul { list-style: none; }
   justify-content: center;
 }
 
-.ff-modal-overlay.active { display: flex; }
+.ff-modal-overlay:target { display: flex; }
+html:has(.ff-modal-overlay:target) { overflow: hidden; }
+
+.ff-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  cursor: default;
+}
+.ff-modal { z-index: 1; }
 
 .ff-modal {
   position: relative;
@@ -1075,7 +1098,7 @@ ul { list-style: none; }
 @media (max-width: 900px) {
   .ff-nav__tagline { display: none; }
   .ff-nav__links { display: none; }
-  .ff-nav__links.open {
+  .ff-nav__toggle:checked ~ .ff-nav__inner .ff-nav__links {
     display: flex;
     flex-direction: column;
     position: fixed;

@@ -12,13 +12,14 @@ import '../styles/fileflex.css';
      NAVIGATION
      ============================================================ -->
 <nav id="ff-nav" aria-label="Main navigation">
+  <input type="checkbox" id="ff-nav-toggle" class="ff-nav__toggle" aria-label="Toggle navigation" />
   <div class="ff-nav__inner">
     <a href="/" class="ff-nav__logo" aria-label="FileFlex Enterprise home">
       <img src="https://fileflex.com/wp-content/uploads/2015/03/fileflex-enterprise-logo-small.png.webp" alt="FileFlex Enterprise" loading="eager" fetchpriority="high" decoding="async" />
     </a>
     <div class="ff-nav__divider" aria-hidden="true"></div>
     <span class="ff-nav__tagline">The Genius of Zero Trust Data Access™</span>
-    <ul class="ff-nav__links" id="ff-nav-links">
+    <ul class="ff-nav__links">
       <li><a href="https://fileflex.com/the-challenge/">The Challenge</a></li>
       <li><a href="https://fileflex.com/platform/">Platform</a></li>
       <li><a href="https://fileflex.com/security-2/">Security</a></li>
@@ -27,9 +28,7 @@ import '../styles/fileflex.css';
       <li><a href="https://fileflex.com/company/blog/">Blog</a></li>
       <li><a href="https://fileflex.com/fileflex-enterprise/try-plus/" class="ff-nav__cta">Try FileFlex</a></li>
     </ul>
-    <button class="ff-nav__hamburger" id="ff-hamburger" aria-expanded="false" aria-controls="ff-nav-links" aria-label="Toggle navigation">
-      &#9776;
-    </button>
+    <label class="ff-nav__hamburger" for="ff-nav-toggle" aria-hidden="true">&#9776;</label>
   </div>
 </nav>
 
@@ -47,10 +46,10 @@ import '../styles/fileflex.css';
       Identity Locked | Network Locked | Application Locked<br />
       Data Remains <span class="underline">Wide Open</span>
     </p>
-    <button class="ff-btn-play" id="ff-play-btn" aria-label="Watch: The Missing Security Layer That Truly Matters">
+    <a class="ff-btn-play" href="#ff-modal" aria-label="Watch: The Missing Security Layer That Truly Matters">
       <span class="play-icon" aria-hidden="true"></span>
       Watch: The Missing Security Layer That Truly Matters
-    </button>
+    </a>
   </div>
 </section>
 
@@ -445,40 +444,11 @@ import '../styles/fileflex.css';
      VIDEO MODAL
      ============================================================ -->
 <div class="ff-modal-overlay" id="ff-modal" role="dialog" aria-modal="true" aria-label="Video player">
+  <a class="ff-modal-backdrop" href="#!" aria-label="Close video"></a>
   <div class="ff-modal">
-    <button class="ff-modal-close" id="ff-modal-close" aria-label="Close video">&times;</button>
-    <iframe id="ff-modal-iframe" src="" title="The Missing Security Layer That Truly Matters" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <a class="ff-modal-close" href="#!" aria-label="Close video">&times;</a>
+    <iframe src="https://www.youtube-nocookie.com/embed/_9K6-YxINTQ?rel=0&modestbranding=1" title="The Missing Security Layer That Truly Matters" loading="lazy" allow="encrypted-media" allowfullscreen></iframe>
   </div>
 </div>
 
 </Layout>
-
-<script>
-  const hamburger = document.getElementById('ff-hamburger');
-  const navLinks = document.getElementById('ff-nav-links');
-  hamburger?.addEventListener('click', () => {
-    const open = navLinks?.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', String(open));
-  });
-
-  const playBtn = document.getElementById('ff-play-btn');
-  const modal = document.getElementById('ff-modal');
-  const modalClose = document.getElementById('ff-modal-close');
-  const iframe = document.getElementById('ff-modal-iframe') as HTMLIFrameElement;
-
-  playBtn?.addEventListener('click', () => {
-    if (iframe) iframe.src = 'https://www.youtube-nocookie.com/embed/_9K6-YxINTQ?autoplay=1&rel=0&modestbranding=1';
-    modal?.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  });
-
-  function closeModal() {
-    modal?.classList.remove('active');
-    if (iframe) iframe.src = '';
-    document.body.style.overflow = '';
-  }
-
-  modalClose?.addEventListener('click', closeModal);
-  modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
-</script>
