@@ -164,10 +164,10 @@
 .pf-arch__diagram {
   margin: 24px auto 56px;
   max-width: 1100px;
-  padding: 32px;
-  background: #0f1f2e;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 20px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
 }
 .pf-arch__diagram img {
   width: 100%;
@@ -393,13 +393,15 @@
 }
 .pf-admin__img {
   display: block;
-  width: 100%;
-  height: 120px;
+  margin: 28px auto 0;
+  width: auto;
+  max-width: 70%;
+  height: 180px;
   object-fit: contain;
-  background: #f6f8fa;
-  padding: 20px;
+  background: transparent;
+  padding: 0;
 }
-.pf-admin__body { padding: 24px 24px 28px; }
+.pf-admin__body { padding: 24px 24px 28px; text-align: center; }
 .pf-admin__card h3 {
   font-size: 17px;
   font-weight: 600;
@@ -437,9 +439,11 @@
   background: #fff;
   border: 1px solid var(--pf-line);
   border-radius: 16px;
-  padding: 28px;
+  padding: 32px 24px 28px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   transition: border-color 0.15s ease, transform 0.15s ease;
 }
 .pf-deep__card:hover {
@@ -447,10 +451,10 @@
   transform: translateY(-2px);
 }
 .pf-deep__icon {
-  width: 64px;
-  height: 64px;
+  width: 110px;
+  height: 110px;
   object-fit: contain;
-  margin-bottom: 18px;
+  margin: 0 auto 22px;
   display: block;
 }
 .pf-deep__num {
@@ -494,12 +498,15 @@
 }
 #pf-ransom .pf-title { color: var(--pf-ink); }
 .pf-ransom__inner {
-  max-width: 1200px;
+  max-width: 880px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
+}
+.pf-ransom__bar {
+  display: block;
+  width: 100px;
+  height: 8px;
+  margin: 0 0 18px;
+  object-fit: cover;
 }
 .pf-ransom__list {
   list-style: none;
@@ -539,44 +546,45 @@
 .pf-ind__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 1080px;
+  gap: 24px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 .pf-ind__tile {
   position: relative;
   display: block;
-  border-radius: 14px;
+  border-radius: 12px;
   overflow: hidden;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 600 / 267;
   text-decoration: none;
   color: #fff;
   isolation: isolate;
+  background: #0e1a2b;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+.pf-ind__tile:hover { transform: translateY(-3px); box-shadow: 0 20px 50px -30px rgba(14,26,43,0.4); }
 .pf-ind__tile img {
   width: 100%; height: 100%; object-fit: cover;
   display: block;
   transition: transform 0.35s ease;
 }
 .pf-ind__tile:hover img { transform: scale(1.04); }
-.pf-ind__tile::after {
-  content: '';
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(14,26,43,0) 30%, rgba(14,26,43,0.78) 100%);
-}
 .pf-ind__tile h3 {
   position: absolute;
-  left: 20px; right: 20px; bottom: 18px;
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  margin: 0;
-  z-index: 1;
+  width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
 }
 
 /* ============================================================
    PARTNERS (white)
    ============================================================ */
+.pf-partners h2 {
+  font-size: clamp(22px, 2.2vw, 30px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin: 0 0 28px;
+}
 .pf-partners__logos {
   width: 100%;
   max-width: 1100px;
@@ -748,8 +756,8 @@
   letter-spacing: -0.025em;
   margin: 0 0 32px;
 }
-#pf-cta .pf-cta-buttons { display: inline-flex; gap: 18px; flex-wrap: wrap; justify-content: center; }
-#pf-cta .pf-btn--lg { padding: 18px 36px; font-size: 16px; }
+#pf-cta .pf-cta-buttons { display: inline-flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+#pf-cta .pf-btn { padding: 12px 26px; font-size: 14px; letter-spacing: 0.05em; }
 .pf-btn--outline {
   background: transparent;
   border: 2px solid #fff;
