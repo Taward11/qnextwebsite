@@ -1,0 +1,78 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is FileFlex Zero Trust Data Access (ZTDA)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FileFlex Zero Trust Data Access is a data-centric security approach that enforces access controls directly at the file layer. It verifies every user, device, and request, applying least-privilege access without moving or copying data to the cloud, thereby reducing exposure and maintaining control over sensitive information."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does FileFlex improve security compared to traditional cybersecurity approaches?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Traditional cybersecurity focuses on protecting networks, endpoints, and identities, but often leaves unstructured data exposed. FileFlex extends Zero Trust to the data layer, preventing unauthorized access, eliminating public links, enforcing identity-bound access, and reducing risks such as ransomware, insider threats, and data exfiltration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does FileFlex store or replicate data in the cloud?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. FileFlex does not replicate or store data in the cloud. Files remain in their original storage locations, whether on-premises or in existing environments. This reduces the attack surface, preserves data sovereignty, and eliminates risks associated with duplicated data in third-party systems."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What security controls and capabilities does FileFlex provide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FileFlex provides granular, policy-based controls including device-level authorization, time-based access, view-only restrictions, and download limitations. It also delivers full auditability with detailed logging of all access and sharing activity, enabling compliance, forensic visibility, and regulatory reporting."
+      }
+    }
+  ]
+}
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is FileFlex Zero Trust Data Access (ZTDA)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FileFlex Zero Trust Data Access is a data-centric security approach that enforces access controls directly at the file layer. It verifies every user, device, and request, applying least-privilege access without moving or copying data to the cloud, thereby reducing exposure and maintaining control over sensitive information."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does FileFlex improve security compared to traditional cybersecurity approaches?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Traditional cybersecurity focuses on protecting networks, endpoints, and identities, but often leaves unstructured data exposed. FileFlex extends Zero Trust to the data layer, preventing unauthorized access, eliminating public links, enforcing identity-bound access, and reducing risks such as ransomware, insider threats, and data exfiltration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does FileFlex store or replicate data in the cloud?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. FileFlex does not replicate or store data in the cloud. Files remain in their original storage locations, whether on-premises or in existing environments. This reduces the attack surface, preserves data sovereignty, and eliminates risks associated with duplicated data in third-party systems."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What security controls and capabilities does FileFlex provide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FileFlex provides granular, policy-based controls including device-level authorization, time-based access, view-only restrictions, and download limitations. It also delivers full auditability with detailed logging of all access and sharing activity, enabling compliance, forensic visibility, and regulatory reporting."
+      }
+    }
+  ]
+}
+</script>

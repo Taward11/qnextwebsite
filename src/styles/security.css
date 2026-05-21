@@ -119,13 +119,11 @@
 .sec-gap__col {
   background: #fff;
   border: 1px solid #e6e9ef;
-  border-top: 4px solid #1c398e;
   border-radius: 8px;
   padding: 32px 30px;
   display: flex;
   flex-direction: column;
 }
-.sec-gap__col:nth-child(2) { border-top-color: #e8590a; }
 .sec-gap__h {
   font-family: var(--pf-font-display, 'Syne', sans-serif);
   font-size: clamp(20px, 1.9vw, 24px);
@@ -305,6 +303,69 @@
   padding: 12px 26px;
 }
 #sec-cta .sec-cta__btn--ghost:hover { background: #1c398e; color: #fff; }
+
+/* FAQ */
+#sec-faq { background: #f6f8fb; }
+#sec-faq .pf-title { color: var(--pf-ink, #1a1f2c); }
+.sec-faq__list {
+  max-width: 880px;
+  margin: 36px auto 0;
+  display: grid;
+  gap: 14px;
+}
+.sec-faq__item {
+  background: #fff;
+  border: 1px solid #e6e9ef;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.sec-faq__item[open] {
+  border-color: rgba(28,57,142,0.35);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.05);
+}
+.sec-faq__item > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 20px 56px 20px 24px;
+  position: relative;
+  font-family: var(--pf-font-display, 'Syne', sans-serif);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--pf-ink, #1a1f2c);
+  line-height: 1.35;
+}
+.sec-faq__item > summary::-webkit-details-marker { display: none; }
+.sec-faq__item > summary::after {
+  content: "+";
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #1c398e;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.sec-faq__item[open] > summary::after {
+  content: "−";
+  background: #e8590a;
+}
+.sec-faq__item > p {
+  margin: 0;
+  padding: 0 24px 22px;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--pf-ink-soft, #4a5060);
+}
 
 /* BLOG GRID */
 #sec-blogs { background: #f6f8fb; }
