@@ -1,0 +1,496 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+---
+
+<Layout
+  title="The FileFlex Enterprise Platform"
+  description="A data-layer Zero Trust Data Access (ZTDA) platform built to enforce per-request, least-privilege access, immutable auditing and seamless enterprise integrations — without migrating or copying your files."
+>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<Nav current="platform" />
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="pf-hero" aria-labelledby="pf-hero-heading">
+  <div class="pf-hero__content">
+    <a class="pf-hero__eyebrow" href="#pf-arch">The Platform:</a>
+    <h1 id="pf-hero-heading" class="pf-hero__title">
+      Get Data Layer Zero Trust Access to All of Your Storage Repositories
+    </h1>
+    <p class="pf-hero__lede">
+      A data-layer Zero Trust Data Access (ZTDA) platform built to enforce per-request,
+      least-privilege access, immutable auditing and seamless enterprise integrations —
+      without migrating or copying your files.
+    </p>
+    <p class="pf-hero__quick">
+      <strong>Quick values:</strong>&nbsp;&nbsp;Per Request Authorization &nbsp;—&nbsp; Dark Storage Model &nbsp;—&nbsp; SIEM Export &nbsp;—&nbsp; Reversible Overlay
+    </p>
+    <p class="pf-hero__summary-label">Executive Summary for IT</p>
+    <ul class="pf-hero__summary">
+      <li><strong>Security:</strong> Object-level least privilege, short-lived tokens, immediate revocation.</li>
+      <li><strong>Operations:</strong> Non-invasive overlay deployment, centralized policy governance.</li>
+      <li><strong>Business:</strong> Reduces ransomware risk and preserves user productivity.</li>
+    </ul>
+    <a class="pf-btn pf-btn--lg" href="https://youtu.be/T58N2c2WtyE" target="_blank" rel="noopener">
+      <span aria-hidden="true">▶</span>
+      <strong>Watch: Modernize Your Data Security</strong>
+    </a>
+  </div>
+</section>
+
+<!-- ============================================================
+     ARCHITECTURE OVERVIEW — Policy Mediated, Dark Storage
+     ============================================================ -->
+<section id="pf-arch" class="pf-section pf-section--dark" aria-labelledby="pf-arch-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Architecture</p>
+    <h2 id="pf-arch-heading" class="pf-title pf-title--center pf-title--light">Policy Mediated, Dark Storage Model</h2>
+    <p class="pf-lede pf-lede--center pf-lede--light">
+      The FileFlex Enterprise architecture ensures users never obtain direct, unauthenticated access to storage.
+      All file operations are brokered by the FileFlex Enterprise policy layer and enforced via connectors —
+      keeping storage "dark" unless explicitly authorized.
+    </p>
+    <figure class="pf-arch__diagram">
+      <img src="/images/platform/Architecture-Diagram-2026-for-Platform-Page-low-res-scaled.webp" alt="FileFlex Enterprise architecture diagram" loading="lazy" decoding="async" />
+    </figure>
+    <div class="pf-arch__grid">
+      <article class="pf-arch__card">
+        <div class="pf-arch__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M7 6V4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/><circle cx="12" cy="13" r="2"/></svg>
+        </div>
+        <h3>No Copying or Syncing of Data</h3>
+        <a href="https://fileflex.com/blog/" target="_blank" rel="noopener">Top 10 Benefits of Restricting Direct Storage Access</a>
+      </article>
+      <article class="pf-arch__card">
+        <div class="pf-arch__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        </div>
+        <h3>Granular File &amp; Folder Micro-Segmentation</h3>
+        <a href="https://fileflex.com/blog/" target="_blank" rel="noopener">Why You Need ZTDA Micro-Segmentation</a>
+      </article>
+      <article class="pf-arch__card">
+        <div class="pf-arch__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <h3>Least Privilege Access</h3>
+        <a href="https://fileflex.com/blog/" target="_blank" rel="noopener">9 Top Reasons to Adopt Least Privilege Access</a>
+      </article>
+      <article class="pf-arch__card">
+        <div class="pf-arch__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h6"/></svg>
+        </div>
+        <h3>Data Activity Log</h3>
+        <a href="https://fileflex.com/blog/" target="_blank" rel="noopener">Top 8 Reasons for ZTDA Activity Tracking</a>
+      </article>
+      <article class="pf-arch__card">
+        <div class="pf-arch__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg>
+        </div>
+        <h3>Centralized Control, Decentralized Administration</h3>
+        <a href="https://fileflex.com/blog/" target="_blank" rel="noopener">Distributed Admin for the Complex Supply Chain</a>
+      </article>
+      <article class="pf-arch__card">
+        <div class="pf-arch__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m17 11 2 2 4-4"/></svg>
+        </div>
+        <h3>IT-Controlled Chain-of-Command</h3>
+        <a href="https://fileflex.com/blog/" target="_blank" rel="noopener">Embracing ZTDA for IT-Controlled Chain-of-Command</a>
+      </article>
+    </div>
+    <p style="text-align:center;color:#8a97a8;font-size:14px;margin:0;">
+      <a href="https://fileflex.com/blog/what-is-zero-trust-data-access-ztda/" target="_blank" rel="noopener" style="color:var(--pf-orange);text-decoration:none;">Read: What is Zero Trust Data Access (ZTDA)? →</a>
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     ZERO TRUST ENFORCEMENT — Per Request & Least Privilege
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="pf-zt-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Enforcement</p>
+    <h2 id="pf-zt-heading" class="pf-title pf-title--center">Per Request &amp; Least Privilege</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      FileFlex Enterprise evaluates every file operation in real time. Policies support RBAC, ABAC,
+      device enforcement, and storage-specific rules. Outcomes include allow (read/write), read-only,
+      block download, disable share, deny, and watermark.
+    </p>
+    <figure class="pf-zt__flow">
+      <img src="/images/platform/Per-request-access-flow-infographic-2.webp" alt="Per-request access flow" loading="lazy" decoding="async" />
+    </figure>
+    <div class="pf-zt__grid">
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Ephemeral, Policy-Bound</p>
+        <h3>Session Controls</h3>
+        <p>Every access request is governed by short-lived, policy-bound sessions. Sessions are continuously enforced and automatically terminated, reducing exposure and preventing persistent access.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Least-Privilege Visibility</p>
+        <h3>Object-Level Policies</h3>
+        <p>Access is enforced at the file and folder level. Users can only see and interact with the specific data they are authorized to access — with granular controls like view-only, no download, and no sharing.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Audit-Ready, SIEM-Integrated</p>
+        <h3>Immutable Logging</h3>
+        <p>All file access and actions are immutably logged. Detailed activity records support audits, investigations, and real-time export to SIEM platforms for security monitoring.</p>
+      </article>
+    </div>
+    <div class="pf-cta-row">
+      <a href="https://fileflex.com/demo-request/" class="pf-btn pf-btn--lg pf-btn--uppercase" target="_blank" rel="noopener">Schedule a Demo &rsaquo;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     AI CYBERCRIME Q&A STRIP
+     ============================================================ -->
+<section class="pf-quote" aria-labelledby="pf-quote-heading">
+  <div class="pf-quote__inner">
+    <h2 id="pf-quote-heading">Cybercrime is no longer a perimeter problem — it's a data problem.</h2>
+    <p>
+      In this Q&amp;A, cybersecurity veteran Ed Dubrovsky explains why data exfiltration has become
+      the defining threat of the AI era, how attackers now operate at zettabyte scale, and why
+      controlling access to unstructured data is critical to shifting the economics of modern cybercrime.
+    </p>
+    <a href="https://fileflex.com/blog/ai-driven-cybercrime-at-zettabyte-scale/" class="pf-btn pf-btn--lg pf-btn--uppercase" target="_blank" rel="noopener">Read: AI-Driven Cybercrime at Zettabyte Scale &rsaquo;</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     FEDERATED HYBRID ACCESS
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="pf-fha-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Federated Hybrid Access</p>
+    <h2 id="pf-fha-heading" class="pf-title pf-title--center">One Policy Layer. Every Storage Environment.</h2>
+    <p class="pf-fha__lede">
+      Secure, policy-driven access to on-premises, SharePoint and cloud storage — without migration,
+      duplication, or expanding attack surface. Users see only what they're allowed to see, with
+      permissions enforced per repository. All actions are logged centrally and exportable to your SIEM.
+    </p>
+    <div class="pf-fha__caps">
+      <h3>Key Capabilities</h3>
+      <ul class="pf-fha__list">
+        <li><strong>Single policy plane across hybrid storage</strong>Enforce consistent access rules across on-prem, private cloud, and public cloud repositories.</li>
+        <li><strong>No data migration or synchronization</strong>Files remain in their original locations; FileFlex federates access rather than copying data.</li>
+        <li><strong>Dark storage by design</strong>Storage repositories are never directly exposed to users or endpoints.</li>
+        <li><strong>Least-privilege, per-repository access</strong>Permissions can be set per user, per storage source (view-only, no download, no sharing, etc.).</li>
+        <li><strong>Unified auditing across environments</strong>All access events are logged centrally and can be exported to SIEM platforms.</li>
+      </ul>
+      <p style="color:var(--pf-ink-soft);font-size:15px;line-height:1.65;margin:0;">
+        Federated Hybrid Access reduces operational complexity, eliminates inconsistent access models, and closes the
+        security gaps introduced by VPNs, file sync tools, and unmanaged cloud sharing — all without re-architecting
+        existing storage.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ADMIN & OPERATIONAL CONTROLS
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="pf-admin-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Administration &amp; Operational Controls</p>
+    <h2 id="pf-admin-heading" class="pf-title pf-title--center">Comprehensive Admin Surface for IT</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Identity Integration, Policy Authoring, Storage Management, Delegated Admin, and Audit Search — all in one console.
+    </p>
+    <div class="pf-admin__grid">
+      <article class="pf-admin__card">
+        <img class="pf-admin__img" src="/images/platform/DASHBOARD1.webp" alt="Admin dashboard — tenancy view" loading="lazy" decoding="async" />
+        <div class="pf-admin__body">
+          <h3>Centralized Control. Decentralized Enforcement.</h3>
+          <p>The management console allows IT to delegate storage and user administration to subsidiaries, partners and supply chains as siloed tenants — while central IT keeps visibility and control across all tenants.</p>
+          <a class="pf-admin__more" href="https://fileflex.com/blog/" target="_blank" rel="noopener">Read more →</a>
+        </div>
+      </article>
+      <article class="pf-admin__card">
+        <img class="pf-admin__img" src="/images/platform/DASHBOARD2.webp" alt="Admin dashboard — user management" loading="lazy" decoding="async" />
+        <div class="pf-admin__body">
+          <h3>Strong User Management</h3>
+          <p>Set user permissions and control access to the storage and files they can reach. Entra ID / Azure AD, Active Directory sync, SAML, and Okta integrations.</p>
+          <a class="pf-admin__more" href="https://fileflex.com/blog/" target="_blank" rel="noopener">Read more →</a>
+        </div>
+      </article>
+      <article class="pf-admin__card">
+        <img class="pf-admin__img" src="/images/platform/DASHBOARD3.webp" alt="Admin dashboard — storage management" loading="lazy" decoding="async" />
+        <div class="pf-admin__body">
+          <h3>Robust Storage &amp; Sharing Management</h3>
+          <p>Granular control over sharing and storage permissions, micro-segmented down to file level to protect PHI, PII and confidential data.</p>
+          <a class="pf-admin__more" href="https://fileflex.com/blog/" target="_blank" rel="noopener">Read more →</a>
+        </div>
+      </article>
+      <article class="pf-admin__card">
+        <img class="pf-admin__img" src="/images/platform/DASHBOARD4.webp" alt="Admin dashboard — activity log" loading="lazy" decoding="async" />
+        <div class="pf-admin__body">
+          <h3>Comprehensive Data Activity Tracking</h3>
+          <p>An immutable event store logs all activity across enterprise storage and forwards data to your SIEM. Searchable audit console with unlimited visibility into all remote data access and shares.</p>
+          <a class="pf-admin__more" href="https://fileflex.com/blog/" target="_blank" rel="noopener">Read more →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DATA WORKFLOW DEEP DIVES
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="pf-deep-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Data Workflow Transformation</p>
+    <h2 id="pf-deep-heading" class="pf-title pf-title--center">Deep Dives Across Eight Workflows</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Replace risky legacy patterns. Modernize the workflows your business depends on.
+    </p>
+    <div class="pf-deep__grid">
+      <article class="pf-deep__card">
+        <p class="pf-deep__num">01 / Workflow</p>
+        <h3>Zero Trust File Sharing</h3>
+        <p>Policy-driven sharing with no data movement, granular permissions, and full auditability — enforced per request.</p>
+        <a class="pf-deep__more" href="https://fileflex.com/blog/top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business/" target="_blank" rel="noopener">Top 13 Reasons →</a>
+      </article>
+      <article class="pf-deep__card">
+        <p class="pf-deep__num">02 / Workflow</p>
+        <h3>VPN Replacement</h3>
+        <p>Replace broad network access with per-request data access to reduce lateral movement risk.</p>
+        <a class="pf-deep__more" href="https://fileflex.com/blog/a-vpn-alternative-zero-trust-data-access/" target="_blank" rel="noopener">19 Advantages of the ZTDA VPN Alternative →</a>
+      </article>
+      <article class="pf-deep__card">
+        <p class="pf-deep__num">03 / Workflow</p>
+        <h3>Virtual Data Rooms</h3>
+        <p>Project-based VDRs with strict RBAC, timed access, and watermarking for M&amp;A, legal, and accounting operations.</p>
+        <a class="pf-deep__more" href="https://fileflex.com/blog/top-13-reasons-to-adopt-zero-trust-secure-virtual-data-rooms/" target="_blank" rel="noopener">Top 13 Reasons →</a>
+      </article>
+      <article class="pf-deep__card">
+        <p class="pf-deep__num">04 / Workflow</p>
+        <h3>Large File Collaboration</h3>
+        <p>Stream and partial-access patterns for CAD and media workflows to avoid sync and copy overhead.</p>
+        <a class="pf-deep__more" href="https://fileflex.com/blog/discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture/" target="_blank" rel="noopener">16 Top Reasons →</a>
+      </article>
+      <article class="pf-deep__card">
+        <p class="pf-deep__num">05 / Workflow</p>
+        <h3>Zero Trust Managed File Transfer</h3>
+        <p>Replace staged transfers with policy-enforced access to data in place. Eliminate temporary files, reduce attack surface, and maintain complete auditability.</p>
+        <a class="pf-deep__more" href="https://fileflex.com/blog/" target="_blank" rel="noopener">19 Reasons ZTDA Replaces MFT →</a>
+      </article>
+      <article class="pf-deep__card">
+        <p class="pf-deep__num">06 / Workflow</p>
+        <h3>Secure FTP Replacement</h3>
+        <p>Retire legacy FTP by placing file servers behind a Zero Trust policy layer. Remove open ports and shared credentials while enforcing least-privilege access and full visibility.</p>
+        <a class="pf-deep__more" href="https://fileflex.com/blog/" target="_blank" rel="noopener">24 Reasons to Use ZTDA →</a>
+      </article>
+      <article class="pf-deep__card">
+        <p class="pf-deep__num">07 / Workflow</p>
+        <h3>SharePoint / M365 Enhancement</h3>
+        <p>Apply data-layer policies to SharePoint repositories; enforce view-only, watermarking, and restrict downloads.</p>
+        <a class="pf-deep__more" href="https://fileflex.com/blog/" target="_blank" rel="noopener">19 Reasons ZTDA is an Essential SharePoint Add-in →</a>
+      </article>
+      <article class="pf-deep__card">
+        <p class="pf-deep__num">08 / Workflow</p>
+        <h3>Outlook &amp; Secure Attachments</h3>
+        <p>Share attachments with policy-controlled links with revoke capability and audit trails.</p>
+        <a class="pf-deep__more" href="https://fileflex.com/blog/" target="_blank" rel="noopener">21 Reasons to Supplement M365 E5 with ZTDA →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     RANSOMWARE MITIGATION
+     ============================================================ -->
+<section id="pf-ransom" aria-labelledby="pf-ransom-heading">
+  <div class="pf-ransom__inner">
+    <div>
+      <p class="pf-eyebrow">Ransomware Mitigation</p>
+      <h2 id="pf-ransom-heading" class="pf-title">Detect Ransomware Attacks In Process</h2>
+      <p style="font-size:16px;line-height:1.65;color:var(--pf-ink-soft);margin:0 0 28px;">
+        FileFlex reduces ransomware risk by enforcing least-privilege access to unstructured data and limiting
+        lateral movement. Unusual access or extraction patterns can be detected and alerted on early — helping
+        identify ransomware activity during the exfiltration phase, before encryption occurs.
+      </p>
+      <ul class="pf-ransom__list">
+        <li><strong>Early Detection of Exfiltration</strong> — activity analytics and SIEM export spotlight unusual data extraction.</li>
+        <li><strong>Least-privilege enforcement</strong> — policies ensure users only get the access they need.</li>
+        <li><strong>Dark Storage</strong> prevents direct exposure of SMB/NFS mounts.</li>
+        <li><strong>Per-object Authorization</strong> prevents blanket access that lets attackers pivot.</li>
+        <li><strong>Short-Lived Tokens</strong> reduce token misuse; revocation in seconds.</li>
+        <li><strong>Limited Lateral Movement</strong> — compartmentalized access reduces malware spread.</li>
+        <li><strong>Immutable Audit Trails</strong> — every action logged for compliance and forensic readiness.</li>
+      </ul>
+      <a class="pf-deep__more" href="https://fileflex.com/blog/" target="_blank" rel="noopener" style="font-size:14px;">Read: How to Reduce Ransomware Risk Using ZTDA →</a>
+    </div>
+    <a class="pf-ransom__art" href="https://youtu.be/BdogNIWhqx4" target="_blank" rel="noopener" aria-label="Watch the Dubrovsky ransomware video">
+      <img src="/images/platform/iStock-537743911-web-e1731689756904.webp" alt="Ransomware mitigation — watch the video" loading="lazy" decoding="async" />
+    </a>
+  </div>
+</section>
+
+<!-- ============================================================
+     ZERO TRUST BY INDUSTRY
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="pf-ind-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Zero Trust Data Access By Industry</p>
+    <h2 id="pf-ind-heading" class="pf-title pf-title--center">Built For Your Sector</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      How FileFlex Enterprise addresses industry-specific security, compliance, and operational
+      requirements for unstructured data.
+    </p>
+    <div class="pf-ind__grid">
+      <a class="pf-ind__tile" href="https://fileflex.com/healthcare/" target="_blank" rel="noopener">
+        <img src="/images/platform/Healthcare.webp" alt="Healthcare" loading="lazy" decoding="async" />
+        <h3>Healthcare</h3>
+      </a>
+      <a class="pf-ind__tile" href="https://fileflex.com/accounting-and-consulting-firm/" target="_blank" rel="noopener">
+        <img src="/images/platform/Financial-Services.webp" alt="Financial Services" loading="lazy" decoding="async" />
+        <h3>Financial Services</h3>
+      </a>
+      <a class="pf-ind__tile" href="https://fileflex.com/law-firms/" target="_blank" rel="noopener">
+        <img src="/images/platform/law-firms.webp" alt="Law Firms" loading="lazy" decoding="async" />
+        <h3>Law Firms</h3>
+      </a>
+      <a class="pf-ind__tile" href="https://fileflex.com/government-and-military-contractors-2/" target="_blank" rel="noopener">
+        <img src="/images/platform/Govt_contr.webp" alt="Government &amp; Military Contractors" loading="lazy" decoding="async" />
+        <h3>Government &amp; Military Contractors</h3>
+      </a>
+      <a class="pf-ind__tile" href="https://fileflex.com/manufacturing/" target="_blank" rel="noopener">
+        <img src="/images/platform/manufacturing.webp" alt="Manufacturing" loading="lazy" decoding="async" />
+        <h3>Manufacturing</h3>
+      </a>
+      <a class="pf-ind__tile" href="https://fileflex.com/architecture-engineering/" target="_blank" rel="noopener">
+        <img src="/images/platform/arch-and-eng.webp" alt="Architecture &amp; Engineering" loading="lazy" decoding="async" />
+        <h3>Architecture &amp; Engineering</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PARTNERS
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="pf-partner-heading">
+  <div class="pf-section__inner" style="text-align:center;">
+    <p class="pf-eyebrow pf-eyebrow--center">Ecosystem</p>
+    <h2 id="pf-partner-heading" class="pf-title pf-title--center">Technology Alliance Partners</h2>
+    <img class="pf-partners__logos" src="/images/platform/FF-2022-q4-partner-logos-top2.webp" alt="Technology Alliance Partners" loading="lazy" decoding="async" />
+    <div class="pf-partners__divider" aria-hidden="true"></div>
+    <h2 class="pf-title pf-title--center" style="font-size:clamp(24px,2.6vw,34px);">Integration Technology Partners</h2>
+    <img class="pf-partners__logos" src="/images/platform/FF-2022-q4-partner-logos-sub.webp" alt="Integration Technology Partners" loading="lazy" decoding="async" />
+  </div>
+</section>
+
+<!-- ============================================================
+     REGULATORY COMPLIANCE
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="pf-reg-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Compliance</p>
+    <h2 id="pf-reg-heading" class="pf-title pf-title--center">Built for Regulatory Compliance</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Enforce least-privilege access, auditability, and data governance across unstructured data
+      to support regulatory and compliance requirements.
+    </p>
+    <div class="pf-reg__grid">
+      <div class="pf-reg__item"><div class="pf-reg__badge">GDPR</div><h3>GDPR</h3><p>Secure access, sharing and collaboration that supports GDPR compliance endeavors.</p></div>
+      <div class="pf-reg__item"><div class="pf-reg__badge">HIPAA</div><h3>HIPAA</h3><p>The ideal file-sharing tool for HIPAA Covered Entities and Business Associates.</p></div>
+      <div class="pf-reg__item"><div class="pf-reg__badge">NIST</div><h3>NIST</h3><p>Supports the access-control best practices outlined in NIST SP-800-171 v2.</p></div>
+      <div class="pf-reg__item"><div class="pf-reg__badge">CMMC</div><h3>CMMC</h3><p>Supports the access-control practices of the DoD's Cybersecurity Maturity Model.</p></div>
+      <div class="pf-reg__item"><div class="pf-reg__badge">FFIEC</div><h3>FFIEC</h3><p>Helps financial institutions implement Zero Trust Data Access cybersecurity frameworks.</p></div>
+      <div class="pf-reg__item"><div class="pf-reg__badge">FedRAMP</div><h3>Aids FedRAMP</h3><p>Enhances FedRAMP compliance with secure remote access and sharing of unstructured data.</p></div>
+      <div class="pf-reg__item"><div class="pf-reg__badge">GLBA</div><h3>GLBA</h3><p>Strengthens data security, minimizes insider threats, and ensures sensitive-data auditing.</p></div>
+      <div class="pf-reg__item"><div class="pf-reg__badge">DORA</div><h3>DORA</h3><p>DORA compliance for file sharing, access and collaboration with ZTDA.</p></div>
+      <div class="pf-reg__item"><div class="pf-reg__badge" style="font-size:14px;line-height:1.15;">Local Privacy</div><h3>Local Privacy Regulations</h3><p>Aids compliance with local privacy regulations to protect personal data.</p></div>
+      <div class="pf-reg__item"><div class="pf-reg__badge" style="font-size:13px;">Critical Infra.</div><h3>Critical Infrastructure</h3><p>Enhances regulatory compliance for protecting access to unstructured data.</p></div>
+      <div class="pf-reg__item"><div class="pf-reg__badge" style="font-size:15px;">CCPA<br/>CPRA</div><h3>CCPA / CPRA</h3><p>California Privacy and Cybersecurity Standards supported through ZTDA.</p></div>
+      <div class="pf-reg__item"><div class="pf-reg__badge" style="font-size:14px;">Sector<br/>Specific</div><h3>Sector-Specific</h3><p>Tailored access controls for the regulations unique to your sector.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MAGIC COLUMNS — DSPM
+     ============================================================ -->
+<section class="pf-magic pf-magic--left" style="background-image:url('/images/platform/DSPM-pic-for-home-page.webp');" aria-labelledby="pf-dspm-heading">
+  <div class="pf-magic__panel">
+    <p class="pf-eyebrow">DSPM</p>
+    <h2 id="pf-dspm-heading">DSPM Visibility. Zero Trust Enforcement.</h2>
+    <p>DSPMs reveal where data is exposed. FileFlex enforces policy-driven access to reduce risk at the source.</p>
+    <a class="pf-magic__more" href="https://fileflex.com/blog/" target="_blank" rel="noopener">DSPMs and ZTDA: A Powerful Duo →</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     MAGIC COLUMNS — ON-PREM
+     ============================================================ -->
+<section class="pf-magic pf-magic--right" style="background-image:url('/images/platform/home-page-on-premises-storage-panel-pic-2-400-px.webp');" aria-labelledby="pf-onprem-heading">
+  <div class="pf-magic__panel">
+    <p class="pf-eyebrow">On-Premises</p>
+    <h2 id="pf-onprem-heading">Cloud-Like Access, On-Prem Control</h2>
+    <p>Give users secure, cloud-style access to on-premises files. Full Zero Trust enforcement ensures data remains protected and auditable.</p>
+    <a class="pf-magic__more" href="https://fileflex.com/blog/" target="_blank" rel="noopener">Revitalizing On-Premises Storage with ZTDA →</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     MAGIC COLUMNS — DEPLOYMENT
+     ============================================================ -->
+<section class="pf-magic pf-magic--left" style="background-image:url('/images/platform/iStock-537743911-web-e1731689756904.webp');" aria-labelledby="pf-deploy-heading">
+  <div class="pf-magic__panel">
+    <p class="pf-eyebrow">Deployment</p>
+    <h2 id="pf-deploy-heading">Pilot in Days. Roll Back in Minutes.</h2>
+    <p>Pilot with a small set of repositories or business units. FileFlex Enterprise deploys as an overlay — uninstalling removes no persistent changes from storage and preserves files.</p>
+    <a class="pf-magic__more" href="https://fileflex.com/blog/" target="_blank" rel="noopener">Top 7 Advantages of an Overlay Service →</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     MAGIC COLUMNS — MICROSOFT
+     ============================================================ -->
+<section class="pf-magic pf-magic--right" style="background-image:url('/images/platform/Microsoft-panel-home-page-pic.webp');" aria-labelledby="pf-msft-heading">
+  <div class="pf-magic__panel">
+    <p class="pf-eyebrow">Microsoft Environments</p>
+    <h2 id="pf-msft-heading">Think Microsoft Has You Covered? Think Again.</h2>
+    <p>Your Microsoft tools handle identity, but fall short on data-centric security. Zero Trust Data Access is the missing layer your Microsoft environment needs to protect unstructured data, reduce risk, and meet compliance head-on.</p>
+    <p style="margin-top:8px;">
+      <a class="pf-magic__more" href="https://fileflex.com/blog/" target="_blank" rel="noopener">Why Microsoft-Centric Security Isn't Enough →</a>
+    </p>
+    <p style="margin-top:20px;margin-bottom:0;">
+      <a class="pf-btn pf-btn--uppercase" href="https://fileflex.com/fileflex-enterprise/try-plus/" target="_blank" rel="noopener">Try FileFlex &rsaquo;</a>
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     COST STRIP
+     ============================================================ -->
+<section id="pf-cost" aria-labelledby="pf-cost-heading">
+  <h2 id="pf-cost-heading">Reduce Your Cost of Data Access &amp; Sharing</h2>
+  <p>
+    Zero Trust Data Access from FileFlex reduces maintenance and support costs across VPN, FTP, MFT,
+    file sharing, content collaboration, virtual data rooms, and cloud storage — dramatically lowering
+    your total cost of ownership.
+  </p>
+  <a class="pf-btn pf-btn--lg pf-btn--uppercase pf-btn--outline" href="https://fileflex.com/blog/" target="_blank" rel="noopener">How ZTDA Cuts Costs in Operations &rsaquo;</a>
+</section>
+
+<!-- ============================================================
+     FINAL CTA
+     ============================================================ -->
+<section id="pf-cta" aria-labelledby="pf-cta-heading">
+  <p class="pf-eyebrow pf-eyebrow--center" style="color:#ffd6b0;">Get Started</p>
+  <h2 id="pf-cta-heading">Launch a governed workflow in days — not months.</h2>
+  <div class="pf-cta-buttons">
+    <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="https://fileflex.com/demo-request/" target="_blank" rel="noopener">Book a Demo &rsaquo;</a>
+    <a class="pf-btn pf-btn--lg pf-btn--uppercase pf-btn--outline" href="https://fileflex.com/fileflex-enterprise/try-plus/" target="_blank" rel="noopener">Launch a Pilot &rsaquo;</a>
+  </div>
+</section>
+
+</Layout>
