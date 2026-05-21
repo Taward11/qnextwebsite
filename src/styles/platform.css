@@ -512,14 +512,24 @@
   margin: 0 0 18px;
   object-fit: cover;
 }
+.pf-ransom__media { display: block; }
 .pf-ransom__art {
-  margin: 0;
-  border-radius: 16px;
+  display: block;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 30px 80px -40px rgba(14,26,43,0.25);
-  background: #fff;
+  background: #0e1a2b;
+  transition: transform 0.2s ease;
 }
+.pf-ransom__art:hover { transform: translateY(-2px); }
 .pf-ransom__art img { display: block; width: 100%; height: auto; }
+.pf-ransom__caption {
+  margin: 16px 0 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.pf-ransom__caption a { color: var(--pf-orange); text-decoration: none; }
+.pf-ransom__caption a:hover { text-decoration: underline; }
 @media (max-width: 900px) {
   .pf-ransom__inner { grid-template-columns: 1fr; gap: 40px; }
 }
