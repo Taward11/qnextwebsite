@@ -202,6 +202,9 @@ ul { list-style: none; }
 }
 .ff-eyebrow--center { text-align: center; }
 
+/* Override: orange-on-orange would be invisible in the Transform section */
+#ff-transform .ff-eyebrow { color: #fff; }
+
 
 .ff-hero__sub {
   font-size: 1.125rem;
@@ -522,12 +525,13 @@ ul { list-style: none; }
 }
 
 #ff-use .section-title {
-  font-size: clamp(1.75rem, 4vw, 3rem);
-  font-weight: 700;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 600;
   color: var(--white);
   text-align: center;
   margin-bottom: 2.5rem;
-  letter-spacing: -0.035em;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
 }
 
 .ff-accordion {
@@ -619,12 +623,13 @@ ul { list-style: none; }
 
 #ff-transform .section-title,
 #ff-key .section-title {
-  font-size: clamp(1.75rem, 4vw, 3rem);
-  font-weight: 700;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 600;
   color: var(--white);
   text-align: center;
   margin-bottom: 3rem;
-  letter-spacing: -0.035em;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
 }
 
 .ff-feature-grid {
@@ -807,12 +812,13 @@ ul { list-style: none; }
 }
 
 #ff-learning .section-title {
-  font-size: clamp(1.75rem, 4vw, 3rem);
-  font-weight: 700;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 600;
   color: var(--white);
   text-align: center;
   margin-bottom: 3rem;
-  letter-spacing: -0.035em;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
 }
 
 .ff-resource-grid {
