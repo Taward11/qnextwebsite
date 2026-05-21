@@ -13,30 +13,35 @@ import '../styles/challenge.css';
 <Nav current="challenge" />
 
 <!-- ============================================================
-     HERO
+     HERO — dark background image + CTA
      ============================================================ -->
 <section id="chg-hero" aria-labelledby="chg-hero-heading">
+  <div class="chg-hero__overlay"></div>
   <div class="chg-hero__inner">
-    <p class="chg-hero__eyebrow">The Challenge</p>
-    <h1 id="chg-hero-heading">Unstructured Data Is the Major Security Problem for Ransomware</h1>
-    <p class="chg-hero__lede">
-      With your unstructured data stored across thousands of devices, multiple domains
-      and numerous methods of access, it has become a problem from a security,
-      productivity and data governance perspective.
-    </p>
-    <figure class="chg-hero__quote">
-      <blockquote>
-        <p>"Upward of 80% of enterprise data today is unstructured."</p>
-      </blockquote>
-      <figcaption>
-        <img src="/images/challenge/Gartner.webp" alt="Gartner" loading="eager" decoding="async" width="120" height="38" />
-      </figcaption>
-    </figure>
+    <p class="chg-hero__eyebrow"><span>THE CHALLENGE:</span></p>
+    <h1 id="chg-hero-heading">Unstructured Data is the Major Security Problem for Ransomware</h1>
+    <a class="chg-hero__btn" href="#chg-modal" aria-label="Watch Overview Video: 2 minutes 35 seconds">
+      <svg width="14" height="16" viewBox="0 0 14 16" aria-hidden="true"><path fill="currentColor" d="M0 0v16l14-8z"/></svg>
+      <span>Watch Overview Video (2:35)</span>
+    </a>
   </div>
 </section>
 
 <!-- ============================================================
-     THE EXPANDING CHAOS
+     BLUE STATEMENT STRIP
+     ============================================================ -->
+<aside id="chg-statement" aria-label="Summary statement">
+  <div class="chg-statement__inner">
+    <p>
+      With your unstructured data stored over thousands of devices in multiple domains
+      and numerous methods of access, it has become a problem from a security,
+      productivity and data governance perspective.
+    </p>
+  </div>
+</aside>
+
+<!-- ============================================================
+     THE PROBLEM — Expanding Chaos + 80% graphic
      ============================================================ -->
 <section id="chg-chaos" class="pf-section pf-section--white" aria-labelledby="chg-chaos-heading">
   <div class="pf-section__inner chg-twocol">
@@ -51,8 +56,8 @@ import '../styles/challenge.css';
       </p>
       <p>
         They can be cloud solutions hosted by Microsoft, Amazon or Google, or self‑hosted
-        and Microsoft‑hosted implementations of SharePoint. More often than not, they're
-        stored across multiple domains and global locations.
+        and Microsoft‑hosted implementations of SharePoint — across multiple domains and
+        global locations.
       </p>
       <p>
         As a result of this complexity, <strong>99% of IT security specialists have issues
@@ -61,62 +66,74 @@ import '../styles/challenge.css';
         perspective.
       </p>
     </div>
-    <figure class="chg-twocol__fig">
-      <img src="/images/challenge/iStock-1277341511-web.webp" alt="Data scattered across complex hybrid-IT infrastructure" loading="lazy" decoding="async" />
+    <figure class="chg-chaos__fig">
+      <img src="/images/challenge/80.webp" alt="Chart: 80 percent of enterprise data is unstructured" loading="lazy" decoding="async" />
+      <figcaption>
+        <blockquote>"Upward of 80% of enterprise data today is unstructured."</blockquote>
+        <cite>— Gartner</cite>
+      </figcaption>
     </figure>
   </div>
 </section>
 
 <!-- ============================================================
-     HOW FILEFLEX TRANSFORMS — industry strip
+     HOW FILEFLEX TRANSFORMS — mirrors /platform pf-ind grid
      ============================================================ -->
-<section id="chg-industries" class="pf-section" aria-labelledby="chg-industries-heading">
+<section id="chg-ind" class="pf-section pf-section--light" aria-labelledby="chg-ind-heading">
   <div class="pf-section__inner">
     <p class="pf-eyebrow pf-eyebrow--center">Who It's For</p>
-    <h2 id="chg-industries-heading" class="pf-title pf-title--center">How FileFlex Transforms Enterprise Data Security</h2>
+    <h2 id="chg-ind-heading" class="pf-title pf-title--center">How FileFlex Transforms Enterprise Data Security</h2>
     <p class="pf-lede pf-lede--center">
       Unstructured data lives throughout a complex hybrid‑IT infrastructure — on‑premises,
-      public and private clouds, multiple domains, multiple devices, multiple locations.
-      The unmanaged growth, disparate silos and multiple methods of access have led to
-      increased organization‑wide exposure to ransomware.
+      public and private clouds, multiple domains, devices and locations. The unmanaged
+      growth, disparate silos and multiple methods of access have led to increased
+      organization‑wide exposure to ransomware.
     </p>
-    <ul class="chg-industries__grid" aria-label="Industries served">
-      <li><img src="/images/challenge/Healthcare.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" /><span>Healthcare</span></li>
-      <li><img src="/images/challenge/Financial-Services.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" /><span>Financial Services</span></li>
-      <li><img src="/images/challenge/law-firms.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" /><span>Law Firms</span></li>
-      <li><img src="/images/challenge/Govt_contr.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" /><span>Government &amp; Contractors</span></li>
-      <li><img src="/images/challenge/manufacturing.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" /><span>Manufacturing</span></li>
-      <li><img src="/images/challenge/arch-and-eng.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" /><span>Architecture &amp; Engineering</span></li>
-    </ul>
+    <div class="pf-ind__grid">
+      <a class="pf-ind__tile" href="https://fileflex.com/healthcare/" target="_blank" rel="noopener">
+        <img src="/images/challenge/Healthcare.webp" alt="" loading="lazy" decoding="async" />
+        <h3>Healthcare</h3>
+      </a>
+      <a class="pf-ind__tile" href="https://fileflex.com/accounting-and-consulting-firm/" target="_blank" rel="noopener">
+        <img src="/images/challenge/Financial-Services.webp" alt="" loading="lazy" decoding="async" />
+        <h3>Financial Services</h3>
+      </a>
+      <a class="pf-ind__tile" href="https://fileflex.com/law-firms/" target="_blank" rel="noopener">
+        <img src="/images/challenge/law-firms.webp" alt="" loading="lazy" decoding="async" />
+        <h3>Law Firms</h3>
+      </a>
+      <a class="pf-ind__tile" href="https://fileflex.com/government-and-military-contractors-2/" target="_blank" rel="noopener">
+        <img src="/images/challenge/Govt_contr.webp" alt="" loading="lazy" decoding="async" />
+        <h3>Government &amp; Military Contractors</h3>
+      </a>
+      <a class="pf-ind__tile" href="https://fileflex.com/manufacturing/" target="_blank" rel="noopener">
+        <img src="/images/challenge/manufacturing.webp" alt="" loading="lazy" decoding="async" />
+        <h3>Manufacturing</h3>
+      </a>
+      <a class="pf-ind__tile" href="https://fileflex.com/architecture-engineering/" target="_blank" rel="noopener">
+        <img src="/images/challenge/arch-and-eng.webp" alt="" loading="lazy" decoding="async" />
+        <h3>Architecture &amp; Engineering</h3>
+      </a>
+    </div>
   </div>
 </section>
 
 <!-- ============================================================
-     RANSOMWARE VULNERABILITY
+     SPOTLIGHT — Ransomware
      ============================================================ -->
-<section id="chg-ransom" class="pf-section pf-section--white" aria-labelledby="chg-ransom-heading">
-  <div class="pf-section__inner chg-twocol chg-twocol--reverse">
-    <figure class="chg-twocol__fig">
-      <img src="/images/challenge/iStock-1187536032-web-e1760727068952.webp" alt="Server racks representing infrastructure under ransomware threat" loading="lazy" decoding="async" />
-    </figure>
-    <div>
-      <p class="pf-eyebrow">Ransomware</p>
-      <h2 id="chg-ransom-heading" class="pf-title">Increased Vulnerability to Ransomware</h2>
-      <p>
-        FileFlex Enterprise reduces the risk of ransomware through security controls and a
-        Zero Trust architecture.
-      </p>
+<section class="chg-spot" style="background-image:url('/images/challenge/iStock-911484556-web.webp');" aria-labelledby="chg-ransom-heading">
+  <div class="chg-spot__overlay"></div>
+  <div class="chg-spot__inner">
+    <div class="chg-spot__copy">
+      <h2 id="chg-ransom-heading">Increased Vulnerability to Ransomware</h2>
       <p>
         According to IDC, <strong>37% of organizations have been hit with ransomware</strong>,
         and ransomware complaints to the FBI are up 62%. Ransomware is at epidemic levels —
         and Gartner identifies the rise of unstructured data as its primary vector, because
-        ransomware is fundamentally a data access issue.
+        ransomware is fundamentally a data access issue. The cost isn't just payments to
+        hackers — it includes investigation, recovery, fines and credit remediation.
       </p>
-      <p>
-        The cost isn't just payments to hackers — it includes investigation, recovery,
-        fines and credit remediation.
-      </p>
-      <blockquote class="chg-pullquote">
+      <blockquote class="chg-spot__quote">
         "As ransomware continues to wreak havoc on organizations, security and risk
         management leaders must take a <strong>data‑centric view</strong> of this
         data‑focused threat."
@@ -124,79 +141,89 @@ import '../styles/challenge.css';
     </div>
   </div>
 </section>
+<aside class="chg-claim" aria-label="FileFlex remediation">
+  <p>FileFlex Enterprise reduces the risk of ransomware through security controls and a Zero Trust architecture.</p>
+</aside>
 
 <!-- ============================================================
-     ROGUE SILOS + UNGOVERNED ACCESS (two stacked panels)
+     SPOTLIGHT — Rogue Silos
      ============================================================ -->
-<section id="chg-silos" class="pf-section" aria-labelledby="chg-silos-heading">
-  <div class="pf-section__inner">
-    <p class="pf-eyebrow pf-eyebrow--center">The Sprawl</p>
-    <h2 id="chg-silos-heading" class="pf-title pf-title--center">Rogue Silos &amp; Ungoverned Access</h2>
-    <div class="chg-silos__grid">
-      <article class="chg-silos__card">
-        <h3>Rogue Information Silos and Access Solutions</h3>
-        <p>
-          Unstructured data is stored across thousands of repositories — from on‑premises
-          PCs, NAS and servers to cloud storage on Amazon, Microsoft and Google, and
-          SharePoint. The result is thousands of silos and multiple access methods.
-          Organizations lack a single solution that federates them.
-        </p>
-        <p class="chg-silos__pill">FileFlex Enterprise provides federated access to disparate silos of unstructured data.</p>
-      </article>
-      <article class="chg-silos__card">
-        <h3>Ungoverned Data Access Problems</h3>
-        <p>
-          With thousands of users accessing thousands of data silos, IT managers lack key
-          information about who, what and when unstructured data is being accessed. It is
-          difficult to know where confidential information is stored, or to control access
-          to it.
-        </p>
-        <p class="chg-silos__pill">FileFlex Enterprise gives IT a management console and real‑time activity log to govern and track remote access.</p>
-      </article>
+<section class="chg-spot chg-spot--right" style="background-image:url('/images/challenge/iStock-1175177391-web.webp');" aria-labelledby="chg-silos-heading">
+  <div class="chg-spot__overlay"></div>
+  <div class="chg-spot__inner">
+    <div class="chg-spot__copy">
+      <h2 id="chg-silos-heading">Rogue Information Silos &amp; Access Solutions</h2>
+      <p>
+        Unstructured data is stored across thousands of repositories — from on‑premises
+        PCs, NAS and servers to cloud storage on Amazon, Microsoft and Google, and to
+        SharePoint. The result is thousands of silos of information and multiple methods
+        of access. Organizations lack a single solution that provides federated access
+        to these disparate silos.
+      </p>
     </div>
   </div>
 </section>
+<aside class="chg-claim" aria-label="FileFlex remediation">
+  <p>FileFlex Enterprise is a single solution that provides federated access to disparate silos of unstructured data.</p>
+</aside>
 
 <!-- ============================================================
-     REMOTE WORK & CONTRACTORS
+     SPOTLIGHT — Ungoverned Access
      ============================================================ -->
-<section id="chg-remote" class="pf-section pf-section--white" aria-labelledby="chg-remote-heading">
-  <div class="pf-section__inner chg-twocol">
-    <div>
-      <p class="pf-eyebrow">Workforce Shift</p>
-      <h2 id="chg-remote-heading" class="pf-title">Increased Headaches of Remote Work and Contractors</h2>
+<section class="chg-spot" style="background-image:url('/images/challenge/iStock-1392442626-web.webp');" aria-labelledby="chg-gov-heading">
+  <div class="chg-spot__overlay"></div>
+  <div class="chg-spot__inner">
+    <div class="chg-spot__copy">
+      <h2 id="chg-gov-heading">Ungoverned Data Access Problems</h2>
+      <p>
+        With thousands of users accessing thousands of data silos, IT managers lack key
+        information as to who, what and when unstructured data is being accessed. It is
+        difficult to know where confidential information is stored, or to control access
+        to it.
+      </p>
+    </div>
+  </div>
+</section>
+<aside class="chg-claim" aria-label="FileFlex remediation">
+  <p>FileFlex Enterprise provides IT with a management console and real‑time activity log to govern and track remote access to unstructured data.</p>
+</aside>
+
+<!-- ============================================================
+     SPOTLIGHT — Remote Work
+     ============================================================ -->
+<section class="chg-spot chg-spot--right" style="background-image:url('/images/challenge/iStock-912944078-web.webp');" aria-labelledby="chg-remote-heading">
+  <div class="chg-spot__overlay"></div>
+  <div class="chg-spot__inner">
+    <div class="chg-spot__copy">
+      <h2 id="chg-remote-heading">Increased Headaches of Remote Work &amp; Contractors</h2>
       <p>
         The workforce has shifted from employees in organization‑owned facilities to a
         distributed mix of employees, contractors and gig workers — often remote, often on
         personal devices. They need controlled access to appropriate content on a complex
-        hybrid‑IT infrastructure without necessarily having VPN access.
+        hybrid‑IT infrastructure without necessarily having VPN access. This paradigm shift
+        has been accelerated and magnified by the rise of work‑from‑home.
       </p>
-      <p>
-        This paradigm shift has been accelerated and magnified by the rise of work‑from‑home,
-        throwing a new level of remote data access at hybrid‑IT infrastructures.
-      </p>
-      <p class="chg-remote__h">The workforce works from anywhere, on any device:</p>
-      <ul class="chg-remote__list">
+      <ul class="chg-spot__list">
         <li>On‑premises or remote</li>
         <li>Corporate or personal computers</li>
         <li>Mobile devices — tablets and phones</li>
       </ul>
     </div>
-    <figure class="chg-twocol__fig">
-      <img src="/images/challenge/iStock-841574382-web.webp" alt="Distributed workforce of employees and contractors working remotely on multiple devices" loading="lazy" decoding="async" />
-    </figure>
   </div>
 </section>
+<aside class="chg-claim" aria-label="FileFlex remediation">
+  <p>FileFlex Enterprise allows IT to provide controlled, least‑privileged access to contractors and gig workers.</p>
+</aside>
 
 <!-- ============================================================
-     CURRENT SOLUTIONS ARE INSUFFICIENT — 3 cards
+     CURRENT SOLUTIONS — three insufficient approaches
      ============================================================ -->
-<section id="chg-current" class="pf-section" aria-labelledby="chg-current-heading">
+<section id="chg-current" class="pf-section pf-section--white" aria-labelledby="chg-current-heading">
   <div class="pf-section__inner">
     <p class="pf-eyebrow pf-eyebrow--center">The Gap</p>
-    <h2 id="chg-current-heading" class="pf-title pf-title--center">Current Remote Access and Sharing Solutions Are Insufficient</h2>
+    <h2 id="chg-current-heading" class="pf-title pf-title--center">Current Remote Access &amp; Sharing Solutions Are Insufficient</h2>
     <p class="pf-lede pf-lede--center">
-      Multiple remote access and sharing solutions are the norm in enterprises today,
+      Multiple remote access and sharing solutions are the norm in enterprises today —
       compounding issues in governance, security, productivity and costs.
     </p>
     <div class="chg-current__grid">
@@ -222,9 +249,9 @@ import '../styles/challenge.css';
         <h3>ZTNA / ZTAA</h3>
         <p>
           Zero Trust Network Access and Application Access provide identity, micro‑segmentation
-          and least‑privilege access — but to a network segment or application, allowing access
-          to every file and folder on that segment. They don't provide file sharing or
-          collaboration.
+          and least‑privilege access — but only to a network segment or application, allowing
+          access to every file and folder on that segment. They don't provide file sharing
+          or collaboration.
         </p>
       </article>
     </div>
@@ -253,7 +280,7 @@ import '../styles/challenge.css';
 </section>
 
 <!-- ============================================================
-     ZTDA REPORT CARD
+     ZTDA REPORT
      ============================================================ -->
 <section id="chg-report" class="pf-section pf-section--white" aria-labelledby="chg-report-heading">
   <div class="pf-section__inner chg-report__inner">
@@ -275,5 +302,16 @@ import '../styles/challenge.css';
     </div>
   </div>
 </section>
+
+<!-- ============================================================
+     VIDEO MODAL
+     ============================================================ -->
+<div class="pf-modal-overlay" id="chg-modal" role="dialog" aria-modal="true" aria-label="Overview video player">
+  <a class="pf-modal-backdrop" href="#!" aria-label="Close video"></a>
+  <div class="pf-modal">
+    <a class="pf-modal-close" href="#!" aria-label="Close video">&times;</a>
+    <iframe src="https://www.youtube-nocookie.com/embed/dzySf22Ssaw?rel=0&modestbranding=1" title="FileFlex Overview" loading="lazy" allow="encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
 
 </Layout>
