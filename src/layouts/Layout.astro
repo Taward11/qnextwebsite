@@ -1,10 +1,19 @@
 ---
+interface FaqItem { q: string; a: string; }
 interface Props {
   title: string;
   description?: string;
+  faq?: FaqItem[];
 }
 
-const { title, description = "FileFlex Enterprise applies Zero Trust Data Access to unstructured data wherever it resides — without migration or VPN." } = Astro.props;
+const defaultFaq: FaqItem[] = [
+  { q: "What is FileFlex and how does it secure unstructured data?", a: "FileFlex is a Zero Trust Data Access platform that provides secure, policy-driven access to unstructured data across on-premises, cloud, and hybrid storage without moving or copying the data. It enforces least-privilege access and records all activity for audit and compliance." },
+  { q: "How does FileFlex enforce Zero Trust principles?", a: "FileFlex enforces Zero Trust by authenticating each request, evaluating access against centrally defined policies, and ensuring only authorized users receive access based on context and permissions. Storage systems remain dark unless explicitly accessed through FileFlex policy workflows." },
+  { q: "Can FileFlex help reduce ransomware and data exfiltration risk?", a: "Yes. FileFlex\u2019s Zero Trust model limits open access to file shares and network drives, reducing the attack surface. Its detailed activity logs and ability to detect unusual access or extraction patterns can help identify ransomware behavior during data exfiltration, enabling faster detection and response." },
+  { q: "Does FileFlex work with existing enterprise systems like Active Directory and cloud storage?", a: "Yes. FileFlex integrates with enterprise identity providers such as Active Directory and Azure AD for authentication and policy enforcement. It federates access to existing on-premises and cloud file systems, SharePoint, and NAS without requiring changes to your infrastructure." },
+];
+
+const { title, description = "FileFlex Enterprise applies Zero Trust Data Access to unstructured data wherever it resides — without migration or VPN.", faq = defaultFaq } = Astro.props;
 const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
 ---
 <!DOCTYPE html>
@@ -54,40 +63,11 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is FileFlex and how does it secure unstructured data?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "FileFlex is a Zero Trust Data Access platform that provides secure, policy-driven access to unstructured data across on-premises, cloud, and hybrid storage without moving or copying the data. It enforces least-privilege access and records all activity for audit and compliance."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does FileFlex enforce Zero Trust principles?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "FileFlex enforces Zero Trust by authenticating each request, evaluating access against centrally defined policies, and ensuring only authorized users receive access based on context and permissions. Storage systems remain dark unless explicitly accessed through FileFlex policy workflows."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can FileFlex help reduce ransomware and data exfiltration risk?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. FileFlex\u2019s Zero Trust model limits open access to file shares and network drives, reducing the attack surface. Its detailed activity logs and ability to detect unusual access or extraction patterns can help identify ransomware behavior during data exfiltration, enabling faster detection and response."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does FileFlex work with existing enterprise systems like Active Directory and cloud storage?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. FileFlex integrates with enterprise identity providers such as Active Directory and Azure AD for authentication and policy enforcement. It federates access to existing on-premises and cloud file systems, SharePoint, and NAS without requiring changes to your infrastructure."
-        }
-      }
-    ]
+    "mainEntity": faq.map((f) => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": { "@type": "Answer", "text": f.a }
+    }))
   })} />
 </head>
 <body>

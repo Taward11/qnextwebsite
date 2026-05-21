@@ -8,6 +8,12 @@ import '../styles/platform.css';
 <Layout
   title="The FileFlex Enterprise Platform"
   description="A data-layer Zero Trust Data Access (ZTDA) platform built to enforce per-request, least-privilege access, immutable auditing and seamless enterprise integrations — without migrating or copying your files."
+  faq={[
+    { q: "What is FileFlex Enterprise and how does it implement Zero Trust Data Access?", a: "FileFlex Enterprise is a Zero Trust Data Access (ZTDA) platform that enforces per\u2011request, least\u2011privilege access to unstructured data across hybrid storage without migrating or copying files. Every file operation is brokered through a policy server to ensure secure, authorized access." },
+    { q: "How does FileFlex keep storage \u2018dark\u2019 and secure against direct access?", a: "FileFlex ensures storage remains \u2018dark\u2019 by brokering all access through a central policy layer and connectors. Users never obtain unauthenticated direct access to storage; they see only the files they are authorized to access, and every action is logged for auditing and security monitoring." },
+    { q: "Can FileFlex help detect ransomware or unusual data extraction activity?", a: "Yes. FileFlex provides detailed activity logging and can export logs to SIEM platforms for real\u2011time correlation. Unusual patterns of data access or extraction can be detected and alerted on, helping identify ransomware activity in the early exfiltration phase." },
+    { q: "Does FileFlex support access to hybrid and federated storage environments?", a: "FileFlex enables federated hybrid access by unifying access policies across on\u2011premises, cloud, and SharePoint storage without data migration or synchronization. It enforces consistent least\u2011privilege access while preserving the data in its original location." }
+  ]}
 >
 
 <!-- ============================================================

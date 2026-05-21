@@ -1,0 +1,45 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+
+    {
+      "@type": "Question",
+      "name": "What is FileFlex Enterprise and how does it implement Zero Trust Data Access?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FileFlex Enterprise is a Zero Trust Data Access (ZTDA) platform that enforces per‑request, least‑privilege access to unstructured data across hybrid storage without migrating or copying files. Every file operation is brokered through a policy server to ensure secure, authorized access."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "How does FileFlex keep storage ‘dark’ and secure against direct access?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FileFlex ensures storage remains ‘dark’ by brokering all access through a central policy layer and connectors. Users never obtain unauthenticated direct access to storage; they see only the files they are authorized to access, and every action is logged for auditing and security monitoring."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Can FileFlex help detect ransomware or unusual data extraction activity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. FileFlex provides detailed activity logging and can export logs to SIEM platforms for real‑time correlation. Unusual patterns of data access or extraction can be detected and alerted on, helping identify ransomware activity in the early exfiltration phase."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Does FileFlex support access to hybrid and federated storage environments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FileFlex enables federated hybrid access by unifying access policies across on‑premises, cloud, and SharePoint storage without data migration or synchronization. It enforces consistent least‑privilege access while preserving the data in its original location."
+      }
+    }
+
+  ]
+}
+</script>
