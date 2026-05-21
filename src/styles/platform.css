@@ -498,8 +498,12 @@
 }
 #pf-ransom .pf-title { color: var(--pf-ink); }
 .pf-ransom__inner {
-  max-width: 880px;
+  max-width: 1200px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 64px;
+  align-items: center;
 }
 .pf-ransom__bar {
   display: block;
@@ -507,6 +511,17 @@
   height: 8px;
   margin: 0 0 18px;
   object-fit: cover;
+}
+.pf-ransom__art {
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px -40px rgba(14,26,43,0.25);
+  background: #fff;
+}
+.pf-ransom__art img { display: block; width: 100%; height: auto; }
+@media (max-width: 900px) {
+  .pf-ransom__inner { grid-template-columns: 1fr; gap: 40px; }
 }
 .pf-ransom__list {
   list-style: none;
