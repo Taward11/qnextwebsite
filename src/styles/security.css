@@ -8,8 +8,8 @@
   color: #fff;
   padding: 140px 6vw 110px;
   background:
-    linear-gradient(110deg, rgba(8,14,30,0.88) 0%, rgba(8,14,30,0.7) 55%, rgba(8,14,30,0.45) 100%),
-    url('/images/security/Panel1-city-web-e1744660611501.webp') center/cover no-repeat;
+    linear-gradient(110deg, rgba(8,14,30,0.85) 0%, rgba(8,14,30,0.65) 55%, rgba(8,14,30,0.4) 100%),
+    url('/images/security/Network-security-blog-cover-picture.webp') center/cover no-repeat;
   background-color: #0b1224;
 }
 .sec-hero__inner {
@@ -160,13 +160,13 @@
   border-radius: 50%;
 }
 
-/* SIX PILLARS — Security Has Evolved */
+/* SIX PILLARS — Security Has Evolved (white) */
 #sec-pillars {
-  background: #0b1224;
-  color: #fff;
+  background: #fff;
+  color: var(--pf-ink, #1a1f2c);
 }
-#sec-pillars .pf-title { color: #fff; }
-#sec-pillars .pf-lede { color: #cbd3dd; }
+#sec-pillars .pf-title { color: var(--pf-ink, #1a1f2c); }
+#sec-pillars .pf-lede { color: var(--pf-ink-soft, #4a5060); }
 .sec-pillars__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -174,20 +174,22 @@
   margin-top: 40px;
 }
 .sec-pillar {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: #fff;
+  border: 1px solid #e6e9ef;
   border-radius: 8px;
   padding: 32px 28px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .sec-pillar:hover {
   transform: translateY(-2px);
-  border-color: rgba(232,89,10,0.5);
+  border-color: rgba(232,89,10,0.4);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
 }
 .sec-pillar__icon {
   width: 64px; height: 64px;
   margin-bottom: 18px;
-  background: #fff;
+  background: #f6f8fb;
+  border: 1px solid #e6e9ef;
   border-radius: 12px;
   padding: 10px;
   display: flex;
@@ -200,7 +202,7 @@
   font-size: 19px;
   font-weight: 600;
   margin: 0 0 14px;
-  color: #fff;
+  color: var(--pf-ink, #1a1f2c);
   line-height: 1.3;
 }
 .sec-pillar ul {
@@ -213,18 +215,28 @@
   padding: 6px 0 6px 18px;
   font-size: 14.5px;
   line-height: 1.5;
-  color: #cbd3dd;
+  color: var(--pf-ink-soft, #4a5060);
 }
 .sec-pillar li::before {
   content: "";
   position: absolute;
   left: 0; top: 14px;
   width: 6px; height: 6px;
-  background: #ff8a3d;
+  background: #e8590a;
   border-radius: 50%;
 }
 
-/* REGULATED — two-column with badge bullets */
+/* REGULATED — background image with white text */
+#sec-reg {
+  position: relative;
+  background:
+    linear-gradient(120deg, rgba(8,14,30,0.85) 0%, rgba(8,14,30,0.65) 55%, rgba(8,14,30,0.55) 100%),
+    url('/images/security/Data-Sovereignty-2-e1730312868476.webp') center/cover no-repeat;
+  background-color: #0b1224;
+  color: #fff;
+}
+#sec-reg .pf-title { color: #fff; }
+#sec-reg .pf-eyebrow { color: #ff8a3d; }
 .sec-reg__list {
   list-style: none;
   padding: 0;
@@ -234,33 +246,37 @@
   gap: 14px;
 }
 .sec-reg__list li {
-  background: #fff;
-  border: 1px solid #e6e9ef;
-  border-left: 4px solid #1c398e;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-left: 4px solid #ff8a3d;
   padding: 18px 24px;
   font-size: 16px;
   line-height: 1.5;
   border-radius: 4px;
+  color: #fff;
 }
 
-/* CTA */
+/* CTA — white panel, blue buttons */
 #sec-cta {
-  background: linear-gradient(135deg, #1c398e 0%, #2a4ec0 100%);
-  color: #fff;
+  background: #fff;
+  color: var(--pf-ink, #1a1f2c);
   text-align: center;
   padding: 80px 6vw;
+  border-top: 1px solid #e6e9ef;
+  border-bottom: 1px solid #e6e9ef;
 }
 #sec-cta h2 {
   font-family: var(--pf-font-display, 'Syne', sans-serif);
   font-size: clamp(28px, 3.5vw, 42px);
   font-weight: 700;
   margin: 0 0 16px;
-  color: #fff;
+  color: var(--pf-ink, #1a1f2c);
 }
 #sec-cta p {
   font-size: 17px;
   margin: 0 0 28px;
-  color: #d6deef;
+  color: var(--pf-ink-soft, #4a5060);
 }
 #sec-cta .sec-cta__btns {
   display: flex;
@@ -268,11 +284,31 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+#sec-cta .sec-cta__btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #1c398e;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: var(--pf-font-display, 'Syne', sans-serif);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+#sec-cta .sec-cta__btn:hover { background: #2a4ec0; transform: translateY(-1px); }
+#sec-cta .sec-cta__btn--ghost {
+  background: #fff;
+  color: #1c398e;
+  border: 2px solid #1c398e;
+  padding: 12px 26px;
+}
+#sec-cta .sec-cta__btn--ghost:hover { background: #1c398e; color: #fff; }
 
 /* BLOG GRID */
 #sec-blogs { background: #f6f8fb; }
 #sec-blogs .pf-title,
-#sec-reg .pf-title,
 #sec-problem .pf-title { color: var(--pf-ink, #1a1f2c); }
 .sec-blog__grid {
   display: grid;
