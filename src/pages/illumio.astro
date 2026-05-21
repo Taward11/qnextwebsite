@@ -27,9 +27,8 @@ import Layout from '../layouts/Layout.astro';
      ============================================================ -->
 <header class="il-nav">
   <div class="il-nav__inner">
-    <a href="/" class="il-nav__brand" aria-label="FileFlex home">
-      <span class="il-nav__mark" aria-hidden="true"></span>
-      <span class="il-nav__wordmark">fileflex</span>
+    <a href="/" class="il-nav__brand" aria-label="FileFlex Enterprise home">
+      <img src="/images/fileflex-logo.png" alt="FileFlex Enterprise" class="il-nav__logo-img" loading="eager" fetchpriority="high" decoding="async" />
     </a>
     <nav class="il-nav__links" aria-label="Primary">
       <a href="#">Why FileFlex</a>
@@ -118,6 +117,9 @@ import Layout from '../layouts/Layout.astro';
           actually live — sits outside that perimeter. It's the last unprotected
           surface.
         </p>
+        <figure class="il-card__figure">
+          <img src="/images/zt-problem.png" alt="Zero Trust framework with the data layer missing" loading="lazy" decoding="async" />
+        </figure>
       </article>
       <article class="il-card il-card--filled">
         <p class="il-card__label">The solution</p>
@@ -127,6 +129,9 @@ import Layout from '../layouts/Layout.astro';
           to files wherever they reside — without moving them, without VPNs,
           without migration.
         </p>
+        <figure class="il-card__figure il-card__figure--dark">
+          <img src="/images/zt-solution.png" alt="Complete Zero Trust framework with FileFlex closing the data layer" loading="lazy" decoding="async" />
+        </figure>
         <a href="#" class="il-link-arrow il-link-arrow--light">Read the brief
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
@@ -144,6 +149,9 @@ import Layout from '../layouts/Layout.astro';
     <h2 class="il-section-title">
       An easy-to-implement overlay service that applies Zero Trust Data Access to the data layer.
     </h2>
+    <figure class="il-meet__hero">
+      <img src="/images/windows-integration.webp" alt="FileFlex federated Windows access across cloud, on-premises, SharePoint and remote repositories" loading="lazy" decoding="async" />
+    </figure>
     <div class="il-meet__grid">
       <div>
         <h3 class="il-meet__kicker">What it is</h3>
@@ -820,6 +828,31 @@ import Layout from '../layouts/Layout.astro';
     margin: 0 0 24px;
   }
   .il-card--filled .il-card__body { color: rgba(255,255,255,0.75); }
+  .il-card__figure {
+    margin: 24px 0 0;
+    padding: 24px;
+    background: #FAFBFC;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .il-card__figure--dark {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .il-card__figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Nav logo image */
+  .il-nav__logo-img {
+    height: 38px;
+    width: auto;
+    display: block;
+  }
 
   /* ---------- Meet FileFlex ---------- */
   .il-meet { padding: 120px 32px; background: #FAFBFC; }
@@ -857,6 +890,23 @@ import Layout from '../layouts/Layout.astro';
   .il-meet__list strong { color: var(--il-ink); font-weight: 600; }
   .il-meet__list--tight li { padding: 12px 0; }
   .il-meet__cta { margin-top: 48px; }
+  .il-meet__hero {
+    margin: 48px 0 64px;
+    padding: 40px;
+    background: #fff;
+    border: 1px solid var(--il-line);
+    border-radius: 20px;
+    box-shadow: 0 30px 80px -40px rgba(14,26,43,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .il-meet__hero img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
 
   /* ---------- Use cases ---------- */
   .il-cases { padding: 120px 32px; }
