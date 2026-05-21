@@ -369,10 +369,17 @@
   color: var(--pf-ink-soft, #51606F);
   margin: 0 0 22px;
 }
+.chg-report__ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 .chg-report__btn {
-  display: inline-block;
-  padding: 13px 28px;
-  background: #1c398e;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 26px;
+  background: #e8590a;
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
@@ -382,7 +389,15 @@
   letter-spacing: 0.02em;
   transition: background 0.2s ease, transform 0.2s ease;
 }
-.chg-report__btn:hover { background: #2a4ec0; transform: translateY(-1px); }
+.chg-report__btn:hover { background: #d24e07; transform: translateY(-1px); }
+.chg-report__btn svg { flex-shrink: 0; }
+.chg-report__btn--ghost {
+  background: transparent;
+  color: #1c398e;
+  border: 2px solid #1c398e;
+  padding: 11px 24px;
+}
+.chg-report__btn--ghost:hover { background: #1c398e; color: #fff; }
 
 /* ============================================================
    RESPONSIVE
