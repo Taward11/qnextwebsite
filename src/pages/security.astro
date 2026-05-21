@@ -1,0 +1,254 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import cards from '../data/security-cards.json';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+import '../styles/security.css';
+
+const { blogs, webinars } = cards;
+---
+
+<Layout
+  title="Security — FileFlex Enterprise"
+  description="Zero Trust Data Access enforcement at the file layer. Stop ransomware, insider risk, and accidental leaks — without copying files to the cloud."
+>
+
+<Nav current="security" />
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="sec-hero" aria-labelledby="sec-hero-heading">
+  <span class="sec-hero__eyebrow">Security</span>
+  <h1 id="sec-hero-heading">Security Built for Autonomous Threats — Not Yesterday's Perimeter</h1>
+  <p class="sec-hero__lede">
+    Get Zero Trust Data Access enforcement at the file layer, preventing unauthorized
+    movement, sharing, and exfiltration of sensitive data — without copying it to the cloud.
+  </p>
+  <p class="sec-hero__tag">Securing Files, Not Networks</p>
+  <div class="sec-hero__ctas">
+    <a class="pf-btn pf-btn--lg" href="https://fileflex.com/fileflex-enterprise/try-plus/">Book a Demo</a>
+    <a class="pf-btn pf-btn--lg pf-btn--outline" href="https://fileflex.com/contact-us/">Launch a Pilot</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     THE SECURITY PROBLEM HAS CHANGED
+     ============================================================ -->
+<section id="sec-problem" class="pf-section pf-section--white" aria-labelledby="sec-problem-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Threat Landscape</p>
+    <h2 id="sec-problem-heading" class="pf-title pf-title--center">The Security Problem Has Changed</h2>
+    <p class="pf-lede pf-lede--center">
+      Traditional cybersecurity is no longer enough. AI-powered ransomware, autonomous
+      exfiltration tools, and insider threats have shifted the battlefield: it's the data,
+      not the infrastructure, that is most at risk.
+    </p>
+    <div class="sec-problem__grid">
+      <ul>
+        <li>Ransomware now targets files, not just endpoints or networks.</li>
+        <li>AI agents can scan, access, and move sensitive data autonomously.</li>
+      </ul>
+      <ul>
+        <li>Email and public links create uncontrolled data exfiltration paths.</li>
+        <li>Cloud-first file sharing often duplicates sensitive data into unknown locations.</li>
+      </ul>
+    </div>
+    <p class="sec-problem__close" style="text-align:center;">
+      The solution is not just more security controls. It's a <strong>data-centric approach</strong>
+      that enforces Zero Trust at the file level.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY TRADITIONAL CONTROLS ARE INSUFFICIENT
+     ============================================================ -->
+<section id="sec-why" class="pf-section" aria-labelledby="sec-why-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Gap</p>
+    <h2 id="sec-why-heading" class="pf-title pf-title--center">Why Traditional Controls Are Insufficient</h2>
+    <figure class="sec-why__chart">
+      <img src="/images/security/Why-existing-tools-are-insufficient-chart.webp" alt="Chart showing how existing security tools leave the data layer unprotected" loading="lazy" decoding="async" />
+    </figure>
+    <div class="sec-why__steps">
+      <div class="sec-why__step"><h4>Zero Trust Must Extend to the Data Layer</h4></div>
+      <div class="sec-why__step"><h4>The Data Layer Remains the Blind Spot</h4></div>
+      <div class="sec-why__step"><h4>This Is Where Zero-Trust Data Access Must Exist</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ECOSYSTEM COMPATIBILITY
+     ============================================================ -->
+<section id="sec-eco" class="pf-section pf-section--white" aria-labelledby="sec-eco-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Works With Your Stack</p>
+    <h2 id="sec-eco-heading" class="pf-title pf-title--center">FileFlex Enterprise Works With Your Existing Ecosystem — Not Against It</h2>
+    <div class="sec-eco__grid">
+      <img src="/images/security/Data-access-gap.webp" alt="Diagram illustrating the data access gap that FileFlex closes between identity, network, and data layers" loading="lazy" decoding="async" />
+      <ul class="sec-eco__list">
+        <li>Microsoft tools remain central to collaboration.</li>
+        <li>Identity platforms like Entra and Okta still manage authentication.</li>
+        <li>Your ZTNA platforms continue to enforce microsegmentation.</li>
+        <li>Your DSPM platform still identifies sensitive information.</li>
+        <li>FileFlex Enterprise sits at the data access boundary, closing gaps left by traditional security and cloud file-sharing.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SIX PILLARS — SECURITY HAS EVOLVED
+     ============================================================ -->
+<section id="sec-pillars" class="pf-section" aria-labelledby="sec-pillars-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center" style="color:#ff8a3d;">The FileFlex Approach</p>
+    <h2 id="sec-pillars-heading" class="pf-title pf-title--center pf-title--light">Security Has Evolved. Your Architecture Must Too.</h2>
+    <p class="pf-lede pf-lede--center pf-lede--light">
+      Traditional controls protect perimeters, identity, networks and applications.
+      FileFlex Enterprise extends Zero Trust to the data layer.
+    </p>
+    <div class="sec-pillars__grid">
+      <article class="sec-pillar">
+        <div class="sec-pillar__icon"><img src="/images/security/Zero-Trust-Data-Access-icon.webp" alt="" loading="lazy" /></div>
+        <h3>Zero Trust Data Access</h3>
+        <ul>
+          <li>No public links</li>
+          <li>No anonymous access</li>
+          <li>Identity-bound access only</li>
+          <li>Policy-driven authorization</li>
+        </ul>
+      </article>
+      <article class="sec-pillar">
+        <div class="sec-pillar__icon"><img src="/images/security/No-data-replication-icon-2.webp" alt="" loading="lazy" /></div>
+        <h3>No Data Replication</h3>
+        <ul>
+          <li>Files remain on existing storage</li>
+          <li>No SaaS repository copy</li>
+          <li>Reduced attack surface</li>
+          <li>Data sovereignty preserved</li>
+        </ul>
+      </article>
+      <article class="sec-pillar">
+        <div class="sec-pillar__icon"><img src="/images/security/Granular-Policy-Enforcement-icon-2.webp" alt="" loading="lazy" /></div>
+        <h3>Granular Policy Enforcement</h3>
+        <ul>
+          <li>Device-level authorization</li>
+          <li>Time-based access</li>
+          <li>Download restrictions</li>
+          <li>Sharing regulation</li>
+          <li>View-only enforcement</li>
+        </ul>
+      </article>
+      <article class="sec-pillar">
+        <div class="sec-pillar__icon"><img src="/images/security/Full-Auditability-icon.webp" alt="" loading="lazy" /></div>
+        <h3>Full Auditability</h3>
+        <ul>
+          <li>Every access logged</li>
+          <li>Forensic visibility</li>
+          <li>Regulatory defensibility</li>
+          <li>Reduces compliance burden</li>
+        </ul>
+      </article>
+      <article class="sec-pillar">
+        <div class="sec-pillar__icon"><img src="/images/security/Revitalized-On-Prem-storage-icon.webp" alt="" loading="lazy" /></div>
+        <h3>Revitalized On-Prem Storage</h3>
+        <ul>
+          <li>Cloud-like functionality without duplicating files</li>
+          <li>Maintains data sovereignty</li>
+          <li>Reduces risk</li>
+        </ul>
+      </article>
+      <article class="sec-pillar">
+        <div class="sec-pillar__icon"><img src="/images/security/Ecosystem-compatibility-icon-2.webp" alt="" loading="lazy" /></div>
+        <h3>Ecosystem Compatibility</h3>
+        <ul>
+          <li>Works with IAM platforms like Entra and Okta</li>
+          <li>Complements Illumio, Zscaler, Palo Alto, Cloudflare, Cisco</li>
+          <li>Supplements DSPM</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BUILT FOR REGULATED ENVIRONMENTS
+     ============================================================ -->
+<section id="sec-reg" class="pf-section pf-section--white" aria-labelledby="sec-reg-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Compliance Ready</p>
+    <h2 id="sec-reg-heading" class="pf-title pf-title--center">Built for Regulated Environments</h2>
+    <ul class="sec-reg__list">
+      <li>Mortgage, financial, and legal workflow protection.</li>
+      <li>Eliminates sharing via unsecured email.</li>
+      <li>Provides full audit trails for internal and external review.</li>
+      <li>Provides for data residency, sovereignty, and governance.</li>
+      <li>Supports credit unions, banks, and other regulated organizations.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA
+     ============================================================ -->
+<section id="sec-cta" aria-labelledby="sec-cta-heading">
+  <h2 id="sec-cta-heading">Protect Your Data Before It's Too Late</h2>
+  <p>Stop ransomware, insider risk, and accidental leaks. Experience Zero-Trust Data Access today.</p>
+  <div class="sec-cta__btns">
+    <a class="pf-btn pf-btn--lg" href="https://fileflex.com/fileflex-enterprise/try-plus/">Book a Demo</a>
+    <a class="pf-btn pf-btn--lg pf-btn--outline" href="https://fileflex.com/contact-us/">Launch a Pilot</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     RELATED BLOGS
+     ============================================================ -->
+<section id="sec-blogs" class="pf-section" aria-labelledby="sec-blogs-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Insights</p>
+    <h2 id="sec-blogs-heading" class="pf-title pf-title--center">Check Out These Related Blogs</h2>
+    <div class="sec-blog__grid">
+      {blogs.map((b) => (
+        <a class="sec-blog__card" href={b.href} target="_blank" rel="noopener">
+          <div class="sec-blog__thumb">
+            {b.thumb && <img src={b.thumb} alt="" loading="lazy" decoding="async" />}
+          </div>
+          <h4>{b.title}</h4>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WEBINARS
+     ============================================================ -->
+<section id="sec-webinars" class="pf-section" aria-labelledby="sec-webinars-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center" style="color:#ff8a3d;">Webinars</p>
+    <h2 id="sec-webinars-heading" class="pf-title pf-title--center pf-title--light">Watch Our Latest Zero Trust Webinars</h2>
+    <div class="sec-webinars__grid">
+      {webinars.map((w) => (
+        <div class="sec-webinar">
+          <iframe
+            src={`https://www.youtube-nocookie.com/embed/${w.youtubeId}?rel=0&modestbranding=1`}
+            title={w.title}
+            loading="lazy"
+            allow="encrypted-media"
+            allowfullscreen
+          ></iframe>
+          <h4>{w.title}</h4>
+        </div>
+      ))}
+    </div>
+    <div class="sec-webinars__more">
+      <a class="pf-btn pf-btn--lg" href="https://fileflex.com/webinars/all-webinars/" target="_blank" rel="noopener">View All Webinars</a>
+    </div>
+  </div>
+</section>
+
+</Layout>
