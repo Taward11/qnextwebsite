@@ -8,14 +8,20 @@
   color: #fff;
   padding: 140px 6vw 110px;
   background:
-    linear-gradient(110deg, rgba(8,14,30,0.85) 0%, rgba(8,14,30,0.65) 55%, rgba(8,14,30,0.4) 100%),
-    url('/images/security/Network-security-blog-cover-picture.webp') center/cover no-repeat;
+    linear-gradient(90deg, rgba(8,14,30,0.92) 0%, rgba(8,14,30,0.78) 40%, rgba(8,14,30,0.35) 75%, rgba(8,14,30,0.25) 100%),
+    url('/images/security/Security-banner.webp') center/cover no-repeat;
   background-color: #0b1224;
 }
 .sec-hero__inner {
   max-width: 1180px;
   margin: 0 auto;
   text-align: left;
+}
+.sec-hero__logo {
+  display: block;
+  height: 80px;
+  width: auto;
+  margin: 0 0 28px;
 }
 #sec-hero h1 {
   font-family: var(--pf-font-display, 'Syne', sans-serif);
@@ -186,17 +192,13 @@
   box-shadow: 0 10px 28px rgba(0,0,0,0.06);
 }
 .sec-pillar__icon {
-  width: 64px; height: 64px;
-  margin-bottom: 18px;
-  background: #f6f8fb;
-  border: 1px solid #e6e9ef;
-  border-radius: 12px;
-  padding: 10px;
+  width: 150px; height: 150px;
+  margin: 0 auto 22px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.sec-pillar__icon img { width: 100%; height: 100%; object-fit: contain; }
+.sec-pillar__icon img { max-width: 100%; max-height: 100%; height: auto; object-fit: contain; }
 .sec-pillar h3 {
   font-family: var(--pf-font-display, 'Syne', sans-serif);
   font-size: 19px;
@@ -230,8 +232,8 @@
 #sec-reg {
   position: relative;
   background:
-    linear-gradient(120deg, rgba(8,14,30,0.85) 0%, rgba(8,14,30,0.65) 55%, rgba(8,14,30,0.55) 100%),
-    url('/images/security/Data-Sovereignty-2-e1730312868476.webp') center/cover no-repeat;
+    linear-gradient(90deg, rgba(8,14,30,0.88) 0%, rgba(8,14,30,0.7) 45%, rgba(8,14,30,0.45) 75%, rgba(8,14,30,0.25) 100%),
+    url('/images/security/iStock-1067060310-web.webp') center/cover no-repeat;
   background-color: #0b1224;
   color: #fff;
 }
