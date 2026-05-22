@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+import '../styles/financial.css';
+import '../styles/architecture.css';
+
+const rows = [
+  {
+    title: 'Access and Share Large Files From Within Windows Over the Internet',
+    img: '/images/architecture/ip-Arch-Panel1-web-e1732657705979-1024x609.jpg',
+    body: `Today’s architectural and engineering projects involve hundreds of very large CAD files. FileFlex Enterprise allows remote access and sharing of these critical schematics over the Internet from within Windows over a standard Internet connection. Full integration with Windows means that remote locations look and act like a local drive under a single-pane-of-glass with easy access and no change in workflow.`,
+  },
+  {
+    title: 'Access and Share Large Files from a Tablet or Smartphone',
+    img: '/images/architecture/ip-Arch-Panel2-web-1024x1024.jpg',
+    body: `Project managers and skilled workers need to access CAD files when on the worksite, often from a tablet or smartphone. FileFlex Enterprise allows remote workers to natively access large AutoCAD, Photoshop and Adobe files from within Windows. With FileFlex Enterprise you can now have super secure access and its plug-and-play from Windows using any smartphone or tablet without needing a license for the source application.`,
+  },
+  {
+    title: 'Protect Intellectual Property',
+    img: '/images/architecture/ip-Arch-Pane-web-1024x1024.jpg',
+    body: `The main competitive advantage for architects and engineers is their intellectual property. The Zero Trust Data Access technology of FileFlex Enterprise allows organizations to control access to confidential documents and can prohibit sharing or restrict sharing with downloading prohibited. Intellectual property can be located on-premises without being copied to the servers of third parties. Additionally, the activity log provides visibility to all access, sharing or modification of trade secrets for forensic investigations. Alerts and the ability to auto-export to SIEM software can flag suspicious activity.`,
+  },
+  {
+    title: 'Enable Contractors and Gig-Workers with Controlled Information Access',
+    img: '/images/architecture/ip-Arch-Panel4-web-1024x1024.jpg',
+    body: `Both large and small jobs require extensive use of skilled contractors that need access to design files. FileFlex Enterprise allows IT to control remote data access on their SharePoint or hybrid infrastructure to just the information needed, with least-privilege as needed policies to enable the remote contractor workforce.`,
+  },
+  {
+    title: 'Replace Reliance on VPN Connections with their Slow Upload and Download Speeds',
+    img: '/images/architecture/ip-Arch-Panel5-web-1024x1024.jpg',
+    body: `Traditionally your remote workforce must download job-related CAD files and open with a local copy of the CAD software over a VPN. Due to the large size of these files, this can be a slow and expensive process. FileFlex Enterprise provides remote access to files from their source locations over the Internet without the need for a VPN.`,
+  },
+];
+
+const blogs = [
+  {
+    title: 'Upholding Cybersecurity for Architects Through Zero Trust Data Access',
+    blurb: 'Cybersecurity for architects is vital as they navigate remote collaboration and digital tool integration, with Zero Trust Data Access (ZTDA) enhancing security […]',
+    img: '/images/architecture/ip-Arch-Panel1-web-e1732657705979-400x300.jpg',
+    href: 'https://fileflex.com/blog/',
+  },
+];
+---
+
+<Layout title="Architecture and Engineering — Plug-And-Play Windows Zero Trust Access for Large CAD Files | FileFlex" description="FileFlex Enterprise enables architecture and engineering firms to securely access and share very large CAD files from Windows, tablets and smartphones using Zero Trust Data Access.">
+<Nav />
+
+<section id="ae-hero" aria-labelledby="ae-hero-heading">
+  <div class="ae-hero__inner">
+    <p class="ae-hero__eyebrow">ARCHITECTURE AND ENGINEERING</p>
+    <h1 id="ae-hero-heading" class="ae-hero__title">Now You Can Have a Plug-And-Play Windows Secure Zero Trust Data Access and Sharing of Very Large CAD Files for Your Distributed Workforce</h1>
+  </div>
+</section>
+
+<section id="fin-body" class="fin-body" aria-label="Architecture and engineering use cases">
+  <div class="fin-body__inner">
+    {rows.map((r, i) => (
+      <>
+        <div class="fin-block fin-row">
+          <div class="fin-row__media">
+            <img src={r.img} alt={r.title} loading="lazy" decoding="async" />
+          </div>
+          <div class="fin-row__copy">
+            <h2 class="fin-h2">{r.title}</h2>
+            <p class="fin-p">{r.body}</p>
+          </div>
+        </div>
+        {i < rows.length - 1 && <hr class="fin-sep" />}
+      </>
+    ))}
+  </div>
+</section>
+
+<section id="fin-blogs" class="fin-section fin-section--white" aria-labelledby="ae-blogs-heading">
+  <div class="fin-section__inner">
+    <h2 id="ae-blogs-heading" class="fin-h2 fin-h2--center">Check Out This Related Blog</h2>
+    <div class="fin-blog-grid ae-blog-grid">
+      {blogs.map((b) => (
+        <a class="fin-blog" href={b.href} target="_blank" rel="noopener noreferrer">
+          <img class="fin-blog__img" src={b.img} alt="" loading="lazy" decoding="async" width="400" height="300" />
+          <div class="fin-blog__body">
+            <h3 class="fin-blog__title">{b.title}</h3>
+            <p class="fin-blog__blurb">{b.blurb}</p>
+            <span class="fin-blog__more">Read more →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+</Layout>

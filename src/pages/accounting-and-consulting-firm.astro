@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+import '../styles/financial.css';
+import '../styles/accounting.css';
+
+const rows = [
+  {
+    title: 'Unified Secure Access Within Windows of Any Storage Location',
+    img: '/images/accounting/ip-LF-Panel1-web-e1777321165129-1024x507.jpg',
+    body: `Like most organizations today, financial firms have vast amounts of unstructured data located on thousands of devices and in multiple offices. FileFlex Enterprise unifies the access of all locations from within Windows where they act as though they are on local drives. The files can be located on servers, server-attached, network-attached or storage of individual PCs, cloud-hosted storage of Amazon, Azure, Google, OneDrive or Box, or both self-hosted or Microsoft-hosted implementations of SharePoint.`,
+  },
+  {
+    title: 'Protect Personally Identifiable Information',
+    img: '/images/accounting/ip-LF-Panel2-web-e1734469679436-1024x577.jpg',
+    body: `Financial firms are trusted with the most sensitive Personally Identifiable Information and confidential data that their clients have. And their clients trust them to keep that information protected. FileFlex Enterprise uses a Zero Trust Data Access architecture and extensive security controls over remote access and sharing of these files. That includes the ability to restrict sharing and access of PII and sensitive financial information to ‘access-only’ (no sharing) and ‘view-only’ (no downloading). PII can even be stored, access and shared from on-premises storage where it is not subject to secret legalized access and exfiltration from third parties, law enforcement, and foreign powers via the CLOUD Act.`,
+  },
+  {
+    title: 'Share With Clients Even if They Are Not Technology Savvy',
+    img: '/images/accounting/ip-LF-Panel3-web-1024x1024.jpg',
+    body: `Often financial information needs to be shared with clients who might not be technology savvy. For infrequent use, FileFlex Enterprise allows clients to access via a simple user app from within their browser that is easy and intuitive to use even for users that are not tech-savvy. Clients that need heavy access can use the Windows Integrated Client and access storage locations as if they are on a local drive within Windows with no learning curve.`,
+  },
+  {
+    title: 'Create Secure and Private Virtual Data Rooms on a Client-by-Client Basis',
+    img: '/images/accounting/ip-LF-Panel4-web-1024x1007.jpg',
+    body: `The best way to receive and provide information to clients is via virtual data rooms. FileFlex Enterprise allows each financial firm user to easily set up and provide access to an unlimited number of virtual data rooms – one or more per client with many guests having access as required. Guest access can be restricted on a person-by-person basis with some or all can be access-controlled with ‘No downloading’ or ‘No sharing’ as needed. Users can track every access and every activity of every guest in their activity log.`,
+  },
+  {
+    title: 'Control Remote Access to Sensitive Financial Information',
+    img: '/images/accounting/ip-LF-Panel5-web-1024x891.jpg',
+    body: `Clients expect financial organizations to govern and control access to their information. FileFlex Enterprise has extensive governance abilities and an IT management toolkit to control access and sharing of any and all unstructured data including financial information and an activity log with alerts that can be exported to SIEM software and be used to flag suspicious behavior or to aid in forensic investigation to support the firm’s needs to meet professional standards and privacy regulations.`,
+  },
+];
+
+const blogs = [
+  { title: 'Zero Trust for FFIEC Compliance: Why ZTDA Is the Missing Link', blurb: 'Modernize compliance with Zero Trust for FFIEC guidelines. The FFIEC Cybersecurity Assessment Tool outlines critical requirements for data protection—especially in “Domain 5: Data […]', img: '/images/accounting/iStock-537743911-web-e1731689756904-400x300.jpg', href: 'https://fileflex.com/blog/' },
+  { title: 'Advantages of Zero Trust Virtual Data Rooms for Banks and Credit Unions', blurb: 'Zero Trust Virtual Data Rooms provide banks and credit unions with a secure, compliant, and efficient way to manage sensitive client interactions, […]', img: '/images/accounting/iStock-1296691609-web-e1731086221645-400x300.jpg', href: 'https://fileflex.com/blog/' },
+  { title: 'Supporting Financial Services Cybersecurity Through Zero Trust Data Access', blurb: 'Financial services cybersecurity is strengthened through the adoption of Zero Trust Data Access (ZTDA) which enhances data security and regulatory compliance, protecting […]', img: '/images/accounting/Data-Sovereignty-2-e1730312868476-400x300.jpg', href: 'https://fileflex.com/blog/' },
+  { title: 'Zero Trust for GLBA Compliance: File-Level Data Protection', blurb: 'Zero Trust for GLBA Compliance starts at the data level. GLBA requires financial institutions to safeguard customer data under its Safeguards Rule. Traditional […]', img: '/images/accounting/sociale-media-social-network-multimedia-online-P4H8N5F-e1733239547217-400x300.jpg', href: 'https://fileflex.com/blog/' },
+  { title: 'Zero Trust Cybersecurity for Credit Unions', blurb: 'Zero Trust cybersecurity for credit unions must go beyond network control. Zero Trust Data Access (ZTDA), protects sensitive member data at the file […]', img: '/images/accounting/enterprise-people-400x300.jpg', href: 'https://fileflex.com/blog/' },
+  { title: 'DORA Compliance for File Sharing, Access and Collaboration Using Zero Trust Data Access', blurb: 'DORA compliance for file sharing, access and collaboration necessitates the implementation of Zero Trust Data Access (ZTDA). ZTDA has stringent security measures […]', img: '/images/accounting/Supports-Privacy-by-Design-Mandates--e1704482747769-400x300.jpg', href: 'https://fileflex.com/blog/' },
+];
+---
+
+<Layout title="Financial Services — Secure and Controlled Access to Confidential Client Information | FileFlex" description="FileFlex Enterprise gives accounting and consulting firms unified, Zero Trust Data Access to client information across Windows, with virtual data rooms and full IT control.">
+<Nav />
+
+<section id="acc-hero" aria-labelledby="acc-hero-heading">
+  <div class="acc-hero__inner">
+    <p class="acc-hero__eyebrow">FINANCIAL SERVICES</p>
+    <h1 id="acc-hero-heading" class="acc-hero__title">Secure and Controlled Access to Confidential Client Information</h1>
+  </div>
+</section>
+
+<section id="fin-body" class="fin-body" aria-label="Financial services use cases">
+  <div class="fin-body__inner">
+    {rows.map((r, i) => (
+      <>
+        <div class="fin-block fin-row">
+          <div class="fin-row__media">
+            <img src={r.img} alt={r.title} loading="lazy" decoding="async" />
+          </div>
+          <div class="fin-row__copy">
+            <h2 class="fin-h2">{r.title}</h2>
+            <p class="fin-p">{r.body}</p>
+          </div>
+        </div>
+        {i < rows.length - 1 && <hr class="fin-sep" />}
+      </>
+    ))}
+  </div>
+</section>
+
+<section id="fin-blogs" class="fin-section fin-section--white" aria-labelledby="acc-blogs-heading">
+  <div class="fin-section__inner">
+    <h2 id="acc-blogs-heading" class="fin-h2 fin-h2--center">Check Out These Related Blogs</h2>
+    <div class="fin-blog-grid">
+      {blogs.map((b) => (
+        <a class="fin-blog" href={b.href} target="_blank" rel="noopener noreferrer">
+          <img class="fin-blog__img" src={b.img} alt="" loading="lazy" decoding="async" width="400" height="300" />
+          <div class="fin-blog__body">
+            <h3 class="fin-blog__title">{b.title}</h3>
+            <p class="fin-blog__blurb">{b.blurb}</p>
+            <span class="fin-blog__more">Read more →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+</Layout>

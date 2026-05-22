@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+import '../styles/financial.css';
+import '../styles/manufacturing.css';
+
+const rows = [
+  {
+    title: 'Protect Intellectual Property',
+    img: '/images/manufacturing/Screen-Shot-2022-12-12-at-2.03.27-PM-865x1024.jpg',
+    body: `The Zero Trust Data Access technology of FileFlex Enterprise is the perfect tool to control remote access and sharing of the highly confidential specifications that manufacturers need to supply potential third-party contractors in the RFQ process. It allows them to control who can access confidential files, and also allows them the ability to restrict sharing and downloading and provides an audit log of every touch to this sensitive information.`,
+  },
+  {
+    title: 'Federate Disparate Silos and Connect to Content Wherever It Is Stored',
+    img: '/images/manufacturing/Screen-Shot-2022-12-12-at-2.03.18-PM-1024x811.jpg',
+    body: `Manufacturers store critical information in many different locations. Some may be on the FTP server, some on a local NAS, some on a cloud server and some on the corporate SharePoint. And the information could be spread across multiple domains. FileFlex Enterprise federates all the relevant locations together in a single-pane-of-glass in Windows.`,
+  },
+  {
+    title: 'Access Needs to be Simplified',
+    img: '/images/manufacturing/Screen-Shot-2022-12-12-at-2.03.36-PM-1024x992.jpg',
+    body: `Critical information is created by your engineers and project managers, but needs to be found, accessed and used by front-line skilled trades who may be less tech-savvy. You don’t want to have to train them on how to use multiple apps to access these multiple technologies. When critical information is accessed as though it was on a local drive from within Windows, no training is required. Your workforce uses their normal workflow to get the information they need, when they need it, and in a manner that they are already familiar with.`,
+  },
+  {
+    title: 'Avoid Shadow IT',
+    img: '/images/manufacturing/Screen-Shot-2022-12-12-at-2.03.36-PM-1024x992.jpg',
+    body: `Engineering diagrams, blueprints, manuals and instruction documents can be incredibly complex and enormous. Since sharing and accessing these files can be cumbersome, employees will be tempted to use easier and less secure alternatives that are not under the control of your IT department. FileFlex Enterprise allows access and controlled sharing of very large files from within Windows – no separate app required.\n\nSharing of confidential information can be tracked and controlled by either the user or IT. Files can be shared with ‘View Only’ permission where downloading is not permitted, sharing can be prohibited altogether and access restricted to authorized personnel or full sharing permissions can be granted that allow recipients to download and edit. All activities are tracked and logged. Users will not need to use their own alternatives.`,
+  },
+  {
+    title: 'Replace Reliance on VPN Connections with their Slow Upload and Download Speeds',
+    img: '/images/manufacturing/Screen-Shot-2022-12-12-at-2.03.36-PM-1024x992.jpg',
+    body: `Traditionally your skilled labor workforce and contractor must download job-related CAD files and open them with a local copy of the CAD software over a VPN. Due to the large size of these files, this can be a slow and expensive process. FileFlex Enterprise provides access to files from their source locations over the network or the Internet without the need for a VPN.`,
+  },
+];
+
+const blogs = [
+  { title: 'Why Zero Trust Network Access Combined with Zero Trust Data Access Could Have Prevented the Tesla Breach', blurb: 'Zero Trust Network Access (ZTNA) combined with Zero Trust Data Access (ZTDA) enhances security at both the network and data levels, significantly […]', img: '/images/manufacturing/Virus-Scanning-1-e1721058001688-400x300.jpg', href: 'https://fileflex.com/blog/' },
+  { title: 'Critical Infrastructure Onboarding and Ease of Use Over Remote Access and Sharing Using Zero Trust Architecture', blurb: 'Critical infrastructure ease of use over remote access and sharing due to the complexity of the storage structure of modern organizations is […]', img: '/images/manufacturing/39-percent-tools-infographic-e1679683552514-240x300.png', href: 'https://fileflex.com/blog/' },
+  { title: 'Critical Infrastructure Management Over Remote Access and Sharing Using Zero Trust Architecture', blurb: 'Critical infrastructure management and control over the remote access and sharing of unstructured data is achieved via a zero trust data access […]', img: '/images/manufacturing/96-percent-data-breach-infographic-e1679325030535-300x300.png', href: 'https://fileflex.com/blog/' },
+  { title: 'Critical Infrastructure Regulatory Compliance via Zero Trust Architectures', blurb: 'Critical infrastructure regulatory compliance in regard to protecting remote access to unstructured data can be greatly enhanced through the use of zero […]', img: '/images/manufacturing/iStock-911484556-web-cropped-400x300.jpg', href: 'https://fileflex.com/blog/' },
+  { title: 'Protecting Critical Infrastructure Using Zero Trust Data Access – The Top 8 List', blurb: 'Protecting critical infrastructure can face unique challenges in regard to securing remote file access and sharing. With the need to protect sensitive […]', img: '/images/manufacturing/ip-Arch-Panel5-web-1024x1024-1-e1692297755183-400x300.jpg', href: 'https://fileflex.com/blog/' },
+  { title: 'Distributed Administration of Remote Unstructured Data Access for the Complex Supply Chain', blurb: 'Distributed administration of remote unstructured data access of a complex supply chain can significantly aid security and productivity. Distributed Administration of Remote […]', img: '/images/manufacturing/Third-party-attack-infographic-e1684423987377.png', href: 'https://fileflex.com/blog/' },
+];
+---
+
+<Layout title="Manufacturing — Protect Your IP with Zero Trust Data Access | FileFlex" description="FileFlex Enterprise lets manufacturers federate disparate silos, protect IP, avoid shadow IT and replace slow VPNs — all from within Windows using Zero Trust Data Access.">
+<Nav />
+
+<section id="mfg-hero" aria-labelledby="mfg-hero-heading">
+  <div class="mfg-hero__inner">
+    <p class="mfg-hero__eyebrow">MANUFACTURING</p>
+    <h1 id="mfg-hero-heading" class="mfg-hero__title">Protect Your IP</h1>
+  </div>
+</section>
+
+<section id="fin-body" class="fin-body" aria-label="Manufacturing use cases">
+  <div class="fin-body__inner">
+    {rows.map((r, i) => (
+      <>
+        <div class="fin-block fin-row">
+          <div class="fin-row__media">
+            <img src={r.img} alt={r.title} loading="lazy" decoding="async" />
+          </div>
+          <div class="fin-row__copy">
+            <h2 class="fin-h2">{r.title}</h2>
+            {r.body.split('\n\n').map((para) => <p class="fin-p">{para}</p>)}
+          </div>
+        </div>
+        {i < rows.length - 1 && <hr class="fin-sep" />}
+      </>
+    ))}
+  </div>
+</section>
+
+<section id="fin-blogs" class="fin-section fin-section--white" aria-labelledby="mfg-blogs-heading">
+  <div class="fin-section__inner">
+    <h2 id="mfg-blogs-heading" class="fin-h2 fin-h2--center">Check Out These Related Blogs</h2>
+    <div class="fin-blog-grid">
+      {blogs.map((b) => (
+        <a class="fin-blog" href={b.href} target="_blank" rel="noopener noreferrer">
+          <img class="fin-blog__img" src={b.img} alt="" loading="lazy" decoding="async" width="400" height="300" />
+          <div class="fin-blog__body">
+            <h3 class="fin-blog__title">{b.title}</h3>
+            <p class="fin-blog__blurb">{b.blurb}</p>
+            <span class="fin-blog__more">Read more →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+</Layout>

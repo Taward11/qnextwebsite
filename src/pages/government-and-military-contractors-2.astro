@@ -1,0 +1,104 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+import '../styles/financial.css';
+import '../styles/government.css';
+
+const rows = [
+  {
+    title: 'Aids Compliance with CMMC',
+    img: '/images/government/ip-GOV-Panel1-web-e1777996880665-1024x386.jpg',
+    body: `The Cybersecurity Maturity Model Certification (CMMC) is the Department of Defense’s (DoD’s) response to compromises to defense information held or processed by their contractors. It is a unified standard to better defend the vast attack surface of their supply chain, implement cybersecurity and better secure sensitive information located with their contractors. FileFlex Enterprise supports the published best “Access Control” practices for data access outlined in the Department of Defense's Cybersecurity Maturity Model Certification (CMMC).`,
+  },
+  {
+    title: 'Aids Compliance with GDPR',
+    img: '/images/government/ip-GOV-Panel2-web-e1758645190169-1024x493.jpg',
+    body: `The European General Data Protection Regulation (GDPR) requires organizations to comply with an increased focus on the protection of Personally Identifiable Information (PII) of EU citizens and residents. FileFlex Enterprise supports and augments an organization’s GDPR compliance endeavors by utilizing an organization’s existing investment in technology, a rapid deployment capability, and the ability to support enforcement of compliance and the auditability controls required by GDPR, achieved within Windows while supporting deduplication of data.`,
+  },
+  {
+    title: 'Aids Compliance with NIST and FedRAMP',
+    img: '/images/government/ip-GOV-Panel3-web-1024x1024.jpg',
+    body: `The National Institute of Standards and Technology (NIST) has put together a unified standard (NIST SP 800-171) to better defend the vast attack surface of the federal government supply chain. FileFlex Enterprise supports the published best “Access Control” practices for data access outlined in NIST SP-800-171v2.`,
+  },
+  {
+    title: 'Protect Your Government or DoD Client from Data Breaches',
+    img: '/images/government/ip-GOV-Panel4-web-e1695750125211-1024x544.jpg',
+    body: `The supply chain provides cybercriminals a potential weak-link entry point to sensitive government and/or DoD information. FileFlex Enterprise can help you avoid a data breach catastrophic to both you and your client with enhanced security features and a zero trust architecture. The ability to export the activity log to your SIEM software can alert and help you thwart ransomware attacks in process that you would be otherwise unaware of.`,
+  },
+  {
+    title: 'Windows Zero Trust Data Access and Sharing of CUI',
+    img: '/images/government/ip-GOV-Panel5-web-1024x891.jpg',
+    body: `The Zero Trust architecture and security controls of FileFlex Enterprise allow access and sharing of confidential Controlled Unclassified Information (CUI) from within Windows over the network or standard Internet connection. Integration into Windows means that remote storage locations look and act like a local drive federated under a single-pane-of-glass with easy access and no change in workflow.`,
+  },
+  {
+    title: 'IT Control Over CUI',
+    img: '/images/government/ip-GOV-Panel6-web-e1755273019719-1024x432.jpg',
+    body: `FileFlex Enterprise provides organizations with a management toolkit to control access to CUI and confidential information without it being copied to the servers of third parties. It allows them to control data access, set policies, and assign access on a user-by-user or group-by-group basis with storage location, folder, or even file-level granularity. Additionally, the activity log provides visibility over all access, sharing or modification of CUI for forensic investigations. And alerts and the ability to auto-export to SIEM software can flag suspicious activity.`,
+  },
+];
+
+const blogs = [
+  { title: 'Zero Trust for California Privacy Compliance', blurb: 'Zero Trust for California Privacy Compliance requires controls beyond the network. CCPA and CPRA laws mandate granular data access protections, transparency, and breach […]', img: '/images/government/California-blog-cover-pic-400x300.jpg', href: 'https://fileflex.com/blog/' },
+  { title: 'Secure Zero Trust Access to FedRAMP-Compliant Data', blurb: 'Zero Trust Data Access (ZTDA) enhances data protection in FedRAMP-compliant environments by enforcing secure, file-level access. ZTDA does not replace or achieve FedRAMP […]', img: '/images/government/Screen-Shot-2022-12-12-at-12.38.17-PM-e1731086087275.jpg', href: 'https://fileflex.com/blog/' },
+  { title: 'Zero Trust Data Access for NIST Compliance', blurb: 'Achieving NIST compliance requires granular, auditable control over how sensitive data is accessed and shared. Zero Trust Data Access (ZTDA) complements NIST cybersecurity […]', img: '/images/government/Screen-Shot-2022-12-12-at-12.27.34-PM-e1699286190370-400x300.jpg', href: 'https://fileflex.com/blog/' },
+  { title: 'CMMC IT Control for DIB Organizations Over Remote Access and Sharing Using Zero Trust Architecture', blurb: 'CMMC IT control over the remote access and sharing of CUI unstructured data is achieved via a zero-trust data access platform to […]', img: '/images/government/iStock-841574382-web-e1714069209529-400x300.jpg', href: 'https://fileflex.com/blog/' },
+  { title: 'Zero Trust Data Access for DIB Cybersecurity Strategy', blurb: 'Zero Trust Data Access (ZTDA) is critical for DIB cybersecurity compliance. The 2024 DIB Cybersecurity Strategy demands granular control and logging of access to […]', img: '/images/government/iStock-1135951621-web-e1713903793502-400x300.jpg', href: 'https://fileflex.com/blog/' },
+  { title: 'Zero Trust Data Access for CMMC Compliance', blurb: 'Zero Trust Data Access ensures secure CUI collaboration under CMMC. CMMC mandates granular protection of Controlled Unclassified Information. ZTDA adds continuous authentication, file-level […]', img: '/images/government/iStock-1175177391-web-1024x683-1-e1713455781895-400x300.jpg', href: 'https://fileflex.com/blog/' },
+  { title: 'GDPR-Compliant File Sharing: Secure, Legal & Easy with Zero Trust', blurb: 'GDPR-compliant file sharing means exchanging personal data in a way that meets the EU’s strict data protection rules. It requires encryption, strict […]', img: '/images/government/iStock-668751452-e1703105188127-400x300.jpg', href: 'https://fileflex.com/blog/' },
+  { title: 'Regulatory Compliance in the Digital Age: Unveiling Quebec Bill 64 and How FileFlex Enterprise Can Help', blurb: 'Regulatory compliance is a key concern for organizations in the digital age, as privacy regulations like Quebec Bill 64 emerge to protect […]', img: '/images/government/iStock-906002360-2022q4-e1690562130415-400x300.jpg', href: 'https://fileflex.com/blog/' },
+  { title: 'How to Meet NIST SP-800-171v2 Access Control Practices for Remote Data Access', blurb: 'The Zero Trust Data Access architecture of FileFlex Enterprise can greatly aid in compliance with NIST access control requirements as outlined in […]', img: '/images/government/iStock-502806184-e1678994380758-400x300.jpg', href: 'https://fileflex.com/blog/' },
+  { title: 'How to Meet CMMC Access Control Practices for Remote Data Access', blurb: 'The Zero Trust Data Access architecture of FileFlex Enterprise can greatly aid in compliance with CMMC requirements and provides remote access and […]', img: '/images/government/iStock-1158791540-e1678995967398-400x300.jpg', href: 'https://fileflex.com/blog/' },
+  { title: 'How to Meet NIST Guidelines for Zero Trust for Remote Data Access', blurb: 'The National Institute of Standards and Technology (NIST) has produced NIST Special Publication 800-207 outlining Zero Trust principles and guidelines that can […]', img: '/images/government/NIST-full-transparent-400x300.png', href: 'https://fileflex.com/blog/' },
+];
+---
+
+<Layout title="Government and Military Contractors — Zero Trust Windows Productivity that Aids Compliance | FileFlex" description="FileFlex Enterprise gives government and DoD contractors Zero Trust Data Access and sharing of CUI from within Windows — aiding CMMC, NIST, FedRAMP and GDPR compliance.">
+<Nav />
+
+<section id="gov-hero" aria-labelledby="gov-hero-heading">
+  <div class="gov-hero__inner">
+    <p class="gov-hero__eyebrow">GOVERNMENT AND MILITARY CONTRACTORS</p>
+    <h1 id="gov-hero-heading" class="gov-hero__title">Zero Trust Windows Productivity That Aids Government Compliance</h1>
+  </div>
+</section>
+
+<section id="fin-body" class="fin-body" aria-label="Government use cases">
+  <div class="fin-body__inner">
+    {rows.map((r, i) => (
+      <>
+        <div class="fin-block fin-row">
+          <div class="fin-row__media">
+            <img src={r.img} alt={r.title} loading="lazy" decoding="async" />
+          </div>
+          <div class="fin-row__copy">
+            <h2 class="fin-h2">{r.title}</h2>
+            <p class="fin-p">{r.body}</p>
+          </div>
+        </div>
+        {i < rows.length - 1 && <hr class="fin-sep" />}
+      </>
+    ))}
+  </div>
+</section>
+
+<section id="fin-blogs" class="fin-section fin-section--white" aria-labelledby="gov-blogs-heading">
+  <div class="fin-section__inner">
+    <h2 id="gov-blogs-heading" class="fin-h2 fin-h2--center">Check Out These Related Blogs</h2>
+    <div class="fin-blog-grid">
+      {blogs.map((b) => (
+        <a class="fin-blog" href={b.href} target="_blank" rel="noopener noreferrer">
+          <img class="fin-blog__img" src={b.img} alt="" loading="lazy" decoding="async" width="400" height="300" />
+          <div class="fin-blog__body">
+            <h3 class="fin-blog__title">{b.title}</h3>
+            <p class="fin-blog__blurb">{b.blurb}</p>
+            <span class="fin-blog__more">Read more →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+</Layout>
