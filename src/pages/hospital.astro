@@ -1,0 +1,166 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+import '../styles/financial.css';
+import '../styles/hospital.css';
+
+const blogs = [
+  {
+    title: 'HIPAA-Compliant File Sharing with Zero Trust: How to Secure PHI',
+    blurb: 'HIPAA-compliant file sharing means adopting a robust security framework like Zero Trust Data Access (ZTDA) for guarding Protected Health Information (PHI) and…',
+    img: '/images/hospital/healthcard-blog-pic-e1686774963860-400x238.jpg',
+    href: 'https://fileflex.com/blog/hippa-compliant-file-sharing/',
+  },
+];
+---
+
+<Layout
+  title="Hospital — HIPAA-Compliant File Sharing with FileFlex Enterprise"
+  description="A leading Toronto hospital secures HIPAA-compliant file sharing with FileFlex Enterprise Zero Trust Data Access — without the cloud, with full IT control and major cost savings."
+>
+
+<Nav />
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hsp-hero" aria-labelledby="hsp-hero-heading">
+  <div class="hsp-hero__inner">
+    <p class="hsp-hero__eyebrow">HOSPITAL</p>
+    <h1 id="hsp-hero-heading" class="hsp-hero__title">
+      Leading Toronto Hospital Secures HIPAA-Compliant File Sharing with FileFlex Enterprise
+    </h1>
+  </div>
+</section>
+
+<!-- ============================================================
+     PULL QUOTE — blue strip
+     ============================================================ -->
+<section id="hsp-quote" aria-label="Customer quote">
+  <div class="hsp-quote__inner">
+    <p class="hsp-quote__text">
+      &ldquo;FileFlex gave us secure, HIPAA-compliant file sharing without the cloud
+      &mdash; with full IT control, seamless adoption, and major cost savings.&rdquo;
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     BODY — 4 image-left + text-right rows
+     ============================================================ -->
+<section id="fin-body" class="fin-body" aria-label="Case study details">
+  <div class="fin-body__inner">
+
+    <!-- Customer Overview -->
+    <div class="fin-block fin-row">
+      <div class="fin-row__media">
+        <img src="/images/hospital/Screen-Shot-2022-12-12-at-2.03.18-PM-1024x811.jpg" alt="Toronto hospital — geriatric healthcare and research" loading="lazy" decoding="async" />
+      </div>
+      <div class="fin-row__copy">
+        <h2 class="fin-h2">Customer Overview</h2>
+        <p class="fin-p">
+          A government-run hospital in Toronto recognized globally for excellence in
+          geriatric healthcare, brain health research, and innovation in aging. The facility
+          integrates residential care, clinical services, research, and education
+          &mdash; making data privacy and collaboration mission-critical.
+        </p>
+      </div>
+    </div>
+
+    <hr class="fin-sep" />
+
+    <!-- Challenge -->
+    <div class="fin-block fin-row">
+      <div class="fin-row__media">
+        <img src="/images/hospital/Screen-Shot-2022-12-12-at-2.03.36-PM-1024x992.jpg" alt="Hospital staff working with sensitive patient files" loading="lazy" decoding="async" />
+      </div>
+      <div class="fin-row__copy">
+        <h2 class="fin-h2">Challenge</h2>
+        <p class="fin-p">
+          The hospital needed a secure and HIPAA-compliant solution for its remote social
+          workers, legal staff, and research teams to access and share sensitive files
+          stored on-premises &mdash; without replicating data or using cloud storage.
+        </p>
+        <p class="fin-p"><strong>Compounding the challenge:</strong></p>
+        <ul class="fin-list">
+          <li>Their incumbent solution had recently increased in cost, stretching already limited budgets.</li>
+          <li>IT needed tighter control over sharing sensitive patient data, with enforced limits like 30-day sharing windows.</li>
+          <li>The hospital lacked a simple way to share large imaging files like X-rays securely across institutions.</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="fin-sep" />
+
+    <!-- Why FileFlex Enterprise -->
+    <div class="fin-block fin-row">
+      <div class="fin-row__media">
+        <img src="/images/hospital/hospital-worker-1-630x1024.jpg" alt="Hospital worker — secure remote access to patient data" loading="lazy" decoding="async" />
+      </div>
+      <div class="fin-row__copy">
+        <h2 class="fin-h2">Why FileFlex Enterprise</h2>
+        <p class="fin-p">
+          FileFlex Enterprise was selected for its unique zero-trust data access model,
+          cost efficiency, and seamless fit into the hospital&rsquo;s existing infrastructure.
+          It enabled:
+        </p>
+        <ul class="fin-list">
+          <li>Secure, remote, <strong>HIPAA-compliant</strong> access to on-premises files for social workers, legal, and research staff.</li>
+          <li><strong>Significant cost savings</strong> &mdash; FileFlex was delivered at a fraction of the cost of the previous solution.</li>
+          <li><strong>Granular file control:</strong> Users and IT could set share permissions and enforce a 30-day maximum share duration.</li>
+          <li><strong>Advanced privacy protections:</strong> File access could be restricted to &ldquo;access-only&rdquo; (no share) or &ldquo;view-only&rdquo; (no download), ideal for sharing PHI or PII with external healthcare partners.</li>
+          <li>Support for <strong>large file sharing,</strong> such as imaging files (X-rays, etc.), without cloud upload or duplication.</li>
+          <li><strong>Zero-trust architecture</strong> with comprehensive auditing of all file access and sharing activity.</li>
+          <li>Centralized <strong>IT management tools</strong> to configure and enforce data-sharing policies organization-wide.</li>
+          <li><strong>Responsive support</strong> and <strong>seamless upgrades</strong> ensured smooth adoption and long-term viability.</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="fin-sep" />
+
+    <!-- Results -->
+    <div class="fin-block fin-row">
+      <div class="fin-row__media">
+        <img src="/images/hospital/Hospital-Results-1-e1769804769555.jpg" alt="Hospital results — improved compliance and lower cost of ownership" loading="lazy" decoding="async" />
+      </div>
+      <div class="fin-row__copy">
+        <h2 class="fin-h2">Results</h2>
+        <ul class="fin-list">
+          <li><strong>Improved compliance with HIPAA-equivalent standards</strong> through strict file-sharing controls and detailed activity logs.</li>
+          <li><strong>Enhanced collaboration</strong> between departments and external institutions without compromising security.</li>
+          <li><strong>Lower total cost of ownership,</strong> freeing up budget for patient care and research.</li>
+          <li><strong>Future-ready:</strong> While initially deployed for on-prem access, the hospital can extend to SharePoint and cloud-hosted storage when desired.</li>
+          <li>Provided the hospital with <strong>fast support</strong> response and <strong>easy upgrade</strong> installs.</li>
+          <li>Supported the hospital&rsquo;s need to <strong>protect PHI</strong> and comply with HIPAA equivalent requirements.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     RELATED BLOG
+     ============================================================ -->
+<section id="fin-blogs" class="fin-section fin-section--white" aria-labelledby="hsp-blogs-heading">
+  <div class="fin-section__inner">
+    <h2 id="hsp-blogs-heading" class="fin-h2 fin-h2--center">Check Out This Related Blog</h2>
+    <div class="fin-blog-grid hsp-blog-grid">
+      {blogs.map((b) => (
+        <a class="fin-blog" href={b.href} target="_blank" rel="noopener noreferrer">
+          <img class="fin-blog__img" src={b.img} alt="" loading="lazy" decoding="async" width="400" height="300" />
+          <div class="fin-blog__body">
+            <h3 class="fin-blog__title">{b.title}</h3>
+            <p class="fin-blog__blurb">{b.blurb}</p>
+            <span class="fin-blog__more">Read more →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+</Layout>
