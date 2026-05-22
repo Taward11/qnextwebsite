@@ -1,0 +1,153 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+import '../styles/financial.css';
+import '../styles/healthcare.css';
+
+const blogs = [
+  {
+    title: 'HIPAA-Compliant File Sharing with Zero Trust: How to Secure PHI',
+    blurb: 'HIPAA-compliant file sharing means adopting a robust security framework like Zero Trust Data Access (ZTDA) for guarding Protected Health Information (PHI) and…',
+    img: '/images/healthcare/healthcard-blog-pic-e1686774963860-400x238.jpg',
+    href: 'https://fileflex.com/blog/hippa-compliant-file-sharing/',
+  },
+];
+---
+
+<Layout
+  title="Healthcare — Protecting Access and Sharing of PHI with ZTDA for Windows | FileFlex"
+  description="FileFlex Enterprise uses Zero Trust Data Access to protect, access, and share unstructured medical files and DICOM images across disparate healthcare silos — in compliance with HIPAA and GDPR."
+>
+
+<Nav />
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hc-hero" aria-labelledby="hc-hero-heading">
+  <div class="hc-hero__inner">
+    <p class="hc-hero__eyebrow">HEALTHCARE</p>
+    <h1 id="hc-hero-heading" class="hc-hero__title">
+      Protecting Access and Sharing of Personal Health Information with ZTDA for Windows
+    </h1>
+  </div>
+</section>
+
+<!-- ============================================================
+     BLUE INTRO STRIP
+     ============================================================ -->
+<section id="hc-intro" aria-label="Overview">
+  <div class="hc-intro__inner">
+    <p class="hc-intro__text">
+      Quality care means that unstructured medical files and DICOM images located in
+      multiple disparate silos often need to be accessed and shared while protecting the
+      privacy of personal health information (PHI) and in compliance with health and privacy
+      regulations such as HIPAA. Secure sharing, which can be time-limited, is subject to
+      user verification and can be micro-segmented down to file and folder level and access
+      is granted only to the least privilege needed to complete the task &mdash; all within
+      the secure framework of a ZTDA platform.
+    </p>
+    <p class="hc-intro__text">
+      See also <strong><a href="https://fileflex.com/hipaa-compliance/">HIPAA Compliant File Sharing</a>.</strong>
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     BODY — 3 image-left + text-right rows
+     ============================================================ -->
+<section id="fin-body" class="fin-body" aria-label="Healthcare use cases">
+  <div class="fin-body__inner">
+
+    <!-- Row 1 -->
+    <div class="fin-block fin-row">
+      <div class="fin-row__media">
+        <img src="/images/healthcare/Screen-Shot-2022-12-12-at-2.03.27-PM-865x1024.jpg" alt="Compliant communication flow protecting patient privacy" loading="lazy" decoding="async" />
+      </div>
+      <div class="fin-row__copy">
+        <h2 class="fin-h2">Improve Compliant Communication Flow While Protecting Patient Privacy</h2>
+        <p class="fin-p">
+          Patient care today involves multiple unrelated health providers &ndash; the family
+          doctor, the specialist, the hospital, the clinic, labs, home care, physiotherapy,
+          pharmacy, insurance, etc. FileFlex Enterprise allows personal health information
+          (PHI) and DICOM images to be shared and accessed collaboratively and securely using
+          ZTDA. And all actions are managed by IT, in compliance with health and privacy
+          regulations such as HIPAA and GDPR.
+        </p>
+      </div>
+    </div>
+
+    <hr class="fin-sep" />
+
+    <!-- Row 2 -->
+    <div class="fin-block fin-row">
+      <div class="fin-row__media">
+        <img src="/images/healthcare/Screen-Shot-2022-12-12-at-2.03.18-PM-1024x811.jpg" alt="Secure data sharing between unrelated health providers" loading="lazy" decoding="async" />
+      </div>
+      <div class="fin-row__copy">
+        <h2 class="fin-h2">Secure Compliant Data Sharing Between Unrelated Health Providers</h2>
+        <p class="fin-p">
+          The location of unstructured data within the healthcare system can be incredibly
+          complex. Not only can it be located in on-premises storage, but it could be with a
+          cloud provider or on a SharePoint repository. Any of these can be used in the IT
+          ecosystems of hospitals, clinics, independent labs, independent digital imaging
+          providers, home care providers, physiotherapists, pharmacies, insurance agencies,
+          etc. all operating as separate silos of information. The Zero Trust Data Access
+          based platform of FileFlex Enterprise allows the many healthcare stakeholders
+          access to each other&rsquo;s permitted healthcare information within Windows under
+          a single-pane-of-glass where it can be accessed as if they were on a local drive,
+          regardless of the difficulties related to the disparate systems and technologies.
+        </p>
+      </div>
+    </div>
+
+    <hr class="fin-sep" />
+
+    <!-- Row 3 -->
+    <div class="fin-block fin-row">
+      <div class="fin-row__media">
+        <img src="/images/healthcare/Screen-Shot-2022-12-12-at-2.03.36-PM-1024x992.jpg" alt="IT control over remote access to PHI" loading="lazy" decoding="async" />
+      </div>
+      <div class="fin-row__copy">
+        <h2 class="fin-h2">IT Control Over Remote Access to PHI</h2>
+        <p class="fin-p">
+          Governance and managing personal health information across disparate repository
+          types, locations, and third parties can be a major problem. FileFlex Enterprise
+          provides organizations with a management toolkit to control access to unstructured
+          data which may include personal health information. It allows them to control data
+          access, set policies, and assign access on a user-by-user or group-by-group basis
+          with storage location, folder, or even file-level granularity. They have complete
+          visibility to every action on every file or folder (including administrators)
+          &ndash; whether it is access, modification or share &ndash; and gives management
+          the ability to flag suspicious behavior.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     RELATED BLOG
+     ============================================================ -->
+<section id="fin-blogs" class="fin-section fin-section--white" aria-labelledby="hc-blogs-heading">
+  <div class="fin-section__inner">
+    <h2 id="hc-blogs-heading" class="fin-h2 fin-h2--center">Check Out This Related Blog</h2>
+    <div class="fin-blog-grid hc-blog-grid">
+      {blogs.map((b) => (
+        <a class="fin-blog" href={b.href} target="_blank" rel="noopener noreferrer">
+          <img class="fin-blog__img" src={b.img} alt="" loading="lazy" decoding="async" width="400" height="300" />
+          <div class="fin-blog__body">
+            <h3 class="fin-blog__title">{b.title}</h3>
+            <p class="fin-blog__blurb">{b.blurb}</p>
+            <span class="fin-blog__more">Read more →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+</Layout>
