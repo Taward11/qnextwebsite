@@ -1,0 +1,154 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+import '../styles/financial.css';
+import '../styles/nuclear.css';
+
+const blogs = [
+  {
+    title: 'Upholding Cybersecurity for Architects Through Zero Trust Data Access',
+    blurb: 'Cybersecurity for architects is vital as they navigate remote collaboration and digital tool integration, with Zero Trust Data Access (ZTDA) enhancing security…',
+    img: '/images/nuclear/ip-Arch-Panel1-web-e1732657705979-400x300.jpg',
+    href: 'https://fileflex.com/blog/upholding-cybersecurity-for-architects-through-zero-trust-data-access/',
+  },
+];
+---
+
+<Layout
+  title="Nuclear Power Utility — Securing Sensitive Technical Documents with FileFlex Enterprise"
+  description="A European nuclear power utility secures large, sensitive technical documents on internal FTP servers with FileFlex Enterprise Zero Trust Data Access — without moving files."
+>
+
+<Nav />
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="nuc-hero" aria-labelledby="nuc-hero-heading">
+  <div class="nuc-hero__inner">
+    <p class="nuc-hero__eyebrow">NUCLEAR POWER UTILITY</p>
+    <h1 id="nuc-hero-heading" class="nuc-hero__title">
+      Nuclear Power Utility Secures Sensitive Technical Documents with FileFlex Enterprise
+    </h1>
+  </div>
+</section>
+
+<!-- ============================================================
+     PULL QUOTE — blue strip
+     ============================================================ -->
+<section id="nuc-quote" aria-label="Customer quote">
+  <div class="nuc-quote__inner">
+    <p class="nuc-quote__text">
+      &ldquo;FileFlex gives us secure, compliant access to large sensitive documents
+      without moving files &mdash; with full control, visibility, and zero disruption.&rdquo;
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     BODY
+     ============================================================ -->
+<section id="fin-body" class="fin-body" aria-label="Case study details">
+  <div class="fin-body__inner">
+
+    <!-- Customer Overview (image left, text right) -->
+    <div class="fin-block fin-row">
+      <div class="fin-row__media">
+        <img src="/images/nuclear/Nuclear-Power-Plant-.jpg" alt="Nuclear power plant — sensitive technical document operations" loading="lazy" decoding="async" />
+      </div>
+      <div class="fin-row__copy">
+        <h2 class="fin-h2">Customer Overview</h2>
+        <p class="fin-p">
+          A European nuclear power utility operating three nuclear power plants,
+          designated as critical national infrastructure, and subject to strict regulatory
+          oversight. The organization maintains an extensive, high-value library of large
+          technical documents stored on internal FTP servers &mdash; containing sensitive
+          schematics, maintenance protocols, and operational data.
+        </p>
+      </div>
+    </div>
+
+    <hr class="fin-sep" />
+
+    <!-- Challenge (full width) -->
+    <div class="fin-block">
+      <h2 class="fin-h2">Challenge</h2>
+      <p class="fin-p">The utility faced a complex challenge:</p>
+      <ul class="fin-list">
+        <li>Massive volumes of highly sensitive technical documents needed to be securely accessed by authorized personnel.</li>
+        <li>These files are too large for efficient downloading, and once downloaded, were difficult to govern and secure.</li>
+        <li>As a regulated, critical infrastructure organization, compliance and zero tolerance for data leakage are paramount.</li>
+        <li>Cloud storage was not an option.</li>
+      </ul>
+    </div>
+
+    <hr class="fin-sep" />
+
+    <!-- Why FileFlex Enterprise (image left, text right) -->
+    <div class="fin-block fin-row">
+      <div class="fin-row__media">
+        <img src="/images/nuclear/Why-FileFlex-Enterprise-1.jpg" alt="Why FileFlex Enterprise — zero trust data access" loading="lazy" decoding="async" />
+      </div>
+      <div class="fin-row__copy">
+        <h2 class="fin-h2">Why FileFlex Enterprise</h2>
+        <p class="fin-p">
+          FileFlex Enterprise was chosen for its zero trust data access architecture and
+          its ability to provide secure, regulated access without moving or duplicating
+          files &mdash; all while enhancing IT governance and minimizing operational risk.
+        </p>
+        <p class="fin-p"><strong>Key benefits delivered:</strong></p>
+        <ul class="fin-list">
+          <li><strong>Secure, regulated access</strong> to very large technical documentation stored on FTP servers, with no need to download or migrate files.</li>
+          <li><strong>Zero trust data access model</strong> enforces least-privilege access on every file interaction &mdash; ensuring highly sensitive data is protected.</li>
+          <li><strong>Granular governance:</strong> Sharing and downloading can be controlled on a per-user and per-file basis, including view-only and access-only modes.</li>
+          <li><strong>Optimized access to large files:</strong> Users can securely view or interact with massive documents in place, avoiding long downloads and eliminating the risks of storing local copies.</li>
+          <li><strong>Comprehensive audit logging</strong> of all file activity &mdash; crucial for regulatory compliance and internal accountability.</li>
+          <li><strong>Centralized IT control:</strong> Admins can configure and enforce policies organization-wide across departments and locations.</li>
+          <li><strong>Seamless integration</strong> with existing infrastructure &mdash; no need to modify or relocate file repositories.</li>
+          <li><strong>Responsive support and smooth upgrades,</strong> ensuring rapid deployment with minimal disruption.</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="fin-sep" />
+
+    <!-- Results (full width) -->
+    <div class="fin-block">
+      <h2 class="fin-h2">Results</h2>
+      <ul class="fin-list">
+        <li><strong>Improved access efficiency</strong> to large-scale technical documents, regardless of file size or location.</li>
+        <li><strong>Stronger data protection posture</strong> for critical infrastructure operations and intellectual property.</li>
+        <li><strong>Regulatory compliance ensured,</strong> thanks to full auditability and controlled access protocols.</li>
+        <li><strong>Eliminated file movement and downloading bottlenecks,</strong> removing a major operational inefficiency and security risk.</li>
+        <li><strong>Enabled secure collaboration</strong> without compromising on performance or governance.</li>
+        <li><strong>Established a scalable, zero-trust foundation</strong> to support secure access and sharing for years to come.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     RELATED BLOG
+     ============================================================ -->
+<section id="fin-blogs" class="fin-section fin-section--white" aria-labelledby="nuc-blogs-heading">
+  <div class="fin-section__inner">
+    <h2 id="nuc-blogs-heading" class="fin-h2 fin-h2--center">Check Out This Related Blog</h2>
+    <div class="fin-blog-grid nuc-blog-grid">
+      {blogs.map((b) => (
+        <a class="fin-blog" href={b.href} target="_blank" rel="noopener">
+          <img class="fin-blog__img" src={b.img} alt="" loading="lazy" decoding="async" width="400" height="300" />
+          <div class="fin-blog__body">
+            <h3 class="fin-blog__title">{b.title}</h3>
+            <p class="fin-blog__blurb">{b.blurb}</p>
+            <span class="fin-blog__more">Read more →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+</Layout>
