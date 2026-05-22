@@ -64,12 +64,20 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 1.5rem;
+  gap: 1.25rem;
+  min-width: 0;
 }
 
+.ff-nav__logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
 .ff-nav__logo img {
   height: 40px;
   width: auto;
+  max-width: none;
+  display: block;
 }
 
 .ff-nav__divider {
@@ -88,15 +96,19 @@ ul { list-style: none; }
   color: var(--white);
   white-space: nowrap;
   line-height: 1.4;
-  max-width: 14em;
   margin: 0;
+  flex-shrink: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .ff-nav__links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-left: auto;
+  flex-shrink: 0;
 }
 
 .ff-nav__links a {
@@ -1126,8 +1138,20 @@ html:has(.ff-modal-overlay:target) { overflow: hidden; }
   .ff-feature-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 900px) {
+/* Tighten gaps before the hamburger kicks in so 125%-130% browser zoom
+   (effective viewport ~1100-1024px) still fits everything cleanly. */
+@media (max-width: 1280px) {
+  .ff-nav__inner { gap: 1rem; }
+  .ff-nav__links { gap: 1.1rem; }
+  .ff-nav__links a { margin: 0; }
+}
+
+@media (max-width: 1180px) {
+  .ff-nav__divider,
   .ff-nav__tagline { display: none; }
+}
+
+@media (max-width: 1080px) {
   .ff-nav__links { display: none; }
   .ff-nav__toggle:checked ~ .ff-nav__inner .ff-nav__links {
     display: flex;
@@ -1143,6 +1167,9 @@ html:has(.ff-modal-overlay:target) { overflow: hidden; }
   }
   .ff-nav__cta { margin-left: 0; }
   .ff-nav__hamburger { display: block; }
+}
+
+@media (max-width: 900px) {
   .ps-grid { grid-template-columns: 1fr; }
   .ff-meet__cols { grid-template-columns: 1fr; }
   .ff-footer__cols { grid-template-columns: 1fr 1fr; }
