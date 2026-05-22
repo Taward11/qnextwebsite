@@ -167,7 +167,7 @@ nav {
 h1 {
   font-family: var(--font-head);
   font-weight: 800;
-  font-size: clamp(2.6rem, 5.5vw, 4.75rem);
+  font-size: clamp(2.21rem, 4.675vw, 4.04rem);
   line-height: 1.05;
   letter-spacing: -0.03em;
   color: var(--text-head);
@@ -292,7 +292,7 @@ section { padding: 100px 5vw; }
 h2 {
   font-family: var(--font-head);
   font-weight: 800;
-  font-size: clamp(1.9rem, 3.5vw, 3rem);
+  font-size: clamp(1.615rem, 2.975vw, 2.55rem);
   line-height: 1.1;
   letter-spacing: -0.025em;
   color: var(--text-head);
