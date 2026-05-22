@@ -1,0 +1,1 @@
+- [Blog system conventions](blog-system.md) — Astro content collection at /blog/, marker-based table injection via AstroContainer, image float-by-filename, author lookup map.
