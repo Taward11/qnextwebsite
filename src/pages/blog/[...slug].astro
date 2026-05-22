@@ -1,0 +1,140 @@
+---
+import { experimental_AstroContainer as AstroContainer } from 'astro/container';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import PostBody from '../../components/PostBody.astro';
+import { getAllPosts, formatDate, slugify } from '../../lib/blog';
+
+export async function getStaticPaths() {
+  const posts = await getAllPosts();
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content, headings } = await post.render();
+
+// TOC from H2s only
+const h2s = headings.filter((h) => h.depth === 2);
+const showToc = post.data.toc && h2s.length > 1;
+
+// Render the post body to an HTML string so we can split on `<!-- table:ID -->`
+// markers and inject our <PostTable> component in place of each marker.
+const container = await AstroContainer.create();
+const contentHtml = await container.renderToString(Content);
+
+// Fail-safe: if any declared table has no marker in the body, append it
+// at the end so the table still appears in the rendered post.
+const usedIds = new Set<string>();
+const markerRe = /<!--\s*table:([\w-]+)\s*-->/g;
+let m: RegExpExecArray | null;
+while ((m = markerRe.exec(contentHtml))) usedIds.add(m[1]);
+const trailingTables = post.data.tables.filter((t) => !usedIds.has(t.id));
+
+const url = new URL(`/blog/${post.slug}/`, Astro.site ?? Astro.url.origin).toString();
+const imgAbs = post.data.featuredImage
+  ? new URL(post.data.featuredImage, Astro.site ?? Astro.url.origin).toString()
+  : undefined;
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.data.title,
+  description: post.data.description ?? post.data.excerpt,
+  datePublished: post.data.date.toISOString(),
+  dateModified: (post.data.modified ?? post.data.date).toISOString(),
+  author: { '@type': 'Person', name: post.data.author },
+  image: imgAbs,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+};
+
+const faqSchema = post.data.faq.length > 0
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: post.data.faq.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    }
+  : null;
+
+const tableSchemas = post.data.tables.map((t) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Table',
+  about: t.caption ?? post.data.title,
+}));
+---
+
+<BlogLayout title={`${post.data.title} | FileFlex Blog`} description={post.data.description ?? post.data.excerpt}>
+
+  <article class="blog-post">
+
+    {post.data.featuredImage && (
+      <img class="blog-post__hero" src={post.data.featuredImage} alt={post.data.featuredImageAlt ?? ''} loading="eager" fetchpriority="high" decoding="async" />
+    )}
+
+    <ul class="blog-post__cats" aria-label="Categories">
+      {post.data.categories.map((c) => (
+        <li><a href={`/blog/category/${slugify(c)}/`}>{c}</a></li>
+      ))}
+    </ul>
+
+    <h1 class="blog-post__title">{post.data.title}</h1>
+
+    <p class="blog-post__meta">
+      <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+      · {post.data.author}
+      {post.data.readingTime && <> · {post.data.readingTime}</>}
+    </p>
+
+    {showToc && (
+      <nav class="blog-post__toc" aria-label="Table of contents">
+        <h2 class="blog-post__toc-title">Table of Contents</h2>
+        <ol>
+          {h2s.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}
+        </ol>
+      </nav>
+    )}
+
+    <PostBody html={contentHtml} tables={post.data.tables} />
+
+    {trailingTables.length > 0 && (
+      <div class="blog-post__trailing-tables">
+        {trailingTables.map((t) => (
+          <PostBody html={`<!-- table:${t.id} -->`} tables={[t]} />
+        ))}
+      </div>
+    )}
+
+    {post.data.faq.length > 0 && (
+      <section class="blog-post__faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
+        <dl>
+          {post.data.faq.map((f) => (
+            <>
+              <dt>{f.q}</dt>
+              <dd>{f.a}</dd>
+            </>
+          ))}
+        </dl>
+      </section>
+    )}
+
+    {post.data.tags.length > 0 && (
+      <ul class="blog-post__tags" aria-label="Tags">
+        {post.data.tags.map((t) => (
+          <li><a href={`/blog/tag/${slugify(t)}/`}>#{t}</a></li>
+        ))}
+      </ul>
+    )}
+
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+  {tableSchemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
+
+</BlogLayout>

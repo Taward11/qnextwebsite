@@ -1,0 +1,31 @@
+---
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+import { getCategoryCounts, getPostsByCategory, formatDate } from '../../../lib/blog';
+
+export async function getStaticPaths() {
+  const cats = await getCategoryCounts();
+  return cats.map((c) => ({ params: { category: c.slug }, props: { name: c.name, slug: c.slug } }));
+}
+
+const { name, slug } = Astro.props;
+const posts = await getPostsByCategory(slug);
+---
+
+<BlogLayout title={`${name} | FileFlex Blog`} description={`All FileFlex blog posts in ${name}.`} heading={`Category: ${name}`}>
+  <ul class="blog-list">
+    {posts.map((p) => (
+      <li class="blog-list__item">
+        {p.data.featuredImage && (
+          <a class="blog-list__media" href={`/blog/${p.slug}/`} aria-hidden="true" tabindex="-1">
+            <img src={p.data.featuredImage} alt="" loading="lazy" decoding="async" />
+          </a>
+        )}
+        <div class="blog-list__body">
+          <p class="blog-list__meta">{formatDate(p.data.date)} · {p.data.author}</p>
+          <h2 class="blog-list__title"><a href={`/blog/${p.slug}/`}>{p.data.title}</a></h2>
+          {p.data.excerpt && <p class="blog-list__excerpt">{p.data.excerpt}</p>}
+        </div>
+      </li>
+    ))}
+  </ul>
+</BlogLayout>

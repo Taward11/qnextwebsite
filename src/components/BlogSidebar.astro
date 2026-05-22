@@ -1,0 +1,43 @@
+---
+import { getRecentPosts, getCategoryCounts, getTagCounts, slugify } from '../lib/blog';
+
+const recent = await getRecentPosts(5);
+const categories = await getCategoryCounts();
+const tags = await getTagCounts();
+---
+
+<aside class="blog-sidebar" aria-label="Blog sidebar">
+
+  <section class="blog-widget">
+    <h2 class="blog-widget__title">Recent Posts</h2>
+    <ul class="blog-widget__list">
+      {recent.map((p) => (
+        <li><a href={`/blog/${p.slug}/`}>{p.data.title}</a></li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="blog-widget">
+    <h2 class="blog-widget__title">Categories</h2>
+    <ul class="blog-widget__list blog-widget__list--counts">
+      {categories.map((c) => (
+        <li>
+          <a href={`/blog/category/${c.slug}/`}>{c.name}</a>
+          <span class="blog-widget__count">({c.count})</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  {tags.length > 0 && (
+    <section class="blog-widget">
+      <h2 class="blog-widget__title">Tags</h2>
+      <ul class="blog-widget__tagcloud">
+        {tags.map((t) => (
+          <li><a href={`/blog/tag/${t.slug}/`}>{t.name}</a></li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+</aside>

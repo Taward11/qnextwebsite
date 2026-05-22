@@ -1,0 +1,30 @@
+---
+interface Table {
+  id: string;
+  caption?: string;
+  headers?: string[];
+  rows: string[][];
+}
+interface Props {
+  table: Table;
+}
+const { table } = Astro.props;
+---
+
+<figure class="blog-table-wrap" id={`table-${table.id}`}>
+  <table class="blog-table">
+    {table.caption && <caption>{table.caption}</caption>}
+    {table.headers && table.headers.length > 0 && (
+      <thead>
+        <tr>{table.headers.map((h) => <th scope="col">{h}</th>)}</tr>
+      </thead>
+    )}
+    <tbody>
+      {table.rows.map((row) => (
+        <tr>{row.map((cell, i) => (
+          i === 0 && !table.headers ? <th scope="row">{cell}</th> : <td>{cell}</td>
+        ))}</tr>
+      ))}
+    </tbody>
+  </table>
+</figure>

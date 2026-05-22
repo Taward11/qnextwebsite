@@ -1,0 +1,28 @@
+---
+import PostTable from './PostTable.astro';
+
+interface Table {
+  id: string;
+  caption?: string;
+  headers?: string[];
+  rows: string[][];
+}
+interface Props {
+  html: string;
+  tables: Table[];
+}
+const { html, tables } = Astro.props;
+
+const tableMap = new Map(tables.map((t) => [t.id, t]));
+const parts = html.split(/<!--\s*table:([\w-]+)\s*-->/g);
+---
+
+<div class="blog-prose">
+  {parts.map((part, i) => {
+    if (i % 2 === 1) {
+      const t = tableMap.get(part);
+      return t ? <PostTable table={t} /> : null;
+    }
+    return <Fragment set:html={part} />;
+  })}
+</div>

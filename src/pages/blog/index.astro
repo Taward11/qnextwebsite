@@ -1,0 +1,30 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { getAllPosts, formatDate, slugify } from '../../lib/blog';
+
+const posts = await getAllPosts();
+---
+
+<BlogLayout title="Blog | FileFlex" description="Insights on Zero Trust Data Access, hybrid IT, compliance and secure file sharing." heading="Blog">
+  <ul class="blog-list">
+    {posts.map((p) => (
+      <li class="blog-list__item">
+        {p.data.featuredImage && (
+          <a class="blog-list__media" href={`/blog/${p.slug}/`} aria-hidden="true" tabindex="-1">
+            <img src={p.data.featuredImage} alt="" loading="lazy" decoding="async" />
+          </a>
+        )}
+        <div class="blog-list__body">
+          <p class="blog-list__meta">{formatDate(p.data.date)} · {p.data.author}</p>
+          <h2 class="blog-list__title"><a href={`/blog/${p.slug}/`}>{p.data.title}</a></h2>
+          {p.data.excerpt && <p class="blog-list__excerpt">{p.data.excerpt}</p>}
+          <ul class="blog-list__cats">
+            {p.data.categories.map((c) => (
+              <li><a href={`/blog/category/${slugify(c)}/`}>{c}</a></li>
+            ))}
+          </ul>
+        </div>
+      </li>
+    ))}
+  </ul>
+</BlogLayout>

@@ -1,0 +1,29 @@
+---
+import Layout from './Layout.astro';
+import Nav from '../components/Nav.astro';
+import BlogSidebar from '../components/BlogSidebar.astro';
+import '../styles/fileflex.css';
+import '../styles/blog.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** Heading shown above the content column (e.g. "Blog", "Category: X") */
+  heading?: string;
+}
+
+const { title, description, heading } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <Nav />
+  <div class="blog-shell">
+    <div class="blog-shell__inner">
+      <main class="blog-main">
+        {heading && <h1 class="blog-page-heading">{heading}</h1>}
+        <slot />
+      </main>
+      <BlogSidebar />
+    </div>
+  </div>
+</Layout>
