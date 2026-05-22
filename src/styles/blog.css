@@ -208,22 +208,25 @@
   margin: 24px 0;
 }
 
-/* Quote-style call-out images: float right, wrap text. */
+/* Quote-style call-outs and inline infographics: float right, text wraps. */
 .blog-prose img[src*="quote"],
-.blog-prose img[src*="Quote"] {
+.blog-prose img[src*="Quote"],
+.blog-prose img[src*="infographic"] {
   float: right;
   max-width: 42%;
   margin: 6px 0 16px 24px;
   shape-outside: margin-box;
 }
 .blog-prose p:has(> img[src*="quote"]),
-.blog-prose p:has(> img[src*="Quote"]) {
+.blog-prose p:has(> img[src*="Quote"]),
+.blog-prose p:has(> img[src*="infographic"]) {
   margin: 0;
 }
 
 @media (max-width: 640px) {
   .blog-prose img[src*="quote"],
-  .blog-prose img[src*="Quote"] {
+  .blog-prose img[src*="Quote"],
+  .blog-prose img[src*="infographic"] {
     float: none;
     max-width: 100%;
     margin: 20px auto;

@@ -134,7 +134,6 @@ const tableSchemas = post.data.tables.map((t) => ({
       <div class="blog-post__byline">
         <p class="blog-post__byline-meta">
           Published <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
-          {' '}by <span class="blog-post__byline-author">{post.data.author}</span>
         </p>
         <ul class="blog-post__cats" aria-label="Categories">
           {post.data.categories.map((c) => (
