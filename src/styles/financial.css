@@ -1,16 +1,17 @@
 /* ============================================================
    FINANCIAL SERVICES PAGE
-   Uses pf-* tokens from platform.css; adds fin-* specifics.
-   Headings follow the site-wide 0.85x reduction applied in
-   global.css / fileflex.css.
+   Mirrors the original fileflex.com/financial-services/ layout:
+   full-width Challenges, then 2/5 image + 3/5 text rows separated
+   by horizontal rules. Inter throughout, flat 32px H2.
    ============================================================ */
 
 :root {
   --fin-blue: #0080ed;
   --fin-ink: #0E1A2B;
   --fin-ink-soft: #51606F;
+  --fin-bullet: #8a96a4;
   --fin-panel: #f6f8fb;
-  --fin-border: #e5e9ee;
+  --fin-border: #e0e4ea;
 }
 
 /* ---------- HERO ---------- */
@@ -46,7 +47,7 @@
 }
 .fin-hero__title {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(28px, 4.5vw, 54px);
+  font-size: clamp(28px, 4.2vw, 48px);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -59,101 +60,103 @@
 #fin-overview {
   background: var(--fin-blue);
   color: #fff;
-  padding: 80px 5vw;
+  padding: 70px 5vw;
 }
 .fin-overview__inner {
-  max-width: 1280px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
-/* ---------- SHARED SECTIONS ---------- */
-.fin-section { padding: 90px 5vw; }
-.fin-section--white { background: #fff; color: var(--fin-ink); }
-.fin-section--panel { background: var(--fin-panel); color: var(--fin-ink); }
-.fin-section__inner { max-width: 1280px; margin: 0 auto; }
-.fin-narrow { max-width: 920px; }
+/* ---------- BODY (Challenges + 3 image rows) ---------- */
+.fin-body {
+  background: #fff;
+  padding: 80px 5vw;
+}
+.fin-body__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.fin-block {
+  padding: 28px 0;
+}
+.fin-sep {
+  border: 0;
+  border-top: 1px solid var(--fin-border);
+  margin: 12px 0;
+}
+
+/* image-left / text-right row (2/5 + 3/5) */
+.fin-row {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 56px;
+  align-items: start;
+}
+.fin-row__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.fin-row__copy {
+  min-width: 0;
+}
 
 /* ---------- HEADINGS / TYPE ---------- */
 .fin-h2 {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(26px, 3.2vw, 40px);
+  font-size: 27px; /* original 32px × 0.85 site-wide reduction */
   font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin: 0 0 24px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0 0 18px;
   color: var(--fin-ink);
 }
 .fin-h2--light { color: #fff; }
 .fin-h2--center { text-align: center; }
-.fin-h3 {
-  font-family: 'Inter', sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.25;
-  margin: 32px 0 16px;
-  color: var(--fin-ink);
-}
-.fin-h3--center { text-align: center; }
 .fin-p {
   font-family: 'Inter', sans-serif;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.7;
-  margin: 0 0 18px;
+  margin: 0 0 16px;
   color: var(--fin-ink-soft);
 }
+.fin-p strong { color: var(--fin-ink); font-weight: 700; }
 .fin-p--light { color: #eaf4ff; }
-.fin-p--center { text-align: center; max-width: 920px; margin-left: auto; margin-right: auto; }
+.fin-p--light strong { color: #fff; }
+.fin-p--center { text-align: center; max-width: 900px; margin-left: auto; margin-right: auto; }
 
 /* ---------- LISTS ---------- */
 .fin-list {
-  list-style: none;
-  padding: 0;
+  list-style: disc outside;
+  padding: 0 0 0 22px;
   margin: 0;
+  color: var(--fin-bullet);
 }
 .fin-list li {
   font-family: 'Inter', sans-serif;
-  font-size: 17px;
-  line-height: 1.65;
+  font-size: 16px;
+  line-height: 1.7;
   color: var(--fin-ink-soft);
-  padding: 14px 0 14px 28px;
-  position: relative;
-  border-bottom: 1px solid var(--fin-border);
+  padding: 6px 0;
 }
-.fin-list li:last-child { border-bottom: 0; }
-.fin-list li::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 22px;
-  width: 10px; height: 10px;
-  background: var(--fin-blue);
-  border-radius: 50%;
+.fin-list li::marker {
+  color: var(--fin-bullet);
 }
 .fin-list strong { color: var(--fin-ink); font-weight: 700; }
-
-/* ---------- SPLIT layouts (copy + image) ---------- */
-.fin-split {
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  gap: 64px;
-  align-items: center;
-}
-.fin-split--reverse .fin-split__copy { order: 2; }
-.fin-split--reverse .fin-split__media { order: 1; }
-.fin-split__media img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 18px 40px -22px rgba(14,26,43,0.35);
-}
-.fin-split__media--portrait {
-  max-width: 360px;
-  justify-self: center;
+.fin-list--num {
+  list-style: decimal outside;
+  padding-left: 26px;
 }
 
-/* ---------- VDR DIAGRAM ---------- */
+/* ---------- VDR DIAGRAM SECTION ---------- */
+.fin-section { padding: 80px 5vw; }
+.fin-section--white { background: #fff; color: var(--fin-ink); }
+.fin-section--panel { background: var(--fin-panel); color: var(--fin-ink); }
+.fin-section__inner { max-width: 1280px; margin: 0 auto; }
+
 .fin-diagram {
-  margin: 32px auto 48px;
+  margin: 28px auto 48px;
   max-width: 900px;
   text-align: center;
 }
@@ -161,39 +164,28 @@
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px;
-  box-shadow: 0 22px 48px -26px rgba(14,26,43,0.4);
+  border-radius: 4px;
 }
 
 /* ---------- ADVANTAGES list (2 col) ---------- */
 .fin-adv {
-  list-style: none;
-  padding: 0;
+  list-style: disc outside;
+  padding: 0 0 0 22px;
   margin: 24px auto 0;
   max-width: 1080px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 18px 36px;
+  gap: 10px 56px;
+  color: var(--fin-bullet);
 }
 .fin-adv li {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--fin-ink-soft);
-  padding: 16px 18px 16px 44px;
-  background: #fff;
-  border: 1px solid var(--fin-border);
-  border-radius: 6px;
-  position: relative;
+  padding: 4px 0;
 }
-.fin-adv li::before {
-  content: "✓";
-  position: absolute;
-  left: 16px; top: 14px;
-  color: var(--fin-blue);
-  font-weight: 700;
-  font-size: 18px;
-}
+.fin-adv li::marker { color: var(--fin-bullet); }
 .fin-adv strong { color: var(--fin-ink); font-weight: 700; }
 
 /* ---------- BLOG GRID ---------- */
@@ -208,7 +200,7 @@
   flex-direction: column;
   background: #fff;
   border: 1px solid var(--fin-border);
-  border-radius: 8px;
+  border-radius: 6px;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
@@ -234,7 +226,7 @@
 }
 .fin-blog__title {
   font-family: 'Inter', sans-serif;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1.3;
   margin: 0 0 10px;
@@ -257,17 +249,17 @@
 }
 
 /* ---------- RESPONSIVE ---------- */
-@media (max-width: 960px) {
-  .fin-split { grid-template-columns: 1fr; gap: 36px; }
-  .fin-split--reverse .fin-split__copy { order: 1; }
-  .fin-split--reverse .fin-split__media { order: 2; }
+@media (max-width: 900px) {
+  .fin-row { grid-template-columns: 1fr; gap: 28px; }
+  .fin-row__media { max-width: 420px; margin: 0 auto; }
   .fin-adv { grid-template-columns: 1fr; }
   .fin-blog-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
   #fin-hero { min-height: 460px; background-position: center; }
   .fin-hero__inner { padding: 80px 5vw; }
-  .fin-section { padding: 64px 5vw; }
-  #fin-overview { padding: 60px 5vw; }
+  .fin-body, .fin-section { padding: 56px 5vw; }
+  #fin-overview { padding: 56px 5vw; }
   .fin-blog-grid { grid-template-columns: 1fr; }
+  .fin-h2 { font-size: 24px; }
 }

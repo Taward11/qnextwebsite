@@ -86,108 +86,83 @@ const blogs = [
 </section>
 
 <!-- ============================================================
-     CHALLENGES — white, with side image
+     BODY — Challenges, then 3 image+text rows
      ============================================================ -->
-<section id="fin-challenges" class="fin-section fin-section--white" aria-labelledby="fin-challenges-heading">
-  <div class="fin-section__inner fin-split">
-    <div class="fin-split__copy">
-      <h2 id="fin-challenges-heading" class="fin-h2">Challenges</h2>
-      <ul class="fin-list">
-        <li>
-          <strong>Security &amp; Compliance Risks:</strong>
-          Sensitive financial documents were being emailed or stored on third-party
-          platforms, creating data leakage risks.
-        </li>
-        <li>
-          <strong>Inefficient Workflows:</strong>
-          Manual document handling led to delays, misplaced files, and inconsistent
-          communication.
-        </li>
-        <li>
-          <strong>Lack of Centralized Access:</strong>
-          Underwriters, loan processors, and external parties (appraisers, title officers)
-          had limited visibility into key documents.
-        </li>
-      </ul>
-    </div>
-    <div class="fin-split__media fin-split__media--portrait">
-      <img src="/images/financial/The-solution.jpg" alt="The solution — FileFlex Enterprise" loading="lazy" decoding="async" />
-    </div>
-  </div>
-</section>
+<section id="fin-body" class="fin-body" aria-label="Case study details">
+  <div class="fin-body__inner">
 
-<!-- ============================================================
-     SOLUTION + PLANNED IMPLEMENTATION
-     ============================================================ -->
-<section id="fin-solution" class="fin-section fin-section--panel" aria-labelledby="fin-solution-heading">
-  <div class="fin-section__inner fin-split fin-split--reverse">
-    <div class="fin-split__copy">
-      <h2 id="fin-solution-heading" class="fin-h2">Solution</h2>
-      <p class="fin-p">
-        Selecting FileFlex Enterprise as a Secure VDR, the institution chose FileFlex for
-        its zero-trust data access capabilities, ensuring authorized users can securely
-        access mortgage documents in place without moving files. Implementation is planned
-        to include:
-      </p>
-      <h3 class="fin-h3">Planned Implementation</h3>
+    <!-- Challenges (full width, no image) -->
+    <div class="fin-block">
+      <h2 class="fin-h2" id="fin-challenges-heading">Challenges</h2>
       <ul class="fin-list">
-        <li>
-          <strong>Secure Document Storage:</strong>
-          All mortgage files will remain in their original locations (on-premises servers
-          or private cloud), accessible via FileFlex.
-        </li>
-        <li>
-          <strong>Role-Based Access Controls (RBAC):</strong>
-          Loan officers, underwriters, appraisers, and closing agents will receive
-          granular permissions, ensuring data access on a need-to-know basis.
-        </li>
-        <li>
-          <strong>Audit Trails &amp; Compliance:</strong>
-          Every document access, modification, and download will be logged for compliance
-          and auditing.
-        </li>
-        <li>
-          <strong>Seamless Third-Party Collaboration:</strong>
-          External parties (appraisers, title officers) will securely upload documents
-          without exposing internal data.
-        </li>
+        <li><strong>Security &amp; Compliance Risks:</strong> Sensitive financial documents were being emailed or stored on third-party platforms, creating data leakage risks.</li>
+        <li><strong>Inefficient Workflows:</strong> Manual document handling led to delays, misplaced files, and inconsistent communication.</li>
+        <li><strong>Lack of Centralized Access:</strong> Underwriters, loan processors, and external parties (appraisers, title officers) had limited visibility into key documents.</li>
       </ul>
     </div>
-    <div class="fin-split__media">
-      <img src="/images/financial/ip-LF-Panel3-web.jpg" alt="Secure VDR — zero trust file access" loading="lazy" decoding="async" />
-    </div>
-  </div>
-</section>
 
-<!-- ============================================================
-     EXPECTED RESULTS
-     ============================================================ -->
-<section id="fin-results" class="fin-section fin-section--white" aria-labelledby="fin-results-heading">
-  <div class="fin-section__inner fin-split">
-    <div class="fin-split__copy">
-      <h2 id="fin-results-heading" class="fin-h2">Expected Results</h2>
-      <ul class="fin-list">
-        <li>
-          <strong>Reduction in Processing Time:</strong>
-          Faster document retrieval and approvals.
-        </li>
-        <li>
-          <strong>Compliance with Data Security Policies:</strong>
-          Eliminates email-based document sharing.
-        </li>
-        <li>
-          <strong>Improved Collaboration:</strong>
-          Real-time document access across multiple departments and external partners.
-        </li>
-        <li>
-          <strong>Lower Operational Costs:</strong>
-          Reduces reliance on third-party storage solutions.
-        </li>
-      </ul>
+    <hr class="fin-sep" />
+
+    <!-- Solution + Planned Implementation (image left, text right) -->
+    <div class="fin-block fin-row">
+      <div class="fin-row__media">
+        <img src="/images/financial/The-solution.jpg" alt="The solution — FileFlex Enterprise as a secure VDR" loading="lazy" decoding="async" />
+      </div>
+      <div class="fin-row__copy">
+        <h2 class="fin-h2">Solution</h2>
+        <p class="fin-p">
+          <strong>Selecting FileFlex Enterprise as a Secure VDR</strong> — the institution chose
+          FileFlex for its zero-trust data access capabilities, ensuring authorized users can
+          securely access mortgage documents in place without moving files. Implementation is
+          planned to include:
+        </p>
+        <p class="fin-p"><strong>Planned Implementation</strong></p>
+        <ol class="fin-list fin-list--num">
+          <li><strong>Secure Document Storage:</strong> All mortgage files will remain in their original locations (on-premises servers or private cloud), accessible via FileFlex.</li>
+          <li><strong>Role-Based Access Controls (RBAC):</strong> Loan officers, underwriters, appraisers, and closing agents will receive granular permissions, ensuring data access on a need-to-know basis.</li>
+          <li><strong>Audit Trails &amp; Compliance:</strong> Every document access, modification, and download will be logged for compliance and auditing.</li>
+          <li><strong>Seamless Third-Party Collaboration:</strong> External parties (appraisers, title officers) will securely upload documents without exposing internal data.</li>
+        </ol>
+      </div>
     </div>
-    <div class="fin-split__media">
-      <img src="/images/financial/ip-LF-Panel4-web.jpg" alt="Expected results — improved collaboration" loading="lazy" decoding="async" />
+
+    <hr class="fin-sep" />
+
+    <!-- Expected Results -->
+    <div class="fin-block fin-row">
+      <div class="fin-row__media">
+        <img src="/images/financial/ip-LF-Panel3-web.jpg" alt="Expected results — improved workflow and collaboration" loading="lazy" decoding="async" />
+      </div>
+      <div class="fin-row__copy">
+        <h2 class="fin-h2">Expected Results</h2>
+        <ul class="fin-list">
+          <li><strong>Reduction in Processing Time:</strong> Faster document retrieval and approvals.</li>
+          <li><strong>Compliance with Data Security Policies:</strong> Eliminates email-based document sharing.</li>
+          <li><strong>Improved Collaboration:</strong> Real-time document access across multiple departments and external partners.</li>
+          <li><strong>Lower Operational Costs:</strong> Reduces reliance on third-party storage solutions.</li>
+        </ul>
+      </div>
     </div>
+
+    <hr class="fin-sep" />
+
+    <!-- Conclusion -->
+    <div class="fin-block fin-row">
+      <div class="fin-row__media">
+        <img src="/images/financial/ip-LF-Panel4-web.jpg" alt="Conclusion — transforming the mortgage approval workflow" loading="lazy" decoding="async" />
+      </div>
+      <div class="fin-row__copy">
+        <h2 class="fin-h2">Conclusion</h2>
+        <p class="fin-p">
+          By selecting FileFlex Enterprise, the institution is positioned to transform its
+          mortgage approval workflow into a secure, compliant, and efficient process. The
+          planned implementation will allow for greater security, streamlined workflows, and
+          improved collaboration. As the deployment progresses, the institution anticipates
+          expanding FileFlex to other financial departments.
+        </p>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -210,7 +185,7 @@ const blogs = [
       <img src="/images/financial/Mortgage-flow-diagram.jpg" alt="Mortgage workflow diagram with FileFlex Enterprise" loading="lazy" decoding="async" />
     </figure>
 
-    <h3 class="fin-h3 fin-h3--center">Key Advantages of Using FileFlex as a VDR for Mortgage Workflows</h3>
+    <h2 class="fin-h2 fin-h2--center">Key Advantages of Using FileFlex as a VDR for Mortgage Workflows</h2>
     <ul class="fin-adv">
       <li><strong>Zero-Trust Security:</strong> No files are moved, duplicated to the cloud, or shared via email, minimizing risk.</li>
       <li><strong>Data Residency Compliance:</strong> Institutions retain full control of sensitive data stored on-premises.</li>
@@ -222,25 +197,9 @@ const blogs = [
 </section>
 
 <!-- ============================================================
-     CONCLUSION
-     ============================================================ -->
-<section id="fin-conclusion" class="fin-section fin-section--white" aria-labelledby="fin-conclusion-heading">
-  <div class="fin-section__inner fin-narrow">
-    <h2 id="fin-conclusion-heading" class="fin-h2">Conclusion</h2>
-    <p class="fin-p">
-      By selecting FileFlex Enterprise, the institution is positioned to transform its
-      mortgage approval workflow into a secure, compliant, and efficient process. The
-      planned implementation will allow for greater security, streamlined workflows, and
-      improved collaboration. As the deployment progresses, the institution anticipates
-      expanding FileFlex to other financial departments.
-    </p>
-  </div>
-</section>
-
-<!-- ============================================================
      RELATED BLOGS
      ============================================================ -->
-<section id="fin-blogs" class="fin-section fin-section--panel" aria-labelledby="fin-blogs-heading">
+<section id="fin-blogs" class="fin-section fin-section--white" aria-labelledby="fin-blogs-heading">
   <div class="fin-section__inner">
     <h2 id="fin-blogs-heading" class="fin-h2 fin-h2--center">Check Out These Related Blogs</h2>
     <div class="fin-blog-grid">
