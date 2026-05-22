@@ -1,0 +1,160 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+import '../styles/financial.css';
+import '../styles/landscape.css';
+
+const blogs = [
+  {
+    title: 'Upholding Cybersecurity for Architects Through Zero Trust Data Access',
+    blurb: 'Cybersecurity for architects is vital as they navigate remote collaboration and digital tool integration, with Zero Trust Data Access (ZTDA) enhancing security…',
+    img: '/images/landscape/ip-Arch-Panel1-web-e1732657705979-400x300.jpg',
+    href: 'https://fileflex.com/blog/upholding-cybersecurity-for-architects-through-zero-trust-data-access/',
+  },
+];
+---
+
+<Layout
+  title="Landscape Architecture Firm — Secure File Access Across All Employees with FileFlex Enterprise"
+  description="A global landscape architecture and design consultancy deploys FileFlex Enterprise Zero Trust Data Access for secure file access across all offices — no VPNs, no cloud migration."
+>
+
+<Nav />
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="lsc-hero" aria-labelledby="lsc-hero-heading">
+  <div class="lsc-hero__inner">
+    <p class="lsc-hero__eyebrow">LANDSCAPE ARCHITECTURE FIRM</p>
+    <h1 id="lsc-hero-heading" class="lsc-hero__title">
+      Global Landscape Architecture Firm Deploys FileFlex Enterprise for Secure File Access Across All Employees
+    </h1>
+  </div>
+</section>
+
+<!-- ============================================================
+     PULL QUOTE — blue strip
+     ============================================================ -->
+<section id="lsc-quote" aria-label="Customer quote">
+  <div class="lsc-quote__inner">
+    <p class="lsc-quote__text">
+      &ldquo;FileFlex gives our global team fast, secure access to large design files
+      &mdash; without VPNs or moving data.&rdquo;
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     BODY — 4 image-left + text-right rows
+     ============================================================ -->
+<section id="fin-body" class="fin-body" aria-label="Case study details">
+  <div class="fin-body__inner">
+
+    <!-- Customer Overview -->
+    <div class="fin-block fin-row">
+      <div class="fin-row__media">
+        <img src="/images/landscape/Gellespies-landscape-pic-1024x684.jpg" alt="Landscape architecture project — international design consultancy" loading="lazy" decoding="async" />
+      </div>
+      <div class="fin-row__copy">
+        <h2 class="fin-h2">Customer Overview</h2>
+        <p class="fin-p">
+          A leading landscape architecture and design consultancy based in the UK, with offices in
+          Manchester, Oxford, Leeds, Moscow, and Abu Dhabi, serves a broad international client base
+          across the public realm, residential, commercial, education, health, leisure, and transport sectors.
+        </p>
+      </div>
+    </div>
+
+    <hr class="fin-sep" />
+
+    <!-- Challenge -->
+    <div class="fin-block fin-row">
+      <div class="fin-row__media">
+        <img src="/images/landscape/Master-Planning-1.jpg" alt="Master planning — distributed design workforce" loading="lazy" decoding="async" />
+      </div>
+      <div class="fin-row__copy">
+        <h2 class="fin-h2">Challenge</h2>
+        <p class="fin-p">With projects spanning multiple countries and industries, the firm needed to:</p>
+        <ul class="fin-list">
+          <li><strong>Securely provide remote access</strong> to large design files for employees across all offices.</li>
+          <li><strong>Support a distributed, mobile workforce</strong> working both remotely and on-site.</li>
+          <li><strong>Eliminate the performance and usability limitations</strong> of VPN-based access.</li>
+          <li><strong>Maintain full control and governance</strong> over sensitive project data, including design files and client documents.</li>
+          <li><strong>Ensure collaboration efficiency</strong> without moving files to the cloud or duplicating data.</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="fin-sep" />
+
+    <!-- Why FileFlex Enterprise -->
+    <div class="fin-block fin-row">
+      <div class="fin-row__media">
+        <img src="/images/landscape/landscape-why-fileflex-3.jpg" alt="Why FileFlex Enterprise — zero trust data access at global scale" loading="lazy" decoding="async" />
+      </div>
+      <div class="fin-row__copy">
+        <h2 class="fin-h2">Why FileFlex Enterprise</h2>
+        <p class="fin-p">
+          The firm selected FileFlex Enterprise for its zero trust data access model, regulatory-compliant
+          architecture, and its ability to scale securely across the entire global workforce.
+        </p>
+        <p class="fin-p"><strong>Key benefits delivered:</strong></p>
+        <ul class="fin-list">
+          <li><strong>Firm-wide deployment:</strong> FileFlex was licensed for every employee across all locations.</li>
+          <li><strong>Access to large files</strong> (AutoCAD, InDesign, Photoshop, etc.) without needing to download, move, or upload them to the cloud.</li>
+          <li><strong>Mobile device compatibility,</strong> enabling secure access to drawings and plans at client meetings and job sites.</li>
+          <li><strong>Granular file permissions:</strong> IT can restrict access to view-only or access-only modes to protect sensitive information.</li>
+          <li><strong>Zero trust security</strong> ensures all file access is tightly governed and auditable.</li>
+          <li><strong>No disruption to infrastructure</strong> &mdash; files remain in place within the firm&rsquo;s hybrid IT environment.</li>
+          <li><strong>Full activity logging and centralized control</strong> give IT oversight across all sharing and access activities.</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="fin-sep" />
+
+    <!-- Results -->
+    <div class="fin-block fin-row">
+      <div class="fin-row__media">
+        <img src="/images/landscape/ip-Arch-Panel4-web-1024x1024.jpg" alt="Results — secure global collaboration" loading="lazy" decoding="async" />
+      </div>
+      <div class="fin-row__copy">
+        <h2 class="fin-h2">Results</h2>
+        <ul class="fin-list">
+          <li>Seamless, <strong>secure collaboration</strong> across international teams and time zones.</li>
+          <li><strong>Increased mobility and productivity</strong> for field staff and remote designers.</li>
+          <li>Improved <strong>protection of sensitive design files</strong> and client data through granular access control.</li>
+          <li><strong>Eliminated reliance on VPN,</strong> improving speed and user experience.</li>
+          <li>Established a modern, secure foundation for <strong>scalable file access and governance.</strong></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     RELATED BLOG
+     ============================================================ -->
+<section id="fin-blogs" class="fin-section fin-section--white" aria-labelledby="lsc-blogs-heading">
+  <div class="fin-section__inner">
+    <h2 id="lsc-blogs-heading" class="fin-h2 fin-h2--center">Check Out This Related Blog</h2>
+    <div class="fin-blog-grid lsc-blog-grid">
+      {blogs.map((b) => (
+        <a class="fin-blog" href={b.href} target="_blank" rel="noopener">
+          <img class="fin-blog__img" src={b.img} alt="" loading="lazy" decoding="async" width="400" height="300" />
+          <div class="fin-blog__body">
+            <h3 class="fin-blog__title">{b.title}</h3>
+            <p class="fin-blog__blurb">{b.blurb}</p>
+            <span class="fin-blog__more">Read more →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+</Layout>
