@@ -1,0 +1,261 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+import '../styles/financial.css';
+
+const blogs = [
+  {
+    title: 'Zero Trust for FFIEC Compliance: Why ZTDA Is the Missing Link',
+    blurb: 'Modernize compliance with Zero Trust for FFIEC guidelines. The FFIEC Cybersecurity Assessment Tool outlines critical requirements for data protection — especially in "Domain 5: Data…"',
+    img: '/images/financial/iStock-537743911-web-e1731689756904-400x300.jpg',
+    href: 'https://fileflex.com/blog/meeting-ffiec-guidelines-using-zero-trust-data-access/',
+  },
+  {
+    title: 'Advantages of Zero Trust Virtual Data Rooms for Banks and Credit Unions',
+    blurb: 'Zero Trust Virtual Data Rooms provide banks and credit unions with a secure, compliant, and efficient way to manage sensitive client interactions…',
+    img: '/images/financial/iStock-1296691609-web-e1731086221645-400x300.jpg',
+    href: 'https://fileflex.com/blog/advantages-of-zero-trust-virtual-data-rooms-for-banks-and-credit-unions/',
+  },
+  {
+    title: 'Supporting Financial Services Cybersecurity Through Zero Trust Data Access',
+    blurb: 'Financial services cybersecurity is strengthened through the adoption of Zero Trust Data Access (ZTDA), which enhances data security and regulatory compliance…',
+    img: '/images/financial/Data-Sovereignty-2-e1730312868476-400x300.jpg',
+    href: 'https://fileflex.com/blog/financial-services-cybersecurity/',
+  },
+  {
+    title: 'Zero Trust for GLBA Compliance: File-Level Data Protection',
+    blurb: 'Zero Trust for GLBA Compliance starts at the data level. GLBA requires financial institutions to safeguard customer data under its Safeguards Rule…',
+    img: '/images/financial/sociale-media-social-network-multimedia-online-P4H8N5F-e1733239547217-400x300.jpg',
+    href: 'https://fileflex.com/blog/zero-trust-for-glba-compliance/',
+  },
+  {
+    title: 'Zero Trust Cybersecurity for Credit Unions',
+    blurb: 'Zero Trust cybersecurity for credit unions must go beyond network control. Zero Trust Data Access (ZTDA) protects sensitive member data at the file level…',
+    img: '/images/financial/enterprise-people-400x300.jpg',
+    href: 'https://fileflex.com/blog/zero-trust-cybersecurity-for-credit-unions/',
+  },
+  {
+    title: 'DORA Compliance for File Sharing, Access and Collaboration Using Zero Trust Data Access',
+    blurb: 'DORA compliance for file sharing, access and collaboration necessitates the implementation of Zero Trust Data Access (ZTDA). ZTDA has stringent security measures…',
+    img: '/images/financial/Supports-Privacy-by-Design-Mandates--e1704482747769-400x300.jpg',
+    href: 'https://fileflex.com/blog/dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access/',
+  },
+];
+---
+
+<Layout
+  title="Financial Services — Secure Mortgage Workflow with FileFlex Enterprise"
+  description="Transforming secure mortgage workflow efficiency with FileFlex Enterprise. Zero Trust Data Access as a Virtual Data Room for banks, credit unions and lenders."
+>
+
+<Nav />
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="fin-hero" aria-labelledby="fin-hero-heading">
+  <div class="fin-hero__inner">
+    <p class="fin-hero__eyebrow">FINANCIAL SERVICES</p>
+    <h1 id="fin-hero-heading" class="fin-hero__title">
+      Transforming Secure Mortgage Workflow Efficiency with FileFlex Enterprise
+    </h1>
+  </div>
+</section>
+
+<!-- ============================================================
+     OVERVIEW — bright blue strip
+     ============================================================ -->
+<section id="fin-overview" aria-labelledby="fin-overview-heading">
+  <div class="fin-overview__inner">
+    <h2 id="fin-overview-heading" class="fin-h2 fin-h2--light">Overview</h2>
+    <p class="fin-p fin-p--light">
+      A leading financial institution sought a secure, efficient way to manage its
+      mortgage approval workflow. The organization needed to replace its traditional
+      document-sharing process, which relied on email, third-party file storage, and
+      physical paperwork, leading to security risks, compliance challenges, and inefficiencies.
+    </p>
+    <p class="fin-p fin-p--light">
+      After evaluating multiple solutions, the institution selected FileFlex Enterprise as
+      its Virtual Data Room (VDR) to enhance document security, streamline collaboration,
+      and improve efficiency across its mortgage workflow. The next steps involve
+      implementing FileFlex into their existing processes to realize these benefits.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHALLENGES — white, with side image
+     ============================================================ -->
+<section id="fin-challenges" class="fin-section fin-section--white" aria-labelledby="fin-challenges-heading">
+  <div class="fin-section__inner fin-split">
+    <div class="fin-split__copy">
+      <h2 id="fin-challenges-heading" class="fin-h2">Challenges</h2>
+      <ul class="fin-list">
+        <li>
+          <strong>Security &amp; Compliance Risks:</strong>
+          Sensitive financial documents were being emailed or stored on third-party
+          platforms, creating data leakage risks.
+        </li>
+        <li>
+          <strong>Inefficient Workflows:</strong>
+          Manual document handling led to delays, misplaced files, and inconsistent
+          communication.
+        </li>
+        <li>
+          <strong>Lack of Centralized Access:</strong>
+          Underwriters, loan processors, and external parties (appraisers, title officers)
+          had limited visibility into key documents.
+        </li>
+      </ul>
+    </div>
+    <div class="fin-split__media fin-split__media--portrait">
+      <img src="/images/financial/The-solution.jpg" alt="The solution — FileFlex Enterprise" loading="lazy" decoding="async" />
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SOLUTION + PLANNED IMPLEMENTATION
+     ============================================================ -->
+<section id="fin-solution" class="fin-section fin-section--panel" aria-labelledby="fin-solution-heading">
+  <div class="fin-section__inner fin-split fin-split--reverse">
+    <div class="fin-split__copy">
+      <h2 id="fin-solution-heading" class="fin-h2">Solution</h2>
+      <p class="fin-p">
+        Selecting FileFlex Enterprise as a Secure VDR, the institution chose FileFlex for
+        its zero-trust data access capabilities, ensuring authorized users can securely
+        access mortgage documents in place without moving files. Implementation is planned
+        to include:
+      </p>
+      <h3 class="fin-h3">Planned Implementation</h3>
+      <ul class="fin-list">
+        <li>
+          <strong>Secure Document Storage:</strong>
+          All mortgage files will remain in their original locations (on-premises servers
+          or private cloud), accessible via FileFlex.
+        </li>
+        <li>
+          <strong>Role-Based Access Controls (RBAC):</strong>
+          Loan officers, underwriters, appraisers, and closing agents will receive
+          granular permissions, ensuring data access on a need-to-know basis.
+        </li>
+        <li>
+          <strong>Audit Trails &amp; Compliance:</strong>
+          Every document access, modification, and download will be logged for compliance
+          and auditing.
+        </li>
+        <li>
+          <strong>Seamless Third-Party Collaboration:</strong>
+          External parties (appraisers, title officers) will securely upload documents
+          without exposing internal data.
+        </li>
+      </ul>
+    </div>
+    <div class="fin-split__media">
+      <img src="/images/financial/ip-LF-Panel3-web.jpg" alt="Secure VDR — zero trust file access" loading="lazy" decoding="async" />
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EXPECTED RESULTS
+     ============================================================ -->
+<section id="fin-results" class="fin-section fin-section--white" aria-labelledby="fin-results-heading">
+  <div class="fin-section__inner fin-split">
+    <div class="fin-split__copy">
+      <h2 id="fin-results-heading" class="fin-h2">Expected Results</h2>
+      <ul class="fin-list">
+        <li>
+          <strong>Reduction in Processing Time:</strong>
+          Faster document retrieval and approvals.
+        </li>
+        <li>
+          <strong>Compliance with Data Security Policies:</strong>
+          Eliminates email-based document sharing.
+        </li>
+        <li>
+          <strong>Improved Collaboration:</strong>
+          Real-time document access across multiple departments and external partners.
+        </li>
+        <li>
+          <strong>Lower Operational Costs:</strong>
+          Reduces reliance on third-party storage solutions.
+        </li>
+      </ul>
+    </div>
+    <div class="fin-split__media">
+      <img src="/images/financial/ip-LF-Panel4-web.jpg" alt="Expected results — improved collaboration" loading="lazy" decoding="async" />
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     HOW VDR FACILITATES MORTGAGE WORKFLOW (diagram + advantages)
+     ============================================================ -->
+<section id="fin-vdr" class="fin-section fin-section--panel" aria-labelledby="fin-vdr-heading">
+  <div class="fin-section__inner">
+    <h2 id="fin-vdr-heading" class="fin-h2 fin-h2--center">
+      How FileFlex Enterprise VDR Capability Will Facilitate the Mortgage Workflow
+    </h2>
+    <p class="fin-p fin-p--center">
+      FileFlex Enterprise virtual data rooms can significantly enhance the mortgage
+      workflow, eliminating email sharing, keeping data on-premises and providing secure,
+      remote access to data without moving files, zero-trust security controls, and
+      role-based access management. Here's how each stage of the process could be
+      facilitated using FileFlex:
+    </p>
+    <figure class="fin-diagram">
+      <img src="/images/financial/Mortgage-flow-diagram.jpg" alt="Mortgage workflow diagram with FileFlex Enterprise" loading="lazy" decoding="async" />
+    </figure>
+
+    <h3 class="fin-h3 fin-h3--center">Key Advantages of Using FileFlex as a VDR for Mortgage Workflows</h3>
+    <ul class="fin-adv">
+      <li><strong>Zero-Trust Security:</strong> No files are moved, duplicated to the cloud, or shared via email, minimizing risk.</li>
+      <li><strong>Data Residency Compliance:</strong> Institutions retain full control of sensitive data stored on-premises.</li>
+      <li><strong>Granular Access Controls:</strong> Role-based permissions prevent unauthorized access.</li>
+      <li><strong>Real-Time Collaboration:</strong> Multiple stakeholders work securely without file duplication.</li>
+      <li><strong>Automated Compliance &amp; Audit Logging:</strong> Every access and action is logged.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONCLUSION
+     ============================================================ -->
+<section id="fin-conclusion" class="fin-section fin-section--white" aria-labelledby="fin-conclusion-heading">
+  <div class="fin-section__inner fin-narrow">
+    <h2 id="fin-conclusion-heading" class="fin-h2">Conclusion</h2>
+    <p class="fin-p">
+      By selecting FileFlex Enterprise, the institution is positioned to transform its
+      mortgage approval workflow into a secure, compliant, and efficient process. The
+      planned implementation will allow for greater security, streamlined workflows, and
+      improved collaboration. As the deployment progresses, the institution anticipates
+      expanding FileFlex to other financial departments.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     RELATED BLOGS
+     ============================================================ -->
+<section id="fin-blogs" class="fin-section fin-section--panel" aria-labelledby="fin-blogs-heading">
+  <div class="fin-section__inner">
+    <h2 id="fin-blogs-heading" class="fin-h2 fin-h2--center">Check Out These Related Blogs</h2>
+    <div class="fin-blog-grid">
+      {blogs.map((b) => (
+        <a class="fin-blog" href={b.href} target="_blank" rel="noopener">
+          <img class="fin-blog__img" src={b.img} alt="" loading="lazy" decoding="async" width="400" height="300" />
+          <div class="fin-blog__body">
+            <h3 class="fin-blog__title">{b.title}</h3>
+            <p class="fin-blog__blurb">{b.blurb}</p>
+            <span class="fin-blog__more">Read more →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+</Layout>
