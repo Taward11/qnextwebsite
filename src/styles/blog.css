@@ -128,9 +128,11 @@
   text-align: center;
 }
 .blog-post__reading-time {
-  font-size: 14px; color: #666; margin: 0 0 32px;
-  text-align: center; font-style: italic;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 14px; color: #555; margin: 0 0 32px;
+  text-align: left; font-style: italic;
 }
+.blog-post__reading-icon { width: 16px; height: 16px; flex-shrink: 0; color: #021372; }
 
 /* TOC */
 .blog-post__toc {
@@ -194,29 +196,34 @@
 .blog-prose strong { font-weight: 700; color: #1a1a1a; }
 .blog-prose ul, .blog-prose ol { margin: 0 0 20px; padding-left: 26px; }
 .blog-prose li { margin: 6px 0; }
-/* Body images wrap with text — alternate float right / left for visual rhythm.
-   On narrow screens, fall back to block. */
+/* Default body images: full column width. */
 .blog-prose p > img {
   display: block;
-  max-width: 46%;
+  max-width: 100%;
   height: auto;
   border-radius: 4px;
+  margin: 24px auto;
+}
+.blog-prose p:has(> img:only-child) {
+  margin: 24px 0;
+}
+
+/* Quote-style call-out images: float right, wrap text. */
+.blog-prose img[src*="quote"],
+.blog-prose img[src*="Quote"] {
   float: right;
-  margin: 6px 0 14px 24px;
+  max-width: 42%;
+  margin: 6px 0 16px 24px;
   shape-outside: margin-box;
 }
-.blog-prose p:nth-of-type(even) > img {
-  float: left;
-  margin: 6px 24px 14px 0;
-}
-/* Paragraphs that contain ONLY an image (markdown image-on-its-own-line)
-   collapse to no extra block spacing; the float handles layout. */
-.blog-prose p:has(> img:only-child) {
+.blog-prose p:has(> img[src*="quote"]),
+.blog-prose p:has(> img[src*="Quote"]) {
   margin: 0;
 }
+
 @media (max-width: 640px) {
-  .blog-prose p > img,
-  .blog-prose p:nth-of-type(even) > img {
+  .blog-prose img[src*="quote"],
+  .blog-prose img[src*="Quote"] {
     float: none;
     max-width: 100%;
     margin: 20px auto;

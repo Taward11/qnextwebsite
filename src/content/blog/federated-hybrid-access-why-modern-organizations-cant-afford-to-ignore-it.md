@@ -4,7 +4,7 @@ description: "Federated hybrid access closes the zero trust data gap, securing a
 excerpt: "Federated hybrid access enables organizations to securely and consistently govern data across distributed hybrid IT environments by closing the zero trust data gap and restoring centralized control, compliance, and auditability."
 date: 2026-01-13
 modified: 2026-01-13
-author: "FileFlex Team"
+author: "Tom Ward"
 featuredImage: "/images/blog/federated-hybrid-access/iStock-541282164-web-e1768340893420.jpg"
 featuredImageAlt: "Federated hybrid access across cloud, on-prem, and endpoints"
 readingTime: "2.5 min read"
@@ -27,7 +27,6 @@ faq:
     a: "FileFlex bridges the Zero Trust Data Gap, simplifying management, enhancing security, and ensuring compliance across all storage locations."
 tables:
   - id: "summary"
-    caption: "At-a-glance: federated hybrid access and the Zero Trust Data Gap"
     headers:
       - "Topic"
       - "Key Takeaway"
