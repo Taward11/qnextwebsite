@@ -27,7 +27,9 @@ toc: true
  
 
 ## Security Risks Inherent to Employee Access to Infrastructure
-![Zero Trust Data Access (ZTDA) represents a paradigm shift in cybersecurity](/images/blog/top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure/Quote-30.webp)Security risks are introduced when employees or contractors have access to an organization’s storage infrastructure. These risks can stem from intentional malicious activities, inadvertent mistakes, or vulnerabilities in the systems being accessed. Below are some key risks to consider:
+<img class="blog-prose__img--full" src="/images/blog/top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure/Quote-30.webp" alt="Zero Trust Data Access (ZTDA) represents a paradigm shift in cybersecurity" />
+
+Security risks are introduced when employees or contractors have access to an organization’s storage infrastructure. These risks can stem from intentional malicious activities, inadvertent mistakes, or vulnerabilities in the systems being accessed. Below are some key risks to consider:
 
 1.  ### **Insider Threats**
     
@@ -152,7 +154,7 @@ If a malicious entity gains access to an organization’s storage infrastructure
  
 
 ## How the Zero Trust Data Access Model Minimizes Direct Access to Data
-![Preventing direct access to the storage infrastructure through ZTDA offers significant security, operational, and compliance benefits](/images/blog/top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure/Quote-31.webp)
+<img class="blog-prose__img--full" src="/images/blog/top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure/Quote-31.webp" alt="Preventing direct access to the storage infrastructure through ZTDA offers significant security, operational, and compliance benefits" />
 
 <img class="blog-prose__img--full" src="/images/blog/top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure/ztda-architecture-1.webp" alt="ZTDA Architecture" />
 <em class="blog-prose__caption--center">Diagram 1 – The Zero Trust Data Access Architecture</em>
