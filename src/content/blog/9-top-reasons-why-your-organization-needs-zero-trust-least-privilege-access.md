@@ -46,7 +46,9 @@ At its core, Least Privilege Access is a foundational cybersecurity principle th
  
 
 ## What is Least Privilege Access?
-![Zero Trust Least Privilege Access is essential.](/images/blog/9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access/Quote-18.webp)Least Privilege Access is a fundamental cybersecurity principle that ensures users, systems, or processes are granted the minimum level of access necessary to perform their specific tasks—nothing more, nothing less. The goal is to limit access to resources, thereby reducing the attack surface and mitigating potential risks of misuse, accidental exposure, or cyberattacks. Key elements of Least Privilege Access include minimal access, role-based control, micro-segmentation and regular access rights review.
+<img class="blog-prose__img--full" src="/images/blog/9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access/Quote-18.webp" alt="Zero Trust Least Privilege Access is essential." />
+
+Least Privilege Access is a fundamental cybersecurity principle that ensures users, systems, or processes are granted the minimum level of access necessary to perform their specific tasks—nothing more, nothing less. The goal is to limit access to resources, thereby reducing the attack surface and mitigating potential risks of misuse, accidental exposure, or cyberattacks. Key elements of Least Privilege Access include minimal access, role-based control, micro-segmentation and regular access rights review.
 
 A Zero Trust Policy Server plays a central role in enforcing Least Privilege Access within a Zero Trust Architecture (ZTA). It acts as the decision-making engine that continuously evaluates and enforces access controls based on pre-defined policies, ensuring that users, devices, and applications only access what they need and nothing more.
 
@@ -78,10 +80,8 @@ A Zero Trust Policy Server plays a central role in enforcing Least Privilege Acc
 
 - Least privilege access enforces a clear role-based access structure, simplifying user management and reducing unnecessary permissions. It helps IT teams maintain clean, organized access control policies across systems.
 
-6.  ![Least privilege access enforces a clear role-based access structure](/images/blog/9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access/Quote-19.webp)
-    
-      
-    
+6.  <img class="blog-prose__img--full" src="/images/blog/9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access/Quote-19.webp" alt="Least privilege access enforces a clear role-based access structure" />
+
     ### **Facilitates Zero Trust Security**
     
 

@@ -25,7 +25,9 @@ toc: true
  
 
 ## Understanding the Centralized Cloud Model
-![Zero Trust Data Access a strategically superior solution for access, sharing and collaboration.](/images/blog/why-a-zero-trust-data-access-decentralized-data-platform-is-strategically-superior-to-centralized-cloud-file-access-sharing-and-collaboration/Quote13.webp)Traditional cloud storage services rely on a centralized cloud architecture. In this model, data is copied or synced to centralized server clusters managed by the service provider. Users access their files over the Internet through these servers, which store and process the data. While this approach offers convenience and productivity, it comes with inherent compromises:
+<img class="blog-prose__img--full" src="/images/blog/why-a-zero-trust-data-access-decentralized-data-platform-is-strategically-superior-to-centralized-cloud-file-access-sharing-and-collaboration/Quote13.webp" alt="Zero Trust Data Access a strategically superior solution for access, sharing and collaboration." />
+
+Traditional cloud storage services rely on a centralized cloud architecture. In this model, data is copied or synced to centralized server clusters managed by the service provider. Users access their files over the Internet through these servers, which store and process the data. While this approach offers convenience and productivity, it comes with inherent compromises:
 
 -   **Data Duplication & Fragmentation**: Files are replicated across multiple servers, often with near-line and off-line backups, creating version control challenges and increasing the risk surface.
 -   **Subset Storage**: Limited storage capacity forces users to store only a subset of their data, leaving critical files inaccessible.
@@ -45,23 +47,22 @@ ZTDA enhances security by encrypting data in transit, applying granular access p
  
 
 ## Key Advantages of ZTDA Over Centralized Cloud Models
-![ZTDA leverages existing infrastructure for enhanced security, control, and compliance.](/images/blog/why-a-zero-trust-data-access-decentralized-data-platform-is-strategically-superior-to-centralized-cloud-file-access-sharing-and-collaboration/Quote14.webp)
+<img class="blog-prose__img--full" src="/images/blog/why-a-zero-trust-data-access-decentralized-data-platform-is-strategically-superior-to-centralized-cloud-file-access-sharing-and-collaboration/Quote14.webp" alt="ZTDA leverages existing infrastructure for enhanced security, control, and compliance." />
 
-1.  1.  ### **Revolutionary Security Architecture**
-        
-        ZTDA operates on Zero Trust principles, assuming no user or device is inherently trustworthy. Enabling secure, direct access to data at its source eliminates the risks of data duplication and centralized storage, reduces the attack surface, and mitigates threats like data breaches and ransomware.
-        
-    2.  ### **Cost Efficiency and Resource Optimization**
-        
-        Unlike centralized clouds that require extensive infrastructure, bandwidth, and expensive migrations, ZTDA uses an overlay model. It capitalizes on an organization’s existing infrastructure, avoiding costly data center subscriptions and redundant storage. This results in a disruptive low-cost model that scales across all storage environments.
-        
-    3.  ### **Complete Data Control and Compliance**
-        
-        With ZTDA, unstructured data stays under the organization’s control. Data does not need to be stored on third-party servers, ensuring privacy, sovereignty, and compliance with stringent regulations like GDPR and HIPAA. Real-time auditing capabilities provide full transparency into data access, enhancing accountability and regulatory adherence.
-        
+1.  ### **Revolutionary Security Architecture**
 
-1.  ### **Deployment Simplicity and Scalability**
-    
+    ZTDA operates on Zero Trust principles, assuming no user or device is inherently trustworthy. Enabling secure, direct access to data at its source eliminates the risks of data duplication and centralized storage, reduces the attack surface, and mitigates threats like data breaches and ransomware.
+
+2.  ### **Cost Efficiency and Resource Optimization**
+
+    Unlike centralized clouds that require extensive infrastructure, bandwidth, and expensive migrations, ZTDA uses an overlay model. It capitalizes on an organization’s existing infrastructure, avoiding costly data center subscriptions and redundant storage. This results in a disruptive low-cost model that scales across all storage environments.
+
+3.  ### **Complete Data Control and Compliance**
+
+    With ZTDA, unstructured data stays under the organization’s control. Data does not need to be stored on third-party servers, ensuring privacy, sovereignty, and compliance with stringent regulations like GDPR and HIPAA. Real-time auditing capabilities provide full transparency into data access, enhancing accountability and regulatory adherence.
+
+4.  ### **Deployment Simplicity and Scalability**
+
     ZTDA’s overlay design integrates seamlessly with existing systems, requiring no complex migrations. It’s easy to deploy, scale, and adapt as organizational needs evolve, without creating bottlenecks that are common in centralized systems.
     
 

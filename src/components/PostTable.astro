@@ -11,7 +11,7 @@ interface Props {
 const { table } = Astro.props;
 ---
 
-<figure class="blog-table-wrap" id={`table-${table.id}`}>
+<div class="blog-table-wrap" id={`table-${table.id}`} role="region" aria-label={table.caption || 'Data table'} tabindex="0">
   <table class="blog-table">
     {table.caption && <caption>{table.caption}</caption>}
     {table.headers && table.headers.length > 0 && (
@@ -27,4 +27,4 @@ const { table } = Astro.props;
       ))}
     </tbody>
   </table>
-</figure>
+</div>

@@ -111,7 +111,8 @@
 .blog-list__cats a:hover { background: #021372; color: #fff; }
 
 /* ---------- Single post ---------- */
-.blog-post { max-width: 760px; }
+.blog-post { max-width: 760px; min-width: 0; }
+.blog-post .blog-prose { min-width: 0; }
 .blog-post__hero {
   display: block; width: 100%; height: auto;
   margin: 0 0 28px; border-radius: 4px;
@@ -225,6 +226,27 @@
 }
 
 /* Quote-style call-outs and inline infographics: float right, text wraps. */
+.blog-prose img.blog-prose__img--full,
+.blog-prose p:has(> img.blog-prose__img--full:only-child) img {
+  float: none !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 24px auto !important;
+  clear: both;
+}
+.blog-prose p:has(> img.blog-prose__img--full) {
+  display: block;
+  clear: both;
+}
+.blog-prose .blog-prose__caption--center {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  margin: -8px 0 20px;
+}
 .blog-prose img[src*="quote"],
 .blog-prose img[src*="Quote"],
 .blog-prose img[src*="infographic"],
@@ -267,8 +289,16 @@
 /* ---------- Tables ---------- */
 .blog-table-wrap {
   margin: 32px 0;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  display: block;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #e2e6ee;
+  border-radius: 4px;
 }
+.blog-table-wrap .blog-table { min-width: 560px; border: 0; }
 .blog-table {
   width: 100%;
   border-collapse: collapse;
