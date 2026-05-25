@@ -54,39 +54,39 @@ This article explores the importance of zero trust based file-sharing management
 1.  ### **Data Security**
     
 
-- **Prevent Unauthorized Access**: By defining what users can share and from where, organizations minimize the risk of unauthorized data exposure.
-        -   **Reduce Insider Threats**: Limiting permissions on a per-user and per-repository basis reduces the risk of malicious or accidental data leakage.
-        -   **Zero Trust Principle**: Aligning permissions with zero trust principles ensures that only explicitly authorized users can access or share specific data.
+-   **Prevent Unauthorized Access**: By defining what users can share and from where, organizations minimize the risk of unauthorized data exposure.
+-   **Reduce Insider Threats**: Limiting permissions on a per-user and per-repository basis reduces the risk of malicious or accidental data leakage.
+-   **Zero Trust Principle**: Aligning permissions with zero trust principles ensures that only explicitly authorized users can access or share specific data.
 
 2.  ### **Compliance and Auditability**
     
 
-- **Regulatory Compliance**: Industries such as healthcare, finance, and government are subject to strict regulations (e.g., GDPR, HIPAA). Proper file sharing management ensures adherence to these standards by controlling and tracking data sharing.
-        -   **Audit Trails**: Tracking who shared what, from which repository, and with what permissions simplifies auditing processes and demonstrates compliance to regulators.
+-   **Regulatory Compliance**: Industries such as healthcare, finance, and government are subject to strict regulations (e.g., GDPR, HIPAA). Proper file sharing management ensures adherence to these standards by controlling and tracking data sharing.
+-   **Audit Trails**: Tracking who shared what, from which repository, and with what permissions simplifies auditing processes and demonstrates compliance to regulators.
 
 3.  ### **Operational Efficiency**
     
 
-- **Role-Based Access Control**: Assigning permissions based on roles or responsibilities reduces administrative overhead and ensures employees only access and share data relevant to their work.
-        -   **Streamlined Collaboration**: Managing file sharing effectively ensures that employees have the access they need without excessive restrictions that can hinder collaboration.
+-   **Role-Based Access Control**: Assigning permissions based on roles or responsibilities reduces administrative overhead and ensures employees only access and share data relevant to their work.
+-   **Streamlined Collaboration**: Managing file sharing effectively ensures that employees have the access they need without excessive restrictions that can hinder collaboration.
 
 4.  ### **Data Governance**
     
 
-- **Prevent Shadow IT**: Centralizing file-sharing management ensures users don’t resort to unapproved tools or services, which can compromise security and compliance.
-        -   **Control Over Data Lifecycle**: Permissions can be tied to policies governing data retention, access review, and expiration, ensuring that data is shared responsibly.
+-   **Prevent Shadow IT**: Centralizing file-sharing management ensures users don’t resort to unapproved tools or services, which can compromise security and compliance.
+-   **Control Over Data Lifecycle**: Permissions can be tied to policies governing data retention, access review, and expiration, ensuring that data is shared responsibly.
 
 5.  ### **Customizable User Permissions**
     
 
-- **Granular Control**: Enabling fine-grained control over permissions—such as view-only access, edit rights, or full ownership—helps ensure that shared files are used appropriately.
-        -   **Repository-Specific Permissions**: Allowing permissions to vary by storage type or repository ensures alignment with organizational policies for data stored on-premises, in the cloud, or in hybrid environments.
+-   **Granular Control**: Enabling fine-grained control over permissions—such as view-only access, edit rights, or full ownership—helps ensure that shared files are used appropriately.
+-   **Repository-Specific Permissions**: Allowing permissions to vary by storage type or repository ensures alignment with organizational policies for data stored on-premises, in the cloud, or in hybrid environments.
 
 6.  ### **Incident Response and Risk Mitigation**
     
 
-- **Rapid Revocation**: If a user leaves the company or their role changes, quickly revoking or modifying sharing permissions reduces the risk of lingering vulnerabilities.
-        -   **Breach Containment**: By limiting what users can share, organizations can contain the impact of a breach, as compromised credentials won’t grant unlimited access to sensitive data.
+-   **Rapid Revocation**: If a user leaves the company or their role changes, quickly revoking or modifying sharing permissions reduces the risk of lingering vulnerabilities.
+-   **Breach Containment**: By limiting what users can share, organizations can contain the impact of a breach, as compromised credentials won’t grant unlimited access to sensitive data.
 
 ## The Benefits Zero Trust File Sharing Management Best Practices
 Zero Trust Data Access (ZTDA) is a security framework that assumes no implicit trust in users, or devices, regardless of whether they are inside or outside the organization’s network. Instead, it enforces stringent access controls and user verification for every action. Applying ZTDA to file-sharing management enhances security and aligns with best practices in the following ways:
@@ -98,38 +98,38 @@ Zero Trust Data Access (ZTDA) is a security framework that assumes no implicit t
     ### **Granular Access Control**
     
 
-- **Least Privilege Principle**: ZTDA enforces least privilege access, such that users can only share files and access storage repositories they need for their role. This minimizes the risk of accidental or malicious misuse of sensitive data.
-        -   **Per-File Permissions**: Rather than blanket access to entire directories or repositories, ZTDA allows organizations to define sharing permissions at the file level, improving control.
+-   **Least Privilege Principle**: ZTDA enforces least privilege access, such that users can only share files and access storage repositories they need for their role. This minimizes the risk of accidental or malicious misuse of sensitive data.
+-   **Per-File Permissions**: Rather than blanket access to entire directories or repositories, ZTDA allows organizations to define sharing permissions at the file level, improving control.
 
 2.  ### **Minimized Attack Surface**
     
 
-- **Data Access Segmentation**: ZTDA limits users’ ability to access or share files only from authorized storage repositories. This segmentation prevents attackers from exploiting excessive access rights to move laterally within systems.
-        -   **Zero Standing Privileges**: Temporary, just-in-time permissions reduce persistent access risks, ensuring users and systems only have access during the time and for the task required.
+-   **Data Access Segmentation**: ZTDA limits users’ ability to access or share files only from authorized storage repositories. This segmentation prevents attackers from exploiting excessive access rights to move laterally within systems.
+-   **Zero Standing Privileges**: Temporary, just-in-time permissions reduce persistent access risks, ensuring users and systems only have access during the time and for the task required.
 
 3.  ### **Enhanced Data Security**
     
 
-- **End-to-End Encryption**: ZTDA ensures that data remains encrypted during transit, protecting sensitive information even during file sharing.
-        -   **Controlled Sharing**: By tightly controlling sharing options, ZTDA reduces the likelihood of data being shared with unauthorized external parties.
+-   **End-to-End Encryption**: ZTDA ensures that data remains encrypted during transit, protecting sensitive information even during file sharing.
+-   **Controlled Sharing**: By tightly controlling sharing options, ZTDA reduces the likelihood of data being shared with unauthorized external parties.
 
 4.  ### **Improved Monitoring and Auditing**
     
 
-- **Comprehensive Logs**: ZTDA generates detailed logs of who accessed or shared what, and from which repository. This facilitates compliance reporting and breach investigation.
-        -   **Behavioral Analytics**: ZTDA helps identify and respond to anomalous behavior indicative of potential security threats by continuously monitoring usage patterns and exporting to a SIEM.
+-   **Comprehensive Logs**: ZTDA generates detailed logs of who accessed or shared what, and from which repository. This facilitates compliance reporting and breach investigation.
+-   **Behavioral Analytics**: ZTDA helps identify and respond to anomalous behavior indicative of potential security threats by continuously monitoring usage patterns and exporting to a SIEM.
 
 5.  ### **Regulatory Compliance and Governance**
     
 
-- **Regulatory Alignment**: ZTDA aligns with frameworks like GDPR, CCPA, and HIPAA by enforcing stringent controls over data access and sharing.
-        -   **Policy Enforcement**: Organizations can enforce data governance policies.
+-   **Regulatory Alignment**: ZTDA aligns with frameworks like GDPR, CCPA, and HIPAA by enforcing stringent controls over data access and sharing.
+-   **Policy Enforcement**: Organizations can enforce data governance policies.
 
 6.  ### **User-Centric Design Without Sacrificing Security**
     
 
-- **Seamless User Experience**: Despite its robust security measures, ZTDA ensures a user-friendly interface that enables secure and efficient file sharing without unnecessary complexity.
-        -   **Controlled Collaboration**: Teams can collaborate while maintaining strict data access controls, fostering productivity without compromising security.
+-   **Seamless User Experience**: Despite its robust security measures, ZTDA ensures a user-friendly interface that enables secure and efficient file sharing without unnecessary complexity.
+-   **Controlled Collaboration**: Teams can collaborate while maintaining strict data access controls, fostering productivity without compromising security.
 
 <!-- table:table1 -->
 

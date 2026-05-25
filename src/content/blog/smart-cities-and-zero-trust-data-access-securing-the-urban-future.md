@@ -53,9 +53,9 @@ A smart city uses digital technologies and data-driven infrastructure to improve
 
 Unlike perimeter-based models that rely on VPNs or trust inside the network, ZTDA:
 
-- Requires authentication and authorization for every data interaction
-    -   Keeps data in place (no movement, syncing, or replication)
-    -   Applies least-privilege access, dynamically and in real time.
+-   Requires authentication and authorization for every data interaction
+-   Keeps data in place (no movement, syncing, or replication)
+-   Applies least-privilege access, dynamically and in real time.
 
 ## Benefits of Zero Trust Data Access for Smart Cities
 Zero Trust Data Access (ZTDA) brings powerful benefits to smart cities by transforming how data is secured, accessed, and governed across a complex, distributed urban ecosystem. Here’s how:

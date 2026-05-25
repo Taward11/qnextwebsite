@@ -85,10 +85,10 @@ By integrating ZTDA with ZTNA, organizations can establish a complete Zero Trust
 ## The Business Impact of a Combined ZTNA and ZTDA Zero Trust Strategy
 By combining **ZTNA and ZTDA**, organizations can significantly reduce risk and enhance security posture. This integrated approach ensures that even if network defenses are breached, **sensitive data remains protected through granular access controls and monitoring**. Benefits include:  
 
-- **Enhanced Insider Threat Protection:** Prevents unauthorized data movement by malicious insiders or compromised credentials.
-    -   **Compliance Simplification:** Ensures continuous enforcement of data security policies for regulatory standards.
-    -   **Improved Incident Response:** Enables visibility into data interactions to detect and mitigate breaches faster.
-    -   **Reduced Attack Surface:** Limits exposure of sensitive data, even within authorized applications.
+-   **Enhanced Insider Threat Protection:** Prevents unauthorized data movement by malicious insiders or compromised credentials.
+-   **Compliance Simplification:** Ensures continuous enforcement of data security policies for regulatory standards.
+-   **Improved Incident Response:** Enables visibility into data interactions to detect and mitigate breaches faster.
+-   **Reduced Attack Surface:** Limits exposure of sensitive data, even within authorized applications.
 
  
 

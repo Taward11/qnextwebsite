@@ -72,17 +72,17 @@ In this architecture, ZTAA is used to enforce policy-based segmentation and micr
 1.  ### **Enforces a Zero Trust Access Control Layer to eliminate direct access to SharePoint repositories**
     
 
-- By forcing all access to SharePoint through FileFlex, organizations can prevent both internal and external actors from connecting directly to vulnerable SharePoint endpoints. ZTAA enforces network segmentation policies that allow only the FileFlex connector to communicate with SharePoint repositories, closing off direct IP-level access. This effectively removes SharePoint from the exposed attack surface and contains potential threats within tightly defined microsegments, blocking lateral movement and unauthorized discovery.
+-   By forcing all access to SharePoint through FileFlex, organizations can prevent both internal and external actors from connecting directly to vulnerable SharePoint endpoints. ZTAA enforces network segmentation policies that allow only the FileFlex connector to communicate with SharePoint repositories, closing off direct IP-level access. This effectively removes SharePoint from the exposed attack surface and contains potential threats within tightly defined microsegments, blocking lateral movement and unauthorized discovery.
 
 2.  ### **Enforces least-privilege access and contextual authorization**
     
-    - FileFlex applies strict Zero Trust Data Access controls to each user session, granting access based on a combination of user identity and role. This ensures users receive only the minimum necessary access to data stored in SharePoint. Even if credentials are compromised, FileFlex blocks unauthorized or high-risk access attempts that fall outside defined policies, preventing privilege escalation and misuse of stolen accounts.
+    -   FileFlex applies strict Zero Trust Data Access controls to each user session, granting access based on a combination of user identity and role. This ensures users receive only the minimum necessary access to data stored in SharePoint. Even if credentials are compromised, FileFlex blocks unauthorized or high-risk access attempts that fall outside defined policies, preventing privilege escalation and misuse of stolen accounts.
 3.  ### **Monitors, logs, and audits all file activity in real time**
     
-    - Every file interaction—whether it involves accessing, sharing, editing, or downloading content—is tracked by FileFlex and logged. This visibility includes user identity, device used, and time stamps, providing a full audit trail. Unlike native SharePoint logs, which can be fragmented or insufficient, FileFlex delivers consolidated, real-time oversight that supports threat detection, incident response, and compliance requirements.
+    -   Every file interaction—whether it involves accessing, sharing, editing, or downloading content—is tracked by FileFlex and logged. This visibility includes user identity, device used, and time stamps, providing a full audit trail. Unlike native SharePoint logs, which can be fragmented or insufficient, FileFlex delivers consolidated, real-time oversight that supports threat detection, incident response, and compliance requirements.
 4.  ### **Extends Zero Trust to SharePoint and beyond**
     
-    - Because FileFlex is storage-agnostic, it provides the same security model not only for SharePoint but also for other file repositories such as file servers, NAS, and cloud storage. This unified control framework helps prevent inconsistent security practices across different platforms, reducing the risk of data sprawl and shadow IT. Organizations can apply uniform data governance policies across all unstructured data, regardless of where it resides.
+    -   Because FileFlex is storage-agnostic, it provides the same security model not only for SharePoint but also for other file repositories such as file servers, NAS, and cloud storage. This unified control framework helps prevent inconsistent security practices across different platforms, reducing the risk of data sprawl and shadow IT. Organizations can apply uniform data governance policies across all unstructured data, regardless of where it resides.
 
 5.  ### **Modernizes legacy SharePoint environments without data migration**
     

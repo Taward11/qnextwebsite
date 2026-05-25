@@ -53,22 +53,22 @@ Palo Alto’s ZTNA 2.0 and Zero Trust Data Access (ZTDA) as implemented by FileF
 1.  ### **Palo Alto ZTNA Secures Access to Applications — FileFlex ZTDA Secures Access to Unstructured Data**
     
 
-- Palo Alto’s ZTNA, delivered through Prisma Access, grants least-privilege access to applications based on user identity, device posture, and application context. Its primary focus is on controlling who can access which applications, not on the data within those applications or file shares. In contrast, FileFlex ZTDA enforces zero trust principles at the file and folder level, whether data resides on-premises or in the cloud. It governs how users interact with unstructured data—such as viewing, sharing, downloading, or editing—regardless of how they accessed the application. Together, this layered approach enhances security by adding file-level controls after app access is granted, helping to prevent data leakage, over-permissioning, and insider misuse.
+-   Palo Alto’s ZTNA, delivered through Prisma Access, grants least-privilege access to applications based on user identity, device posture, and application context. Its primary focus is on controlling who can access which applications, not on the data within those applications or file shares. In contrast, FileFlex ZTDA enforces zero trust principles at the file and folder level, whether data resides on-premises or in the cloud. It governs how users interact with unstructured data—such as viewing, sharing, downloading, or editing—regardless of how they accessed the application. Together, this layered approach enhances security by adding file-level controls after app access is granted, helping to prevent data leakage, over-permissioning, and insider misuse.
 
 2.  ### **Adds Granular Control Over Unstructured Data in File Shares, SharePoint, OneDrive, etc.**
     
 
-- Palo Alto’s ZTNA solution does not natively provide fine-grained access control or detailed auditing for unstructured data stored in environments like SharePoint, file servers, NAS, or hybrid storage systems. FileFlex ZTDA addresses this gap by enabling organizations to enforce granular file and folder-level permissions without the need to move or replicate data. It provides detailed file-level access logs, sharing controls, and anomaly detection, and allows users to create secure sharing links without duplicating data into cloud sync folders. This approach preserves Zero Trust principles in legacy and hybrid environments while avoiding the need to rearchitect existing storage infrastructure.
+-   Palo Alto’s ZTNA solution does not natively provide fine-grained access control or detailed auditing for unstructured data stored in environments like SharePoint, file servers, NAS, or hybrid storage systems. FileFlex ZTDA addresses this gap by enabling organizations to enforce granular file and folder-level permissions without the need to move or replicate data. It provides detailed file-level access logs, sharing controls, and anomaly detection, and allows users to create secure sharing links without duplicating data into cloud sync folders. This approach preserves Zero Trust principles in legacy and hybrid environments while avoiding the need to rearchitect existing storage infrastructure.
 
 3.  ### **Extends Visibility and Compliance to the Data Layer**
     
 
-- While Palo Alto Cortex can detect suspicious activity on endpoints and applications, it does not provide visibility into how files are shared, accessed, or copied across multiple storage silos. FileFlex ZTDA extends visibility and compliance to the data layer by offering comprehensive audit trails for every file access, share, and modification. It can detect anomalous file behavior, such as mass downloads or access during unusual hours, and supports compliance with regulations like NIST, CMMC, HIPAA, GDPR, and GLBA. This enhances security oversight at the content level, going beyond application and user activity to ensure data-centric visibility and governance.
+-   While Palo Alto Cortex can detect suspicious activity on endpoints and applications, it does not provide visibility into how files are shared, accessed, or copied across multiple storage silos. FileFlex ZTDA extends visibility and compliance to the data layer by offering comprehensive audit trails for every file access, share, and modification. It can detect anomalous file behavior, such as mass downloads or access during unusual hours, and supports compliance with regulations like NIST, CMMC, HIPAA, GDPR, and GLBA. This enhances security oversight at the content level, going beyond application and user activity to ensure data-centric visibility and governance.
 
 4.  ### **Complements ZTNA with Zero Trust _Data_ Segmentation and Just-In-Time Access**
     
 
-- Palo Alto’s NGFW and Prisma Access focus on network and application segmentation to limit access based on users, devices, and applications. FileFlex ZTDA complements this by providing data-level segmentation, enabling just-in-time access and enforcing policy-based permissions at the file and folder level. This layered approach strengthens Zero Trust by ensuring that even if credentials are compromised, access to sensitive data remains tightly controlled. As a result, the risk of lateral movement and data exfiltration is significantly reduced.
+-   Palo Alto’s NGFW and Prisma Access focus on network and application segmentation to limit access based on users, devices, and applications. FileFlex ZTDA complements this by providing data-level segmentation, enabling just-in-time access and enforcing policy-based permissions at the file and folder level. This layered approach strengthens Zero Trust by ensuring that even if credentials are compromised, access to sensitive data remains tightly controlled. As a result, the risk of lateral movement and data exfiltration is significantly reduced.
 
 <!-- table:table1 -->
 
@@ -84,37 +84,37 @@ Here are the top reasons organizations should add FileFlex ZTDA to Palo Alto (Pr
 1.  ### **Extends Zero Trust Constraints to the Data Layer**
     
 
-- ![Palo Alto ZTNA tells you who can get in. FileFlex ZTDA tells you what they can do with the data once they're in.](/images/blog/top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity/Palo-Alto-quote2.webp) While Palo Alto ZTNA and NGFWs enforce micro‑segmentation and least‑privilege at the network and application layers, FileFlex ZTDA enforces file‑ and folder‑level access controls, ensuring policies like view-only, share, download, or edit are applied per user, even across hybrid storage. This brings Zero Trust to unstructured data where Palo Alto lacks native control.
+-   ![Palo Alto ZTNA tells you who can get in. FileFlex ZTDA tells you what they can do with the data once they're in.](/images/blog/top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity/Palo-Alto-quote2.webp) While Palo Alto ZTNA and NGFWs enforce micro‑segmentation and least‑privilege at the network and application layers, FileFlex ZTDA enforces file‑ and folder‑level access controls, ensuring policies like view-only, share, download, or edit are applied per user, even across hybrid storage. This brings Zero Trust to unstructured data where Palo Alto lacks native control.
 
 2.  ### **Centralized Policy Enforcement and Real-Time Access Decisions**
     
 
-- FileFlex ZTDA relies on a central policy server, which ensures every file access request is evaluated against approved rules before granting access. This common “single source of truth” provides consistent, real-time decisioning and supports dynamic changes (e.g. change a user’s permissions mid-session) without requiring data migration or network reconfiguration.
+-   FileFlex ZTDA relies on a central policy server, which ensures every file access request is evaluated against approved rules before granting access. This common “single source of truth” provides consistent, real-time decisioning and supports dynamic changes (e.g. change a user’s permissions mid-session) without requiring data migration or network reconfiguration.
 
 3.  ### **Comprehensive Audit Trail & Anomaly Detection**
     
 
-- Cortex and Prisma Access detect network/app-layer behavior, but don’t log detailed file‑level activity across multiple storage systems. FileFlex adds full audit logging of every file access, share, or modification, and anomaly detection (e.g. mass downloads, off‑hours access), improving visibility for security operations and compliance.
+-   Cortex and Prisma Access detect network/app-layer behavior, but don’t log detailed file‑level activity across multiple storage systems. FileFlex adds full audit logging of every file access, share, or modification, and anomaly detection (e.g. mass downloads, off‑hours access), improving visibility for security operations and compliance.
 
 4.  ### **Mitigates Ransomware, Insider Threats & Data Breaches**
     
 
-- Integrating FileFlex ZTDA ensures that only authenticated, authorized requests through the policy server can access sensitive data, eliminating direct access to storage infrastructure. This reduces risk from ransomware, credential compromise, or insider misuse—even when network access is granted via ZTNA or segmentation—and creates additional protection for modern threats. 
+-   Integrating FileFlex ZTDA ensures that only authenticated, authorized requests through the policy server can access sensitive data, eliminating direct access to storage infrastructure. This reduces risk from ransomware, credential compromise, or insider misuse—even when network access is granted via ZTNA or segmentation—and creates additional protection for modern threats. 
 
 5.  ### **Enables Secure, File-Level Access Without Data Duplication**
     
 
-- FileFlex allows users to securely access and share files from on‑prem, NAS, SharePoint, OneDrive, etc., without moving or syncing data to the cloud. Secure links, federated storage access, and just‑in‑time access minimize shadow IT and preserve data residency/security posture.
+-   FileFlex allows users to securely access and share files from on‑prem, NAS, SharePoint, OneDrive, etc., without moving or syncing data to the cloud. Secure links, federated storage access, and just‑in‑time access minimize shadow IT and preserve data residency/security posture.
 
 6.  ### **Supports Compliance & Regulatory Requirements**
     
 
-- The granular access control, centralized policy enforcement, and detailed audit capability support compliance with HIPAA, GDPR, NIST/CMMC, GLBA, ISO 27001, and other regulations. FileFlex ZTDA makes it easier to demonstrate adherence to data access controls and user accountability in regulated environments.
+-   The granular access control, centralized policy enforcement, and detailed audit capability support compliance with HIPAA, GDPR, NIST/CMMC, GLBA, ISO 27001, and other regulations. FileFlex ZTDA makes it easier to demonstrate adherence to data access controls and user accountability in regulated environments.
 
 ### Combined Value with Palo Alto Platforms
-- Palo Alto ZTNA, NGFWs, and Cortex enforce who can access which applications, and detect anomalies at the app, network, and endpoint levels.
-        -   FileFlex ZTDA ensures what that user can do with data, logging and enforcing access at the file level and preventing misuse or exfiltration.
-        -   Together, they deliver a complete Zero Trust architecture: network/app-level segmentation, risk-based access, and robust data-layer enforcement and visibility
+-   Palo Alto ZTNA, NGFWs, and Cortex enforce who can access which applications, and detect anomalies at the app, network, and endpoint levels.
+-   FileFlex ZTDA ensures what that user can do with data, logging and enforcing access at the file level and preventing misuse or exfiltration.
+-   Together, they deliver a complete Zero Trust architecture: network/app-level segmentation, risk-based access, and robust data-layer enforcement and visibility
 
 ## Conclusion: Complete the Zero Trust Picture by Securing the Data Layer
 While Palo Alto Networks provides powerful tools for securing applications, users, and networks under its ZTNA 2.0 and SASE frameworks, it does not natively address the unique risks tied to unstructured data across file shares, SharePoint, OneDrive, and hybrid storage environments. By adding FileFlex Enterprise, organizations can extend Zero Trust to the data layer—enforcing granular permissions, monitoring every file interaction, and ensuring that security and compliance policies are applied consistently, regardless of where data resides or how it’s accessed. Together, Palo Alto and FileFlex deliver a more complete Zero Trust architecture that protects not just the perimeter, but the data itself.

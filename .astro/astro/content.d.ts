@@ -155,6 +155,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"advantages-of-zero-trust-virtual-data-rooms-for-banks-and-credit-unions.md": {
+	id: "advantages-of-zero-trust-virtual-data-rooms-for-banks-and-credit-unions.md";
+  slug: "advantages-of-zero-trust-virtual-data-rooms-for-banks-and-credit-unions";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "ai-driven-cybercrime-at-zettabyte-scale.md": {
 	id: "ai-driven-cybercrime-at-zettabyte-scale.md";
   slug: "ai-driven-cybercrime-at-zettabyte-scale";
@@ -239,6 +246,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"meeting-ffiec-guidelines-using-zero-trust-data-access.md": {
+	id: "meeting-ffiec-guidelines-using-zero-trust-data-access.md";
+  slug: "meeting-ffiec-guidelines-using-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "modernize-on-premises-storage-with-zero-trust-data-access.md": {
 	id: "modernize-on-premises-storage-with-zero-trust-data-access.md";
   slug: "modernize-on-premises-storage-with-zero-trust-data-access";
@@ -270,6 +284,27 @@ declare module 'astro:content' {
 "smart-cities-and-zero-trust-data-access-securing-the-urban-future.md": {
 	id: "smart-cities-and-zero-trust-data-access-securing-the-urban-future.md";
   slug: "smart-cities-and-zero-trust-data-access-securing-the-urban-future";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"strengthening-credit-union-cybersecurity-through-zero-trust-data-access.md": {
+	id: "strengthening-credit-union-cybersecurity-through-zero-trust-data-access.md";
+  slug: "strengthening-credit-union-cybersecurity-through-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"strengthening-glba-compliance-with-zero-trust-data-access.md": {
+	id: "strengthening-glba-compliance-with-zero-trust-data-access.md";
+  slug: "strengthening-glba-compliance-with-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"supporting-financial-services-cybersecurity-through-zero-trust-data-access.md": {
+	id: "supporting-financial-services-cybersecurity-through-zero-trust-data-access.md";
+  slug: "supporting-financial-services-cybersecurity-through-zero-trust-data-access";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -323,9 +358,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"top-8-reasons-your-organization-needs-zero-trust-activity-tracking.md": {
+	id: "top-8-reasons-your-organization-needs-zero-trust-activity-tracking.md";
+  slug: "top-8-reasons-your-organization-needs-zero-trust-activity-tracking";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity.md": {
 	id: "top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity.md";
   slug: "top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"upholding-cybersecurity-for-architects-through-zero-trust-data-access.md": {
+	id: "upholding-cybersecurity-for-architects-through-zero-trust-data-access.md";
+  slug: "upholding-cybersecurity-for-architects-through-zero-trust-data-access";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -354,6 +403,13 @@ declare module 'astro:content' {
 "why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access.md": {
 	id: "why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access.md";
   slug: "why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"why-zero-trust-data-access-user-management-is-crucial-for-it.md": {
+	id: "why-zero-trust-data-access-user-management-is-crucial-for-it.md";
+  slug: "why-zero-trust-data-access-user-management-is-crucial-for-it";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

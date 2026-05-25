@@ -59,6 +59,12 @@ WP posts already contain inline "Learn More About FileFlex" / "Sign Up for a Fre
 
 If `headers` or `rows` come out empty, emit `headers: []` / `rows: []` explicitly — `headers:\n` with nothing after is parsed as `null` and fails the Astro content collection's `z.array()` schema. (In this migration, empty arrays only occurred as a symptom of the wpdt row-deletion bug; fixing that bug eliminated the case. But the guardrail is worth keeping.)
 
+## Collapse single-child list nesting BEFORE turndown, or get `1.  1.  -   -` cumulative prefixes
+
+WP/Visual Composer often emits `<ol><li><ol><li>text</li></ol></li></ol>` (or `<ol><li><a id></a><ol>...`) where each outer level holds exactly one child — usually just a TOC anchor. Turndown faithfully renders this as `1.  1.  text` (or deeper: `1.  1.  -   -   text`), which breaks rendering and TOC generation.
+
+**How to apply:** in `cleanBody($)` before turndown, iterate `ol, ul` and for any list with a single `<li>` whose only meaningful child is another list, replace the outer list with the inner list. "Meaningful" must ignore empty `<a id>` anchors (WP TOC pattern) and whitespace text. Loop several passes until stable, because chains go 2–5 levels deep. As a side benefit this also cleans up previously-rendered legacy posts on re-run (line counts stay identical → pure structural fix, no content loss).
+
 ## build.cjs regenerates every slug in META, overwriting prior manual edits
 
 The loop at the bottom iterates `Object.keys(META)` and rewrites every output file. Any hand-tuning done to a previously-migrated `.md` (full-width image classes, flattened lists, centered captions, structured tables converted from screenshots, etc.) is silently clobbered the next time you add a new slug and re-run.
