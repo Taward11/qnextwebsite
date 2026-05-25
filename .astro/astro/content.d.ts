@@ -141,9 +141,23 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"ai-driven-cybercrime-at-zettabyte-scale.md": {
+	id: "ai-driven-cybercrime-at-zettabyte-scale.md";
+  slug: "ai-driven-cybercrime-at-zettabyte-scale";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "federated-hybrid-access-why-modern-organizations-cant-afford-to-ignore-it.md": {
 	id: "federated-hybrid-access-why-modern-organizations-cant-afford-to-ignore-it.md";
   slug: "federated-hybrid-access-why-modern-organizations-cant-afford-to-ignore-it";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"why-data-is-now-the-real-target.md": {
+	id: "why-data-is-now-the-real-target.md";
+  slug: "why-data-is-now-the-real-target";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
