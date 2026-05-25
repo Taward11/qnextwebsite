@@ -61,7 +61,7 @@ At the same time, regulatory compliance pressures intensify, as meeting requirem
 
 Zero Trust is widely recognized as a best practice: verify every user, device, and session; apply least privilege; enforce just-in-time access. But most implementations stop at identity, network, or application layers. The result is the Zero Trust Data Gap: even when everything else is secure, files themselves remain unprotected—vulnerable to insider misuse, ransomware, and misconfiguration.
 
-![Hybrid Storage Infrastructure](/images/blog/federated-hybrid-access/HYBRID_IT-2022q4-v2.webp)
+![Diagram of hybrid IT storage spanning on-premises file servers, NAS, cloud storage, and endpoint devices](/images/blog/federated-hybrid-access/HYBRID_IT-2022q4-v2.webp)
 
 ## FileFlex Enterprise: Extending Zero Trust to the Data Layer
 
