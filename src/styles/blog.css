@@ -227,7 +227,8 @@
 /* Quote-style call-outs and inline infographics: float right, text wraps. */
 .blog-prose img[src*="quote"],
 .blog-prose img[src*="Quote"],
-.blog-prose img[src*="infographic"] {
+.blog-prose img[src*="infographic"],
+.blog-prose img[src*="Infographic"] {
   float: right;
   max-width: 42%;
   margin: 6px 0 16px 24px;
@@ -235,18 +236,34 @@
 }
 .blog-prose p:has(> img[src*="quote"]),
 .blog-prose p:has(> img[src*="Quote"]),
-.blog-prose p:has(> img[src*="infographic"]) {
+.blog-prose p:has(> img[src*="infographic"]),
+.blog-prose p:has(> img[src*="Infographic"]) {
   margin: 0;
 }
 
 @media (max-width: 640px) {
   .blog-prose img[src*="quote"],
   .blog-prose img[src*="Quote"],
-  .blog-prose img[src*="infographic"] {
+  .blog-prose img[src*="infographic"],
+  .blog-prose img[src*="Infographic"] {
     float: none;
     max-width: 100%;
     margin: 20px auto;
   }
+}
+
+/* TL;DR / lede summary paragraph rendered above the post body. */
+.blog-prose .post-lede {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: #1a1a1a;
+  margin: 0 0 32px;
+  padding: 0 8%;
+}
+@media (max-width: 640px) {
+  .blog-prose .post-lede { padding: 0; font-size: 1rem; }
 }
 .blog-prose blockquote {
   border-left: 4px solid #0080ed;

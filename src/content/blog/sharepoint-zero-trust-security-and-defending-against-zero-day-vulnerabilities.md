@@ -1,8 +1,8 @@
 ---
 title: "SharePoint Under Siege: Why Zero Trust Access Is Now Critical"
 seoTitle: "SharePoint Zero Trust Security and Zero-Day Defense"
-description: "Learn how SharePoint zero trust security with FileFlex and ZTAA stops zero-day attacks, enforces access controls, and protects sensitive data."
-excerpt: "Learn how SharePoint zero trust security with FileFlex and ZTAA stops zero-day attacks, enforces access controls, and protects sensitive data."
+description: "SharePoint zero trust security is critical for defending against zero-day vulnerabilities and access control weaknesses. By combining FileFlex with a Zero Trust Application Access solution like Illumio, organizations can eliminate direct exposure, enforce granular access, and secure SharePoint without replacing it."
+excerpt: "SharePoint zero trust security is critical for defending against zero-day vulnerabilities and access control weaknesses. By combining FileFlex with a Zero Trust Application Access solution like Illumio, organizations can eliminate direct exposure, enforce granular access, and secure SharePoint without replacing it."
 date: 2025-07-24
 modified: 2025-07-24
 author: "Tom Ward"
@@ -48,15 +48,13 @@ tables:
       - ["Attack pivot across connected storage", "Unified governance of all file access"]
 ---
 
-**_SharePoint zero trust security is critical for defending against zero-day vulnerabilities and access control weaknesses. By combining FileFlex with a Zero Trust Application Access solution like Illumio, organizations can eliminate direct exposure, enforce granular access, and secure SharePoint without replacing it._**
+<p class="post-lede">SharePoint zero trust security is critical for defending against zero-day vulnerabilities and access control weaknesses. By combining FileFlex with a Zero Trust Application Access solution like Illumio, organizations can eliminate direct exposure, enforce granular access, and secure SharePoint without replacing it.</p>
 
 ## Introduction: SharePoint Zero Trust Security to Defend Against Zero-Day Vulnerabilities
 ![The Shadowserver Foundation said it has confirmed more than 300 victims, citing data compiled with Eye Security and NIVD and more than 10,700 SharePoint instances remain exposed\*](/images/blog/sharepoint-zero-trust-security-and-defending-against-zero-day-vulnerabilities/sharepoint-security-infographic.webp) As organizations continue to rely on Microsoft SharePoint to manage unstructured data and collaborate across teams, recent revelations about actively exploited zero-day vulnerabilities have exposed significant gaps in traditional security models. With hundreds of systems compromised, including the National Nuclear Security Administration (NNSA), National Institutes of Health (NIH), and the Department of Energy (DOE), and more than 10,000 servers still at risk, it’s clear that native controls alone are no longer sufficient to protect enterprise environments. This article examines how these vulnerabilities are being exploited, what they reveal about inherent weaknesses in SharePoint architecture, and how a Zero Trust overlay—combining FileFlex Enterprise with a Zero Trust Application Access (ZTAA) solution like Illumio—can provide the layered security needed to mitigate these threats and future-proof SharePoint environments.  
 
 ## Critical zero-day vulnerability campaign hits Microsoft SharePoint
-A critical zero-day vulnerability campaign targeting Microsoft SharePoint, known as _ToolShell_, is actively exploiting two new flaws—CVE-2025-53770 (remote code execution) and CVE-2025-53771 (authentication bypass)—to compromise on-premises SharePoint servers worldwide. Linked to Chinese state-affiliated threat groups like Linen Typhoon and Storm-2603, the campaign has affected hundreds of systems across government, healthcare, energy, and education sectors, with over 10,000 servers still exposed.
-
-![SharePoint zero trust security is critical for defending against zero-day vulnerabilities and access control weaknesses](/images/blog/sharepoint-zero-trust-security-and-defending-against-zero-day-vulnerabilities/Sharepoint-quote1-1.webp)
+A critical zero-day vulnerability campaign targeting Microsoft SharePoint, known as _ToolShell_, is actively exploiting two new flaws—CVE-2025-53770 (remote code execution) and CVE-2025-53771 (authentication bypass)—to compromise on-premises SharePoint servers worldwide. Linked to Chinese state-affiliated threat groups like Linen Typhoon and Storm-2603, the campaign has affected hundreds of systems across government, healthcare, energy, and education sectors, with over 10,000 servers still exposed.![SharePoint zero trust security is critical for defending against zero-day vulnerabilities and access control weaknesses](/images/blog/sharepoint-zero-trust-security-and-defending-against-zero-day-vulnerabilities/Sharepoint-quote1-1.webp)
 
 This SharePoint vulnerability campaign directly relates to improper authentication, access control bypass, and catalog exploitation, exposing critical risks in enterprise environments. Specifically, CVE-2025-53771 allows attackers to spoof authentication and bypass access controls, enabling unauthorized access to SharePoint sites without valid credentials. Once inside, CVE-2025-53770 facilitates remote code execution through insecure deserialization, letting attackers deploy webshells and take full control of servers. The attackers then exploit internal SharePoint catalogs (such as ToolPane.aspx) to escalate privileges, move laterally, and plant persistent backdoors. These flaws highlight how SharePoint’s complex permissions model and public-facing architecture can become high-risk attack surfaces when not properly segmented or monitored.
 

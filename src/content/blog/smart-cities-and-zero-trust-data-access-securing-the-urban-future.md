@@ -1,8 +1,8 @@
 ---
 title: "Smart Cities and Zero Trust Data Access: Securing the Urban Future"
 seoTitle: "Smart Cities and Zero Trust Data Access"
-description: "Discover how smart cities can use Zero Trust Data Access to secure data, reduce risk, and enable collaboration without VPNs or file migration."
-excerpt: "Discover how smart cities can use Zero Trust Data Access to secure data, reduce risk, and enable collaboration without VPNs or file migration."
+description: "Smart Cities and Zero Trust Data Access go hand in hand to ensure secure, compliant, and efficient use of distributed data. By eliminating risky tools like VPNs, mapped drives, and file syncing, Zero Trust Data Access enables verified, policy-based access to data without moving or duplicating it, allowing smart cities to securely modernize infrastructure, protect sensitive services, and enable real-time collaboration—building a trusted foundation for digital transformation."
+excerpt: "Smart Cities and Zero Trust Data Access go hand in hand to ensure secure, compliant, and efficient use of distributed data. By eliminating risky tools like VPNs, mapped drives, and file syncing, Zero Trust Data Access enables verified, policy-based access to data without moving or duplicating it, allowing smart cities to securely modernize infrastructure, protect sensitive services, and enable real-time collaboration—building a trusted foundation for digital transformation."
 date: 2025-07-14
 modified: 2025-07-14
 author: "Tom Ward"
@@ -40,7 +40,7 @@ tables:
       - ["Full Visibility and Governance", "Provides detailed logs and monitoring to maintain transparency and accountability"]
 ---
 
-**Smart Cities and Zero Trust Data Access go hand in hand to ensure secure, compliant, and efficient use of distributed data. By eliminating risky tools like VPNs, mapped drives, and file syncing, Zero Trust Data Access enables verified, policy-based access to data without moving or duplicating it, allowing smart cities to securely modernize infrastructure, protect sensitive services, and enable real-time collaboration—building a trusted foundation for digital transformation.**
+<p class="post-lede">Smart Cities and Zero Trust Data Access go hand in hand to ensure secure, compliant, and efficient use of distributed data. By eliminating risky tools like VPNs, mapped drives, and file syncing, Zero Trust Data Access enables verified, policy-based access to data without moving or duplicating it, allowing smart cities to securely modernize infrastructure, protect sensitive services, and enable real-time collaboration—building a trusted foundation for digital transformation.</p>
 
 ## Introduction
 ![95% of advanced smart cities include cybersecurity from the earliest design phase\*](/images/blog/smart-cities-and-zero-trust-data-access-securing-the-urban-future/smart-city-infographic.webp) As cities evolve into digital ecosystems, the data powering them becomes as critical as roads, water, or electricity. But smart cities face growing cybersecurity threats, complex infrastructure, and regulatory pressure to protect that data. The solution? Zero Trust Data Access (ZTDA)—a security model designed for today’s decentralized, hyper-connected world.

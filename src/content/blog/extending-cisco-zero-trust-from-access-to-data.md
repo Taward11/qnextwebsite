@@ -1,8 +1,8 @@
 ---
 title: "Extending Cisco Zero Trust from Access to Data"
 seoTitle: "Extending Cisco Zero Trust from Access to Data"
-description: "Extend Cisco Zero Trust with FileFlex to secure data access, enforce granular policies, and protect files across hybrid environments."
-excerpt: "Extend Cisco Zero Trust with FileFlex to secure data access, enforce granular policies, and protect files across hybrid environments."
+description: "Cisco zero trust data access is strengthened by FileFlex, which extends security to the data layer by enforcing continuous, granular file- and folder-level policies across on-premises, cloud, and hybrid environments."
+excerpt: "Cisco zero trust data access is strengthened by FileFlex, which extends security to the data layer by enforcing continuous, granular file- and folder-level policies across on-premises, cloud, and hybrid environments."
 date: 2025-09-03
 modified: 2025-09-03
 author: "Tom Ward"
@@ -40,7 +40,7 @@ tables:
       - ["Talos threat intelligence strengthens detection", "Detects/responds to suspicious data activity", "Enhances Cisco’s ecosystem-wide detection with data-centric visibility"]
 ---
 
-_Cisco zero trust data access is strengthened by FileFlex, which extends security to the data layer by enforcing continuous, granular file- and folder-level policies across on-premises, cloud, and hybrid environments._
+<p class="post-lede">Cisco zero trust data access is strengthened by FileFlex, which extends security to the data layer by enforcing continuous, granular file- and folder-level policies across on-premises, cloud, and hybrid environments.</p>
 
 ## Introduction: Why Data-Centric Security is Critical
 ![According to Cisco's 2024 Cybersecurity Readiness Index, only 3% of organizations globally are assessed as having a "Mature" level of cybersecurity readiness.\*](/images/blog/extending-cisco-zero-trust-from-access-to-data/Cisco-infographic.webp) In today’s complex cybersecurity landscape, organizations increasingly rely on Cisco for its industry-leading networking and security solutions. Cisco’s Universal Zero Trust Network Access (ZTNA) secures all users, devices, and applications across on-premises, cloud, and hybrid environments, providing an identity-first foundation with continuous verification and adaptive access policies. Its broader security portfolio—including Umbrella, Secure Firewall, XDR, and Talos threat intelligence—further protects endpoints, networks, and applications.

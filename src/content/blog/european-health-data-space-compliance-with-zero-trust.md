@@ -1,8 +1,8 @@
 ---
 title: "European Health Data Space Compliance with Zero Trust"
 seoTitle: "European Health Data Space Compliance with Zero Trust"
-description: "Learn how Zero Trust Data Access supports European Health Data Space compliance for secure, cross-border health data use and governance."
-excerpt: "Learn how Zero Trust Data Access supports European Health Data Space compliance for secure, cross-border health data use and governance."
+description: "European Health Data Space compliance requires secure, auditable, and least-privilege access to health data, starting in 2029. Zero Trust Data Access enables organizations to meet these requirements while ensuring GDPR alignment and protecting sensitive health information."
+excerpt: "European Health Data Space compliance requires secure, auditable, and least-privilege access to health data, starting in 2029. Zero Trust Data Access enables organizations to meet these requirements while ensuring GDPR alignment and protecting sensitive health information."
 date: 2025-07-04
 modified: 2025-07-04
 author: "Tom Ward"
@@ -36,7 +36,8 @@ tables:
       - ["By 2034", "Secondary use of data extended to entities outside the EU."]
 ---
 
-_**European Health Data Space compliance requires secure, auditable, and least-privilege access to health data, starting in 2029. Zero Trust Data Access enables organizations to meet these requirements while ensuring GDPR alignment and protecting sensitive health information.**_
+<p class="post-lede">European Health Data Space compliance requires secure, auditable, and least-privilege access to health data, starting in 2029. Zero Trust Data Access enables organizations to meet these requirements while ensuring GDPR alignment and protecting sensitive health information.</p>
+
 ![European Health Data Space Compliance: Fines up to €20 million or 4 % of global turnover for non-compliance (akin to GDPR penalties) ](/images/blog/european-health-data-space-compliance-with-zero-trust/European-Health-Data-Space-Compliance-infographic.webp) The European Health Data Space (EHDS) is one of the EU’s most ambitious digital health initiatives—designed to improve patient outcomes, enable secure data exchange across borders, and drive innovation through the responsible reuse of health data. But as this sweeping regulation moves forward, organizations must prepare now to meet the complex requirements of European Health Data Space compliance.
 
 In this blog, we’ll explore what EHDS is, its implementation timeline, and how Zero Trust Data Access (ZTDA) can play a crucial role in helping organizations comply with its data protection and governance standards.  

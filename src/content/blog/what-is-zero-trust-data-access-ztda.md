@@ -1,8 +1,8 @@
 ---
 title: "What is Zero Trust Data Access (ZTDA)?"
 seoTitle: "What is Zero Trust Data Access (ZTDA)?"
-description: "Zero Trust Data Access (ZTDA) is a security model that provides secure access to files to authorized users in a zero-trust environment."
-excerpt: "Zero Trust Data Access (ZTDA) is a security model that provides secure access to files to authorized users in a zero-trust environment."
+description: "Zero Trust Data Access (ZTDA) is a security model that provides secure access to files and folders for authorized users in a zero-trust environment."
+excerpt: "Zero Trust Data Access (ZTDA) is a security model that provides secure access to files and folders for authorized users in a zero-trust environment."
 date: 2025-06-09
 modified: 2025-06-09
 author: "Tom Ward"
@@ -26,7 +26,7 @@ faq:
     a: "Yes, FileFlex Enterprise delivers ZTDA by enabling remote, file-level access with granular permissions, continuous authentication, and full auditability—without requiring data replication or relocation."
 ---
 
-**Zero Trust Data Access (ZTDA) is a security model that provides secure access to files and folders for authorized users in a zero-trust environment.**
+<p class="post-lede">Zero Trust Data Access (ZTDA) is a security model that provides secure access to files and folders for authorized users in a zero-trust environment.</p>
 
 ![97% of organizations are in process or planning a zero trust initiative](/images/blog/what-is-zero-trust-data-access-ztda/zero-trust-initiative-infographic-small.webp)
 

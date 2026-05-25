@@ -1,8 +1,8 @@
 ---
 title: "HIPAA Compliant File Sharing with Zero Trust: How to Secure PHI"
 seoTitle: "HIPAA Compliant File Sharing with Zero Trust"
-description: "Learn how HIPAA-compliant file sharing works and how Zero Trust Data Access protects PHI with secure, compliant file access and sharing."
-excerpt: "Learn how HIPAA-compliant file sharing works and how Zero Trust Data Access protects PHI with secure, compliant file access and sharing."
+description: "HIPAA-compliant file sharing means adopting a robust security framework like Zero Trust Data Access (ZTDA) for guarding Protected Health Information (PHI) and complying with regulations."
+excerpt: "HIPAA-compliant file sharing means adopting a robust security framework like Zero Trust Data Access (ZTDA) for guarding Protected Health Information (PHI) and complying with regulations."
 date: 2025-06-10
 modified: 2025-06-10
 author: "Tom Ward"
@@ -27,7 +27,7 @@ faq:
     a: "Yes, FileFlex supports HIPAA compliance by enabling secure file access and sharing through a Zero Trust Data Access architecture. It protects PHI with encryption, granular access controls, continuous authentication, and a system that keeps data in place—helping healthcare organizations meet HIPAA’s security and privacy requirements."
 ---
 
-**HIPAA-compliant file sharing means adopting a robust security framework like Zero Trust Data Access (ZTDA) for guarding Protected Health Information (PHI) and complying with regulations.**
+<p class="post-lede">HIPAA-compliant file sharing means adopting a robust security framework like Zero Trust Data Access (ZTDA) for guarding Protected Health Information (PHI) and complying with regulations.</p>
 
 ## Empowering Healthcare Security with HIPAA-Compliant File Sharing
 ![HIPAA-compliant file sharing with Zero Trust access](/images/blog/hippa-compliant-file-sharing/healthcare-cyber-breach-infographic.webp) Healthcare organizations face unique challenges when it comes to guarding protected health information (PHI) and implementing HIPAA-compliant file sharing.  With the increasing complexity of healthcare systems and the need for collaboration among multiple providers, it’s crucial to adopt a robust framework that protects patient privacy and complies with regulatory standards such as HIPAA. Zero Trust Data Access (ZTDA) offers healthcare organizations a powerful ability to address these challenges. In this article, we will delve into the benefits and features of ZTDA and why it is an essential tool for healthcare organizations.

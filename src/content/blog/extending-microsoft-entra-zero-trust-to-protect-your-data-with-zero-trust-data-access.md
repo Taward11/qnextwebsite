@@ -1,8 +1,8 @@
 ---
 title: "Extending Microsoft Entra Zero Trust to Protect Your Data with Zero Trust Data Access"
 seoTitle: "Extending Microsoft Entra to Protect Your Data"
-description: "Extend Microsoft Entra with FileFlex ZTDA to secure data, unify policies, and close Zero Trust gaps across hybrid storage."
-excerpt: "Extend Microsoft Entra with FileFlex ZTDA to secure data, unify policies, and close Zero Trust gaps across hybrid storage."
+description: "Microsoft Entra when combined with Active Directory delivers strong controls for identities, apps, and networks — but it stops short of protecting the data itself. FileFlex Zero Trust Data Access (ZTDA) fills this gap by enforcing file-level security, auditing every access, and extending Microsoft’s model to both Microsoft and non-Microsoft storage across hybrid environments. Together, they deliver complete Zero Trust coverage from identity to data."
+excerpt: "Microsoft Entra when combined with Active Directory delivers strong controls for identities, apps, and networks — but it stops short of protecting the data itself. FileFlex Zero Trust Data Access (ZTDA) fills this gap by enforcing file-level security, auditing every access, and extending Microsoft’s model to both Microsoft and non-Microsoft storage across hybrid environments. Together, they deliver complete Zero Trust coverage from identity to data."
 date: 2025-08-15
 modified: 2025-08-15
 author: "Tom Ward"
@@ -53,7 +53,7 @@ tables:
       - ["Complements Microsoft Ecosystem Without Disrupting It", "Doesn’t extend Zero Trust to non-Microsoft or cross-cloud storage.", "Works with Microsoft storage (SharePoint, OneDrive, Azure) and non-Microsoft under one posture.", "Enhances existing investments without rip-and-replace."]
 ---
 
-**_Microsoft Entra when combined with Active Directory delivers strong controls for identities, apps, and networks — but it stops short of protecting the data itself. FileFlex Zero Trust Data Access (ZTDA) fills this gap by enforcing file-level security, auditing every access, and extending Microsoft’s model to both Microsoft and non-Microsoft storage across hybrid environments. Together, they deliver complete Zero Trust coverage from identity to data._**
+<p class="post-lede">Microsoft Entra when combined with Active Directory delivers strong controls for identities, apps, and networks — but it stops short of protecting the data itself. FileFlex Zero Trust Data Access (ZTDA) fills this gap by enforcing file-level security, auditing every access, and extending Microsoft’s model to both Microsoft and non-Microsoft storage across hybrid environments. Together, they deliver complete Zero Trust coverage from identity to data.</p>
 
 ## Introduction: Closing the Data Gap in Your Microsoft Entra Strategy
 ![Over 800,000 organizations rely on Microsoft Entra for identity and access management\*](/images/blog/extending-microsoft-entra-zero-trust-to-protect-your-data-with-zero-trust-data-access/Microsoft-Entra-Infographic.webp) As organizations adopt Microsoft Entra and Microsoft Active Directory to secure identities, applications, and networks, they gain robust Zero Trust controls for authentication and access—but a critical gap remains: the data itself. While Entra and Active Directory protect who can log in and what apps or network resources they can reach, they don’t fully govern how users interact with files and folders once inside the system. FileFlex Zero Trust Data Access (ZTDA) fills this gap by extending Zero Trust principles to the data layer, providing continuous, granular control, monitoring, and auditability across both Microsoft and non-Microsoft storage environments. This ensures that sensitive information is protected from insider threats, compromised accounts, ransomware, and unauthorized sharing—without disrupting existing infrastructure.  
