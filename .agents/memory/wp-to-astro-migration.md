@@ -35,6 +35,14 @@ WordPress posts often place an inline image inside `<h2>` to float it next to th
 
 After image lift-out and TOC/widget removal, a `<h2>` may end up with whitespace-only content. Regex `body.replace(/^#{1,6}\s*$/gm, '')` after the turndown pass removes them.
 
+## Hero-image strip must check text nodes, not just element children
+
+When the source places the featured image inline with body text (`<p><picture>…</picture>In today's rapidly evolving…</p>`), the hero-removal logic must NOT remove the parent `<p>` based on `p.children().length === 1` alone — `children()` is element-only and ignores text nodes, so the entire paragraph (including the body copy) gets nuked silently.
+
+**How to apply:** Guard the `p.remove()` branch with `p.text().trim().length === 0`. When text is present, fall back to removing just the `<picture>` wrapper (or the bare `<img>`) so the surrounding copy survives.
+
+**Why:** First paragraph of a section silently vanishing is invisible in the build output — only spotted by reading the rendered post against the source.
+
 ## CTA dedup
 
 WP posts already contain inline "Learn More About FileFlex" / "Sign Up for a Free Trial" CTAs. If the script appends its own canonical CTA at the end, filter those existing CTA lines from the body first (line-prefix match on `[Learn More About FileFlex` / `[Sign Up for a Free Trial`) so the final post has exactly one.

@@ -197,6 +197,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"from-vpn-risk-to-zero-trust-security-a-smarter-approach-to-remote-access.md": {
+	id: "from-vpn-risk-to-zero-trust-security-a-smarter-approach-to-remote-access.md";
+  slug: "from-vpn-risk-to-zero-trust-security-a-smarter-approach-to-remote-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "hippa-compliant-file-sharing.md": {
 	id: "hippa-compliant-file-sharing.md";
   slug: "hippa-compliant-file-sharing";
