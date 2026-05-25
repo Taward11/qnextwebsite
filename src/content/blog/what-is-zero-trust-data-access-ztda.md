@@ -26,17 +26,16 @@ faq:
     a: "Yes, FileFlex Enterprise delivers ZTDA by enabling remote, file-level access with granular permissions, continuous authentication, and full auditability—without requiring data replication or relocation."
 ---
 
-![97% of organizations are in process or planning a zero trust initiative](/images/blog/what-is-zero-trust-data-access-ztda/zero-trust-initiative-infographic-small.webp)
-
 ## Why are Organizations Adopting Zero Trust?
-Almost all organizations have either started or are planning to start a zero trust initiative.  Organizations in general and critical infrastructure, in particular, are adopting Zero Trust as a security model because traditional security models are no longer sufficient to protect against the evolving threat landscape. Traditional perimeter-based security models rely on the assumption that everything inside the perimeter is trustworthy and everything outside is not. However, this approach is no longer effective in today’s increasingly complex and interconnected IT environment, where users, devices, and applications are located both inside and outside the network perimeter.
+![97% of organizations are in process or planning a zero trust initiative](/images/blog/what-is-zero-trust-data-access-ztda/zero-trust-initiative-infographic-small.webp)Almost all organizations have either started or are planning to start a zero trust initiative.  Organizations in general and critical infrastructure, in particular, are adopting Zero Trust as a security model because traditional security models are no longer sufficient to protect against the evolving threat landscape. Traditional perimeter-based security models rely on the assumption that everything inside the perimeter is trustworthy and everything outside is not. However, this approach is no longer effective in today’s increasingly complex and interconnected IT environment, where users, devices, and applications are located both inside and outside the network perimeter.
 
 Here are some reasons why organizations are adopting Zero Trust:
-![Traditional security models are no longer sufficient](/images/blog/what-is-zero-trust-data-access-ztda/Quote-23.webp)
 
  
 
 ### Increasing cyber threats
+![Traditional security models are no longer sufficient](/images/blog/what-is-zero-trust-data-access-ztda/Quote-23.webp)
+
 -   The number and complexity of cyber threats are growing rapidly, and traditional security measures such as firewalls and antivirus software are no longer sufficient to protect against them. Zero Trust provides a more proactive and effective security approach to prevent data breaches.
 
 ### Remote work and cloud computing
@@ -47,17 +46,17 @@ Here are some reasons why organizations are adopting Zero Trust:
 
 ### Insider threats
 -   Insider threats, such as employees or contractors accessing data without proper authorization, can be difficult to detect and prevent. Zero Trust can help to mitigate these risks by ensuring that users are only given access to the resources they need to perform their job duties.
-![The number and complexity of cyber threats is growing rapidly](/images/blog/what-is-zero-trust-data-access-ztda/Quote-24.webp)
 
  
 
 ## Key Principles of Zero Trust
-A Zero Trust architecture is a security model that assumes no user is inherently trusted, and that all requests to access resources must be authenticated and authorized according to policies for each user. Zero trust security has been defined by the National Institute of Standards and Technology (NIST) and is much deeper than simply ‘never trust, always verify’.  You can learn more by reading “[How to Meet NIST Guidelines for Zero Trust](/blog/nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access/)”.  According to NIST zero trust (ZT) is a term for an evolving set of tenants that move an organization’s cybersecurity from the existing paradigm based on a static, network-based perimeter to a new paradigm that focuses an organization’s cybersecurity on users, assets, and resources.
-![Zero trust security is much deeper than simply ‘never trust, always verify’](/images/blog/what-is-zero-trust-data-access-ztda/Quote-26.webp)
+![The number and complexity of cyber threats is growing rapidly](/images/blog/what-is-zero-trust-data-access-ztda/Quote-24.webp)A Zero Trust architecture is a security model that assumes no user is inherently trusted, and that all requests to access resources must be authenticated and authorized according to policies for each user. Zero trust security has been defined by the National Institute of Standards and Technology (NIST) and is much deeper than simply ‘never trust, always verify’.  You can learn more by reading “[How to Meet NIST Guidelines for Zero Trust](/blog/nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access/)”.  According to NIST zero trust (ZT) is a term for an evolving set of tenants that move an organization’s cybersecurity from the existing paradigm based on a static, network-based perimeter to a new paradigm that focuses an organization’s cybersecurity on users, assets, and resources.
 
 The main tenets of a Zero Trust architecture include:
 
 ### Verify before trust
+![Zero trust security is much deeper than simply ‘never trust, always verify’](/images/blog/what-is-zero-trust-data-access-ztda/Quote-26.webp)
+
 -   Every request must be authenticated and authorized before access is granted. Requests are also verified against a set of rules that dictate what data can be accessed, and by whom.
 
 ### Least privilege access
@@ -75,11 +74,10 @@ The main tenets of a Zero Trust architecture include:
 By implementing these principles, organizations can significantly reduce their risk of a security breach and improve their overall security posture.
 
 ## What is Zero Trust Data Access (ZTDA)?
-![All requests to access resources must be authenticated and authorized according to policies for each user](/images/blog/what-is-zero-trust-data-access-ztda/Quote-25.webp)
-
 Zero Trust Data Access (ZTDA) is a security approach that limits access to data to authorized users via a zero-trust architecture that verifies user identity, device, and policies, regardless of location or network. It assumes no implicit trust and enforces least-privilege access across hybrid and remote environments.
 
 ### Key Principles of Zero Trust Data Access (ZTDA):
+![All requests to access resources must be authenticated and authorized according to policies for each user](/images/blog/what-is-zero-trust-data-access-ztda/Quote-25.webp)
 
 -   Continuous identity and device verification
 -   Strict least-privilege access controls
@@ -92,12 +90,11 @@ Under the Zero Trust Data Access model, every data access request is verified ag
 Zero Trust Data Access is typically implemented through a Zero Trust Data Access platform and a combination of technologies such as Multi-Factor Authentication (MFA), Identity and Access Management (IAM), and Security Information Event Management (SIEM) software. These technologies work together to ensure that only authorized users and devices can access data.
 
 Zero Trust Data Access is a key component of a Zero Trust architecture, which assumes that every access request is potentially malicious and requires rigorous authentication and authorization controls to prevent unauthorized access and data breaches.
-![Zero Trust Data Access is a key component of Zero Trust security](/images/blog/what-is-zero-trust-data-access-ztda/Quote-27.webp)
 
  
 
 ## How it Works
-The tenets of zero trust are achieved for remote access and sharing of files and folders via a zero trust data access (ZTDA) architecture.  A zero trust data access architecture is designed to:
+![Zero Trust Data Access is a key component of Zero Trust security](/images/blog/what-is-zero-trust-data-access-ztda/Quote-27.webp)The tenets of zero trust are achieved for remote access and sharing of files and folders via a zero trust data access (ZTDA) architecture.  A zero trust data access architecture is designed to:
 
 1.  Protect access to a network segment, application, or data without providing access to the organization’s network infrastructure
 2.  Provide IT the tools they need to control that access
@@ -153,12 +150,11 @@ There are several benefits to an organization of adopting Zero Trust Data Access
 
 ### Simplified management
 -   Zero Trust Data Access can simplify security management by providing a single, unified security approach that applies to all users.
-![Adopting ZTDA results in improved security, better compliance and enhanced visibility](/images/blog/what-is-zero-trust-data-access-ztda/Quote-28.webp)
 
  
 
 ## Use Cases for Zero Trust Data Access
-Implementing a Zero Trust Data Access as implemented by FileFlex Enterprise aligns with the core principles of cybersecurity, access control, and risk management.  Adopting this approach can significantly enhance the operational resilience and security posture of organizations, ultimately helping them be more secure and meet regulatory requirements for the access and sharing of confidential unstructured data.  Some practical use cases for the implementation of Zero Trust Data Access as implemented by FileFlex Enterprise are as follows:
+![Adopting ZTDA results in improved security, better compliance and enhanced visibility](/images/blog/what-is-zero-trust-data-access-ztda/Quote-28.webp)Implementing a Zero Trust Data Access as implemented by FileFlex Enterprise aligns with the core principles of cybersecurity, access control, and risk management.  Adopting this approach can significantly enhance the operational resilience and security posture of organizations, ultimately helping them be more secure and meet regulatory requirements for the access and sharing of confidential unstructured data.  Some practical use cases for the implementation of Zero Trust Data Access as implemented by FileFlex Enterprise are as follows:
 
 ### Zero Trust VPN Alternative
 ZTDA can be used as a zero trust based VPN alternative that delivers cutting-edge security, simplified access management, IT-controlled chain of command, file sharing/collaboration functionality, and with Windows integration, enhanced user experience. See [19 Advantages of the Zero Trust Data Access VPN Alternative](/blog/a-vpn-alternative-zero-trust-data-access/).

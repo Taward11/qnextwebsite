@@ -44,10 +44,9 @@ tables:
 Many organizations rely on Microsoft tools like Entra ID (formerly Azure AD), Microsoft 365, Defender for Endpoint, and Purview for their security foundation. These tools provide robust identity management, endpoint protection, and compliance capabilities — especially for environments that operate fully within Microsoft’s ecosystem.
 
 This approach, often described as _Microsoft-centric security_, works well for controlling access to cloud applications and services. But it can leave blind spots when data is stored across hybrid environments or needs to be accessed securely outside the Microsoft stack.
-![The addition of Zero Trust Data Access is essential to protect unstructured data, eliminate VPN risks, reduce insider threats, and meet compliance requirements.](/images/blog/why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access/MS-quote.webp)
 
 ## Why Organizations Choose the Microsoft Path
-Organizations choose the Microsoft path for its all-in-one simplicity, offering integrated solutions across OS, identity, collaboration, security, cloud, and endpoint management that “just work together.” This reduces risk, operational overhead, and vendor complexity. Plus, end-user familiarity with tools like Outlook, Word, Excel, and Teams reduces training and support needs.
+![The addition of Zero Trust Data Access is essential to protect unstructured data, eliminate VPN risks, reduce insider threats, and meet compliance requirements.](/images/blog/why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access/MS-quote.webp)Organizations choose the Microsoft path for its all-in-one simplicity, offering integrated solutions across OS, identity, collaboration, security, cloud, and endpoint management that “just work together.” This reduces risk, operational overhead, and vendor complexity. Plus, end-user familiarity with tools like Outlook, Word, Excel, and Teams reduces training and support needs.
 
 Microsoft’s widespread adoption means IT talent is readily available, and enterprise licensing agreements offer bundled tools with predictable costs and volume discounts.
 
