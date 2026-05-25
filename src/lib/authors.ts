@@ -8,7 +8,7 @@ export const authors: Record<string, Author> = {
   'Tom Ward': {
     name: 'Tom Ward',
     bio: 'Tom Ward is the VP of Marketing for Qnext Corp. He is an expert in the technology industry with a history of achievement. Tom holds an MBA from the Schulich School of Business at York University.',
-    image: '/images/blog/authors/tom-ward.jpg',
+    image: '/images/blog/authors/tom-ward.webp',
   },
   'FileFlex Team': {
     name: 'FileFlex Team',

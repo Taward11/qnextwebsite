@@ -5,7 +5,7 @@ excerpt: "Federated hybrid access enables organizations to securely and consiste
 date: 2026-01-13
 modified: 2026-01-13
 author: "Tom Ward"
-featuredImage: "/images/blog/federated-hybrid-access/iStock-541282164-web-e1768340893420.jpg"
+featuredImage: "/images/blog/federated-hybrid-access/iStock-541282164-web-e1768340893420.webp"
 featuredImageAlt: "Federated hybrid access across cloud, on-prem, and endpoints"
 readingTime: "2.5 min read"
 categories:
@@ -42,7 +42,7 @@ tables:
 
 ## Introduction: Hybrid IT is Here—And It's Messy
 
-![Nearly three-quarters of enterprises have implemented hybrid cloud/storage strategies](/images/blog/federated-hybrid-access/hybrid-storage-infographic.jpg)
+![Nearly three-quarters of enterprises have implemented hybrid cloud/storage strategies](/images/blog/federated-hybrid-access/hybrid-storage-infographic.webp)
 
 Today, most organizations operate across a hybrid IT environment. Data lives on file servers, NAS devices, cloud storage, and even user endpoints. While hybrid IT offers flexibility and scalability, it introduces serious challenges: inconsistent policies, multiple apps to maintain, audit blind spots, and elevated security risks. In fact, a 2024 Gartner survey found that 63% of organizations have only partially implemented Zero Trust, leaving critical data exposed.
 
@@ -52,7 +52,7 @@ The reality is clear: your network and applications may be secure, but your data
 
 Hybrid IT creates multiple layers of complexity for IT teams as data becomes distributed across a mix of on-premises systems, cloud platforms, and endpoints, each with its own permissions and access controls. This fragmentation introduces security gaps, where sensitive files may be accessed or shared in ways that IT cannot fully monitor or control, increasing exposure to breaches, insider misuse, and ransomware.
 
-![Traditional tools and security approaches simply cannot keep pace with growing complexity](/images/blog/federated-hybrid-access/Hybrid-access-blog-quote1-1.jpg)
+![Traditional tools and security approaches simply cannot keep pace with growing complexity](/images/blog/federated-hybrid-access/Hybrid-access-blog-quote1-1.webp)
 
 At the same time, regulatory compliance pressures intensify, as meeting requirements such as GDPR, HIPAA, DORA, FFIEC, GLBA, NIST, CMMC, and emerging data sovereignty laws becomes far more difficult when data is scattered, inconsistently governed, or insufficiently tracked. Auditing further compounds the problem: without a unified view of data access and policy enforcement, generating accurate reports or demonstrating compliance becomes cumbersome, time-consuming, and error-prone. As hybrid environments continue to expand, traditional tools and security approaches simply cannot keep pace with this growing complexity.
 
@@ -60,7 +60,7 @@ At the same time, regulatory compliance pressures intensify, as meeting requirem
 
 Zero Trust is widely recognized as a best practice: verify every user, device, and session; apply least privilege; enforce just-in-time access. But most implementations stop at identity, network, or application layers. The result is the Zero Trust Data Gap: even when everything else is secure, files themselves remain unprotected—vulnerable to insider misuse, ransomware, and misconfiguration.
 
-![Hybrid Storage Infrastructure](/images/blog/federated-hybrid-access/HYBRID_IT-2022q4-v2.jpg)
+![Hybrid Storage Infrastructure](/images/blog/federated-hybrid-access/HYBRID_IT-2022q4-v2.webp)
 
 ## FileFlex Enterprise: Extending Zero Trust to the Data Layer
 
@@ -77,7 +77,7 @@ Imagine a global team needing a sensitive financial report stored on a local NAS
 
 ## Why Modern Organizations Can't Afford to Ignore Federated Hybrid Access
 
-![Organizations that fail to extend Zero Trust to the data layer are leaving themselves vulnerable](/images/blog/federated-hybrid-access/Hybrid-access-blog-quote2-1.jpg)
+![Organizations that fail to extend Zero Trust to the data layer are leaving themselves vulnerable](/images/blog/federated-hybrid-access/Hybrid-access-blog-quote2-1.webp)
 
 The hybrid IT trend is accelerating, regulatory scrutiny is intensifying, and ransomware attacks are on the rise. Organizations that fail to extend Zero Trust to the data layer are leaving themselves vulnerable—and paying for it in risk, fines, and lost productivity.
 
