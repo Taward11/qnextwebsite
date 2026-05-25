@@ -12,7 +12,7 @@ const tags = await getTagCounts();
     <h2 class="blog-widget__title">Recent Posts</h2>
     <ul class="blog-widget__list">
       {recent.map((p) => (
-        <li><a href={`/blog/${p.slug}/`}>{p.data.title}</a></li>
+        <li><a href={`/blog/${p.slug}/`}>{p.data.seoTitle ?? p.data.title}</a></li>
       ))}
     </ul>
   </section>
