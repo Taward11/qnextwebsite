@@ -152,7 +152,10 @@ If a malicious entity gains access to an organization’s storage infrastructure
  
 
 ## How the Zero Trust Data Access Model Minimizes Direct Access to Data
-![Preventing direct access to the storage infrastructure through ZTDA offers significant security, operational, and compliance benefits](/images/blog/top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure/Quote-31.webp)![ZTDA Architecture](/images/blog/top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure/ztda-architecture-1.webp) _Diagram 1 – The Zero Trust Data Access Architecture_
+![Preventing direct access to the storage infrastructure through ZTDA offers significant security, operational, and compliance benefits](/images/blog/top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure/Quote-31.webp)
+
+<img class="blog-prose__img--full" src="/images/blog/top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure/ztda-architecture-1.webp" alt="ZTDA Architecture" />
+<em class="blog-prose__caption--center">Diagram 1 – The Zero Trust Data Access Architecture</em>
 
 As illustrated in Diagram 1 above, a Zero Trust Data Access (ZTDA) architecture (as implemented by FileFlex Enterprise) prevents direct access to infrastructure and data resources by enforcing strict, granular controls and mediating all access through secure gateways and policies. It shifts the focus from perimeter-based security to identity and data-centric security.  Here’s how ZTDA achieves this:
 
