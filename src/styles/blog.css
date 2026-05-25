@@ -208,7 +208,10 @@
 .blog-prose a:hover { color: #021372; }
 .blog-prose strong { font-weight: 700; color: #1a1a1a; }
 .blog-prose ul, .blog-prose ol { margin: 0 0 20px; padding-left: 26px; }
+.blog-prose ul { list-style: disc outside; }
+.blog-prose ol { list-style: decimal outside; }
 .blog-prose li { margin: 6px 0; }
+.blog-prose li::marker { color: #021372; }
 /* Default body images: full column width. */
 .blog-prose p > img {
   display: block;
