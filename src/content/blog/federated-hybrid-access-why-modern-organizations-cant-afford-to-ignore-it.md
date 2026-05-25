@@ -1,5 +1,6 @@
 ---
 title: "Federated Hybrid Access: Why Modern Organizations Can't Afford to Ignore It"
+seoTitle: "Federated Hybrid Access"
 description: "Federated hybrid access closes the zero trust data gap, securing and governing data across modern hybrid IT environments."
 excerpt: "Federated hybrid access enables organizations to securely and consistently govern data across distributed hybrid IT environments by closing the zero trust data gap and restoring centralized control, compliance, and auditability."
 date: 2026-01-13

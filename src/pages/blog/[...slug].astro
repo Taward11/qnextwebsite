@@ -72,7 +72,7 @@ const tableSchemas = post.data.tables.map((t) => ({
 }));
 ---
 
-<BlogLayout title={`${post.data.title} | FileFlex Blog`} description={post.data.description ?? post.data.excerpt}>
+<BlogLayout title={post.data.seoTitle ?? `${post.data.title} | FileFlex Blog`} description={post.data.description ?? post.data.excerpt}>
 
   <article class="blog-post">
 
