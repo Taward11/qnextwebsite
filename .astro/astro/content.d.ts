@@ -302,9 +302,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"top-6-reasons-you-need-zero-trust-file-sharing-management.md": {
+	id: "top-6-reasons-you-need-zero-trust-file-sharing-management.md";
+  slug: "top-6-reasons-you-need-zero-trust-file-sharing-management";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "top-7-advantages-of-an-overlay-service.md": {
 	id: "top-7-advantages-of-an-overlay-service.md";
   slug: "top-7-advantages-of-an-overlay-service";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"top-8-reasons-for-zero-trust-storage-management.md": {
+	id: "top-8-reasons-for-zero-trust-storage-management.md";
+  slug: "top-8-reasons-for-zero-trust-storage-management";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

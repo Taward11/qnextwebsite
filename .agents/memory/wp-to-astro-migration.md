@@ -59,6 +59,18 @@ WP posts already contain inline "Learn More About FileFlex" / "Sign Up for a Fre
 
 If `headers` or `rows` come out empty, emit `headers: []` / `rows: []` explicitly — `headers:\n` with nothing after is parsed as `null` and fails the Astro content collection's `z.array()` schema. (In this migration, empty arrays only occurred as a symptom of the wpdt row-deletion bug; fixing that bug eliminated the case. But the guardrail is worth keeping.)
 
+## build.cjs regenerates every slug in META, overwriting prior manual edits
+
+The loop at the bottom iterates `Object.keys(META)` and rewrites every output file. Any hand-tuning done to a previously-migrated `.md` (full-width image classes, flattened lists, centered captions, structured tables converted from screenshots, etc.) is silently clobbered the next time you add a new slug and re-run.
+
+**How to apply:** before running build.cjs, snapshot `git status src/content/blog` to know which legacy posts have uncommitted manual edits, and restore them after the build via `git show HEAD:<path> > <path>`. For source-HTML typos that would re-appear on every run (e.g. fileflex's broken `<a>...Managemen</a>t`), add a `POST_FIXES[slug]` entry so the fix is reapplied automatically — don't rely on manual markdown edits alone.
+
+**Why:** silent overwrites pass the build and look fine in spot-checks; only a full diff against `HEAD` catches them.
+
+## Source `<a>...</a>X` truncation typos must go in POST_FIXES, not just the markdown
+
+Fileflex occasionally has anchor tags that close one character early (e.g. `<a>Storage Managemen</a>t`). Turndown faithfully reproduces this as `[Managemen](url)t`, which renders as a broken link with a dangling letter. Fix in both places: edit the rendered `.md` for the current run, AND add the exact `[broken](url)X → [fixed](url)` pair to `POST_FIXES[slug]` so it survives future build.cjs runs.
+
 ## Guardrail: source `<table>` count must equal markdown `<!-- table: -->` count
 
 Easy parity check that would have caught both the marker-escape regression and the wpdt row-deletion regression on first build: for each slug, compare `grep -c '<table' source.html` against `grep -c '<!-- table:' out.md`. Mismatch = silent content loss.
