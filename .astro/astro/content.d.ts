@@ -141,9 +141,23 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"achieving-end-to-end-zero-trust-with-zscaler-and-fileflex.md": {
+	id: "achieving-end-to-end-zero-trust-with-zscaler-and-fileflex.md";
+  slug: "achieving-end-to-end-zero-trust-with-zscaler-and-fileflex";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "ai-driven-cybercrime-at-zettabyte-scale.md": {
 	id: "ai-driven-cybercrime-at-zettabyte-scale.md";
   slug: "ai-driven-cybercrime-at-zettabyte-scale";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"cloudflare-one-and-fileflex-enterprise-securing-apps-and-data-together.md": {
+	id: "cloudflare-one-and-fileflex-enterprise-securing-apps-and-data-together.md";
+  slug: "cloudflare-one-and-fileflex-enterprise-securing-apps-and-data-together";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -155,9 +169,44 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"hyperscaler-cloud-providers-and-the-data-layer-gap-extending-security-with-file-level-control.md": {
+	id: "hyperscaler-cloud-providers-and-the-data-layer-gap-extending-security-with-file-level-control.md";
+  slug: "hyperscaler-cloud-providers-and-the-data-layer-gap-extending-security-with-file-level-control";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"nist-sp-1800-35-how-data-level-enforcement-strengthens-zero-trust-security.md": {
+	id: "nist-sp-1800-35-how-data-level-enforcement-strengthens-zero-trust-security.md";
+  slug: "nist-sp-1800-35-how-data-level-enforcement-strengthens-zero-trust-security";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"sec-cybersecurity-rules-zero-trust-architecture-what-cios-and-cisos-need-to-know.md": {
+	id: "sec-cybersecurity-rules-zero-trust-architecture-what-cios-and-cisos-need-to-know.md";
+  slug: "sec-cybersecurity-rules-zero-trust-architecture-what-cios-and-cisos-need-to-know";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"the-zero-trust-data-gap.md": {
+	id: "the-zero-trust-data-gap.md";
+  slug: "the-zero-trust-data-gap";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "why-data-is-now-the-real-target.md": {
 	id: "why-data-is-now-the-real-target.md";
   slug: "why-data-is-now-the-real-target";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"zero-trust-and-regulatory-compliance.md": {
+	id: "zero-trust-and-regulatory-compliance.md";
+  slug: "zero-trust-and-regulatory-compliance";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
