@@ -91,6 +91,10 @@ const tableSchemas = post.data.tables.map((t) => ({
       </p>
     )}
 
+    {post.data.excerpt && (
+      <p class="blog-post__summary"><em>{post.data.excerpt}</em></p>
+    )}
+
     {showToc && (
       <nav class="blog-post__toc" aria-label="Table of contents">
         <h2 class="blog-post__toc-title">Table of Contents</h2>
