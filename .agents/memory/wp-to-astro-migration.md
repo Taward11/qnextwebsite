@@ -45,6 +45,18 @@ Each post in `body2/` has `<slug>.body.html` + `<slug>.json` (sidecar). Sidecar 
 
 The title-caser used during META authoring produces `It Control` from `it-control`. Manually fix to `IT Control` (and similarly any other acronyms that look like English words) in the `META[slug].title` / `seoTitle`.
 
+## List-item + 4-space-indent → accidental code block
+
+When a numbered list item's content is removed (e.g. extracting an image out of `1.  ![img](...)`), do NOT leave the item empty with the heading still indented 4 spaces below — markdown will parse the indented heading as a code block. Either pull the heading inline into the same item (`1.  ### Step 1: ...`), or remove the empty `1.  ` marker entirely. The screenshot symptom is a `###` literal heading rendered inside a dark monospace block.
+
+**Why:** CommonMark / remark treats 4-space indent inside an "open" list item as either continuation paragraph or a code block depending on what precedes it; an empty list line + blank line resets to code-block context.
+
+**How to apply:** When writing a `POST_FIXES` rule that yanks content out of a list item, always include enough of the surrounding lines in the `find` string to capture the full original item AND the next line's indented continuation, then rewrite the replacement with the heading/text on the same logical line as the list marker.
+
+## Inline blog video player mirrors homepage #ff-modal iframe
+
+When a source post embeds a YouTube thumbnail+link, replace it with `<div class="blog-prose__video"><iframe src="https://www.youtube-nocookie.com/embed/<ID>?rel=0&modestbranding=1" ...></iframe></div>` plus a `<p class="blog-prose__caption--center">` caption. `.blog-prose__video` is a 16:9 wrapper defined in `src/styles/blog.css`. Same youtube-nocookie origin and `rel=0&modestbranding=1` query as the homepage `#ff-modal` iframe — keeps tracking and "watch on YouTube" CTAs minimized so the play stays in-page.
+
 ## Reading-time + author defaults
 
 Author is consistently `Tom Ward` for the FileFlex blog corpus. Reading time is hand-estimated, typically 5–8 min — there is no reading-time auto-calc and no need for one.

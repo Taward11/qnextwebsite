@@ -26,8 +26,9 @@ Illumio is a cybersecurity company that offers a platform for securing enterpris
 
 Illumio Core is primarily focused on securing enterprise networks and applications through micro-segmentation, real-time visibility, and policy enforcement. This approach allows organizations to protect critical data and applications from lateral movement and zero-day threats.  
 
- _![Combining Illumio Core with ZTDA protects against internal and external malicious activity](/images/blog/top-reasons-to-add-zero-trust-data-access-to-illumio-core/Illumio-infographic-3.webp) Diagram 1  
-Extending the Illumio Zero Trust Ecosystem to Include Data_
+<img class="blog-prose__img--full" src="/images/blog/top-reasons-to-add-zero-trust-data-access-to-illumio-core/Illumio-infographic-3.webp" alt="Combining Illumio Core with ZTDA protects against internal and external malicious activity" />
+
+<p class="blog-prose__caption--center"><em>Diagram 1 — Extending the Illumio Zero Trust Ecosystem to Include Data</em></p>
 
 ## Illumio Core Plus Zero Trust Data Access Defends Against External Infiltration and Data Extraction
 While Illumio Core and Zero Trust Data Access address different aspects of enterprise security, together they complement each other to provide a more comprehensive security solution. For example, Illumio Core can provide micro-segmentation and policy enforcement to secure the network and applications, while Zero Trust Data Access as implemented by FileFlex Enterprise guards against external threats by expanding that zero trust security to include data and data access.

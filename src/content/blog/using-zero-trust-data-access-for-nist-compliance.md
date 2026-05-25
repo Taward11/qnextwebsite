@@ -99,8 +99,9 @@ A Zero Trust Architecture (ZTA) aligns closely with the cybersecurity standards 
 
 Within this framework, a central server plays a critical role in verifying user identities and authenticating permissions. Instead of allowing direct access to the original resource location, requested files are delivered after verification and authentication by the server. This is illustrated in Diagram 1, a simplified zero-trust architecture.
 
-_![Simplified ZTDA Architecture for DORA compliance](/images/blog/using-zero-trust-data-access-for-nist-compliance/ZTDA-Architecture.png.webp)Diagram 1_  
-_Simplified Zero Trust Architecture for NIST Compliance_
+![Simplified Zero Trust Architecture for NIST Compliance](/images/blog/using-zero-trust-data-access-for-nist-compliance/ZTDA-Architecture.png.webp)
+
+<p class="blog-prose__caption--center"><em>Diagram 1 — Simplified Zero Trust Architecture for NIST Compliance</em></p>
 
 -   Users have no direct access to infrastructure
 -   All users are verified and all requests are authenticated against permissions
@@ -170,10 +171,9 @@ Some practical use cases for the implementation of Zero Trust Data Access as imp
 ## Summary
 In conclusion, adhering to the National Institute of Standards and Technology (NIST) cybersecurity standards is fundamental to governmental organizations. Zero Trust Data Access has emerged as a central technology, as it aligns with NIST guidelines and offers organizations a framework that strengthens data security, compliance, and resilience against evolving threats.
 
-[![Meeting NIST Standards for Remote Data Access & Sharing](/images/blog/using-zero-trust-data-access-for-nist-compliance/BrightTALK-Webinar-cover-for-NIST-webinar-640x360-1.webp)](https://www.youtube.com/watch?v=_CAG_BcRxP8&t=7s)
+<div class="blog-prose__video"><iframe src="https://www.youtube-nocookie.com/embed/_CAG_BcRxP8?rel=0&modestbranding=1&start=7" title="Meeting NIST Standards for Remote Data Access & Sharing" loading="lazy" allow="encrypted-media" allowfullscreen></iframe></div>
 
-_Watch_  
-[_Meeting NIST Standards for Remote Data Access & Sharing_](https://www.youtube.com/watch?v=_CAG_BcRxP8&t=7s)
+<p class="blog-prose__caption--center"><em>Watch — Meeting NIST Standards for Remote Data Access & Sharing</em></p>
 
 \* [Congressional Research Service](https://crsreports.congress.gov/product/pdf/R/R43590)
 

@@ -239,13 +239,32 @@
   display: block;
   clear: both;
 }
-.blog-prose .blog-prose__caption--center {
+.blog-prose .blog-prose__caption--center,
+.blog-prose p.blog-prose__caption--center {
   display: block;
   text-align: center;
   font-size: 14px;
   color: #555;
   font-style: italic;
   margin: -8px 0 20px;
+}
+
+/* Inline video embed for blog posts — mirrors the homepage #ff-modal iframe */
+.blog-prose .blog-prose__video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 24px 0 8px;
+  background: #000;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.blog-prose .blog-prose__video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 .blog-prose img[src*="quote"],
 .blog-prose img[src*="Quote"],

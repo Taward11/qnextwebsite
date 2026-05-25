@@ -94,9 +94,9 @@ Implementing a Zero Trust Architecture (ZTA) is crucial for meeting CMMC complia
 
 Within this framework, a central server plays a critical role in verifying user identities and permissions. Instead of allowing direct shared access to the original resource location, the server facilitates the delivery of requested files to users. This approach is visualized in Diagram 1, illustrating a simplified zero-trust architecture.
 
-_![Simplified ZTDA Architecture for CMMC compliance](/images/blog/cmmc-compliance-for-file-sharing-access-and-collaboration-of-cui-using-zero-trust-data-access/ZTDA-Architecture.png.webp)Diagram 1_
+![Simplified Zero Trust Architecture for CMMC Compliance](/images/blog/cmmc-compliance-for-file-sharing-access-and-collaboration-of-cui-using-zero-trust-data-access/ZTDA-Architecture.png.webp)
 
-_Simplified Zero Trust Architecture for CMMC Compliance_
+<p class="blog-prose__caption--center"><em>Diagram 1 — Simplified Zero Trust Architecture for CMMC Compliance</em></p>
 
 This method enables seamless access, sharing, collaboration, and management of files and folders across various repositories—be it cloud-based, FTP, SharePoint, or on-premises storage. Notably, there’s no need for the zero trust policy server to be managed by a third party, and sensitive information remains secure without requiring uploads to an external server.
 

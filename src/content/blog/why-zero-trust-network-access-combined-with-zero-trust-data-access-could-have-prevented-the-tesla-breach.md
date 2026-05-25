@@ -46,8 +46,9 @@ Here’s a detailed approach to how these tools could be used to prevent a data 
 -   **Encryption and Secure Access:** Ensures all data access and transfers are encrypted.
 -   **Detailed Auditing and Reporting:** Monitors and logs all data access activities to detect malicious movement and later forensic analysis.
 
- _![Combining the Zero Trust Data Access (ZTDA) technology of FileFlex Enterprise with a Zero Trust Network Access (ZTNA) platform can provide a robust defense against data breaches](/images/blog/why-zero-trust-network-access-combined-with-zero-trust-data-access-could-have-prevented-the-tesla-breach/COMBINING-ZTNA-ZTDA-TO-PREVENT-A-DATA-BREACH-infographic.webp) Diagram 1  
-Combining ZTNA with ZTDA to Prevent Data Breach_
+<img class="blog-prose__img--full" src="/images/blog/why-zero-trust-network-access-combined-with-zero-trust-data-access-could-have-prevented-the-tesla-breach/COMBINING-ZTNA-ZTDA-TO-PREVENT-A-DATA-BREACH-infographic.webp" alt="Combining the Zero Trust Data Access (ZTDA) technology of FileFlex Enterprise with a Zero Trust Network Access (ZTNA) platform can provide a robust defense against data breaches" />
+
+<p class="blog-prose__caption--center"><em>Diagram 1 — Combining ZTNA with ZTDA to Prevent Data Breach</em></p>
 
   
  

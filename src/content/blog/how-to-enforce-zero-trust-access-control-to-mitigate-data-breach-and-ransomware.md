@@ -31,9 +31,9 @@ FileFlex Enterprise is a secure zero-trust data access and sharing solution that
 ## Steps to Achieve Zero Trust Enforced Access
 By integrating Illumio Core with FileFlex Enterprise, organizations can direct all user data access requests through a secure channel, preventing unauthorized access to storage locations and potential breaches. Here’s how this can be achieved:
 
-1.  ![Steps to Achieve Zero Trust Enforced Access](/images/blog/how-to-enforce-zero-trust-access-control-to-mitigate-data-breach-and-ransomware/Illumio-ZTDA-Integration-Infographic.webp)
-    
-    ### **Step 1: Zero Trust Segmentation:**
+<img class="blog-prose__img--full" src="/images/blog/how-to-enforce-zero-trust-access-control-to-mitigate-data-breach-and-ransomware/Illumio-ZTDA-Integration-Infographic.webp" alt="Steps to Achieve Zero Trust Enforced Access" />
+
+1.  ### **Step 1: Zero Trust Segmentation:**
     
 
 -   **Identify Storage Locations:** Identify all the storage locations (on-premises or private cloud) that users need to access via FileFlex Enterprise.
