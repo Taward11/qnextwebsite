@@ -1,1 +1,2 @@
 - [Blog system conventions](blog-system.md) — Astro content collection at /blog/, marker-based table injection via AstroContainer, image float-by-filename, author lookup map.
+- [WP → Astro migration pipeline](wp-to-astro-migration.md) — cheerio+turndown traps: underscore-escaping breaks table markers; wpdt class removal nukes rows; picture/a-wrapped images need ordered unwrap; source-vs-marker table-count parity is the right guardrail.

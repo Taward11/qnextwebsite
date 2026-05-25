@@ -162,9 +162,44 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"european-health-data-space-compliance-with-zero-trust.md": {
+	id: "european-health-data-space-compliance-with-zero-trust.md";
+  slug: "european-health-data-space-compliance-with-zero-trust";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"extending-cisco-zero-trust-from-access-to-data.md": {
+	id: "extending-cisco-zero-trust-from-access-to-data.md";
+  slug: "extending-cisco-zero-trust-from-access-to-data";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"extending-microsoft-entra-zero-trust-to-protect-your-data-with-zero-trust-data-access.md": {
+	id: "extending-microsoft-entra-zero-trust-to-protect-your-data-with-zero-trust-data-access.md";
+  slug: "extending-microsoft-entra-zero-trust-to-protect-your-data-with-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"extending-microsoft-fabric-with-zero-trust-data-access-for-unstructured-data.md": {
+	id: "extending-microsoft-fabric-with-zero-trust-data-access-for-unstructured-data.md";
+  slug: "extending-microsoft-fabric-with-zero-trust-data-access-for-unstructured-data";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "federated-hybrid-access-why-modern-organizations-cant-afford-to-ignore-it.md": {
 	id: "federated-hybrid-access-why-modern-organizations-cant-afford-to-ignore-it.md";
   slug: "federated-hybrid-access-why-modern-organizations-cant-afford-to-ignore-it";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"hippa-compliant-file-sharing.md": {
+	id: "hippa-compliant-file-sharing.md";
+  slug: "hippa-compliant-file-sharing";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -190,6 +225,20 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"sharepoint-zero-trust-security-and-defending-against-zero-day-vulnerabilities.md": {
+	id: "sharepoint-zero-trust-security-and-defending-against-zero-day-vulnerabilities.md";
+  slug: "sharepoint-zero-trust-security-and-defending-against-zero-day-vulnerabilities";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"smart-cities-and-zero-trust-data-access-securing-the-urban-future.md": {
+	id: "smart-cities-and-zero-trust-data-access-securing-the-urban-future.md";
+  slug: "smart-cities-and-zero-trust-data-access-securing-the-urban-future";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "the-zero-trust-data-gap.md": {
 	id: "the-zero-trust-data-gap.md";
   slug: "the-zero-trust-data-gap";
@@ -197,9 +246,30 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity.md": {
+	id: "top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity.md";
+  slug: "top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"what-is-zero-trust-data-access-ztda.md": {
+	id: "what-is-zero-trust-data-access-ztda.md";
+  slug: "what-is-zero-trust-data-access-ztda";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "why-data-is-now-the-real-target.md": {
 	id: "why-data-is-now-the-real-target.md";
   slug: "why-data-is-now-the-real-target";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access.md": {
+	id: "why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access.md";
+  slug: "why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
