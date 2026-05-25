@@ -73,7 +73,7 @@ By shifting to a Zero Trust Data Access model with FileFlex Enterprise, business
 
 In today’s threat environment, securing remote access requires a smarter, more resilient approach. Zero Trust Data Access isn’t just an upgrade — it’s a necessary evolution.
 
-For further information see [19 Advantages of the Zero Trust Data Access VPN Alternative](/blog/a-vpn-alternative-zero-trust-data-access/)
+For further information see [19 Advantages of the Zero Trust Data Access VPN Alternative](https://fileflex.com/blog/a-vpn-alternative-zero-trust-data-access/)
 
 \*[Seqrite](https://www.seqrite.com/blog/why-60-of-enterprises-are-moving-from-vpns-to-zero-trust-network-access/)
 

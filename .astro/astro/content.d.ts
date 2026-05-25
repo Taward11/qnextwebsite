@@ -176,9 +176,30 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"cmmc-compliance-for-file-sharing-access-and-collaboration-of-cui-using-zero-trust-data-access.md": {
+	id: "cmmc-compliance-for-file-sharing-access-and-collaboration-of-cui-using-zero-trust-data-access.md";
+  slug: "cmmc-compliance-for-file-sharing-access-and-collaboration-of-cui-using-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"cmmc-it-control-for-dib-organizations-over-remote-access-and-sharing-using-zero-trust-architecture.md": {
+	id: "cmmc-it-control-for-dib-organizations-over-remote-access-and-sharing-using-zero-trust-architecture.md";
+  slug: "cmmc-it-control-for-dib-organizations-over-remote-access-and-sharing-using-zero-trust-architecture";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "complete-zero-trust-security-framework.md": {
 	id: "complete-zero-trust-security-framework.md";
   slug: "complete-zero-trust-security-framework";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"cybersecurity-for-law-firms-the-priority-of-zero-trust-data-access-security.md": {
+	id: "cybersecurity-for-law-firms-the-priority-of-zero-trust-data-access-security.md";
+  slug: "cybersecurity-for-law-firms-the-priority-of-zero-trust-data-access-security";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -225,6 +246,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"fedramp-compliance-and-zero-trust-data-access.md": {
+	id: "fedramp-compliance-and-zero-trust-data-access.md";
+  slug: "fedramp-compliance-and-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "from-vpn-risk-to-zero-trust-security-a-smarter-approach-to-remote-access.md": {
 	id: "from-vpn-risk-to-zero-trust-security-a-smarter-approach-to-remote-access.md";
   slug: "from-vpn-risk-to-zero-trust-security-a-smarter-approach-to-remote-access";
@@ -235,6 +263,13 @@ declare module 'astro:content' {
 "hippa-compliant-file-sharing.md": {
 	id: "hippa-compliant-file-sharing.md";
   slug: "hippa-compliant-file-sharing";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"how-to-enforce-zero-trust-access-control-to-mitigate-data-breach-and-ransomware.md": {
+	id: "how-to-enforce-zero-trust-access-control-to-mitigate-data-breach-and-ransomware.md";
+  slug: "how-to-enforce-zero-trust-access-control-to-mitigate-data-breach-and-ransomware";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -365,6 +400,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"top-reasons-to-add-zero-trust-data-access-to-illumio-core.md": {
+	id: "top-reasons-to-add-zero-trust-data-access-to-illumio-core.md";
+  slug: "top-reasons-to-add-zero-trust-data-access-to-illumio-core";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity.md": {
 	id: "top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity.md";
   slug: "top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity";
@@ -375,6 +417,20 @@ declare module 'astro:content' {
 "upholding-cybersecurity-for-architects-through-zero-trust-data-access.md": {
 	id: "upholding-cybersecurity-for-architects-through-zero-trust-data-access.md";
   slug: "upholding-cybersecurity-for-architects-through-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"using-zero-trust-data-access-for-nist-compliance.md": {
+	id: "using-zero-trust-data-access-for-nist-compliance.md";
+  slug: "using-zero-trust-data-access-for-nist-compliance";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"using-zero-trust-data-access-to-meet-california-privacy-and-cybersecurity-standards.md": {
+	id: "using-zero-trust-data-access-to-meet-california-privacy-and-cybersecurity-standards.md";
+  slug: "using-zero-trust-data-access-to-meet-california-privacy-and-cybersecurity-standards";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -414,9 +470,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"why-zero-trust-network-access-combined-with-zero-trust-data-access-could-have-prevented-the-tesla-breach.md": {
+	id: "why-zero-trust-network-access-combined-with-zero-trust-data-access-could-have-prevented-the-tesla-breach.md";
+  slug: "why-zero-trust-network-access-combined-with-zero-trust-data-access-could-have-prevented-the-tesla-breach";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "zero-trust-and-regulatory-compliance.md": {
 	id: "zero-trust-and-regulatory-compliance.md";
   slug: "zero-trust-and-regulatory-compliance";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"zero-trust-data-access-to-meet-dib-cybersecurity-strategy-2024.md": {
+	id: "zero-trust-data-access-to-meet-dib-cybersecurity-strategy-2024.md";
+  slug: "zero-trust-data-access-to-meet-dib-cybersecurity-strategy-2024";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

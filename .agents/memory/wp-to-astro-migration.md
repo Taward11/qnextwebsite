@@ -1,82 +1,50 @@
 ---
-name: WordPress → Astro blog migration pipeline
-description: Non-obvious traps when scraping fileflex.com WP posts to Astro markdown with cheerio + turndown. Helper script lives at .local/scrape/build.cjs.
+name: WP→Astro blog migration pipeline
+description: Durable rules and gotchas for `.local/scrape/build.cjs` when migrating fileflex.com WordPress posts into the Astro content collection.
 ---
 
-## Table marker tokens must avoid underscores
+## Pipeline order is fixed; legacy files must be re-restored every build
 
-Turndown escapes `_` in literal text. A placeholder like `__TABLE_MARKER_table1__` survives turndown but emerges as `\_\_TABLE\_MARKER\_table1\_\_`, breaking the comment-marker injection contract. Use a non-special token instead (e.g. `XXTABLEMARKERXXtable1XXENDXX`) and only convert to `<!-- table:table1 -->` after turndown runs.
+`build.cjs` writes every slug in `META` to `src/content/blog/<slug>.md` unconditionally, overwriting anything already there. A handful of legacy posts contain hand-edited Markdown that does not live in the scrape sources (no entry in `body2/`, or content that pre-dates the scraper). After every `node .local/scrape/build.cjs` run, restore those files with `git show HEAD:<path> > <path>` before running `npm run build`.
 
-**Why:** PostBody splits on `<!-- table:ID -->` comments to interleave tables. Escaped markers never match → tables silently get appended at the end instead of in-place.
+**Why:** Several early-migrated posts were tuned by hand for layout/typography fixes that aren't expressible through the build's transforms. They have no `body2/` source, but their slug is still listed in `META`, so the build re-emits a degraded version. Restoring from HEAD is the simplest way to keep them stable until they're either dropped from `META` or back-ported into the scrape pipeline.
 
-## wpDataTables: class-based removal nukes the table
+**How to apply:** When adding a new post, just append to `META` and drop the `<slug>.body.html` + `<slug>.json` sidecar into `.local/scrape/body2/`. When touching the pipeline at all, run the build, then re-run the restore loop for the hand-edited legacy slugs, then `node .local/scrape/download.cjs`, then `npm run build`. Don't try to "fix" the overwrite — the restore step is the contract.
 
-WP's wpDataTables plugin emits a wrapping `<div class="wpdt-c row wpDataTables ...">` *around* the table, but ALSO puts wpdt classes on every `<tr class="wpdt-cell-row">` and `<td class="wpdt-cell">` inside. A `$('[class*="wpdt-"]').remove()` selector wipes the rows along with the wrapper.
+## Cross-post `/blog/` links: rewrite to fileflex.com when unmigrated
 
-**How to apply:** When stripping plugin chrome, either (1) scope removal to specific tag names (`:not(table)` is insufficient — it only excludes the matched element, not its descendants), or (2) iterate matches and skip table-structural tags (`table, thead, tbody, tfoot, tr, th, td, col, colgroup`). For container wrappers that contain a `<table>`, **unwrap** (`$el.replaceWith($el.contents())`), don't remove.
+`rewriteLinks` builds a `LOCAL_SLUGS` set (from `src/content/blog/*.md` at script start) ∪ `Object.keys(META)`. Any `/blog/<slug>/` href whose slug is in neither is rewritten to `https://fileflex.com/blog/<slug>/`. Local ones stay relative.
 
-## wpdtSimpleTable has `data-has-header="0"` but the first row IS the header
+**Why:** Source posts cross-link prolifically. With ~50/150 posts migrated, leaving them all relative produces dozens of dead links per post; turning every WP link absolute would break internal navigation as more posts get migrated. The set-based gate auto-adjusts as `META` grows — no per-batch cleanup needed.
 
-The simple-table variant has no `<thead>`; styles the first `<tr>` as a header instead. The extractor must treat "no thead" as "use first tr as headers, rest as data rows", and never trust `data-has-header`.
+**How to apply:** Don't hand-edit `/blog/...` hrefs in migrated md files; let the next build regenerate them. If a link is still wrong after a build, check whether the target slug is actually listed in `META` (typo / different slug shape on fileflex.com vs the local copy).
 
-## Images live inside `<picture><source/><img/></picture>` wrapped in `<a href="/wp-content/uploads/...">`
+## Sidecar JSON shape and the `articleSection: null` problem
 
-Two unwrap passes needed in order:
-1. Flatten `<picture>` → its `<img>` descendant
-2. Unwrap `<a>` whose href matches `/wp-content/uploads/` and whose only meaningful content is the image
+Each post in `body2/` has `<slug>.body.html` + `<slug>.json` (sidecar). Sidecar fields used by `build.cjs`:
+- `description` / `excerpt` — Yoast meta; passed through `normalizeDesc` (see below) before frontmatter.
+- `faqs: [{q,a}]` — extracted from schema.org `Question` itemprops; emitted as the frontmatter key `faq` (singular, not `faqs`).
+- `categories` (informational; NOT used by build) — extracted from JSON-LD `articleSection`. Several posts have `articleSection: null` and no inline category links, so categories MUST be specified in the `META[slug].categories` entry.
 
-Without step 1, an `$a.children('img')` check returns 0 (img is a grandchild via picture) and the anchor survives, leaving broken WP upload hrefs in the final markdown.
+**Why:** The original WP setup serialized categories inconsistently — some via JSON-LD, some via taxonomy links, some not at all. Authoring `META` per slug is the only reliable source of truth, and the zod schema caps `categories` at 5 entries (Astro build fails otherwise).
 
-## Images inside headings must be lifted out BEFORE rendering
+**How to apply:** When adding a post to `META`, always set `categories` explicitly using the canonical names already present in the taxonomy (lowercase ones like `data governance`, `higher education`, `smart cities` must stay lowercase; title-case ones like `Regulatory Compliance`, `Zero Trust Data Access`, `CMMC`, `NIST` must stay title-case). Trim to ≤5 if needed.
 
-WordPress posts often place an inline image inside `<h2>` to float it next to the heading. After turndown this becomes `## [![alt](src)](url)Heading text` — an unrenderable link-wrapped image embedded in a heading. Move each `<img>` (and any wrapping `<a>`) out to a sibling `<p>` BEFORE the heading, then strip any leftover empty `<a>` from the heading.
+## Yoast description normalization quirks
 
-## Always strip empty headings post-conversion
+`normalizeDesc` cleans three recurring source-data defects in `json.description` / `json.excerpt`:
+1. `(.|!|?)([A-Z0-9])` → `$1 $2` — Yoast strips spaces between sentences when meta descriptions get truncated.
+2. `\b([A-Z]{3,6})\1\b` → `$1. $1` — duplicated acronyms like `CMMCCMMC`, `NISTNIST` are concatenated source artifacts (originally `CMMC. CMMC...` flattened by a templater).
+3. Trailing single uppercase letter at end of string — truncation artifact (e.g. `...environments.T`).
 
-After image lift-out and TOC/widget removal, a `<h2>` may end up with whitespace-only content. Regex `body.replace(/^#{1,6}\s*$/gm, '')` after the turndown pass removes them.
+**Why:** These come from fileflex.com's CMS templater, not the markdown body, so they appear only in `description`/`excerpt`. They were caught by post-build review on a 10-post batch and would have leaked into SEO meta tags otherwise.
 
-## Real hero lives OUTSIDE the body wrapper
+**How to apply:** If a future batch surfaces a *new* recurring meta-text defect, extend `normalizeDesc` rather than patching individual md files. The function is intentionally conservative (only the three patterns above); avoid generic "clean up text" rules that could damage legitimate content.
 
-On fileflex.com, the post's actual hero/cover image sits in `.single-post-content > .content-image` — a **sibling** of `.single-post-content-text`, not a descendant. If you scrape only `.single-post-content-text` as the body, the real hero is invisible to build.cjs and its `#root img` fallback grabs the first in-body image (often an infographic meant to float right) and misuses it as the hero.
+## Title-Case helper limitation: `IT` collapses to `It`
 
-**How to apply:** During extraction, read the hero from `.single-post-content > .content-image img` and either (a) prepend it as `<p><img/></p>` at the top of body.html so build.cjs picks it up, or (b) teach build.cjs to read `featured_image` from the sidecar JSON. Today's pipeline does (a).
+The title-caser used during META authoring produces `It Control` from `it-control`. Manually fix to `IT Control` (and similarly any other acronyms that look like English words) in the `META[slug].title` / `seoTitle`.
 
-**Why:** Wrong-hero is visually obvious to the user but builds clean and passes all schema checks — easy to ship and embarrassing to catch in review.
+## Reading-time + author defaults
 
-## Hero-image strip must check text nodes, not just element children
-
-When the source places the featured image inline with body text (`<p><picture>…</picture>In today's rapidly evolving…</p>`), the hero-removal logic must NOT remove the parent `<p>` based on `p.children().length === 1` alone — `children()` is element-only and ignores text nodes, so the entire paragraph (including the body copy) gets nuked silently.
-
-**How to apply:** Guard the `p.remove()` branch with `p.text().trim().length === 0`. When text is present, fall back to removing just the `<picture>` wrapper (or the bare `<img>`) so the surrounding copy survives.
-
-**Why:** First paragraph of a section silently vanishing is invisible in the build output — only spotted by reading the rendered post against the source.
-
-## CTA dedup
-
-WP posts already contain inline "Learn More About FileFlex" / "Sign Up for a Free Trial" CTAs. If the script appends its own canonical CTA at the end, filter those existing CTA lines from the body first (line-prefix match on `[Learn More About FileFlex` / `[Sign Up for a Free Trial`) so the final post has exactly one.
-
-## Empty YAML arrays must be `[]`, not omitted
-
-If `headers` or `rows` come out empty, emit `headers: []` / `rows: []` explicitly — `headers:\n` with nothing after is parsed as `null` and fails the Astro content collection's `z.array()` schema. (In this migration, empty arrays only occurred as a symptom of the wpdt row-deletion bug; fixing that bug eliminated the case. But the guardrail is worth keeping.)
-
-## Collapse single-child list nesting BEFORE turndown, or get `1.  1.  -   -` cumulative prefixes
-
-WP/Visual Composer often emits `<ol><li><ol><li>text</li></ol></li></ol>` (or `<ol><li><a id></a><ol>...`) where each outer level holds exactly one child — usually just a TOC anchor. Turndown faithfully renders this as `1.  1.  text` (or deeper: `1.  1.  -   -   text`), which breaks rendering and TOC generation.
-
-**How to apply:** in `cleanBody($)` before turndown, iterate `ol, ul` and for any list with a single `<li>` whose only meaningful child is another list, replace the outer list with the inner list. "Meaningful" must ignore empty `<a id>` anchors (WP TOC pattern) and whitespace text. Loop several passes until stable, because chains go 2–5 levels deep. As a side benefit this also cleans up previously-rendered legacy posts on re-run (line counts stay identical → pure structural fix, no content loss).
-
-## build.cjs regenerates every slug in META, overwriting prior manual edits
-
-The loop at the bottom iterates `Object.keys(META)` and rewrites every output file. Any hand-tuning done to a previously-migrated `.md` (full-width image classes, flattened lists, centered captions, structured tables converted from screenshots, etc.) is silently clobbered the next time you add a new slug and re-run.
-
-**How to apply:** before running build.cjs, snapshot `git status src/content/blog` to know which legacy posts have uncommitted manual edits, and restore them after the build via `git show HEAD:<path> > <path>`. For source-HTML typos that would re-appear on every run (e.g. fileflex's broken `<a>...Managemen</a>t`), add a `POST_FIXES[slug]` entry so the fix is reapplied automatically — don't rely on manual markdown edits alone.
-
-**Why:** silent overwrites pass the build and look fine in spot-checks; only a full diff against `HEAD` catches them.
-
-## Source `<a>...</a>X` truncation typos must go in POST_FIXES, not just the markdown
-
-Fileflex occasionally has anchor tags that close one character early (e.g. `<a>Storage Managemen</a>t`). Turndown faithfully reproduces this as `[Managemen](url)t`, which renders as a broken link with a dangling letter. Fix in both places: edit the rendered `.md` for the current run, AND add the exact `[broken](url)X → [fixed](url)` pair to `POST_FIXES[slug]` so it survives future build.cjs runs.
-
-## Guardrail: source `<table>` count must equal markdown `<!-- table: -->` count
-
-Easy parity check that would have caught both the marker-escape regression and the wpdt row-deletion regression on first build: for each slug, compare `grep -c '<table' source.html` against `grep -c '<!-- table:' out.md`. Mismatch = silent content loss.
+Author is consistently `Tom Ward` for the FileFlex blog corpus. Reading time is hand-estimated, typically 5–8 min — there is no reading-time auto-calc and no need for one.
