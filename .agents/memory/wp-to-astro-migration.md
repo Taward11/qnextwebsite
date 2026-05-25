@@ -35,6 +35,14 @@ WordPress posts often place an inline image inside `<h2>` to float it next to th
 
 After image lift-out and TOC/widget removal, a `<h2>` may end up with whitespace-only content. Regex `body.replace(/^#{1,6}\s*$/gm, '')` after the turndown pass removes them.
 
+## Real hero lives OUTSIDE the body wrapper
+
+On fileflex.com, the post's actual hero/cover image sits in `.single-post-content > .content-image` — a **sibling** of `.single-post-content-text`, not a descendant. If you scrape only `.single-post-content-text` as the body, the real hero is invisible to build.cjs and its `#root img` fallback grabs the first in-body image (often an infographic meant to float right) and misuses it as the hero.
+
+**How to apply:** During extraction, read the hero from `.single-post-content > .content-image img` and either (a) prepend it as `<p><img/></p>` at the top of body.html so build.cjs picks it up, or (b) teach build.cjs to read `featured_image` from the sidecar JSON. Today's pipeline does (a).
+
+**Why:** Wrong-hero is visually obvious to the user but builds clean and passes all schema checks — easy to ship and embarrassing to catch in review.
+
 ## Hero-image strip must check text nodes, not just element children
 
 When the source places the featured image inline with body text (`<p><picture>…</picture>In today's rapidly evolving…</p>`), the hero-removal logic must NOT remove the parent `<p>` based on `p.children().length === 1` alone — `children()` is element-only and ignores text nodes, so the entire paragraph (including the body copy) gets nuked silently.
