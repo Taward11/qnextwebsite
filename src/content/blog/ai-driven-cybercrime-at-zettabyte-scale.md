@@ -16,7 +16,7 @@ toc: true
 faq: []
 ---
 
-![How attackers use AI to steal high value data](/images/blog/ai-driven-cybercrime-at-zettabyte-scale/Ed-QA-blog-infographic.webp)
+![How attackers use AI to steal high value data](/images/blog/ai-driven-cybercrime-at-zettabyte-scale/Ed-QA-blog-hero-banner.webp)
 
 *Q&A with Ed Dubrovsky, Board Advisor, Qnext*
 
