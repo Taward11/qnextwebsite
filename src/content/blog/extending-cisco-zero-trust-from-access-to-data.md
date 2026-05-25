@@ -40,8 +40,6 @@ tables:
       - ["Talos threat intelligence strengthens detection", "Detects/responds to suspicious data activity", "Enhances Cisco’s ecosystem-wide detection with data-centric visibility"]
 ---
 
-<p class="post-lede">Cisco zero trust data access is strengthened by FileFlex, which extends security to the data layer by enforcing continuous, granular file- and folder-level policies across on-premises, cloud, and hybrid environments.</p>
-
 ## Introduction: Why Data-Centric Security is Critical
 ![According to Cisco's 2024 Cybersecurity Readiness Index, only 3% of organizations globally are assessed as having a "Mature" level of cybersecurity readiness.\*](/images/blog/extending-cisco-zero-trust-from-access-to-data/Cisco-infographic.webp) In today’s complex cybersecurity landscape, organizations increasingly rely on Cisco for its industry-leading networking and security solutions. Cisco’s Universal Zero Trust Network Access (ZTNA) secures all users, devices, and applications across on-premises, cloud, and hybrid environments, providing an identity-first foundation with continuous verification and adaptive access policies. Its broader security portfolio—including Umbrella, Secure Firewall, XDR, and Talos threat intelligence—further protects endpoints, networks, and applications.
 

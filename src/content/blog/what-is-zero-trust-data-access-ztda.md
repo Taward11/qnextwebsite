@@ -26,8 +26,6 @@ faq:
     a: "Yes, FileFlex Enterprise delivers ZTDA by enabling remote, file-level access with granular permissions, continuous authentication, and full auditability—without requiring data replication or relocation."
 ---
 
-<p class="post-lede">Zero Trust Data Access (ZTDA) is a security model that provides secure access to files and folders for authorized users in a zero-trust environment.</p>
-
 ![97% of organizations are in process or planning a zero trust initiative](/images/blog/what-is-zero-trust-data-access-ztda/zero-trust-initiative-infographic-small.webp)
 
 ## Why are Organizations Adopting Zero Trust?

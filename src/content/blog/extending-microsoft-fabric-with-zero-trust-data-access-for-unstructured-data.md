@@ -49,8 +49,6 @@ tables:
       - ["Cost & Duplication Reduction", "Data replication in OneLake", "No replication, in-place access", "Reduce costs and improve data sovereignty"]
 ---
 
-<p class="post-lede">Microsoft Fabric and Zero Trust Data Access complement each other to provide comprehensive data governance across both structured and unstructured data—even when unstructured data exists outside of Fabric’s scope. While Fabric excels at analytics and insights from structured sources within the Microsoft ecosystem, FileFlex brings Zero Trust principles to unstructured data—enabling secure, identity-based access without duplicating content or ingesting it into Fabric.</p>
-
 ## Introduction: Why Microsoft Fabric Needs Zero Trust Data Access
 ![67% of Fortune 500 companies and 25,000 organizations worldwide are already using Microsoft Fabric, with 84% of users leveraging three or more workloads\*](/images/blog/extending-microsoft-fabric-with-zero-trust-data-access-for-unstructured-data/MS-Fabric-infographic.webp) Microsoft Fabric unifies structured data analytics across Power BI, Synapse, and Data Factory, but it doesn’t fully address the security and governance challenges of unstructured data and hybrid environments. That’s where Zero Trust Data Access (ZTDA) from FileFlex Enterprise comes in—extending granular, identity-based access controls, real-time telemetry, and policy enforcement to unstructured data stored on a hybrid infrastructure. This blog explores how FileFlex enhances Microsoft Fabric with Zero Trust principles to close security gaps, reduce risk, and support true end-to-end data governance.
 

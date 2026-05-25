@@ -38,8 +38,6 @@ tables:
       - ["Anomaly Detection", "User and endpoint behavior", "File access and content usage behavior", "Better detection of data-centric threats"]
 ---
 
-<p class="post-lede">Pairing FileFlex with Palo Alto’s ZTNA extends Zero Trust to unstructured data, adding granular file-level security, visibility, and compliance without rearchitecting storage.</p>
-
 ## Introduction: Why Zero Trust Must Extend Beyond Networks and Apps to Protect the Data Itself
 ![Palo Alto serves over 70,000 enterprise customers in more than 150 countries, including 85% of the Fortune 100\*](/images/blog/top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity/Palo-Alto-infographic-1.webp) As cyber threats grow more sophisticated and data breaches increasingly target sensitive unstructured data, organizations are rethinking how they implement Zero Trust. While Palo Alto Networks offers one of the most advanced cybersecurity ecosystems for securing networks, applications, and endpoints through solutions like Prisma Access, Cortex, and their ZTNA 2.0 framework, a critical layer often remains unprotected—the data itself. This is where Zero Trust Data Access (ZTDA), as delivered by FileFlex Enterprise, becomes essential. By extending Zero Trust principles to files and folders across on-premises and cloud storage, FileFlex complements and strengthens Palo Alto’s existing controls. This article explores how adding FileFlex ZTDA to Palo Alto’s cybersecurity stack enables deeper data protection, granular access control, and unified compliance visibility—ultimately helping organizations implement a true end-to-end Zero Trust architecture.  
 

@@ -38,8 +38,6 @@ tables:
       - ["Access Visibility", "Endpoint/system focused", "File-level audit and real-time monitoring"]
 ---
 
-<p class="post-lede">Microsoft’s native security tools are essential, but they weren’t built to fully protect unstructured data across hybrid environments. Zero Trust Data Access (ZTDA) addresses this gap by enforcing continuous identity verification and file-level access controls. ZTDA complements — not replaces — Microsoft-centric security, and solutions like FileFlex make it practical to deploy without changing infrastructure.</p>
-
 ## What Is Microsoft-Centric Security?
 ![Ransomware attacks on MS shops are up 275% YoY \*](/images/blog/why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access/Picture1-e1748544123867.webp)
 
