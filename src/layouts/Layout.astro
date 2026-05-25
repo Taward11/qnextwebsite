@@ -40,19 +40,21 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <link rel="shortcut icon" type="image/x-icon" href="https://fileflex.com/wp-content/uploads/2015/03/favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  {/*
+    Preconnect is reserved for the 2-3 origins on the critical render path.
+    Google PSI warns when there are more than 4 preconnects, since each one
+    holds an open socket the browser may not use. Other third-parties get
+    dns-prefetch only — cheaper and sufficient for non-render-blocking work.
+  */}
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
   {isHome && (
     <>
-      {/* --- Performance hints (homepage only) --- */}
-      {/* Open TCP/TLS connections early so first byte from these origins arrives faster */}
+      {/* Hero image origin — preconnected because the LCP image lives here */}
       <link rel="preconnect" href="https://fileflex.com" crossorigin />
+      {/* Video iframe origin — preconnected so the YT player is ready when clicked */}
       <link rel="preconnect" href="https://www.youtube-nocookie.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      {/* DNS-prefetch fallback for older browsers that don't support preconnect */}
-      <link rel="dns-prefetch" href="https://fileflex.com" />
-      <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
+      {/* Analytics is async + non-blocking → dns-prefetch is enough */}
       <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       {/* Preload the hero logo so it paints with the first frame */}
