@@ -42,7 +42,7 @@ tables:
 ---
 
 ## Introduction:  Zero Trust for Secure User Management
-![71% of CFOs believe their company's success depends on digital transformation.\*](/images/blog/why-zero-trust-data-access-user-management-is-crucial-for-it/Digital-transformation-icon.webp)  
+<img src="/images/blog/why-zero-trust-data-access-user-management-is-crucial-for-it/Digital-transformation-icon.webp" alt="71% of CFOs believe their company's success depends on digital transformation.*" style="float: right; max-width: 42%; margin: 6px 0 16px 24px; shape-outside: margin-box;" />  
 Managing user access to sensitive data has become a critical challenge in today’s increasingly complex IT environments. Traditional security models are no longer sufficient to protect against sophisticated threats, especially as organizations adopt remote work and hybrid infrastructures. This is where [Zero Trust Data Access (ZTDA)](/blog/what-is-zero-trust-data-access-ztda/) as implemented by FileFlex Enterprise comes in, offering a robust solution by funneling every access request through a central policy server. This architecture ensures that all access decisions are governed by dynamic, predefined policies, empowering IT teams with enhanced security, granular control, and comprehensive oversight. In this article, we explore how ZTDA and its policy server mechanism revolutionize user management, enabling IT to enforce security, streamline operations, and maintain compliance while adapting to the evolving demands of modern workplaces.  
 
  

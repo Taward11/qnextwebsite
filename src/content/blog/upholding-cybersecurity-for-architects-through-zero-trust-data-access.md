@@ -122,9 +122,7 @@ For architectural firms dealing with highly sensitive designs, models, and proje
     
     During project reviews, design audits, or client consultations, architects may need a virtual data room (VDR) for secure access to project documents. ZTDA acts as a secure VDR, allowing architects and stakeholders to access sensitive files with granular permissions. Only verified users can view or download specific files, and access can be revoked or dynamically adjusted. Detailed logs ensure complete visibility into who accessed what, enhancing both security and accountability.  See [Top 13 Reasons to Adopt Zero Trust Secure Virtual Data Rooms](/blog/top-13-reasons-to-adopt-zero-trust-secure-virtual-data-rooms/).
     
-6.    
-    
-    ### **Exceptional Alternative to FTP for Design Files**
+6.  ### **Exceptional Alternative to FTP for Design Files**
     
     Architectural firms frequently transfer large design files, including CAD drawings and BIM models, to other teams or external partners. Traditional FTP lacks modern security measures, making it unsuitable for sensitive architectural data. ZTDA replaces legacy FTP solutions by providing secure, encrypted file transfers that ensure only authenticated users can access the data. Files stay within the organization’s controlled environment, reducing exposure and enhancing data security.  See [24 Reasons to Use Zero Trust Data Access as an FTP Alternative](/blog/24-reasons-to-use-zero-trust-data-access-as-an-ftp-alternative/).
     

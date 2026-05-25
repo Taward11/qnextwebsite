@@ -49,7 +49,7 @@ tables:
 ![Zero Trust Data Activity Tracking is Essential](/images/blog/top-8-reasons-your-organization-needs-zero-trust-activity-tracking/Quote-35.webp)A Zero Trust Data Monitoring Log is a detailed, centralized record of all access and activity events within its software environment, designed to provide full visibility and enforce zero trust security principles. It tracks user identities, authentication attempts, resource access, and specific actions (e.g., file edits, downloads).  The log integrates with security systems to detect anomalies, flag unauthorized behavior, and provide a tamper-proof audit trail for compliance and incident response. By continuously monitoring and recording every interaction, a zero trust data monitoring log ensures accountability, enhances security, and supports regulatory adherence.
 
 ## Top 8 Benefits of Zero Trust Activity Monitoring
-![Zero Trust data activity tracking strengthens security and aids detection of threats](/images/blog/top-8-reasons-your-organization-needs-zero-trust-activity-tracking/Quote-34.jpg.webp)
+<img class="blog-prose__img--full" src="/images/blog/top-8-reasons-your-organization-needs-zero-trust-activity-tracking/Quote-34.jpg.webp" alt="Zero Trust data activity tracking strengthens security and aids detection of threats" />
 
 1.  ### **Strengthens Security and Aids Detection of Threats**
     
