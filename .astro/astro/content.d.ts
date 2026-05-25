@@ -141,6 +141,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access.md": {
+	id: "9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access.md";
+  slug: "9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "achieving-end-to-end-zero-trust-with-zscaler-and-fileflex.md": {
 	id: "achieving-end-to-end-zero-trust-with-zscaler-and-fileflex.md";
   slug: "achieving-end-to-end-zero-trust-with-zscaler-and-fileflex";
@@ -158,6 +165,20 @@ declare module 'astro:content' {
 "cloudflare-one-and-fileflex-enterprise-securing-apps-and-data-together.md": {
 	id: "cloudflare-one-and-fileflex-enterprise-securing-apps-and-data-together.md";
   slug: "cloudflare-one-and-fileflex-enterprise-securing-apps-and-data-together";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"complete-zero-trust-security-framework.md": {
+	id: "complete-zero-trust-security-framework.md";
+  slug: "complete-zero-trust-security-framework";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"dspms-and-zero-trust-data-access-a-powerful-duo-for-zero-trust-data-security.md": {
+	id: "dspms-and-zero-trust-data-access-a-powerful-duo-for-zero-trust-data-security.md";
+  slug: "dspms-and-zero-trust-data-access-a-powerful-duo-for-zero-trust-data-security";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -218,6 +239,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"modernize-on-premises-storage-with-zero-trust-data-access.md": {
+	id: "modernize-on-premises-storage-with-zero-trust-data-access.md";
+  slug: "modernize-on-premises-storage-with-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "nist-sp-1800-35-how-data-level-enforcement-strengthens-zero-trust-security.md": {
 	id: "nist-sp-1800-35-how-data-level-enforcement-strengthens-zero-trust-security.md";
   slug: "nist-sp-1800-35-how-data-level-enforcement-strengthens-zero-trust-security";
@@ -246,9 +274,37 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"the-uks-icloud-backdoor-demand-and-the-need-for-on-premises-storage-secured-by-zero-trust-data-access.md": {
+	id: "the-uks-icloud-backdoor-demand-and-the-need-for-on-premises-storage-secured-by-zero-trust-data-access.md";
+  slug: "the-uks-icloud-backdoor-demand-and-the-need-for-on-premises-storage-secured-by-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "the-zero-trust-data-gap.md": {
 	id: "the-zero-trust-data-gap.md";
   slug: "the-zero-trust-data-gap";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"the-zero-trust-maturity-model-ztmm-and-why-ztda-is-critical-to-reaching-optimal-maturity.md": {
+	id: "the-zero-trust-maturity-model-ztmm-and-why-ztda-is-critical-to-reaching-optimal-maturity.md";
+  slug: "the-zero-trust-maturity-model-ztmm-and-why-ztda-is-critical-to-reaching-optimal-maturity";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure.md": {
+	id: "top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure.md";
+  slug: "top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"top-7-advantages-of-an-overlay-service.md": {
+	id: "top-7-advantages-of-an-overlay-service.md";
+  slug: "top-7-advantages-of-an-overlay-service";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -263,6 +319,13 @@ declare module 'astro:content' {
 "what-is-zero-trust-data-access-ztda.md": {
 	id: "what-is-zero-trust-data-access-ztda.md";
   slug: "what-is-zero-trust-data-access-ztda";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"why-a-zero-trust-data-access-decentralized-data-platform-is-strategically-superior-to-centralized-cloud-file-access-sharing-and-collaboration.md": {
+	id: "why-a-zero-trust-data-access-decentralized-data-platform-is-strategically-superior-to-centralized-cloud-file-access-sharing-and-collaboration.md";
+  slug: "why-a-zero-trust-data-access-decentralized-data-platform-is-strategically-superior-to-centralized-cloud-file-access-sharing-and-collaboration";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
