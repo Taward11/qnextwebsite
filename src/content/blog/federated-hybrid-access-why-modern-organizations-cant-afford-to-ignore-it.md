@@ -95,3 +95,5 @@ Explore how FileFlex Enterprise can secure your hybrid IT environment. Request a
 For further reading see [The Zero Trust Data Gap](/blog/the-zero-trust-data-gap/), [From VPN Risk to Zero Trust Security: A Smarter Approach to Remote Access](/blog/from-vpn-risk-to-zero-trust-security-a-smarter-approach-to-remote-access/) and [How to Make Your Hybrid-IT and Infrastructure-as-a-Service Environment Easier for Your Users](/blog/how-to-make-your-multi-cloud-and-infrastructure-as-a-service-environment-easier-for-your-users/).
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+
+\*[Pump](https://www.pump.co/blog/hybrid-cloud-statistics)
