@@ -50,4 +50,6 @@ Our next blog will highlight some of the benefits in detail of using FileFlex En
 
 **Watch the Webinar:**
 
+<div class="blog-prose__video"><iframe src="https://www.brighttalk.com/embed/18522/448625/player" title="Extending Office 365 Functionality into a Hybrid-IT Infrastructure" loading="lazy" allow="encrypted-media" allowfullscreen></iframe></div>
+
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)

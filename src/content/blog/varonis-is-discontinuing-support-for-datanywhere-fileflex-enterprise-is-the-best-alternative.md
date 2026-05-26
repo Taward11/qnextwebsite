@@ -24,7 +24,7 @@ Organizations store massive amounts of information on servers, server-attached s
 
 The problem is that file-share technologies were originally launched in the late 90s, before the rise of mobile devices and distributed workforces. At that time most users worked in an office and were plugged into the network. Mobile devices like we have today did not exist. VPNs were around, but were generally only for senior management.
 
-Today users work from anywhere – home, restaurant, airport – and organizations hire workers who ![](/images/blog/varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative/Picture1.webp) are located anywhere in the world. These workers don’t connect over the internal network, they connect via the internet. Organizations needed to provide tools to enable modern distributed workforce efficiencies.
+Today users work from anywhere – home, restaurant, airport – and organizations hire workers who <img class="blog-prose__img--float-right" src="/images/blog/varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative/Picture1.webp" alt="" /> are located anywhere in the world. These workers don’t connect over the internal network, they connect via the internet. Organizations needed to provide tools to enable modern distributed workforce efficiencies.
 
 ### DatAnywhere provided cloud functionality to on-premises file servers
 
@@ -33,7 +33,7 @@ Organizations choose DatAnywhere primarily because it provided cloud functionali
 ## How Varonis DatAnywhere and FileFlex Enterprise are alike
 ### FileFlex Enterprise also adds cloud functionality to on-premises file servers
 
-FileFlex Enterprise completely fulfills the value proposition of Varonis DatAnywhere![](/images/blog/varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative/Picture4.webp) – the ability to add cloud functionality to on-premises file shares (file servers).   Like DatAnywhere, FileFlex Enterprise provides secure access to files stored on the organization’s servers and NAS devices from remote computers, tablets, and smartphones. It provides sharing of these files with external parties.
+FileFlex Enterprise completely fulfills the value proposition of Varonis DatAnywhere<img class="blog-prose__img--float-right" src="/images/blog/varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative/Picture4.webp" alt="" /> – the ability to add cloud functionality to on-premises file shares (file servers).   Like DatAnywhere, FileFlex Enterprise provides secure access to files stored on the organization’s servers and NAS devices from remote computers, tablets, and smartphones. It provides sharing of these files with external parties.
 
 ### FileFlex Enterprise also allows the creation of virtual data rooms
 
@@ -52,7 +52,7 @@ It puts file sharing under IT control and since access is subject to user authen
 
 ### FileFlex Enterprise adds Intel SGX hardware hardening
 
-FileFlex Enterprise is the only solution that has the option of using Intel<sup>®</sup> SGX platform hardened ![](/images/blog/varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative/Picture3.webp) secure enclaves for encryption key generation to provide added protection at the deepest level – within the silicon itself – and provide added protection against shared data being snooped or tampered with at any stage of access or transmission. – even if the system is compromised.
+FileFlex Enterprise is the only solution that has the option of using Intel<sup>®</sup> SGX platform hardened <img class="blog-prose__img--float-right" src="/images/blog/varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative/Picture3.webp" alt="" /> secure enclaves for encryption key generation to provide added protection at the deepest level – within the silicon itself – and provide added protection against shared data being snooped or tampered with at any stage of access or transmission. – even if the system is compromised.
 
 ### FileFlex Enterprise brings layered security
 
@@ -61,7 +61,7 @@ Combining Intel SGX with the decentralized architecture, secure platform, secure
 ## Summary
 Varonis DatAnywhere users who migrate over to FileFlex Enterprise receive the following:
 
--   Remote access, sharing, streaming, remote editing, and file management of on-premises file shares ![](/images/blog/varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative/Picture5.webp) without building or maintaining a private cloud
+-   Remote access, sharing, streaming, remote editing, and file management of on-premises file shares <img class="blog-prose__img--float-right" src="/images/blog/varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative/Picture5.webp" alt="" /> without building or maintaining a private cloud
 -   Ability to add cloud functionality to all company storage, not just file servers
 -   Ability to add cloud functionality to file servers located with Infrastructure-as-a-Service providers such as Amazon AWS, Microsoft Azure, and Google Cloud
 -   Ability to remotely access, share and remotely edit SharePoint files and document libraries
