@@ -59,7 +59,7 @@ Zero Trust Data Access (ZTDA) as implemented by FileFlex Enterprise can help the
 
 1.  ### **Strengthens DoD Governance:**
     
-    -   Granular access controls and policy decision points for unstructured data provided by Zero Trust Data Access can support the development of regulations governing cybersecurity responsibilities, enhancing interagency collaboration and compliance with DoD governance structures. See [Embracing Zero Trust Data Access for IT-Controlled Chain-of-Command](https://fileflex.com/blog/embracing-zero-trust-data-access-for-it-controlled-chain-of-command/).
+    -   Granular access controls and policy decision points for unstructured data provided by Zero Trust Data Access can support the development of regulations governing cybersecurity responsibilities, enhancing interagency collaboration and compliance with DoD governance structures. See [Embracing Zero Trust Data Access for IT-Controlled Chain-of-Command](/blog/embracing-zero-trust-data-access-for-it-controlled-chain-of-command/).
 2.  ### **Enhances Cybersecurity Posture**:
     
     -   A Zero Trust Data Access architecture, including AES256 end-to-end encryption, helps evaluate and improve the cybersecurity posture of the DIB by ensuring that sensitive information is protected from unauthorized access, thereby aiding in compliance with DoD’s cybersecurity requirements. See [CMMC Compliance for File Sharing, Access and Collaboration of CUI Using Zero Trust Data Access](/blog/cmmc-compliance-for-file-sharing-access-and-collaboration-of-cui-using-zero-trust-data-access/).

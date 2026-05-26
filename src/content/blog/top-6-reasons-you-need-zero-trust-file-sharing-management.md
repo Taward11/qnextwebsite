@@ -140,7 +140,7 @@ By implementing ZTDA principles, organizations gain the ability to minimize risk
 
 Ultimately, adopting Zero Trust for file-sharing management is not just a proactive security measure; it is a business imperative that positions organizations for long-term success in a highly connected and data-driven world.
 
-For related articles see [Why Zero Trust Data Access User Management is Crucial for IT](/blog/why-zero-trust-data-access-user-management-is-crucial-for-it/), [Top 8 Reasons Your Organization Needs Zero Trust Activity Tracking](/blog/top-8-reasons-your-organization-needs-zero-trust-activity-tracking/),  [Top 8 Reasons for Zero Trust Storage Management](/blog/top-8-reasons-for-zero-trust-storage-management/) and [Embracing Zero Trust Data Access for IT-Controlled Chain-of-Command](https://fileflex.com/blog/embracing-zero-trust-data-access-for-it-controlled-chain-of-command/).
+For related articles see [Why Zero Trust Data Access User Management is Crucial for IT](/blog/why-zero-trust-data-access-user-management-is-crucial-for-it/), [Top 8 Reasons Your Organization Needs Zero Trust Activity Tracking](/blog/top-8-reasons-your-organization-needs-zero-trust-activity-tracking/),  [Top 8 Reasons for Zero Trust Storage Management](/blog/top-8-reasons-for-zero-trust-storage-management/) and [Embracing Zero Trust Data Access for IT-Controlled Chain-of-Command](/blog/embracing-zero-trust-data-access-for-it-controlled-chain-of-command/).
 
 \*[Computerworld](https://www.computerworld.com/article/1621655/some-scary-for-some-statistics-around-file-sharing-usage.html)
 

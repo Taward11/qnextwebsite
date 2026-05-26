@@ -204,9 +204,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access.md": {
+	id: "dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access.md";
+  slug: "dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "dspms-and-zero-trust-data-access-a-powerful-duo-for-zero-trust-data-security.md": {
 	id: "dspms-and-zero-trust-data-access-a-powerful-duo-for-zero-trust-data-security.md";
   slug: "dspms-and-zero-trust-data-access-a-powerful-duo-for-zero-trust-data-security";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"embracing-zero-trust-data-access-for-it-controlled-chain-of-command.md": {
+	id: "embracing-zero-trust-data-access-for-it-controlled-chain-of-command.md";
+  slug: "embracing-zero-trust-data-access-for-it-controlled-chain-of-command";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -260,6 +274,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"gdpr-compliant-file-sharing-using-zero-trust-data-access.md": {
+	id: "gdpr-compliant-file-sharing-using-zero-trust-data-access.md";
+  slug: "gdpr-compliant-file-sharing-using-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "hippa-compliant-file-sharing.md": {
 	id: "hippa-compliant-file-sharing.md";
   slug: "hippa-compliant-file-sharing";
@@ -270,6 +291,13 @@ declare module 'astro:content' {
 "how-to-enforce-zero-trust-access-control-to-mitigate-data-breach-and-ransomware.md": {
 	id: "how-to-enforce-zero-trust-access-control-to-mitigate-data-breach-and-ransomware.md";
   slug: "how-to-enforce-zero-trust-access-control-to-mitigate-data-breach-and-ransomware";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"how-zero-trust-data-access-cuts-costs-in-organizational-operations.md": {
+	id: "how-zero-trust-data-access-cuts-costs-in-organizational-operations.md";
+  slug: "how-zero-trust-data-access-cuts-costs-in-organizational-operations";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -459,6 +487,13 @@ declare module 'astro:content' {
 "why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access.md": {
 	id: "why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access.md";
   slug: "why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"why-organizations-need-zero-trust-data-access-as-a-managed-file-transfer-alternative.md": {
+	id: "why-organizations-need-zero-trust-data-access-as-a-managed-file-transfer-alternative.md";
+  slug: "why-organizations-need-zero-trust-data-access-as-a-managed-file-transfer-alternative";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

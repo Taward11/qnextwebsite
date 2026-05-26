@@ -83,8 +83,8 @@ Using Illumio Core to prevent direct access to sensitive data repositories and p
 3.  ### **Policy Creation and Enforcement**
     
 
--   **Granular Policies:** IT managers can create and enforce detailed access policies based on user roles and permissions, enhancing data governance. See [Embracing Zero Trust Data Access for IT-Controlled Chain-of-Command](https://fileflex.com/blog/embracing-zero-trust-data-access-for-it-controlled-chain-of-command/)
--   **Compliance and Auditing:** The integration aids in meeting regulatory requirements through extensive auditing and reporting capabilities. See [Using Zero Trust Data Access for NIST Compliance](/blog/using-zero-trust-data-access-for-nist-compliance/), [CMMC Compliance for File Sharing, Access and Collaboration of CUI Using Zero Trust Data Access](/blog/cmmc-compliance-for-file-sharing-access-and-collaboration-of-cui-using-zero-trust-data-access/), and [GDPR Compliant File Sharing Using Zero Trust Data Access](https://fileflex.com/blog/gdpr-compliant-file-sharing-using-zero-trust-data-access/)
+-   **Granular Policies:** IT managers can create and enforce detailed access policies based on user roles and permissions, enhancing data governance. See [Embracing Zero Trust Data Access for IT-Controlled Chain-of-Command](/blog/embracing-zero-trust-data-access-for-it-controlled-chain-of-command/)
+-   **Compliance and Auditing:** The integration aids in meeting regulatory requirements through extensive auditing and reporting capabilities. See [Using Zero Trust Data Access for NIST Compliance](/blog/using-zero-trust-data-access-for-nist-compliance/), [CMMC Compliance for File Sharing, Access and Collaboration of CUI Using Zero Trust Data Access](/blog/cmmc-compliance-for-file-sharing-access-and-collaboration-of-cui-using-zero-trust-data-access/), and [GDPR Compliant File Sharing Using Zero Trust Data Access](/blog/gdpr-compliant-file-sharing-using-zero-trust-data-access/)
 
 4.  ### **Operational Efficiency**
     

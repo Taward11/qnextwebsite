@@ -3,6 +3,18 @@ name: WP→Astro blog migration pipeline
 description: Durable rules and gotchas for `.local/scrape/build.cjs` when migrating fileflex.com WordPress posts into the Astro content collection.
 ---
 
+## extract_batch.cjs takes slugs from argv
+
+As of 2026-05-26, `.local/scrape/extract_batch.cjs` reads slugs from `process.argv.slice(2)` instead of a hardcoded array. Invoke per batch like `node .local/scrape/extract_batch.cjs slug1 slug2 …`; no edits needed between batches.
+
+## Two-digit list items render as code blocks
+
+WordPress→markdown frequently emits the 10th/11th/12th… items of a numbered list as `N.    \n     \n     ### **Heading:**\n     \n     -   body` (a bare numeric marker, then blank-indented continuation lines). micromark treats the 4–5 space indent as a code block, so the heading and body land inside `<pre><code>`. Single-digit items in the same list usually come out fine as `N.  ### **Heading:**` (heading inline).
+
+**Fix:** add a POST_FIXES entry that collapses the broken item to the inline form — e.g. replace `'11.    \n     \n     ### **X:**'` with `'11.  ### **X:**'`. Same shape as the earlier "empty `1.  ` then 4-space-indented `###`" trap; both are flavors of "bare marker + indented heading → code block."
+
+**How to apply:** after each migration batch, grep new posts for `^[0-9]{2}\.[[:space:]]*$` followed by blank/indented lines, or just preview any post with >9 numbered items.
+
 ## Pipeline order is fixed; legacy files must be re-restored every build
 
 `build.cjs` writes every slug in `META` to `src/content/blog/<slug>.md` unconditionally, overwriting anything already there. A handful of legacy posts contain hand-edited Markdown that does not live in the scrape sources (no entry in `body2/`, or content that pre-dates the scraper). After every `node .local/scrape/build.cjs` run, restore those files with `git show HEAD:<path> > <path>` before running `npm run build`.
