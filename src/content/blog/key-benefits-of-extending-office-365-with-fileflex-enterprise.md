@@ -103,4 +103,6 @@ I have highlighted below the many benefits of extending your implementation of O
 
 **Watch the Webinar:**
 
+<div class="blog-prose__video"><iframe src="https://www.brighttalk.com/embed/18522/448625/player" title="Key Benefits of Extending Office 365 with FileFlex Enterprise" loading="lazy" allow="encrypted-media" allowfullscreen></iframe></div>
+
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
