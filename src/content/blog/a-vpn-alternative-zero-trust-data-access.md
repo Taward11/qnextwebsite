@@ -82,8 +82,7 @@ A zero trust data access architecture is designed to:
 Like a VPN zero trust data access establishes encrypted connections between remote employees’ devices and a centralized corporate network over the Internet, however, the connection is made through a zero trust architecture that does not allow direct access to resources.  It goes beyond a VPN in that it also provides access to cloud-hosted repositories, FTP repositories, SharePoint repositories, and on-premises storage over multiple domains.  Like a VPN, employees can connect to their corporate resources from anywhere with internet access, however, their access can be controlled and restricted by management according to Least Privilege Principles and IT chain-of-command.  It also provides file-sharing capability and because all actions are controlled by a zero trust server, all actions are recorded for forensic investigation and for output to the SIEM to detect ransomware attacks in process.
 ![ZTDA Architecture](/images/blog/a-vpn-alternative-zero-trust-data-access/ZTDA-Architecture.webp)
 
-Diagram 1  
-The Zero Trust Data Access Architecture
+<p class="blog-prose__caption--center"><em>Diagram 1<br />The Zero Trust Data Access Architecture</em></p>
 
 ## 19 Advantages of the Zero Trust Data Access VPN Alternative
 Zero Trust Data Access (ZTDA) as implemented by FileFlex Enterprise offers a modern and superior VPN alternative. By rethinking the way organizations grant access to their data and resources, ZTDA provides solutions that mitigate the complexities and limitations associated with VPNs:
