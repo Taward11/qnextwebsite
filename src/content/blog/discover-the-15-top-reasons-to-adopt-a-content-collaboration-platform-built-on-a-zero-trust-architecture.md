@@ -95,7 +95,7 @@ The distinctions between the two can be succinctly summarized as follows:
     
     -   It is beyond the scope of first-generation platforms to reduce the risk of ransomware. Zero Trust Data Access however provides access controls, constraints on lateral movement, and activity monitoring designed to detect and reduce the risk of ransomware attacks.
 
-To understand more read [File Sharing and Collaboration Evolution from First Generation Platforms to Zero Trust Data Access](https://fileflex.com/blog/file-sharing-and-collaboration-evolution-from-first-generation-platforms-to-zero-trust-data-access/).
+To understand more read [File Sharing and Collaboration Evolution from First Generation Platforms to Zero Trust Data Access](/blog/file-sharing-and-collaboration-evolution-from-first-generation-platforms-to-zero-trust-data-access/).
 
 ## Top 15 Reasons to Adopt a Secure Enterprise Content Collaboration Platform Built on a Zero Trust Architecture
 A secure enterprise content collaboration platform (document collaboration platform) built on a zero-trust architecture offers enhanced security and several benefits for organizations over traditional cloud-based enterprise content collaboration (document collaboration):

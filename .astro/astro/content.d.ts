@@ -232,6 +232,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"data-governance-cybersecurity-and-zero-trust-data-access-the-essential-pillars-to-protect-data-assets.md": {
+	id: "data-governance-cybersecurity-and-zero-trust-data-access-the-essential-pillars-to-protect-data-assets.md";
+  slug: "data-governance-cybersecurity-and-zero-trust-data-access-the-essential-pillars-to-protect-data-assets";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture.md": {
 	id: "discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture.md";
   slug: "discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture";
@@ -302,6 +309,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"file-sharing-and-collaboration-evolution-from-first-generation-platforms-to-zero-trust-data-access.md": {
+	id: "file-sharing-and-collaboration-evolution-from-first-generation-platforms-to-zero-trust-data-access.md";
+  slug: "file-sharing-and-collaboration-evolution-from-first-generation-platforms-to-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "fortifying-cyber-defense-via-zero-trust-data-access-the-recent-goanywhere-and-moveit-ransomware-breaches.md": {
 	id: "fortifying-cyber-defense-via-zero-trust-data-access-the-recent-goanywhere-and-moveit-ransomware-breaches.md";
   slug: "fortifying-cyber-defense-via-zero-trust-data-access-the-recent-goanywhere-and-moveit-ransomware-breaches";
@@ -319,6 +333,13 @@ declare module 'astro:content' {
 "gdpr-compliant-file-sharing-using-zero-trust-data-access.md": {
 	id: "gdpr-compliant-file-sharing-using-zero-trust-data-access.md";
   slug: "gdpr-compliant-file-sharing-using-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"higher-education-institutions-bolster-data-security-with-zero-trust-data-access.md": {
+	id: "higher-education-institutions-bolster-data-security-with-zero-trust-data-access.md";
+  slug: "higher-education-institutions-bolster-data-security-with-zero-trust-data-access";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -361,6 +382,13 @@ declare module 'astro:content' {
 "modernize-on-premises-storage-with-zero-trust-data-access.md": {
 	id: "modernize-on-premises-storage-with-zero-trust-data-access.md";
   slug: "modernize-on-premises-storage-with-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"network-file-access-control-of-unstructured-data-with-zero-trust-data-access.md": {
+	id: "network-file-access-control-of-unstructured-data-with-zero-trust-data-access.md";
+  slug: "network-file-access-control-of-unstructured-data-with-zero-trust-data-access";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -564,6 +592,13 @@ declare module 'astro:content' {
 "why-organizations-need-zero-trust-data-access-as-a-managed-file-transfer-alternative.md": {
 	id: "why-organizations-need-zero-trust-data-access-as-a-managed-file-transfer-alternative.md";
   slug: "why-organizations-need-zero-trust-data-access-as-a-managed-file-transfer-alternative";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"why-you-need-zero-trust-data-access-micro-segmentation.md": {
+	id: "why-you-need-zero-trust-data-access-micro-segmentation.md";
+  slug: "why-you-need-zero-trust-data-access-micro-segmentation";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
