@@ -52,8 +52,8 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
     <>
       {/* Hero image origin — preconnected because the LCP image lives here */}
       <link rel="preconnect" href="https://fileflex.com" crossorigin />
-      {/* Video iframe origin — preconnected so the YT player is ready when clicked */}
-      <link rel="preconnect" href="https://www.youtube-nocookie.com" />
+      {/* YT iframe only loads on click — dns-prefetch is enough, preconnect would hold an unused socket */}
+      <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
       {/* Analytics is async + non-blocking → dns-prefetch is enough */}
       <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       <link rel="dns-prefetch" href="https://www.google-analytics.com" />
