@@ -52,7 +52,7 @@ It is important to note here that in order to enjoy the following benefits of ze
 
 By embracing a Zero Trust Data Access platform such as FileFlex Enterprise, organizations can fortify their network security, protect critical files and folders, and address the limitations of traditional perimeter-based defenses. ZTDA’s granular access controls, reduced attack surface, compliance alignment, adaptability and ability to mitigate ransomware make it a compelling choice for safeguarding on-premises access to files and folders in today’s dynamic threat landscape.
 
-To learn more, check out our other blogs [How FileFlex Can Facilitate Secure and Controlled Network Access of Files and Folders](/blog/network-access-secure-and-controlled-via-zero-trust-data-access/), [Why Your Zero Trust Security Model Must Include Zero Trust Data Access](/blog/zero-trust-security-model-must-include-zero-trust-data-access-ztda/), and  [How to Reduce the Risk of Ransomware with the Zero Trust Platform of FileFlex Enterprise](https://fileflex.com/blog/how-to-reduce-the-risk-of-ransomware-with-zero-trust/).
+To learn more, check out our other blogs [How FileFlex Can Facilitate Secure and Controlled Network Access of Files and Folders](/blog/network-access-secure-and-controlled-via-zero-trust-data-access/), [Why Your Zero Trust Security Model Must Include Zero Trust Data Access](/blog/zero-trust-security-model-must-include-zero-trust-data-access-ztda/), and  [How to Reduce the Risk of Ransomware with the Zero Trust Platform of FileFlex Enterprise](/blog/how-to-reduce-the-risk-of-ransomware-with-zero-trust/).
 
 \*[Cybersecurity Ventures](https://cybersecurityventures.com/stats/)
 

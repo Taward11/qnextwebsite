@@ -400,6 +400,20 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"how-to-reduce-the-risk-of-ransomware-with-zero-trust.md": {
+	id: "how-to-reduce-the-risk-of-ransomware-with-zero-trust.md";
+  slug: "how-to-reduce-the-risk-of-ransomware-with-zero-trust";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"how-to-securely-share-data.md": {
+	id: "how-to-securely-share-data.md";
+  slug: "how-to-securely-share-data";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "how-zero-trust-data-access-cuts-costs-in-organizational-operations.md": {
 	id: "how-zero-trust-data-access-cuts-costs-in-organizational-operations.md";
   slug: "how-zero-trust-data-access-cuts-costs-in-organizational-operations";
@@ -410,6 +424,13 @@ declare module 'astro:content' {
 "hyperscaler-cloud-providers-and-the-data-layer-gap-extending-security-with-file-level-control.md": {
 	id: "hyperscaler-cloud-providers-and-the-data-layer-gap-extending-security-with-file-level-control.md";
   slug: "hyperscaler-cloud-providers-and-the-data-layer-gap-extending-security-with-file-level-control";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"implement-zero-trust-security-avoid-this-nightmare-a-true-account.md": {
+	id: "implement-zero-trust-security-avoid-this-nightmare-a-true-account.md";
+  slug: "implement-zero-trust-security-avoid-this-nightmare-a-true-account";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -463,9 +484,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"ransomware-unstructured-data-double-trouble.md": {
+	id: "ransomware-unstructured-data-double-trouble.md";
+  slug: "ransomware-unstructured-data-double-trouble";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "regulatory-compliance-in-the-digital-age-unveiling-quebec-bill-64-and-how-fileflex-enterprise-can-help.md": {
 	id: "regulatory-compliance-in-the-digital-age-unveiling-quebec-bill-64-and-how-fileflex-enterprise-can-help.md";
   slug: "regulatory-compliance-in-the-digital-age-unveiling-quebec-bill-64-and-how-fileflex-enterprise-can-help";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"replace-your-ftp-with-zero-trust-data-access-ztda.md": {
+	id: "replace-your-ftp-with-zero-trust-data-access-ztda.md";
+  slug: "replace-your-ftp-with-zero-trust-data-access-ztda";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -725,6 +760,13 @@ declare module 'astro:content' {
 "zero-trust-security-model-must-include-zero-trust-data-access-ztda.md": {
 	id: "zero-trust-security-model-must-include-zero-trust-data-access-ztda.md";
   slug: "zero-trust-security-model-must-include-zero-trust-data-access-ztda";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"ztna-ztaa-and-ztda-a-deep-dive.md": {
+	id: "ztna-ztaa-and-ztda-a-deep-dive.md";
+  slug: "ztna-ztaa-and-ztda-a-deep-dive";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

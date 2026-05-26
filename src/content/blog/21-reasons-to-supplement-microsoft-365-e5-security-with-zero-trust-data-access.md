@@ -107,7 +107,7 @@ Here are 21 reasons why an organization might want to incorporate Zero Trust pri
      
 22.  ### **Superior to VPN for Remote and External Users:**
      
-     -   Most companies use some form of a VPN to enable on-prem access for E5 network access for remote users as well as for external users. ZTDA can eliminate this need and alleviate the burden on maintaining and managing these additional network connections that are not as secure. For more details see “[Why Replacing FTP with ZTDA is a No-Brainer](https://fileflex.com/blog/replace-your-ftp-with-zero-trust-data-access-ztda/)”.
+     -   Most companies use some form of a VPN to enable on-prem access for E5 network access for remote users as well as for external users. ZTDA can eliminate this need and alleviate the burden on maintaining and managing these additional network connections that are not as secure. For more details see “[Why Replacing FTP with ZTDA is a No-Brainer](/blog/replace-your-ftp-with-zero-trust-data-access-ztda/)”.
 
 ## Summary – Elevating Microsoft 365 E5 Security with Zero Trust Data Access Capabilities
 The article emphasizes the advantages of integrating Zero Trust Data Access (ZTDA) capabilities, specifically as implemented by FileFlex Enterprise, into Microsoft 365 E5 security, particularly for remote and external users. By embracing ZTDA principles, organizations can elevate their security posture, reduce the risk of data breaches, enhance regulatory compliance, mitigate insider threats, simplify management, and streamline access controls, among other benefits, ultimately fortifying their data protection and access management efforts within the Microsoft ecosystem.

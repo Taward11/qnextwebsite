@@ -51,7 +51,7 @@ This article is the last in a series of 5 from TAG Cyber on Understanding Zero T
 
 The TAG Cyber analyst team has worked with Qnext to review its ZTDA design and has concluded that it compares favorably with the objectives of the model for corporate cyber risk reduction.
 
-In Article 1, TAG Cyber CEO  Ed Amoroso examines “[How To Securely Share Data](https://fileflex.com/blog/how-to-securely-share-data/)?”.  In Article 2, TAG Cyber’s Chirs Wilder looks at the [risks associated with unstructured data](/blog/risks-to-unstructured-data/).  In Article 3, TAG Cyber’s Ed Amoroso expands on this theme to outline [zero trust access method](/blog/zero-trust-data-access-methods/)s and how zero trust data access might work at the file and folder level for customers. Article 4 from Dr. Amoroo is [an overview of the FileFlex commercial platform](/blog/the-fileflex-enterprise-commercial-platform-for-zero-trust-data-access/) for zero trust data access.
+In Article 1, TAG Cyber CEO  Ed Amoroso examines “[How To Securely Share Data](/blog/how-to-securely-share-data/)?”.  In Article 2, TAG Cyber’s Chirs Wilder looks at the [risks associated with unstructured data](/blog/risks-to-unstructured-data/).  In Article 3, TAG Cyber’s Ed Amoroso expands on this theme to outline [zero trust access method](/blog/zero-trust-data-access-methods/)s and how zero trust data access might work at the file and folder level for customers. Article 4 from Dr. Amoroo is [an overview of the FileFlex commercial platform](/blog/the-fileflex-enterprise-commercial-platform-for-zero-trust-data-access/) for zero trust data access.
 
 Copyright © 2022 TAG Cyber LLC
 
