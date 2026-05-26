@@ -48,7 +48,6 @@
   text-decoration-thickness: 2px;
 }
 #chg-hero h1 {
-  font-family: var(--pf-font-display, 'Syne', sans-serif);
   font-size: clamp(34px, 4.25vw, 58px);
   font-weight: 700;
   line-height: 1.05;
@@ -182,7 +181,6 @@
   margin-left: auto;
 }
 .chg-spot__copy h2 {
-  font-family: var(--pf-font-display, 'Syne', sans-serif);
   font-size: clamp(27px, 3.4vw, 44px);
   font-weight: 600;
   line-height: 1.1;
@@ -295,7 +293,6 @@
   margin: 0 0 16px;
 }
 #chg-enter h2 {
-  font-family: var(--pf-font-display, 'Syne', sans-serif);
   font-size: clamp(27px, 3.4vw, 44px);
   font-weight: 600;
   letter-spacing: -0.025em;
