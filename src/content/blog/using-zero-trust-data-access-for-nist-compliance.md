@@ -95,7 +95,7 @@ Here’s a summary of key considerations based on NIST’s recommendations:
     -   Define and enforce access control policies tailored to the organization’s risk management strategy and regulatory obligations. Establish clear policies and procedures for user access, sharing, and collaboration of unstructured data, and regularly review and update them to address evolving threats and compliance requirements.
 
 ## Why a Zero Trust Architecture Matters for NIST Compliance
-A Zero Trust Architecture (ZTA) aligns closely with the cybersecurity standards outlined by NIST and in particular the principles outlined in NIST SP-800-171v2, specifically emphasizing zero trust access control. (See [How to Meet NIST Guidelines for Zero Trust for Remote Data Access](https://fileflex.com/blog/nist-sp-800-171v2-access-control-practices-for-remote-data-access-2/).)
+A Zero Trust Architecture (ZTA) aligns closely with the cybersecurity standards outlined by NIST and in particular the principles outlined in NIST SP-800-171v2, specifically emphasizing zero trust access control. (See [How to Meet NIST Guidelines for Zero Trust for Remote Data Access](/blog/nist-sp-800-171v2-access-control-practices-for-remote-data-access-2/).)
 
 Within this framework, a central server plays a critical role in verifying user identities and authenticating permissions. Instead of allowing direct access to the original resource location, requested files are delivered after verification and authentication by the server. This is illustrated in Diagram 1, a simplified zero-trust architecture.
 

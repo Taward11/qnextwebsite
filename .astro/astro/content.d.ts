@@ -393,9 +393,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"how-fileflex-enterprise-helps-dod-contractors-meet-cmmc-best-practices-for-access-control.md": {
+	id: "how-fileflex-enterprise-helps-dod-contractors-meet-cmmc-best-practices-for-access-control.md";
+  slug: "how-fileflex-enterprise-helps-dod-contractors-meet-cmmc-best-practices-for-access-control";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "how-to-enforce-zero-trust-access-control-to-mitigate-data-breach-and-ransomware.md": {
 	id: "how-to-enforce-zero-trust-access-control-to-mitigate-data-breach-and-ransomware.md";
   slug: "how-to-enforce-zero-trust-access-control-to-mitigate-data-breach-and-ransomware";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"how-to-protect-your-data-with-zero-trust-data-access-ztda.md": {
+	id: "how-to-protect-your-data-with-zero-trust-data-access-ztda.md";
+  slug: "how-to-protect-your-data-with-zero-trust-data-access-ztda";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -421,6 +435,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"how-zero-trust-security-promises-to-cast-a-wide-net-on-spear-phishers.md": {
+	id: "how-zero-trust-security-promises-to-cast-a-wide-net-on-spear-phishers.md";
+  slug: "how-zero-trust-security-promises-to-cast-a-wide-net-on-spear-phishers";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "hyperscaler-cloud-providers-and-the-data-layer-gap-extending-security-with-file-level-control.md": {
 	id: "hyperscaler-cloud-providers-and-the-data-layer-gap-extending-security-with-file-level-control.md";
   slug: "hyperscaler-cloud-providers-and-the-data-layer-gap-extending-security-with-file-level-control";
@@ -431,6 +452,13 @@ declare module 'astro:content' {
 "implement-zero-trust-security-avoid-this-nightmare-a-true-account.md": {
 	id: "implement-zero-trust-security-avoid-this-nightmare-a-true-account.md";
   slug: "implement-zero-trust-security-avoid-this-nightmare-a-true-account";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"key-benefits-of-extending-office-365-with-fileflex-enterprise.md": {
+	id: "key-benefits-of-extending-office-365-with-fileflex-enterprise.md";
+  slug: "key-benefits-of-extending-office-365-with-fileflex-enterprise";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -470,9 +498,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access.md": {
+	id: "nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access.md";
+  slug: "nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "nist-sp-1800-35-how-data-level-enforcement-strengthens-zero-trust-security.md": {
 	id: "nist-sp-1800-35-how-data-level-enforcement-strengthens-zero-trust-security.md";
   slug: "nist-sp-1800-35-how-data-level-enforcement-strengthens-zero-trust-security";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"nist-sp-800-171v2-access-control-practices-for-remote-data-access-2.md": {
+	id: "nist-sp-800-171v2-access-control-practices-for-remote-data-access-2.md";
+  slug: "nist-sp-800-171v2-access-control-practices-for-remote-data-access-2";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -666,6 +708,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"using-zero-trust-architecture-zta-to-protect-remote-data-access.md": {
+	id: "using-zero-trust-architecture-zta-to-protect-remote-data-access.md";
+  slug: "using-zero-trust-architecture-zta-to-protect-remote-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "using-zero-trust-data-access-for-nist-compliance.md": {
 	id: "using-zero-trust-data-access-for-nist-compliance.md";
   slug: "using-zero-trust-data-access-for-nist-compliance";
@@ -722,6 +771,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"why-zero-trust-and-why-now.md": {
+	id: "why-zero-trust-and-why-now.md";
+  slug: "why-zero-trust-and-why-now";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "why-zero-trust-data-access-user-management-is-crucial-for-it.md": {
 	id: "why-zero-trust-data-access-user-management-is-crucial-for-it.md";
   slug: "why-zero-trust-data-access-user-management-is-crucial-for-it";
@@ -757,9 +813,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"zero-trust-remote-access-helps-protect-data-against-internal-security-threats.md": {
+	id: "zero-trust-remote-access-helps-protect-data-against-internal-security-threats.md";
+  slug: "zero-trust-remote-access-helps-protect-data-against-internal-security-threats";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "zero-trust-security-model-must-include-zero-trust-data-access-ztda.md": {
 	id: "zero-trust-security-model-must-include-zero-trust-data-access-ztda.md";
   slug: "zero-trust-security-model-must-include-zero-trust-data-access-ztda";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"ztda-zero-trust-data-access.md": {
+	id: "ztda-zero-trust-data-access.md";
+  slug: "ztda-zero-trust-data-access";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

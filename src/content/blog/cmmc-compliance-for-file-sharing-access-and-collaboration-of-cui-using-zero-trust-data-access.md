@@ -77,10 +77,10 @@ In the exchange of CUI documents, ZTDA aligns with common industry practices to 
   
 Implementing a Zero Trust Data Access can significantly aid in meeting compliance requirements outlined in the Cybersecurity Maturity Model Certification (CMMC) by enhancing the security and resilience of contractor’s IT systems and operations. Zero Trust is a cybersecurity model centered on the principle of not automatically trusting any user or device inside or outside a network. Users must be verified, and specific access requests must be authorized before granting access.
 
-For more information on the Access Control Requirements of CMMC and how Zero Trust can be used to meet those requirements see [How to Use Zero Trust to Meet CMMC Access Control Practices for Remote Data Access.](https://fileflex.com/blog/how-fileflex-enterprise-helps-dod-contractors-meet-cmmc-best-practices-for-access-control/)
+For more information on the Access Control Requirements of CMMC and how Zero Trust can be used to meet those requirements see [How to Use Zero Trust to Meet CMMC Access Control Practices for Remote Data Access.](/blog/how-fileflex-enterprise-helps-dod-contractors-meet-cmmc-best-practices-for-access-control/)
 
 ## Why a Zero Trust Architecture Matters for CMMC Compliance
-Implementing a Zero Trust Architecture (ZTA) is crucial for meeting CMMC compliance standards. This architectural framework aligns closely with the principles outlined in NIST SP-800-171v2, specifically emphasizing zero trust access control. (See [How to Meet NIST Guidelines for Zero Trust for Remote Data Access](https://fileflex.com/blog/nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access/).)
+Implementing a Zero Trust Architecture (ZTA) is crucial for meeting CMMC compliance standards. This architectural framework aligns closely with the principles outlined in NIST SP-800-171v2, specifically emphasizing zero trust access control. (See [How to Meet NIST Guidelines for Zero Trust for Remote Data Access](/blog/nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access/).)
 
 Within this framework, a central server plays a critical role in verifying user identities and permissions. Instead of allowing direct shared access to the original resource location, the server facilitates the delivery of requested files to users. This approach is visualized in Diagram 1, illustrating a simplified zero-trust architecture.
 

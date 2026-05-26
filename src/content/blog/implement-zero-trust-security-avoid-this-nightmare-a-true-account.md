@@ -28,7 +28,7 @@ Alice worked in the purchasing department of an auto accessory manufacturer with
 
 Jane’s boss Michelle, who was cc’d on the email, responded to the chain, approving Jane’s request. She included wire transfer details, as well as a cost estimate in the form of a PDF file. She also thanked Alice, in advance, for responding quickly to the request as the laptop Jane was after was in short supply.
 
-As mentioned in a recent [spear-phishing article](https://fileflex.com/blog/how-zero-trust-security-promises-to-cast-a-wide-net-on-spear-phishers/), these threat actors do their homework so that they can target their victims without raising suspicion. Such was the case with the imposter that sent Alice the two emails.
+As mentioned in a recent [spear-phishing article](/blog/how-zero-trust-security-promises-to-cast-a-wide-net-on-spear-phishers/), these threat actors do their homework so that they can target their victims without raising suspicion. Such was the case with the imposter that sent Alice the two emails.
 
 Sensing nothing out of the ordinary and understanding the urgency, Alice promptly opened the PDF file Michelle had attached. Following the transfer instructions provided, she made the $3,250 payment to the imposter’s delight. Unfortunately, the story doesn’t end here.
 
@@ -53,6 +53,6 @@ Essentially, these secure Zero Trust data access processes kick in each time a r
 ### Zero Trust security is especially important to large enterprises
 Alice’s story isn’t uncommon. Keep in mind that your business is only ever one vector attack away from a similar event. Contact us to learn more about how the FileFlex Enterprise Zero-Trust Platform can minimize the likelihood of your enterprise falling victim.
 
-For more reading on how Zero Trust security protects you against spear phishing, read [Why Zero Trust, Why Now](https://fileflex.com/blog/why-zero-trust-and-why-now/) and [Zero Trust Security Promises to Cast a Wide Net on Spear-Phishers](https://fileflex.com/blog/how-zero-trust-security-promises-to-cast-a-wide-net-on-spear-phishers/).
+For more reading on how Zero Trust security protects you against spear phishing, read [Why Zero Trust, Why Now](/blog/why-zero-trust-and-why-now/) and [Zero Trust Security Promises to Cast a Wide Net on Spear-Phishers](/blog/how-zero-trust-security-promises-to-cast-a-wide-net-on-spear-phishers/).
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)

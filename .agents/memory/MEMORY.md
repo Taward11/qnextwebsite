@@ -2,3 +2,4 @@
 - [WP→Astro blog migration pipeline](wp-to-astro-migration.md) — META authoring, FAQ scanner, legacy-restore step, link rewriting, code-block trap, normalizeDesc, category cap.
 - [WP orphan-bullet re-indent](wp-orphan-bullet-transform.md) — body bullets under `N.  ### **Heading:**` need `N.length+3` space indent or the list splits.
 - [WP double-numbered list unwrap](wp-double-numbered-lists.md) — WP serializes some "N reasons" lists as doubly-nested ordered lists + orphan `### N.` heading tails; build.cjs has two transforms to flatten both shapes.
+- [WP Visual Composer shortcodes](wp-vc-shortcodes.md) — strip `[vc_*]/[/vc_*]` (including underscore-escaped variants like `\[/vc\_column\_text\]`) in build.cjs sanitize pass before writing MD.

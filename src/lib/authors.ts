@@ -10,6 +10,11 @@ export const authors: Record<string, Author> = {
     bio: 'Tom Ward is the VP of Marketing for Qnext Corp. He is an expert in the technology industry with a history of achievement. Tom holds an MBA from the Schulich School of Business at York University.',
     image: '/images/blog/authors/tom-ward.webp',
   },
+  'Jacob Williams': {
+    name: 'Jacob Williams',
+    bio: 'Jacob Williams is a system engineer supporting FileFlex Enterprise customers at Qnext Corp.',
+    image: '/images/blog/authors/jacob-williams.jpg',
+  },
   'Anthony DeCristofaro': {
     name: 'Anthony DeCristofaro',
     bio: 'Mr. DeCristofaro is CEO of Qnext Corp. with over thirty years of computer industry experience and multiple M&A transactions. A highly successful entrepreneur, he has started, developed and either merged or sold several technology companies including MGI Software which was Intel invested.',
