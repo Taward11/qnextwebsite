@@ -269,7 +269,8 @@
 .blog-prose img[src*="quote"],
 .blog-prose img[src*="Quote"],
 .blog-prose img[src*="infographic"],
-.blog-prose img[src*="Infographic"] {
+.blog-prose img[src*="Infographic"],
+.blog-prose img.blog-prose__img--float-right {
   float: right;
   max-width: 42%;
   margin: 6px 0 16px 24px;

@@ -50,6 +50,8 @@ This article explores the benefits and importance of Zero Trust Data Access micr
 Micro-segmentation is a network security technique that involves dividing a network into smaller, isolated segments or zones called microsegments. Each microsegment acts as its security boundary, restricting communication and access between different segments. It provides granular control over network traffic and enhances the overall security posture of a network.  According to NIST, the purpose of micro-segmentation is to “Eliminate unauthorized access to data and services coupled with making the access control enforcement as granular as possible.”
 ![zero trust microsegmentation](/images/blog/why-you-need-zero-trust-data-access-micro-segmentation/Microsegmentation2.jpg-1.webp)
 
+<p class="blog-prose__caption--center"><em>Diagram 1 — ZTNA and ZTAA Micro-Segmentation</em></p>
+
 ### Perimeter Defense
 
 The traditional network security approach relies heavily on perimeter defense, where a firewall is used to protect the entire network.  The problem with perimeter defense is that once an adversary is behind the firewall, they are in a very large implicit trust zone.
@@ -59,7 +61,11 @@ The traditional network security approach relies heavily on perimeter defense, w
 However, this approach is becoming less effective with the increasing sophistication of cyber attacks. Zero Trust Network Access and Zero Trust Application Access micro-segmentation address this by enforcing security policies at a more granular level, reducing the implicit trust zone to a network segment or application.  These two approaches are shown in Diagram 1.
 
 ### Files and Folders – Zero Trust Data Access
-![zero trust microsegmentation](/images/blog/why-you-need-zero-trust-data-access-micro-segmentation/microsegmentation3-1.webp) While ZTNA micro-segmentation focuses on isolating and securing network segments, Zero Trust Data Access takes micro-segmentation to the smallest implicit trust zone of individual files and folders.  This is shown in Diagram 2.  ZTDA takes a data-centric approach to access control and authentication.
+![zero trust microsegmentation](/images/blog/why-you-need-zero-trust-data-access-micro-segmentation/microsegmentation3-1.webp)
+
+<p class="blog-prose__caption--center"><em>Diagram 2 — Zero Trust Data Access Micro-Segmentation</em></p>
+
+While ZTNA micro-segmentation focuses on isolating and securing network segments, Zero Trust Data Access takes micro-segmentation to the smallest implicit trust zone of individual files and folders.  This is shown in Diagram 2.  ZTDA takes a data-centric approach to access control and authentication.
 
 ## How ZTDA Strengthens Zero Trust Micro-Segmentation
 

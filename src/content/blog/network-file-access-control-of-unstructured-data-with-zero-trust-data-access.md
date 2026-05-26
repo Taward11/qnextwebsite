@@ -17,7 +17,7 @@ tags: []
 toc: true
 ---
 
-![network file access control’](/images/blog/network-file-access-control-of-unstructured-data-with-zero-trust-data-access/Business-penetration-icon-e1685648830161.webp)
+<img class="blog-prose__img--float-right" src="/images/blog/network-file-access-control-of-unstructured-data-with-zero-trust-data-access/Business-penetration-icon-e1685648830161.webp" alt="network file access control" />
 
 ## Why Network Access Control is Needed?
 
