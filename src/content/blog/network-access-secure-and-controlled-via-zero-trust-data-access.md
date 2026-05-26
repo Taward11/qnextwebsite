@@ -33,7 +33,7 @@ Once these requirements are met, FileFlex can act as an intermediary to provide 
 ## Using FileFlex for Internal Network Access to Files and Folders
 ![Network Access architecture](/images/blog/network-access-secure-and-controlled-via-zero-trust-data-access/Network-access-architecture-1.webp)
 
-Diagram 1 Using FileFlex for Network Access
+<p class="blog-prose__caption--center"><em>Diagram 1 Using FileFlex for Network Access</em></p>
 
 If an organization’s network has one or more designated user VLANs to isolate traffic, increase security, segregate users, and control access to internal resources, and that same network has dedicated VLANs in place to secure valuable internal resources such as data, servers, equipment/machinery, phones, security systems, etc., then FileFlex can be used as an internal ZTDA system to connect users to their data (files & folders) over a network without enabling the routing or inter-VLAN communication otherwise required to access the data VLANs themselves, and without exposing the IP and hostname information of the equipment (servers, NAS or SAN appliance) where the data resides.
 
