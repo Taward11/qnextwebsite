@@ -57,6 +57,8 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
       {/* Analytics is async + non-blocking → dns-prefetch is enough */}
       <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+      {/* Preload the hero background image (LCP) so it's discoverable in the initial HTML */}
+      <link rel="preload" as="image" href="https://fileflex.com/wp-content/uploads/2015/03/iStock-1445140730-scaled.jpg.webp" fetchpriority="high" />
       {/* Preload the hero logo so it paints with the first frame */}
       <link rel="preload" as="image" href="https://fileflex.com/wp-content/uploads/2015/03/fileflex-enterprise-logo-small.png.webp" fetchpriority="high" />
     </>
