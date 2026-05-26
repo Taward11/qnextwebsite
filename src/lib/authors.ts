@@ -12,8 +12,8 @@ export const authors: Record<string, Author> = {
   },
   'Anthony DeCristofaro': {
     name: 'Anthony DeCristofaro',
-    bio: 'Anthony DeCristofaro is a technology leader and contributor at Qnext Corp, with deep expertise in enterprise IT architecture, data platforms, and Zero Trust security. He writes about hybrid-cloud strategy, unstructured data governance, and modern approaches to securing distributed work.',
-    image: '/images/blog/authors/anthony-decristofaro.svg',
+    bio: 'Mr. DeCristofaro is CEO of Qnext Corp. with over thirty years of computer industry experience and multiple M&A transactions. A highly successful entrepreneur, he has started, developed and either merged or sold several technology companies including MGI Software which was Intel invested.',
+    image: '/images/blog/authors/anthony-decristofaro.jpg',
   },
   'Ed Dubrovsky': {
     name: 'Ed Dubrovsky',
