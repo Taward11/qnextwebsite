@@ -70,9 +70,7 @@ In this architecture, ZTAA is used to enforce policy-based segmentation and micr
 
 ## Why Using FileFlex and ZTAA to Enforce SharePoint Zero Trust Security is Essential
 1.  ### **Enforces a Zero Trust Access Control Layer to eliminate direct access to SharePoint repositories**
-    
-
--   By forcing all access to SharePoint through FileFlex, organizations can prevent both internal and external actors from connecting directly to vulnerable SharePoint endpoints. ZTAA enforces network segmentation policies that allow only the FileFlex connector to communicate with SharePoint repositories, closing off direct IP-level access. This effectively removes SharePoint from the exposed attack surface and contains potential threats within tightly defined microsegments, blocking lateral movement and unauthorized discovery.
+    - By forcing all access to SharePoint through FileFlex, organizations can prevent both internal and external actors from connecting directly to vulnerable SharePoint endpoints. ZTAA enforces network segmentation policies that allow only the FileFlex connector to communicate with SharePoint repositories, closing off direct IP-level access. This effectively removes SharePoint from the exposed attack surface and contains potential threats within tightly defined microsegments, blocking lateral movement and unauthorized discovery.
 
 2.  ### **Enforces least-privilege access and contextual authorization**
     

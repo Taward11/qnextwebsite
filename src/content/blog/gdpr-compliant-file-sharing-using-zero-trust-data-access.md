@@ -106,7 +106,7 @@ FileFlex Enterprise, through its Zero Trust Data Access technology, addresses se
 ## Summary: GDPR Compliant File Sharing Using Zero Trust Data Access
 In an age defined by stringent data protection norms, compliance with GDPR remains paramount for organizations entrusted with personal data. The integration of Zero Trust Data Access principles with FileFlex Enterprise marks a transformative leap in ensuring secure, compliant, and accountable file-sharing practices. This amalgamation not only safeguards data integrity but also champions individuals’ rights to stringent data protection under GDPR. Embracing these cutting-edge technologies helps organizations achieve GDPR-compliant file sharing and a more secure and compliant future in the digital landscape.
 
-For more information, see [Accelerates Compliance to GDPR](/gdpr-compliance/), [Zero Trust Data Access for Secure File-Sharing](https://fileflex.com/blog/top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business/) and [Content Collaboration Using Zero Trust Data Access](https://fileflex.com/blog/discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture/).
+For more information, see [Accelerates Compliance to GDPR](/gdpr-compliance/), [Zero Trust Data Access for Secure File-Sharing](/blog/top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business/) and [Content Collaboration Using Zero Trust Data Access](/blog/discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture/).
 
 **Handling EU personal data?**  
 Book a demo to see how FileFlex helps your organization achieve GDPR-compliant file sharing — without moving your data to the cloud.

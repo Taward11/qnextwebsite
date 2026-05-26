@@ -141,6 +141,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"24-reasons-to-use-zero-trust-data-access-as-an-ftp-alternative.md": {
+	id: "24-reasons-to-use-zero-trust-data-access-as-an-ftp-alternative.md";
+  slug: "24-reasons-to-use-zero-trust-data-access-as-an-ftp-alternative";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access.md": {
 	id: "9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access.md";
   slug: "9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access";
@@ -204,6 +211,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture.md": {
+	id: "discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture.md";
+  slug: "discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access.md": {
 	id: "dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access.md";
   slug: "dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access";
@@ -263,6 +277,13 @@ declare module 'astro:content' {
 "fedramp-compliance-and-zero-trust-data-access.md": {
 	id: "fedramp-compliance-and-zero-trust-data-access.md";
   slug: "fedramp-compliance-and-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"fortifying-cyber-defense-via-zero-trust-data-access-the-recent-goanywhere-and-moveit-ransomware-breaches.md": {
+	id: "fortifying-cyber-defense-via-zero-trust-data-access-the-recent-goanywhere-and-moveit-ransomware-breaches.md";
+  slug: "fortifying-cyber-defense-via-zero-trust-data-access-the-recent-goanywhere-and-moveit-ransomware-breaches";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -396,6 +417,20 @@ declare module 'astro:content' {
 "top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure.md": {
 	id: "top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure.md";
   slug: "top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"top-13-reasons-to-adopt-zero-trust-secure-virtual-data-rooms.md": {
+	id: "top-13-reasons-to-adopt-zero-trust-secure-virtual-data-rooms.md";
+  slug: "top-13-reasons-to-adopt-zero-trust-secure-virtual-data-rooms";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business.md": {
+	id: "top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business.md";
+  slug: "top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

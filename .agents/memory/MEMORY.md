@@ -1,2 +1,3 @@
-- [Blog system conventions](blog-system.md) — Astro content collection at /blog/, marker-based table injection via AstroContainer, image float-by-filename, author lookup map.
-- [WP→Astro blog migration pipeline](wp-to-astro-migration.md) — build.cjs overwrites legacy md (must `git show` restore after each run), LOCAL_SLUGS gate for /blog/ links, sidecar `faqs` → frontmatter `faq`, categories cap at 5, Yoast desc quirks normalized.
+- [Blog system conventions](blog-system.md) — Astro content collection, marker-based table injection, image float-by-filename, author lookup map.
+- [WP→Astro blog migration pipeline](wp-to-astro-migration.md) — META authoring, FAQ scanner, legacy-restore step, link rewriting, code-block trap, normalizeDesc, category cap.
+- [WP orphan-bullet re-indent](wp-orphan-bullet-transform.md) — body bullets under `N.  ### **Heading:**` need `N.length+3` space indent or the list splits.

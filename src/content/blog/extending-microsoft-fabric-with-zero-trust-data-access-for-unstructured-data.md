@@ -113,29 +113,19 @@ ZTDA enforces consistent access policies across all of these—without moving th
 Here’s how FileFlex Zero Trust Data Access complements Microsoft Fabric for enterprise customers:
 
 1.  ### **Provides Zero Trust Security for Fabric’s Unstructured Data**
-    
-
--   Microsoft Fabric excels at integrating structured data pipelines—such as Power BI, Data Factory, and Synapse—but it does not natively protect or govern unstructured data like documents, images, and PDFs across hybrid environments. FileFlex addresses this gap by adding Zero Trust data protection, fine-grained access control, and comprehensive activity monitoring to unstructured data stored in SharePoint, OneDrive, Azure, AWS, Google and even on-premises servers. Importantly, it enables this protection without requiring data movement or duplication.
+    - Microsoft Fabric excels at integrating structured data pipelines—such as Power BI, Data Factory, and Synapse—but it does not natively protect or govern unstructured data like documents, images, and PDFs across hybrid environments. FileFlex addresses this gap by adding Zero Trust data protection, fine-grained access control, and comprehensive activity monitoring to unstructured data stored in SharePoint, OneDrive, Azure, AWS, Google and even on-premises servers. Importantly, it enables this protection without requiring data movement or duplication.
 
 2.  ### **Extends Fabric’s Governance Layer to the Edge**
-    
-
--   While Microsoft Purview provides governance for data within the Microsoft ecosystem, real-world hybrid deployments often include legacy file servers, private clouds, and external repositories that fall outside its native reach. FileFlex serves as a data access governance bridge, extending audit trails, policy enforcement, and data residency controls to any storage endpoint. This enables organizations to establish a unified compliance posture across both Microsoft Fabric and their legacy environments.
+    - While Microsoft Purview provides governance for data within the Microsoft ecosystem, real-world hybrid deployments often include legacy file servers, private clouds, and external repositories that fall outside its native reach. FileFlex serves as a data access governance bridge, extending audit trails, policy enforcement, and data residency controls to any storage endpoint. This enables organizations to establish a unified compliance posture across both Microsoft Fabric and their legacy environments.
 
 3.  ### **Enables Real-Time Telemetry for Security & Compliance AI**
-    
-
--   Microsoft Fabric includes powerful data observability tools, but it lacks real-time telemetry for file-level access, sharing behavior, and remote usage—particularly across hybrid storage environments. FileFlex fills this gap by delivering real-time activity telemetry across both cloud and on-premises systems. This visibility is invaluable for security analytics, insider threat detection, and compliance.
+    - Microsoft Fabric includes powerful data observability tools, but it lacks real-time telemetry for file-level access, sharing behavior, and remote usage—particularly across hybrid storage environments. FileFlex fills this gap by delivering real-time activity telemetry across both cloud and on-premises systems. This visibility is invaluable for security analytics, insider threat detection, and compliance.
 
 4.  ### **Reduces Data Duplication and Provides Native Access Across Storage**
-    
-
--   Microsoft Fabric’s strength in data consolidation can inadvertently lead to storage bloat and migration overhead when enterprises are required to replicate data into OneLake. FileFlex addresses this issue by enabling secure, in-place collaboration and sharing of data directly from its original locations—whether in the cloud or on-premises. This avoids unnecessary duplication or migration, significantly reducing storage costs and lowering compliance risk.
+    - Microsoft Fabric’s strength in data consolidation can inadvertently lead to storage bloat and migration overhead when enterprises are required to replicate data into OneLake. FileFlex addresses this issue by enabling secure, in-place collaboration and sharing of data directly from its original locations—whether in the cloud or on-premises. This avoids unnecessary duplication or migration, significantly reducing storage costs and lowering compliance risk.
 
 5.  ### **Enables Smart City, Financial, and Government Use Cases**
-    
-
--   In sectors like smart cities, financial services, and government—where FileFlex is seeing growing adoption—the combination of Microsoft Fabric’s capabilities to ingest, model, and visualize data with FileFlex’s ability to secure and federate access to raw unstructured data creates a powerful, end-to-end digital governance solution. This integrated approach supports complex regulatory, operational, and data sovereignty requirements while enabling secure, data-driven innovation across domains.
+    - In sectors like smart cities, financial services, and government—where FileFlex is seeing growing adoption—the combination of Microsoft Fabric’s capabilities to ingest, model, and visualize data with FileFlex’s ability to secure and federate access to raw unstructured data creates a powerful, end-to-end digital governance solution. This integrated approach supports complex regulatory, operational, and data sovereignty requirements while enabling secure, data-driven innovation across domains.
 
 ## Summary of Combined Differentiation
 <!-- table:table2 -->

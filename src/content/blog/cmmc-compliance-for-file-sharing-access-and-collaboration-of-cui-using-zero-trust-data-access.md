@@ -53,29 +53,19 @@ The CMMC model is part of the DoD’s efforts to safeguard national security inf
 The CMMC (Cybersecurity Maturity Model Certification) requirements for user access, file sharing, and collaboration of unstructured data are designed to protect Controlled Unclassified Information (CUI) within the Defense Industrial Base (DIB). These requirements are part of a broader set of cybersecurity practices that contractors must implement to achieve CMMC certification. Here are some key practices related to user access and data collaboration:
 
 1.  ### **Limit System Access:**
-    
-
--   Only authorized users, processes, or devices should have access to information systems, especially those containing CUI.
+    - Only authorized users, processes, or devices should have access to information systems, especially those containing CUI.
 
 2.  ### **Control Transaction Types:**
-    
-
--   Authorized users should be limited to the types of transactions and functions they are permitted to execute.
+    - Authorized users should be limited to the types of transactions and functions they are permitted to execute.
 
 3.  ### **Verify External Connections:**
-    
-
--   Connections to and use of external information systems must be verified and controlled to prevent unauthorized access.
+    - Connections to and use of external information systems must be verified and controlled to prevent unauthorized access.
 
 4.  ### **Wireless Device Authorization:**
-    
-
--   Devices connecting wirelessly, including mobile devices, must be authorized and use encrypted connections.
+    - Devices connecting wirelessly, including mobile devices, must be authorized and use encrypted connections.
 
 5.  ### **Limit External Data Storage and Processing:**
-    
-
--   External connections, storage, and processing of CUI must be limited to ensure security.
+    - External connections, storage, and processing of CUI must be limited to ensure security.
 
 These practices are part of the Access Control domain, one of the 17 domains categorized in the CMMC framework. The framework outlines specific practices and processes that contractors need to follow to protect CUI and achieve the required level of certification. Companies need to understand these requirements and how they apply to their specific assets and data management strategies.
 
@@ -178,19 +168,19 @@ Implementing a Zero Trust Data Access as implemented by FileFlex Enterprise alig
 -   ZTDA can be used as a CMMC-compliant VPN alternative that delivers cutting-edge security, simplified access management, IT-controlled chain of command, file sharing/collaboration functionality, and with Windows integration, enhanced user experience. See [19 Advantages of the Zero Trust Data Access VPN Alternative](https://fileflex.com/blog/a-vpn-alternative-zero-trust-data-access/).
 
 ### CMMC Compliant Secure CUI File Sharing
--   ZTDA provides CMMC-compliant CUI file-sharing that delivers data protection, and efficient sharing of federated storage, simplifies the user experience, enhances data privacy and compliance, and provides exemplary data governance and an IT-controlled chain of command with no duplication or syncing. See [Zero Trust Data Access for Secure File-Sharing](https://fileflex.com/blog/top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business/).
+-   ZTDA provides CMMC-compliant CUI file-sharing that delivers data protection, and efficient sharing of federated storage, simplifies the user experience, enhances data privacy and compliance, and provides exemplary data governance and an IT-controlled chain of command with no duplication or syncing. See [Zero Trust Data Access for Secure File-Sharing](/blog/top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business/).
 
 ### CMMC Compliant FTP Alternative
--   ZTDA is a CMMC-compliant FTP alternative that offers cutting-edge security, ransomware prevention, regulatory compliance, simplified management, enhanced user experience, and more.  Read [Zero Trust Data Access as an FTP Alternative](https://fileflex.com/blog/24-reasons-to-use-zero-trust-data-access-as-an-ftp-alternative/).
+-   ZTDA is a CMMC-compliant FTP alternative that offers cutting-edge security, ransomware prevention, regulatory compliance, simplified management, enhanced user experience, and more.  Read [Zero Trust Data Access as an FTP Alternative](/blog/24-reasons-to-use-zero-trust-data-access-as-an-ftp-alternative/).
 
 ### CMMC Compliant MFT Alternative
 -   ZTDA is a contemporary alternative that addresses the security vulnerabilities of MFT.  It offers granular file and folder micro-segmentation, has unique federated storage management, encompasses distinctive granular contractor access and brings an IT-controlled chain of command.  For more see, [Zero Trust Data Access as a Managed File Transfer Alternative](/blog/why-organizations-need-zero-trust-data-access-as-a-managed-file-transfer-alternative/).
 
 ### CMMC Compliant Zero Trust Content Collaboration
--   ZTDA can be used as a CMMC-compliant zero trust content collaboration platform that safeguards CUI data through micro-segmentation and stringent access to elevate security, streamline workflows, reduce the risk of ransomware and more, providing a cost-effective, adaptable, and user-friendly solution. See  [Content Collaboration Using Zero Trust Data Access](https://fileflex.com/blog/discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture/).
+-   ZTDA can be used as a CMMC-compliant zero trust content collaboration platform that safeguards CUI data through micro-segmentation and stringent access to elevate security, streamline workflows, reduce the risk of ransomware and more, providing a cost-effective, adaptable, and user-friendly solution. See  [Content Collaboration Using Zero Trust Data Access](/blog/discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture/).
 
 ### CMMC Compliant Virtual Data Rooms
--   Delivers CMMC-compliant Zero Trust Virtual Data Rooms that offer superior data security, robust protection against ransomware, superior governance and chain-of-command and comprehensive insider threat prevention, while also ensuring compliance, reducing the attack surface, and providing a cost-effective, future-proof approach.  Read [Top 13 Reasons to Adopt Zero Trust Secure Virtual Data Rooms](https://fileflex.com/blog/top-13-reasons-to-adopt-zero-trust-secure-virtual-data-rooms/).
+-   Delivers CMMC-compliant Zero Trust Virtual Data Rooms that offer superior data security, robust protection against ransomware, superior governance and chain-of-command and comprehensive insider threat prevention, while also ensuring compliance, reducing the attack surface, and providing a cost-effective, future-proof approach.  Read [Top 13 Reasons to Adopt Zero Trust Secure Virtual Data Rooms](/blog/top-13-reasons-to-adopt-zero-trust-secure-virtual-data-rooms/).
 
 ### CMMC Compliant Enhancement for Microsoft 365
 -   Integrating into Microsoft 365 E5, particularly for remote and external users, elevates security posture, reduces the risk of data breaches, enhances regulatory compliance, and mitigates insider threats, ultimately fortifying data protection and access management within the Microsoft ecosystem. See [21 Reasons to Supplement Microsoft 365 E5 Security with Zero Trust Data Access](https://fileflex.com/blog/21-reasons-to-supplement-microsoft-365-e5-security-with-zero-trust-data-access/)**.**

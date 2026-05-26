@@ -157,9 +157,7 @@ ZTDA creates rich, real-time audit trails of:
 This is invaluable for security teams, auditors, and compliance officers.
 
 3.  ### **Minimizes Data Exposure**
-    
-
--   Users can view or use data without downloading it.
+    - Users can view or use data without downloading it.
 -   Sensitive files stay in place — no more duplication across email, cloud apps, or VPN shares.
 -   Helps prevent shadow IT, data sprawl, and data loss.
 ![ZTDA contains data within approved boundaries, without disrupting workflows](/images/blog/the-zero-trust-maturity-model-ztmm-and-why-ztda-is-critical-to-reaching-optimal-maturity/ZTDA-ZTMM-quote-4-1.webp)
@@ -194,17 +192,13 @@ ZTDA eliminates the need for VPNs or file replication:
 ![ZTDA is a modern solution for a distributed workforce](/images/blog/the-zero-trust-maturity-model-ztmm-and-why-ztda-is-critical-to-reaching-optimal-maturity/ZTDA-ZTMM-quote-5-2.webp)
 
 6.  ### **Supports Zero Trust Maturity Across Pillars**
-    
-
--   **Identity**: Strong contextual access control
+    - **Identity**: Strong contextual access control
 -   **Data**: Granular, adaptive policies
 -   **Network/Environment:** Reduces lateral movement and reliance on VPNs,  integrates with microsegmentation strategies, and protects hybrid environments.
 -   **Visibility**: Full logging and analytics
 
 7.  ### **Provides Business Agility Without Sacrificing Security**
-    
-
--   Onboard new users or departments without new infrastructure.
+    - Onboard new users or departments without new infrastructure.
 -   Enable secure data sharing without creating bottlenecks.
 -   Extend secure access to partners, suppliers, and regulators — even if they’re outside your domain.
 

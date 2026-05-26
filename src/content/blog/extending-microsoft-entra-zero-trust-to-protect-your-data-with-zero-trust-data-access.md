@@ -79,72 +79,46 @@ If an organization already has Microsoft Entra and Active Directory in place, th
 Here are the top reasons an organization needs to add FileFlex Zero Trust Data Access (ZTDA) on top of a Microsoft Entra, AD and Network Control stack:
 
 1.  ### **Enforce Zero Trust Beyond the Perimeter and App Layer**
-    
-
--   FileFlex extends Zero Trust beyond Entra and AD by enforcing continuous, granular file- and folder-level access during a session, preventing users or attackers from freely navigating or copying allowed network files.
+    - FileFlex extends Zero Trust beyond Entra and AD by enforcing continuous, granular file- and folder-level access during a session, preventing users or attackers from freely navigating or copying allowed network files.
 
 2.  ### **Make File Access Conditional — Even Inside the LAN**
-    
-
--   FileFlex adds risk- and context-based controls to file access, enforcing policies based on user identity, role and device, even within the LAN where AD and network ACLs alone cannot.
+    - FileFlex adds risk- and context-based controls to file access, enforcing policies based on user identity, role and device, even within the LAN where AD and network ACLs alone cannot.
 
 3.  ### **Eliminate Direct Paths to Sensitive Storage**
-    
-
--   FileFlex requires its file requests to go through its connector, which enforces Zero Trust Data Access policies and activity logging.
+    - FileFlex requires its file requests to go through its connector, which enforces Zero Trust Data Access policies and activity logging.
 
 4.  ### **Secure Hybrid and Multi-Vendor Storage**
-    
-
--   FileFlex helps secure hybrid and multi-vendor storage by providing a single access method for on-prem, cloud, and diverse storage systems, extending Zero Trust without data migration or altering existing shares.
+    - FileFlex helps secure hybrid and multi-vendor storage by providing a single access method for on-prem, cloud, and diverse storage systems, extending Zero Trust without data migration or altering existing shares.
 
 5.  ### **Stop Ransomware and Data Exfiltration Mid-Session**
-    
-
--   FileFlex mitigates ransomware and data exfiltration mid-session by continuously monitoring and alerting for anomalies—such as mass downloads or unusual access times, beyond what Entra, AD, or network controls provide.
+    - FileFlex mitigates ransomware and data exfiltration mid-session by continuously monitoring and alerting for anomalies—such as mass downloads or unusual access times, beyond what Entra, AD, or network controls provide.
 
 6.  ### **Provide Complete, Searchable Data Access Audit Trails**
-    
-
--   FileFlex provides a unified, detailed, and searchable audit trail of every file access, share, edit, and download across all hybrid storage, filling gaps left by Entra, AD, and firewall logs.
+    - FileFlex provides a unified, detailed, and searchable audit trail of every file access, share, edit, and download across all hybrid storage, filling gaps left by Entra, AD, and firewall logs.
 
 7.  ### **Align with Zero Trust Maturity Models**
-    
-
--   FileFlex elevates the data pillar to the same maturity level as identity and network, enabling full alignment with NIST and CISA Zero Trust maturity models. See [The Zero Trust Maturity Model and the Role of ZTDA](/blog/the-zero-trust-maturity-model-ztmm-and-why-ztda-is-critical-to-reaching-optimal-maturity/).
+    - FileFlex elevates the data pillar to the same maturity level as identity and network, enabling full alignment with NIST and CISA Zero Trust maturity models. See [The Zero Trust Maturity Model and the Role of ZTDA](/blog/the-zero-trust-maturity-model-ztmm-and-why-ztda-is-critical-to-reaching-optimal-maturity/).
 
 ## Benefits of Adding Zero Trust Data Access to the Microsoft Entra Control Stack
 ![Entra, AD, and network controls decide who can knock on the door and which rooms they can enter FileFlex decides what they can touch once inside and records everything they do.](/images/blog/extending-microsoft-entra-zero-trust-to-protect-your-data-with-zero-trust-data-access/Entra-blog-post-quote-2-1.webp) If a company is already using Microsoft Entra, it benefits from strong identity and access controls for applications and networks—but data-level Zero Trust is still missing.  Here are the top benefits of adding FileFlex Zero Trust Data Access to the Microsoft Entra control stack:
 
 1.  ### **Extends Zero Trust to the Data Layer**
-    
-
--   FileFlex extends Zero Trust to the data layer by adding granular, file-level policy enforcement after authentication, closing Entra’s gap in controlling user actions within files and folders to limit insider threats, compromised accounts, and ransomware.
+    - FileFlex extends Zero Trust to the data layer by adding granular, file-level policy enforcement after authentication, closing Entra’s gap in controlling user actions within files and folders to limit insider threats, compromised accounts, and ransomware.
 
 2.  ### **Secures Access to Unstructured Data Across Hybrid Storage**
-    
-
--   FileFlex secures unstructured data across file shares, NAS, on-prem, and private clouds outside Microsoft’s ecosystem, delivering Zero Trust protections without migrating or duplicating data.
+    - FileFlex secures unstructured data across file shares, NAS, on-prem, and private clouds outside Microsoft’s ecosystem, delivering Zero Trust protections without migrating or duplicating data.
 
 3.  ### **Unifies Zero Trust Policy Across Apps, Networks, and Data**
-    
-
--   FileFlex provides a unified data access framework alongside Entra’s identity controls, enabling consistent policy enforcement across all storage systems and eliminating policy silos.
+    - FileFlex provides a unified data access framework alongside Entra’s identity controls, enabling consistent policy enforcement across all storage systems and eliminating policy silos.
 
 4.  ### **Enhances Ransomware & Data Exfiltration Defense**
-    
-
--   FileFlex adds continuous monitoring, anomaly detection, and granular sharing controls to Entra, mitigating ransomware spread and blocking unauthorized data transfers even within authorized sessions.
+    - FileFlex adds continuous monitoring, anomaly detection, and granular sharing controls to Entra, mitigating ransomware spread and blocking unauthorized data transfers even within authorized sessions.
 
 5.  ### **Provides Better Audit, Compliance, and Governance**
-    
-
--   FileFlex provides full audit trails and real-time visibility into every file interaction, giving Entra the compliance evidence needed for GDPR, HIPAA, financial and other regulations.
+    - FileFlex provides full audit trails and real-time visibility into every file interaction, giving Entra the compliance evidence needed for GDPR, HIPAA, financial and other regulations.
 
 6.  ### **Complements a Microsoft Ecosystem Without Disrupting It**
-    
-
--   FileFlex extends Entra’s Zero Trust controls to both Microsoft and non-Microsoft storage, enabling unified security without replacing existing systems.
+    - FileFlex extends Entra’s Zero Trust controls to both Microsoft and non-Microsoft storage, enabling unified security without replacing existing systems.
 
 <!-- table:table2 -->
 

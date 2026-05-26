@@ -47,54 +47,34 @@ Expanding Illumio’s micro-segmentation and policy enforcement to include data 
 Beyond the compelling security benefits, the integration is also a practical complement to Illumio in addressing the problems of unstructured data as follows:
 
 1.  ### **Expands Data Governance:**
-    
-
--   Zero Trust Data Access adds unstructured data access controls and policies based on user roles and permissions to Illumio Core. IT managers can define and enforce data access policies consistently across various data sources, promoting effective data governance.
+    - Zero Trust Data Access adds unstructured data access controls and policies based on user roles and permissions to Illumio Core. IT managers can define and enforce data access policies consistently across various data sources, promoting effective data governance.
 
 2.  ### **Delivers Ease and Unification of Access and Sharing:**
-    
-
--   By providing a unified access and sharing control solution federated across on-premises, cloud-hosted and SharePoint storage in Windows, Zero Trust Data Access as implemented by FileFlex simplifies and adds the unification of access and sharing management across diverse data repositories to Illumio Core. IT managers can centrally manage access and sharing permissions, reducing the administrative burden and improving operational efficiency.
+    - By providing a unified access and sharing control solution federated across on-premises, cloud-hosted and SharePoint storage in Windows, Zero Trust Data Access as implemented by FileFlex simplifies and adds the unification of access and sharing management across diverse data repositories to Illumio Core. IT managers can centrally manage access and sharing permissions, reducing the administrative burden and improving operational efficiency.
 
 3.  ### **Improves Data Visibility and Control:**
-    
-
--   Zero Trust Data Access as implemented by FileFlex produces a detailed activity log over all access and sharing activities of unstructured data. This augments Illumio Core by providing visibility into data access and sharing patterns, allowing IT managers to monitor user behavior and detect unusual activities. This helps identify potential security threats and ensures that data is accessed only by authorized individuals.
+    - Zero Trust Data Access as implemented by FileFlex produces a detailed activity log over all access and sharing activities of unstructured data. This augments Illumio Core by providing visibility into data access and sharing patterns, allowing IT managers to monitor user behavior and detect unusual activities. This helps identify potential security threats and ensures that data is accessed only by authorized individuals.
 
 4.  ### **Reduces Complexity:**
-    
-
--   Zero Trust Data Access combined with Illumio Core streamlines access management by providing a unified approach to authentication, authorization, and access control. IT managers can simplify their access management strategies, reducing complexity in managing diverse access methods.
+    - Zero Trust Data Access combined with Illumio Core streamlines access management by providing a unified approach to authentication, authorization, and access control. IT managers can simplify their access management strategies, reducing complexity in managing diverse access methods.
 
 5.  ### **Provides Auditing and Compliance:**
-    
-
--   The FileFlex Zero Trust Data Access platform includes an activity log that can be used with Illumio Core and the organization’s SIEM for auditing and reporting capabilities to help IT managers track data access and maintain compliance with regulations. This addresses the challenge of monitoring and auditing access across different data repositories.
+    - The FileFlex Zero Trust Data Access platform includes an activity log that can be used with Illumio Core and the organization’s SIEM for auditing and reporting capabilities to help IT managers track data access and maintain compliance with regulations. This addresses the challenge of monitoring and auditing access across different data repositories.
 
 6.  ### **Enables Secure Collaboration:**
-    
-
--   Zero Trust Data Access adds secure data sharing and collaboration to Illumio Core by implementing access controls based on user roles and needs. This facilitates teamwork while ensuring data security.
+    - Zero Trust Data Access adds secure data sharing and collaboration to Illumio Core by implementing access controls based on user roles and needs. This facilitates teamwork while ensuring data security.
 
 7.  ### **Reduces Infrastructure Load:**
-    
-
--   Zero Trust Data Access can scale to accommodate the growing volume of unstructured data and diverse storage locations. It can be used with Illumio Core to enable IT managers to implement a consistent access control framework that adapts to changing data requirements. Since Zero Trust Data Access allows sharing from a centralized location it reduces the need to make copies for sharing and decreases the requirement to scale infrastructure, storage, and bandwidth.
+    - Zero Trust Data Access can scale to accommodate the growing volume of unstructured data and diverse storage locations. It can be used with Illumio Core to enable IT managers to implement a consistent access control framework that adapts to changing data requirements. Since Zero Trust Data Access allows sharing from a centralized location it reduces the need to make copies for sharing and decreases the requirement to scale infrastructure, storage, and bandwidth.
 
 8.  ### **Simplifies Vendor Management:**
-    
-
--   Zero Trust Data Access can be used for access and sharing across various storage platforms and used with Illumio Core to provide a consistent access and sharing security approach regardless of the data storage solution. This synergy simplifies vendor management complexities and allows for the reduction of sharing and VPN platforms.
+    - Zero Trust Data Access can be used for access and sharing across various storage platforms and used with Illumio Core to provide a consistent access and sharing security approach regardless of the data storage solution. This synergy simplifies vendor management complexities and allows for the reduction of sharing and VPN platforms.
 
 9.  ### **Improves User Experience:**
-    
-
--   While prioritizing security, by federating storage and integrating into Windows, Zero Trust Data Access as implemented by FileFlex provides a seamless and user-friendly experience that is part of their already established workflows, ensuring that legitimate users can access data efficiently.
+    - While prioritizing security, by federating storage and integrating into Windows, Zero Trust Data Access as implemented by FileFlex provides a seamless and user-friendly experience that is part of their already established workflows, ensuring that legitimate users can access data efficiently.
 
 10.  ### **Reduces Risk of Data Breach and Ransomware:**
-     
-
--   Zero Trust Data Access (ZTDA) combined with Illumio Core, provides a powerful defense against data breach and ransomware attacks, focusing on mitigating risks at multiple stages of the attack lifecycle. It achieves this via its zero trust-based access controls, minimizing lateral movement, and detecting data extraction and activity monitoring.
+     - Zero Trust Data Access (ZTDA) combined with Illumio Core, provides a powerful defense against data breach and ransomware attacks, focusing on mitigating risks at multiple stages of the attack lifecycle. It achieves this via its zero trust-based access controls, minimizing lateral movement, and detecting data extraction and activity monitoring.
 
 ## Additional Use Cases when Zero Trust Data Access is Added to Illumio Core
 Beyond these benefits, the integration adds several new use cases beyond enhanced security and expanded IT-controlled chain of command.  These include:
@@ -103,13 +83,13 @@ Beyond these benefits, the integration adds several new use cases beyond enhance
 The addition of Zero Trust Data Access as implemented by FileFlex Enterprise to Illumio Core provides a zero-trust alternative to the VPN that seamlessly connects users to applications plus all the unstructured data stored on on-premises devices, cloud-hosted platforms, FTP, and SharePoint over the Internet.  Access to these unstructured data repositories is federated as a drive in the Windows operating system making it accessible to File Explorer and any Windows app. For more details see [Zero Trust Data Access as a VPN Alternative](https://fileflex.com/blog/a-vpn-alternative-zero-trust-data-access/).
 
 ### Zero Trust Secure File Sharing, FTP and MFT Replacement
-Adding Zero Trust Data Access to Illumio Core enables secure file sharing across multiple storage platforms, grants precise permissions control, supports large file sharing, enforces in-app user authentication, tracks sharing activities with email notifications, applies watermarks and redactions, and allows seamless sharing directly from Windows.  See T[op 13 Reasons to Use Zero Trust Data Access for Secure File-Sharing](https://fileflex.com/blog/top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business/), [24 Reasons to Use Zero Trust Data Access as an FTP Alternative](https://fileflex.com/blog/24-reasons-to-use-zero-trust-data-access-as-an-ftp-alternative/), and [Why Organizations Need Zero Trust Data Access as a Managed File Transfer Alternative](/blog/why-organizations-need-zero-trust-data-access-as-a-managed-file-transfer-alternative/).
+Adding Zero Trust Data Access to Illumio Core enables secure file sharing across multiple storage platforms, grants precise permissions control, supports large file sharing, enforces in-app user authentication, tracks sharing activities with email notifications, applies watermarks and redactions, and allows seamless sharing directly from Windows.  See T[op 13 Reasons to Use Zero Trust Data Access for Secure File-Sharing](/blog/top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business/), [24 Reasons to Use Zero Trust Data Access as an FTP Alternative](/blog/24-reasons-to-use-zero-trust-data-access-as-an-ftp-alternative/), and [Why Organizations Need Zero Trust Data Access as a Managed File Transfer Alternative](/blog/why-organizations-need-zero-trust-data-access-as-a-managed-file-transfer-alternative/).
 
 ### Zero Trust-Based Content Collaboration
-Illumio Core combined with Zero Trust Data access provides a collaboration platform that facilitates remote editing and file replacement directly from original storage locations, supporting various applications like Office 365, Google Docs, AutoCAD, and Adobe Creative Suite, and offering an intuitive workflow, version control, file locking, activity tracking, with no size restrictions for editing files. See T[op 15 Reasons for Content Collaboration Using Zero Trust Data Access](https://fileflex.com/blog/discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture/).
+Illumio Core combined with Zero Trust Data access provides a collaboration platform that facilitates remote editing and file replacement directly from original storage locations, supporting various applications like Office 365, Google Docs, AutoCAD, and Adobe Creative Suite, and offering an intuitive workflow, version control, file locking, activity tracking, with no size restrictions for editing files. See T[op 15 Reasons for Content Collaboration Using Zero Trust Data Access](/blog/discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture/).
 
 ### Zero Trust Virtual Data Rooms
-Illumio Core plus Zero Trust Data Access as implemented by FileFlex allows end users to create unlimited Virtual Data Rooms located anywhere on on-premises, cloud-hosted, IaaS, or SharePoint storage, with unlimited participants, diverse permission levels, comprehensive activity tracking, and no restrictions on file sizes or storage capacity. See [Top 13 Reasons to Adopt Zero Trust Secure Virtual Data Rooms](https://fileflex.com/blog/top-13-reasons-to-adopt-zero-trust-secure-virtual-data-rooms/).
+Illumio Core plus Zero Trust Data Access as implemented by FileFlex allows end users to create unlimited Virtual Data Rooms located anywhere on on-premises, cloud-hosted, IaaS, or SharePoint storage, with unlimited participants, diverse permission levels, comprehensive activity tracking, and no restrictions on file sizes or storage capacity. See [Top 13 Reasons to Adopt Zero Trust Secure Virtual Data Rooms](/blog/top-13-reasons-to-adopt-zero-trust-secure-virtual-data-rooms/).
 
 ### Zero Trust SharePoint Add-in
 Illumio Core with Zero Trust Data Access enhances self-hosted implementations of SharePoint by enabling secure file sharing and collaboration within Windows, without file size limitations, providing access to multiple accounts, enabling team collaboration with external parties without SharePoint licenses, facilitating Virtual Data Room creation within SharePoint while integrating SharePoint to the rest of the corporate storage infrastructure. See [19 Reasons Why Zero Trust Data Access is an Essential SharePoint Add-in](https://fileflex.com/blog/19-reasons-why-zero-trust-data-access-is-an-essential-sharepoint-add-in/).  
