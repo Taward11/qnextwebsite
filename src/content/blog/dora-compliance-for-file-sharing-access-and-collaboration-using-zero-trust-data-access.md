@@ -118,6 +118,6 @@ Zero Trust Data Access technology as implemented by FileFlex reduces your VPN, F
 ## Summary – Zero Trust Data Access Crucial for DORA Compliance in Financial Sector Security
 In conclusion, the integration of Zero Trust Data Access (ZTDA) as implemented by FileFlex Enterprise within financial entities is pivotal for meeting the stringent cybersecurity and operational resilience standards outlined in the Digital Operational Resilience Act (DORA), ensuring granular access control, continuous authentication, encryption, micro-segmentation, and activity monitoring, thus fortifying secure file sharing, access, and collaboration practices in line with DORA’s stringent mandates for the financial sector.
 
-For further reading also see [Critical Infrastructure Regulatory Compliance via Zero Trust Architectures](https://fileflex.com/blog/critical-infrastructure-regulatory-compliance-via-zero-trust-architectures/) and [GDPR Compliant File Sharing Using Zero Trust Data Access](/blog/gdpr-compliant-file-sharing-using-zero-trust-data-access/).
+For further reading also see [Critical Infrastructure Regulatory Compliance via Zero Trust Architectures](/blog/critical-infrastructure-regulatory-compliance-via-zero-trust-architectures/) and [GDPR Compliant File Sharing Using Zero Trust Data Access](/blog/gdpr-compliant-file-sharing-using-zero-trust-data-access/).
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)

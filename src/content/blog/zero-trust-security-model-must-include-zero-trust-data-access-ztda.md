@@ -48,26 +48,31 @@ Both concepts are important for a comprehensive zero-trust security approach and
 In the zero trust security model, Zero Trust Network Access (ZTNA) together with Zero Trust Data Access have the potential to displace virtual private networks (VPNs) for most users for several reasons:
 
 1.  ### **Reduced attack surface:**
+    
 
-    Unlike VPNs, which provide broad access to the entire network, ZTNA +ZTDA provides granular access control policies and micro-segmentation that limit access to unstructured data, specific applications and resources. This reduces the attack surface and makes it harder for attackers to gain access to sensitive data.
+Unlike VPNs, which provide broad access to the entire network, ZTNA +ZTDA provides granular access control policies and micro-segmentation that limit access to unstructured data, specific applications and resources. This reduces the attack surface and makes it harder for attackers to gain access to sensitive data.
 
-2.  ### **Better user experience:**
+2.  ![Microsoft ecosystem](/images/blog/zero-trust-security-model-must-include-zero-trust-data-access-ztda/Windows-FSI-on-White-e1680009675504.webp)
+    
+    ### **Better user experience**:
+    
 
-    ![Microsoft ecosystem](/images/blog/zero-trust-security-model-must-include-zero-trust-data-access-ztda/Windows-FSI-on-White-e1680009675504.webp)
+VPNs can be complex and difficult to use, which can lead to frustration and decreased productivity for users. ZTNA provides a simpler and more streamlined approach to network access, with seamless authentication and access to specific applications and resources. ZTDA as implemented by FileFlex Enterprise, is integrated into Windows with no need for a separate app or change in user behavior.
 
-    VPNs can be complex and difficult to use, which can lead to frustration and decreased productivity for users. ZTNA provides a simpler and more streamlined approach to network access, with seamless authentication and access to specific applications and resources. ZTDA as implemented by FileFlex Enterprise, is integrated into Windows with no need for a separate app or change in user behavior.
+3.  ### **Improved security**:
+    
 
-3.  ### **Improved security:**
+VPNs rely on trust in the network perimeter, which can be easily breached by attackers. ZTNA and ZTDA, on the other hand, assume that the organization has already been breached and use verification and authentication of users and devices to protect files, folders and network resources.
 
-    VPNs rely on trust in the network perimeter, which can be easily breached by attackers. ZTNA and ZTDA, on the other hand, assume that the organization has already been breached and use verification and authentication of users and devices to protect files, folders and network resources.
+4.  ### **Greater flexibility**:
+    
 
-4.  ### **Greater flexibility:**
+ZTNA and ZTDA can be implemented in a variety of environments, including cloud-based and hybrid on-premises environments. This provides greater flexibility for organizations that need to support a variety of files, folders, applications and users across different locations and devices.
 
-    ZTNA and ZTDA can be implemented in a variety of environments, including cloud-based and hybrid on-premises environments. This provides greater flexibility for organizations that need to support a variety of files, folders, applications and users across different locations and devices.
+5.  ### **Better compliance**:
+    
 
-5.  ### **Better compliance:**
-
-    ZTNA and ZTDA provide granular access control policies and activity tracking of file access and network activity, which can help organizations meet regulatory requirements for data security and access control.
+ZTNA and ZTDA provide granular access control policies and activity tracking of file access and network activity, which can help organizations meet regulatory requirements for data security and access control.
 
 Overall, ZTNA and ZTDA provide a more secure, user-friendly, and flexible approach to unstructured data access and network access, which has the potential to displace VPNs for many users in many network environments.
 
@@ -78,7 +83,7 @@ While ZTNA provides secure access to applications and network segments, FileFlex
 
 Overall, in implementing a zero-trust security model ZTNA and FileFlex Enterprise work together to provide a comprehensive solution for secure, remote access to applications, files, and data.
 
-To learn more, check out our other blogs – [What is Zero Trust Data Access (ZTDA)?](/blog/what-is-zero-trust-data-access-ztda/), [Critical Infrastructure Management Over Remote Access and Sharing Using Zero Trust Architecture](https://fileflex.com/blog/critical-infrastructure-it-control-use-over-remote-access-and-sharing-using-zero-trust-architecture/), [Critical Infrastructure Regulatory Compliance via Zero Trust Architectures](https://fileflex.com/blog/critical-infrastructure-regulatory-compliance-via-zero-trust-architectures/), [Protecting Critical Infrastructure Using Zero Trust Data Access Architecture](https://fileflex.com/blog/critical-infrastructure-protection-using-zero-trust-data-access-top-8/) and [How to Protect Your Data with Zero Trust Data Access (ZTDA)](https://fileflex.com/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/).
+To learn more, check out our other blogs – [What is Zero Trust Data Access (ZTDA)?](/blog/what-is-zero-trust-data-access-ztda/), [Critical Infrastructure Management Over Remote Access and Sharing Using Zero Trust Architecture](/blog/critical-infrastructure-it-control-use-over-remote-access-and-sharing-using-zero-trust-architecture/), [Critical Infrastructure Regulatory Compliance via Zero Trust Architectures](/blog/critical-infrastructure-regulatory-compliance-via-zero-trust-architectures/), [Protecting Critical Infrastructure Using Zero Trust Data Access Architecture](/blog/critical-infrastructure-protection-using-zero-trust-data-access-top-8/) and [How to Protect Your Data with Zero Trust Data Access (ZTDA)](https://fileflex.com/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/).
 
 Infographics Source[: VentureBeat 2023](https://venturebeat.com/security/the-top-20-zero-trust-startups-to-watch-in-2023/)
 

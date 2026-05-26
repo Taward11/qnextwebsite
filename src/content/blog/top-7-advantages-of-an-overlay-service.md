@@ -16,29 +16,6 @@ categories:
   - "Zero Trust Data Access"
 tags: []
 toc: true
-tables:
-  - id: "overlay-vs-nonoverlay"
-    headers:
-      - "Aspect"
-      - "Overlay Services"
-      - "Non-Overlay Services"
-    rows:
-      - ["Abstraction", "Operates on top of existing infrastructure.", "Directly operates within the physical infrastructure."]
-      - ["Dependence", "Independent of underlying hardware.", "Depends heavily on the physical infrastructure."]
-      - ["Scalability", "Highly scalable and flexible.", "Limited by hardware constraints."]
-      - ["Deployment", "Easy to deploy; requires minimal network changes.", "Requires infrastructure modification or setup."]
-      - ["Examples", "VPNs, CDNs, SDN, Zero Trust Data Access platforms.", "ISPs, physical firewalls, traditional servers."]
-  - id: "overlay-removal"
-    headers:
-      - "Aspect"
-      - "Overlay Services"
-      - "Non-Overlay Services"
-    rows:
-      - ["Ease of Removal", "Easy to remove or disable with minimal steps.", "Requires significant effort and planning."]
-      - ["Impact on Base Systems", "Minimal; base systems remain functional.", "Can disrupt or completely stop base systems."]
-      - ["Dependency on Service", "Only affects overlay-dependent workflows.", "Affects core functionality or infrastructure."]
-      - ["Time and Cost", "Low; quick process with minimal costs.", "High; can involve costs for migration, hardware or downtime."]
-      - ["Examples", "Disabling a VPN or CDN.", "Removing a hardware firewall or decommissioning servers."]
 ---
 
 ## Introduction: Why Overlay Services Are Revolutionizing Modern IT
@@ -78,7 +55,7 @@ Examples of non-overlay services include Internet Service Providers (ISPs) deliv
 -   Scalability and adaptability are limited by the capabilities of the physical hardware.
 
 ## What are the Key Differences Between Overlay and Non-Overlay Services?
-<!-- table:overlay-vs-nonoverlay -->
+![Key Differences in Discontinuation/Uninstallation Between Overlay and Non-Overlay Services](/images/blog/top-7-advantages-of-an-overlay-service/Overlay-advantages-chart.webp)
 
 Overlay services are ideal when rapid deployment, cross-network compatibility, and added functionality are needed.  
 
@@ -120,7 +97,7 @@ For example, disabling a physical or integrated firewall may require reconfiguri
     -   **Downtime Risks**: Since the service is foundational, downtime is often unavoidable unless planned carefully.
 
 ## Key Differences in Discontinuation/Uninstallation Between Overlay and Non-Overlay Services
-<!-- table:overlay-removal -->
+![Key Differences Between Overlay and Non-Overlay Services](/images/blog/top-7-advantages-of-an-overlay-service/Overlay-removal-chart.webp)
 
 Discontinuing an overlay service is typically easier, quicker, and less disruptive since it operates independently of the underlying systems. Non-overlay services, being foundational, require more planning, resources, and potential downtime to uninstall or replace. For organizations seeking agility and minimal disruption, overlay services offer significant advantages in this aspect.  
 

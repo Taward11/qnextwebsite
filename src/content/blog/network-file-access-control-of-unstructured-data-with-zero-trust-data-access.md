@@ -17,7 +17,7 @@ tags: []
 toc: true
 ---
 
-<img class="blog-prose__img--float-right" src="/images/blog/network-file-access-control-of-unstructured-data-with-zero-trust-data-access/Business-penetration-icon-e1685648830161.webp" alt="network file access control" />
+![network file access control’](/images/blog/network-file-access-control-of-unstructured-data-with-zero-trust-data-access/Business-penetration-icon-e1685648830161.webp)
 
 ## Why Network Access Control is Needed?
 
@@ -74,7 +74,7 @@ By adopting Zero Trust data access principles, organizations can enhance network
 
 By implementing Zero Trust data access, organizations can establish a more secure and controlled environment for accessing sensitive files, minimizing the risk of data breaches, ensuring confidentiality, meeting compliance requirements, and improving overall data management and user productivity.
 
-For more information see our related blogs: [The Power of Zero Trust Data Access (ZTDA) in Reducing Ransomware Risk](https://fileflex.com/blog/the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk/), [Network Security: The Power of Zero Trust Data Access to Control On-Premises Access to Files and Folders](https://fileflex.com/blog/network-security-the-power-of-zero-trust-data-access-to-control-on-premises-access-to-files-and-folders/), and [How Zero Trust Data Access Can Facilitate Secure and Controlled On-Premises Network Access of Files and Folders](https://fileflex.com/blog/network-access-secure-and-controlled-via-zero-trust-data-access/).
+For more information see our related blogs: [The Power of Zero Trust Data Access (ZTDA) in Reducing Ransomware Risk](/blog/the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk/), [Network Security: The Power of Zero Trust Data Access to Control On-Premises Access to Files and Folders](/blog/network-security-the-power-of-zero-trust-data-access-to-control-on-premises-access-to-files-and-folders/), and [How Zero Trust Data Access Can Facilitate Secure and Controlled On-Premises Network Access of Files and Folders](/blog/network-access-secure-and-controlled-via-zero-trust-data-access/).
 
 \*[Help Net Security](https://www.helpnetsecurity.com/2022/01/20/cyber-concern-2022/)
 

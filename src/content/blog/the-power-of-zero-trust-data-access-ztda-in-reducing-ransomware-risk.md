@@ -51,9 +51,9 @@ Ransomware attacks typically unfold in three distinct stages, each playing a cru
 
 In the podinar produced by Canada Podcasts, Ed Dubrovsky CISSP OSCP PMP MBA MSc, COO and managing partner of Cypher and SCS/Cyber Security Program board member for York University explains the anatomy of a ransomware attack and how before attackers lock your systems they steal your information. Ed has extensive experience in managing over 4700 security incidents including ransomware, business email compromise, malicious insiders, extortion, executive protection, threat intelligence, and prevention/mitigation of risk associated with cyber-attacks.
 
-<div class="blog-prose__video"><iframe src="https://www.youtube-nocookie.com/embed/MKnBGL19YuI?rel=0&modestbranding=1" title="Ed Dubrovsky — Anatomy of a Ransomware Attack" loading="lazy" allow="encrypted-media" allowfullscreen></iframe></div>
+[![](/images/blog/the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk/Ed-Drubrovsky-video-thumbnail.webp)](https://youtu.be/MKnBGL19YuI)
 
-<p class="blog-prose__caption--center"><em>Ed Dubrovsky — Anatomy of a Ransomware Attack — Before Attackers Lock Your Systems They Steal Your Information</em></p>
+_Ed Dubrovsky – Anatomy of a Ransomware Attack – Before Attackers Lock Your Systems They Steal Your Information_
 
 ## Conclusion:
 Ransomware attacks continue to pose significant threats to organizations worldwide. By adopting Zero Trust Data Access (ZTDA) as implemented by FileFlex Enterprise, organizations can strengthen their defenses against ransomware attacks at various stages. FileFlex’s access controls, restrictions on lateral movement, and robust activity monitoring enable organizations to detect and prevent ransomware attacks during the critical extraction phase. By implementing ZTDA, organizations help safeguard their valuable data assets, maintain business continuity, and combat the evolving landscape of ransomware threats.

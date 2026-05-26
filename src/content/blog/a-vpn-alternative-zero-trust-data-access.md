@@ -95,7 +95,7 @@ There are several benefits to an organization of adopting Zero Trust Data Access
 -   Zero Trust Data Access provides a more comprehensive and adaptive security approach than traditional perimeter-based models, by ensuring that every access request is authenticated and authorized before granting access. This can significantly reduce the risk of data breaches and cyber-attacks.
 
 ### 2\. Reduces the Risk of Ransomware
--   By limiting access to sensitive data, restricting lateral movement and monitoring user activity, [Zero Trust Data Access can help prevent ransomware attacks](https://fileflex.com/blog/the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk/) and minimize the impact if an attack does occur.
+-   By limiting access to sensitive data, restricting lateral movement and monitoring user activity, [Zero Trust Data Access can help prevent ransomware attacks](/blog/the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk/) and minimize the impact if an attack does occur.
 
 ### 3\. Delivers Regulatory Compliance
 -   Zero Trust Data Access can help organizations comply with data privacy regulations such as HIPAA, GDPR, CIRCI, CMMC, ISO 27001, DORA and ENISA (European Union Agency for Cybersecurity), ensuring that only authorized users can access sensitive data.
