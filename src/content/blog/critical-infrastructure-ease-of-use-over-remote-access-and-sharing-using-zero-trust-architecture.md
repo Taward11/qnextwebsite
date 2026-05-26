@@ -9,6 +9,7 @@ author: "Tom Ward"
 featuredImage: "/images/blog/critical-infrastructure-ease-of-use-over-remote-access-and-sharing-using-zero-trust-architecture/Time-wasting-infographic.webp"
 featuredImageAlt: "Critical infrastructure ease of use"
 readingTime: "6 min read"
+heroSize: small
 categories:
   - "Critical Infrastructure Protection"
   - "Zero Trust"

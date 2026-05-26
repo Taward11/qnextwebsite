@@ -11,6 +11,7 @@ const blog = defineCollection({
     author: z.string().default('FileFlex Team'),
     featuredImage: z.string().optional(),
     featuredImageAlt: z.string().optional(),
+    heroSize: z.enum(['default', 'small']).default('default'),
     excerpt: z.string().optional(),
     readingTime: z.string().optional(),
     categories: z.array(z.string()).min(1).max(5),

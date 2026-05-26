@@ -18,7 +18,7 @@ toc: true
 ---
 
 ## Defining Organizations Considered Critical Infrastructure
-![Critical Infrastructure Regulatory Compliance](/images/blog/critical-infrastructure-regulatory-compliance-via-zero-trust-architectures/80-percent-cyberthreat-statistic.webp) Critical infrastructure organizations are those that are essential to the functioning of society and the economy, and whose disruption or destruction could have a significant impact on national security, public health and safety, or economic stability. Examples of critical infrastructure organizations can include:
+<img class="blog-prose__img--float-right" src="/images/blog/critical-infrastructure-regulatory-compliance-via-zero-trust-architectures/80-percent-cyberthreat-statistic.webp" alt="Critical Infrastructure Regulatory Compliance" /> Critical infrastructure organizations are those that are essential to the functioning of society and the economy, and whose disruption or destruction could have a significant impact on national security, public health and safety, or economic stability. Examples of critical infrastructure organizations can include:
 
 ### 1\. Energy sector
 

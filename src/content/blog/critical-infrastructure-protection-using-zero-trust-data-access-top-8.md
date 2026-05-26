@@ -17,7 +17,7 @@ tags: []
 toc: true
 ---
 
-![Critical Infrastructure Protection](/images/blog/critical-infrastructure-protection-using-zero-trust-data-access-top-8/Critical-Infrastructure-mini-graphic.webp)
+<img class="blog-prose__img--float-right" src="/images/blog/critical-infrastructure-protection-using-zero-trust-data-access-top-8/Critical-Infrastructure-mini-graphic.webp" alt="Critical Infrastructure Protection" />
 
 ## How Zero Trust Data Access Architecture Can Help
 Critical infrastructure organizations face a unique set of challenges when it comes to securing and hardening remote file access and sharing. They need to ensure that sensitive information remains secure while also allowing employees and partners to access it easily from remote locations. Zero trust data access (ZTDA) architecture aids in protecting critical infrastructure by helping organizations to better protect access to their sensitive information and ensure the secure remote access and sharing of files and folders.  All access for every session must go through user authentication and then is allowed only according to the policy for that user as determined by the organization.  Direct access to resources is not permitted.  Also, all communications are double encrypted with encryption keys generated in a separate PKI server and every action is logged to allow response to potential security incidents and for forensic investigation.
