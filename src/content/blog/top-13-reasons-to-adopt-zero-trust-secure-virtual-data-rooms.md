@@ -80,9 +80,9 @@ This zero-trust approach is specifically engineered to bolster cybersecurity by 
   
 In the webinar produced by the Edge Computing Association below, Tom Ward, VP of Marketing for Qnext explains zero trust-based virtual data rooms and the technology used to create them.
 
-[![](/images/blog/top-13-reasons-to-adopt-zero-trust-secure-virtual-data-rooms/Virtual-Data-Room-BrightTALK-Webinar-cover-slide-640x360-1.webp)](https://www.youtube.com/watch?v=2nml2SxJRXE)
+<div class="blog-prose__video"><iframe src="https://www.youtube-nocookie.com/embed/2nml2SxJRXE?rel=0&modestbranding=1" title="How Zero Trust Data Access Enables Creation of Secure Virtual Data Rooms Webinar" loading="lazy" allow="encrypted-media" allowfullscreen></iframe></div>
 
-[_Watch ‘How Zero Trust Data Access Enables Creation of Secure Virtual Data Rooms Webinar’_](https://www.youtube.com/watch?v=2nml2SxJRXE)
+<p class="blog-prose__caption--center"><em>Watch — How Zero Trust Data Access Enables Creation of Secure Virtual Data Rooms Webinar</em></p>
 
 For further insights into zero trust principles and zero trust architecture, please see What is [Zero Trust Data Access](/blog/what-is-zero-trust-data-access-ztda/) and [Zero Trust Access Methods](https://fileflex.com/blog/zero-trust-data-access-methods/).
 
@@ -170,9 +170,9 @@ In an ever-evolving cybersecurity landscape, organizations must embrace the tran
 ## How to Make a Zero Trust Virtual Data Room?
 See [How to Create Virtual Data Rooms Using FileFlex Enterprise](https://fileflex.com/blog/use-fileflex-enterprise-to-create-virtual-data-rooms/) or watch [‘How to Create Virtual Data Rooms via the Zero Trust Technology of FileFlex Enterprise](https://www.youtube.com/watch?v=SViL6WNEmnY&t=58s)‘.
 
-[![](/images/blog/top-13-reasons-to-adopt-zero-trust-secure-virtual-data-rooms/virtual-data-room-youtube-thumbnail.webp)](https://youtu.be/S3jS-FL5ngo)
+<div class="blog-prose__video"><iframe src="https://www.youtube-nocookie.com/embed/S3jS-FL5ngo?rel=0&modestbranding=1" title="How to Create Virtual Data Rooms via the Zero Trust Technology of FileFlex Enterprise" loading="lazy" allow="encrypted-media" allowfullscreen></iframe></div>
 
-[_Watch ‘How to Create Virtual Data Rooms via the Zero Trust Technology of FileFlex Enterprise’_](https://youtu.be/S3jS-FL5ngo)
+<p class="blog-prose__caption--center"><em>Watch — How to Create Virtual Data Rooms via the Zero Trust Technology of FileFlex Enterprise</em></p>
 
 [Imarc](https://www.imarcgroup.com/virtual-data-room-market)
 

@@ -151,9 +151,9 @@ In conclusion, adopting an enterprise content collaboration platform built on a 
 
 In the following webinar, Tom Ward, VP of Marketing for Qnext explains zero trust-based collaboration.
 
-[![](/images/blog/discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture/zero-trust-data-collaboration-title-for-BrightTALK-640x360-1.webp)](https://youtu.be/CImcdNpznp0)
+<div class="blog-prose__video"><iframe src="https://www.youtube-nocookie.com/embed/CImcdNpznp0?rel=0&modestbranding=1" title="Zero Trust Data Collaboration for Remote Workers" loading="lazy" allow="encrypted-media" allowfullscreen></iframe></div>
 
-[_Watch ‘Zero Trust Data Collaboration for Remote Workers’_](https://youtu.be/CImcdNpznp0)
+<p class="blog-prose__caption--center"><em>Watch — Zero Trust Data Collaboration for Remote Workers</em></p>
 
 To understand more about how a Zero Trust Data Access platform can help your organization [see Top 13 Reasons to Adopt Zero Trust Secure Virtual Data Rooms](/blog/top-13-reasons-to-adopt-zero-trust-secure-virtual-data-rooms/) and [Top 13 Reasons to Use a Zero Trust Secure File-Sharing Platform for Business](/blog/top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business/).
 

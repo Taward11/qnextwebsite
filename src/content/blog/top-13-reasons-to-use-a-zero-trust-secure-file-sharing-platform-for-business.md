@@ -128,9 +128,9 @@ Embracing the Zero Trust approach for secure file sharing, exemplified by FileFl
 ## Conclusion: Future-Proofing via Zero Trust Secure File Sharing
 In conclusion, Zero Trust Secure File Sharing, as implemented by FileFlex Enterprise, offers a comprehensive and forward-thinking approach to security. With its emphasis on continuous verification, robust access controls, and adaptability to the modern work environment, it provides organizations with the means to protect sensitive data, maintain compliance, and fortify their overall security posture in the face of evolving cyber threats.
 
-[![](/images/blog/top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business/How-I-shared-1-TB-thumbnail.webp)](https://www.youtube.com/watch?v=ZOtsJmZpruY)
+<div class="blog-prose__video"><iframe src="https://www.youtube-nocookie.com/embed/ZOtsJmZpruY?rel=0&modestbranding=1" title="How I Shared Over 1TB of Digital Media" loading="lazy" allow="encrypted-media" allowfullscreen></iframe></div>
 
-[_Watch ‘How I Shared Over 1TB of Digital Media’_](https://www.youtube.com/watch?v=ZOtsJmZpruY)
+<p class="blog-prose__caption--center"><em>Watch — How I Shared Over 1TB of Digital Media</em></p>
 
 To understand more about how a Zero Trust Data Access platform can help your organization [see Top 13 Reasons to Adopt Zero Trust Secure Virtual Data Rooms](/blog/top-13-reasons-to-adopt-zero-trust-secure-virtual-data-rooms/) and [Discover the 15 Top Reasons to Adopt a Content Collaboration Platform Built on a Zero Trust Architecture](/blog/discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture/).
 

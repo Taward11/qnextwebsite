@@ -77,7 +77,11 @@ When a numbered list item's content is removed (e.g. extracting an image out of 
 
 ## Inline blog video player mirrors homepage #ff-modal iframe
 
-When a source post embeds a YouTube thumbnail+link, replace it with `<div class="blog-prose__video"><iframe src="https://www.youtube-nocookie.com/embed/<ID>?rel=0&modestbranding=1" ...></iframe></div>` plus a `<p class="blog-prose__caption--center">` caption. `.blog-prose__video` is a 16:9 wrapper defined in `src/styles/blog.css`. Same youtube-nocookie origin and `rel=0&modestbranding=1` query as the homepage `#ff-modal` iframe — keeps tracking and "watch on YouTube" CTAs minimized so the play stays in-page.
+All video embeds on the site use the same inline player: `<div class="blog-prose__video"><iframe src="https://www.youtube-nocookie.com/embed/<ID>?rel=0&modestbranding=1[&start=<sec>]" ...></iframe></div>` followed by a `<p class="blog-prose__caption--center"><em>Watch — Title</em></p>`. `.blog-prose__video` is a 16:9 wrapper defined in `src/styles/blog.css`. Same youtube-nocookie origin and `rel=0&modestbranding=1` query as the homepage `#ff-modal` iframe — keeps tracking and "watch on YouTube" CTAs minimized so the play stays in-page.
+
+**Why one player, site-wide:** The user explicitly requested it ("please do this for all videos on the site going forward"). YouTube's stock embed adds related-video grids and branded overlays that erode the brand; the homepage player was already tuned to suppress them, so the blog should not diverge.
+
+**How to apply:** `build.cjs` runs a generic body transform that converts the WordPress shape `[![alt](thumb)](youtu.be/<ID>)\n\n[_Watch 'Title'_](url)` into the iframe block. It handles `youtu.be/<ID>`, `youtube.com/watch?v=<ID>`, and `youtube-nocookie.com/embed/<ID>`, propagates `?t=<sec>` / `&t=<sec>` / `&start=<sec>` into the iframe URL, and strips smart-quotes from the title. Don't add per-post POST_FIXES for video embeds — extend the regex instead if a new source shape appears.
 
 ## Reading-time + author defaults
 
