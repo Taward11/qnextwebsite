@@ -113,16 +113,4 @@ Book a demo to see how FileFlex helps your organization achieve GDPR-compliant f
 
 \* [legaljobs.io](https://legaljobs.io/blog/gdpr-statistics/)
 
-### What are the key requirements for GDPR-compliant file sharing?
-
-Key requirements include strong encryption, granular access controls, audit logging, data minimization, and user consent. Organizations must also provide transparency, ensure data subjects’ rights are protected, and store data within approved jurisdictions when applicable.
-
-### Does GDPR require encryption for file sharing?
-
-While GDPR does not mandate encryption outright, it strongly recommends encryption and pseudonymization as appropriate technical safeguards. Encrypting files during transmission and storage helps protect data from unauthorized access and supports compliance with GDPR Article 32.
-
-### Is FileFlex a GDPR-compliant file sharing solution?
-
-Yes, FileFlex supports GDPR compliance by enabling secure file access and sharing through Zero Trust Data Access. It provides encryption, access controls, audit logging, and keeps data in place—ensuring organizations meet the security, transparency, and data sovereignty obligations of GDPR.
-
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)

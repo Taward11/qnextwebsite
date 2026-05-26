@@ -76,8 +76,7 @@ A zero-trust data access architecture is designed to:
 -   Protect user credentials.
 ![a zero trust architecture](/images/blog/why-organizations-need-zero-trust-data-access-as-a-managed-file-transfer-alternative/Simplified-ZTA-Diagram-scaled-e1701897051835.webp)
 
-_Diagram 1_  
-_Simplified Zero Trust Architecture_
+<p class="blog-prose__caption--center"><em>Diagram 1 — Simplified Zero Trust Architecture</em></p>
 
   
 Zero trust data access establishes encrypted connections between remote employees’ devices and a centralized corporate network over the Network or the Internet, however, the connection is made through a zero-trust architecture that does not allow direct access to resources.  It goes beyond an MFT in that it also provides access to cloud-hosted repositories, FTP repositories, SharePoint repositories, and on-premises storage over multiple domains.  Employees can connect to their corporate resources from anywhere with internet access, however, their access can be controlled and restricted by management according to Least Privilege Principles and IT chain of command.  It also provides file-sharing capability and because all actions are controlled by a zero trust server, all actions are recorded for forensic investigation and for output to the SIEM to detect ransomware attacks in process.

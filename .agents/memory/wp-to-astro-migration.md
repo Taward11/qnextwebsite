@@ -3,6 +3,16 @@ name: WP→Astro blog migration pipeline
 description: Durable rules and gotchas for `.local/scrape/build.cjs` when migrating fileflex.com WordPress posts into the Astro content collection.
 ---
 
+## FAQs render twice if inline `### Q?` blocks survive in body
+
+The blog template (`src/pages/blog/[...slug].astro`) renders a dedicated `<section class="blog-post__faq">` from frontmatter `faq:`. WordPress posts also include the same questions inline as `### Question?` headings (because cheerio's `.html()` keeps the schema.org/Question markup). Without intervention, every FAQ appears twice on the page.
+
+**Fix:** `build.cjs` runs a line-based scanner just before the markdown body is written. For each `json.faqs[i].q`, when a body line matches `^### <q>$` exactly, drop that line and every subsequent line until the next heading (`#`–`######`) or a CTA boundary. Scoped to `###` only (never `##` / `####`) so unrelated sections aren't eaten.
+
+**Why a scanner, not a regex:** a `[^\n]+?...(?=heading)` regex over-matches when there's no blank line between the FAQ answer and the next heading (architect verified — it consumed the next `## Section`). A scanner with a `dropping` flag and an exact-question heading match is the only way to be safe across multi-paragraph answers, list answers, and tight heading boundaries.
+
+**How to apply:** add FAQs to `.local/scrape/body2/<slug>.json` `faqs` array (or let extract_batch.cjs do it from the page's schema.org/Question markup). They auto-flow to frontmatter `faq:` → visible FAQ section → JSON-LD `FAQPage` schema in one path. Don't paste FAQ Markdown into the body.
+
 ## extract_batch.cjs takes slugs from argv
 
 As of 2026-05-26, `.local/scrape/extract_batch.cjs` reads slugs from `process.argv.slice(2)` instead of a hardcoded array. Invoke per batch like `node .local/scrape/extract_batch.cjs slug1 slug2 …`; no edits needed between batches.

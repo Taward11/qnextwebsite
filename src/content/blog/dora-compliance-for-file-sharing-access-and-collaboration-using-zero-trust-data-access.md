@@ -14,6 +14,15 @@ categories:
   - "Zero Trust Data Access"
 tags: []
 toc: true
+faq:
+  - q: "What is DORA and why does it matter for financial institutions?"
+    a: "The Digital Operational Resilience Act (DORA) is a European Union regulation designed to strengthen cybersecurity and operational resilience across the financial sector. It requires financial entities and critical ICT providers to implement robust security controls, incident reporting, access governance, and operational resilience measures to reduce the risk of cyberattacks, ransomware, and operational disruptions."
+  - q: "How does Zero Trust Data Access (ZTDA) help support DORA compliance?"
+    a: "Zero Trust Data Access helps organizations align with DORA requirements by enforcing least-privilege access, continuous authentication, encryption, micro-segmentation, and detailed activity monitoring. These controls improve the protection of unstructured data such as files and documents while enhancing visibility, governance, and incident response capabilities."
+  - q: "Why is Zero Trust considered more secure than traditional VPN or file-sharing approaches?"
+    a: "Traditional VPNs and legacy file-sharing systems often provide broad network access once a user is authenticated. Zero Trust Data Access takes a different approach by verifying every access request, limiting permissions to specific files and folders, and continuously monitoring user activity. This reduces the attack surface, limits lateral movement during a breach, and strengthens protection against insider threats and ransomware."
+  - q: "What are some practical DORA-compliant use cases for Zero Trust Data Access?"
+    a: "Zero Trust Data Access can be used as a secure alternative to VPNs, FTP, MFT, and traditional file-sharing platforms. It also enhances Microsoft 365 and SharePoint environments, supports secure external collaboration, enables Zero Trust Virtual Data Rooms, and provides secure access to federated on-premises and cloud storage while maintaining centralized governance and auditability."
 ---
 
 ## What is DORA?
@@ -48,8 +57,9 @@ Implementing a Zero Trust Architecture (ZTA) is crucial for meeting DORA (Depart
 
 Within this framework, a central server plays a critical role in verifying user identities and permissions. Instead of allowing direct shared access to the original resource location, the server facilitates the delivery of requested files to users. This approach is visualized in Diagram 1, illustrating a simplified zero-trust architecture.
 
-_![Simplified ZTDA Architecture for DORA compliance](/images/blog/dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access/ZTDA-Architecture.png.webp)Diagram 1_  
-_Simplified Zero Trust Architecture for DORA Compliance_
+![Simplified ZTDA Architecture for DORA compliance](/images/blog/dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access/ZTDA-Architecture.png.webp)
+
+<p class="blog-prose__caption--center"><em>Diagram 1 — Simplified Zero Trust Architecture for DORA Compliance</em></p>
 
  This method enables seamless access, sharing, collaboration, and management of files and folders across various repositories—be it cloud-based, FTP, SharePoint, or on-premises storage. Notably, there’s no need for the zero trust policy server to be managed by a third party, and sensitive information remains secure without requiring uploads to an external server.
 
