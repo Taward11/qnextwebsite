@@ -141,6 +141,20 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"19-reasons-why-zero-trust-data-access-is-an-essential-sharepoint-add-in.md": {
+	id: "19-reasons-why-zero-trust-data-access-is-an-essential-sharepoint-add-in.md";
+  slug: "19-reasons-why-zero-trust-data-access-is-an-essential-sharepoint-add-in";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"21-reasons-to-supplement-microsoft-365-e5-security-with-zero-trust-data-access.md": {
+	id: "21-reasons-to-supplement-microsoft-365-e5-security-with-zero-trust-data-access.md";
+  slug: "21-reasons-to-supplement-microsoft-365-e5-security-with-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "24-reasons-to-use-zero-trust-data-access-as-an-ftp-alternative.md": {
 	id: "24-reasons-to-use-zero-trust-data-access-as-an-ftp-alternative.md";
   slug: "24-reasons-to-use-zero-trust-data-access-as-an-ftp-alternative";
@@ -151,6 +165,13 @@ declare module 'astro:content' {
 "9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access.md": {
 	id: "9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access.md";
   slug: "9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"a-vpn-alternative-zero-trust-data-access.md": {
+	id: "a-vpn-alternative-zero-trust-data-access.md";
+  slug: "a-vpn-alternative-zero-trust-data-access";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -351,6 +372,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"regulatory-compliance-in-the-digital-age-unveiling-quebec-bill-64-and-how-fileflex-enterprise-can-help.md": {
+	id: "regulatory-compliance-in-the-digital-age-unveiling-quebec-bill-64-and-how-fileflex-enterprise-can-help.md";
+  slug: "regulatory-compliance-in-the-digital-age-unveiling-quebec-bill-64-and-how-fileflex-enterprise-can-help";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "sec-cybersecurity-rules-zero-trust-architecture-what-cios-and-cisos-need-to-know.md": {
 	id: "sec-cybersecurity-rules-zero-trust-architecture-what-cios-and-cisos-need-to-know.md";
   slug: "sec-cybersecurity-rules-zero-trust-architecture-what-cios-and-cisos-need-to-know";
@@ -473,6 +501,13 @@ declare module 'astro:content' {
 "top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity.md": {
 	id: "top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity.md";
   slug: "top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"unstructured-data-access-and-sharing-controlled-and-secured-using-zero-trust-data-access.md": {
+	id: "unstructured-data-access-and-sharing-controlled-and-secured-using-zero-trust-data-access.md";
+  slug: "unstructured-data-access-and-sharing-controlled-and-secured-using-zero-trust-data-access";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

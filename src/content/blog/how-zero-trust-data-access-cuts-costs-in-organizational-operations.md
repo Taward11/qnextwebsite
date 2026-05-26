@@ -20,7 +20,7 @@ In addition to the stringent security measures such as granular access control, 
 
 ## ZTDA as a VPN Alternative
 ![ZTDA represents a paradigm shift in security strategies, offering superior protection while reducing expenditures](/images/blog/how-zero-trust-data-access-cuts-costs-in-organizational-operations/Cost-saving-infographic.webp)  
-ZTDA can be used as a VPN alternative that revolutionizes remote access within Windows by seamlessly connecting users to on-premises devices, cloud-hosted platforms, FTP, SharePoint, medical and CAD images over the Internet without relying on a VPN, delivering cutting-edge security, simplified access management, IT-controlled chain of command, file sharing/collaboration functionality, and with Windows integration, enhanced user experience. See [19 Advantages of the Zero Trust Data Access VPN Alternative](https://fileflex.com/blog/a-vpn-alternative-zero-trust-data-access/).
+ZTDA can be used as a VPN alternative that revolutionizes remote access within Windows by seamlessly connecting users to on-premises devices, cloud-hosted platforms, FTP, SharePoint, medical and CAD images over the Internet without relying on a VPN, delivering cutting-edge security, simplified access management, IT-controlled chain of command, file sharing/collaboration functionality, and with Windows integration, enhanced user experience. See [19 Advantages of the Zero Trust Data Access VPN Alternative](/blog/a-vpn-alternative-zero-trust-data-access/).
 
 According to the web search results, the cost of a VPN itself for large enterprises depends on several factors, such as the number of users, the number of locations, the bandwidth requirements, the level of security, and the features and support offered by the VPN provider.  
   
@@ -49,7 +49,7 @@ Managing and maintaining a Virtual Data Room (VDR) platform also involves variou
 ### SharePoint
 Since ZTDA allows users to share and collaborate SharePoint content with non-SharePoint users within Windows, without file size limitations, providing access to multiple accounts, enabling team collaboration with external parties without SharePoint licenses, facilitating Virtual Data Room creation within SharePoint while integrating SharePoint to the rest of the corporate storage infrastructure,
 
-users that only consume SharePoint content can now do so without a SharePoint license.  (See [19 Reasons Why Zero Trust Data Access is an Essential SharePoint Add-in](https://fileflex.com/blog/19-reasons-why-zero-trust-data-access-is-an-essential-sharepoint-add-in/).)
+users that only consume SharePoint content can now do so without a SharePoint license.  (See [19 Reasons Why Zero Trust Data Access is an Essential SharePoint Add-in](/blog/19-reasons-why-zero-trust-data-access-is-an-essential-sharepoint-add-in/).)
 
 ### Cloud Storage
 Because ZTDA provides cloud functionality (sharing, remote access, streaming, collaboration, virtual data rooms) to on-premises storage, organizations can replace expensive cloud storage with less expensive on-premises storage.

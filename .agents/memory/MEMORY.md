@@ -1,3 +1,4 @@
 - [Blog system conventions](blog-system.md) — Astro content collection, marker-based table injection, image float-by-filename, author lookup map.
 - [WP→Astro blog migration pipeline](wp-to-astro-migration.md) — META authoring, FAQ scanner, legacy-restore step, link rewriting, code-block trap, normalizeDesc, category cap.
 - [WP orphan-bullet re-indent](wp-orphan-bullet-transform.md) — body bullets under `N.  ### **Heading:**` need `N.length+3` space indent or the list splits.
+- [WP double-numbered list unwrap](wp-double-numbered-lists.md) — WP serializes some "N reasons" lists as doubly-nested ordered lists + orphan `### N.` heading tails; build.cjs has two transforms to flatten both shapes.

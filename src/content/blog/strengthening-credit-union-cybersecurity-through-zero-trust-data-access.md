@@ -134,7 +134,7 @@ In addition to the security, regulatory, member trust and reputational benefits 
 -   Credit unions use zero-trust file sharing to ensure that sensitive files are securely shared with authorized users only, continuously verifying identities and permissions throughout the process. See [Top 13 Reasons for Secure Zero Trust File Sharing](/blog/top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business/).
 
 ### Advanced Zero Trust VPN Alternative:
--   Replacing traditional VPNs, Zero Trust Data Access enables secure remote access for credit union employees by validating every access request, reducing the risks associated with compromised devices and networks. See [19 Advantages of the Zero Trust Data Access VPN Alternative](https://fileflex.com/blog/a-vpn-alternative-zero-trust-data-access/).
+-   Replacing traditional VPNs, Zero Trust Data Access enables secure remote access for credit union employees by validating every access request, reducing the risks associated with compromised devices and networks. See [19 Advantages of the Zero Trust Data Access VPN Alternative](/blog/a-vpn-alternative-zero-trust-data-access/).
 
 ### Enhanced Zero Trust FTP Alternative:
 -   Credit unions utilize Zero Trust Data Access as an alternative to traditional FTP. By restricting access and verifying users at every stage, Zero Trust Data Access provides more secure and controlled file transfers. See [24 Reasons to Use Zero Trust Data Access as an FTP Alternative](/blog/24-reasons-to-use-zero-trust-data-access-as-an-ftp-alternative/).
