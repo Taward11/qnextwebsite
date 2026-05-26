@@ -110,7 +110,7 @@ Within this framework, a central server plays a critical role in verifying user 
 -   Provides a log of all activities
 
 A Zero Trust Architecture enables access, sharing, collaboration, and management of files and folders across multiple repositories—be it cloud-based, FTP, SharePoint, or on-premises storage.  
-Management retains detailed control over access and restrictions, aligning with the principle of Least Privilege and the established IT hierarchy. Additionally, by centralizing all actions through the zero-trust server, records of activities are maintained, aiding forensic investigations and for output to the SIEM to detect ransomware attacks in progress (see [How to Reduce Ransomware Risk Using Zero Trust Data Access](https://fileflex.com/blog/the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk/)).
+Management retains detailed control over access and restrictions, aligning with the principle of Least Privilege and the established IT hierarchy. Additionally, by centralizing all actions through the zero-trust server, records of activities are maintained, aiding forensic investigations and for output to the SIEM to detect ransomware attacks in progress (see [How to Reduce Ransomware Risk Using Zero Trust Data Access](/blog/the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk/)).
 
 Implementing zero trust principles via a ZTA is the key to achieving NIST compliance regarding secure access, sharing, and collaboration.
 

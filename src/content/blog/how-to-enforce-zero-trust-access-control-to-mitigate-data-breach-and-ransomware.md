@@ -60,7 +60,7 @@ Using Illumio Core to prevent direct access to sensitive data repositories and p
 1.  ### **Enhanced Zero Trust Security**
     - **Expanded Micro-Segmentation:** Illumio’s micro-segmentation now includes data access control, reducing attack surfaces. See [Why You Need Zero Trust Data Access Micro-Segmentation](/blog/why-you-need-zero-trust-data-access-micro-segmentation/).
 -   **Centralized Access Control:** All data requests are funneled through FileFlex, ensuring centralized monitoring and control. See [The Top 7 Benefits of Network File Access Control Using Zero Trust Data Access](/blog/network-file-access-control-of-unstructured-data-with-zero-trust-data-access/)
--   **Ransomware Mitigation:** Combined defenses prevent lateral movement during the infiltration phase and data activity monitoring to detect ransomware during the data extraction phase. See [How to Reduce Ransomware Risk Using Zero Trust Data Access (ZTDA)](https://fileflex.com/blog/the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk/).
+-   **Ransomware Mitigation:** Combined defenses prevent lateral movement during the infiltration phase and data activity monitoring to detect ransomware during the data extraction phase. See [How to Reduce Ransomware Risk Using Zero Trust Data Access (ZTDA)](/blog/the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk/).
 
 2.  ### **Improved Visibility and Control**
     - **Real-Time Monitoring**: Organizations gain real-time visibility into network traffic and data activity.

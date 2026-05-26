@@ -225,6 +225,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"critical-infrastructure-ease-of-use-over-remote-access-and-sharing-using-zero-trust-architecture.md": {
+	id: "critical-infrastructure-ease-of-use-over-remote-access-and-sharing-using-zero-trust-architecture.md";
+  slug: "critical-infrastructure-ease-of-use-over-remote-access-and-sharing-using-zero-trust-architecture";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "cybersecurity-for-law-firms-the-priority-of-zero-trust-data-access-security.md": {
 	id: "cybersecurity-for-law-firms-the-priority-of-zero-trust-data-access-security.md";
   slug: "cybersecurity-for-law-firms-the-priority-of-zero-trust-data-access-security";
@@ -386,9 +393,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"network-access-secure-and-controlled-via-zero-trust-data-access.md": {
+	id: "network-access-secure-and-controlled-via-zero-trust-data-access.md";
+  slug: "network-access-secure-and-controlled-via-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "network-file-access-control-of-unstructured-data-with-zero-trust-data-access.md": {
 	id: "network-file-access-control-of-unstructured-data-with-zero-trust-data-access.md";
   slug: "network-file-access-control-of-unstructured-data-with-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"network-security-the-power-of-zero-trust-data-access-to-control-on-premises-access-to-files-and-folders.md": {
+	id: "network-security-the-power-of-zero-trust-data-access-to-control-on-premises-access-to-files-and-folders.md";
+  slug: "network-security-the-power-of-zero-trust-data-access-to-control-on-premises-access-to-files-and-folders";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -445,6 +466,13 @@ declare module 'astro:content' {
 "supporting-financial-services-cybersecurity-through-zero-trust-data-access.md": {
 	id: "supporting-financial-services-cybersecurity-through-zero-trust-data-access.md";
   slug: "supporting-financial-services-cybersecurity-through-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk.md": {
+	id: "the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk.md";
+  slug: "the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -627,6 +655,13 @@ declare module 'astro:content' {
 "zero-trust-data-access-to-meet-dib-cybersecurity-strategy-2024.md": {
 	id: "zero-trust-data-access-to-meet-dib-cybersecurity-strategy-2024.md";
   slug: "zero-trust-data-access-to-meet-dib-cybersecurity-strategy-2024";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"zero-trust-security-model-must-include-zero-trust-data-access-ztda.md": {
+	id: "zero-trust-security-model-must-include-zero-trust-data-access-ztda.md";
+  slug: "zero-trust-security-model-must-include-zero-trust-data-access-ztda";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

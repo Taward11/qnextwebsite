@@ -37,7 +37,7 @@ Ransomware attacks pose a significant threat to higher educational institutions,
 ## Conclusion:
 In an era where data breaches and cyber threats continue to target higher educational institutions, adopting a Zero Trust Data Access (ZTDA) approach is crucial to ensuring data security, facilitating secure collaboration, and complying with regulatory requirements. ZTDA enables institutions to safeguard sensitive data, establish secure collaboration channels, maintain compliance with data protection regulations, and mitigate insider threats. By embracing ZTDA, higher educational institutions can create a robust security posture, foster a culture of trust, and protect valuable intellectual assets within their digital ecosystems.
 
-For additional information see [Data Governance, Cybersecurity and Zero Trust Data Access:  The Essential Pillars to Protect Data Assets](/blog/data-governance-cybersecurity-and-zero-trust-data-access-the-essential-pillars-to-protect-data-assets/), and [The Power of Zero Trust Data Access (ZTDA) in Reducing Ransomware Risk](https://fileflex.com/blog/the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk/).
+For additional information see [Data Governance, Cybersecurity and Zero Trust Data Access:  The Essential Pillars to Protect Data Assets](/blog/data-governance-cybersecurity-and-zero-trust-data-access-the-essential-pillars-to-protect-data-assets/), and [The Power of Zero Trust Data Access (ZTDA) in Reducing Ransomware Risk](/blog/the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk/).
 
 \*[IBM Cost of a Data Breach Report 2022](https://www.ibm.com/downloads/cas/3R8N1DZJ)
 
