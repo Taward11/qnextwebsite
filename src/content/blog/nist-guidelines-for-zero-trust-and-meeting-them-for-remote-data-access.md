@@ -108,7 +108,7 @@ Instead of defining zero trust in terms of perimeters in some way, [NIST SP 800-
 ### 9\. FileFlex Enterprise Supports Collaboration with External Parties Controlled by IT.
 -   FileFlex Enterprise provides collaborators to remotely edit and replace files including external parties. IT controls remote editing permissions and storage access.
 
-For more reading on zero trust security, see our other blogs – [‘Why Zero Trust. Why Now?’](/blog/why-zero-trust-and-why-now/), ‘[How to Protect Your Data with Zero Trust Data Access](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)‘, and ‘[How to Enable Your Remote Workforce with Zero Trust by Design](https://fileflex.com/blog/enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn/)‘.
+For more reading on zero trust security, see our other blogs – [‘Why Zero Trust. Why Now?’](/blog/why-zero-trust-and-why-now/), ‘[How to Protect Your Data with Zero Trust Data Access](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)‘, and ‘[How to Enable Your Remote Workforce with Zero Trust by Design](/blog/enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn/)‘.
 
 ### Watch the webinar
 

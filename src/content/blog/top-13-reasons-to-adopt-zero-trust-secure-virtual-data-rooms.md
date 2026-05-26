@@ -168,7 +168,7 @@ Adopting the Zero Trust methodology for establishing secure virtual data rooms, 
 In an ever-evolving cybersecurity landscape, organizations must embrace the transition to next-generation Zero Trust Virtual Data Rooms (VDRs). These advanced solutions offer superior data security, robust protection against ransomware, superior governance and chain-of-command and comprehensive insider threat prevention, while also ensuring compliance, reducing the attack surface, and providing a cost-effective, future-proof approach. The shift to zero-trust VDRs is not a choice but a necessity for organizations committed to strengthening data security in the modern digital era.
 
 ## How to Make a Zero Trust Virtual Data Room?
-See [How to Create Virtual Data Rooms Using FileFlex Enterprise](https://fileflex.com/blog/use-fileflex-enterprise-to-create-virtual-data-rooms/) or watch [‘How to Create Virtual Data Rooms via the Zero Trust Technology of FileFlex Enterprise](https://www.youtube.com/watch?v=SViL6WNEmnY&t=58s)‘.
+See [How to Create Virtual Data Rooms Using FileFlex Enterprise](/blog/use-fileflex-enterprise-to-create-virtual-data-rooms/) or watch [‘How to Create Virtual Data Rooms via the Zero Trust Technology of FileFlex Enterprise](https://www.youtube.com/watch?v=SViL6WNEmnY&t=58s)‘.
 
 <div class="blog-prose__video"><iframe src="https://www.youtube-nocookie.com/embed/S3jS-FL5ngo?rel=0&modestbranding=1" title="How to Create Virtual Data Rooms via the Zero Trust Technology of FileFlex Enterprise" loading="lazy" allow="encrypted-media" allowfullscreen></iframe></div>
 

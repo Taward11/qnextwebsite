@@ -204,6 +204,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"centralized-vs-decentralized-cloud-storage.md": {
+	id: "centralized-vs-decentralized-cloud-storage.md";
+  slug: "centralized-vs-decentralized-cloud-storage";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "cloudflare-one-and-fileflex-enterprise-securing-apps-and-data-together.md": {
 	id: "cloudflare-one-and-fileflex-enterprise-securing-apps-and-data-together.md";
   slug: "cloudflare-one-and-fileflex-enterprise-securing-apps-and-data-together";
@@ -302,9 +309,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"easy-remote-access-sharing-and-collaboration-of-sharepoint-document-libraries.md": {
+	id: "easy-remote-access-sharing-and-collaboration-of-sharepoint-document-libraries.md";
+  slug: "easy-remote-access-sharing-and-collaboration-of-sharepoint-document-libraries";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "embracing-zero-trust-data-access-for-it-controlled-chain-of-command.md": {
 	id: "embracing-zero-trust-data-access-for-it-controlled-chain-of-command.md";
   slug: "embracing-zero-trust-data-access-for-it-controlled-chain-of-command";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn.md": {
+	id: "enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn.md";
+  slug: "enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -333,6 +354,13 @@ declare module 'astro:content' {
 "extending-microsoft-fabric-with-zero-trust-data-access-for-unstructured-data.md": {
 	id: "extending-microsoft-fabric-with-zero-trust-data-access-for-unstructured-data.md";
   slug: "extending-microsoft-fabric-with-zero-trust-data-access-for-unstructured-data";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"extending-office-365-functionality-into-a-hybrid-it-infrastructure.md": {
+	id: "extending-office-365-functionality-into-a-hybrid-it-infrastructure.md";
+  slug: "extending-office-365-functionality-into-a-hybrid-it-infrastructure";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -407,6 +435,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"how-to-make-your-multi-cloud-and-infrastructure-as-a-service-environment-easier-for-your-users.md": {
+	id: "how-to-make-your-multi-cloud-and-infrastructure-as-a-service-environment-easier-for-your-users.md";
+  slug: "how-to-make-your-multi-cloud-and-infrastructure-as-a-service-environment-easier-for-your-users";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "how-to-protect-your-data-with-zero-trust-data-access-ztda.md": {
 	id: "how-to-protect-your-data-with-zero-trust-data-access-ztda.md";
   slug: "how-to-protect-your-data-with-zero-trust-data-access-ztda";
@@ -466,6 +501,13 @@ declare module 'astro:content' {
 "meeting-ffiec-guidelines-using-zero-trust-data-access.md": {
 	id: "meeting-ffiec-guidelines-using-zero-trust-data-access.md";
   slug: "meeting-ffiec-guidelines-using-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"mitigate-spear-phishing-via-the-fileflex-enterprise-zero-trust-platform.md": {
+	id: "mitigate-spear-phishing-via-the-fileflex-enterprise-zero-trust-platform.md";
+  slug: "mitigate-spear-phishing-via-the-fileflex-enterprise-zero-trust-platform";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -708,6 +750,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"use-fileflex-enterprise-to-create-virtual-data-rooms.md": {
+	id: "use-fileflex-enterprise-to-create-virtual-data-rooms.md";
+  slug: "use-fileflex-enterprise-to-create-virtual-data-rooms";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "using-zero-trust-architecture-zta-to-protect-remote-data-access.md": {
 	id: "using-zero-trust-architecture-zta-to-protect-remote-data-access.md";
   slug: "using-zero-trust-architecture-zta-to-protect-remote-data-access";
@@ -725,6 +774,13 @@ declare module 'astro:content' {
 "using-zero-trust-data-access-to-meet-california-privacy-and-cybersecurity-standards.md": {
 	id: "using-zero-trust-data-access-to-meet-california-privacy-and-cybersecurity-standards.md";
   slug: "using-zero-trust-data-access-to-meet-california-privacy-and-cybersecurity-standards";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative.md": {
+	id: "varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative.md";
+  slug: "varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

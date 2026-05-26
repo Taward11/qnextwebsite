@@ -47,6 +47,6 @@ To understand this better, check out this short video where Tom Ward, VP of Mark
 ## So, What’s Next for Your Organization?
 Implement the next generation of defense. Zero Trust shifts the way humans interact with data (your company’s crown jewels) and has the potential to prevent increasingly prevalent ransomware and data exfiltration attacks. As you consider your next steps, keep in mind that the FileFlex Enterprise Zero-Trust Platform is currently the only platform available worldwide that secures remote access to your files and folders.
 
-For more reading on spear-phishing prevention and Zero Trust security, see “[How to Mitigate Spear-Phishing via the FileFlex Enterprise Zero Trust Platform](https://fileflex.com/blog/mitigate-spear-phishing-via-the-fileflex-enterprise-zero-trust-platform/).”
+For more reading on spear-phishing prevention and Zero Trust security, see “[How to Mitigate Spear-Phishing via the FileFlex Enterprise Zero Trust Platform](/blog/mitigate-spear-phishing-via-the-fileflex-enterprise-zero-trust-platform/).”
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)

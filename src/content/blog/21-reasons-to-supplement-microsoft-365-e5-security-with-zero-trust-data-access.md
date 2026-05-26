@@ -118,7 +118,7 @@ In addition to security benefits, the following webinar talks about how zero tru
 
 <p class="blog-prose__caption--center"><em>Watch — How Zero Trust Data Access Extends Microsoft 365 functionality into a Hybrid Storage Infrastructure</em></p>
 
-For more reading about using zero trust data access in a Microsoft ecosystem see [Accelerating Digital Transformation Leveraging Zero Trust Data Access (ZTDA) in a Microsoft Ecosystem](/blog/accelerating-digital-transformation-leveraging-zero-trust-data-access-in-a-microsoft-ecosystem/)[, Key Benefits of Extending Microsoft 365 with FileFlex Enterprise](/blog/key-benefits-of-extending-office-365-with-fileflex-enterprise/), and [Extending Microsoft 365 Functionality into a Hybrid-IT Infrastructure](https://fileflex.com/blog/extending-office-365-functionality-into-a-hybrid-it-infrastructure/).
+For more reading about using zero trust data access in a Microsoft ecosystem see [Accelerating Digital Transformation Leveraging Zero Trust Data Access (ZTDA) in a Microsoft Ecosystem](/blog/accelerating-digital-transformation-leveraging-zero-trust-data-access-in-a-microsoft-ecosystem/)[, Key Benefits of Extending Microsoft 365 with FileFlex Enterprise](/blog/key-benefits-of-extending-office-365-with-fileflex-enterprise/), and [Extending Microsoft 365 Functionality into a Hybrid-IT Infrastructure](/blog/extending-office-365-functionality-into-a-hybrid-it-infrastructure/).
 
 \* [Statistica](https://www.statista.com/statistics/983321/worldwide-office-365-user-numbers-by-country/), [SignHouse](https://www.usesignhouse.com/blog/microsoft-365-suite-stats)
 
