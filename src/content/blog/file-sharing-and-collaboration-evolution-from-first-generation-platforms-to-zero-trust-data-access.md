@@ -53,7 +53,7 @@ When it comes to reducing the risk of ransomware, first-generation platforms are
 ## Summary
 In conclusion, the evolution of file sharing and collaboration platforms has led to the emergence of Zero Trust Data Access solutions like FileFlex. With its decentralized storage approach, advanced security features, comprehensive data governance capabilities, regulatory compliance support, and enhanced file sharing and collaboration functionalities, FileFlex represents a powerful solution that empowers organizations to secure their data access and sharing across their entire infrastructure.
 
-To learn more, check out some of our related blogs such as [What is Zero Trust Data Access (ZTDA)?](/blog/what-is-zero-trust-data-access-ztda/), and [The FileFlex Enterprise Commercial Platform for Zero Trust Data Access](https://fileflex.com/blog/the-fileflex-enterprise-commercial-platform-for-zero-trust-data-access/).
+To learn more, check out some of our related blogs such as [What is Zero Trust Data Access (ZTDA)?](/blog/what-is-zero-trust-data-access-ztda/), and [The FileFlex Enterprise Commercial Platform for Zero Trust Data Access](/blog/the-fileflex-enterprise-commercial-platform-for-zero-trust-data-access/).
 
 \*[ComputerWorld](https://www.computerworld.com/article/2991924/some-scary-for-some-statistics-around-file-sharing-usage.html)
 

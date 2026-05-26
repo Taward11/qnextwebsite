@@ -9,7 +9,6 @@ author: "Tom Ward"
 featuredImage: "/images/blog/critical-infrastructure-it-control-use-over-remote-access-and-sharing-using-zero-trust-architecture/Searching-for-information-infographic.webp"
 featuredImageAlt: "Critical Infrastructure IT Control"
 readingTime: "6 min read"
-heroSize: small
 categories:
   - "Critical Infrastructure Protection"
   - "Zero Trust"

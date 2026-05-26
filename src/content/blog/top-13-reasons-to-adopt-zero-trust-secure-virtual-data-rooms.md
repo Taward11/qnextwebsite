@@ -84,7 +84,7 @@ In the webinar produced by the Edge Computing Association below, Tom Ward, VP of
 
 <p class="blog-prose__caption--center"><em>Watch — How Zero Trust Data Access Enables Creation of Secure Virtual Data Rooms Webinar</em></p>
 
-For further insights into zero trust principles and zero trust architecture, please see What is [Zero Trust Data Access](/blog/what-is-zero-trust-data-access-ztda/) and [Zero Trust Access Methods](https://fileflex.com/blog/zero-trust-data-access-methods/).
+For further insights into zero trust principles and zero trust architecture, please see What is [Zero Trust Data Access](/blog/what-is-zero-trust-data-access-ztda/) and [Zero Trust Access Methods](/blog/zero-trust-data-access-methods/).
 
 ## What is the Difference Between First Generation and Zero Trust Generation Data Rooms?
 First-generation virtual data room platforms, including Vault Rooms, Drooms, Ethos, DocSend, SecureDocs, IntralLinks/Synchronos, Datasite/Firmx, FirmRoom, ShareVault, ShareFile, and the utilization of cloud-based sharing platforms for virtual data room creation, such as Google Drive, Box, OneDrive, Egnyte, Citrix, and Kiteworks, primarily focus on enabling collaborative access and file management within their centralized infrastructure. However, these platforms often require duplicating or synchronizing files to a central server controlled by the service provider, and cannot access files stored in other locations.

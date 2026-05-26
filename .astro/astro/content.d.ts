@@ -456,9 +456,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"proposed-ztda-action-plan-for-enterprise.md": {
+	id: "proposed-ztda-action-plan-for-enterprise.md";
+  slug: "proposed-ztda-action-plan-for-enterprise";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "regulatory-compliance-in-the-digital-age-unveiling-quebec-bill-64-and-how-fileflex-enterprise-can-help.md": {
 	id: "regulatory-compliance-in-the-digital-age-unveiling-quebec-bill-64-and-how-fileflex-enterprise-can-help.md";
   slug: "regulatory-compliance-in-the-digital-age-unveiling-quebec-bill-64-and-how-fileflex-enterprise-can-help";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"risks-to-unstructured-data.md": {
+	id: "risks-to-unstructured-data.md";
+  slug: "risks-to-unstructured-data";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -501,6 +515,13 @@ declare module 'astro:content' {
 "supporting-financial-services-cybersecurity-through-zero-trust-data-access.md": {
 	id: "supporting-financial-services-cybersecurity-through-zero-trust-data-access.md";
   slug: "supporting-financial-services-cybersecurity-through-zero-trust-data-access";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"the-fileflex-enterprise-commercial-platform-for-zero-trust-data-access.md": {
+	id: "the-fileflex-enterprise-commercial-platform-for-zero-trust-data-access.md";
+  slug: "the-fileflex-enterprise-commercial-platform-for-zero-trust-data-access";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -683,6 +704,13 @@ declare module 'astro:content' {
 "zero-trust-and-regulatory-compliance.md": {
 	id: "zero-trust-and-regulatory-compliance.md";
   slug: "zero-trust-and-regulatory-compliance";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"zero-trust-data-access-methods.md": {
+	id: "zero-trust-data-access-methods.md";
+  slug: "zero-trust-data-access-methods";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

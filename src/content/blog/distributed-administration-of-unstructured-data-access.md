@@ -9,7 +9,6 @@ author: "Tom Ward"
 featuredImage: "/images/blog/distributed-administration-of-unstructured-data-access/Third-party-attack-infographic-e1684423987377.webp"
 featuredImageAlt: "Distributed Administration of Remote Unstructured Data Access for the Complex Supply Chain"
 readingTime: "7 min read"
-heroSize: small
 categories:
   - "Distributed Administration"
   - "Zero Trust Data Access"
