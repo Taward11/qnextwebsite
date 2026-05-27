@@ -133,39 +133,34 @@ import '../../../styles/partner.css';
     <div class="dle-row__heading">
       <h2 id="dle-nas" class="dle-row__title">NAS<br/>Connectors</h2>
     </div>
-    <div class="dle-grid dle-grid--5">
+    <div class="dle-grid dle-grid--5 dle-nas-grid">
       <div class="dle-nas">
-        <a class="dle-tile" href="https://downloads.fileflex.com/downloads/passive/synology/">
-          <span class="dle-tile__name">Synology</span>
-          <span class="dle-icon" aria-hidden="true"><i class="fas fa-globe"></i></span>
+        <a class="dle-brand" href="https://downloads.fileflex.com/downloads/passive/synology/" aria-label="Download Synology connector">
+          <img class="dle-brand__logo" src="/images/nas-brands/synology.svg" alt="Synology" loading="lazy" />
         </a>
         <a class="dle-help" href="https://help.fileflex.com/pages/viewpage.action?pageId=49874282" target="_blank" rel="noopener">Help</a>
       </div>
       <div class="dle-nas">
-        <a class="dle-tile" href="https://downloads.fileflex.com/downloads/passive/qnap/">
-          <span class="dle-tile__name">QNAP</span>
-          <span class="dle-icon" aria-hidden="true"><i class="fas fa-globe"></i></span>
+        <a class="dle-brand" href="https://downloads.fileflex.com/downloads/passive/qnap/" aria-label="Download QNAP connector">
+          <img class="dle-brand__logo" src="/images/nas-brands/qnap.svg" alt="QNAP" loading="lazy" />
         </a>
         <a class="dle-help" href="https://help.fileflex.com/pages/viewpage.action?pageId=49874270" target="_blank" rel="noopener">Help</a>
       </div>
       <div class="dle-nas">
-        <a class="dle-tile" href="https://downloads.fileflex.com/downloads/passive/netgear/">
-          <span class="dle-tile__name">NETGEAR</span>
-          <span class="dle-icon" aria-hidden="true"><i class="fas fa-globe"></i></span>
+        <a class="dle-brand" href="https://downloads.fileflex.com/downloads/passive/netgear/" aria-label="Download NETGEAR connector">
+          <img class="dle-brand__logo" src="/images/nas-brands/netgear.svg" alt="NETGEAR" loading="lazy" />
         </a>
         <a class="dle-help" href="https://help.fileflex.com/pages/viewpage.action?pageId=49874275" target="_blank" rel="noopener">Help</a>
       </div>
       <div class="dle-nas">
-        <a class="dle-tile" href="https://downloads.fileflex.com/downloads/passive/asustor/">
-          <span class="dle-tile__name">ASUSTOR</span>
-          <span class="dle-icon" aria-hidden="true"><i class="fas fa-globe"></i></span>
+        <a class="dle-brand" href="https://downloads.fileflex.com/downloads/passive/asustor/" aria-label="Download ASUSTOR connector">
+          <img class="dle-brand__logo" src="/images/nas-brands/asustor.svg" alt="ASUSTOR" loading="lazy" />
         </a>
         <a class="dle-help" href="https://help.fileflex.com/pages/viewpage.action?pageId=49874265" target="_blank" rel="noopener">Help</a>
       </div>
       <div class="dle-nas">
-        <a class="dle-tile" href="https://downloads.fileflex.com/downloads/passive/wd/">
-          <span class="dle-tile__name">Western Digital</span>
-          <span class="dle-icon" aria-hidden="true"><i class="fas fa-globe"></i></span>
+        <a class="dle-brand" href="https://downloads.fileflex.com/downloads/passive/wd/" aria-label="Download Western Digital connector">
+          <img class="dle-brand__logo dle-brand__logo--wide" src="/images/nas-brands/westerndigital.svg" alt="Western Digital" loading="lazy" />
         </a>
         <a class="dle-help" href="https://help.fileflex.com/fch/en/connecting-to-yourcontent/how-to-connect-to-a-western-digital-mycloud-nas" target="_blank" rel="noopener">Help</a>
       </div>
@@ -326,12 +321,46 @@ import '../../../styles/partner.css';
   .dle-badge img { display: block; max-width: 100%; height: auto; }
 
   /* NAS column */
+  .dle-nas-grid { gap: 18px; }
   .dle-nas {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
+    gap: 10px;
   }
+
+  /* NAS brand card — white tile with subtle orange border, logo centered */
+  .dle-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 110px;
+    padding: 14px;
+    background: #fff;
+    border: 1.5px solid #e8e8e8;
+    border-top: 3px solid #e8590a;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(14, 26, 43, 0.04);
+    transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+    text-decoration: none;
+  }
+  .dle-brand:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(14, 26, 43, 0.08);
+    border-color: #e8590a;
+  }
+  .dle-brand__logo {
+    max-height: 78px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+  /* WD wordmark is a wide 512x315 — let it span more width, less height */
+  .dle-brand__logo--wide { max-height: 52px; }
+
   .dle-help {
     color: #e8590a;
     text-decoration: none;
