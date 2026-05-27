@@ -323,6 +323,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"ed-dubrovsky-joins-qnext-corp-in-key-advisory-role.md": {
+	id: "ed-dubrovsky-joins-qnext-corp-in-key-advisory-role.md";
+  slug: "ed-dubrovsky-joins-qnext-corp-in-key-advisory-role";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "embracing-zero-trust-data-access-for-it-controlled-chain-of-command.md": {
 	id: "embracing-zero-trust-data-access-for-it-controlled-chain-of-command.md";
   slug: "embracing-zero-trust-data-access-for-it-controlled-chain-of-command";
