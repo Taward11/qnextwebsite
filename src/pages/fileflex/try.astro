@@ -1,0 +1,219 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import '../../styles/fileflex.css';
+import '../../styles/platform.css';
+import '../../styles/partner.css';
+---
+
+<Layout
+  title="Try FileFlex"
+  description="Get a free 30-day free trial of FileFlex here."
+>
+
+<Nav current="support" />
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="ptr-hero" class="dle-hero" aria-labelledby="try-hero-heading">
+  <div class="ptr-hero__inner dle-hero__inner">
+    <h1 id="try-hero-heading" class="ptr-hero__title">Try / Download FileFlex</h1>
+    <p class="ptr-hero__sub">Get started with a free 30-day trial &mdash; install on your computer, then extend to your mobile devices.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     STEP 1 — Download & Create an Account
+     ============================================================ -->
+<section class="pf-section pf-section--white dle-row try-step" aria-labelledby="try-step1">
+  <div class="pf-section__inner dle-row__inner">
+    <div class="dle-row__heading">
+      <h2 id="try-step1" class="dle-row__title try-step__title">
+        Step 1.<br/>Download and Create an Account
+      </h2>
+      <p class="try-step__link">
+        <a href="https://help.fileflex.com/en/connecting-to-your-content" target="_blank" rel="noopener">
+          <i class="fas fa-angle-double-right" aria-hidden="true"></i> Installation Guide
+        </a>
+      </p>
+    </div>
+    <div class="try-step__body">
+      <h3 class="try-step__subtitle">Download &amp; Install on Your Computer(s)</h3>
+      <div class="dle-grid dle-grid--4">
+        <a class="dle-tile" href="https://downloads.fileflex.com/downloads/passive/windows/FileFlex_Prod_x86_64_Latest.exe">
+          <span class="dle-tile__name">Windows</span>
+          <span class="dle-icon" aria-hidden="true"><i class="fab fa-windows"></i></span>
+        </a>
+        <a class="dle-tile" href="https://downloads.fileflex.com/downloads/passive/mac/FileFlex_Prod_x86_64_Latest.dmg">
+          <span class="dle-tile__name">Apple</span>
+          <span class="dle-icon" aria-hidden="true"><i class="fab fa-apple"></i></span>
+        </a>
+        <a class="dle-tile" href="https://fileflex.com/support/downloads/installing-linux/" target="_blank" rel="noopener">
+          <span class="dle-tile__name">Linux</span>
+          <span class="dle-icon" aria-hidden="true"><i class="fab fa-linux"></i></span>
+        </a>
+        <a class="dle-tile" href="https://share.fileflex.com/" target="_blank" rel="noopener">
+          <span class="dle-tile__name">Web Client</span>
+          <span class="dle-icon" aria-hidden="true"><i class="fab fa-chrome"></i></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="dle-sep" role="presentation"></div>
+
+<!-- ============================================================
+     STEP 2 — Extend (Mobile)
+     ============================================================ -->
+<section class="pf-section pf-section--white dle-row try-step" aria-labelledby="try-step2">
+  <div class="pf-section__inner dle-row__inner">
+    <div class="dle-row__heading">
+      <h2 id="try-step2" class="dle-row__title try-step__title">
+        Step 2.<br/>Extend
+      </h2>
+      <p class="try-step__link">
+        <a href="https://help.fileflex.com/en/installing-the-mobile-application" target="_blank" rel="noopener">
+          <i class="fas fa-angle-double-right" aria-hidden="true"></i> Device Help
+        </a>
+      </p>
+    </div>
+    <div class="try-step__body">
+      <h3 class="try-step__subtitle">Download &amp; Install on Your Mobile Devices</h3>
+      <div class="dle-badges">
+        <a href="https://play.google.com/store/apps/details?id=com.qnext.smb&hl=en" target="_blank" rel="noopener" class="dle-badge">
+          <img src="/images/badges/google-play-badge.jpg" alt="Get it on Google Play" width="196" height="58" />
+        </a>
+        <a href="https://itunes.apple.com/ca/app/fileflex/id982214370?mt=8" target="_blank" rel="noopener" class="dle-badge">
+          <img src="/images/badges/ios_app.jpg" alt="Download on the App Store" width="188" height="58" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hero */
+  #ptr-hero.dle-hero {
+    background:
+      linear-gradient(rgba(11, 18, 36, 0.55), rgba(11, 18, 36, 0.55)),
+      url('/images/support/iStock-1135951621-web.jpg') center/cover no-repeat;
+    min-height: 340px;
+    padding: 90px 6vw 60px;
+    text-align: left;
+  }
+  .dle-hero__inner { max-width: 1100px; margin: 0 auto; }
+  #ptr-hero.dle-hero .ptr-hero__title { text-align: left; }
+  .ptr-hero__sub {
+    color: #fff;
+    font-size: clamp(16px, 1.4vw, 19px);
+    opacity: 0.92;
+    margin: 12px 0 0;
+    max-width: 720px;
+  }
+
+  /* Row layout */
+  .dle-row__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  @media (max-width: 768px) {
+    .dle-row__inner { grid-template-columns: 1fr; gap: 24px; }
+    .try-step__title, .try-step__link { text-align: center; }
+  }
+
+  /* Step heading column */
+  .try-step__title {
+    font-size: clamp(22px, 2.2vw, 28px);
+    color: #0E1A2B;
+    font-weight: 700;
+    margin: 0 0 12px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .try-step__link { margin: 0; font-size: 14px; }
+  .try-step__link a {
+    color: #e8590a;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .try-step__link a:hover { text-decoration: underline; }
+  .try-step__link i { margin-right: 6px; }
+
+  /* Step body */
+  .try-step__subtitle {
+    font-size: 18px;
+    color: #0E1A2B;
+    font-weight: 700;
+    margin: 0 0 24px;
+    letter-spacing: -0.01em;
+  }
+
+  /* Tile grid */
+  .dle-grid { display: grid; gap: 28px; }
+  .dle-grid--4 { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 900px) { .dle-grid--4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .dle-grid--4 { grid-template-columns: 1fr; } }
+
+  .dle-tile {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #0E1A2B;
+    gap: 14px;
+    padding: 16px 8px;
+    border-radius: 8px;
+    transition: transform 160ms ease;
+  }
+  .dle-tile:hover { transform: translateY(-3px); }
+  .dle-tile:hover .dle-tile__name { color: #e8590a; }
+  .dle-tile__name {
+    display: block;
+    font-weight: 700;
+    font-size: 15px;
+    color: #e8590a;
+    line-height: 1.3;
+  }
+  .dle-icon {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: #fff;
+    color: #e8590a;
+    border: 2px solid #e8590a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .dle-icon i { font-size: 36px; line-height: 1; }
+
+  /* Mobile badges */
+  .dle-badges {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .dle-badge { display: inline-block; line-height: 0; }
+  .dle-badge img { display: block; max-width: 100%; height: auto; }
+
+  /* Separator */
+  .dle-sep {
+    max-width: 1100px;
+    height: 1px;
+    background: #dbdbdb;
+    margin: 0 auto;
+  }
+
+  .pf-section.try-step { padding: 60px 6vw; }
+</style>
+
+</Layout>
