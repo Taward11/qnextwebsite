@@ -1,0 +1,261 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import '../../styles/fileflex.css';
+import '../../styles/platform.css';
+import '../../styles/partner.css';
+---
+
+<Layout
+  title="Installing a FileFlex Connector on a Linux Server"
+  description="Download and install the FileFlex Server Connector on a Linux server — Debian/Ubuntu, Fedora/CentOS/RedHat and OpenSUSE packages."
+>
+
+<Nav current="support" />
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="ptr-hero" class="dle-hero" aria-labelledby="lsv-hero-heading">
+  <div class="ptr-hero__inner dle-hero__inner">
+    <h1 id="lsv-hero-heading" class="ptr-hero__title">Installing a FileFlex Connector on a Linux Server</h1>
+    <p class="ptr-hero__sub">Download the appropriate package for your distribution, then run the install command in a terminal.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     STEP 1 — Download the appropriate Linux connector
+     ============================================================ -->
+<section class="pf-section pf-section--white dle-row lsv-step" aria-labelledby="lsv-step1">
+  <div class="pf-section__inner dle-row__inner">
+    <div class="dle-row__heading">
+      <h2 id="lsv-step1" class="dle-row__title lsv-step__title">Step 1: Download the appropriate Linux connector</h2>
+      <p class="lsv-step__link">
+        <a href="https://fileflex.com/support/downloads/linux-versions/" target="_blank" rel="noopener">
+          <i class="fas fa-angle-double-right" aria-hidden="true"></i> See supported and verified platforms
+        </a>
+      </p>
+    </div>
+    <div class="lsv-step__body">
+      <div class="dle-grid dle-grid--3">
+        <a class="dle-tile" href="https://downloads.fileflex.com/downloads/passive/debian/FileFlex_Prod_x86_64_Latest.deb">
+          <span class="dle-tile__text">
+            <span class="dle-tile__name">Deb type distributions</span>
+            <span class="dle-tile__desc">Debian, Mint, Ubuntu Desktop, Ubuntu LTS Server</span>
+          </span>
+          <span class="dle-icon" aria-hidden="true"><i class="fab fa-linux"></i></span>
+        </a>
+        <a class="dle-tile" href="https://downloads.fileflex.com/downloads/passive/fedora/FileFlexServer_Prod_x86_64_Latest.rpm">
+          <span class="dle-tile__text">
+            <span class="dle-tile__name">Fedora, CentOS, RedHat</span>
+            <span class="dle-tile__desc">RPM package (yum / dnf)</span>
+          </span>
+          <span class="dle-icon" aria-hidden="true"><i class="fab fa-linux"></i></span>
+        </a>
+        <a class="dle-tile" href="https://downloads.fileflex.com/downloads/passive/suse/FileFlexServer_Prod_x86_64_Latest.rpm">
+          <span class="dle-tile__text">
+            <span class="dle-tile__name">OpenSUSE</span>
+            <span class="dle-tile__desc">RPM package (zypper)</span>
+          </span>
+          <span class="dle-icon" aria-hidden="true"><i class="fab fa-linux"></i></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="dle-sep" role="presentation"></div>
+
+<!-- ============================================================
+     STEP 2 — Install on Linux Server
+     ============================================================ -->
+<section class="pf-section pf-section--white dle-row lsv-step" aria-labelledby="lsv-step2">
+  <div class="pf-section__inner dle-row__inner">
+    <div class="dle-row__heading">
+      <h2 id="lsv-step2" class="dle-row__title lsv-step__title">
+        Step 2:<br/>Install the FileFlex Connector on your Linux server
+      </h2>
+    </div>
+    <div class="lsv-step__body lsv-instructions">
+      <p>Open a &ldquo;Terminal&rdquo; window or from your console enter the following command depending on your OS distribution.</p>
+
+      <ul class="lsv-list">
+        <li>
+          For <strong>Debian</strong> packages (Debian, Mint, Ubuntu, etc.) type the following command:
+          <pre class="lsv-code"><code>sudo dpkg -i /path-to-package/package.deb || true &amp;&amp; sudo apt-get -f install</code></pre>
+          <p class="lsv-example"><em>Example: For Ubuntu Desktop, if the file was downloaded to <code>/home/tester/Downloads</code>, the command would be:</em></p>
+          <pre class="lsv-code"><code>sudo dpkg -i /home/tester/Downloads/FileflexConnector_Latest.deb || true &amp;&amp; sudo apt-get -f install</code></pre>
+        </li>
+        <li>
+          For the <strong>RPM</strong> package (OpenSUSE) type the following command:
+          <pre class="lsv-code"><code>sudo zypper install FileFlexConnector_Latest.rpm</code></pre>
+        </li>
+        <li>
+          For the <strong>RPM</strong> package (Fedora, CentOS, RedHat) type the following command:
+          <pre class="lsv-code"><code>sudo yum install FileFlexConnector_Latest.rpm</code></pre>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hero */
+  #ptr-hero.dle-hero {
+    background:
+      linear-gradient(rgba(11, 18, 36, 0.55), rgba(11, 18, 36, 0.55)),
+      url('/images/support/iStock-1135951621-web.jpg') center/cover no-repeat;
+    min-height: 340px;
+    padding: 90px 6vw 60px;
+    text-align: left;
+  }
+  .dle-hero__inner { max-width: 1100px; margin: 0 auto; }
+  #ptr-hero.dle-hero .ptr-hero__title { text-align: left; }
+  .ptr-hero__sub {
+    color: #fff;
+    font-size: clamp(16px, 1.4vw, 19px);
+    opacity: 0.92;
+    margin: 12px 0 0;
+    max-width: 760px;
+  }
+
+  /* Row layout — heading column on left, content on right */
+  .dle-row__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  @media (max-width: 768px) {
+    .dle-row__inner { grid-template-columns: 1fr; gap: 24px; }
+    .lsv-step__title, .lsv-step__link { text-align: center; }
+  }
+
+  .lsv-step__title {
+    font-size: clamp(20px, 1.9vw, 24px);
+    color: #0E1A2B;
+    font-weight: 700;
+    margin: 0 0 12px;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+  }
+  .lsv-step__link { margin: 0; font-size: 14px; }
+  .lsv-step__link a {
+    color: #e8590a;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .lsv-step__link a:hover { text-decoration: underline; }
+  .lsv-step__link i { margin-right: 6px; }
+
+  /* Tile grid (re-uses dle-* visuals) */
+  .dle-grid { display: grid; gap: 28px; }
+  .dle-grid--3 { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 900px) { .dle-grid--3 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .dle-grid--3 { grid-template-columns: 1fr; } }
+
+  .dle-tile {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #0E1A2B;
+    gap: 14px;
+    padding: 16px 8px;
+    border-radius: 8px;
+    transition: transform 160ms ease;
+  }
+  .dle-tile:hover { transform: translateY(-3px); }
+  .dle-tile:hover .dle-tile__name { color: #e8590a; }
+  .dle-tile__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 72px;
+    gap: 4px;
+  }
+  .dle-tile__name {
+    display: block;
+    font-weight: 700;
+    font-size: 15px;
+    color: #e8590a;
+    line-height: 1.3;
+  }
+  .dle-tile__desc {
+    display: block;
+    font-size: 13px;
+    color: #4a5260;
+    line-height: 1.4;
+  }
+  .dle-icon {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: #fff;
+    color: #e8590a;
+    border: 2px solid #e8590a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .dle-icon i { font-size: 36px; line-height: 1; }
+
+  /* Instructions */
+  .lsv-instructions {
+    color: #2a2f3a;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .lsv-instructions > p { margin: 0 0 18px; }
+  .lsv-list {
+    padding-left: 18px;
+    margin: 0;
+  }
+  .lsv-list > li {
+    margin-bottom: 22px;
+  }
+  .lsv-list > li:last-child { margin-bottom: 0; }
+  .lsv-example {
+    margin: 10px 0 8px;
+    color: #4a5260;
+    font-size: 14px;
+  }
+  .lsv-example code {
+    background: transparent;
+    padding: 0;
+    font-size: 13px;
+  }
+  .lsv-code {
+    background: #f4f5f7;
+    border-left: 3px solid #e8590a;
+    padding: 12px 16px;
+    margin: 8px 0;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #0E1A2B;
+  }
+  .lsv-code code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    background: transparent;
+    padding: 0;
+  }
+
+  /* Separator */
+  .dle-sep {
+    max-width: 1100px;
+    height: 1px;
+    background: #dbdbdb;
+    margin: 0 auto;
+  }
+
+  .pf-section.lsv-step { padding: 60px 6vw; }
+</style>
+
+</Layout>
