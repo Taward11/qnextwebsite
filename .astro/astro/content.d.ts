@@ -680,6 +680,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"the-most-important-new-name-in-disruptive-cybersecurity-tech-youve-never-heard-of.md": {
+	id: "the-most-important-new-name-in-disruptive-cybersecurity-tech-youve-never-heard-of.md";
+  slug: "the-most-important-new-name-in-disruptive-cybersecurity-tech-youve-never-heard-of";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk.md": {
 	id: "the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk.md";
   slug: "the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk";
