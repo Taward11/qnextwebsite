@@ -575,6 +575,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"qnext-corp-announces-partnership-with-td-synnex-to-distribute-fileflex-enterprise-zero-trust-data-access-technology.md": {
+	id: "qnext-corp-announces-partnership-with-td-synnex-to-distribute-fileflex-enterprise-zero-trust-data-access-technology.md";
+  slug: "qnext-corp-announces-partnership-with-td-synnex-to-distribute-fileflex-enterprise-zero-trust-data-access-technology";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "ransomware-unstructured-data-double-trouble.md": {
 	id: "ransomware-unstructured-data-double-trouble.md";
   slug: "ransomware-unstructured-data-double-trouble";
