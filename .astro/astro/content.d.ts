@@ -386,6 +386,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"fileflex-guardianai-agentically-secured-infrastructure-never-trust-the-agent.md": {
+	id: "fileflex-guardianai-agentically-secured-infrastructure-never-trust-the-agent.md";
+  slug: "fileflex-guardianai-agentically-secured-infrastructure-never-trust-the-agent";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "fortifying-cyber-defense-via-zero-trust-data-access-the-recent-goanywhere-and-moveit-ransomware-breaches.md": {
 	id: "fortifying-cyber-defense-via-zero-trust-data-access-the-recent-goanywhere-and-moveit-ransomware-breaches.md";
   slug: "fortifying-cyber-defense-via-zero-trust-data-access-the-recent-goanywhere-and-moveit-ransomware-breaches";
