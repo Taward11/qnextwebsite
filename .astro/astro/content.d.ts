@@ -204,6 +204,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"anthony-decristofaro-speaks-at-hmg-global-ciso-leadership-summit.md": {
+	id: "anthony-decristofaro-speaks-at-hmg-global-ciso-leadership-summit.md";
+  slug: "anthony-decristofaro-speaks-at-hmg-global-ciso-leadership-summit";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "centralized-vs-decentralized-cloud-storage.md": {
 	id: "centralized-vs-decentralized-cloud-storage.md";
   slug: "centralized-vs-decentralized-cloud-storage";
