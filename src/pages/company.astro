@@ -10,6 +10,7 @@ const management = [
     name: 'Anthony DeCristofaro',
     title: 'President & CEO, Qnext Corp.',
     img: '/images/company/anthony.jpg',
+    linkedin: 'https://www.linkedin.com/in/anthony-decristofaro-07a4a1/',
     bio: [
       'Mr. DeCristofaro is currently CEO of Qnext Corp. and brings thirty years of computer industry experience and three M&A transactions valued at more than CDN $600 Million. Previously he was president and CEO of iseemedia Inc. which merged with Synchronica in 2010, and he was CEO and co-founder of MGI Software Corp., which became Intel invested, reached a cap value on the TSE to over $1 billion and later merged with Roxio in 2002.',
       'Prior to MGI, Mr. DeCristofaro was a VP/GM of AST Canada, driving sales from $2 million to over $400 million in just three years and set up NEC Canada\u2019s notebook and monitor entry into the market, propelling it to over $100 million in the first year.',
@@ -20,6 +21,7 @@ const management = [
     name: 'Larry Hurtado',
     title: 'Executive Vice President and Managing Director, USA',
     img: '/images/company/larry-hurtado.jpg',
+    linkedin: 'https://www.linkedin.com/in/larryhurtado/',
     bio: [
       'Larry is a seasoned executive in the cybersecurity space. Larry is on the board of the San Antonio Chamber of Commerce and is the 2022 Chair of the Cybersecurity Council. He is also a member of the Board of Advisors for Cyber P-Tech USA.',
       'Prior to Qnext Corp., Larry co-founded Evanesco, Inc. Larry led a team of cybersecurity professionals to provide professional services and a new Software as a Service (SaaS) security solution to organizations. Prior to Evanesco, Larry was President and CEO of Digital Defense Inc., a leading provider of cyber risk management solutions. He helmed Digital Defense\u2019s rise to an industry leader with an established global presence. This led to the successful acquisition of Digital Defense by HelpSystems LLC in February 2021.',
@@ -29,6 +31,7 @@ const management = [
     name: 'Paul Amlani',
     title: 'V.P. Sales & Channel, Europe & Canada',
     img: '/images/company/paul-amlani.jpeg',
+    linkedin: 'https://www.linkedin.com/in/iqbal-amlani-8b90506/',
     bio: [
       'With 25+ years of global experience in Information Technology Services, Paul has global management experience and a demonstrated ability to build and motivate teams. He has operated multi-million dollar P&Ls and consistently met or exceeded goals. Paul thrives on challenges and is an expert in developing large-scale strategies to drive growth in both. A coach that understands the C-Suite and how to optimize opportunity with a win-win approach.',
     ],
@@ -58,6 +61,7 @@ const advisors = [
   {
     name: 'Will Stewart',
     img: '/images/company/will-stewart.jpeg',
+    linkedin: 'https://www.linkedin.com/in/stewartwill/',
     bio: [
       'Will has established 5 venture capital funds, and 2 venture debt funds including Rogers Venture Partners, Mezzanine Capital Partners, and Asia Pacific Ventures. He has invested in over 300 early-stage technology companies and his past successes include RSA (Acquired by EMC), Verisign (IPO), Lexar Media (IPO then Acquired by Micron). He is a specialist in Silicon Valley, Japan, China, and SE Asian markets. His investment focus is on digital consumer/enterprise platforms, cybersecurity, artificial intelligence, mobile gaming, gig economy, and technological sustainability.',
     ],
@@ -131,6 +135,13 @@ const advisors = [
             {p.name}<span class="cmp-person__sep">,</span> <span class="cmp-person__title">{p.title}</span>
           </h3>
           {p.bio.map((para) => <p>{para}</p>)}
+          {p.linkedin && (
+            <p class="cmp-person__linkedin">
+              <a href={p.linkedin} target="_blank" rel="noopener">
+                <i class="fab fa-linkedin" aria-hidden="true"></i> {p.linkedin}
+              </a>
+            </p>
+          )}
         </div>
       </article>
     ))}
@@ -169,10 +180,18 @@ const advisors = [
 <style>
   /* ===== HERO ===== */
   #ptr-hero.cmp-hero {
-    background: #0E1A2B;
-    padding: 80px 6vw 70px;
+    background: #294063 url('/images/company/hero-bg.jpg') center/cover no-repeat;
+    padding: 110px 6vw 100px;
     text-align: left;
+    position: relative;
   }
+  #ptr-hero.cmp-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(14,26,43,0.82) 0%, rgba(14,26,43,0.55) 60%, rgba(14,26,43,0.35) 100%);
+    pointer-events: none;
+  }
+  .cmp-hero__inner { position: relative; z-index: 1; }
   .cmp-hero__inner { max-width: 1100px; margin: 0 auto; }
   .cmp-hero__title {
     color: #fff;
@@ -230,11 +249,18 @@ const advisors = [
 
   /* ===== PASSION FOR INNOVATION ===== */
   .pf-section.cmp-passion {
-    background: #0E1A2B;
+    background: #0f1f2e url('/images/company/passion-bg.jpg') center/cover no-repeat;
     color: #fff;
-    padding: 30px 6vw 80px;
+    padding: 80px 6vw 100px;
+    position: relative;
   }
-  .cmp-passion__inner { max-width: 1100px; margin: 0 auto; }
+  .pf-section.cmp-passion::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(15,31,46,0.85) 0%, rgba(15,31,46,0.55) 70%, rgba(15,31,46,0.3) 100%);
+    pointer-events: none;
+  }
+  .cmp-passion__inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
   .cmp-passion__title {
     color: #fff;
     font-size: clamp(30px, 3.4vw, 44px);
