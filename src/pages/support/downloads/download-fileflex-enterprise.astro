@@ -43,23 +43,31 @@ import '../../../styles/partner.css';
     </div>
     <div class="dle-grid dle-grid--4">
       <a class="dle-tile" href="https://downloads.fileflex.com/downloads/passive/windows/FileFlexEnterprise_Prod_x86_64_Latest.exe">
-        <span class="dle-tile__name">Windows Client</span>
-        <span class="dle-tile__desc">FileFlex application for a Windows PC</span>
+        <span class="dle-tile__text">
+          <span class="dle-tile__name">Windows Client</span>
+          <span class="dle-tile__desc">FileFlex application for a Windows PC</span>
+        </span>
         <span class="dle-icon" aria-hidden="true"><i class="fas fa-desktop"></i></span>
       </a>
       <a class="dle-tile" href="https://downloads.fileflex.com/downloads/passive/mac/FileFlexEnterprise_Prod_x86_64_Latest.dmg">
-        <span class="dle-tile__name">Mac Client</span>
-        <span class="dle-tile__desc">FileFlex application for an Apple PC</span>
+        <span class="dle-tile__text">
+          <span class="dle-tile__name">Mac Client</span>
+          <span class="dle-tile__desc">FileFlex application for an Apple PC</span>
+        </span>
         <span class="dle-icon" aria-hidden="true"><i class="fab fa-apple"></i></span>
       </a>
       <a class="dle-tile" href="https://fileflex.com/downloads/installing-linux/" target="_blank" rel="noopener">
-        <span class="dle-tile__name">Linux Client</span>
-        <span class="dle-tile__desc">FileFlex application for a Linux PC</span>
+        <span class="dle-tile__text">
+          <span class="dle-tile__name">Linux Client</span>
+          <span class="dle-tile__desc">FileFlex application for a Linux PC</span>
+        </span>
         <span class="dle-icon" aria-hidden="true"><i class="fab fa-linux"></i></span>
       </a>
       <a class="dle-tile" href="https://downloads.fileflex.com/downloads/passive/windows/FileFlexWinIntEnterprise_Prod_x86_64_Latest.exe">
-        <span class="dle-tile__name">Windows Integrated Client</span>
-        <span class="dle-tile__desc">Integrates FileFlex into Windows Explorer</span>
+        <span class="dle-tile__text">
+          <span class="dle-tile__name">Windows Integrated Client</span>
+          <span class="dle-tile__desc">Integrates FileFlex into Windows Explorer</span>
+        </span>
         <span class="dle-icon" aria-hidden="true"><i class="fab fa-windows"></i></span>
       </a>
     </div>
@@ -269,20 +277,28 @@ import '../../../styles/partner.css';
   .dle-tile:hover .dle-tile__name { color: #e8590a; }
   .dle-tile--empty { pointer-events: none; }
 
+  /* Fixed-height text block so all icons align across the row,
+     regardless of name/desc wrapping (e.g. Windows Integrated). */
+  .dle-tile__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 72px;
+    gap: 4px;
+  }
   .dle-tile__name {
     display: block;
     font-weight: 700;
     font-size: 15px;
     color: #e8590a;
-    margin-top: 12px;
     line-height: 1.3;
   }
   .dle-tile__desc {
     display: block;
     font-size: 13px;
     color: #4a5260;
-    line-height: 1.45;
-    margin-top: -6px;
+    line-height: 1.4;
   }
 
   .dle-icon {
