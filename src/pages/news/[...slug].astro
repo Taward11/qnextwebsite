@@ -1,0 +1,98 @@
+---
+import { experimental_AstroContainer as AstroContainer } from 'astro/container';
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import PostBody from '../../components/PostBody.astro';
+import { getNewsPosts, formatDate } from '../../lib/blog';
+import '../../styles/fileflex.css';
+import '../../styles/blog.css';
+
+export async function getStaticPaths() {
+  const posts = await getNewsPosts();
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const container = await AstroContainer.create();
+const contentHtml = await container.renderToString(Content);
+
+const url = new URL(`/news/${post.slug}/`, Astro.site ?? Astro.url.origin).toString();
+const imgAbs = post.data.featuredImage
+  ? new URL(post.data.featuredImage, Astro.site ?? Astro.url.origin).toString()
+  : undefined;
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'NewsArticle',
+  headline: post.data.title,
+  description: post.data.description ?? post.data.excerpt,
+  datePublished: post.data.date.toISOString(),
+  dateModified: (post.data.modified ?? post.data.date).toISOString(),
+  publisher: { '@type': 'Organization', name: 'Qnext Corp.' },
+  image: imgAbs,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+};
+---
+
+<Layout title={post.data.seoTitle ?? `${post.data.title} | FileFlex News`} description={post.data.description ?? post.data.excerpt}>
+
+  <Nav current="" />
+
+  <div class="news-shell-wrap">
+   <div class="news-shell">
+    <article class="blog-post news-post">
+
+      <p class="news-post__crumbs">
+        <a href="/news/">News</a>
+      </p>
+
+      {post.data.featuredImage && (
+        <img class="blog-post__hero" src={post.data.featuredImage} alt={post.data.featuredImageAlt ?? ''} loading="eager" fetchpriority="high" decoding="async" />
+      )}
+
+      <h1 class="blog-post__title">{post.data.title}</h1>
+
+      <p class="news-post__meta">
+        Published <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+      </p>
+
+      <PostBody html={contentHtml} tables={post.data.tables} />
+
+    </article>
+   </div>
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+
+</Layout>
+
+<style>
+  .news-shell-wrap { background: #fff; }
+  .news-shell {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 6vw 80px;
+    color: #0E1A2B;
+  }
+  .news-post__crumbs {
+    font-size: 13px;
+    margin: 0 0 18px;
+    color: #4a5260;
+  }
+  .news-post__crumbs a {
+    color: #e8590a;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .news-post__crumbs a:hover { text-decoration: underline; }
+  .news-post__meta {
+    color: #4a5260;
+    font-size: 14px;
+    margin: 0 0 28px;
+  }
+</style>

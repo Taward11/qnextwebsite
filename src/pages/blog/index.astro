@@ -1,8 +1,8 @@
 ---
 import BlogLayout from '../../layouts/BlogLayout.astro';
-import { getAllPosts, formatDate, slugify } from '../../lib/blog';
+import { getBlogPosts, formatDate, slugify } from '../../lib/blog';
 
-const posts = await getAllPosts();
+const posts = await getBlogPosts();
 ---
 
 <BlogLayout title="Blog | FileFlex" description="Insights on Zero Trust Data Access, hybrid IT, compliance and secure file sharing." heading="Blog">
