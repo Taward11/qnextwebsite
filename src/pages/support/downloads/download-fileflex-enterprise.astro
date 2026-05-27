@@ -135,32 +135,37 @@ import '../../../styles/partner.css';
     </div>
     <div class="dle-grid dle-grid--5 dle-nas-grid">
       <div class="dle-nas">
-        <a class="dle-brand" href="https://downloads.fileflex.com/downloads/passive/synology/" aria-label="Download Synology connector">
-          <img class="dle-brand__logo" src="/images/nas-brands/synology.svg" alt="Synology" loading="lazy" />
+        <a class="dle-mono dle-mono--synology" href="https://downloads.fileflex.com/downloads/passive/synology/" aria-label="Download Synology connector">
+          <span class="dle-mono__circle" aria-hidden="true">S</span>
+          <span class="dle-mono__name">Synology</span>
         </a>
         <a class="dle-help" href="https://help.fileflex.com/pages/viewpage.action?pageId=49874282" target="_blank" rel="noopener">Help</a>
       </div>
       <div class="dle-nas">
-        <a class="dle-brand" href="https://downloads.fileflex.com/downloads/passive/qnap/" aria-label="Download QNAP connector">
-          <img class="dle-brand__logo" src="/images/nas-brands/qnap.svg" alt="QNAP" loading="lazy" />
+        <a class="dle-mono dle-mono--qnap" href="https://downloads.fileflex.com/downloads/passive/qnap/" aria-label="Download QNAP connector">
+          <span class="dle-mono__circle" aria-hidden="true">Q</span>
+          <span class="dle-mono__name">QNAP</span>
         </a>
         <a class="dle-help" href="https://help.fileflex.com/pages/viewpage.action?pageId=49874270" target="_blank" rel="noopener">Help</a>
       </div>
       <div class="dle-nas">
-        <a class="dle-brand" href="https://downloads.fileflex.com/downloads/passive/netgear/" aria-label="Download NETGEAR connector">
-          <img class="dle-brand__logo" src="/images/nas-brands/netgear.svg" alt="NETGEAR" loading="lazy" />
+        <a class="dle-mono dle-mono--netgear" href="https://downloads.fileflex.com/downloads/passive/netgear/" aria-label="Download NETGEAR connector">
+          <span class="dle-mono__circle" aria-hidden="true">N</span>
+          <span class="dle-mono__name">NETGEAR</span>
         </a>
         <a class="dle-help" href="https://help.fileflex.com/pages/viewpage.action?pageId=49874275" target="_blank" rel="noopener">Help</a>
       </div>
       <div class="dle-nas">
-        <a class="dle-brand" href="https://downloads.fileflex.com/downloads/passive/asustor/" aria-label="Download ASUSTOR connector">
-          <img class="dle-brand__logo" src="/images/nas-brands/asustor.svg" alt="ASUSTOR" loading="lazy" />
+        <a class="dle-mono dle-mono--asustor" href="https://downloads.fileflex.com/downloads/passive/asustor/" aria-label="Download ASUSTOR connector">
+          <span class="dle-mono__circle" aria-hidden="true">A</span>
+          <span class="dle-mono__name">ASUSTOR</span>
         </a>
         <a class="dle-help" href="https://help.fileflex.com/pages/viewpage.action?pageId=49874265" target="_blank" rel="noopener">Help</a>
       </div>
       <div class="dle-nas">
-        <a class="dle-brand" href="https://downloads.fileflex.com/downloads/passive/wd/" aria-label="Download Western Digital connector">
-          <img class="dle-brand__logo dle-brand__logo--wide" src="/images/nas-brands/westerndigital.svg" alt="Western Digital" loading="lazy" />
+        <a class="dle-mono dle-mono--wd" href="https://downloads.fileflex.com/downloads/passive/wd/" aria-label="Download Western Digital connector">
+          <span class="dle-mono__circle dle-mono__circle--two" aria-hidden="true">WD</span>
+          <span class="dle-mono__name">Western Digital</span>
         </a>
         <a class="dle-help" href="https://help.fileflex.com/fch/en/connecting-to-yourcontent/how-to-connect-to-a-western-digital-mycloud-nas" target="_blank" rel="noopener">Help</a>
       </div>
@@ -329,37 +334,58 @@ import '../../../styles/partner.css';
     gap: 10px;
   }
 
-  /* NAS brand card — white tile with subtle orange border, logo centered */
-  .dle-brand {
+  /* NAS brand monogram tile — vendor-colored circle + brand name below */
+  .dle-mono {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #0E1A2B;
+    gap: 14px;
+    padding: 8px 6px;
+    border-radius: 8px;
+    transition: transform 160ms ease;
+  }
+  .dle-mono:hover { transform: translateY(-3px); }
+  .dle-mono:hover .dle-mono__name { color: #e8590a; }
+
+  .dle-mono__circle {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: var(--brand-bg, #6c757d);
+    color: var(--brand-fg, #fff);
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 110px;
-    padding: 14px;
-    background: #fff;
-    border: 1.5px solid #e8e8e8;
-    border-top: 3px solid #e8590a;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(14, 26, 43, 0.04);
-    transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
-    text-decoration: none;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    box-shadow: 0 2px 6px rgba(14, 26, 43, 0.12);
+    transition: transform 160ms ease, box-shadow 160ms ease;
   }
-  .dle-brand:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(14, 26, 43, 0.08);
-    border-color: #e8590a;
+  .dle-mono__circle--two { font-size: 30px; letter-spacing: -0.01em; }
+  .dle-mono:hover .dle-mono__circle {
+    box-shadow: 0 6px 14px rgba(14, 26, 43, 0.18);
   }
-  .dle-brand__logo {
-    max-height: 78px;
-    max-width: 100%;
-    width: auto;
-    height: auto;
+
+  .dle-mono__name {
     display: block;
-    object-fit: contain;
+    font-weight: 700;
+    font-size: 15px;
+    color: #e8590a;
+    text-align: center;
+    line-height: 1.3;
   }
-  /* WD wordmark is a wide 512x315 — let it span more width, less height */
-  .dle-brand__logo--wide { max-height: 52px; }
+
+  /* Vendor brand colors */
+  .dle-mono--synology { --brand-bg: #6EBE49; --brand-fg: #fff; }
+  .dle-mono--qnap     { --brand-bg: #D9282A; --brand-fg: #fff; }
+  .dle-mono--netgear  { --brand-bg: #0E1A2B; --brand-fg: #fff; }
+  .dle-mono--asustor  { --brand-bg: #0099D9; --brand-fg: #fff; }
+  .dle-mono--wd       { --brand-bg: #0073C2; --brand-fg: #fff; }
 
   .dle-help {
     color: #e8590a;
