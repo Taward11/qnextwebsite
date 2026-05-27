@@ -575,6 +575,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"qnext-corp-announces-expansion-into-the-usa-led-by-cybersecurity-industry-leader-larry-hurtado.md": {
+	id: "qnext-corp-announces-expansion-into-the-usa-led-by-cybersecurity-industry-leader-larry-hurtado.md";
+  slug: "qnext-corp-announces-expansion-into-the-usa-led-by-cybersecurity-industry-leader-larry-hurtado";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "qnext-corp-announces-partnership-with-td-synnex-to-distribute-fileflex-enterprise-zero-trust-data-access-technology.md": {
 	id: "qnext-corp-announces-partnership-with-td-synnex-to-distribute-fileflex-enterprise-zero-trust-data-access-technology.md";
   slug: "qnext-corp-announces-partnership-with-td-synnex-to-distribute-fileflex-enterprise-zero-trust-data-access-technology";
