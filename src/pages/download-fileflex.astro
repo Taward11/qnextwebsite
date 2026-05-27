@@ -118,7 +118,7 @@ import '../styles/partner.css';
     <div class="dle-row__heading">
       <h2 id="dle-nas" class="dle-row__title">NAS<br/>Connectors</h2>
     </div>
-    <div class="dle-grid dle-grid--3 dle-nas-grid">
+    <div class="dle-grid dle-grid--5 dle-nas-grid">
       <div class="dle-nas">
         <a class="dle-mono" href="https://downloads.fileflex.com/downloads/passive/synology/" aria-label="Download Synology connector">
           <span class="dle-mono__circle" aria-hidden="true">S</span>
@@ -146,13 +146,6 @@ import '../styles/partner.css';
           <span class="dle-mono__name">ASUSTOR</span>
         </a>
         <a class="dle-help" href="https://help.fileflex.com/pages/viewpage.action?pageId=49874265" target="_blank" rel="noopener">Help</a>
-      </div>
-      <div class="dle-nas">
-        <a class="dle-mono" href="https://downloads.fileflex.com/downloads/passive/drobo/FileFlex_Prod_armv7-a_Latest.tgz" aria-label="Download Drobo connector">
-          <span class="dle-mono__circle" aria-hidden="true">D</span>
-          <span class="dle-mono__name">Drobo</span>
-        </a>
-        <a class="dle-help" href="https://help.fileflex.com/pages/viewpage.action?pageId=49874293" target="_blank" rel="noopener">Help</a>
       </div>
       <div class="dle-nas">
         <a class="dle-mono" href="https://downloads.fileflex.com/downloads/passive/wd/" aria-label="Download Western Digital connector">
@@ -243,13 +236,13 @@ import '../styles/partner.css';
     display: grid;
     gap: 28px;
   }
-  .dle-grid--3 { grid-template-columns: repeat(3, 1fr); }
   .dle-grid--4 { grid-template-columns: repeat(4, 1fr); }
+  .dle-grid--5 { grid-template-columns: repeat(5, 1fr); }
   @media (max-width: 900px) {
-    .dle-grid--3, .dle-grid--4 { grid-template-columns: repeat(2, 1fr); }
+    .dle-grid--4, .dle-grid--5 { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 480px) {
-    .dle-grid--3, .dle-grid--4 { grid-template-columns: 1fr; }
+    .dle-grid--4, .dle-grid--5 { grid-template-columns: 1fr; }
   }
 
   /* Tile */
