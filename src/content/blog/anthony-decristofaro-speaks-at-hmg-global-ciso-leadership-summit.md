@@ -9,6 +9,7 @@ author: "Tom Ward"
 featuredImage: "/images/blog/anthony-decristofaro-speaks-at-hmg-global-ciso-leadership-summit/HMG-thumbnail-of-Anthony.jpg"
 featuredImageAlt: "Anthony DeCristofaro Speaks at HMG Global CISO Leadership Summit"
 heroSize: "small"
+heroLink: "https://youtu.be/N3MzT_-9i6A"
 readingTime: "2 min read"
 categories:
   - "News"

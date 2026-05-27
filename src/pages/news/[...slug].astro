@@ -52,7 +52,13 @@ const articleSchema = {
       </p>
 
       {post.data.featuredImage && (
-        <img class={`blog-post__hero${post.data.heroSize === 'small' ? ' blog-post__hero--small' : ''}`} src={post.data.featuredImage} alt={post.data.featuredImageAlt ?? ''} loading="eager" fetchpriority="high" decoding="async" />
+        post.data.heroLink ? (
+          <a class="blog-post__hero-link" href={post.data.heroLink} target="_blank" rel="noopener" aria-label={`Watch: ${post.data.title}`}>
+            <img class={`blog-post__hero${post.data.heroSize === 'small' ? ' blog-post__hero--small' : ''}`} src={post.data.featuredImage} alt={post.data.featuredImageAlt ?? ''} loading="eager" fetchpriority="high" decoding="async" />
+          </a>
+        ) : (
+          <img class={`blog-post__hero${post.data.heroSize === 'small' ? ' blog-post__hero--small' : ''}`} src={post.data.featuredImage} alt={post.data.featuredImageAlt ?? ''} loading="eager" fetchpriority="high" decoding="async" />
+        )
       )}
 
       <h1 class="blog-post__title">{post.data.title}</h1>
@@ -74,6 +80,9 @@ const articleSchema = {
 <style>
   .news-shell-wrap { background: #fff; }
   .news-shell .blog-post__hero--small { max-width: 220px; }
+  .blog-post__hero-link { display: block; text-decoration: none; }
+  .blog-post__hero-link .blog-post__hero { transition: opacity 0.2s ease, transform 0.2s ease; }
+  .blog-post__hero-link:hover .blog-post__hero { opacity: 0.92; transform: scale(1.01); }
   .news-shell {
     max-width: 860px;
     margin: 0 auto;
