@@ -141,10 +141,16 @@ import '../../styles/partner.css';
             Centre you can get the latest news and all kinds of whitepapers, webinars, blogs,
             brochures and other education resources.
           </p>
-          <ul class="sp-resources">
-            <li><a href="/blog/" rel="noopener">FileFlex Blog<span aria-hidden="true">›</span></a></li>
-            <li><a href="https://fileflex.com/webinars/" target="_blank" rel="noopener">Explore Webinars<span aria-hidden="true">›</span></a></li>
-          </ul>
+          <div class="sp-resources">
+            <a class="ptr-btn ptr-btn--orange" href="/blog/" rel="noopener">
+              <span>FileFlex Blog</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+            </a>
+            <a class="ptr-btn ptr-btn--orange" href="https://fileflex.com/webinars/" target="_blank" rel="noopener">
+              <span>Explore Webinars</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+            </a>
+          </div>
         </div>
       </article>
     </div>
@@ -213,28 +219,13 @@ import '../../styles/partner.css';
     margin: 0;
   }
 
-  /* Resources link list (Learn More section) */
+  /* Resources buttons (Learn More section) */
   .sp-resources {
-    list-style: none;
-    padding: 0;
-    margin: 16px 0 0;
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 20px;
   }
-  .sp-resources a {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 600;
-    color: #1c398e;
-    text-decoration: none;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(28,57,142,0.15);
-  }
-  .sp-resources a:hover { color: #e8590a; }
-  .sp-resources a span { font-weight: 400; opacity: 0.6; }
 
   /* Final CTA band */
   .sp-final {
