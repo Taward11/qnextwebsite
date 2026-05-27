@@ -34,7 +34,7 @@ import '../styles/partner.css';
       <!-- LEFT: 4 icon-boxes -->
       <div class="cu-boxes">
         <article class="cu-box">
-          <div class="cu-box__icon" aria-hidden="true"><i class="fa fa-question"></i></div>
+          <div class="cu-box__icon cu-box__icon--outline" aria-hidden="true"><i class="fa fa-question"></i></div>
           <div class="cu-box__body">
             <h2 class="cu-box__title">Help</h2>
             <p><a href="https://help.fileflex.com/display/FcH" target="_blank" rel="noopener">Click here for Help</a></p>
@@ -117,16 +117,21 @@ import '../styles/partner.css';
   }
   .cu-box__icon {
     flex-shrink: 0;
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
-    background: #1c398e;
+    background: #e8590a;
     color: #fff;
     display: inline-flex;
     align-items: center;
     justify-content: center;
   }
-  .cu-box__icon i { font-size: 24px; line-height: 1; }
+  .cu-box__icon--outline {
+    background: #fff;
+    color: #e8590a;
+    border: 2px solid #e8590a;
+  }
+  .cu-box__icon i { font-size: 26px; line-height: 1; }
   .cu-box__title {
     font-weight: 700;
     font-size: 20px;
