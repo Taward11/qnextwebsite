@@ -8,6 +8,7 @@ modified: 2022-03-09
 author: "Phil"
 featuredImage: "/images/blog/qnext-corp-announces-expansion-into-the-usa-led-by-cybersecurity-industry-leader-larry-hurtado/Larry-Hurtado-2-for-web.jpg"
 featuredImageAlt: "Qnext Corp. announces expansion into the USA led by cybersecurity industry leader Larry Hurtado"
+heroSize: "small"
 readingTime: "2 min read"
 categories:
   - "News"

@@ -52,7 +52,7 @@ const articleSchema = {
       </p>
 
       {post.data.featuredImage && (
-        <img class="blog-post__hero" src={post.data.featuredImage} alt={post.data.featuredImageAlt ?? ''} loading="eager" fetchpriority="high" decoding="async" />
+        <img class={`blog-post__hero${post.data.heroSize === 'small' ? ' blog-post__hero--small' : ''}`} src={post.data.featuredImage} alt={post.data.featuredImageAlt ?? ''} loading="eager" fetchpriority="high" decoding="async" />
       )}
 
       <h1 class="blog-post__title">{post.data.title}</h1>
