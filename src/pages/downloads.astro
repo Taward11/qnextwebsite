@@ -1,0 +1,117 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+import '../styles/partner.css';
+---
+
+<Layout
+  title="Client and Connector Downloads | FileFlex Enterprise"
+  description="FileFlex Downloads — Desktop and mobile clients. Windows, Mac, PC, Server Connectors. Synology, QNAP, Netgear, Asustor, Drobo NAS Connectors."
+>
+
+<Nav current="support" />
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="ptr-hero" class="dl-hero" aria-labelledby="dl-hero-heading">
+  <div class="ptr-hero__inner dl-hero__inner">
+    <h1 id="dl-hero-heading" class="ptr-hero__title">Client and Connector Downloads</h1>
+  </div>
+</section>
+
+<!-- ============================================================
+     TWO CARDS — Enterprise vs Personal
+     ============================================================ -->
+<section id="dl-main" class="pf-section pf-section--white" aria-label="Download options">
+  <div class="pf-section__inner">
+    <div class="dl-grid">
+      <article class="dl-card">
+        <div class="dl-card__icon" aria-hidden="true"><i class="fa fa-download"></i></div>
+        <h2 class="dl-card__title">Clients and Connectors</h2>
+        <p class="dl-card__sub">for FileFlex Enterprise</p>
+        <a class="ptr-btn ptr-btn--orange" href="https://fileflex.com/support/downloads/download-fileflex-enterprise/" target="_blank" rel="noopener">
+          <span>FileFlex Enterprise Downloads</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+        </a>
+      </article>
+
+      <article class="dl-card">
+        <div class="dl-card__icon" aria-hidden="true"><i class="fa fa-download"></i></div>
+        <h2 class="dl-card__title">Clients and Connectors</h2>
+        <p class="dl-card__sub">for FileFlex Personal</p>
+        <a class="ptr-btn ptr-btn--orange" href="https://fileflex.com/support/downloads/download-fileflex/" target="_blank" rel="noopener">
+          <span>FileFlex Personal Downloads</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hero override */
+  #ptr-hero.dl-hero {
+    background: #0b1224 url('/images/support/iStock-1135951621-web.jpg') center/cover no-repeat;
+    min-height: 380px;
+    padding: 100px 6vw 70px;
+    text-align: left;
+  }
+  .dl-hero__inner { max-width: 1100px; margin: 0 auto; }
+  #ptr-hero.dl-hero .ptr-hero__title { text-align: left; }
+
+  /* Two-card grid */
+  .dl-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  @media (max-width: 768px) {
+    .dl-grid { grid-template-columns: 1fr; gap: 28px; }
+  }
+
+  .dl-card {
+    background: #f0f1f3;
+    border-radius: 8px;
+    padding: 52px 36px;
+    text-align: center;
+    border-top: 4px solid #e8590a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dl-card__icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #fff;
+    color: #e8590a;
+    border: 2px solid #e8590a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  .dl-card__icon i { font-size: 32px; line-height: 1; }
+  .dl-card__title {
+    font-weight: 700;
+    font-size: clamp(22px, 2.2vw, 28px);
+    color: #0E1A2B;
+    margin: 0;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .dl-card__sub {
+    font-weight: 700;
+    font-size: clamp(20px, 1.9vw, 24px);
+    color: #0E1A2B;
+    margin: 4px 0 28px;
+    letter-spacing: -0.02em;
+  }
+</style>
+
+</Layout>
