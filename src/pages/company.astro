@@ -1,0 +1,322 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+import '../styles/partner.css';
+
+const management = [
+  {
+    name: 'Anthony DeCristofaro',
+    title: 'President & CEO, Qnext Corp.',
+    img: '/images/company/anthony.jpg',
+    bio: [
+      'Mr. DeCristofaro is currently CEO of Qnext Corp. and brings thirty years of computer industry experience and three M&A transactions valued at more than CDN $600 Million. Previously he was president and CEO of iseemedia Inc. which merged with Synchronica in 2010, and he was CEO and co-founder of MGI Software Corp., which became Intel invested, reached a cap value on the TSE to over $1 billion and later merged with Roxio in 2002.',
+      'Prior to MGI, Mr. DeCristofaro was a VP/GM of AST Canada, driving sales from $2 million to over $400 million in just three years and set up NEC Canada\u2019s notebook and monitor entry into the market, propelling it to over $100 million in the first year.',
+      'Over the course of his career, DeCristofaro has been sought out as a member of several high-profile public boards, including Hartco, Delrina, Realbiz Media, Synchronica and TransGaming.',
+    ],
+  },
+  {
+    name: 'Larry Hurtado',
+    title: 'Executive Vice President and Managing Director, USA',
+    img: '/images/company/larry-hurtado.jpg',
+    bio: [
+      'Larry is a seasoned executive in the cybersecurity space. Larry is on the board of the San Antonio Chamber of Commerce and is the 2022 Chair of the Cybersecurity Council. He is also a member of the Board of Advisors for Cyber P-Tech USA.',
+      'Prior to Qnext Corp., Larry co-founded Evanesco, Inc. Larry led a team of cybersecurity professionals to provide professional services and a new Software as a Service (SaaS) security solution to organizations. Prior to Evanesco, Larry was President and CEO of Digital Defense Inc., a leading provider of cyber risk management solutions. He helmed Digital Defense\u2019s rise to an industry leader with an established global presence. This led to the successful acquisition of Digital Defense by HelpSystems LLC in February 2021.',
+    ],
+  },
+  {
+    name: 'Paul Amlani',
+    title: 'V.P. Sales & Channel, Europe & Canada',
+    img: '/images/company/paul-amlani.jpeg',
+    bio: [
+      'With 25+ years of global experience in Information Technology Services, Paul has global management experience and a demonstrated ability to build and motivate teams. He has operated multi-million dollar P&Ls and consistently met or exceeded goals. Paul thrives on challenges and is an expert in developing large-scale strategies to drive growth in both. A coach that understands the C-Suite and how to optimize opportunity with a win-win approach.',
+    ],
+  },
+];
+
+const advisors = [
+  {
+    name: 'Mike Brown',
+    img: '/images/company/mike-brown.jpg',
+    bio: [
+      'Mike Brown is a leading cybersecurity expert and retired Rear Admiral, United States Navy. Brown\u2019s last position on active duty was as the Director, Cybersecurity Coordination for DHS.',
+      'Mike is the former President of RSA Federal LLC and Vice President/General Manager of Global Public Sector of RSA Security LLC an EMC/Dell cybersecurity company. Mike is the Founder and President of Spinnaker Security LLC, a cybersecurity consulting business focused on understanding, identifying and mitigating business risks associated with cybersecurity.',
+    ],
+    linkedin: 'https://www.linkedin.com/in/michaelbrown510/',
+  },
+  {
+    name: 'Ed Dubrovsky',
+    credentials: 'CISSP OSCP PMP MBA MSc',
+    img: '/images/company/ed-dubrovsky.jpg',
+    bio: [
+      'Ed is a seasoned entrepreneur, executive & technical leader with over 29 years of experience building and growing technology companies with a deep technical acumen. His experience includes managing over 4700 security incidents including ransomware, business email compromise, malicious insiders, extortion, executive protection, threat intelligence, and prevention/mitigation of risk associated with cyber-attacks.',
+      'Ed has deep knowledge of helping companies across all industries including military, defense, public and private sectors recover from cyber-attacks. Ed is also a holder of Canadian secret II clearance.',
+    ],
+    linkedin: 'https://www.linkedin.com/in/edubrovs/',
+  },
+  {
+    name: 'Will Stewart',
+    img: '/images/company/will-stewart.jpeg',
+    bio: [
+      'Will has established 5 venture capital funds, and 2 venture debt funds including Rogers Venture Partners, Mezzanine Capital Partners, and Asia Pacific Ventures. He has invested in over 300 early-stage technology companies and his past successes include RSA (Acquired by EMC), Verisign (IPO), Lexar Media (IPO then Acquired by Micron). He is a specialist in Silicon Valley, Japan, China, and SE Asian markets. His investment focus is on digital consumer/enterprise platforms, cybersecurity, artificial intelligence, mobile gaming, gig economy, and technological sustainability.',
+    ],
+  },
+];
+---
+
+<Layout
+  title="Company | Qnext Corp"
+  description="Qnext Corp at a glance — our mission, team, and advisory board behind FileFlex Enterprise zero trust data access."
+>
+
+<Nav current="" />
+
+<!-- ============================================================
+     HERO — Qnext at a glance
+     ============================================================ -->
+<section id="ptr-hero" class="cmp-hero" aria-labelledby="cmp-hero-heading">
+  <div class="cmp-hero__inner">
+    <h1 id="cmp-hero-heading" class="cmp-hero__title">Qnext at a glance</h1>
+    <p class="cmp-hero__lede">
+      Selected as a Red Herring Top 100 Global winner for its technology and international recognition as one of the technology industry&rsquo;s most exciting and innovative private companies. FileFlex Enterprise is the new zero trust data access normal for remote workers and contractors to share data seamlessly and minimize ransomware by protecting your unstructured data. Significant global partnerships include Intel, Microsoft, Hewlett-Packard Enterprise, and NEC.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     OUR MISSION
+     ============================================================ -->
+<section class="pf-section pf-section--dark cmp-mission" aria-labelledby="cmp-mission">
+  <div class="cmp-mission__inner">
+    <figure class="cmp-mission__figure">
+      <img src="/images/company/ff-company-hero.jpg" alt="" width="696" height="696" loading="lazy" />
+    </figure>
+    <div class="cmp-mission__body">
+      <h2 id="cmp-mission" class="cmp-mission__title">Our mission</h2>
+      <p>
+        In response to our need for accessible data, the better solution is to use a zero trust data access architecture to virtualize file access to all the company&rsquo;s disparate storage infrastructure and devices. This enables on-premises, cloud-hosted and SharePoint storage to be available anytime, anywhere via a single-pane-of-glass. The zero trust data access technology behind FileFlex essentially takes the company-owned infrastructure, puts it under IT control, and makes it securely accessible to a remote workforce.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     A PASSION FOR INNOVATION
+     ============================================================ -->
+<section class="pf-section pf-section--dark cmp-passion" aria-labelledby="cmp-passion">
+  <div class="cmp-passion__inner">
+    <h2 id="cmp-passion" class="cmp-passion__title">A Passion For Innovation</h2>
+    <div class="cmp-passion__body">
+      <p>We take a deep dive into cybersecurity problems we all face in our changing world, swim around in the issues, re-think the experience of end-users and enterprise implementation and uncover new solutions.</p>
+      <p>Designing, developing, strategizing, writing, architecting, and programming among a tight-knit team of introverted extroverts. We&rsquo;re a cross-disciplined collective of industry veterans who bring passion and purpose to creating end-to-end solutions that fight the growing cyber security threats that exist, both remotely or in-house.</p>
+      <p>Today at Qnext, the development of decentralized cybersecurity solutions is the passion of the company and FileFlex Enterprise is a truly ground-breaking example of this.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MANAGEMENT TEAM
+     ============================================================ -->
+<section class="pf-section pf-section--white cmp-people" aria-labelledby="cmp-mgmt">
+  <div class="cmp-people__inner">
+    <h2 id="cmp-mgmt" class="cmp-people__title">Management Team</h2>
+    {management.map((p) => (
+      <article class="cmp-person">
+        <div class="cmp-person__photo">
+          <img src={p.img} alt={p.name} width="400" height="400" loading="lazy" />
+        </div>
+        <div class="cmp-person__body">
+          <h3 class="cmp-person__name">
+            {p.name}<span class="cmp-person__sep">,</span> <span class="cmp-person__title">{p.title}</span>
+          </h3>
+          {p.bio.map((para) => <p>{para}</p>)}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<!-- ============================================================
+     ADVISORY BOARD
+     ============================================================ -->
+<section class="pf-section pf-section--white cmp-people cmp-people--advisors" aria-labelledby="cmp-advisors">
+  <div class="cmp-people__inner">
+    <h2 id="cmp-advisors" class="cmp-people__title">Advisory Board</h2>
+    {advisors.map((p) => (
+      <article class="cmp-person">
+        <div class="cmp-person__photo">
+          <img src={p.img} alt={p.name} width="400" height="400" loading="lazy" />
+        </div>
+        <div class="cmp-person__body">
+          <h3 class="cmp-person__name">
+            {p.name}{p.credentials && <span class="cmp-person__creds"> {p.credentials}</span>}
+          </h3>
+          {p.bio.map((para) => <p>{para}</p>)}
+          {p.linkedin && (
+            <p class="cmp-person__linkedin">
+              <a href={p.linkedin} target="_blank" rel="noopener">
+                <i class="fab fa-linkedin" aria-hidden="true"></i> {p.linkedin}
+              </a>
+            </p>
+          )}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<style>
+  /* ===== HERO ===== */
+  #ptr-hero.cmp-hero {
+    background: #0E1A2B;
+    padding: 80px 6vw 70px;
+    text-align: left;
+  }
+  .cmp-hero__inner { max-width: 1100px; margin: 0 auto; }
+  .cmp-hero__title {
+    color: #fff;
+    font-size: clamp(34px, 4.4vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0 0 22px;
+    line-height: 1.1;
+  }
+  .cmp-hero__lede {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: clamp(15px, 1.25vw, 17px);
+    line-height: 1.65;
+    max-width: 920px;
+    margin: 0;
+  }
+
+  /* ===== OUR MISSION ===== */
+  .pf-section.cmp-mission {
+    background: #0E1A2B;
+    color: #fff;
+    padding: 70px 6vw;
+  }
+  .cmp-mission__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .cmp-mission__figure { margin: 0; }
+  .cmp-mission__figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  .cmp-mission__title {
+    color: #fff;
+    font-size: clamp(26px, 2.6vw, 34px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0 0 16px;
+  }
+  .cmp-mission__body p {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 15.5px;
+    line-height: 1.65;
+    margin: 0;
+  }
+  @media (max-width: 768px) {
+    .cmp-mission__inner { grid-template-columns: 1fr; gap: 30px; }
+  }
+
+  /* ===== PASSION FOR INNOVATION ===== */
+  .pf-section.cmp-passion {
+    background: #0E1A2B;
+    color: #fff;
+    padding: 30px 6vw 80px;
+  }
+  .cmp-passion__inner { max-width: 1100px; margin: 0 auto; }
+  .cmp-passion__title {
+    color: #fff;
+    font-size: clamp(30px, 3.4vw, 44px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0 0 22px;
+  }
+  .cmp-passion__body {
+    max-width: 720px;
+  }
+  .cmp-passion__body p {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 15.5px;
+    line-height: 1.7;
+    margin: 0 0 14px;
+  }
+  .cmp-passion__body p:last-child { margin-bottom: 0; }
+
+  /* ===== PEOPLE (Management + Advisors) ===== */
+  .pf-section.cmp-people { padding: 70px 6vw 30px; }
+  .pf-section.cmp-people--advisors { padding-top: 30px; padding-bottom: 80px; }
+  .cmp-people__inner { max-width: 1100px; margin: 0 auto; }
+  .cmp-people__title {
+    color: #0E1A2B;
+    font-size: clamp(26px, 2.6vw, 34px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0 0 36px;
+  }
+
+  .cmp-person {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 40px;
+    align-items: start;
+    padding: 28px 0;
+  }
+  .cmp-person + .cmp-person {
+    border-top: 1px solid #ececec;
+  }
+  .cmp-person__photo img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #ececec;
+  }
+  .cmp-person__body { color: #2a2f3a; font-size: 15px; line-height: 1.65; }
+  .cmp-person__body p { margin: 0 0 12px; }
+  .cmp-person__body p:last-child { margin-bottom: 0; }
+  .cmp-person__name {
+    color: #0E1A2B;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+  }
+  .cmp-person__sep { color: #0E1A2B; }
+  .cmp-person__title {
+    font-weight: 500;
+    color: #4a5260;
+  }
+  .cmp-person__creds {
+    font-weight: 500;
+    color: #4a5260;
+    font-size: 15px;
+  }
+  .cmp-person__linkedin a {
+    color: #e8590a;
+    text-decoration: none;
+    font-weight: 600;
+    word-break: break-all;
+  }
+  .cmp-person__linkedin a:hover { text-decoration: underline; }
+  .cmp-person__linkedin i { margin-right: 6px; }
+
+  @media (max-width: 768px) {
+    .cmp-person { grid-template-columns: 1fr; gap: 18px; }
+    .cmp-person__photo img { margin: 0 auto; }
+  }
+</style>
+
+</Layout>
