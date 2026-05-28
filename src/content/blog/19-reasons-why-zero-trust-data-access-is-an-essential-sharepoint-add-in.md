@@ -11,7 +11,6 @@ featuredImageAlt: "19 Reasons Why Zero Trust Data Access as a SharePoint Add-in"
 readingTime: "7 min read"
 categories:
   - "Microsoft"
-  - "Office 365"
   - "SharePoint"
   - "Zero Trust Data Access"
 tags: []

@@ -11,7 +11,6 @@ featuredImageAlt: "Zero Trust Security Model Must Include Zero Trust Data Access
 readingTime: "6 min read"
 categories:
   - "VPN"
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

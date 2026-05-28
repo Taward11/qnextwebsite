@@ -10,7 +10,7 @@ featuredImage: "/images/blog/zero-trust-remote-access-helps-protect-data-against
 featuredImageAlt: "Zero Trust Remote Access Protection for Internal Security Threats"
 readingTime: "6 min read"
 categories:
-  - "Zero Trust"
+  - "Zero Trust Data Access"
   - "Remote Access"
 tags: []
 toc: true

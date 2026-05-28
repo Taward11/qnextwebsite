@@ -10,7 +10,6 @@ featuredImage: "/images/blog/risks-to-unstructured-data/Picture1-1.webp"
 featuredImageAlt: "Risks to Unstructured Data"
 readingTime: "5 min read"
 categories:
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

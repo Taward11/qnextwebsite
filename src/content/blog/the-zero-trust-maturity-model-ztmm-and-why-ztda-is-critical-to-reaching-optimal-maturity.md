@@ -10,7 +10,6 @@ featuredImage: "/images/blog/the-zero-trust-maturity-model-ztmm-and-why-ztda-is-
 featuredImageAlt: "The Zero Trust Maturity Model and the Role of ZTDA"
 readingTime: "5 min read"
 categories:
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

@@ -10,7 +10,7 @@ featuredImage: "/images/blog/using-zero-trust-architecture-zta-to-protect-remote
 featuredImageAlt: "Using Zero Trust Architecture (ZTA) to Protect Remote Data Access"
 readingTime: "7 min read"
 categories:
-  - "Zero Trust"
+  - "Zero Trust Data Access"
   - "Remote Access"
 tags: []
 toc: true

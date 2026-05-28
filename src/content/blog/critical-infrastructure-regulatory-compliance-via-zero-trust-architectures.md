@@ -11,7 +11,6 @@ featuredImageAlt: "Critical Infrastructure Regulatory Compliance Using Zero Trus
 readingTime: "7 min read"
 categories:
   - "Critical Infrastructure Protection"
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

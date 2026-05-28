@@ -12,7 +12,7 @@ readingTime: "13 min read"
 categories:
   - "Compliance"
   - "CMMC"
-  - "Zero Trust"
+  - "Zero Trust Data Access"
 tags: []
 toc: true
 tables:

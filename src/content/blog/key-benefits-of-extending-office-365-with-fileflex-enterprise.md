@@ -10,7 +10,7 @@ featuredImage: "/images/blog/key-benefits-of-extending-office-365-with-fileflex-
 featuredImageAlt: "Key Benefits of Extending Office 365 with FileFlex Enterprise"
 readingTime: "6 min read"
 categories:
-  - "Microsoft 365"
+  - "Microsoft"
   - "Remote Access"
 tags: []
 toc: true

@@ -10,7 +10,7 @@ featuredImage: "/images/blog/enabling-your-remote-workforce-with-zero-trust-by-d
 featuredImageAlt: "How to Enable Your Remote Workforce with Zero Trust-By-Design"
 readingTime: "7 min read"
 categories:
-  - "Zero Trust"
+  - "Zero Trust Data Access"
   - "Remote Access"
 tags: []
 toc: true

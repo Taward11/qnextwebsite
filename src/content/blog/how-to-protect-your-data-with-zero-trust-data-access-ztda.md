@@ -10,7 +10,6 @@ featuredImage: "/images/blog/how-to-protect-your-data-with-zero-trust-data-acces
 featuredImageAlt: "How to Protect Your Data with Zero Trust Data Access (ZTDA)"
 readingTime: "7 min read"
 categories:
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

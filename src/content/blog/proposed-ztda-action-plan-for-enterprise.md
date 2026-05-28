@@ -10,7 +10,6 @@ featuredImage: "/images/blog/proposed-ztda-action-plan-for-enterprise/minimize-r
 featuredImageAlt: "Proposed ZTDA Action Plan for Enterprise"
 readingTime: "5 min read"
 categories:
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

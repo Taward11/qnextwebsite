@@ -10,7 +10,6 @@ featuredImage: "/images/blog/the-fileflex-enterprise-commercial-platform-for-zer
 featuredImageAlt: "FileFlex Enterprise Platform for Zero Trust Data Access"
 readingTime: "5 min read"
 categories:
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

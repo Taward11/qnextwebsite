@@ -10,7 +10,7 @@ featuredImage: "/images/blog/extending-office-365-functionality-into-a-hybrid-it
 featuredImageAlt: "Extending Office 365 Functionality into a Hybrid-IT Infrastructure"
 readingTime: "6 min read"
 categories:
-  - "Microsoft 365"
+  - "Microsoft"
   - "Hybrid IT"
 tags: []
 toc: true

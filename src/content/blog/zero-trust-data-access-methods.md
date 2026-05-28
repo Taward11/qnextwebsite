@@ -10,7 +10,6 @@ featuredImage: "/images/blog/zero-trust-data-access-methods/GDPR-for-blog.webp"
 featuredImageAlt: "Zero Trust Data Access Methods"
 readingTime: "5 min read"
 categories:
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

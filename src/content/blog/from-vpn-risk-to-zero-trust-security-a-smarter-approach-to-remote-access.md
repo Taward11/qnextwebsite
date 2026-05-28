@@ -12,7 +12,6 @@ readingTime: "3 min read"
 categories:
   - "Remote Access"
   - "VPN"
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

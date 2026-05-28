@@ -11,7 +11,6 @@ featuredImageAlt: "Top Reasons to Add Zero Trust Data Access to Illumio Core"
 readingTime: "5 min read"
 categories:
   - "Illumio"
-  - "Zero Trust"
   - "Zero Trust Data Access"
   - "Zero Trust Network Access"
 tags: []

@@ -11,8 +11,7 @@ featuredImageAlt: "How to Build a Complete Zero Trust Security Framework"
 readingTime: "5 min read"
 categories:
   - "Data Governance"
-  - "Illumio Core"
-  - "Zero Trust"
+  - "Illumio"
   - "Zero Trust Data Access"
   - "Zero Trust Network Access"
 tags: []

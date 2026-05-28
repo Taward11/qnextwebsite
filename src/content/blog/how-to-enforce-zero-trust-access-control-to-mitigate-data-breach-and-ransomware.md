@@ -12,7 +12,6 @@ readingTime: "6 min read"
 categories:
   - "Illumio"
   - "Ransomware"
-  - "Zero Trust"
   - "Zero Trust Data Access"
   - "Zero Trust Network Access"
 tags: []

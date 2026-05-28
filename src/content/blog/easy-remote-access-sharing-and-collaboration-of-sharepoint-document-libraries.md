@@ -10,7 +10,7 @@ featuredImage: "/images/blog/easy-remote-access-sharing-and-collaboration-of-sha
 featuredImageAlt: "Secure Remote Access and Sharing SharePoint with External Recipients"
 readingTime: "6 min read"
 categories:
-  - "Microsoft 365"
+  - "Microsoft"
   - "Collaboration"
 tags: []
 toc: true

@@ -11,7 +11,6 @@ featuredImageAlt: "How Has File Sharing Evolved? - First Generation to ZTDA"
 readingTime: "7 min read"
 categories:
   - "File Sharing"
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

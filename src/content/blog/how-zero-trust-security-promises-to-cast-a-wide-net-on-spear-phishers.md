@@ -10,7 +10,7 @@ featuredImage: "/images/blog/how-zero-trust-security-promises-to-cast-a-wide-net
 featuredImageAlt: "How Zero Trust Security Casts a Wide Net on Spear-Phishers"
 readingTime: "5 min read"
 categories:
-  - "Zero Trust"
+  - "Zero Trust Data Access"
   - "Phishing"
 tags: []
 toc: true

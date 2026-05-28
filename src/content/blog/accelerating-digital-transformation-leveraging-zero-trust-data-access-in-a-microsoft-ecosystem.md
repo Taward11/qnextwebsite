@@ -11,9 +11,7 @@ featuredImageAlt: "Leveraging Zero Trust Data Access in a Microsoft Ecosystem"
 readingTime: "7 min read"
 categories:
   - "Microsoft"
-  - "Office 365"
   - "SharePoint"
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

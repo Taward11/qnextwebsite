@@ -10,7 +10,6 @@ featuredImage: "/images/blog/implement-zero-trust-security-avoid-this-nightmare-
 featuredImageAlt: "Implement Zero Trust Security, Avoid This Nightmare"
 readingTime: "5 min read"
 categories:
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

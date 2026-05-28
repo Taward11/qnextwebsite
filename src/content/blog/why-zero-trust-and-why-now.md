@@ -10,7 +10,7 @@ featuredImage: "/images/blog/why-zero-trust-and-why-now/Zero-Trust-cover-for-Ant
 featuredImageAlt: "Why Zero Trust and Why Now?"
 readingTime: "5 min read"
 categories:
-  - "Zero Trust"
+  - "Zero Trust Data Access"
 tags: []
 toc: true
 ---

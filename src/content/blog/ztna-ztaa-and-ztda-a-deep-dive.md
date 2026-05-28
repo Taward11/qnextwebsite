@@ -10,7 +10,6 @@ featuredImage: "/images/blog/ztna-ztaa-and-ztda-a-deep-dive/iStock-1280171152-we
 featuredImageAlt: "ZTNA, ZTAA and ZTDA: A Deep Dive"
 readingTime: "6 min read"
 categories:
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

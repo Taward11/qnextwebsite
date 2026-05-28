@@ -13,7 +13,6 @@ categories:
   - "Privacy and Security"
   - "Ransomware"
   - "Regulatory Compliance"
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

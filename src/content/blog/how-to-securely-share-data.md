@@ -11,7 +11,6 @@ featuredImageAlt: "How To Securely Share Data"
 readingTime: "5 min read"
 categories:
   - "File Sharing"
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

@@ -12,7 +12,7 @@ readingTime: "12 min read"
 categories:
   - "Compliance"
   - "NIST"
-  - "Zero Trust"
+  - "Zero Trust Data Access"
 tags: []
 toc: true
 tables:

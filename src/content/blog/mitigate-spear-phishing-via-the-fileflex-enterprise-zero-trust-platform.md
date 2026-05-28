@@ -10,7 +10,7 @@ featuredImage: "/images/blog/mitigate-spear-phishing-via-the-fileflex-enterprise
 featuredImageAlt: "How to Mitigate Spear-Phishing via FileFlex Enterprise Zero Trust"
 readingTime: "6 min read"
 categories:
-  - "Zero Trust"
+  - "Zero Trust Data Access"
   - "Phishing"
 tags: []
 toc: true

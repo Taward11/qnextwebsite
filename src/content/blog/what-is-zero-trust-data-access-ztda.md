@@ -11,7 +11,6 @@ featuredImageAlt: "What is Zero Trust Data Access (ZTDA)?"
 readingTime: "8 min read"
 categories:
   - "Critical Infrastructure Protection"
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

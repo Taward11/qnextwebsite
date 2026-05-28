@@ -11,7 +11,6 @@ featuredImageAlt: "Protecting Critical Infrastructure Using Zero Trust - The Top
 readingTime: "6 min read"
 categories:
   - "Critical Infrastructure Protection"
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

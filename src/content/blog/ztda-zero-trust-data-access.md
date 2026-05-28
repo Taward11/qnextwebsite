@@ -10,7 +10,6 @@ featuredImage: "/images/blog/ztda-zero-trust-data-access/ztda-blog-post--e166620
 featuredImageAlt: "Making the Case for ZTDA Has Never Been More Obvious"
 readingTime: "5 min read"
 categories:
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

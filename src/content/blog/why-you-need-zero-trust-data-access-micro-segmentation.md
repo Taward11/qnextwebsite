@@ -11,7 +11,6 @@ featuredImageAlt: "Zero Trust Micro-Segmentation Explained"
 readingTime: "8 min read"
 categories:
   - "Micro-Segmentation"
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

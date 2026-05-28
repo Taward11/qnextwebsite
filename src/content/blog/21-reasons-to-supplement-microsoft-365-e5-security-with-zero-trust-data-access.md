@@ -11,7 +11,6 @@ featuredImageAlt: "21 Reasons to Suppliment Microsoft 365 E5 Security with ZTDA"
 readingTime: "7 min read"
 categories:
   - "Microsoft"
-  - "Office 365"
   - "SharePoint"
   - "Zero Trust Data Access"
 tags: []

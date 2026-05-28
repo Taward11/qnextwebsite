@@ -11,7 +11,6 @@ featuredImageAlt: "How to Reduce the Risk of Ransomware with Zero Trust"
 readingTime: "7 min read"
 categories:
   - "Ransomware"
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true

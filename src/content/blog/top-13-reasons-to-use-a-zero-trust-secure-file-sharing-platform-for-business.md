@@ -11,7 +11,6 @@ featuredImageAlt: "What Is Secure File Sharing? Why Choose a Zero Trust Platform
 readingTime: "7 min read"
 categories:
   - "File Sharing"
-  - "Zero Trust"
   - "Zero Trust Data Access"
 tags: []
 toc: true
