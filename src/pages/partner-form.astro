@@ -166,9 +166,9 @@ const HS_FORM = '7f266485-c9ed-4a4c-94fd-884177054240';
         <div class="pf-actions">
           <button type="submit" class="pf-submit">Submit</button>
         </div>
-
-        <div id="pf-status" class="pf-status" role="status" aria-live="polite"></div>
       </form>
+
+      <div id="pf-status" class="pf-status" role="status" aria-live="polite"></div>
     </div>
 
   </div>
@@ -256,6 +256,7 @@ const HS_FORM = '7f266485-c9ed-4a4c-94fd-884177054240';
           if (res.ok) {
             form.style.display = 'none';
             setStatus('Thanks for submitting the Partner Application Form. Someone will contact you shortly.', 'ok');
+            status.scrollIntoView({ behavior: 'smooth', block: 'center' });
           } else {
             var msg = 'Submission failed. Please review the form and try again.';
             if (res.body && res.body.errors && res.body.errors.length) {
