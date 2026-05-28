@@ -110,11 +110,11 @@ const rows = [
 <!-- ============================================================
      HERO — full-bleed background image, copy on the left
      ============================================================ -->
-<section id="gdpr-hero" aria-labelledby="gdpr-hero-heading">
-  <div class="gdpr-hero__overlay"></div>
-  <div class="gdpr-hero__inner">
-    <div class="gdpr-hero__content">
-      <h1 id="gdpr-hero-heading">Accelerates Compliance to GDPR</h1>
+<section id="zp-hero" aria-labelledby="zp-hero-heading">
+  <div class="zp-hero__overlay"></div>
+  <div class="zp-hero__inner">
+    <div class="zp-hero__content">
+      <h1 id="zp-hero-heading">Accelerates Compliance to GDPR</h1>
       <p>
         FileFlex use of a Zero Trust Data Access architecture for secure remote access, file
         sharing and collaboration supports and augments an organization&rsquo;s GDPR compliance
@@ -141,12 +141,12 @@ const rows = [
      Z-PATTERN ROWS — alternating image / text, full-bleed
      ============================================================ -->
 {rows.map((r) => (
-  <section class={`gdpr-row gdpr-row--img-${r.side}`} aria-labelledby={`gdpr-${r.title.toLowerCase().replace(/[^a-z0-9]+/g,'-')}-heading`}>
-    <div class="gdpr-row__media" style={`background-image: url('${r.img}');`} role="img" aria-label={r.alt}></div>
-    <div class="gdpr-row__copy">
-      <div class="gdpr-row__copy-inner">
+  <section class={`zp-row zp-row--img-${r.side}`} aria-labelledby={`gdpr-${r.title.toLowerCase().replace(/[^a-z0-9]+/g,'-')}-heading`}>
+    <div class="zp-row__media" style={`background-image: url('${r.img}');`} role="img" aria-label={r.alt}></div>
+    <div class="zp-row__copy">
+      <div class="zp-row__copy-inner">
         <h2 id={`gdpr-${r.title.toLowerCase().replace(/[^a-z0-9]+/g,'-')}-heading`}>{r.title}</h2>
-        {r.mandate && <p class="gdpr-row__mandate"><em>{r.mandate}</em></p>}
+        {r.mandate && <p class="zp-row__mandate"><em>{r.mandate}</em></p>}
         {r.body.map((p) => <p>{p}</p>)}
         {r.list && (
           <ol>
@@ -167,7 +167,7 @@ const rows = [
   /* ============================================================
      HERO
      ============================================================ */
-  #gdpr-hero {
+  #zp-hero {
     position: relative;
     background: #0E1A2B url('/images/gdpr/GDPR-Header.jpg') center/cover no-repeat;
     color: #fff;
@@ -175,22 +175,22 @@ const rows = [
     align-items: center;
     padding: 70px 6vw 60px;
   }
-  .gdpr-hero__overlay {
+  .zp-hero__overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(90deg, rgba(14,26,43,0.88) 0%, rgba(14,26,43,0.70) 55%, rgba(14,26,43,0.35) 100%);
   }
-  .gdpr-hero__inner {
+  .zp-hero__inner {
     position: relative;
     z-index: 1;
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
   }
-  .gdpr-hero__content {
+  .zp-hero__content {
     max-width: 620px;
   }
-  #gdpr-hero h1 {
+  #zp-hero h1 {
     font-family: 'Inter', sans-serif;
     font-size: clamp(32px, 4.4vw, 48px);
     font-weight: 800;
@@ -198,50 +198,50 @@ const rows = [
     line-height: 1.15;
     margin: 0 0 22px;
   }
-  #gdpr-hero p {
+  #zp-hero p {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     line-height: 1.7;
     margin: 0 0 16px;
     color: #f1f3f8;
   }
-  #gdpr-hero a {
+  #zp-hero a {
     color: #fff;
     text-decoration: underline;
     text-underline-offset: 3px;
   }
-  #gdpr-hero a:hover { color: #ffb481; }
+  #zp-hero a:hover { color: #ffb481; }
   /* ============================================================
      Z-PATTERN ROWS
      ============================================================ */
-  .gdpr-row {
+  .zp-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 460px;
     background: #fff;
   }
-  .gdpr-row.gdpr-row--img-left { background: #f6f8fb; }
-  .gdpr-row__media {
+  .zp-row.zp-row--img-left { background: #f6f8fb; }
+  .zp-row__media {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 320px;
   }
-  .gdpr-row__copy {
+  .zp-row__copy {
     display: flex;
     align-items: center;
     padding: 70px 7vw;
   }
-  .gdpr-row__copy-inner {
+  .zp-row__copy-inner {
     max-width: 560px;
     width: 100%;
   }
   /* image-right: media is the second column */
-  .gdpr-row--img-right .gdpr-row__copy { order: 1; }
-  .gdpr-row--img-right .gdpr-row__media { order: 2; }
+  .zp-row--img-right .zp-row__copy { order: 1; }
+  .zp-row--img-right .zp-row__media { order: 2; }
   /* image-left: media first, copy second (default order works) */
 
-  .gdpr-row h2 {
+  .zp-row h2 {
     font-family: 'Inter', sans-serif;
     color: #0E1A2B;
     font-size: clamp(24px, 2.5vw, 32px);
@@ -253,14 +253,14 @@ const rows = [
     border-bottom: 3px solid #e8590a;
     display: inline-block;
   }
-  .gdpr-row p {
+  .zp-row p {
     font-family: 'Inter', sans-serif;
     color: #2a2f3a;
     font-size: 16px;
     line-height: 1.75;
     margin: 0 0 14px;
   }
-  .gdpr-row__mandate {
+  .zp-row__mandate {
     color: #021372 !important;
     font-size: 15px !important;
     padding: 12px 16px;
@@ -269,7 +269,7 @@ const rows = [
     border-radius: 2px;
     margin-bottom: 16px !important;
   }
-  .gdpr-row ol {
+  .zp-row ol {
     font-family: 'Inter', sans-serif;
     color: #2a2f3a;
     font-size: 16px;
@@ -277,14 +277,14 @@ const rows = [
     margin: 6px 0 0;
     padding-left: 22px;
   }
-  .gdpr-row ol li { margin-bottom: 8px; }
+  .zp-row ol li { margin-bottom: 8px; }
 
   @media (max-width: 900px) {
-    .gdpr-row { grid-template-columns: 1fr; min-height: 0; }
-    .gdpr-row__media { min-height: 240px; order: 1 !important; }
-    .gdpr-row__copy { order: 2 !important; padding: 48px 7vw; }
-    #gdpr-hero { padding: 56px 6vw 48px; }
-    .gdpr-hero__overlay {
+    .zp-row { grid-template-columns: 1fr; min-height: 0; }
+    .zp-row__media { min-height: 240px; order: 1 !important; }
+    .zp-row__copy { order: 2 !important; padding: 48px 7vw; }
+    #zp-hero { padding: 56px 6vw 48px; }
+    .zp-hero__overlay {
       background: linear-gradient(180deg, rgba(14,26,43,0.85) 0%, rgba(14,26,43,0.85) 100%);
     }
   }
