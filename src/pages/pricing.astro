@@ -1,0 +1,408 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+
+const bullets = [
+  'Simple per-user, per-month subscription pricing',
+  'Volume discounts available for larger deployments',
+  'Annual subscription terms — no long-term contract required',
+  'Free 30-day trial available before you commit',
+  'Sold direct or through certified FileFlex partners',
+  'Includes onboarding support, software updates, and security patches',
+];
+
+const HS_PORTAL = '21348727';
+const HS_FORM = '83276a35-5a4c-4caf-8dde-23e0974859cd';
+---
+
+<Layout
+  title="Request FileFlex Enterprise Pricing | FileFlex Enterprise"
+  description="Request pricing for FileFlex Enterprise. Simple per-user subscription pricing for Zero Trust Data Access — contact us for a quote tailored to your deployment."
+>
+
+<Nav />
+
+<section id="pr-hero" aria-labelledby="pr-hero-heading">
+  <div class="pr-hero__inner">
+    <h1 id="pr-hero-heading" class="pr-hero__title">
+      Simple Subscription Pricing
+    </h1>
+  </div>
+</section>
+
+<section id="pr-main" aria-labelledby="pr-main-heading">
+  <div class="pr-main__inner">
+
+    <aside class="pr-aside" aria-label="How to buy FileFlex Enterprise">
+      <h2 class="pr-aside__title">
+        How to Buy FileFlex Enterprise
+      </h2>
+      <ul class="pr-aside__list">
+        {bullets.map((b) => (
+          <li>
+            <svg class="pr-check" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="11" fill="#e8590a" />
+              <polyline points="7,12.5 10.5,16 17,9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>{b}</span>
+          </li>
+        ))}
+      </ul>
+    </aside>
+
+    <div class="pr-form-wrap">
+      <h2 id="pr-main-heading" class="pr-form__title">
+        Please Contact Us for Pricing
+      </h2>
+
+      <form
+        id="pr-form"
+        class="pr-form"
+        novalidate
+        data-portal-id={HS_PORTAL}
+        data-form-id={HS_FORM}
+      >
+        <div class="pr-grid pr-grid--2">
+          <div class="pr-field">
+            <label for="pr-firstname">First name <span class="pr-req" aria-hidden="true">*</span></label>
+            <input id="pr-firstname" name="firstname" type="text" autocomplete="given-name" required />
+          </div>
+          <div class="pr-field">
+            <label for="pr-lastname">Last name <span class="pr-req" aria-hidden="true">*</span></label>
+            <input id="pr-lastname" name="lastname" type="text" autocomplete="family-name" required />
+          </div>
+        </div>
+
+        <div class="pr-field">
+          <label for="pr-company">Company name <span class="pr-req" aria-hidden="true">*</span></label>
+          <input id="pr-company" name="company" type="text" autocomplete="organization" required />
+        </div>
+
+        <div class="pr-grid pr-grid--2">
+          <div class="pr-field">
+            <label for="pr-email">Email <span class="pr-req" aria-hidden="true">*</span></label>
+            <input id="pr-email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="pr-field">
+            <label for="pr-phone">Phone <span class="pr-req" aria-hidden="true">*</span></label>
+            <input id="pr-phone" name="phone" type="tel" autocomplete="tel" minlength="7" maxlength="20" required />
+          </div>
+        </div>
+
+        <div class="pr-field">
+          <label for="pr-size">Company size <span class="pr-req" aria-hidden="true">*</span></label>
+          <input id="pr-size" name="company_size" type="text" required />
+        </div>
+
+        <div class="pr-grid pr-grid--2">
+          <div class="pr-field">
+            <label for="pr-city">City <span class="pr-req" aria-hidden="true">*</span></label>
+            <input id="pr-city" name="city" type="text" autocomplete="address-level2" required />
+          </div>
+          <div class="pr-field">
+            <label for="pr-country">Country/Region <span class="pr-req" aria-hidden="true">*</span></label>
+            <input id="pr-country" name="country" type="text" autocomplete="country-name" required />
+          </div>
+        </div>
+
+        <div class="pr-consent">
+          <p>fileflex.com is committed to protecting and respecting your privacy, and we'll only use your personal information to administer your account and to provide the products and services you requested from us. From time to time, we would like to contact you about our products and services, as well as other content that may be of interest to you. If you consent to us contacting you for this purpose, please tick below to say how you would like us to contact you:</p>
+          <label class="pr-checkbox">
+            <input type="checkbox" id="pr-comm-consent" name="communicationConsent" value="true" />
+            <span>I agree to receive other communications from fileflex.com.</span>
+          </label>
+          <p class="pr-consent__fine">You can unsubscribe from these communications at any time. For more information on how to unsubscribe, our privacy practices, and how we are committed to protecting and respecting your privacy, please review our <a href="https://www.qnext.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+          <p class="pr-consent__fine">By clicking Submit below, you consent to allow fileflex.com to store and process the personal information submitted above to provide you the content requested.</p>
+        </div>
+
+        <!-- Honeypot: real users won't fill this; bots usually will. Visually hidden, hidden from a11y tree. -->
+        <div class="pr-honeypot" aria-hidden="true">
+          <label for="pr-website-url-2">Leave this field blank</label>
+          <input id="pr-website-url-2" type="text" name="website_url_confirm" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div class="pr-actions">
+          <button type="submit" class="pr-submit">Submit</button>
+        </div>
+      </form>
+
+      <div id="pr-status" class="pr-status" role="status" aria-live="polite"></div>
+    </div>
+
+  </div>
+</section>
+
+<script is:inline>
+  (function () {
+    var form = document.getElementById('pr-form');
+    if (!form) return;
+    var status = document.getElementById('pr-status');
+    var submitBtn = form.querySelector('.pr-submit');
+    var portalId = form.dataset.portalId;
+    var formId = form.dataset.formId;
+    var endpoint = 'https://api.hsforms.com/submissions/v3/integration/submit/' + portalId + '/' + formId;
+    var MIN_FILL_MS = 2500;
+    var renderedAt = Date.now();
+    var SUCCESS_MSG = 'Thank you for your pricing request. Someone will contact you shortly.';
+
+    function setStatus(msg, cls) {
+      status.textContent = msg;
+      status.className = 'pr-status pr-status--' + cls;
+    }
+    function getHsCookie() {
+      var m = document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]+)/);
+      return m ? m[1] : '';
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+
+      var honey = form.querySelector('[name="website_url_confirm"]');
+      if (honey && honey.value) {
+        form.style.display = 'none';
+        setStatus(SUCCESS_MSG, 'ok');
+        return;
+      }
+      if (Date.now() - renderedAt < MIN_FILL_MS) {
+        setStatus('Please take a moment to review your entries before submitting.', 'err');
+        return;
+      }
+
+      var fd = new FormData(form);
+      var fields = [];
+      var SKIP = { communicationConsent: 1, website_url_confirm: 1 };
+      fd.forEach(function (value, name) {
+        if (SKIP[name]) return;
+        if (value === '' || value == null) return;
+        fields.push({ name: name, value: String(value) });
+      });
+
+      var commConsent = form.querySelector('#pr-comm-consent').checked;
+      var hutk = getHsCookie();
+      var payload = {
+        submittedAt: Date.now(),
+        fields: fields,
+        context: { pageUri: window.location.href, pageName: document.title },
+        legalConsentOptions: {
+          consent: {
+            consentToProcess: true,
+            text: 'By clicking Submit below, you consent to allow fileflex.com to store and process the personal information submitted above to provide you the content requested.',
+            communications: [{
+              value: commConsent,
+              subscriptionTypeId: 32387186,
+              text: 'I agree to receive other communications from fileflex.com.',
+            }],
+          },
+        },
+      };
+      if (hutk) payload.context.hutk = hutk;
+
+      submitBtn.disabled = true;
+      setStatus('Sending…', 'pending');
+
+      fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+        .then(function (r) {
+          return r.text().then(function (t) {
+            var body;
+            try { body = JSON.parse(t); } catch (_) { body = { message: t.slice(0, 200) }; }
+            return { ok: r.ok, status: r.status, body: body };
+          });
+        })
+        .then(function (res) {
+          if (res.ok) {
+            form.style.display = 'none';
+            setStatus(SUCCESS_MSG, 'ok');
+            status.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            var msg = 'Submission failed. Please review the form and try again.';
+            if (res.body && res.body.errors && res.body.errors.length) {
+              msg = res.body.errors.map(function (e) { return e.message || e.errorType; }).join(' ');
+            } else if (res.body && res.body.message) {
+              msg = res.body.message;
+            }
+            setStatus(msg + ' (HTTP ' + res.status + ')', 'err');
+            submitBtn.disabled = false;
+          }
+        })
+        .catch(function () {
+          setStatus('Network error. Please try again or contact us directly.', 'err');
+          submitBtn.disabled = false;
+        });
+    });
+  })();
+</script>
+
+</Layout>
+
+<style>
+  /* HERO */
+  #pr-hero {
+    background: #0E1A2B;
+    padding: 120px 7vw 56px;
+  }
+  .pr-hero__inner { max-width: 1200px; margin: 0 auto; }
+  .pr-hero__title {
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    font-size: clamp(28px, 3.6vw, 48px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  /* MAIN — two-column */
+  #pr-main {
+    background: #f1f1f1;
+    padding: 72px 7vw 96px;
+  }
+  .pr-main__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(280px, 420px) 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  /* aside */
+  .pr-aside__title {
+    font-family: "Inter", sans-serif;
+    color: #0E1A2B;
+    font-size: clamp(22px, 2.2vw, 30px);
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+    margin: 0 0 24px;
+  }
+  .pr-aside__list { list-style: none; padding: 0; margin: 0; }
+  .pr-aside__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-family: "Inter", sans-serif;
+    color: #2a2f3a;
+    font-size: 16px;
+    line-height: 1.55;
+    margin-bottom: 14px;
+  }
+  .pr-check { flex: 0 0 22px; width: 22px; height: 22px; margin-top: 2px; }
+
+  /* form */
+  .pr-form__title {
+    font-family: "Inter", sans-serif;
+    color: #0E1A2B;
+    font-size: clamp(22px, 2.2vw, 30px);
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+    margin: 0 0 28px;
+  }
+  .pr-form { font-family: "Inter", sans-serif; }
+  .pr-req { color: #b00020; margin-left: 2px; }
+
+  .pr-field { margin-bottom: 16px; }
+  .pr-field label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0E1A2B;
+    margin-bottom: 6px;
+  }
+  .pr-field input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    color: #0E1A2B;
+    background: #fff;
+    border: 1px solid #cfd4dc;
+    border-radius: 3px;
+  }
+  .pr-field input:focus {
+    outline: none;
+    border-color: #e8590a;
+    box-shadow: 0 0 0 2px rgba(232, 89, 10, 0.18);
+  }
+  .pr-field input:invalid:not(:placeholder-shown) { border-color: #b00020; }
+
+  .pr-grid { display: grid; gap: 16px; }
+  .pr-grid--2 { grid-template-columns: 1fr 1fr; }
+
+  .pr-consent {
+    margin: 18px 0 8px;
+    padding: 16px;
+    background: #f6f8fb;
+    border-left: 3px solid #021372;
+    border-radius: 2px;
+  }
+  .pr-consent p {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #2a2f3a;
+    margin: 0 0 12px;
+  }
+  .pr-consent__fine { color: #4a5260 !important; font-size: 12.5px !important; }
+  .pr-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: #0E1A2B;
+    cursor: pointer;
+    margin: 6px 0 12px;
+  }
+  .pr-checkbox input { margin-top: 3px; accent-color: #e8590a; }
+  .pr-consent a { color: #021372; text-decoration: underline; }
+
+  /* Honeypot */
+  .pr-honeypot {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .pr-actions { margin-top: 18px; }
+  .pr-submit {
+    background: #e8590a;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    padding: 12px 28px;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  .pr-submit:hover:not(:disabled) { background: #c54a07; }
+  .pr-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  .pr-status {
+    margin-top: 16px;
+    padding: 12px 14px;
+    border-radius: 3px;
+    font-size: 14px;
+    display: none;
+  }
+  .pr-status--pending { display: block; background: #eef2fb; color: #021372; }
+  .pr-status--ok      { display: block; background: #e6f4ea; color: #1e6b34; border: 1px solid #b6dcc1; }
+  .pr-status--err     { display: block; background: #fdecea; color: #b00020; border: 1px solid #f5c2c0; }
+
+  @media (max-width: 900px) {
+    #pr-hero { padding: 100px 6vw 40px; }
+    #pr-main { padding: 48px 6vw 64px; }
+    .pr-main__inner { grid-template-columns: 1fr; gap: 48px; }
+    .pr-grid--2 { grid-template-columns: 1fr; }
+  }
+</style>
