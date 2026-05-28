@@ -1,7 +1,7 @@
 ---
 import { getRecentPosts, getCategoryCounts, getTagCounts, slugify } from '../lib/blog';
 
-const recent = await getRecentPosts(5);
+const recent = await getRecentPosts(10);
 const categories = await getCategoryCounts();
 const tags = await getTagCounts();
 ---
