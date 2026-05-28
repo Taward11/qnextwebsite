@@ -12,6 +12,22 @@ const bullets = [
   'On-demand training and certification',
   'Zero Trust Data Security designed for the hybrid workforce',
 ];
+
+const radioOptions = [
+  { value: 'I’m a company looking to sell this kind of zero trust solution',
+    label: 'I’m a company looking to OEM or license this kind of zero trust solution' },
+  { value: 'I’m a service provider in the data security area',
+    label: 'I’m a service provider in the data security area' },
+  { value: 'I’m currently providing competitor solutions and want a demo',
+    label: 'I’m currently providing competitor solutions and want a demo' },
+  { value: 'I’m a technology organization that wants to integrate the FileFlex Enterprise solution into my product offering',
+    label: 'I’m a technology organization that wants to integrate the FileFlex Enterprise solution into my product offering' },
+  { value: 'Other (please specify):',
+    label: 'Other (please specify):' },
+];
+
+const HS_PORTAL = '21348727';
+const HS_FORM = '7f266485-c9ed-4a4c-94fd-884177054240';
 ---
 
 <Layout
@@ -56,39 +72,190 @@ const bullets = [
       </ul>
     </aside>
 
-    <div class="pf-form" aria-label="Partner application form">
+    <div class="pf-form-wrap">
       <h2 id="pf-main-heading" class="pf-form__title">
         We Make Partner Program Certification Fast and Efficient
       </h2>
 
-      <div id="pf-hubspot-form" class="pf-form__embed"></div>
+      <form
+        id="pf-form"
+        class="pf-form"
+        novalidate
+        data-portal-id={HS_PORTAL}
+        data-form-id={HS_FORM}
+      >
+        <fieldset class="pf-fieldset pf-fieldset--radio">
+          <legend>Please choose one of the following <span class="pf-req" aria-hidden="true">*</span></legend>
+          {radioOptions.map((opt, i) => (
+            <label class="pf-radio">
+              <input
+                type="radio"
+                name="please_choose_one_of_the_following"
+                value={opt.value}
+                required={i === 0}
+              />
+              <span>{opt.label}</span>
+            </label>
+          ))}
+        </fieldset>
 
-      <noscript>
-        <p class="pf-form__noscript">
-          This form requires JavaScript. Please enable JavaScript or
-          <a href="/contact-us/">contact us</a> directly.
-        </p>
-      </noscript>
+        <div class="pf-grid pf-grid--2">
+          <div class="pf-field">
+            <label for="pf-firstname">First name <span class="pf-req" aria-hidden="true">*</span></label>
+            <input id="pf-firstname" name="firstname" type="text" autocomplete="given-name" required />
+          </div>
+          <div class="pf-field">
+            <label for="pf-lastname">Last name <span class="pf-req" aria-hidden="true">*</span></label>
+            <input id="pf-lastname" name="lastname" type="text" autocomplete="family-name" required />
+          </div>
+        </div>
+
+        <div class="pf-field">
+          <label for="pf-company">Company name <span class="pf-req" aria-hidden="true">*</span></label>
+          <input id="pf-company" name="company" type="text" autocomplete="organization" required />
+        </div>
+
+        <div class="pf-grid pf-grid--2">
+          <div class="pf-field">
+            <label for="pf-email">Email <span class="pf-req" aria-hidden="true">*</span></label>
+            <input id="pf-email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="pf-field">
+            <label for="pf-phone">Phone number <span class="pf-req" aria-hidden="true">*</span></label>
+            <input id="pf-phone" name="phone" type="tel" autocomplete="tel" minlength="7" maxlength="20" required />
+          </div>
+        </div>
+
+        <div class="pf-grid pf-grid--2">
+          <div class="pf-field">
+            <label for="pf-website">Website URL <span class="pf-req" aria-hidden="true">*</span></label>
+            <input id="pf-website" name="website" type="url" autocomplete="url" placeholder="https://" required />
+          </div>
+          <div class="pf-field">
+            <label for="pf-country">Country/Region <span class="pf-req" aria-hidden="true">*</span></label>
+            <input id="pf-country" name="country" type="text" autocomplete="country-name" required />
+          </div>
+        </div>
+
+        <div class="pf-field">
+          <label for="pf-endusers">How many end users do you support across all your service offerings? <span class="pf-req" aria-hidden="true">*</span></label>
+          <input id="pf-endusers" name="how_many_end_users_do_you_support_across_all_your_service_offerings_" type="number" min="0" step="1" required />
+        </div>
+
+        <div class="pf-field">
+          <label for="pf-offerings">List your security current offerings: <span class="pf-req" aria-hidden="true">*</span></label>
+          <textarea id="pf-offerings" name="list_your_security_current_offerings_" rows="4" required></textarea>
+        </div>
+
+        <div class="pf-consent">
+          <p>fileflex.com is committed to protecting and respecting your privacy, and we'll only use your personal information to administer your account and to provide the products and services you requested from us. From time to time, we would like to contact you about our products and services, as well as other content that may be of interest to you. If you consent to us contacting you for this purpose, please tick below to say how you would like us to contact you:</p>
+          <label class="pf-checkbox">
+            <input type="checkbox" id="pf-comm-consent" name="communicationConsent" value="true" />
+            <span>I agree to receive other communications from fileflex.com.</span>
+          </label>
+          <p class="pf-consent__fine">You can unsubscribe from these communications at any time. For more information on how to unsubscribe, our privacy practices, and how we are committed to protecting and respecting your privacy, please review our <a href="https://www.qnext.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+          <p class="pf-consent__fine">By clicking Submit below, you consent to allow fileflex.com to store and process the personal information submitted above to provide you the content requested.</p>
+        </div>
+
+        <div class="pf-actions">
+          <button type="submit" class="pf-submit">Submit</button>
+        </div>
+
+        <div id="pf-status" class="pf-status" role="status" aria-live="polite"></div>
+      </form>
     </div>
 
   </div>
 </section>
 
-<script type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js" is:inline></script>
 <script is:inline>
   (function () {
-    function mount() {
-      if (typeof window.hbspt === 'undefined' || !window.hbspt.forms) {
-        return setTimeout(mount, 100);
-      }
-      window.hbspt.forms.create({
-        portalId: '21348727',
-        formId: '7f266485-c9ed-4a4c-94fd-884177054240',
-        region: 'na1',
-        target: '#pf-hubspot-form',
-      });
+    var form = document.getElementById('pf-form');
+    if (!form) return;
+    var status = document.getElementById('pf-status');
+    var submitBtn = form.querySelector('.pf-submit');
+    var portalId = form.dataset.portalId;
+    var formId = form.dataset.formId;
+    var endpoint = 'https://api.hsforms.com/submissions/v3/integration/submit/' + portalId + '/' + formId;
+
+    function setStatus(msg, cls) {
+      status.textContent = msg;
+      status.className = 'pf-status pf-status--' + cls;
     }
-    mount();
+
+    function getHsCookie() {
+      var m = document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]+)/);
+      return m ? m[1] : '';
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      var fd = new FormData(form);
+      var fields = [];
+      var SKIP = { communicationConsent: 1 };
+      fd.forEach(function (value, name) {
+        if (SKIP[name]) return;
+        fields.push({ name: name, value: String(value) });
+      });
+
+      var commConsent = form.querySelector('#pf-comm-consent').checked;
+      var payload = {
+        submittedAt: Date.now(),
+        fields: fields,
+        context: {
+          pageUri: window.location.href,
+          pageName: document.title,
+          hutk: getHsCookie() || undefined,
+        },
+        legalConsentOptions: {
+          consent: {
+            consentToProcess: true,
+            text: 'By clicking Submit below, you consent to allow fileflex.com to store and process the personal information submitted above to provide you the content requested.',
+            communications: [{
+              value: commConsent,
+              subscriptionTypeId: 32387186,
+              text: 'I agree to receive other communications from fileflex.com.',
+            }],
+          },
+        },
+      };
+      if (!payload.context.hutk) delete payload.context.hutk;
+
+      submitBtn.disabled = true;
+      setStatus('Sending…', 'pending');
+
+      fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+        .then(function (r) {
+          return r.json().then(function (j) { return { ok: r.ok, status: r.status, body: j }; });
+        })
+        .then(function (res) {
+          if (res.ok) {
+            form.style.display = 'none';
+            setStatus('Thanks for submitting the Partner Application Form. Someone will contact you shortly.', 'ok');
+          } else {
+            var msg = 'Submission failed. Please review the form and try again.';
+            if (res.body && res.body.errors && res.body.errors.length) {
+              msg = res.body.errors.map(function (e) { return e.message || e.errorType; }).join(' ');
+            }
+            setStatus(msg, 'err');
+            submitBtn.disabled = false;
+          }
+        })
+        .catch(function () {
+          setStatus('Network error. Please try again or contact us directly.', 'err');
+          submitBtn.disabled = false;
+        });
+    });
   })();
 </script>
 
@@ -102,10 +269,7 @@ const bullets = [
     background: #0E1A2B;
     padding: 120px 7vw 56px;
   }
-  .pf-hero__inner {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  .pf-hero__inner { max-width: 1200px; margin: 0 auto; }
   .pf-hero__title {
     font-family: "Inter", sans-serif;
     color: #fff;
@@ -149,11 +313,7 @@ const bullets = [
     line-height: 1.2;
     margin: 0 0 24px;
   }
-  .pf-aside__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+  .pf-aside__list { list-style: none; padding: 0; margin: 0; }
   .pf-aside__list li {
     display: flex;
     align-items: flex-start;
@@ -164,14 +324,9 @@ const bullets = [
     line-height: 1.55;
     margin-bottom: 14px;
   }
-  .pf-check {
-    flex: 0 0 22px;
-    width: 22px;
-    height: 22px;
-    margin-top: 2px;
-  }
+  .pf-check { flex: 0 0 22px; width: 22px; height: 22px; margin-top: 2px; }
 
-  /* form panel */
+  /* form */
   .pf-form__title {
     font-family: "Inter", sans-serif;
     color: #0E1A2B;
@@ -181,31 +336,43 @@ const bullets = [
     line-height: 1.25;
     margin: 0 0 28px;
   }
-  .pf-form__embed {
-    min-height: 320px;
-  }
-  .pf-form__noscript {
-    font-family: "Inter", sans-serif;
-    color: #2a2f3a;
-    font-size: 15px;
-  }
+  .pf-form { font-family: "Inter", sans-serif; }
+  .pf-req { color: #b00020; margin-left: 2px; }
 
-  /* HubSpot form base styling — keep neutral, let HS supply layout */
-  .pf-form__embed :global(.hs-form-field) { margin-bottom: 14px; }
-  .pf-form__embed :global(label) {
-    display: block;
-    font-family: "Inter", sans-serif;
-    color: #0E1A2B;
+  .pf-fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0 0 22px;
+  }
+  .pf-fieldset legend {
     font-size: 14px;
     font-weight: 600;
+    color: #0E1A2B;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+  .pf-radio {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 6px 0;
+    color: #2a2f3a;
+    font-size: 15px;
+    line-height: 1.45;
+    cursor: pointer;
+  }
+  .pf-radio input { margin-top: 4px; accent-color: #e8590a; }
+
+  .pf-field { margin-bottom: 16px; }
+  .pf-field label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0E1A2B;
     margin-bottom: 6px;
   }
-  .pf-form__embed :global(input[type="text"]),
-  .pf-form__embed :global(input[type="email"]),
-  .pf-form__embed :global(input[type="tel"]),
-  .pf-form__embed :global(input[type="number"]),
-  .pf-form__embed :global(textarea),
-  .pf-form__embed :global(select) {
+  .pf-field input,
+  .pf-field textarea {
     width: 100%;
     box-sizing: border-box;
     padding: 10px 12px;
@@ -216,44 +383,70 @@ const bullets = [
     border: 1px solid #cfd4dc;
     border-radius: 3px;
   }
-  .pf-form__embed :global(input:focus),
-  .pf-form__embed :global(textarea:focus),
-  .pf-form__embed :global(select:focus) {
+  .pf-field textarea { resize: vertical; min-height: 110px; }
+  .pf-field input:focus,
+  .pf-field textarea:focus {
     outline: none;
     border-color: #e8590a;
     box-shadow: 0 0 0 2px rgba(232, 89, 10, 0.18);
   }
-  .pf-form__embed :global(.hs-button),
-  .pf-form__embed :global(input[type="submit"]) {
+  .pf-field input:invalid:not(:placeholder-shown) { border-color: #b00020; }
+
+  .pf-grid { display: grid; gap: 16px; }
+  .pf-grid--2 { grid-template-columns: 1fr 1fr; }
+
+  .pf-consent {
+    margin: 18px 0 8px;
+    padding: 16px;
+    background: #f6f8fb;
+    border-left: 3px solid #021372;
+    border-radius: 2px;
+  }
+  .pf-consent p {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #2a2f3a;
+    margin: 0 0 12px;
+  }
+  .pf-consent__fine { color: #4a5260 !important; font-size: 12.5px !important; }
+  .pf-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: #0E1A2B;
+    cursor: pointer;
+    margin: 6px 0 12px;
+  }
+  .pf-checkbox input { margin-top: 3px; accent-color: #e8590a; }
+  .pf-consent a { color: #021372; text-decoration: underline; }
+
+  .pf-actions { margin-top: 18px; }
+  .pf-submit {
     background: #e8590a;
     color: #fff;
     border: 0;
     border-radius: 3px;
-    padding: 12px 22px;
+    padding: 12px 28px;
     font-family: "Inter", sans-serif;
     font-size: 15px;
     font-weight: 700;
     cursor: pointer;
-    margin-top: 8px;
+    transition: background 0.15s ease;
   }
-  .pf-form__embed :global(.hs-button:hover),
-  .pf-form__embed :global(input[type="submit"]:hover) {
-    background: #c54a07;
-  }
-  .pf-form__embed :global(.hs-error-msgs) {
-    list-style: none;
-    padding: 0;
-    margin: 4px 0 0;
-    color: #b00020;
-    font-size: 13px;
-  }
-  .pf-form__embed :global(.hs-richtext),
-  .pf-form__embed :global(.hs-richtext p) {
-    font-family: "Inter", sans-serif;
-    color: #2a2f3a;
+  .pf-submit:hover:not(:disabled) { background: #c54a07; }
+  .pf-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  .pf-status {
+    margin-top: 16px;
+    padding: 12px 14px;
+    border-radius: 3px;
     font-size: 14px;
-    line-height: 1.6;
+    display: none;
   }
+  .pf-status--pending { display: block; background: #eef2fb; color: #021372; }
+  .pf-status--ok      { display: block; background: #e6f4ea; color: #1e6b34; border: 1px solid #b6dcc1; }
+  .pf-status--err     { display: block; background: #fdecea; color: #b00020; border: 1px solid #f5c2c0; }
 
   /* ============================================================
      RESPONSIVE
@@ -261,9 +454,7 @@ const bullets = [
   @media (max-width: 900px) {
     #pf-hero { padding: 100px 6vw 40px; }
     #pf-main { padding: 48px 6vw 64px; }
-    .pf-main__inner {
-      grid-template-columns: 1fr;
-      gap: 48px;
-    }
+    .pf-main__inner { grid-template-columns: 1fr; gap: 48px; }
+    .pf-grid--2 { grid-template-columns: 1fr; }
   }
 </style>
