@@ -157,6 +157,8 @@ const HS_FORM = '7f266485-c9ed-4a4c-94fd-884177054240';
           <p class="pf-consent__fine">By clicking Submit below, you consent to allow fileflex.com to store and process the personal information submitted above to provide you the content requested.</p>
         </div>
 
+        <div id="pf-recaptcha" class="pf-recaptcha"></div>
+
         <div class="pf-actions">
           <button type="submit" class="pf-submit">Submit</button>
         </div>
@@ -168,52 +170,85 @@ const HS_FORM = '7f266485-c9ed-4a4c-94fd-884177054240';
   </div>
 </section>
 
+<script is:inline src="https://www.google.com/recaptcha/api.js?onload=pfOnRecaptchaLoad&render=explicit" async defer></script>
 <script is:inline>
   (function () {
+    var RECAPTCHA_SITE_KEY = '6Lewn1AsAAAAAFK5txfiwVScHASHFDoR0eIZ99Vh'; // HubSpot's shared v2-invisible key
     var form = document.getElementById('pf-form');
     if (!form) return;
     var status = document.getElementById('pf-status');
     var submitBtn = form.querySelector('.pf-submit');
     var portalId = form.dataset.portalId;
     var formId = form.dataset.formId;
-    var endpoint = 'https://api.hsforms.com/submissions/v3/integration/submit/' + portalId + '/' + formId;
+    var endpoint = 'https://forms.hsforms.com/submissions/v3/public/submit/formsnext/multipart/' + portalId + '/' + formId;
+    var widgetId = null;
 
     function setStatus(msg, cls) {
       status.textContent = msg;
       status.className = 'pf-status pf-status--' + cls;
     }
-
     function getHsCookie() {
       var m = document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]+)/);
       return m ? m[1] : '';
     }
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
+    // reCAPTCHA load callback (global)
+    window.pfOnRecaptchaLoad = function () {
+      try {
+        widgetId = window.grecaptcha.render('pf-recaptcha', {
+          sitekey: RECAPTCHA_SITE_KEY,
+          size: 'invisible',
+          badge: 'inline',
+          callback: onCaptchaSuccess,
+          'error-callback': onCaptchaError,
+          'expired-callback': onCaptchaError,
+        });
+      } catch (err) {
+        setStatus('Captcha failed to initialize: ' + (err && err.message ? err.message : 'unknown error'), 'err');
       }
+    };
 
-      var fd = new FormData(form);
+    function onCaptchaError() {
+      setStatus('Captcha verification failed. Please try again.', 'err');
+      submitBtn.disabled = false;
+      if (widgetId !== null && window.grecaptcha) window.grecaptcha.reset(widgetId);
+    }
+
+    function onCaptchaSuccess(token) {
+      submitToHubspot(token);
+    }
+
+    function buildPayload(token) {
       var fields = [];
       var SKIP = { communicationConsent: 1 };
+      var fd = new FormData(form);
       fd.forEach(function (value, name) {
         if (SKIP[name]) return;
-        fields.push({ name: name, value: String(value) });
+        fields.push({ name: name, value: String(value), objectTypeId: '0-1' });
       });
 
       var commConsent = form.querySelector('#pf-comm-consent').checked;
-      var payload = {
-        submittedAt: Date.now(),
-        fields: fields,
-        context: {
-          pageUri: window.location.href,
-          pageName: document.title,
-          hutk: getHsCookie() || undefined,
-        },
-        legalConsentOptions: {
+      var hutk = getHsCookie();
+
+      var hsContext = {
+        formId: formId,
+        portalId: Number(portalId),
+        pageUrl: window.location.href,
+        pageName: document.title,
+        pageId: '',
+        embedAtTimestamp: String(Date.now()),
+        formTarget: '#pf-form',
+        rumScriptExecuteTime: 0,
+        rumServiceResponseTime: 0,
+        rumFormRenderTime: 0,
+        renderRawHtml: 'true',
+        userAgent: navigator.userAgent,
+        pageTitle: document.title,
+        source: 'forms-embed-1.0',
+        sourceName: 'forms-embed',
+        sourceVersion: '1.0',
+        timestamp: Date.now(),
+        legalConsentOptions: JSON.stringify({
           consent: {
             consentToProcess: true,
             text: 'By clicking Submit below, you consent to allow fileflex.com to store and process the personal information submitted above to provide you the content requested.',
@@ -223,20 +258,37 @@ const HS_FORM = '7f266485-c9ed-4a4c-94fd-884177054240';
               text: 'I agree to receive other communications from fileflex.com.',
             }],
           },
-        },
+        }),
       };
-      if (!payload.context.hutk) delete payload.context.hutk;
+      if (hutk) hsContext.hutk = hutk;
 
-      submitBtn.disabled = true;
+      return {
+        fields: fields,
+        hsContext: hsContext,
+        captchaToken: token,
+      };
+    }
+
+    function submitToHubspot(token) {
+      var payload = buildPayload(token);
+
+      var fd = new FormData();
+      // each field as JSON-encoded value per multipart contract
+      payload.fields.forEach(function (f) {
+        fd.append(f.name, f.value);
+      });
+      fd.append('hs_context', JSON.stringify(payload.hsContext));
+      fd.append('g-recaptcha-response', token);
+
       setStatus('Sending…', 'pending');
 
-      fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      })
+      fetch(endpoint, { method: 'POST', body: fd })
         .then(function (r) {
-          return r.json().then(function (j) { return { ok: r.ok, status: r.status, body: j }; });
+          return r.text().then(function (t) {
+            var body;
+            try { body = JSON.parse(t); } catch (_) { body = { raw: t }; }
+            return { ok: r.ok, status: r.status, body: body };
+          });
         })
         .then(function (res) {
           if (res.ok) {
@@ -246,15 +298,32 @@ const HS_FORM = '7f266485-c9ed-4a4c-94fd-884177054240';
             var msg = 'Submission failed. Please review the form and try again.';
             if (res.body && res.body.errors && res.body.errors.length) {
               msg = res.body.errors.map(function (e) { return e.message || e.errorType; }).join(' ');
+            } else if (res.body && res.body.message) {
+              msg = res.body.message;
             }
-            setStatus(msg, 'err');
+            setStatus(msg + ' (HTTP ' + res.status + ')', 'err');
             submitBtn.disabled = false;
+            if (widgetId !== null && window.grecaptcha) window.grecaptcha.reset(widgetId);
           }
         })
-        .catch(function () {
-          setStatus('Network error. Please try again or contact us directly.', 'err');
+        .catch(function (err) {
+          setStatus('Network error: ' + (err && err.message ? err.message : 'unknown'), 'err');
           submitBtn.disabled = false;
+          if (widgetId !== null && window.grecaptcha) window.grecaptcha.reset(widgetId);
         });
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      if (widgetId === null || !window.grecaptcha) {
+        setStatus('Captcha is still loading — please try again in a moment.', 'err');
+        return;
+      }
+      submitBtn.disabled = true;
+      setStatus('Verifying…', 'pending');
+      window.grecaptcha.reset(widgetId);
+      window.grecaptcha.execute(widgetId);
     });
   })();
 </script>
@@ -420,6 +489,9 @@ const HS_FORM = '7f266485-c9ed-4a4c-94fd-884177054240';
   }
   .pf-checkbox input { margin-top: 3px; accent-color: #e8590a; }
   .pf-consent a { color: #021372; text-decoration: underline; }
+
+  .pf-recaptcha { margin: 14px 0 4px; min-height: 0; }
+  .pf-recaptcha :global(.grecaptcha-badge) { box-shadow: 0 1px 4px rgba(0,0,0,0.08) !important; }
 
   .pf-actions { margin-top: 18px; }
   .pf-submit {
