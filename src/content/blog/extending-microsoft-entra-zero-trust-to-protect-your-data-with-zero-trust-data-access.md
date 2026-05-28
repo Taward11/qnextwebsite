@@ -54,7 +54,7 @@ tables:
 ---
 
 ## Introduction: Closing the Data Gap in Your Microsoft Entra Strategy
-![Over 800,000 organizations rely on Microsoft Entra for identity and access management\*](/images/blog/extending-microsoft-entra-zero-trust-to-protect-your-data-with-zero-trust-data-access/Microsoft-Entra-Infographic.webp) As organizations adopt Microsoft Entra and Microsoft Active Directory to secure identities, applications, and networks, they gain robust Zero Trust controls for authentication and access—but a critical gap remains: the data itself. While Entra and Active Directory protect who can log in and what apps or network resources they can reach, they don’t fully govern how users interact with files and folders once inside the system. FileFlex Zero Trust Data Access (ZTDA) fills this gap by extending Zero Trust principles to the data layer, providing continuous, granular control, monitoring, and auditability across both Microsoft and non-Microsoft storage environments. This ensures that sensitive information is protected from insider threats, compromised accounts, ransomware, and unauthorized sharing—without disrupting existing infrastructure.  
+![Over 800,000 organizations rely on Microsoft Entra for identity and access management\*](/images/blog/extending-microsoft-entra-zero-trust-to-protect-your-data-with-zero-trust-data-access/Microsoft-Entra-Infographic.webp) As organizations adopt Microsoft Entra and Microsoft Active Directory to secure identities, applications, and networks, they gain robust Zero Trust controls for authentication and access—but a critical gap remains: the data itself. While Entra and Active Directory protect who can log in and what apps or network resources they can reach, they don’t fully govern how users interact with files and folders once inside the system. FileFlex [Zero Trust Data Access](/challenge/) (ZTDA) fills this gap by extending Zero Trust principles to the data layer, providing continuous, granular control, monitoring, and auditability across both Microsoft and non-Microsoft storage environments. This ensures that sensitive information is protected from insider threats, compromised accounts, ransomware, and unauthorized sharing—without disrupting existing infrastructure.  
 
 ## What is Microsoft Entra?
 Microsoft Entra is a family of Microsoft identity and network access products built to support a Zero Trust security model, ensuring every access request is verified before granting entry to resources. At its core is Microsoft Entra ID (formerly Azure Active Directory), the cloud-based identity and access management service that provides authentication, single sign-on (SSO), conditional access, identity protection, and device sign-in. Other key offerings include Entra Domain Services for managed LDAP/Kerberos in the cloud, Entra External ID for customer and partner access, and Entra Workload ID for securing non-human identities like apps and services.
@@ -66,7 +66,7 @@ Microsoft Entra unifies identity, application, and network access security in a 
 ## What is the Difference Between Microsoft Entra and Active Directory?
 Active Directory (AD) is Microsoft’s long-standing, on-premises directory service, launched in 2000 to centrally authenticate and authorize users, groups, and devices within a corporate network. It runs on domain controllers inside the network, uses protocols like Kerberos and LDAP, integrates tightly with Windows servers and file shares, and is ideal for devices joined to the domain and connected via LAN or VPN.
 
-Microsoft Entra—specifically Entra ID (formerly Azure Active Directory)—is the cloud-based evolution, built for modern, hybrid, and cloud-only environments. It delivers identity management, Single Sign-On (SSO) to thousands of SaaS apps, and Zero Trust security features like MFA, Conditional Access, and risk-based sign-ins, all without a VPN. While on-prem AD excels at managing local resources, Entra ID secures access to cloud services and remote devices, and the two often work together in hybrid identity setups, syncing accounts to cover both legacy on-prem and modern cloud needs.
+Microsoft Entra—specifically Entra ID (formerly Azure Active Directory)—is the cloud-based evolution, built for modern, hybrid, and cloud-only environments. It delivers identity management, Single Sign-On (SSO) to thousands of SaaS apps, and Zero Trust [security features](/security/) like MFA, Conditional Access, and risk-based sign-ins, all without a VPN. While on-prem AD excels at managing local resources, Entra ID secures access to cloud services and remote devices, and the two often work together in hybrid identity setups, syncing accounts to cover both legacy on-prem and modern cloud needs.
 
 ## Why Organizations Need Both Microsoft Entra Zero Trust and Active Directory
 Microsoft Entra ID doesn’t directly manage or grant access to traditional on-premises file shares; instead, it can integrate with on-prem Active Directory via Entra Connect so that the same user identities and credentials work for both cloud services and local resources. In this hybrid setup, AD continues to handle authentication and permissions for file shares inside the corporate network, while Entra ID extends those identities to the cloud for SaaS apps, remote access, and modern security controls.  
@@ -115,7 +115,7 @@ Here are the top reasons an organization needs to add FileFlex Zero Trust Data A
     - FileFlex adds continuous monitoring, anomaly detection, and granular sharing controls to Entra, mitigating ransomware spread and blocking unauthorized data transfers even within authorized sessions.
 
 5.  ### **Provides Better Audit, Compliance, and Governance**
-    - FileFlex provides full audit trails and real-time visibility into every file interaction, giving Entra the compliance evidence needed for GDPR, HIPAA, financial and other regulations.
+    - FileFlex provides full audit trails and real-time visibility into every file interaction, giving Entra the compliance evidence needed for [GDPR](/gdpr-compliance/), [HIPAA](/hipaa-compliance/), financial and other regulations.
 
 6.  ### **Complements a Microsoft Ecosystem Without Disrupting It**
     - FileFlex extends Entra’s Zero Trust controls to both Microsoft and non-Microsoft storage, enabling unified security without replacing existing systems.
@@ -130,3 +130,14 @@ For more information on using FileFlex to complement a Microsoft ecosystem see [
 \*[Microsoft](https://techcommunity.microsoft.com/blog/extending-microsoft-entra-zero-trust-to-protect-your-data-with-zero-trust-data-access/introducing-microsoft-entra-license-utilization-insights/3796393?utm_source=chatgpt.com)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [SharePoint Under Siege: Why Zero Trust Access Is Now Critical](/blog/sharepoint-zero-trust-security-and-defending-against-zero-day-vulnerabilities/)
+- [Extending Microsoft Fabric with Zero Trust Data Access for Unstructured Data](/blog/extending-microsoft-fabric-with-zero-trust-data-access-for-unstructured-data/)
+- [Why Microsoft-Centric Security Isn't Enough: The Case for Zero Trust Data Access](/blog/why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access/)
+- [Why ZTNA Combined with ZTDA Could Have Prevented the Tesla Breach](/blog/why-zero-trust-network-access-combined-with-zero-trust-data-access-could-have-prevented-the-tesla-breach/)

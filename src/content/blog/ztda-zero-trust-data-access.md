@@ -46,7 +46,7 @@ The concept of a Zero Trust (ZT) cybersecurity architecture has been around for 
 The principles of Zero Trust are simple. Never trust, always verify. In practice, that means each user must be verified before access is granted to any resource. Every request from every user, inside or outside of your perimeter security must be authenticated, authorized and encrypted, in real time.
 
 ### ZTDA – A Zero Trust Data Access Solution
-FileFlex Enterprise, a Zero Trust Data Access (ZTDA) platform, provides secure sharing of confidential files within the app itself via secure encrypted channels, instead of sharing files via vulnerable email attachments or syncing and duplicating in the cloud, which increases the attack surface area.  Authentication and authorization are strictly enforced before access and sharing are allowed, and access is granted on a per-session basis.
+[FileFlex Enterprise](/platform/), a [Zero Trust Data Access](/challenge/) (ZTDA) platform, provides secure sharing of confidential files within the app itself via secure encrypted channels, instead of sharing files via vulnerable email attachments or syncing and duplicating in the cloud, which increases the attack surface area.  Authentication and authorization are strictly enforced before access and sharing are allowed, and access is granted on a per-session basis.
 
 Attachments, which clearly create a risk area, are a fundamental way for hackers to infiltrate a system, but through FileFlex Enterprise, IT controls sharing permissions and user permissions overall storage locations even to file level granularity. The administrative console includes a view of all activities of all users that can be monitored in real-time or exported to security incident event management software.
 
@@ -68,3 +68,14 @@ Zero Trust not only delivers significant security improvements but also reduces 
 Given what is going at the moment with the Microsoft Exchange Server hacking debacle and other incidents, what is clear is that now is the time to explore, expand and accelerate Zero Trust initiatives.  For more reading on zero trust and zero trust data access see “[How to Meet NIST Guidelines for Zero Trust for Remote Data Access](/blog/nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access/)“, “[Why Zero Trust and Why Now?](/blog/why-zero-trust-and-why-now/)“, and “[How to Protect Your Data With Zero Trust Data Access](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)“.
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [How to Protect Your Data with Zero Trust Data Access (ZTDA)](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)
+- [Implement Zero Trust Security, Avoid This Nightmare](/blog/implement-zero-trust-security-avoid-this-nightmare-a-true-account/)
+- [Proposed ZTDA Action Plan for Enterprise](/blog/proposed-ztda-action-plan-for-enterprise/)
+- [Ransomware + Unstructured Data = Double Trouble](/blog/ransomware-unstructured-data-double-trouble/)

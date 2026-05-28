@@ -92,7 +92,7 @@ Analysis of data is producing quality and impact faster than ever before, and en
 
 For these reasons, defenders must reconsider priorities and how to achieve the objectives of protecting the perimeters, but more so, the data that is the lifeblood of most, if not all, organizations today.
 
-FileFlex Enterprise is uniquely positioned to protect the unstructured part of data with clean integration into existing monitoring controls, as it introduces a unique data access to unstructured data elements using zero-trust concepts that are decades old, proven in military systems, and now brought up to the commercial space using intuitive interfaces and rock-solid technology and encryption.
+[FileFlex Enterprise](/platform/) is uniquely positioned to protect the unstructured part of data with clean integration into existing monitoring controls, as it introduces a unique data access to unstructured data elements using zero-trust concepts that are decades old, proven in military systems, and now brought up to the commercial space using intuitive interfaces and rock-solid technology and encryption.
 
 However, the important element that must be highlighted is that the FileFlex Enterprise capability is completely incompatible with any threat actor attack chains and, most importantly, existing skillsets, and there is always something to be said about not being the lowest hanging fruit.
 
@@ -103,3 +103,14 @@ For further reading see [Why Data Exfiltration Defines Modern Breaches](/blog/ai
 ---
 
 \* Source: [CompareCheap SSL — Ransomware &amp; Malware Statistics: Global Threat Trends](https://comparecheapssl.com/ransomware-malware-statistics-global-threat-trends-cybersecurity-insights)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Cyber Defense After the GoAnywhere and MOVEit Breaches](/blog/fortifying-cyber-defense-via-zero-trust-data-access-the-recent-goanywhere-and-moveit-ransomware-breaches/)
+- [How to Reduce Ransomware Risk Using Zero Trust Data Access](/blog/the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk/)
+- [How to Reduce the Risk of Ransomware with Zero Trust](/blog/how-to-reduce-the-risk-of-ransomware-with-zero-trust/)
+- [Why Microsoft-Centric Security Isn't Enough: The Case for Zero Trust Data Access](/blog/why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access/)

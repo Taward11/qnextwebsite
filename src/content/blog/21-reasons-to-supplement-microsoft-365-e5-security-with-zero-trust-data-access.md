@@ -21,12 +21,12 @@ toc: true
 ## What is Microsoft 365 E5?
 ![Microsoft 365 E5 Security](/images/blog/21-reasons-to-supplement-microsoft-365-e5-security-with-zero-trust-data-access/Microsoft-365-e5-infographic.webp) Microsoft thoroughly understands how to create bundles of products to build market advantage and to this end, Microsoft 365 E5 is one of the most feature-rich and advanced suites in the Microsoft 365 lineup.  It includes the full Microsoft 365 suite of productivity applications plus Teams, SharePoint and OneDrive and combines them with advanced security, compliance, voice, and analytical capabilities.  These include security and compliance products for threat protection, threat intelligence, data loss prevention, and identity and access management, cloud app security, eDiscovery and compliance tools, business intelligence tools, workflow automation tools, cloud-based telephony and other advanced features.  
   
-Microsoft 365 E5 security for remote and external users is greatly enhanced when Zero Trust Data Access (ZTDA) functionality and security are tied in and used to add value to this Microsoft ecosystem.
+Microsoft 365 E5 security for remote and external users is greatly enhanced when [Zero Trust Data Access](/challenge/) (ZTDA) functionality and security are tied in and used to add value to this Microsoft ecosystem.
 
 Adding Zero Trust data access capabilities to Microsoft 365 E5 security can be beneficial for organizations seeking to enhance their security posture for remote and external users and address evolving cybersecurity challenges.
 
 ## What is Zero Trust Data Access?
-Zero Trust Data Access (ZTDA) as implemented by FileFlex Enterprise, is a technology that provides secure access to files and folders for authorized users through a zero-trust architecture. This architecture uses a server that verifies users and specific permissions for that user then via a connector agent sends the requested files to that user much like the way a bank teller is used in a bank.  The fundamental principle of Zero Trust Data Access is that access to data should be granted only on a need-to-know basis, and every access request should be authenticated and authorized against policy before granting access. Under the Zero Trust Data Access model, every data access request is verified against a set of rules that dictate what data can be accessed, and by whom.
+Zero Trust Data Access (ZTDA) as implemented by [FileFlex Enterprise](/platform/), is a technology that provides secure access to files and folders for authorized users through a zero-trust architecture. This architecture uses a server that verifies users and specific permissions for that user then via a connector agent sends the requested files to that user much like the way a bank teller is used in a bank.  The fundamental principle of Zero Trust Data Access is that access to data should be granted only on a need-to-know basis, and every access request should be authenticated and authorized against policy before granting access. Under the Zero Trust Data Access model, every data access request is verified against a set of rules that dictate what data can be accessed, and by whom.
 
 A zero trust data access architecture is designed to:
 
@@ -50,7 +50,7 @@ Here are 21 reasons why an organization might want to incorporate Zero Trust pri
     -   By limiting access to sensitive data, monitoring user activity, and restricting lateral movement, ZTDA can help prevent ransomware attacks and minimize their impact on data integrity.
 3.  ### **Superior Regulatory Compliance:**
     
-    -   ZTDA facilitates compliance with data privacy regulations like HIPAA, GDPR, CIRCI, CMMC, ISO 27001, and ENISA, ensuring that only authorized users can access sensitive data.
+    -   ZTDA facilitates compliance with data privacy regulations like [HIPAA](/hipaa-compliance/), [GDPR](/gdpr-compliance/), CIRCI, CMMC, ISO 27001, and ENISA, ensuring that only authorized users can access sensitive data.
 4.  ### **Exceptional Insider Threat Mitigation:**
     
     -   ZTDA effectively reduces insider threats, such as unauthorized access by employees or contractors, by strictly controlling access based on user roles and responsibilities, preventing lateral movement and keeping infrastructure dark to users.
@@ -123,3 +123,14 @@ For more reading about using zero trust data access in a Microsoft ecosystem see
 \* [Statistica](https://www.statista.com/statistics/983321/worldwide-office-365-user-numbers-by-country/), [SignHouse](https://www.usesignhouse.com/blog/microsoft-365-suite-stats)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [19 Reasons Why ZTDA Is an Essential SharePoint Add-in](/blog/19-reasons-why-zero-trust-data-access-is-an-essential-sharepoint-add-in/)
+- [Leveraging Zero Trust Data Access in a Microsoft Ecosystem](/blog/accelerating-digital-transformation-leveraging-zero-trust-data-access-in-a-microsoft-ecosystem/)
+- [SharePoint Under Siege: Why Zero Trust Access Is Now Critical](/blog/sharepoint-zero-trust-security-and-defending-against-zero-day-vulnerabilities/)
+- [Extending Microsoft Fabric with Zero Trust Data Access for Unstructured Data](/blog/extending-microsoft-fabric-with-zero-trust-data-access-for-unstructured-data/)

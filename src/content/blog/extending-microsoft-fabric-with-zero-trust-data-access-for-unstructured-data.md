@@ -50,7 +50,7 @@ tables:
 ---
 
 ## Introduction: Why Microsoft Fabric Needs Zero Trust Data Access
-![67% of Fortune 500 companies and 25,000 organizations worldwide are already using Microsoft Fabric, with 84% of users leveraging three or more workloads\*](/images/blog/extending-microsoft-fabric-with-zero-trust-data-access-for-unstructured-data/MS-Fabric-infographic.webp) Microsoft Fabric unifies structured data analytics across Power BI, Synapse, and Data Factory, but it doesn’t fully address the security and governance challenges of unstructured data and hybrid environments. That’s where Zero Trust Data Access (ZTDA) from FileFlex Enterprise comes in—extending granular, identity-based access controls, real-time telemetry, and policy enforcement to unstructured data stored on a hybrid infrastructure. This blog explores how FileFlex enhances Microsoft Fabric with Zero Trust principles to close security gaps, reduce risk, and support true end-to-end data governance.
+![67% of Fortune 500 companies and 25,000 organizations worldwide are already using Microsoft Fabric, with 84% of users leveraging three or more workloads\*](/images/blog/extending-microsoft-fabric-with-zero-trust-data-access-for-unstructured-data/MS-Fabric-infographic.webp) Microsoft Fabric unifies structured data analytics across Power BI, Synapse, and Data Factory, but it doesn’t fully address the security and governance challenges of unstructured data and hybrid environments. That’s where [Zero Trust Data Access](/challenge/) (ZTDA) from [FileFlex Enterprise](/platform/) comes in—extending granular, identity-based access controls, real-time telemetry, and policy enforcement to unstructured data stored on a hybrid infrastructure. This blog explores how FileFlex enhances Microsoft Fabric with Zero Trust principles to close security gaps, reduce risk, and support true end-to-end data governance.
 
 ## What is Microsoft Fabric?
 Microsoft Fabric is an all-in-one analytics platform designed to unify data movement, data engineering, data science, real-time analytics, and business intelligence (BI) under a single, integrated SaaS offering. It was announced in 2023 and builds on Microsoft’s existing ecosystem, especially Power BI, Azure Synapse Analytics, and Azure Data Factory.
@@ -125,7 +125,7 @@ Here’s how FileFlex Zero Trust Data Access complements Microsoft Fabric for en
     - Microsoft Fabric’s strength in data consolidation can inadvertently lead to storage bloat and migration overhead when enterprises are required to replicate data into OneLake. FileFlex addresses this issue by enabling secure, in-place collaboration and sharing of data directly from its original locations—whether in the cloud or on-premises. This avoids unnecessary duplication or migration, significantly reducing storage costs and lowering compliance risk.
 
 5.  ### **Enables Smart City, Financial, and Government Use Cases**
-    - In sectors like smart cities, financial services, and government—where FileFlex is seeing growing adoption—the combination of Microsoft Fabric’s capabilities to ingest, model, and visualize data with FileFlex’s ability to secure and federate access to raw unstructured data creates a powerful, end-to-end digital governance solution. This integrated approach supports complex regulatory, operational, and data sovereignty requirements while enabling secure, data-driven innovation across domains.
+    - In sectors like smart cities, [financial services](/financial-services/), and government—where FileFlex is seeing growing adoption—the combination of Microsoft Fabric’s capabilities to ingest, model, and visualize data with FileFlex’s ability to secure and federate access to raw unstructured data creates a powerful, end-to-end digital governance solution. This integrated approach supports complex regulatory, operational, and data sovereignty requirements while enabling secure, data-driven innovation across domains.
 
 ## Summary of Combined Differentiation
 <!-- table:table2 -->
@@ -138,3 +138,14 @@ For further reading see [What is Zero Trust Data Access (ZTDA)?](/blog/what-is-z
 \*[Microsoft](https://www.microsoft.com/en-us/microsoft-fabric/blog/11/15/prepare-your-data-for-ai-innovation-with-microsoft-fabric-now-generally-available/?utm_source=chatgpt.com)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Extending Microsoft Entra Zero Trust to Protect Your Data with Zero Trust Data Access](/blog/extending-microsoft-entra-zero-trust-to-protect-your-data-with-zero-trust-data-access/)
+- [Why Microsoft-Centric Security Isn't Enough: The Case for Zero Trust Data Access](/blog/why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access/)
+- [19 Reasons Why ZTDA Is an Essential SharePoint Add-in](/blog/19-reasons-why-zero-trust-data-access-is-an-essential-sharepoint-add-in/)
+- [22 Reasons to Supplement Microsoft 365 E5 Security with ZTDA](/blog/21-reasons-to-supplement-microsoft-365-e5-security-with-zero-trust-data-access/)

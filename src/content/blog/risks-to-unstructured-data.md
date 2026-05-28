@@ -33,7 +33,7 @@ The consequences of weak control over unstructured data are as follows:
 
 #### _User Privacy Deficiencies_
 
--   The privacy implications of unmanaged data results in non-compliance with standards such as the General Data Protection Regulation (GDPR), which requires fine-grained management of personal data.
+-   The privacy implications of unmanaged data results in non-compliance with standards such as the General Data Protection Regulation ([GDPR](/gdpr-compliance/)), which requires fine-grained management of personal data.
 
 #### _Increased Data Theft_
 
@@ -64,10 +64,21 @@ Unstructured data includes sensitive information in emails, messaging applicatio
 
 CISOs, IT leaders, and data owners must understand effective data risk management’s roles, responsibilities, and outcomes. Traditional data management has shifted from manually gathering information and creating reports to ensuring continual governance, oversight, and risk reduction. Forward-thinking security leaders leverage automated data risk management solutions to provide comprehensive coverage to identify, quantify, and control unstructured data to ensure compliance and confidence when protecting sensitive information.
 
-This article is the second in a series of 5 from TAG Cyber on Understanding Zero Trust Data Access.
+This article is the second in a series of 5 from TAG Cyber on Understanding [Zero Trust Data Access](/challenge/).
 
 In Article 1, TAG Cyber CEO  Dr. Edward Amoroso examines “[How To Securely Share Data](/blog/how-to-securely-share-data/)?”.  In Article 3, TAG Cyber’s Dr. Edward Amoroso expands on this theme to outline [zero trust access methods](/blog/zero-trust-data-access-methods/) and how zero trust data access might work at the file and folder level for customers. Article 4  provides an overview of their [commercial platform for zero trust data access](/blog/the-fileflex-enterprise-commercial-platform-for-zero-trust-data-access/). Article 5 from TAG Cyber’ proposes an a[ction plan for enterprises](/blog/proposed-ztda-action-plan-for-enterprise/) in this area.
 
 Copyright © 2022 TAG Cyber LLC
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [How to Protect Your Data with Zero Trust Data Access (ZTDA)](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)
+- [Implement Zero Trust Security, Avoid This Nightmare](/blog/implement-zero-trust-security-avoid-this-nightmare-a-true-account/)
+- [Proposed ZTDA Action Plan for Enterprise](/blog/proposed-ztda-action-plan-for-enterprise/)
+- [Ransomware + Unstructured Data = Double Trouble](/blog/ransomware-unstructured-data-double-trouble/)

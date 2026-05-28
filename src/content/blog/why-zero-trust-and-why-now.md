@@ -40,14 +40,14 @@ Nearly 40% of organizations adopting Zero Trust have accelerated their efforts b
 ## Zero Trust Implementation
 In reality, Zero Trust is a new IT journey. The most effective strategy is to roll out ZT in stages so that IT and cybersecurity teams, as well as users, gain knowledge and experience. The three key pillars can be identified as the following:
 
-1.  Zero Trust Data Access.
+1.  [Zero Trust Data Access](/challenge/).
 2.  Zero Trust Network Access.
 3.  Zero Trust Application Access.
 
 ### Getting Started
 Many organizations start with specific applications, data assets, or classes of users. They want to protect their most vulnerable assets – their data and their users. For example, with more people working remotely, users with the most widespread access privileges may be vulnerable to additional risks from unsecured home networks and devices that may be used for both business and personal applications.
 
-Another critical factor in implementing Zero Trust is the ability to leverage existing solutions to make the transition more seamless and less costly. Qnext in particular has been a leader in leveraging ZT capabilities across its solution – FileFlex Enterprise. This new product is set to simplify secure Zero Trust Data Access across corporate hybrid infrastructures. FileFlex Enterprise does this by providing an end-to-end Zero Trust security model for seamless data access, sharing, and collaboration.
+Another critical factor in implementing Zero Trust is the ability to leverage existing solutions to make the transition more seamless and less costly. Qnext in particular has been a leader in leveraging ZT capabilities across its solution – [FileFlex Enterprise](/platform/). This new product is set to simplify secure Zero Trust Data Access across corporate hybrid infrastructures. FileFlex Enterprise does this by providing an end-to-end Zero Trust security model for seamless data access, sharing, and collaboration.
 
 ## FileFlex Enterprise Accelerates Zero Trust Deployments
 In real-world use cases, an end-to-end security strategy using Zero Trust Data Access technologies like FileFlex Enterprise has enabled customers across the globe to simplify and streamline deployments and empower their remote workforces.
@@ -71,3 +71,14 @@ Fortunately, the path to Zero Trust is much easier than ever. With the FileFlex 
 For more information on how your organization can adopt Zero Trust, please visit [www.fileflex.com](http://www.fileflex.com) or check out [How to Protect Your Data with Zero Trust Data Access](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/) and find out where you are in your journey of identity, devices, apps, infrastructure, and data security and what the best next step is to establish a trust-based access strategy.
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [How to Enable Your Remote Workforce with Zero Trust-By-Design](/blog/enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn/)
+- [How to Protect Your Data with Zero Trust Data Access (ZTDA)](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)
+- [How Zero Trust Security Casts a Wide Net on Spear-Phishers](/blog/how-zero-trust-security-promises-to-cast-a-wide-net-on-spear-phishers/)
+- [Implement Zero Trust Security, Avoid This Nightmare](/blog/implement-zero-trust-security-avoid-this-nightmare-a-true-account/)

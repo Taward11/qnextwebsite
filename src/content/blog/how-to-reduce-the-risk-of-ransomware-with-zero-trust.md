@@ -29,11 +29,11 @@ Ransomware is a devastating and yet one of the simplest forms of cyber-attacks o
 
 If a business has 50 employees, then a threat actor has 50 possible points of entry. Hence, it should be clear that if the risk associated with user compromise is reduced or mitigated so is the risk associated with a ransomware attack from that specific vector. Read on to discover how FileFlex helps your organization to manage these risks and introduced a new paradigm for managing unstructured data.
 
-FileFlex Enterprise is a system that changes user behavior by making file access and sharing simpler so that deployment and adoption are rapid. As Einstein said, the definition of insanity is doing the same thing and expecting different results. With FileFlex your organization will change for the better a key function while reducing the risk associated with ransomware.
+[FileFlex Enterprise](/platform/) is a system that changes user behavior by making file access and sharing simpler so that deployment and adoption are rapid. As Einstein said, the definition of insanity is doing the same thing and expecting different results. With FileFlex your organization will change for the better a key function while reducing the risk associated with ransomware.
 
 Early detection and response are the keys to reducing the impact of cyber-attacks. Hence, it is critical that ransomware attacks are mitigated early on as ransomware can cost organizations millions of dollars and it can require hundreds of hours to rebuild devices and restore data that have been affected by an attack.
 
-Fortify your network from cyber security threats by using FileFlex Enterprise for a complete ZTDA (Zero Trust Data Access) solution that solves the equation on how to best securely manage a company’s unstructured data and protect that data from cyber threats such as ransomware attacks.
+Fortify your network from cyber security threats by using FileFlex Enterprise for a complete ZTDA ([Zero Trust Data Access](/challenge/)) solution that solves the equation on how to best securely manage a company’s unstructured data and protect that data from cyber threats such as ransomware attacks.
 
 As previously noted, organizations fall victim to ransomware infections via several different methods or attack vectors.  The top attack vectors are spear-phishing, compromised credentials, supply-chain vulnerabilities, and man-in-the-middle vulnerabilities. This blog will discuss how FileFlex Enterprise reduces your risk and vulnerability to these top methods of attack with additional security protocols and features for an organization’s devices, users and groups.
 
@@ -101,8 +101,19 @@ Unlike competitive solutions, FileFlex Enterprise thus gives access to informati
 When the secure data channel is established via the token exchange, it can only be established outbound and only to the FileFlex Enterprise server that the connector knows the address to. All inbound requests are refused and data can only be sent to one pre-determined address – that of the FileFlex Enterprise server. This protects against direct access to the storage infrastructure via man-in-the-middle to also reduce the risk of ransomware.
 
 ### How to Reduce the Risk of Ransomware with FileFlex Enterprise – Summary
-FileFlex Enterprise uses a zero trust architecture and various security features that reduce the risk of ransomware from spear-phishing, compromised credentials, zero-day vulnerabilities, supply-chain vulnerabilities, and man-in-the-middle vulnerabilities.  It’s the use of the inherent security advantages of the zero trust approach that focuses security not on perimeter-based defenses but on users, devices and connections for remote access. Combined with user identification, protection of credentials, micro-segmentation, role-based access based on policy enforcement for every action, secured communications, anonymous tokens, proxy-based request management and IT-controlled administration make it a must-have platform in your battle against ransomware.
+FileFlex Enterprise uses a zero trust architecture and various [security features](/security/) that reduce the risk of ransomware from spear-phishing, compromised credentials, zero-day vulnerabilities, supply-chain vulnerabilities, and man-in-the-middle vulnerabilities.  It’s the use of the inherent security advantages of the zero trust approach that focuses security not on perimeter-based defenses but on users, devices and connections for remote access. Combined with user identification, protection of credentials, micro-segmentation, role-based access based on policy enforcement for every action, secured communications, anonymous tokens, proxy-based request management and IT-controlled administration make it a must-have platform in your battle against ransomware.
 
 To learn more, read [Ransomware + Unstructured Data = Double Trouble](/blog/ransomware-unstructured-data-double-trouble/) or  [ZTNA, ZTAA and ZTDA – A Deep Dive](/blog/ztna-ztaa-and-ztda-a-deep-dive/),
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Cyber Defense After the GoAnywhere and MOVEit Breaches](/blog/fortifying-cyber-defense-via-zero-trust-data-access-the-recent-goanywhere-and-moveit-ransomware-breaches/)
+- [How to Protect Your Data with Zero Trust Data Access (ZTDA)](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)
+- [Implement Zero Trust Security, Avoid This Nightmare](/blog/implement-zero-trust-security-avoid-this-nightmare-a-true-account/)
+- [Proposed ZTDA Action Plan for Enterprise](/blog/proposed-ztda-action-plan-for-enterprise/)

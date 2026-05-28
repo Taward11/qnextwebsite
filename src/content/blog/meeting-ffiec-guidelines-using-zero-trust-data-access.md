@@ -33,7 +33,7 @@ tables:
 ---
 
 ## Introduction: Using Zero Trust for FFIEC Compliance and the Future of Data Security for Financial Institutions
-![There were 3,348 reported cyber incidents in the financial industry worldwide in 2023, up from 1,829 in 2022. This highlights the urgency of implementing FFIEC-aligned measures like zero trust.](/images/blog/meeting-ffiec-guidelines-using-zero-trust-data-access/FFIEC-infographic-on-cyber-crime-in-financial-institutions.webp) The Federal Financial Institutions Examination Council (FFIEC) plays a critical role in establishing regulatory standards for the U.S. financial industry, ensuring a stable and secure financial system. Since its inception in 1979, the FFIEC has provided essential guidelines for financial institutions, particularly in areas like cybersecurity and risk management. These guidelines are designed to protect banks, credit unions, and savings associations from evolving threats while maintaining compliance across multiple regulatory bodies. In response to rising cybersecurity risks, the FFIEC has increasingly emphasized advanced security measures, including zero trust principles, to strengthen data protection and access control. This article explores the FFIEC’s guidelines on cybersecurity and how zero trust data access, as implemented by FileFlex Enterprise, aligns with and supports these recommendations to safeguard sensitive information in today’s complex threat landscape.  
+![There were 3,348 reported cyber incidents in the financial industry worldwide in 2023, up from 1,829 in 2022. This highlights the urgency of implementing FFIEC-aligned measures like zero trust.](/images/blog/meeting-ffiec-guidelines-using-zero-trust-data-access/FFIEC-infographic-on-cyber-crime-in-financial-institutions.webp) The Federal Financial Institutions Examination Council (FFIEC) plays a critical role in establishing regulatory standards for the U.S. financial industry, ensuring a stable and secure financial system. Since its inception in 1979, the FFIEC has provided essential guidelines for financial institutions, particularly in areas like cybersecurity and risk management. These guidelines are designed to protect banks, credit unions, and savings associations from evolving threats while maintaining compliance across multiple regulatory bodies. In response to rising cybersecurity risks, the FFIEC has increasingly emphasized advanced security measures, including zero trust principles, to strengthen data protection and access control. This article explores the FFIEC’s guidelines on cybersecurity and how [zero trust data access](/challenge/), as implemented by [FileFlex Enterprise](/platform/), aligns with and supports these recommendations to safeguard sensitive information in today’s complex threat landscape.  
 
  
 
@@ -92,7 +92,7 @@ The FFIEC has started to include concepts aligned with zero trust principles wit
     
     ### **Superior Compliant File Sharing**
     
-    -   Financial services need to share sensitive documents, such as loan files, contracts, and client information, securely with both internal teams and external partners, without risking data exposure.  Zero Trust Data Access as implemented by FileFlex Enterprise enables secure file sharing with strict access controls that verify each user’s identity and access privileges, ensuring that only authorized parties can view or download files.  Every access is authenticated and monitored, and data is not duplicated or stored on third-party servers, minimizing exposure.  By adhering to the principle of least privilege and providing audit trails, FileFlex helps organizations meet regulatory requirements such as GLBA, GDPR, and PCI DSS, while supporting FFIEC’s cybersecurity guidelines for secure data sharing.  See [Top 13 Reasons for Secure Zero Trust File Sharing](/blog/top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business/).
+    -   [Financial services](/financial-services/) need to share sensitive documents, such as loan files, contracts, and client information, securely with both internal teams and external partners, without risking data exposure.  Zero Trust Data Access as implemented by FileFlex Enterprise enables secure file sharing with strict access controls that verify each user’s identity and access privileges, ensuring that only authorized parties can view or download files.  Every access is authenticated and monitored, and data is not duplicated or stored on third-party servers, minimizing exposure.  By adhering to the principle of least privilege and providing audit trails, FileFlex helps organizations meet regulatory requirements such as GLBA, [GDPR](/gdpr-compliance/), and PCI DSS, while supporting FFIEC’s cybersecurity guidelines for secure data sharing.  See [Top 13 Reasons for Secure Zero Trust File Sharing](/blog/top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business/).
     
     ### **Advanced Compliant VPN Replacement**
     
@@ -129,3 +129,14 @@ The FFIEC has started to include concepts aligned with zero trust principles wit
     \*[Statistica.com](https://www.statista.com/statistics/1310985/number-of-cyber-incidents-in-financial-industry-worldwide/)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Supporting Financial Services Cybersecurity Through Zero Trust Data Access](/blog/supporting-financial-services-cybersecurity-through-zero-trust-data-access/)
+- [DORA Compliance Using Zero Trust Data Access](/blog/dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access/)
+- [Secure Zero Trust Access to FedRAMP-Compliant Data](/blog/fedramp-compliance-and-zero-trust-data-access/)
+- [Zero Trust Data Access for CMMC Compliance](/blog/cmmc-compliance-for-file-sharing-access-and-collaboration-of-cui-using-zero-trust-data-access/)

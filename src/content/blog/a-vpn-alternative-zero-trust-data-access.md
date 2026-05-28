@@ -68,7 +68,7 @@ Despite their widespread use VPNs have issues and challenges such as increased l
 ![VPN Alternative infographic](/images/blog/a-vpn-alternative-zero-trust-data-access/Zero-Trust-infographic.webp) Due to the issues and compromises of VPNs, 15% of organizations have already moved to a zero trust-based VPN alternative, and another 59% plan to do so in the next 12 months.
 
 ### What is Zero Trust Data Access?
-Zero Trust Data Access (ZTDA) is a VPN alternative that provides secure access to files and folders for authorized users in a zero-trust environment. The fundamental principle of Zero Trust Data Access is that access to data should be granted only on a need-to-know basis, and every access request should be authenticated and authorized against policy before granting access. Under the Zero Trust Data Access model, every data access request is verified against a set of rules that dictate what data can be accessed, and by whom.
+[Zero Trust Data Access](/challenge/) (ZTDA) is a VPN alternative that provides secure access to files and folders for authorized users in a zero-trust environment. The fundamental principle of Zero Trust Data Access is that access to data should be granted only on a need-to-know basis, and every access request should be authenticated and authorized against policy before granting access. Under the Zero Trust Data Access model, every data access request is verified against a set of rules that dictate what data can be accessed, and by whom.
 
 A zero trust data access architecture is designed to:
 
@@ -86,7 +86,7 @@ Diagram 1
 The Zero Trust Data Access Architecture
 
 ## 19 Advantages of the Zero Trust Data Access VPN Alternative
-Zero Trust Data Access (ZTDA) as implemented by FileFlex Enterprise offers a modern and superior VPN alternative. By rethinking the way organizations grant access to their data and resources, ZTDA provides solutions that mitigate the complexities and limitations associated with VPNs:
+Zero Trust Data Access (ZTDA) as implemented by [FileFlex Enterprise](/platform/) offers a modern and superior VPN alternative. By rethinking the way organizations grant access to their data and resources, ZTDA provides solutions that mitigate the complexities and limitations associated with VPNs:
 
 ## What are the Benefits of Zero Trust Data Access (ZTDA) as a VPN Alternative?
 There are several benefits to an organization of adopting Zero Trust Data Access as implemented by FileFlex Enterprise as a VPN alternative, including:
@@ -98,7 +98,7 @@ There are several benefits to an organization of adopting Zero Trust Data Access
 -   By limiting access to sensitive data, restricting lateral movement and monitoring user activity, [Zero Trust Data Access can help prevent ransomware attacks](/blog/the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk/) and minimize the impact if an attack does occur.
 
 ### 3\. Delivers Regulatory Compliance
--   Zero Trust Data Access can help organizations comply with data privacy regulations such as HIPAA, GDPR, CIRCI, CMMC, ISO 27001, DORA and ENISA (European Union Agency for Cybersecurity), ensuring that only authorized users can access sensitive data.
+-   Zero Trust Data Access can help organizations comply with data privacy regulations such as [HIPAA](/hipaa-compliance/), [GDPR](/gdpr-compliance/), CIRCI, CMMC, ISO 27001, DORA and ENISA (European Union Agency for Cybersecurity), ensuring that only authorized users can access sensitive data.
 
 ### 4\. Eases the Risk of Insider Threats
 -   Insider threats, such as employees or contractors accessing data without proper authorization, can be difficult to detect and prevent. Zero Trust Data Access can help mitigate these risks by ensuring that users are only given access to the files and folders they need to perform their job duties.
@@ -159,3 +159,14 @@ For further information, read [What is Zero Trust Data Access (ZTDA)?,](/blog/wh
 \*\* [Techradar](https://www.techradar.com/news/businesses-are-replacing-vpns-with-zero-trust-network-access)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Zero Trust Security Model Must Include Zero Trust Data Access](/blog/zero-trust-security-model-must-include-zero-trust-data-access-ztda/)
+- [From VPN Risk to Zero Trust Security: A Smarter Approach to Remote Access](/blog/from-vpn-risk-to-zero-trust-security-a-smarter-approach-to-remote-access/)
+- [How Zero Trust Data Access Cuts Operational Costs](/blog/how-zero-trust-data-access-cuts-costs-in-organizational-operations/)
+- [Why replacing FTP with ZTDA is a No-Brainer](/blog/replace-your-ftp-with-zero-trust-data-access-ztda/)

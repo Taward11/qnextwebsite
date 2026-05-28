@@ -22,7 +22,7 @@ If you are using Office 365 then you know that the only way to remotely access O
 ### Challenges Using Office 365 on the Hybrid-IT Infrastructure
 The challenge comes when you want to access or share Office 365 files stored on your hybrid-IT infrastructure other than on your own OneDrive or desktop computer.
 
-This is where FileFlex Enterprise extends the functionality of Office 365. It provides users remote access, sharing, and collaboration of Office 365 files located anywhere on your hybrid-IT infrastructure – not just from your OneDrive account. It does this through a zero-trust platform with robust security and gives IT visibility and control over what and who can access and share your confidential information while providing an audit trail over all activity.
+This is where [FileFlex Enterprise](/platform/) extends the functionality of Office 365. It provides users remote access, sharing, and collaboration of Office 365 files located anywhere on your hybrid-IT infrastructure – not just from your OneDrive account. It does this through a zero-trust platform with robust security and gives IT visibility and control over what and who can access and share your confidential information while providing an audit trail over all activity.
 
 I have highlighted below the many benefits of extending your implementation of Office 365 with FileFlex Enterprise.
 
@@ -77,10 +77,10 @@ I have highlighted below the many benefits of extending your implementation of O
 -   Privacy and confidentiality can be protected by keeping Office 365 files in source locations, on-premises, behind the corporate firewall, on corporate storage assets, in specific geographic regions, and access controlled.
 
 ### Aids in Office 365 GDPR compliance
--   The FileFlex Enterprise technology for secure remote file access, sharing and collaboration support and augment an organization’s GDPR compliance endeavors. FileFlex utilizes an organization’s existing investment in technology and combines a rapid deployment capability and ability to support the enforcement of the compliance and auditability controls required by GDPR.
+-   The FileFlex Enterprise technology for secure remote file access, sharing and collaboration support and augment an organization’s [GDPR compliance](/gdpr-compliance/) endeavors. FileFlex utilizes an organization’s existing investment in technology and combines a rapid deployment capability and ability to support the enforcement of the compliance and auditability controls required by GDPR.
 
 ### Aids in Office 365 HIPAA compliance
--   FileFlex Enterprise is the ideal file-sharing and collaboration tool for HIPAA Covered Entities and HIPAA Business Associates. That is because the FileFlex server is hosted either by the HIPAA Covered Entity itself or by the HIPAA Business Associate that provides FileFlex to the HIPAA Covered Entity. FileFlex can be used to control remote access and sharing of Protected Health Information (PHI) and Personally Identifiable Information (PII).
+-   FileFlex Enterprise is the ideal file-sharing and collaboration tool for [HIPAA](/hipaa-compliance/) Covered Entities and HIPAA Business Associates. That is because the FileFlex server is hosted either by the HIPAA Covered Entity itself or by the HIPAA Business Associate that provides FileFlex to the HIPAA Covered Entity. FileFlex can be used to control remote access and sharing of Protected Health Information (PHI) and Personally Identifiable Information (PII).
 
 ### View-only sharing of Office 365 files
 -   One important consideration in security and compliance is that some files need to be viewed by others but not edited or downloaded. For these instances, FileFlex Enterprise enables view-only sharing for all Office 365 files. This adds a level of protection that supports efforts to comply with compliance regimes such as GDPR and HIPAA.
@@ -106,3 +106,14 @@ I have highlighted below the many benefits of extending your implementation of O
 <div class="blog-prose__video"><iframe src="https://www.brighttalk.com/embed/18522/448625/player" title="Key Benefits of Extending Office 365 with FileFlex Enterprise" loading="lazy" allow="encrypted-media" allowfullscreen></iframe></div>
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [FileFlex Enterprise is the Best Alternative to Varonis DatAnywhere](/blog/varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative/)
+- [Secure Remote Access and Sharing SharePoint with External Recipients](/blog/easy-remote-access-sharing-and-collaboration-of-sharepoint-document-libraries/)
+- [How to Enable Your Remote Workforce with Zero Trust-By-Design](/blog/enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn/)
+- [Extending Office 365 Functionality into a Hybrid-IT Infrastructure](/blog/extending-office-365-functionality-into-a-hybrid-it-infrastructure/)

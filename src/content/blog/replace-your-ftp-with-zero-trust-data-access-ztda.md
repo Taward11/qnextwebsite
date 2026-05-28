@@ -31,9 +31,9 @@ The above presents an enterprise organization with increased risks associated wi
 Threat actors approach any target system with a well-defined methodology which includes reconnaissance and enumeration of running services. Hence, these legacy protocols are quickly identified and used in attack vectors in various forms of digital attacks including ransomware.
 
 ## Why You Need to Replace Your FTP with Zero Trust Data Access
-Using the zero-trust architecture of FileFlex Enterprise, files and folders are not synced to an FTP server. Instead, the files and folders are stored in their source locations. To access or share these files, users make a request to a policy server that verifies and authenticates the user and then checks the request against the policies and permissions for that user. The server then contacts a connector agent that takes the request from the server and acts as an intermediary to get the information, encrypt it and send it to the user.
+Using the zero-trust architecture of [FileFlex Enterprise](/platform/), files and folders are not synced to an FTP server. Instead, the files and folders are stored in their source locations. To access or share these files, users make a request to a policy server that verifies and authenticates the user and then checks the request against the policies and permissions for that user. The server then contacts a connector agent that takes the request from the server and acts as an intermediary to get the information, encrypt it and send it to the user.
 
-The zero trust data access architecture of FileFlex enterprise also allows it to support and put under a single-pane-of-glass an organization’s entire multi-cloud hybrid-IT storage infrastructure. Files and folders being accessed or shared can be located on on-premises storage, a corporate data center, a remote office, a self-hosted or MS hosted implementation of SharePoint, with an Infrastructure-as-a-Service provider such as MS Azure, Google Cloud, and Amazon S3 or on a public cloud or BOX.
+The [zero trust data access](/challenge/) architecture of FileFlex enterprise also allows it to support and put under a single-pane-of-glass an organization’s entire multi-cloud hybrid-IT storage infrastructure. Files and folders being accessed or shared can be located on on-premises storage, a corporate data center, a remote office, a self-hosted or MS hosted implementation of SharePoint, with an Infrastructure-as-a-Service provider such as MS Azure, Google Cloud, and Amazon S3 or on a public cloud or BOX.
 
 ### Advantages of FileFlex Enterprise Over FTP
 -   As opposed to FTP using simple SSL, SSH-based encryption, FileFlex Enterprise uses a zero-trust policy engine and processes that continually authenticates, verifies, and then grants access to information on a per transaction basis via an exchange of anonymous secure tokens. Direct access to resources is not permitted. All access is via the connector agent which acts as a proxy for the user.
@@ -44,7 +44,7 @@ The zero trust data access architecture of FileFlex enterprise also allows it to
 -   FileFlex Enterprise does not generate encryption keys in system memory where they can be potentially discovered by malicious actors. Instead, encryption keys are generated in the included PKI server that is controlled by the client organization.  New encryption keys are generated for every session and tokens are available only per session.
 -   FileFlex Enterprise leverages existing servers and storage so that there is no duplication and no additional hardware investment is required.
 -   With FileFlex Enterprise no files are duplicated to a redundant server thereby reducing the organization’s threat surface.
--   FileFlex Enterprise has all the security features you would expect such as SSO, MFA, device fingerprinting, U2F device support, AD and LDAP policy enforcement
+-   FileFlex Enterprise has all the [security features](/security/) you would expect such as SSO, MFA, device fingerprinting, U2F device support, AD and LDAP policy enforcement
 -   FileFlex Enterprise enables large data lift-and-shift scenarios between secure servers, from on-prem to cloud to hybrid.
 -   FileFlex is very user-friendly and supports Windows, Mac, Android, Linux and iOS devices.
 
@@ -63,10 +63,21 @@ The zero trust data access architecture, support for a hybrid-IT infrastructure 
 
 The FTP solutions have compromises and issues such as an increased risk posture, privacy compromise, fragmented data, the need to manage limited subsets, technical complexity, and high cost.
 
-FTP inherently lacks zero trust security and cannot support a hybrid-IT infrastructure or SharePoint. Because of productivity benefits when originally introduced, the market has accepted these compromises. However, the zero-trust, hybrid-IT architecture of FileFlex Enterprise allows it to provide the same productivity benefits while addressing the compromises and issues inherent to FTP at a lower cost.  It adds IT governance and administration over access to unstructured data, superior control over file sharing with permissions, collaboration features, the ability to create virtual data rooms, and more.  It vastly improves the organization’s security posture, allows access to all storage – not just subsets, – ensures privacy, keeps the management of organizational files under organizational control, accelerates compliance with privacy regulations such as GDPR and HIPAA, and leverages the organization’s existing storage infrastructure to produce a disruptive low-cost model that can be applied to all storage.
+FTP inherently lacks zero trust security and cannot support a hybrid-IT infrastructure or SharePoint. Because of productivity benefits when originally introduced, the market has accepted these compromises. However, the zero-trust, hybrid-IT architecture of FileFlex Enterprise allows it to provide the same productivity benefits while addressing the compromises and issues inherent to FTP at a lower cost.  It adds IT governance and administration over access to unstructured data, superior control over file sharing with permissions, collaboration features, the ability to create virtual data rooms, and more.  It vastly improves the organization’s security posture, allows access to all storage – not just subsets, – ensures privacy, keeps the management of organizational files under organizational control, accelerates compliance with privacy regulations such as [GDPR](/gdpr-compliance/) and [HIPAA](/hipaa-compliance/), and leverages the organization’s existing storage infrastructure to produce a disruptive low-cost model that can be applied to all storage.
 
 That is critical and as the above points prove there is one reality that simply can not be disputed: The time has come to replace FTP with a secure platform based on a Zero Trust architecture for all remote, internal and B2B upload and download requirements.
 
 For more information on the advantages of using a zero trust data access platform see [ZTNA, ZTAA and ZTDA – A Deep Dive](/blog/ztna-ztaa-and-ztda-a-deep-dive/) and [Accelerating Digital Transformation Leveraging Zero Trust Data Access (ZTDA) in a Microsoft Ecosystem.](/blog/accelerating-digital-transformation-leveraging-zero-trust-data-access-in-a-microsoft-ecosystem/)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [How Zero Trust Data Access Cuts Operational Costs](/blog/how-zero-trust-data-access-cuts-costs-in-organizational-operations/)
+- [24 Reasons to Use Zero Trust Data Access as an FTP Alternative](/blog/24-reasons-to-use-zero-trust-data-access-as-an-ftp-alternative/)
+- [Zero Trust Data Access as a VPN Alternative](/blog/a-vpn-alternative-zero-trust-data-access/)
+- [Data Governance, Cybersecurity and Zero Trust Data Access](/blog/data-governance-cybersecurity-and-zero-trust-data-access-the-essential-pillars-to-protect-data-assets/)

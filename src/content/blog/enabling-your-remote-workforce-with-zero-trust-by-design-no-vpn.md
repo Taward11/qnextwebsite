@@ -24,7 +24,7 @@ Increasingly, organizations have been depending on the use of VPNs to provide re
 
 ### Zero Trust Remote Access Is the Better Way
 
-The better way to safely enable your COVID-19 remote workforce is to provide them the ability to remotely access, share, and collaborate from your own storage infrastructure via a platform that uses zero trust – FileFlex Enterprise.
+The better way to safely enable your COVID-19 remote workforce is to provide them the ability to remotely access, share, and collaborate from your own storage infrastructure via a platform that uses zero trust – [FileFlex Enterprise](/platform/).
 
 ## What is a Zero Trust Architecture?
 The traditional network architecture has been changing. More services are moving to the cloud. There is a surge in the use of Software as a Service (SaaS) and users are embracing flexible working on multiple devices in a variety of locations. As a result, the traditional network perimeter has been disappearing and with it the value of traditional perimeter defenses. Traditionally, we have been relying on anti-virus software, port/firewall lockdowns, and VPNs to secure a perimeter where people we trust are let in and everyone else is kept out. The problem is that once an attacker gains a foothold in a network – for example from a successful spear-phishing attack – they are now able to move laterally and put ransomware on your servers. That is because everyone on the network is trusted.   In a zero-trust architecture, inherent trust is removed from the network. The network is treated as hostile.
@@ -53,7 +53,7 @@ Before we built any features, FileFlex Enterprise was built from the ground up w
 
 ### Zero Trust Secure Processes Over Data
 
-FileFlex Enterprise uses a set of secure zero trust processes to access, secure, and transmit data. or Zero Trust Data Access (ZTDA). Others focus either on zero trust in a network access platform (ZTNA) or on an application access platform (ZTAA). We employ zero trust every time someone attempts to access corporate data. These include processes for user authentication, secure data transmission, accessing information, protecting credentials, use of anonymous tokens, request management, and permission management. And it has a robust security set including AES 256 encrypted hybrid point-to-point communication, double encryption, two-factor authentication, device authentication, virus scanning, single sign-on (SSO), active directory integration, activity log and operation, and incident management. As a result, FileFlex Enterprise eliminates both unauthorized access to data and services and makes access control enforcement as granular as possible**.**
+FileFlex Enterprise uses a set of secure zero trust processes to access, secure, and transmit data. or [Zero Trust Data Access](/challenge/) (ZTDA). Others focus either on zero trust in a network access platform (ZTNA) or on an application access platform (ZTAA). We employ zero trust every time someone attempts to access corporate data. These include processes for user authentication, secure data transmission, accessing information, protecting credentials, use of anonymous tokens, request management, and permission management. And it has a robust security set including AES 256 encrypted hybrid point-to-point communication, double encryption, two-factor authentication, device authentication, virus scanning, single sign-on (SSO), active directory integration, activity log and operation, and incident management. As a result, FileFlex Enterprise eliminates both unauthorized access to data and services and makes access control enforcement as granular as possible**.**
 
 ### Zero Trust Low-Cost Platform
 
@@ -66,3 +66,14 @@ Finally, FileFlex Enterprise is a low-cost, software-only solution that runs fro
 [\[3\]](#_ftnref3) [The VPN is dying, long live zero trust](https://www.networkworld.com/article/3487720/the-vpn-is-dying-long-live-zero-trust.html)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Using Zero Trust Architecture (ZTA) to Protect Remote Data Access](/blog/using-zero-trust-architecture-zta-to-protect-remote-data-access/)
+- [Zero Trust Remote Access Protection for Internal Security Threats](/blog/zero-trust-remote-access-helps-protect-data-against-internal-security-threats/)
+- [From VPN Risk to Zero Trust Security: A Smarter Approach to Remote Access](/blog/from-vpn-risk-to-zero-trust-security-a-smarter-approach-to-remote-access/)
+- [FileFlex Enterprise is the Best Alternative to Varonis DatAnywhere](/blog/varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative/)

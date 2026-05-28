@@ -45,7 +45,7 @@ Today, users expect to be able to work from anywhere – home, restaurant, trave
 
 ### FileFlex Enterprise addresses all 3 options
 
-Until now, all options on the table to enable remote access of self-hosted SharePoint and sharing with external users have resulted in increased administrative burden, pain, and/or maintenance headaches. FileFlex Enterprise fixes that.
+Until now, all options on the table to enable remote access of self-hosted SharePoint and sharing with external users have resulted in increased administrative burden, pain, and/or maintenance headaches. [FileFlex Enterprise](/platform/) fixes that.
 
 ### FileFlex Enterprise adds remote access and sharing capability to your existing self-hosted SharePoint
 
@@ -81,3 +81,14 @@ _Sharing an On-Premises Implementation of SharePoint_
 **Watch the Webinar:**
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Extending Office 365 Functionality into a Hybrid-IT Infrastructure](/blog/extending-office-365-functionality-into-a-hybrid-it-infrastructure/)
+- [Key Benefits of Extending Office 365 with FileFlex Enterprise](/blog/key-benefits-of-extending-office-365-with-fileflex-enterprise/)
+- [How to Create Virtual Data Rooms Using FileFlex Enterprise](/blog/use-fileflex-enterprise-to-create-virtual-data-rooms/)
+- [19 Reasons Why ZTDA Is an Essential SharePoint Add-in](/blog/19-reasons-why-zero-trust-data-access-is-an-essential-sharepoint-add-in/)

@@ -43,7 +43,7 @@ toc: true
 
 ### 6\. Healthcare sector
 
--   This includes organizations involved in the provision of healthcare services, such as hospitals, clinics, and pharmacies.
+-   This includes organizations involved in the provision of [healthcare](/healthcare/) services, such as hospitals, clinics, and pharmacies.
 
 ### 7\. Emergency services sector
 
@@ -72,7 +72,7 @@ toc: true
 
 #### 3\. Sector-specific regulations and professional standards
 
--   Specific sectors of organizations considered critical infrastructure may have their regulations or professional standards. Examples include the Critical Infrastructure Cyber Community (C3) Voluntary Program, and sector-specific regulations such as the NERC CIP standards for the energy sector, CMMC for military contractors, PCI DSS for organizations that handle personal financial information or the HIPAA regulations for the healthcare sector. Some such as the FAA have specific regulations for the protection of sensitive information in the aviation industry, including information related to air traffic control, air traffic management, and airport security.
+-   Specific sectors of organizations considered critical infrastructure may have their regulations or professional standards. Examples include the Critical Infrastructure Cyber Community (C3) Voluntary Program, and sector-specific regulations such as the NERC CIP standards for the energy sector, CMMC for military contractors, PCI DSS for organizations that handle personal financial information or the [HIPAA](/hipaa-compliance/) regulations for the healthcare sector. Some such as the FAA have specific regulations for the protection of sensitive information in the aviation industry, including information related to air traffic control, air traffic management, and airport security.
 
 #### 4\. HIPAA (Health Insurance Portability and Accountability Act)
 
@@ -118,7 +118,7 @@ Zero trust architecture can play a significant role in helping critical infrastr
 
 ### Risk management
 
--   Zero trust architecture prioritizes risk management by assessing and evaluating all network devices and users, including privileged users. This helps organizations comply with regulations that require risk management measures, such as the EU’s General Data Protection Regulation (GDPR) and the NIST Cybersecurity Framework.
+-   Zero trust architecture prioritizes risk management by assessing and evaluating all network devices and users, including privileged users. This helps organizations comply with regulations that require risk management measures, such as the EU’s General Data Protection Regulation ([GDPR](/gdpr-compliance/)) and the NIST Cybersecurity Framework.
 
 ### Audit and reporting
 
@@ -128,7 +128,7 @@ In summary, zero trust architecture provides a robust security framework that ca
 
 ## How the Zero Trust Architecture of FileFlex Enterprise Aids Critical Infrastructure Regulatory Compliance
 
-The zero trust architecture of FileFlex Enterprise aids critical infrastructure regulatory compliance via:
+The zero trust architecture of [FileFlex Enterprise](/platform/) aids critical infrastructure regulatory compliance via:
 
 ### Secure remote access
 
@@ -167,3 +167,14 @@ References: [Deloitte,](https://www2.deloitte.com/us/en/insights/industry/power-
 For more details about the security controls important to the protection of critical infrastructure see [The Top 8 Critical Infrastructure Security Protections Using Zero Trust Data Access Architecture, “](/blog/critical-infrastructure-protection-using-zero-trust-data-access-top-8/)[Critical Infrastructure Regulatory Compliance via Zero Trust Architectures](/blog/critical-infrastructure-regulatory-compliance-via-zero-trust-architectures/)[”, “](/blog/critical-infrastructure-protection-using-zero-trust-data-access-top-8/)[Critical Infrastructure Management Over Remote Access and Sharing Using Zero Trust Architecture](/blog/critical-infrastructure-it-control-use-over-remote-access-and-sharing-using-zero-trust-architecture/)[” and “](/blog/critical-infrastructure-protection-using-zero-trust-data-access-top-8/)[Critical Infrastructure Onboarding and Ease of Use Using Zero Trust Data Access](/blog/critical-infrastructure-ease-of-use-over-remote-access-and-sharing-using-zero-trust-architecture/)[”.](/blog/critical-infrastructure-protection-using-zero-trust-data-access-top-8/)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Critical Infrastructure Onboarding Ease of Use Using ZTDA](/blog/critical-infrastructure-ease-of-use-over-remote-access-and-sharing-using-zero-trust-architecture/)
+- [Critical Infrastructure Management Using Zero Trust Architecture](/blog/critical-infrastructure-it-control-use-over-remote-access-and-sharing-using-zero-trust-architecture/)
+- [Protecting Critical Infrastructure Using Zero Trust — The Top 8 List](/blog/critical-infrastructure-protection-using-zero-trust-data-access-top-8/)
+- [What is Zero Trust Data Access (ZTDA)?](/blog/what-is-zero-trust-data-access-ztda/)

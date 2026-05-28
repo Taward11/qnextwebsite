@@ -57,7 +57,7 @@ A zero trust architecture provides mechanisms that provide the IT department of 
 -   Flat fixed pricing per user with no cost creep, that leverages your existing storage investments, infrastructure and IT resources, and can reduce the use of VPNs and cloud storage.
 
 ## The Benefits of Zero Trust Data Access for IT Control Over Remote Access to CUI
-Zero Trust Data Access as implemented by FileFlex Enterprise provides administration capabilities of centralized control, secure remote access, activity tracking, integration and federation of existing storage, user management, sharing management, decentralized enforcement, interoperability, scalability and cost-effectiveness.  The benefits of the IT control over access and sharing of critical infrastructure include:
+[Zero Trust Data Access](/challenge/) as implemented by [FileFlex Enterprise](/platform/) provides administration capabilities of centralized control, secure remote access, activity tracking, integration and federation of existing storage, user management, sharing management, decentralized enforcement, interoperability, scalability and cost-effectiveness.  The benefits of the IT control over access and sharing of critical infrastructure include:
 
 ### Improves Security
 -   A suite of security protocols to enable remote access to files stored on company servers or in cloud storage accounts. These reduce the risk of data breaches and cyber-attacks.
@@ -80,3 +80,14 @@ Zero Trust Data Access as implemented by FileFlex Enterprise provides IT departm
 \* [Wikipedia](https://en.wikipedia.org/wiki/Cybersecurity_Maturity_Model_Certification)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Zero Trust Data Access for CMMC Compliance](/blog/cmmc-compliance-for-file-sharing-access-and-collaboration-of-cui-using-zero-trust-data-access/)
+- [Zero Trust Data Access for DIB Cybersecurity Strategy](/blog/zero-trust-data-access-to-meet-dib-cybersecurity-strategy-2024/)
+- [DORA Compliance Using Zero Trust Data Access](/blog/dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access/)
+- [Zero Trust Data Access for IT-Controlled Chain-of-Command](/blog/embracing-zero-trust-data-access-for-it-controlled-chain-of-command/)

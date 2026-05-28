@@ -99,11 +99,11 @@ FileFlex logs all activities – even for in-app activities via multi-clouds and
 
 #### ****9)    Enhance the privacy of your multi-cloud and prohibit downloading****
 
-FileFlex allows you to set your sharing options so that downloading is not permitted. As a result, no unauthorized copies are made of your files and you maintain control over the privacy of the files that are shared from your multi-cloud or Infrastructure-as-a-Service storage.  Thus, when your cloud storage complies with data residency requirements and is accompanied by appropriate user behavior, FileFlex can be used for the sharing of Personally Identifiable Information (PII) and aid compliance with privacy regulations such as HIPAA and GDPR because downloading of PII can be prohibited.
+FileFlex allows you to set your sharing options so that downloading is not permitted. As a result, no unauthorized copies are made of your files and you maintain control over the privacy of the files that are shared from your multi-cloud or Infrastructure-as-a-Service storage.  Thus, when your cloud storage complies with data residency requirements and is accompanied by appropriate user behavior, FileFlex can be used for the sharing of Personally Identifiable Information (PII) and aid compliance with privacy regulations such as [HIPAA](/hipaa-compliance/) and [GDPR](/gdpr-compliance/) because downloading of PII can be prohibited.
 
 ####  **10)   ****Add IT control over user activity in your multi-cloud******
 
-Users of FileFlex Enterprise can download the free FileFlex server and IT is in complete control over secure remote access and sharing and user activity in your multi-cloud and Infrastructure-as-a-Service storage. IT controls who is provisioned, who they can share with, how much bandwidth they can consume, and what content and storage they can access. It is easy to deploy, easy to integrate, scalable, easy to manage, and supports multiple locations and all storage options. And they can have it up and running in just a couple of hours.
+Users of [FileFlex Enterprise](/platform/) can download the free FileFlex server and IT is in complete control over secure remote access and sharing and user activity in your multi-cloud and Infrastructure-as-a-Service storage. IT controls who is provisioned, who they can share with, how much bandwidth they can consume, and what content and storage they can access. It is easy to deploy, easy to integrate, scalable, easy to manage, and supports multiple locations and all storage options. And they can have it up and running in just a couple of hours.
 
 #### ****11)   Use FileFlex as a migration tool****
 
@@ -112,3 +112,14 @@ Not only is FileFlex an easy tool to provide file management between cloud platf
 Get the full How to **_Make Your Multi-Cloud and Infrastructure-as-a-Service Environment Easier for Your Users_** whitepaper by providing your email below.
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [What is Centralized Cloud vs Decentralized Hybrid-IT?](/blog/centralized-vs-decentralized-cloud-storage/)
+- [Extending Office 365 Functionality into a Hybrid-IT Infrastructure](/blog/extending-office-365-functionality-into-a-hybrid-it-infrastructure/)
+- [19 Reasons Why ZTDA Is an Essential SharePoint Add-in](/blog/19-reasons-why-zero-trust-data-access-is-an-essential-sharepoint-add-in/)
+- [22 Reasons to Supplement Microsoft 365 E5 Security with ZTDA](/blog/21-reasons-to-supplement-microsoft-365-e5-security-with-zero-trust-data-access/)

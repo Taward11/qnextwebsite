@@ -41,12 +41,12 @@ tables:
 ---
 
 ## Introduction
-![95% of advanced smart cities include cybersecurity from the earliest design phase\*](/images/blog/smart-cities-and-zero-trust-data-access-securing-the-urban-future/smart-city-infographic.webp) As cities evolve into digital ecosystems, the data powering them becomes as critical as roads, water, or electricity. But smart cities face growing cybersecurity threats, complex infrastructure, and regulatory pressure to protect that data. The solution? Zero Trust Data Access (ZTDA)—a security model designed for today’s decentralized, hyper-connected world.
+![95% of advanced smart cities include cybersecurity from the earliest design phase\*](/images/blog/smart-cities-and-zero-trust-data-access-securing-the-urban-future/smart-city-infographic.webp) As cities evolve into digital ecosystems, the data powering them becomes as critical as roads, water, or electricity. But smart cities face growing cybersecurity threats, complex infrastructure, and regulatory pressure to protect that data. The solution? [Zero Trust Data Access](/challenge/) (ZTDA)—a security model designed for today’s decentralized, hyper-connected world.
 
 This blog explains what Zero Trust Data Access means in the context of smart cities, how to implement it, and best practices for building secure, resilient urban environments.
 
 ## What Is a Smart City?
-A smart city uses digital technologies and data-driven infrastructure to improve the efficiency, sustainability, and livability of urban environments. It integrates systems like transportation, energy, healthcare, and public services using IoT, automation, and real-time data to better serve citizens and support sustainable development.
+A smart city uses digital technologies and data-driven infrastructure to improve the efficiency, sustainability, and livability of urban environments. It integrates systems like transportation, energy, [healthcare](/healthcare/), and public services using IoT, automation, and real-time data to better serve citizens and support sustainable development.
 
 ## What Is Zero Trust Data Access in a Smart City?
 ![As cities evolve into digital ecosystems, protecting access to the data powering them becomes critical.](/images/blog/smart-cities-and-zero-trust-data-access-securing-the-urban-future/smart-cities-quote.webp) Zero Trust Data Access is a cybersecurity model where no user, device, or system is trusted by default—regardless of their location inside or outside the city’s network. Instead, every access request is continuously verified, with strict access controls applied to each file, system, or service.
@@ -77,7 +77,7 @@ ZTDA removes traditional access points like VPNs and mapped drives, which are co
 3.  ### **Improves Compliance and Data Sovereignty**
     
 
-Smart cities operate under strict regulatory frameworks (e.g., GDPR, FOIA, data residency laws). ZTDA ensures data never leaves its jurisdiction, is never duplicated without control, and every access request is fully logged.
+Smart cities operate under strict regulatory frameworks (e.g., [GDPR](/gdpr-compliance/), FOIA, data residency laws). ZTDA ensures data never leaves its jurisdiction, is never duplicated without control, and every access request is fully logged.
 
 **Benefit:** Enables provable compliance with public sector data handling mandates.
 
@@ -116,7 +116,7 @@ Target high-risk workflows first: healthcare data, public safety files, transpor
 2.  ### **Don’t force data migration**
     
 
-Use solutions like FileFlex Enterprise that allow you to **securely access** data where it lives—without cloud replication or transfer.
+Use solutions like [FileFlex Enterprise](/platform/) that allow you to **securely access** data where it lives—without cloud replication or transfer.
 
 3.  ### **Design for inter-agency collaboration**
     
@@ -146,3 +146,14 @@ With the right implementation strategy and technologies like FileFlex Enterprise
 Contact us to see how we can help you build a secure, compliant, and future-ready data architecture.
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [SEC Cybersecurity Rules Driving Enterprise Security to Zero Trust Architecture: What CIOs and CISOs Need to Know](/blog/sec-cybersecurity-rules-zero-trust-architecture-what-cios-and-cisos-need-to-know/)
+- [Data Governance, Cybersecurity and Zero Trust Data Access](/blog/data-governance-cybersecurity-and-zero-trust-data-access-the-essential-pillars-to-protect-data-assets/)
+- [DORA Compliance Using Zero Trust Data Access](/blog/dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access/)
+- [Secure Zero Trust Access to FedRAMP-Compliant Data](/blog/fedramp-compliance-and-zero-trust-data-access/)

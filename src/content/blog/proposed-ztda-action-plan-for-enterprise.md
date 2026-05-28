@@ -18,7 +18,7 @@ toc: true
 
 By Dr. Ed Amoroso, TAG Cyber
 
-The goal of implementing zero trust data access (ZTDA) to protect unstructured data in the enterprise can only be reached through proper management and oversight. Reducing organizational dependence on perimeters for external data access, often with the replacement of legacy virtual private network (VPN) solutions, is easier said than done. So enterprise teams are strongly advised to emphasize careful planning.
+The goal of implementing [zero trust data access](/challenge/) (ZTDA) to protect unstructured data in the enterprise can only be reached through proper management and oversight. Reducing organizational dependence on perimeters for external data access, often with the replacement of legacy virtual private network (VPN) solutions, is easier said than done. So enterprise teams are strongly advised to emphasize careful planning.
 
 In this brief article, we introduce a general action plan for any enterprise that seeks to implement secure external data access under the assumption that traditional firewall perimeters will not serve as the main compliance control or security mediation component. Instead, the use of ZTDA solutions such as from Qnext are assumed to be the goal – and we outline steps that should help in this regard.
 
@@ -56,3 +56,14 @@ In Article 1, TAG Cyber CEO  Ed Amoroso examines “[How To Securely Share Data
 Copyright © 2022 TAG Cyber LLC
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [How to Protect Your Data with Zero Trust Data Access (ZTDA)](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)
+- [Implement Zero Trust Security, Avoid This Nightmare](/blog/implement-zero-trust-security-avoid-this-nightmare-a-true-account/)
+- [Ransomware + Unstructured Data = Double Trouble](/blog/ransomware-unstructured-data-double-trouble/)
+- [Risks to Unstructured Data](/blog/risks-to-unstructured-data/)

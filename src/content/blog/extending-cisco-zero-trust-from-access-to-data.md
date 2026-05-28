@@ -43,7 +43,7 @@ tables:
 ## Introduction: Why Data-Centric Security is Critical
 ![According to Cisco's 2024 Cybersecurity Readiness Index, only 3% of organizations globally are assessed as having a "Mature" level of cybersecurity readiness.\*](/images/blog/extending-cisco-zero-trust-from-access-to-data/Cisco-infographic.webp) In today’s complex cybersecurity landscape, organizations increasingly rely on Cisco for its industry-leading networking and security solutions. Cisco’s Universal Zero Trust Network Access (ZTNA) secures all users, devices, and applications across on-premises, cloud, and hybrid environments, providing an identity-first foundation with continuous verification and adaptive access policies. Its broader security portfolio—including Umbrella, Secure Firewall, XDR, and Talos threat intelligence—further protects endpoints, networks, and applications.
 
-Even with Cisco’s comprehensive security stack, a critical gap remains: control over how users interact with the data itself once access is granted. This is where FileFlex Zero Trust Data Access (ZTDA) becomes essential. FileFlex extends zero trust principles directly to the data layer, securing files and folders across on-premises, cloud, and hybrid storage. It applies continuous, granular access policies, integrates with AI-driven threat detection, provides full audit and compliance visibility, and defends against ransomware and insider threats. Together with Cisco, FileFlex ensures that organizations not only control who gets in but also what can be done with the data once inside, delivering a truly complete zero trust architecture.  
+Even with Cisco’s comprehensive security stack, a critical gap remains: control over how users interact with the data itself once access is granted. This is where FileFlex [Zero Trust Data Access](/challenge/) (ZTDA) becomes essential. FileFlex extends zero trust principles directly to the data layer, securing files and folders across on-premises, cloud, and hybrid storage. It applies continuous, granular access policies, integrates with AI-driven threat detection, provides full audit and compliance visibility, and defends against ransomware and insider threats. Together with Cisco, FileFlex ensures that organizations not only control who gets in but also what can be done with the data once inside, delivering a truly complete zero trust architecture.  
 
 ## Who is Cisco?
 ![Cisco ensures the right people get in, while FileFlex ensures the right actions are taken with the data once they’re inside.](/images/blog/extending-cisco-zero-trust-from-access-to-data/Cisco-quote-1-1.webp) Cisco is a global leader in networking, security, collaboration, and cloud technologies that connect and protect organizations of every size. Its core strength is in end-to-end networking and security, but it increasingly delivers cloud-managed, subscription-based solutions.
@@ -80,7 +80,7 @@ Here’s a list of the top reasons why organizations that rely on Cisco security
 1.  **Extends Zero Trust to the Data Layer** – Cisco protects access, but FileFlex governs who can open, edit, or share specific files and folders.
 2.  **Continuous Enforcement** – FileFlex applies policies in real time, even after access is granted.
 3.  **Granular Permissions** – Control access at the file, folder, or project level, including temporary or conditional access.
-4.  **Audit & Compliance** – Full visibility into file activity, supporting regulatory requirements (e.g., GDPR, HIPAA, FINRA).
+4.  **Audit & Compliance** – Full visibility into file activity, supporting regulatory requirements (e.g., [GDPR](/gdpr-compliance/), [HIPAA](/hipaa-compliance/), FINRA).
 5.  **Ransomware & Insider Threat Protection** – Detects anomalous file activity and blocks unauthorized actions.
 6.  **Hybrid & Multi-Cloud Support** – Secures unstructured data across on-premises, cloud, and hybrid storage systems.
 7.  **Seamless Integration with Existing Cisco Stack** – Works alongside Duo, ISE, Secure Access, and Umbrella to provide end-to-end zero trust.
@@ -99,3 +99,14 @@ For related blogs on how FileFlex closes the data security gap see [Extending Mi
 Source: [Cisco](https://investor.cisco.com/news/news-details/2024/Cisco-Study-Reveals-Very-Few-Organizations-Prepared-to-Defend-Against-Todays-Rapidly-Evolving-Threat-Landscape/)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Achieving End-to-End Zero Trust with Zscaler and FileFlex](/blog/achieving-end-to-end-zero-trust-with-zscaler-and-fileflex/)
+- [The Zero Trust Data Gap: Closing the Blind Spot in Modern Security Architectures](/blog/the-zero-trust-data-gap/)
+- [Cloudflare One and FileFlex Enterprise—Securing Apps and Data Together](/blog/cloudflare-one-and-fileflex-enterprise-securing-apps-and-data-together/)
+- [DSPMs & ZTDA: Enhancing Zero Trust Data Security](/blog/dspms-and-zero-trust-data-access-a-powerful-duo-for-zero-trust-data-security/)

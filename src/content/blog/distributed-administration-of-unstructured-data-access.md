@@ -26,7 +26,7 @@ Centralized control over unstructured data but with decentralized enforcement an
 
 Recognizing the need to address the security holes in their supply chain, the US Department of Defense is moving all of its suppliers to obtain Cybersecurity Maturity Model Certification (CMMC) and the US Federal Government is using the National Institute of Standards and Technology Special Publication 800-171 (NIST SP 800-171).  These are comprehensive requirements on defense and federal suppliers to better defend the vast attack surface of their supply chains.
 
-To stay ahead of this, the strong data governance and distributed administration capabilities of FileFlex Enterprise can be used to manage remote file access, collaboration and sharing with your third-party ecosystem.  Let’s take a look at a few scenarios.
+To stay ahead of this, the strong data governance and distributed administration capabilities of [FileFlex Enterprise](/platform/) can be used to manage remote file access, collaboration and sharing with your third-party ecosystem.  Let’s take a look at a few scenarios.
 
 ## Distributed Enforcement – The Organization with Multiple Subsidiaries and/or Locations
 
@@ -45,14 +45,14 @@ _Distributed Enforcement for the Complex Conglomerate_
 
 In a second example, a large multinational mass media and entertainment conglomerate owns several movie, sound, animation and special-effects studios that operate independently but often need to cooperate.  Their digital media libraries are enormous with huge individual files.
 
-The zero trust data access architecture of FileFlex Enterprise allows the independent studios to securely share digital media libraries, all accessible to permitted users within Windows.  The IT departments of each studio have administration over their users and what libraries they can access, they also have administration over what libraries can be accessed by the other studios and they can control the permission level of that access on a repository-by-repository or folder-by-folder basis.  They also know who has accessed, downloaded, uploaded, shared or changed any file.
+The [zero trust data access](/challenge/) architecture of FileFlex Enterprise allows the independent studios to securely share digital media libraries, all accessible to permitted users within Windows.  The IT departments of each studio have administration over their users and what libraries they can access, they also have administration over what libraries can be accessed by the other studios and they can control the permission level of that access on a repository-by-repository or folder-by-folder basis.  They also know who has accessed, downloaded, uploaded, shared or changed any file.
 
 FileFlex Enterprise provides secure zero trust data access services to facilitate the many needs of conglomerates today where the multi-tenancy of a FileFlex Enterprise Server can be used to facilitate secure B2B data access.   The only entity within the entire system that sees every activity from every tenant, company and individual user, is the system-level administrator (owner of the server). User forensics server-wide are visible and accessible to the system-level administrator and the user activities within each individual tenant may be also monitored by their respective tenant-level administrator.
 
 ## The Organization with Outside Partners, Vendors and Complex Supply Chain
 
 ### _Distributed Enforcement for The Manufacturer_
-![Distibuted administration of complex manufacturing](/images/blog/distributed-administration-of-unstructured-data-access/Distributed-Administration-Manufacturer.webp) _Distributed Enforcement of Complex Manufacturing Involving Third-Parties_
+![Distibuted administration of complex manufacturing](/images/blog/distributed-administration-of-unstructured-data-access/Distributed-Administration-Manufacturer.webp) _Distributed Enforcement of Complex [Manufacturing](/manufacturing/) Involving Third-Parties_
 
 In this last example, a large aircraft manufacturer relies heavily on third-party vendors and has a diverse and complicated supply chain.  They have several partners that make engines, electronics, and aviation components where the aircraft manufacturer is responsible for the overall engineering/design and final assembly.  To spur domestic economies, international sales often involve local government subsidies and regulations that dictate the substantial use of in-country partners for sub-assembly and engineering work.
 
@@ -67,3 +67,14 @@ The zero trust architecture and distributed administration capability of FileFle
 For more information on how FileFlex Enterprise aids compliance see:  [NIST SP-800-17v2 Access Control Practices for Remote Data Access](/blog/nist-sp-800-171v2-access-control-practices-for-remote-data-access-2/), [How to FileFlex Enterprise Helps DoD Contractors Meet CMMC Best Practices for Access Control,](/blog/how-fileflex-enterprise-helps-dod-contractors-meet-cmmc-best-practices-for-access-control/)  and [overall security of the zero trust technology](/security/).
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [How Zero Trust Data Access Cuts Operational Costs](/blog/how-zero-trust-data-access-cuts-costs-in-organizational-operations/)
+- [Why replacing FTP with ZTDA is a No-Brainer](/blog/replace-your-ftp-with-zero-trust-data-access-ztda/)
+- [Zero Trust User Access Management: 4 Best Practices](/blog/why-zero-trust-data-access-user-management-is-crucial-for-it/)
+- [24 Reasons to Use Zero Trust Data Access as an FTP Alternative](/blog/24-reasons-to-use-zero-trust-data-access-as-an-ftp-alternative/)

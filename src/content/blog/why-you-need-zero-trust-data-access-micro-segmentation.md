@@ -38,7 +38,7 @@ tables:
 
 ## Why You Need Zero Trust Data Access & Micro‑Segmentation
 
-Zero Trust Micro‑Segmentation is the practice of breaking your network into tiny, secured zones—down to users, devices, files, or folders—which stops attackers from moving laterally and limits impact from breaches. As micro‑segmentation secures the network, FileFlex complements it by introducing Zero Trust Data Access: it enforces access policies, authentication, and activity monitoring directly at the data level without moving or duplicating files.
+Zero Trust Micro‑Segmentation is the practice of breaking your network into tiny, secured zones—down to users, devices, files, or folders—which stops attackers from moving laterally and limits impact from breaches. As micro‑segmentation secures the network, FileFlex complements it by introducing [Zero Trust Data Access](/challenge/): it enforces access policies, authentication, and activity monitoring directly at the data level without moving or duplicating files.
 
 ## What is Zero Trust Micro Segmentation?
 
@@ -92,7 +92,7 @@ By combining the principles of Zero Trust Data Access and micro-segmentation, or
 
 ### **4\. Better Protection of Critical Infrastructure**:
 
--   Zero Trust Data Access micro-segmentation provides granular file and folder-level access control. Solutions like FileFlex Enterprise offer micro-segmented file and folder-level access so that only authorized users can access specific files and folders. This level of granularity enhances the protection of critical infrastructure by minimizing unauthorized access and preventing lateral movement within the network.
+-   Zero Trust Data Access micro-segmentation provides granular file and folder-level access control. Solutions like [FileFlex Enterprise](/platform/) offer micro-segmented file and folder-level access so that only authorized users can access specific files and folders. This level of granularity enhances the protection of critical infrastructure by minimizing unauthorized access and preventing lateral movement within the network.
 
 ## Why is Zero Trust Data Access Micro-Segmentation Important?
 Zero Trust Data Access micro-segmentation is important due to several key reasons:
@@ -131,3 +131,14 @@ For more reading, see [File Sharing and Collaboration Evolution from First Gener
 \*[Okta](https://www.okta.com/blog/08/state-of-zero-trust-report-2022-takeaways/)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [How to Protect Your Data with Zero Trust Data Access (ZTDA)](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)
+- [Implement Zero Trust Security, Avoid This Nightmare](/blog/implement-zero-trust-security-avoid-this-nightmare-a-true-account/)
+- [Proposed ZTDA Action Plan for Enterprise](/blog/proposed-ztda-action-plan-for-enterprise/)
+- [Ransomware + Unstructured Data = Double Trouble](/blog/ransomware-unstructured-data-double-trouble/)

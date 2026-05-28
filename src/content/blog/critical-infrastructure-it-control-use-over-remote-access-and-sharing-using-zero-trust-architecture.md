@@ -21,7 +21,7 @@ toc: true
 ![Critical Infrastructure Management Using Zero Trust Architecture](/images/blog/critical-infrastructure-it-control-use-over-remote-access-and-sharing-using-zero-trust-architecture/96-percent-data-breach-infographic-e1679325030535.webp)Critical infrastructure organizations may store various types of unstructured data, depending on the specific sector and function of the organization. Unstructured data is data that does not have a predefined structure or is not organized in a specific way, such as text documents, images, videos, or audio recordings. Examples of unstructured data that may be stored by critical infrastructure organizations include sensor data, maintenance logs, incident reports, images and videos, emails and other communications, engineering diagrams and plans, project plans, accounting and financial data, customer data, medical files, legal files, social media data and general office files used in everyday activities such as MS Office, Adobe and CAD files.
 
 ## Critical Infrastructure Management Mechanisms Enabled by a Zero Trust Architecture
-A zero trust data access architecture provides mechanisms that provide the IT department of critical infrastructure organizations management and control over the remote access and sharing of their unstructured data.  Using a management console, IT can administer users, groups, access and permissions of storage repositories, file sharing and security. Administration capabilities include:
+A [zero trust data access](/challenge/) architecture provides mechanisms that provide the IT department of critical infrastructure organizations management and control over the remote access and sharing of their unstructured data.  Using a management console, IT can administer users, groups, access and permissions of storage repositories, file sharing and security. Administration capabilities include:
 
 ### Centralized control
 -   IT departments can centrally manage and control all remote access and file-sharing activities. This includes setting user permissions, creating access policies, monitoring file activity, and revoking access when needed.
@@ -54,13 +54,13 @@ A zero trust data access architecture provides mechanisms that provide the IT de
 -   Flat fixed pricing per user with no cost creep, that leverages your existing storage investments, infrastructure and IT resources, and can reduce the use of VPNs and cloud storage.
 
 ## The Benefits of FileFlex for Critical Infrastructure Management Over Remote Access and Sharing
-FileFlex Enterprise is built on a zero trust data access architecture providing administration capabilities of centralized control, secure remote access, activity tracking, integration and federation of existing storage, user management, sharing management, decentralized enforcement, interoperability, scalability and cost-effectiveness.  The benefits of FileFlex for IT control over access and sharing of critical infrastructure include:
+[FileFlex Enterprise](/platform/) is built on a zero trust data access architecture providing administration capabilities of centralized control, secure remote access, activity tracking, integration and federation of existing storage, user management, sharing management, decentralized enforcement, interoperability, scalability and cost-effectiveness.  The benefits of FileFlex for IT control over access and sharing of critical infrastructure include:
 
 ### Improved security
 -   FileFlex Enterprise uses a suite of security protocols to enable remote access to files stored on company servers or in cloud storage accounts. These reduce the risk of data breaches and cyber-attacks.
 
 ### Reduced Risk of Ransomware
--   User authentication, micro-segmentation, activity logging, reduced use of attachments virtual data rooms and security features reduce the risk of ransomware.
+-   User authentication, micro-segmentation, activity logging, reduced use of attachments virtual data rooms and [security features](/security/) reduce the risk of ransomware.
 
 ### IT management
 -   IT departments can centrally manage and control remote access and file-sharing activities, including setting user permissions, creating access policies, monitoring file activity, and revoking access when needed. This helps ensure that only authorized personnel have remote access to sensitive data, reducing the risk of data breaches and ensuring compliance with regulatory requirements.
@@ -84,3 +84,14 @@ For more information about the protection of critical infrastructure see “[The
 \*\* [State of the Digital Workplace](https://resources.igloosoftware.com/state-of-the-digital-workplace/)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Critical Infrastructure Onboarding Ease of Use Using ZTDA](/blog/critical-infrastructure-ease-of-use-over-remote-access-and-sharing-using-zero-trust-architecture/)
+- [Protecting Critical Infrastructure Using Zero Trust — The Top 8 List](/blog/critical-infrastructure-protection-using-zero-trust-data-access-top-8/)
+- [Critical Infrastructure Regulatory Compliance Using Zero Trust](/blog/critical-infrastructure-regulatory-compliance-via-zero-trust-architectures/)
+- [What is Zero Trust Data Access (ZTDA)?](/blog/what-is-zero-trust-data-access-ztda/)

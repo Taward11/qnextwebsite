@@ -46,7 +46,7 @@ Some of the compliance requirements for user access, sharing and collaboration w
 -   Financial entities and ICT providers must monitor and report any incidents or anomalies affecting the availability, integrity, or confidentiality of their ICT systems and data, and take appropriate measures to contain, mitigate, and recover from them.
 
 ## Using Zero Trust Data Access for DORA Compliance for Unstructured Data
-Zero Trust Data Access (ZTDA) emerges as a valuable tool for financial organizations striving for DORA compliance, particularly in handling unstructured data (documents and files) within intra or inter-company communications. (It is not a solution for structured data such as individual financial transactions involving money, records, or specific pieces of data.)
+[Zero Trust Data Access](/challenge/) (ZTDA) emerges as a valuable tool for financial organizations striving for DORA compliance, particularly in handling unstructured data (documents and files) within intra or inter-company communications. (It is not a solution for structured data such as individual financial transactions involving money, records, or specific pieces of data.)
 
 In the exchange of financial and non-financial documents, ZTDA aligns with common industry practices to ensure a tailored security strategy for unstructured data and effectively addresses the unique security requirements of DORA, thereby enhancing overall compliance efforts while mitigating potential risks.
 
@@ -68,7 +68,7 @@ Management retains detailed control over access and restrictions, aligning with 
 Implementing zero trust principles via a ZTA is the key to achieving DORA compliance regarding secure access, sharing, and collaboration.
 
 ## How Zero Trust Data Access Contributes to DORA Compliance
-Here’s how Zero Trust Data Access as implemented by FileFlex Enterprise can contribute to DORA compliance:
+Here’s how Zero Trust Data Access as implemented by [FileFlex Enterprise](/platform/) can contribute to DORA compliance:
 
 ### Granular Access Control:
 -   Zero Trust Data Access emphasizes the principle of least privilege, ensuring that users only have access to the specific resources they need for their roles. This approach helps financial entities manage user access more effectively, reducing the risk of unauthorized access to sensitive data or critical systems, which aligns with the security requirements of DORA.
@@ -121,3 +121,14 @@ In conclusion, the integration of Zero Trust Data Access (ZTDA) as implemented b
 For further reading also see [Critical Infrastructure Regulatory Compliance via Zero Trust Architectures](/blog/critical-infrastructure-regulatory-compliance-via-zero-trust-architectures/) and [GDPR Compliant File Sharing Using Zero Trust Data Access](/blog/gdpr-compliant-file-sharing-using-zero-trust-data-access/).
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Secure Zero Trust Access to FedRAMP-Compliant Data](/blog/fedramp-compliance-and-zero-trust-data-access/)
+- [Zero Trust Data Access for CMMC Compliance](/blog/cmmc-compliance-for-file-sharing-access-and-collaboration-of-cui-using-zero-trust-data-access/)
+- [European Health Data Space Compliance with Zero Trust](/blog/european-health-data-space-compliance-with-zero-trust/)
+- [Zero Trust for FFIEC Compliance: Why ZTDA Is the Missing Link](/blog/meeting-ffiec-guidelines-using-zero-trust-data-access/)

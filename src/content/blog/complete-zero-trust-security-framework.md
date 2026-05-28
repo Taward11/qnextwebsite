@@ -52,7 +52,7 @@ tables:
 ---
 
 ## Introduction: The Need for a Complete Zero Trust Security Framework
-![As of 2023, 61% of organizations worldwide have implemented a zero-trust initiative, up from 24% in 2021\*](/images/blog/complete-zero-trust-security-framework/Zero-trust-security-infographic.webp) The evolution of cybersecurity has led to the rise of the Zero Trust Security model, where implicit trust is eliminated, and access is granted based on continuous verification. Two critical components of a complete Zero Trust security framework are Zero Trust Network Access (ZTNA) and Zero Trust Data Access (ZTDA). While ZTNA secures network and application access, ZTDA extends Zero Trust principles to the data itself. Together, they provide a complete zero trust security framework that protects enterprises against modern threats.  
+![As of 2023, 61% of organizations worldwide have implemented a zero-trust initiative, up from 24% in 2021\*](/images/blog/complete-zero-trust-security-framework/Zero-trust-security-infographic.webp) The evolution of cybersecurity has led to the rise of the Zero Trust Security model, where implicit trust is eliminated, and access is granted based on continuous verification. Two critical components of a complete Zero Trust security framework are Zero Trust Network Access (ZTNA) and [Zero Trust Data Access](/challenge/) (ZTDA). While ZTNA secures network and application access, ZTDA extends Zero Trust principles to the data itself. Together, they provide a complete zero trust security framework that protects enterprises against modern threats.  
 
 ## What Is a Complete Zero Trust Security Framework?
 
@@ -73,7 +73,7 @@ While ZTNA ensures that only authorized users can access applications, it does n
 -   **Granular file-level access control** beyond application permissions
 -   **Prevention of data exfiltration** by unauthorized users or compromised accounts
 -   **Visibility into file interactions** for compliance and security monitoring
--   **Policy enforcement** for regulatory requirements such as GDPR, CCPA, and HIPAA
+-   **Policy enforcement** for regulatory requirements such as [GDPR](/gdpr-compliance/), CCPA, and [HIPAA](/hipaa-compliance/)
 
 ## Benefits of a Complete Zero Trust Security Framework
 
@@ -102,3 +102,14 @@ For further reading see **[How to Enforce Zero Trust Access Control to Mitigate 
 \*[CSO Online](https://www.csoonline.com/article/656108/most-organizations-globally-have-implemented-zero-trust.html)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Top Reasons to Add Zero Trust Data Access to Illumio Core](/blog/top-reasons-to-add-zero-trust-data-access-to-illumio-core/)
+- [How to Enforce Zero Trust Access Control to Mitigate Ransomware](/blog/how-to-enforce-zero-trust-access-control-to-mitigate-data-breach-and-ransomware/)
+- [Data Governance, Cybersecurity and Zero Trust Data Access](/blog/data-governance-cybersecurity-and-zero-trust-data-access-the-essential-pillars-to-protect-data-assets/)
+- [How to Protect Your Data with Zero Trust Data Access (ZTDA)](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)

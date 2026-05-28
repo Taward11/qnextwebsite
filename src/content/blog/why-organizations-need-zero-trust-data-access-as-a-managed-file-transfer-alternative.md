@@ -36,7 +36,7 @@ Managing file transfer technology comes with a set of challenges and issues that
     -   Managed file transfer solutions often need to integrate with various systems, applications, and protocols. Compatibility and seamless integration can be complex, especially in heterogeneous IT environments.
 4.  ### **Compliance and Regulatory Challenges:**
     
-    -   Many industries have strict compliance requirements governing data transfers. Ensuring that file transfers adhere to these regulations, such as GDPR or HIPAA, is a constant challenge.
+    -   Many industries have strict compliance requirements governing data transfers. Ensuring that file transfers adhere to these regulations, such as [GDPR](/gdpr-compliance/) or [HIPAA](/hipaa-compliance/), is a constant challenge.
 5.  ### **Poor Monitoring and Reporting:**
     
     -   MFT services either lack or have ineffective management tools for real-time tracking, logging, and monitoring of file transfers needed for troubleshooting issues, forensic investigation, malicious activity detection and mitigation of ransomware attacks.
@@ -65,7 +65,7 @@ To effectively manage file transfer technology, organizations must adopt a zero 
 ![15% of organizations have moved to a zero trust file transfer alternative and another 59% plan to do so within 12 months](/images/blog/why-organizations-need-zero-trust-data-access-as-a-managed-file-transfer-alternative/File-transfer-infographic-1.webp)Due in part to the issues and compromises of Managed File Transfer, 15% of organizations have already moved to a zero trust-based MFT alternative, and another 59% plan to do so in the next 12 months.
 
 ## What is Zero Trust Data Access?
-[Zero Trust Data Access](/blog/what-is-zero-trust-data-access-ztda/) (ZTDA) as implemented by FileFlex Enterprise, is an MFT alternative that provides secure access to files and folders for authorized users in a zero-trust environment. The fundamental principle of Zero Trust Data Access is that access to data should be granted only on a need-to-know basis, and every access request should be authenticated and authorized against policy before granting access. Under the Zero Trust Data Access model, every data access request is verified against a set of rules that dictate what data can be accessed, and by whom.
+[Zero Trust Data Access](/blog/what-is-zero-trust-data-access-ztda/) (ZTDA) as implemented by [FileFlex Enterprise](/platform/), is an MFT alternative that provides secure access to files and folders for authorized users in a zero-trust environment. The fundamental principle of [Zero Trust Data Access](/challenge/) is that access to data should be granted only on a need-to-know basis, and every access request should be authenticated and authorized against policy before granting access. Under the Zero Trust Data Access model, every data access request is verified against a set of rules that dictate what data can be accessed, and by whom.
 
 A zero-trust data access architecture is designed to:
 
@@ -148,3 +148,14 @@ The early 2023 security breaches in Managed File Transfer (MFT) services, exempl
 \*[Straits Research](https://straitsresearch.com/report/managed-file-transfer-market)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [24 Reasons to Use Zero Trust Data Access as an FTP Alternative](/blog/24-reasons-to-use-zero-trust-data-access-as-an-ftp-alternative/)
+- [Content Collaboration Using Zero Trust Data Access](/blog/discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture/)
+- [How Has File Sharing Evolved? — First Generation to ZTDA](/blog/file-sharing-and-collaboration-evolution-from-first-generation-platforms-to-zero-trust-data-access/)
+- [How To Securely Share Data](/blog/how-to-securely-share-data/)

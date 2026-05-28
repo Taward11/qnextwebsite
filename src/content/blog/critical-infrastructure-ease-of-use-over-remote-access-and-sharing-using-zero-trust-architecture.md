@@ -44,7 +44,7 @@ Measures taken for critical infrastructure protection are useless if users don�
 -   Any file or folder can be shared from its original location within Windows. The file or folder can be located anywhere on the organizational infrastructure.  It does not need to be copied or synced to the server of a third party to be shared and users do not need to use a separate app.
 
 ## Benefits of the Enhanced Windows Experience for Critical Infrastructure Ease-of-Use
-FileFlex Enterprise is built on a zero trust data access architecture providing ease-of-use Windows integration, federation, functionality, access and sharing of remote storage. User benefits include:
+[FileFlex Enterprise](/platform/) is built on a [zero trust data access](/challenge/) architecture providing ease-of-use Windows integration, federation, functionality, access and sharing of remote storage. User benefits include:
 
 ### Familiarity and critical infrastructure ease of use
 -   Most users are familiar with the Windows operating system, so using FileFlex Enterprise from within Windows can make the process of accessing and sharing files more intuitive and user-friendly.
@@ -69,3 +69,14 @@ To read more about zero trust architecture for critical infrastructure organizat
 \*[Digital Workplace Report](https://resources.igloosoftware.com/state-of-the-digital-workplace/)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Critical Infrastructure Management Using Zero Trust Architecture](/blog/critical-infrastructure-it-control-use-over-remote-access-and-sharing-using-zero-trust-architecture/)
+- [Protecting Critical Infrastructure Using Zero Trust — The Top 8 List](/blog/critical-infrastructure-protection-using-zero-trust-data-access-top-8/)
+- [Critical Infrastructure Regulatory Compliance Using Zero Trust](/blog/critical-infrastructure-regulatory-compliance-via-zero-trust-architectures/)
+- [What is Zero Trust Data Access (ZTDA)?](/blog/what-is-zero-trust-data-access-ztda/)

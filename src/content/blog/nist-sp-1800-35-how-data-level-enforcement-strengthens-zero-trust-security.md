@@ -131,7 +131,7 @@ The foundational conceptual model for zero trust is still defined in NIST SP 800
 
 NIST's latest guidance emphasizes practical, real-world Zero Trust implementation, built on identity-based access, continuous verification, micro-segmentation, and minimizing implicit trust—especially for data distributed across hybrid environments.
 
-FileFlex Enterprise aligns tightly with all of these pillars and extends them into the data layer, where NIST now emphasizes significant visibility and control gaps.
+[FileFlex Enterprise](/platform/) aligns tightly with all of these pillars and extends them into the data layer, where NIST now emphasizes significant visibility and control gaps.
 
 ### 1. NIST: Zero Trust must be identity-centric and context-aware
 
@@ -174,13 +174,13 @@ FileFlex Enterprise aligns tightly with all of these pillars and extends them in
 - Provides full audit trails at the file level: open, preview, upload, download, share, permission changes, etc.
 - Offers real-time user alerts for events relevant to them (e.g., file accessed, file updated, new document added).
 - Immutable logs align with NIST guidance for compliance, incident response, and visibility.
-- Ideal for regulated industries (finance, government, utilities, healthcare).
+- Ideal for regulated industries (finance, government, utilities, [healthcare](/healthcare/)).
 
 ### 6. NIST: Zero Trust must protect data directly — not just networks
 
 **FileFlex Enterprise Alignment**
 
-- Provides Zero Trust Data Access (ZTDA): the missing layer below network and identity controls.
+- Provides [Zero Trust Data Access](/challenge/) (ZTDA): the missing layer below network and identity controls.
 - Ensures that data is never exposed, moved, synchronized, or cached unless policy allows.
 - Maintains data in its original storage location, reducing exfiltration and shadow copies.
 - Enables Zero Trust Virtual Data Rooms — a NIST-aligned model for secure collaboration and workflow.
@@ -206,3 +206,14 @@ For related reading see [The Zero Trust Data Gap](/blog/the-zero-trust-data-gap/
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
 
 \*[Gartner via FileFlex coverage](/blog/nist-sp-1800-35-how-data-level-enforcement-strengthens-zero-trust-security/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Zero Trust Data Access for NIST Compliance](/blog/using-zero-trust-data-access-for-nist-compliance/)
+- [DORA Compliance Using Zero Trust Data Access](/blog/dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access/)
+- [Secure Zero Trust Access to FedRAMP-Compliant Data](/blog/fedramp-compliance-and-zero-trust-data-access/)
+- [Zero Trust Data Access for CMMC Compliance](/blog/cmmc-compliance-for-file-sharing-access-and-collaboration-of-cui-using-zero-trust-data-access/)

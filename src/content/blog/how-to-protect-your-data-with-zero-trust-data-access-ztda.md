@@ -33,7 +33,7 @@ Once authorized, traditional defenses then essentially allow access to the netwo
 Today our defenses are pretty broad-based and static. Large groups of people essentially have the same rights and access which remains essentially unchanged.   Zero trust, on the other hand, uses granular-based policies constructed on who the user is, what device they are using, and the content they are accessing that change and adapt on a transaction-by-transaction basis.  Zero trust is not static – it is dynamic and granular – even to the user, file, and device level.
 
 ## How is Zero Trust Applied
-Ok – if you have read this far, then you have a good high-level background on what zero trust is and why you need it. But how do you apply that to your organization? In order to protect your entire organization’s hybrid-IT infrastructure, zero trust needs to be applied to network access, application access, and data access. You will need to deploy a Zero Trust Network Access (ZTNA) solution, a Zero Trust Application Access (ZTAA) solution, and a Zero Trust Data Access (ZTDA) solution.
+Ok – if you have read this far, then you have a good high-level background on what zero trust is and why you need it. But how do you apply that to your organization? In order to protect your entire organization’s hybrid-IT infrastructure, zero trust needs to be applied to network access, application access, and data access. You will need to deploy a Zero Trust Network Access (ZTNA) solution, a Zero Trust Application Access (ZTAA) solution, and a [Zero Trust Data Access](/challenge/) (ZTDA) solution.
 
 **![](/images/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/ZTDA-Chart.webp)**
 
@@ -50,7 +50,7 @@ Zero Trust Data Access is essentially a micro-segmentation of ZTAA where end-to-
 The crown jewel of any organization is its data. This could be data about its customers like names and passwords, data about its intellectual property, or data around operations. This data is the true value to most organizations. It thus stands to reason that the prime target of a malicious attacker is either to exfiltrate that data or to deny an organization access to its own data. Implementing a Zero Trust Network Access platform and/or a Zero Trust Application Access platform is a good start, but ultimately is not enough. Zero Trust Data Access fills the missing piece to protect the organization’s most valuable asset – its data.
 
 ## FileFlex Enterprise Zero Trust Data Access (ZTDA) Platform
-FileFlex Enterprise is a Zero Trust Data Access (ZTDA) platform for remote access and sharing of on-premises, cloud-hosted and SharePoint storage. It provides secure hybrid-IT data access and sharing. FileFlex augments traditional perimeter-based security by always authenticating and always verifying all transactions all the time with a “never trust, always verify” model where access to data is secured and controlled through a zero-trust platform. FileFlex Enterprise abstracts the infrastructure from shared information providing secure data access as granular as a single file and protecting against unauthorized access to the organization’s infrastructure.
+[FileFlex Enterprise](/platform/) is a Zero Trust Data Access (ZTDA) platform for remote access and sharing of on-premises, cloud-hosted and SharePoint storage. It provides secure hybrid-IT data access and sharing. FileFlex augments traditional perimeter-based security by always authenticating and always verifying all transactions all the time with a “never trust, always verify” model where access to data is secured and controlled through a zero-trust platform. FileFlex Enterprise abstracts the infrastructure from shared information providing secure data access as granular as a single file and protecting against unauthorized access to the organization’s infrastructure.
 
 ### The Secure Zero Trust Data Access (ZTDA) Processes of FileFlex Enterprise
 The architecture of FileFlex functions using a set of secure zero trust processes to protect how it accesses secures and transmits data. These include processes for user authentication, secure data transmission, accessing data, protecting credentials, use of anonymous tokens, request management, and permission management.
@@ -73,3 +73,14 @@ Watch the webinar
 <p class="blog-prose__caption--center"><em>Watch — the Webinar</em></p>
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Implement Zero Trust Security, Avoid This Nightmare](/blog/implement-zero-trust-security-avoid-this-nightmare-a-true-account/)
+- [Proposed ZTDA Action Plan for Enterprise](/blog/proposed-ztda-action-plan-for-enterprise/)
+- [Ransomware + Unstructured Data = Double Trouble](/blog/ransomware-unstructured-data-double-trouble/)
+- [Risks to Unstructured Data](/blog/risks-to-unstructured-data/)

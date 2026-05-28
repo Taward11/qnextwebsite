@@ -41,7 +41,7 @@ The problem is that Office 365 only provides remote access to one of these many 
 The challenge comes when you want to access or share files stored on your hybrid-IT infrastructure other than on your own OneDrive or desktop computer or when you need to maintain privacy and confidentiality over files in that you do not want them stored on a public cloud where they are subject to access by third-parties.
 
 ### Extending Office 365 with FileFlex Enterprise
-This is why you need FileFlex Enterprise. From a single-pane-of-glass unified dashboard, users can access, share and collaborate on any Office 365 file located anywhere on this hybrid-IT infrastructure – from on-premises storage such as a NAS, SAN, DAS, PC or on-premises implantation of SharePoint, to cloud-hosted infrastructure such as Amazon, Azure, Google, to enterprise-grade cloud storage such as Box to public cloud storage such as Dropbox, Google Drive and OneDrive. It provides access to all of these over an ordinary internet connection, without the need for a VPN. And it does so with the highest levels of security available – through a zero-trust platform.
+This is why you need [FileFlex Enterprise](/platform/). From a single-pane-of-glass unified dashboard, users can access, share and collaborate on any Office 365 file located anywhere on this hybrid-IT infrastructure – from on-premises storage such as a NAS, SAN, DAS, PC or on-premises implantation of SharePoint, to cloud-hosted infrastructure such as Amazon, Azure, Google, to enterprise-grade cloud storage such as Box to public cloud storage such as Dropbox, Google Drive and OneDrive. It provides access to all of these over an ordinary internet connection, without the need for a VPN. And it does so with the highest levels of security available – through a zero-trust platform.
 
 ### How to give IT control over remote access and sharing
 FileFlex Enterprise provides IT with the tools to regain control and visibility over all remote access and file sharing in the organization including Office 365 files. It makes workers more productive and lowers their carbon footprint. Finally, since it is a software-only solution that you add to your existing storage and because you do not need to buy more storage or buy expensive data center storage, it is very cost-effective.
@@ -53,3 +53,14 @@ Our next blog will highlight some of the benefits in detail of using FileFlex En
 <div class="blog-prose__video"><iframe src="https://www.brighttalk.com/embed/18522/448625/player" title="Extending Office 365 Functionality into a Hybrid-IT Infrastructure" loading="lazy" allow="encrypted-media" allowfullscreen></iframe></div>
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [What is Centralized Cloud vs Decentralized Hybrid-IT?](/blog/centralized-vs-decentralized-cloud-storage/)
+- [Secure Remote Access and Sharing SharePoint with External Recipients](/blog/easy-remote-access-sharing-and-collaboration-of-sharepoint-document-libraries/)
+- [How to Make Your Hybrid-IT and IaaS Infrastructure Easier for Users](/blog/how-to-make-your-multi-cloud-and-infrastructure-as-a-service-environment-easier-for-your-users/)
+- [Key Benefits of Extending Office 365 with FileFlex Enterprise](/blog/key-benefits-of-extending-office-365-with-fileflex-enterprise/)

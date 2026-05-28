@@ -18,7 +18,7 @@ toc: true
 
 By Dr. Edward Amoroso, TAG Cyber
 
- A new method has emerged for protecting unstructured data in the enterprise known as zero trust data access (ZTDA). Related to adjacent zero trust network access (ZTNA), which allows for access to networks without regard for an enterprise perimeter, ZTDA also provides for secure access, but the focus is on data – and it also exists under the assumption that perimeters cannot be used to offer a protective ring around data stores such as SharePoint.
+ A new method has emerged for protecting unstructured data in the enterprise known as [zero trust data access](/challenge/) (ZTDA). Related to adjacent zero trust network access (ZTNA), which allows for access to networks without regard for an enterprise perimeter, ZTDA also provides for secure access, but the focus is on data – and it also exists under the assumption that perimeters cannot be used to offer a protective ring around data stores such as SharePoint.
 
 ## Zero Trust Data Access Model
 
@@ -53,3 +53,14 @@ In Article 1, TAG Cyber CEO  Dr. Edward Amoroso examines “[How To Securely Sh
 Copyright © 2022 TAG Cyber LLC
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [How to Protect Your Data with Zero Trust Data Access (ZTDA)](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)
+- [Implement Zero Trust Security, Avoid This Nightmare](/blog/implement-zero-trust-security-avoid-this-nightmare-a-true-account/)
+- [Proposed ZTDA Action Plan for Enterprise](/blog/proposed-ztda-action-plan-for-enterprise/)
+- [Ransomware + Unstructured Data = Double Trouble](/blog/ransomware-unstructured-data-double-trouble/)

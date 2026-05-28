@@ -45,7 +45,7 @@ Opening files sent by spear-phishing is by far the top vector of attack and the 
 ## How to Mitigate Spear-Phishing with the FileFlex Enterprise Zero-Trust Platform
 ### FileFlex Enterprise allows you to restrict or reduce the use of links and attachments
 
-FileFlex Enterprise helps mitigate malware introduced through the use of spoofed email senders with embedded links to cloud-based file-sharing services and the use of disguised email attachments because instead of relying on anti-virus software now you can restrict or limit the use of links and attachments within your organization and force user authentication through FileFlex. Instead of relying on perimeter defenses, you use a zero-trust approach and bring IT control over sharing.
+[FileFlex Enterprise](/platform/) helps mitigate malware introduced through the use of spoofed email senders with embedded links to cloud-based file-sharing services and the use of disguised email attachments because instead of relying on anti-virus software now you can restrict or limit the use of links and attachments within your organization and force user authentication through FileFlex. Instead of relying on perimeter defenses, you use a zero-trust approach and bring IT control over sharing.
 
 ### FileFlex Enterprise sharing forces zero-trust user authentication and layered security
 
@@ -72,3 +72,14 @@ In the podinar produced by the Edge Computing Association below, Tom Ward, VP of
 [\[4\]](#_ftnref4)  [https://www.symantec.com/security-center/threat-report](https://www.symantec.com/security-center/threat-report)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [How Zero Trust Security Casts a Wide Net on Spear-Phishers](/blog/how-zero-trust-security-promises-to-cast-a-wide-net-on-spear-phishers/)
+- [Why Zero Trust and Why Now?](/blog/why-zero-trust-and-why-now/)
+- [How to Enable Your Remote Workforce with Zero Trust-By-Design](/blog/enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn/)
+- [How to Protect Your Data with Zero Trust Data Access (ZTDA)](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)

@@ -18,7 +18,7 @@ toc: true
 
 With a VPN, once users have made it through your perimeter, they typically have access to your whole infrastructure. Zero Trust Network Access (ZTNA) and Zero Trust Application Access (ZTAA) platforms, meanwhile, strengthen authentication and access controls to smaller segments of the enterprise network and applications.
 
-That said, ZTNA and ZTAA platforms provide limited tools to control access to the data – particularly file-based unstructured data in the form of documents, PDF files, images, videos, and spreadsheets. A Zero Trust Data Access (ZTDA) platform like FileFlex Enterprise, however, provides the policy decision point for unstructured data access not found in ZTNA and ZTAA platforms. Subsequently, using a ZTDA platform for sharing files greatly reduces the threat profile of your organization.
+That said, ZTNA and ZTAA platforms provide limited tools to control access to the data – particularly file-based unstructured data in the form of documents, PDF files, images, videos, and spreadsheets. A [Zero Trust Data Access](/challenge/) (ZTDA) platform like [FileFlex Enterprise](/platform/), however, provides the policy decision point for unstructured data access not found in ZTNA and ZTAA platforms. Subsequently, using a ZTDA platform for sharing files greatly reduces the threat profile of your organization.
 
 Embedding malware in a file and sending it as an email attachment from a trusted source is the most common attack vector.  Although anti-virus software attempts to scan and quarantine for this, it is not 100% effective. One of my clients knows this all too well. In fact, had they taken Zero Trust security measures by implementing a ZTDA platform like FileFlex Enterprise, the following would not have unfolded.
 
@@ -37,7 +37,7 @@ While Alice and her fellow employees slept that night, cybercriminals accessed A
 At the start of the next business day, employees arrived to discover all of the company servers completely encrypted and unusable, as well as ransom notes demanding 17 million USD for their safe retrieval.
 
 ### How the attack impacted its victim.
-Business came to a standstill. All manufacturing stopped. Given the size of the organization and the large number of systems that had to be restored, the resolution process took close to two months, which is not unusual. According to [Ponemon’s 2020 report](https://cdw-prod.adobecqms.net/content/dam/cdw/on-domain-cdw/brands/proofpoint/ponemon-global-cost-of-insider-threats-2020-report.pdf): “It takes an average of 77 days to contain each insider threat incident. Only 13 percent of incidents were contained in less than 30 days.”
+Business came to a standstill. All [manufacturing](/manufacturing/) stopped. Given the size of the organization and the large number of systems that had to be restored, the resolution process took close to two months, which is not unusual. According to [Ponemon’s 2020 report](https://cdw-prod.adobecqms.net/content/dam/cdw/on-domain-cdw/brands/proofpoint/ponemon-global-cost-of-insider-threats-2020-report.pdf): “It takes an average of 77 days to contain each insider threat incident. Only 13 percent of incidents were contained in less than 30 days.”
 
 After engaging a digital forensics and incident response team, the company negotiated a final ransom of $7 million. Upon payment, it obtained the decryption keys and reclaimed its stolen data. Still, the total cost of business interruption and loss of revenues came to roughly $28 million – $11 million more than the original ransom.
 
@@ -56,3 +56,14 @@ Alice’s story isn’t uncommon. Keep in mind that your business is only ever o
 For more reading on how Zero Trust security protects you against spear phishing, read [Why Zero Trust, Why Now](/blog/why-zero-trust-and-why-now/) and [Zero Trust Security Promises to Cast a Wide Net on Spear-Phishers](/blog/how-zero-trust-security-promises-to-cast-a-wide-net-on-spear-phishers/).
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [How to Protect Your Data with Zero Trust Data Access (ZTDA)](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)
+- [Proposed ZTDA Action Plan for Enterprise](/blog/proposed-ztda-action-plan-for-enterprise/)
+- [Ransomware + Unstructured Data = Double Trouble](/blog/ransomware-unstructured-data-double-trouble/)
+- [Risks to Unstructured Data](/blog/risks-to-unstructured-data/)

@@ -20,7 +20,7 @@ toc: true
 ---
 
 ## Introduction: Enhancing Data Security through Zero Trust Access Control with Illumio Core and FileFlex Enterprise
-![The percentage of organizations worldwide that have implemented zero-trust was 61% in 2023 with another 35% planning zero-trust security initiatives over the next 18 months. Only 4% were neither planning nor had one in place. \*](/images/blog/how-to-enforce-zero-trust-access-control-to-mitigate-data-breach-and-ransomware/Zero-trust-use-infographic.webp) In today’s digital landscape, data breaches and ransomware attacks are significant threats to organizational security. Traditional perimeter-based defenses are no longer sufficient to protect sensitive data. Instead, a zero-trust approach, which assumes that threats could be both external and internal, is essential for robust security. This article explores how to enforce Zero Trust access control using Illumio Core Zero Trust Network Access and FileFlex Enterprise Zero Trust Data Access to mitigate data breaches and ransomware risks effectively.  
+![The percentage of organizations worldwide that have implemented zero-trust was 61% in 2023 with another 35% planning zero-trust security initiatives over the next 18 months. Only 4% were neither planning nor had one in place. \*](/images/blog/how-to-enforce-zero-trust-access-control-to-mitigate-data-breach-and-ransomware/Zero-trust-use-infographic.webp) In today’s digital landscape, data breaches and ransomware attacks are significant threats to organizational security. Traditional perimeter-based defenses are no longer sufficient to protect sensitive data. Instead, a zero-trust approach, which assumes that threats could be both external and internal, is essential for robust security. This article explores how to enforce Zero Trust access control using Illumio Core Zero Trust Network Access and [FileFlex Enterprise](/platform/) [Zero Trust Data Access](/challenge/) to mitigate data breaches and ransomware risks effectively.  
 
 ## Understanding Illumio Core
 Illumio Core is a zero-trust micro-segmentation and security platform that enables organizations to visualize, segment, and control network traffic across their environments. It allows for the implementation of fine-grained security policies to control how applications and users interact with different network segments and resources.  
@@ -95,3 +95,14 @@ In conclusion, by integrating Illumio Core with FileFlex Enterprise, organizatio
 \*[CSO](https://www.csoonline.com/article/656108/most-organizations-globally-have-implemented-zero-trust.html)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Top Reasons to Add Zero Trust Data Access to Illumio Core](/blog/top-reasons-to-add-zero-trust-data-access-to-illumio-core/)
+- [How to Reduce the Risk of Ransomware with Zero Trust](/blog/how-to-reduce-the-risk-of-ransomware-with-zero-trust/)
+- [How to Build a Complete Zero Trust Security Framework](/blog/complete-zero-trust-security-framework/)
+- [Cybersecurity for Law Firms: The Priority of Zero Trust Security](/blog/cybersecurity-for-law-firms-the-priority-of-zero-trust-data-access-security/)

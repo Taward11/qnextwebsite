@@ -26,7 +26,7 @@ A virtual data room is used to facilitate a legal book of documents, discovery, 
 
 ## What is a Virtual Data Room with FileFlex Enterprise?
 
-With FileFlex Enterprise a data room is a folder located somewhere on the storage infrastructure that the user shares with colleagues and allows them upload rights.  The recipient has visibility to what is in the folder and they can add files to the folder by dragging and dropping them.
+With [FileFlex Enterprise](/platform/) a data room is a folder located somewhere on the storage infrastructure that the user shares with colleagues and allows them upload rights.  The recipient has visibility to what is in the folder and they can add files to the folder by dragging and dropping them.
 
 ## What is the Virtual Data Room Pricing?
 
@@ -94,3 +94,14 @@ They open the folder and then can drag and drop files into it.
  _![Create a Virtual Data Room](/images/blog/use-fileflex-enterprise-to-create-virtual-data-rooms/Create-a-Virtual-Data-Room-Pic-recipient-view-drag-and-drop.webp) Recipients drag and drop files and folders into the data room_
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [FileFlex Enterprise is the Best Alternative to Varonis DatAnywhere](/blog/varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative/)
+- [Secure Remote Access and Sharing SharePoint with External Recipients](/blog/easy-remote-access-sharing-and-collaboration-of-sharepoint-document-libraries/)
+- [How to Enable Your Remote Workforce with Zero Trust-By-Design](/blog/enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn/)
+- [Key Benefits of Extending Office 365 with FileFlex Enterprise](/blog/key-benefits-of-extending-office-365-with-fileflex-enterprise/)

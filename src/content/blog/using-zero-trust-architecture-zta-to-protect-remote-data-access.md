@@ -60,9 +60,9 @@ When malicious attackers gain access to, say, your customer profiles or data aro
 
 To protect your entire organization, you need to do more than secure your network and application access; you need to secure your data. At the moment, there is only one platform available worldwide that is capable of helping you accomplish this: [FileFlex Enterprise Zero Trust Data Access](/security/) (ZTDA).
 
-Zero trust is about “verifying, every step of the way, how people access data, whether it’s through an application or device,” says Forrester Research analyst [Steve Turner](https://go.forrester.com/blogs/author/steve_turner/).  FileFlex Enterprise is the data piece that zero trust has been missing.
+Zero trust is about “verifying, every step of the way, how people access data, whether it’s through an application or device,” says Forrester Research analyst [Steve Turner](https://go.forrester.com/blogs/author/steve_turner/).  [FileFlex Enterprise](/platform/) is the data piece that zero trust has been missing.
 
-In the same way that ZTNA and ZTAA applications are Zero Trust Architectures (ZTA) that use micro-segmentation to create secure connections between users, your network, and applications, Zero Trust Data Access (ZTDA) uses Zero Trust Architecture (ZTA) micro-segmentation to secure the connection between users and your data. 
+In the same way that ZTNA and ZTAA applications are Zero Trust Architectures (ZTA) that use micro-segmentation to create secure connections between users, your network, and applications, [Zero Trust Data Access](/challenge/) (ZTDA) uses Zero Trust Architecture (ZTA) micro-segmentation to secure the connection between users and your data. 
 
 Whenever a request for data is received, secure zero trust data access processes kick in, providing secure, micro-level data access (as granular as a single file) that protects unauthorized access to your organization’s infrastructure. 
 
@@ -81,3 +81,14 @@ Adversaries know this and they’re looking for ways to exploit any and all secu
 For more reading on Zero Trust Architecture (ZTA) and Zero Trust Data Access (ZTDA), see [How to Use Zero Trust to Meet CMMC Access Control Practices for Remote Data Access](/blog/how-fileflex-enterprise-helps-dod-contractors-meet-cmmc-best-practices-for-access-control/), [How to Meet NIST Guidelines for Zero Trust for Remote Data Access](/blog/nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access/), [Why Zero Trust and Why Now?](/blog/why-zero-trust-and-why-now/), and [How to Protect Your Data With Zero Trust Data Access](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [How to Enable Your Remote Workforce with Zero Trust-By-Design](/blog/enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn/)
+- [Zero Trust Remote Access Protection for Internal Security Threats](/blog/zero-trust-remote-access-helps-protect-data-against-internal-security-threats/)
+- [From VPN Risk to Zero Trust Security: A Smarter Approach to Remote Access](/blog/from-vpn-risk-to-zero-trust-security-a-smarter-approach-to-remote-access/)
+- [FileFlex Enterprise is the Best Alternative to Varonis DatAnywhere](/blog/varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative/)

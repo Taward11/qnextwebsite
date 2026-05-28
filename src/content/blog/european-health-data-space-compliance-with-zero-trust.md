@@ -38,7 +38,7 @@ tables:
 
 ![European Health Data Space Compliance: Fines up to €20 million or 4 % of global turnover for non-compliance (akin to GDPR penalties) ](/images/blog/european-health-data-space-compliance-with-zero-trust/European-Health-Data-Space-Compliance-infographic.webp) The European Health Data Space (EHDS) is one of the EU’s most ambitious digital health initiatives—designed to improve patient outcomes, enable secure data exchange across borders, and drive innovation through the responsible reuse of health data. But as this sweeping regulation moves forward, organizations must prepare now to meet the complex requirements of European Health Data Space compliance.
 
-In this blog, we’ll explore what EHDS is, its implementation timeline, and how Zero Trust Data Access (ZTDA) can play a crucial role in helping organizations comply with its data protection and governance standards.  
+In this blog, we’ll explore what EHDS is, its implementation timeline, and how [Zero Trust Data Access](/challenge/) (ZTDA) can play a crucial role in helping organizations comply with its data protection and governance standards.  
 
 ## What Is the European Health Data Space?
 The European Health Data Space (EHDS) is a legal and technical framework that aims to create a common European infrastructure for the access, exchange, and reuse of electronic health data. Its dual mission is to:
@@ -46,7 +46,7 @@ The European Health Data Space (EHDS) is a legal and technical framework that ai
 1.  ![The European Health Data Space (EHDS) is one of the EU’s most ambitious digital health initiatives](/images/blog/european-health-data-space-compliance-with-zero-trust/EHDS-Quote-1.webp) Empower citizens with control over their personal health data, enabling them to access and share their electronic health records (EHRs) across EU countries.
 2.  Enable secure secondary use of health data for research, innovation, policy-making, and public health—under strict governance and privacy safeguards.
 
-EHDS complements and reinforces the EU’s data protection laws, including the General Data Protection Regulation (GDPR), by introducing additional obligations for health data access, auditability, and data minimization.
+EHDS complements and reinforces the EU’s data protection laws, including the General Data Protection Regulation ([GDPR](/gdpr-compliance/)), by introducing additional obligations for health data access, auditability, and data minimization.
 
 ## EHDS Compliance Timeline
 The EHDS regulation entered into force on March 26, 2025, with implementation taking place over the next several years:
@@ -55,7 +55,7 @@ The EHDS regulation entered into force on March 26, 2025, with implementation ta
 
   
 
-European Health Data Space compliance efforts must begin well before these dates, as healthcare providers, researchers, and IT vendors will need to redesign data access systems, governance processes, and security models.
+European Health Data Space compliance efforts must begin well before these dates, as [healthcare](/healthcare/) providers, researchers, and IT vendors will need to redesign data access systems, governance processes, and security models.
 
 ## What Does EHDS Compliance Require?
 EHDS compliance includes a wide range of technical and organizational requirements, such as:  
@@ -69,7 +69,7 @@ EHDS compliance includes a wide range of technical and organizational requiremen
 These demands go far beyond traditional IT security. They require a data-centric security model—one that aligns perfectly with Zero Trust Data Access.
 
 ## How Zero Trust Data Access Enables EHDS Compliance
-![Zero Trust Data Access is a powerful approach for organizations that must demonstrate European Health Data Space (EHDS compliance.](/images/blog/european-health-data-space-compliance-with-zero-trust/EDHS-Quote-2.webp) Zero Trust Data Access (ZTDA), as implemented by FileFlex Enterprise,  is a modern security framework that ensures data is never trusted by default and is only accessible under verified context-aware conditions. It’s a powerful approach for organizations that must demonstrate EHDS compliance.
+![Zero Trust Data Access is a powerful approach for organizations that must demonstrate European Health Data Space (EHDS compliance.](/images/blog/european-health-data-space-compliance-with-zero-trust/EDHS-Quote-2.webp) Zero Trust Data Access (ZTDA), as implemented by [FileFlex Enterprise](/platform/),  is a modern security framework that ensures data is never trusted by default and is only accessible under verified context-aware conditions. It’s a powerful approach for organizations that must demonstrate EHDS compliance.
 
 Here’s how ZTDA helps:
 
@@ -128,3 +128,14 @@ Contact us to see how we can help you build a secure, compliant, and future-read
 \*[Eurodis](https://www.eurordis.org/ehds-training-session/?utm_source=chatgpt.com)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [GDPR-Compliant File Sharing with Zero Trust](/blog/gdpr-compliant-file-sharing-using-zero-trust-data-access/)
+- [DORA Compliance Using Zero Trust Data Access](/blog/dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access/)
+- [Secure Zero Trust Access to FedRAMP-Compliant Data](/blog/fedramp-compliance-and-zero-trust-data-access/)
+- [Zero Trust Data Access for CMMC Compliance](/blog/cmmc-compliance-for-file-sharing-access-and-collaboration-of-cui-using-zero-trust-data-access/)

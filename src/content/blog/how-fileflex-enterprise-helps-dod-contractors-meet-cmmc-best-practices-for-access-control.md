@@ -85,7 +85,7 @@ It establishes five certification levels each with a set of supporting practices
 
 The CMMC framework categorizes 173 cybersecurity best practices into 17 broad domains such as ‘Access Control” and “Systems and Communications Protection”.   These include 43 distinct capabilities such as remote system access and are mapped across the 5 cybersecurity certification levels.
 
-This blog looks at FileFlex Enterprise and shows how it meets the published best “Access Control” practices for remote data access.
+This blog looks at [FileFlex Enterprise](/platform/) and shows how it meets the published best “Access Control” practices for remote data access.
 
 ## How FileFlex Enterprise Aids CMMC Access Control Requirements for Remote Data Access
 
@@ -107,6 +107,17 @@ This blog looks at FileFlex Enterprise and shows how it meets the published best
 
 ### More
 
-For more reading on zero trust and zero trust data access see “[How to Meet NIST Guidelines for Zero Trust for Remote Data Access](/blog/nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access/)“, “[Why Zero Trust and Why Now?](/blog/why-zero-trust-and-why-now/)“, and “[How to Protect Your Data With Zero Trust Data Access](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)“.  For more information on CMMC go to [https://cmmcab.org/](https://cmmcab.org/)
+For more reading on zero trust and [zero trust data access](/challenge/) see “[How to Meet NIST Guidelines for Zero Trust for Remote Data Access](/blog/nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access/)“, “[Why Zero Trust and Why Now?](/blog/why-zero-trust-and-why-now/)“, and “[How to Protect Your Data With Zero Trust Data Access](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)“.  For more information on CMMC go to [https://cmmcab.org/](https://cmmcab.org/)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [How to Meet NIST Guidelines for Zero Trust for Remote Data Access](/blog/nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access/)
+- [How to Meet NIST SP-800-171v2 Access Control Practices](/blog/nist-sp-800-171v2-access-control-practices-for-remote-data-access-2/)
+- [Why Zero Trust and Why Now?](/blog/why-zero-trust-and-why-now/)
+- [How to Enable Your Remote Workforce with Zero Trust-By-Design](/blog/enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn/)

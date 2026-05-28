@@ -21,12 +21,12 @@ toc: true
 
 Microsoft thoroughly understands how to build market advantage.  It operates globally with popular product suites such as Windows and Office, productivity and collaboration products such as Teams and SharePoint, cloud services such as Azure and OneDrive and important enterprise products such as Authenticator, Azure Active Directory, and Sentinel.  Used alone they are each powerful products, however, when used together they create a digital transformation that streamlines operations, improves responsiveness and service levels, reduces costs and empowers your teams by securely providing them with the right information at the right time.
 
-This digital transformation is multiplied when Zero Trust Data Access (ZTDA) functionality and security are tied in and used to add value to the Microsoft ecosystem.
+This digital transformation is multiplied when [Zero Trust Data Access](/challenge/) (ZTDA) functionality and security are tied in and used to add value to the Microsoft ecosystem.
 
 ## Adding Zero Trust Data Access to Microsoft Products to Mitigate Ransomware
 With the massive increase in unstructured data stored and used by today’s![](/images/blog/accelerating-digital-transformation-leveraging-zero-trust-data-access-in-a-microsoft-ecosystem/002-Ransomware-for-PP.webp) organizations, we have seen a corresponding rise in ransomware with badly protected unstructured data being the main target of attack. Because ransomware requires access to files and folders it is ultimately a data access issue.   That means that you have to monitor and control user access to files and folders as much as possible.
 
-Products that employ a zero trust data access architecture, such as FileFlex Enterprise, can give you that capability. ZTDA provides the data-centric tools for this data-centric threat. It adds productivity and security based on a zero trust architecture into your Microsoft ecosystem by integrating and working with your Microsoft products, cloud services and enterprise utilities.
+Products that employ a zero trust data access architecture, such as [FileFlex Enterprise](/platform/), can give you that capability. ZTDA provides the data-centric tools for this data-centric threat. It adds productivity and security based on a zero trust architecture into your Microsoft ecosystem by integrating and working with your Microsoft products, cloud services and enterprise utilities.
 
 ## Zero Trust Micro-Segmentation, Identity Management, Role-Based Least Privilege Access and Activity Tracking
 
@@ -87,3 +87,14 @@ From here, users can interact with their assigned content repositories. Using th
 The FileFlex Enterprise Windows client communicates to the FileFlex Enterprise server which is hosted on Microsoft Azure inside a clustered, high availability Microsoft Azure Virtual Machines.  The server then communicates with a FileFlex connector which can connect a user to their Azure, SharePoint, OneDrive, on-premises or local storage and it keeps an activity log for all users and all transactions.  The activity log works stand-alone or together with Microsoft Sentinel to provide IT visibility and alerts over suspicious activity.
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [19 Reasons Why ZTDA Is an Essential SharePoint Add-in](/blog/19-reasons-why-zero-trust-data-access-is-an-essential-sharepoint-add-in/)
+- [22 Reasons to Supplement Microsoft 365 E5 Security with ZTDA](/blog/21-reasons-to-supplement-microsoft-365-e5-security-with-zero-trust-data-access/)
+- [SharePoint Under Siege: Why Zero Trust Access Is Now Critical](/blog/sharepoint-zero-trust-security-and-defending-against-zero-day-vulnerabilities/)
+- [Extending Microsoft Fabric with Zero Trust Data Access for Unstructured Data](/blog/extending-microsoft-fabric-with-zero-trust-data-access-for-unstructured-data/)

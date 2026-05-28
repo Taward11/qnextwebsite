@@ -18,7 +18,7 @@ toc: true
 
 ## What is Centralized Cloud vs Decentralized Hybrid-IT?
 
-The most common question we get is how FileFlex Enterprise compares to various cloud storage services. Maybe you have this same question.
+The most common question we get is how [FileFlex Enterprise](/platform/) compares to various cloud storage services. Maybe you have this same question.
 
 ### Which cloud storage options use the centralized cloud model
 
@@ -26,7 +26,7 @@ All cloud storage options, no matter who they are, use the same basic architectu
 
 ### FileFlex Enterprise uses the decentralized hybrid-IT model
 
-The FileFlex decentralized hybrid-IT architecture differentiates it from other file remote access and sharing platforms. Their dependence to duplicate and sync data to a central server cluster has resulted in compromises and issues such as an increased risk posture, privacy compromise, fragmented data, the need to manage limited subsets, technical complexity, and high cost. Because of the tremendous productivity benefits the centralized structure offers, the market has accepted these compromises. However, the decentralized hybrid-IT architecture of FileFlex allows it to address the compromises and issues inherent to traditional cloud storage solutions at a lower cost. FileFlex improves the organization’s security posture, allows access to all storage, on-premises, cloud-hosted, and SharePoint – not just subsets – ensures privacy, keeps the management of organizational files under organizational control, accelerates compliance to privacy regulations such as GDPR and HIPAA, and leverages the organization’s existing storage infrastructure to produce a disruptive low-cost model that can be applied to all storage.
+The FileFlex decentralized hybrid-IT architecture differentiates it from other file remote access and sharing platforms. Their dependence to duplicate and sync data to a central server cluster has resulted in compromises and issues such as an increased risk posture, privacy compromise, fragmented data, the need to manage limited subsets, technical complexity, and high cost. Because of the tremendous productivity benefits the centralized structure offers, the market has accepted these compromises. However, the decentralized hybrid-IT architecture of FileFlex allows it to address the compromises and issues inherent to traditional cloud storage solutions at a lower cost. FileFlex improves the organization’s security posture, allows access to all storage, on-premises, cloud-hosted, and SharePoint – not just subsets – ensures privacy, keeps the management of organizational files under organizational control, accelerates compliance to privacy regulations such as [GDPR](/gdpr-compliance/) and [HIPAA](/hipaa-compliance/), and leverages the organization’s existing storage infrastructure to produce a disruptive low-cost model that can be applied to all storage.
 
 ## Understanding the Centralized Cloud Architecture Used by All Cloud Storage Providers
 _![](/images/blog/centralized-vs-decentralized-cloud-storage/Centralized-Cloud-Architecture.webp)_
@@ -86,7 +86,7 @@ Data is stored in source locations which all now have cloud functionality of rem
 -   Leverages existing storage infrastructure and servers for the lowest-cost model
 
 ### What Are Some Other Advantages of FileFlex
--   Build on a zero trust data access platform (ZTDA) that always verifies and always authenticates every transaction
+-   Build on a [zero trust data access](/challenge/) platform (ZTDA) that always verifies and always authenticates every transaction
 -   Can be platform hardened via Intel CPU for silicon-to-silicon level security
 -   Supports device authentication, SSO, U2F universal two-factor authentication, and YubiKey to protect against phishing
 -   Is a software-only solution that runs from a VM applied to existing storage?
@@ -95,3 +95,14 @@ Data is stored in source locations which all now have cloud functionality of rem
 \[1\] [https://www.salesforce.com/content/dam/web/en\_us/www/documents/legal/Agreements/policies/ExternalFacing\_Services\_Policy.pdf](https://www.salesforce.com/content/dam/web/en_us/www/documents/legal/Agreements/policies/ExternalFacing_Services_Policy.pdf)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Extending Office 365 Functionality into a Hybrid-IT Infrastructure](/blog/extending-office-365-functionality-into-a-hybrid-it-infrastructure/)
+- [How to Make Your Hybrid-IT and IaaS Infrastructure Easier for Users](/blog/how-to-make-your-multi-cloud-and-infrastructure-as-a-service-environment-easier-for-your-users/)
+- [19 Reasons Why ZTDA Is an Essential SharePoint Add-in](/blog/19-reasons-why-zero-trust-data-access-is-an-essential-sharepoint-add-in/)
+- [22 Reasons to Supplement Microsoft 365 E5 Security with ZTDA](/blog/21-reasons-to-supplement-microsoft-365-e5-security-with-zero-trust-data-access/)

@@ -80,7 +80,7 @@ The top two differences between a credit union and a bank are:
     -   These attacks aim to overwhelm a credit union’s network, causing service outages, which can disrupt member access to accounts and services.
 
 ## What is Zero Trust Data (ZTDA) Access Based Cybersecurity?
-Zero Trust Data Access (ZTDA) is a security framework designed to grant access to files and folders only to authenticated and authorized users in a zero-trust environment. Its core principle is to restrict access to data on a need-to-know basis, ensuring that every access request is rigorously authenticated and evaluated against a defined set of rules.  ZTDA assumes every access attempt could be malicious, thus preventing unauthorized access and reducing the risk of data breaches.  For a more detailed description see [What is Zero Trust Data Access (ZTDA)?](/blog/what-is-zero-trust-data-access-ztda/)
+[Zero Trust Data Access](/challenge/) (ZTDA) is a security framework designed to grant access to files and folders only to authenticated and authorized users in a zero-trust environment. Its core principle is to restrict access to data on a need-to-know basis, ensuring that every access request is rigorously authenticated and evaluated against a defined set of rules.  ZTDA assumes every access attempt could be malicious, thus preventing unauthorized access and reducing the risk of data breaches.  For a more detailed description see [What is Zero Trust Data Access (ZTDA)?](/blog/what-is-zero-trust-data-access-ztda/)
 
 ## Why Credit Unions Need Zero Trust Data Access Cybersecurity
 1.  ### **Enhances Member Trust and Protection:**
@@ -156,3 +156,14 @@ In conclusion, by adopting Zero Trust Data Access technology, credit unions can 
 \*[mx.com](https://www.mx.com/blog/)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Advantages of Zero Trust Virtual Data Rooms for Banks and Credit Unions](/blog/advantages-of-zero-trust-virtual-data-rooms-for-banks-and-credit-unions/)
+- [Zero Trust for GLBA Compliance: File-Level Data Protection](/blog/strengthening-glba-compliance-with-zero-trust-data-access/)
+- [Supporting Financial Services Cybersecurity Through Zero Trust Data Access](/blog/supporting-financial-services-cybersecurity-through-zero-trust-data-access/)
+- [How Zero Trust Data Access Cuts Operational Costs](/blog/how-zero-trust-data-access-cuts-costs-in-organizational-operations/)

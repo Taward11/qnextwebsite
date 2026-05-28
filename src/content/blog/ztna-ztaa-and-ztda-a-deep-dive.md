@@ -32,7 +32,7 @@ The framework has also evolved as witnessed by a recent Markets & Markets report
 
 The architecture, authors of the report wrote, “presents a necessary architectural model for all organizations with the slightest iota of digital footprint.
 
-“In recent years, inspiring developments in the Zero Trust technology have transpired, including the unveiling of the industry’s first Zero Trust Data Access (ZTDA) platform – Qnext’s FileFlex Enterprise – that facilitates remote access and data sharing (of unstructured data) across the IT infrastructure.”
+“In recent years, inspiring developments in the Zero Trust technology have transpired, including the unveiling of the industry’s first [Zero Trust Data Access](/challenge/) (ZTDA) platform – Qnext’s [FileFlex Enterprise](/platform/) – that facilitates remote access and data sharing (of unstructured data) across the IT infrastructure.”
 
 ## ZTNA, ZTAA and ZTAA – A Layered Approach
 ![ZTNA, ZTAA and ZTDA](/images/blog/ztna-ztaa-and-ztda-a-deep-dive/Complete_Protection-tw-edits.webp)
@@ -77,3 +77,14 @@ Still, it was an attack that no company, regardless of how large or small, would
 For further reading see W[hy Your Zero Trust Security Model Must Include Zero Trust Data Access (ZTDA)](/blog/zero-trust-security-model-must-include-zero-trust-data-access-ztda/) and [What is Zero Trust Data Access (ZTDA)?](/blog/what-is-zero-trust-data-access-ztda/).
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [How to Protect Your Data with Zero Trust Data Access (ZTDA)](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)
+- [Implement Zero Trust Security, Avoid This Nightmare](/blog/implement-zero-trust-security-avoid-this-nightmare-a-true-account/)
+- [Proposed ZTDA Action Plan for Enterprise](/blog/proposed-ztda-action-plan-for-enterprise/)
+- [Ransomware + Unstructured Data = Double Trouble](/blog/ransomware-unstructured-data-double-trouble/)

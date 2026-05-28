@@ -18,7 +18,7 @@ toc: true
 
 By Dr. Edward Amoroso, TAG Cyber
 
-Founded in 2016, IT security company Qnext offers the FileFlex Enterprise platform, which supports data access and sharing for enterprise. This commercial, zero trust-based solution is designed specifically to make business processes more effective and secure by supporting sharing and unified access across on-premise, hybrid and cloud infrastructure.
+Founded in 2016, IT security company Qnext offers the [FileFlex Enterprise](/platform/) platform, which supports data access and sharing for enterprise. This commercial, zero trust-based solution is designed specifically to make business processes more effective and secure by supporting sharing and unified access across on-premise, hybrid and cloud infrastructure.
 
  _![](/images/blog/the-fileflex-enterprise-commercial-platform-for-zero-trust-data-access/TAG-Cyber-architecture-diagram.webp) Simplified FileFlex Enterprise Architecture_
 
@@ -51,8 +51,19 @@ Cloud solutions create fragmented separate silos, compromise privacy and require
 
 ## Understanding Zero Trust Data Access
 
-This article is the fourth in a series of 5 from TAG Cyber on Understanding Zero Trust Data Access.
+This article is the fourth in a series of 5 from TAG Cyber on Understanding [Zero Trust Data Access](/challenge/).
 
 In Article 1, TAG Cyber CEO  Dr. Edward Amoroso examines “[How To Securely Share Data?](/blog/how-to-securely-share-data/)”.  In the second article, TAG Cyber’s Chris Wilder looked at the [risks to unstructured data](/blog/risks-to-unstructured-data/).  In Article 3, TAG Cyber’s Ed Amoroso expands on this theme to outline [zero trust access method](/blog/zero-trust-data-access-methods/)s and how zero trust data access might work at the file and folder level for customers. Article 5 from TAG Cyber’s Dr. Ed Amoroso proposes an [action plan for enterprises](/blog/proposed-ztda-action-plan-for-enterprise/) in this area.
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [How to Protect Your Data with Zero Trust Data Access (ZTDA)](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)
+- [Implement Zero Trust Security, Avoid This Nightmare](/blog/implement-zero-trust-security-avoid-this-nightmare-a-true-account/)
+- [Proposed ZTDA Action Plan for Enterprise](/blog/proposed-ztda-action-plan-for-enterprise/)
+- [Ransomware + Unstructured Data = Double Trouble](/blog/ransomware-unstructured-data-double-trouble/)

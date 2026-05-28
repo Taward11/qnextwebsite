@@ -44,7 +44,7 @@ tables:
 
 ![10,000+ organizations trust Cloudflare One for secure access and Zero Trust connectivity across their teams](/images/blog/cloudflare-one-and-fileflex-enterprise-securing-apps-and-data-together/Cloudflare-infographic.webp)
 
-Modern organizations need to secure both the apps users access and the data that those apps handle. Cloudflare optimizes and protects application traffic while Cloudflare One enforces Zero Trust access policies. FileFlex Enterprise complements this by extending Zero Trust to the data itself, providing file-level permissions, auditing, and governance across all storage locations. Together, they deliver a complete Zero Trust strategy—protecting both applications and the sensitive files they access—reducing risk, ensuring compliance, and simplifying security in today's hybrid IT environments.
+Modern organizations need to secure both the apps users access and the data that those apps handle. Cloudflare optimizes and protects application traffic while Cloudflare One enforces Zero Trust access policies. [FileFlex Enterprise](/platform/) complements this by extending Zero Trust to the data itself, providing file-level permissions, auditing, and governance across all storage locations. Together, they deliver a complete Zero Trust strategy—protecting both applications and the sensitive files they access—reducing risk, ensuring compliance, and simplifying security in today's hybrid IT environments.
 
 ## What is Cloudflare
 
@@ -79,3 +79,14 @@ For further reading, see [The Zero Trust Data Gap: Closing the Blind Spot in Mod
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
 
 \*[Cloudflare](https://blog.cloudflare.com/cloudflare-sse-gartner-magic-quadrant/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [The Zero Trust Data Gap: Closing the Blind Spot in Modern Security Architectures](/blog/the-zero-trust-data-gap/)
+- [Regulatory Compliance in the Digital Age and Quebec Bill 64](/blog/regulatory-compliance-in-the-digital-age-unveiling-quebec-bill-64-and-how-fileflex-enterprise-can-help/)
+- [Zero Trust for California Privacy Compliance](/blog/using-zero-trust-data-access-to-meet-california-privacy-and-cybersecurity-standards/)
+- [Benefits of Zero Trust Least Privilege Access: 9 Key Reasons](/blog/9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access/)

@@ -24,7 +24,7 @@ Using social media profiles and other online sources to gather personal informat
 Say, for example, your Chief Financial Officer shares a Twitter post about a CFO conference they attended. Seeing this, an attacker might target your CFO with a well-crafted email inviting them to get an early-bird discount on next year’s conference by opening the registration document attached right away. (Creating a sense of urgency is a key tactic.) Even if your CFO is usually wary of cyberattacks, there is a reasonable likelihood that they will open the attachment.
 
 ### Zero Trust Data Access Imposes Strict Controls That Change How Data and Attachments Are Shared
-Zero Trust Data Access is a subset of zero trust security that grants micro-segmented access to the files and folders within the storage infrastructure, reducing the trust zone. In this model, share recipients cannot access the entire infrastructure. Instead,  they make a request to a policy server, which, if permitted, contacts a connector agent that acts as an intermediary to fulfill the request using the least privileges required to complete the task.
+[Zero Trust Data Access](/challenge/) is a subset of zero trust security that grants micro-segmented access to the files and folders within the storage infrastructure, reducing the trust zone. In this model, share recipients cannot access the entire infrastructure. Instead,  they make a request to a policy server, which, if permitted, contacts a connector agent that acts as an intermediary to fulfill the request using the least privileges required to complete the task.
 
 For example, as an alternative to receiving files via email attachments or sharing links, you can ask senders to upload the shared files to a shared folder (or data room).  That would force the shared file through a zero trust user authentication process when it is uploaded,  thus reducing the risk of impersonators getting the upper hand.
 
@@ -34,7 +34,7 @@ Ultimately, Zero Trust Data Access security uses micro-segmentation to only allo
 
 ### What About Better Policies?
 
-Granted, you can certainly introduce policies instructing employees not to open or click on anything that they can’t verify as legitimate with 100% certainty, but at the end of the day, they’re only human and these tactics have been proven again and again to fail as humans are hardwired to trust. The user authentication processes of **FileFlex Enterprise**, however, reduce the possibility of impersonation.
+Granted, you can certainly introduce policies instructing employees not to open or click on anything that they can’t verify as legitimate with 100% certainty, but at the end of the day, they’re only human and these tactics have been proven again and again to fail as humans are hardwired to trust. The user authentication processes of **[FileFlex Enterprise](/platform/)**, however, reduce the possibility of impersonation.
 
 The cost of ransomware worldwide is expected to exceed $265 billion by 2031 ([ZDNet](https://www.zdnet.com/article/the-cost-of-ransomware-around-the-globe-to-go-beyond-265-billion-in-the-next-decade/#:~:text=Currently%2C%20the%20cybersecurity%20agency%20estimates,incidents%20year%2Dover%2Dyear.), June 2021).
 
@@ -50,3 +50,14 @@ Implement the next generation of defense. Zero Trust shifts the way humans inter
 For more reading on spear-phishing prevention and Zero Trust security, see “[How to Mitigate Spear-Phishing via the FileFlex Enterprise Zero Trust Platform](/blog/mitigate-spear-phishing-via-the-fileflex-enterprise-zero-trust-platform/).”
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [How to Mitigate Spear-Phishing via FileFlex Enterprise Zero Trust](/blog/mitigate-spear-phishing-via-the-fileflex-enterprise-zero-trust-platform/)
+- [Why Zero Trust and Why Now?](/blog/why-zero-trust-and-why-now/)
+- [How to Enable Your Remote Workforce with Zero Trust-By-Design](/blog/enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn/)
+- [How to Protect Your Data with Zero Trust Data Access (ZTDA)](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)

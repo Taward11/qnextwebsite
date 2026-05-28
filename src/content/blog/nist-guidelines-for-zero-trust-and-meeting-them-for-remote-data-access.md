@@ -58,7 +58,7 @@ Instead of defining zero trust in terms of perimeters in some way, [NIST SP 800-
 ### 7\. The enterprise collects as much information as possible about the current state of assets, network infrastructure, and communications and uses it to improve its security posture.
 -   Since ZTA authorizes and verifies all transactions, organizations should use that data to improve policy creation and enforcement.
 
-**How FileFlex Enterprise Meets NIST Guidelines for Zero Trust**
+**How [FileFlex Enterprise](/platform/) Meets NIST Guidelines for Zero Trust**
 
 ### 1\. FileFlex Enterprise Considers All Data Sources and Computing Devices as Resources.
 -   FileFlex Enterprise protects access and sharing of all data sources on on-premises storage such as a server, server-attached and network-attached storage, cloud-hosted storage such as private clouds, public clouds, enterprise-grade clouds, and Infrastructure-as-a-Service providers such as Microsoft Azure, Google Cloud, and Amazon S3 as well as both self-hosted and Microsoft hosted implementations of SharePoint.
@@ -115,3 +115,14 @@ For more reading on zero trust security, see our other blogs – [‘Why Zero Tr
 [![](/images/blog/nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access/BrightTALK-Webinar-cover-for-NIST-webinar-640x360-2.webp)](https://youtu.be/_CAG_BcRxP8)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [How to Meet NIST SP-800-171v2 Access Control Practices](/blog/nist-sp-800-171v2-access-control-practices-for-remote-data-access-2/)
+- [How to Use Zero Trust to Meet CMMC Access Control Practice](/blog/how-fileflex-enterprise-helps-dod-contractors-meet-cmmc-best-practices-for-access-control/)
+- [Why Zero Trust and Why Now?](/blog/why-zero-trust-and-why-now/)
+- [How to Enable Your Remote Workforce with Zero Trust-By-Design](/blog/enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn/)

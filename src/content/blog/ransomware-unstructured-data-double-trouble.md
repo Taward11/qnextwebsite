@@ -28,7 +28,7 @@ Key findings revealed that:
 -   **Ransomware is in the spotlight:** Ransomware is now the top security concern for larger companies (1,000+ employees). 25 percent of all IT leaders say this is their biggest worry.
 
 ## Ransomware attacks digital transformation’s dark side
-Data meanwhile, a [survey](https://www.businesswire.com/news/home/20210812005739/en/IDC-Survey-Finds-More-Than-One-Third-of-Organizations-Worldwide-Have-Experienced-a-Ransomware-Attack-or-Breach) from research firm IDC found that upwards of one-third of organizations around the globe have experienced a ransomware attack. The manufacturing and finance sectors reported the highest incidents rates, while the transportation, communication and utilities/media industries reported the lowest rates.
+Data meanwhile, a [survey](https://www.businesswire.com/news/home/20210812005739/en/IDC-Survey-Finds-More-Than-One-Third-of-Organizations-Worldwide-Have-Experienced-a-Ransomware-Attack-or-Breach) from research firm IDC found that upwards of one-third of organizations around the globe have experienced a ransomware attack. The [manufacturing](/manufacturing/) and finance sectors reported the highest incidents rates, while the transportation, communication and utilities/media industries reported the lowest rates.
 
 Of note, is that only 13 percent of organizations who were attacked ended up _not paying_ any type of ransom.
 
@@ -43,7 +43,7 @@ In order to avoid ransomware attacks and others such as the [incident](https://w
 
 They have no choice as remote work is the new norm. Today, your data is everywhere – in the cloud, on-premise, via Microsoft SharePoint and accessible through NAS storage devices. With these changes, security, productivity, and remote data access are important challenges for IT.
 
-This is where FileFlex Enterprise, the world’s first Zero Trust Data (ZTDA) access platform for remote data access and sharing comes in.
+This is where [FileFlex Enterprise](/platform/), the world’s first Zero Trust Data (ZTDA) access platform for remote data access and sharing comes in.
 
 Adopted by the U.S. Department of Defense, Zero Trust is the new cybersecurity benchmark. With Fileflex Enterprise ZTDA you can securely access and share all the unstructured data located in a multi-cloud, multi-domain hybrid IT infrastructure without a VPN.
 
@@ -64,3 +64,14 @@ AES-256 is the first publicly accessible and open cipher approved by the United 
 In closing, the FileFlex Enterprise platform provides secure ZTDA based remote data access and sharing across a hybrid-IT infrastructure to protect remote access what is no doubt an organization’s most valuable asset – its unstructured corporate data.  To learn more, check out [our web page](/security/) that details our zero trust based security or go to our [virtual learning center](/virtual-learning-centre/).
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [How to Protect Your Data with Zero Trust Data Access (ZTDA)](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)
+- [Implement Zero Trust Security, Avoid This Nightmare](/blog/implement-zero-trust-security-avoid-this-nightmare-a-true-account/)
+- [Proposed ZTDA Action Plan for Enterprise](/blog/proposed-ztda-action-plan-for-enterprise/)
+- [Risks to Unstructured Data](/blog/risks-to-unstructured-data/)

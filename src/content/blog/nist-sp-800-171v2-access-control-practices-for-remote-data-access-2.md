@@ -53,12 +53,23 @@ The National Institute of Standards and Technology (NIST) has put together a uni
 
 ## How FileFlex Enterprise Meets NIST Access Control Requirements for Remote Data Access
 
-This blog looks at FileFlex Enterprise and shows how it meets the published best “Access Control” practices for remote data access outlined in NIST SP-800-171v2.
+This blog looks at [FileFlex Enterprise](/platform/) and shows how it meets the published best “Access Control” practices for remote data access outlined in NIST SP-800-171v2.
 
 <!-- table:table1 -->
 
 ### More
 
-For more reading on zero trust and zero trust data access see “[How FileFlex Enterprise Helps DoD Contractors Meet CMMC Best Practices for Access Control](/blog/how-fileflex-enterprise-helps-dod-contractors-meet-cmmc-best-practices-for-access-control/)” “[How to Meet NIST Guidelines for Zero Trust for Remote Data Access](/blog/nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access/)“, “[Why Zero Trust and Why Now?](/blog/why-zero-trust-and-why-now/)“, and “[How to Protect Your Data With Zero Trust Data Access](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)“.  For more information on CMMC go to [https://cmmcab.org/](https://cmmcab.org/)
+For more reading on zero trust and [zero trust data access](/challenge/) see “[How FileFlex Enterprise Helps DoD Contractors Meet CMMC Best Practices for Access Control](/blog/how-fileflex-enterprise-helps-dod-contractors-meet-cmmc-best-practices-for-access-control/)” “[How to Meet NIST Guidelines for Zero Trust for Remote Data Access](/blog/nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access/)“, “[Why Zero Trust and Why Now?](/blog/why-zero-trust-and-why-now/)“, and “[How to Protect Your Data With Zero Trust Data Access](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)“.  For more information on CMMC go to [https://cmmcab.org/](https://cmmcab.org/)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [How to Meet NIST Guidelines for Zero Trust for Remote Data Access](/blog/nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access/)
+- [How to Use Zero Trust to Meet CMMC Access Control Practice](/blog/how-fileflex-enterprise-helps-dod-contractors-meet-cmmc-best-practices-for-access-control/)
+- [Why Zero Trust and Why Now?](/blog/why-zero-trust-and-why-now/)
+- [How to Enable Your Remote Workforce with Zero Trust-By-Design](/blog/enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn/)

@@ -70,7 +70,7 @@ The CMMC (Cybersecurity Maturity Model Certification) requirements for user acce
 These practices are part of the Access Control domain, one of the 17 domains categorized in the CMMC framework. The framework outlines specific practices and processes that contractors need to follow to protect CUI and achieve the required level of certification. Companies need to understand these requirements and how they apply to their specific assets and data management strategies.
 
 ## Using Zero Trust Data Access for CMMC Compliance for Unstructured Data
-Zero Trust Data Access (ZTDA) emerges as a valuable tool for defense contractors striving for CMMC compliance, particularly in handling CUI unstructured data (documents and files) within intra or inter-company communications. (It is not a solution for structured data.)
+[Zero Trust Data Access](/challenge/) (ZTDA) emerges as a valuable tool for defense contractors striving for CMMC compliance, particularly in handling CUI unstructured data (documents and files) within intra or inter-company communications. (It is not a solution for structured data.)
 
 In the exchange of CUI documents, ZTDA aligns with common industry practices to ensure a tailored security strategy for unstructured data and effectively addresses the unique security requirements of CMMC, thereby enhancing overall compliance efforts while mitigating potential risks.
 
@@ -95,7 +95,7 @@ Management retains detailed control over access and restrictions, aligning with 
 Implementing zero trust principles via a ZTA is the key to achieving CMMC compliance regarding secure access, sharing, and collaboration of CUI.
 
 ## How Zero Trust Data Access Contributes to CMMC Compliance
-Here’s how Zero Trust Data Access as implemented by FileFlex Enterprise can contribute to CMMC requirements over access, sharing and collaboration of CUI files and folders:
+Here’s how Zero Trust Data Access as implemented by [FileFlex Enterprise](/platform/) can contribute to CMMC requirements over access, sharing and collaboration of CUI files and folders:
 
 1.  ### **Limits System Access:**
     
@@ -199,3 +199,14 @@ For more information on protecting critical infrastructure with Zero Trust Data 
 \* [US Congressional Research Service](https://crsreports.congress.gov/product/pdf/IF/IF10548)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Zero Trust Data Access for DIB Cybersecurity Strategy](/blog/zero-trust-data-access-to-meet-dib-cybersecurity-strategy-2024/)
+- [CMMC IT Control Over Remote Access & Sharing Using Zero Trust](/blog/cmmc-it-control-for-dib-organizations-over-remote-access-and-sharing-using-zero-trust-architecture/)
+- [DORA Compliance Using Zero Trust Data Access](/blog/dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access/)
+- [Secure Zero Trust Access to FedRAMP-Compliant Data](/blog/fedramp-compliance-and-zero-trust-data-access/)

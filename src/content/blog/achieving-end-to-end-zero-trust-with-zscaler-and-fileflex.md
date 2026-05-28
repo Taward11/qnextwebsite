@@ -55,7 +55,7 @@ tables:
 
 ![Zscaler secures over 50 million users worldwide](/images/blog/achieving-end-to-end-zero-trust-with-zscaler-and-fileflex/zscaler-infographic.webp)
 
-As organizations embrace Zero Trust strategies, securing both access and data is critical. Zscaler's Zero Trust Exchange provides robust protection at the application and network layer, controlling who can reach corporate resources and preventing threats from spreading. FileFlex Zero Trust Data Access complements this approach by extending security down to the file level, ensuring that sensitive data remains protected wherever it resides—on-premises, in the cloud, or across hybrid environments. Together, Zscaler and FileFlex deliver a unified, end-to-end Zero Trust framework that safeguards users, applications, and the data they access, while enabling compliance, auditability, and secure collaboration.
+As organizations embrace Zero Trust strategies, securing both access and data is critical. Zscaler's Zero Trust Exchange provides robust protection at the application and network layer, controlling who can reach corporate resources and preventing threats from spreading. FileFlex [Zero Trust Data Access](/challenge/) complements this approach by extending security down to the file level, ensuring that sensitive data remains protected wherever it resides—on-premises, in the cloud, or across hybrid environments. Together, Zscaler and FileFlex deliver a unified, end-to-end Zero Trust framework that safeguards users, applications, and the data they access, while enabling compliance, auditability, and secure collaboration.
 
 ## Who is Zscaler?
 
@@ -94,3 +94,14 @@ For related blogs on how FileFlex closes the data security gap see [Extending Ci
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
 
 \*[Zscaler](https://ir.zscaler.com/news-releases/news-release-details/zscaler-reports-fourth-quarter-and-fiscal-2025-financial-results)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Extending Cisco Zero Trust from Access to Data](/blog/extending-cisco-zero-trust-from-access-to-data/)
+- [The Zero Trust Data Gap: Closing the Blind Spot in Modern Security Architectures](/blog/the-zero-trust-data-gap/)
+- [Cloudflare One and FileFlex Enterprise—Securing Apps and Data Together](/blog/cloudflare-one-and-fileflex-enterprise-securing-apps-and-data-together/)
+- [DSPMs & ZTDA: Enhancing Zero Trust Data Security](/blog/dspms-and-zero-trust-data-access-a-powerful-duo-for-zero-trust-data-security/)

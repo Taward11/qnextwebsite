@@ -19,10 +19,10 @@ toc: true
 ## The Case for Zero Trust Remote Access
 According to the [2020 Cost of Insider Threat Global Report](https://cdw-prod.adobecqms.net/content/dam/cdw/on-domain-cdw/brands/proofpoint/ponemon-global-cost-of-insider-threats-2020-report.pdf) published by the Ponemon Institute, the number of internal security incidents increased globally by a staggering 47% between 2018 and 2020, each of them leaving varying degrees of havoc in their wake. This, combined with the rapid growth of external threats, is prompting the global shift towards Zero Trust security.
 
-Zero Trust security platforms like the FileFlex Enterprise Zero-Trust Remote Data Access Platform mitigate security threats by reducing trust zones. Using micro-segmented access, FileFlex Enterprise grants users access to files and folders, encrypting files and granting access with the least privileges required to complete a task.
+Zero Trust security platforms like the [FileFlex Enterprise](/platform/) Zero-Trust Remote Data Access Platform mitigate security threats by reducing trust zones. Using micro-segmented access, FileFlex Enterprise grants users access to files and folders, encrypting files and granting access with the least privileges required to complete a task.
 
 ## How ASM Group Fell Victim to an Internal Breach
-ASM Group is a financial services organization serving North America and Asia. The company has 300 employees (the majority in Canada and the US; the remainder in Hong Kong) and manages more than a billion USD in assets.
+ASM Group is a [financial services](/financial-services/) organization serving North America and Asia. The company has 300 employees (the majority in Canada and the US; the remainder in Hong Kong) and manages more than a billion USD in assets.
 
 During a particularly busy week leading up to Christmas, ASM Group’s CFO received an email that was far from festive, let alone friendly. Sent through an anonymous email service, it read as follows:
 
@@ -73,3 +73,14 @@ If so, contact us to learn more about FileFlex Enterprise – the world’s #1 Z
 For more reading on why Zero Trust remote access is fast becoming the go-to for enterprise security, read [Why Zero Trust, Why Now](/blog/why-zero-trust-and-why-now/)
 
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [How to Enable Your Remote Workforce with Zero Trust-By-Design](/blog/enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn/)
+- [Using Zero Trust Architecture (ZTA) to Protect Remote Data Access](/blog/using-zero-trust-architecture-zta-to-protect-remote-data-access/)
+- [From VPN Risk to Zero Trust Security: A Smarter Approach to Remote Access](/blog/from-vpn-risk-to-zero-trust-security-a-smarter-approach-to-remote-access/)
+- [FileFlex Enterprise is the Best Alternative to Varonis DatAnywhere](/blog/varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative/)

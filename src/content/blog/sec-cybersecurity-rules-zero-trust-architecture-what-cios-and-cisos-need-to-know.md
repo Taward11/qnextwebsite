@@ -80,7 +80,7 @@ The SEC's requirements elevate cybersecurity to board-level accountability, and 
 
 ![SEC rules are reshaping enterprise security and accelerating the adoption of Zero Trust architecture, particularly at the data layer](/images/blog/sec-cybersecurity-rules-zero-trust-architecture-what-cios-and-cisos-need-to-know/SEC-blog-quote-1.webp)
 
-FileFlex Enterprise implements Zero Trust for the data layer, providing:
+[FileFlex Enterprise](/platform/) implements Zero Trust for the data layer, providing:
 
 - **Least-Privilege Access:** Only authorized users can access sensitive unstructured data.
 - **Continuous Authentication & Monitoring:** Logs all access for audit and SEC reporting purposes.
@@ -99,3 +99,14 @@ See also [The Zero Trust Data Gap](/blog/the-zero-trust-data-gap/), [How to Buil
 [Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
 
 \*[Axon Partners Group](https://axonpartnersgroup.com/axon2023/wp-content/uploads/2024/01/4105-Axon-zero-trust-whitepaper-3.pdf)
+
+
+---
+
+<!-- AUTO-RELATED-READING -->
+## Related Reading
+
+- [Smart Cities and Zero Trust Data Access: Securing the Urban Future](/blog/smart-cities-and-zero-trust-data-access-securing-the-urban-future/)
+- [Data Governance, Cybersecurity and Zero Trust Data Access](/blog/data-governance-cybersecurity-and-zero-trust-data-access-the-essential-pillars-to-protect-data-assets/)
+- [DORA Compliance Using Zero Trust Data Access](/blog/dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access/)
+- [Secure Zero Trust Access to FedRAMP-Compliant Data](/blog/fedramp-compliance-and-zero-trust-data-access/)
