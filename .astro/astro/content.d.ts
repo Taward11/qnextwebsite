@@ -827,13 +827,6 @@ declare module 'astro:content' {
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"what-is-agentic-ai-and-why-it-changes-enterprise-risk.md": {
-	id: "what-is-agentic-ai-and-why-it-changes-enterprise-risk.md";
-  slug: "what-is-agentic-ai-and-why-it-changes-enterprise-risk";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
 "what-is-zero-trust-data-access-ztda.md": {
 	id: "what-is-zero-trust-data-access-ztda.md";
   slug: "what-is-zero-trust-data-access-ztda";
