@@ -1,0 +1,223 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+
+const rows = [
+  {
+    side: 'right',
+    title: 'Security of data-at-rest and data-in-motion',
+    img: '/images/healthcare/healthcare-p1.jpg',
+    alt: 'Healthcare professionals reviewing secure data systems',
+    body: [
+      'Data at rest is securely stored on the HIPAA entity or associate\u2019s pre-existing HIPAA-compliant and protected storage infrastructure. Meanwhile, data in motion is encrypted and transferred via servers hosted either by the HIPAA-covered entity or the HIPAA business associate.',
+    ],
+    link: {
+      text: 'Read What is Zero Trust Data Access (ZTDA)?',
+      href: 'https://fileflex.com/blog/what-is-zero-trust-data-access-ztda/',
+    },
+  },
+  {
+    side: 'left',
+    title: 'Downloading can be prohibited',
+    img: '/images/hospital/hospital-worker-1-630x1024.jpg',
+    alt: 'Hospital worker reviewing patient files on a secure device',
+    body: [
+      'When following HIPAA compliance policies, files can be shared in a view-only mode, and downloading to local devices is restricted.',
+    ],
+    link: {
+      text: 'See Protecting Access and Sharing of Protected Health Information with ZTDA for Windows.',
+      href: 'https://fileflex.com/healthcare/',
+    },
+  },
+  {
+    side: 'right',
+    title: 'HIPAA-compliant file sharing and collaboration with no local copies',
+    img: '/images/healthcare/Screen-Shot-2022-12-12-at-2.03.18-PM-1024x811.jpg',
+    alt: 'FileFlex secure file sharing dashboard',
+    body: [
+      'File sharing and collaboration occur directly from the HIPAA entity or associate\u2019s source location, without any copies being stored on remote devices or third-party servers.',
+    ],
+    link: {
+      text: 'See Top 13 Reasons to Use a Zero Trust Secure File-Sharing Platform.',
+      href: 'https://fileflex.com/blog/top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business/',
+    },
+  },
+  {
+    side: 'left',
+    title: 'Restrict file sharing and collaboration to HIPAA entities or associate contacts',
+    img: '/images/healthcare/Screen-Shot-2022-12-12-at-2.03.36-PM-1024x992.jpg',
+    alt: 'Granular access controls for HIPAA-covered contacts',
+    body: [
+      'File sharing and collaboration can be limited to HIPAA-covered entities or business associate contacts.',
+    ],
+    link: {
+      text: 'See 16 Top Reasons to Adopt a Content Collaboration Platform Built on a Zero Trust Architecture.',
+      href: 'https://fileflex.com/blog/discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture/',
+    },
+  },
+  {
+    side: 'right',
+    title: 'CISO-level third-party tested',
+    img: '/images/healthcare/Screen-Shot-2022-12-12-at-2.03.27-PM-865x1024.jpg',
+    alt: 'CISO-level third-party security testing report',
+    body: [
+      'FileFlex Enterprise underwent evaluation by an independent, third-party information security firm at the CISO level. They thoroughly reviewed the information security capabilities introduced by FileFlex Enterprise, conducted a Threat Risk Assessment (TRA), and ensured compliance with HIPAA requirements for data privacy and security. The FileFlex application and its infrastructure successfully passed a rigorous red-team penetration testing assessment using a black-box methodology.',
+      'For full test results, contact your FileFlex representative.',
+    ],
+    link: {
+      text: 'Read Embracing Zero Trust Data Access for IT-Controlled Chain-of-Command.',
+      href: 'https://fileflex.com/blog/embracing-zero-trust-data-access-for-it-controlled-chain-of-command/',
+    },
+  },
+];
+---
+
+<Layout
+  title="Secure File Sharing for HIPAA Compliance | FileFlex Enterprise"
+  description="Secure file sharing and collaboration tool for HIPAA Covered Entities and HIPAA Business Associates. CISO level third party tested."
+>
+
+<Nav current="" />
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="zp-hero" aria-labelledby="zp-hero-heading">
+  <div class="zp-hero__overlay"></div>
+  <div class="zp-hero__inner">
+    <div class="zp-hero__content">
+      <h1 id="zp-hero-heading">HIPAA Compliance</h1>
+      <p>
+        FileFlex Enterprise stands out as the perfect HIPAA-compliant solution for sharing and
+        collaborating files and DICOM images for HIPAA-covered entities and business associates.
+        This is achieved through hosting the FileFlex server, which is done either by the HIPAA
+        Covered Entity directly or by the HIPAA Business Associate providing FileFlex services
+        to the HIPAA Covered Entity. Importantly, no Protected Health Information (PHI) or
+        Personally Identifiable Information (PII) is stored or transmitted through FileFlex
+        infrastructure.
+      </p>
+      <p>
+        See
+        <strong>
+          <a href="https://fileflex.com/blog/hippa-compliant-file-sharing/" target="_blank" rel="noopener">HIPAA-Compliant File Sharing Using Zero Trust Data Access (ZTDA)</a>
+        </strong>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Z-PATTERN ROWS
+     ============================================================ -->
+{rows.map((r) => (
+  <section class={`zp-row zp-row--img-${r.side}`} aria-labelledby={`hipaa-${r.title.toLowerCase().replace(/[^a-z0-9]+/g,'-')}-heading`}>
+    <div class="zp-row__media" style={`background-image: url('${r.img}');`} role="img" aria-label={r.alt}></div>
+    <div class="zp-row__copy">
+      <div class="zp-row__copy-inner">
+        <h2 id={`hipaa-${r.title.toLowerCase().replace(/[^a-z0-9]+/g,'-')}-heading`}>{r.title}</h2>
+        {r.body.map((p) => <p>{p}</p>)}
+        {r.link && (
+          <p class="zp-row__link"><a href={r.link.href} target="_blank" rel="noopener">{r.link.text}</a></p>
+        )}
+      </div>
+    </div>
+  </section>
+))}
+
+</Layout>
+
+<style is:global>
+  html, body { overflow-y: auto !important; overflow-x: hidden; height: auto !important; }
+</style>
+<style>
+  /* HERO */
+  #zp-hero {
+    position: relative;
+    background: #0E1A2B url('/images/hipaa/main-banner.jpg') center/cover no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 130px 6vw 70px;
+  }
+  .zp-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(14,26,43,0.88) 0%, rgba(14,26,43,0.72) 55%, rgba(14,26,43,0.40) 100%);
+  }
+  .zp-hero__inner { position: relative; z-index: 1; max-width: 1200px; width: 100%; margin: 0 auto; }
+  .zp-hero__content { max-width: 720px; }
+  #zp-hero h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(32px, 4.4vw, 48px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin: 0 0 22px;
+  }
+  #zp-hero p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0 0 16px;
+    color: #f1f3f8;
+  }
+  #zp-hero a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+  #zp-hero a:hover { color: #ffb481; }
+
+  /* ROWS */
+  .zp-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 460px;
+    background: #fff;
+  }
+  .zp-row.zp-row--img-left { background: #f6f8fb; }
+  .zp-row__media {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 320px;
+  }
+  .zp-row__copy { display: flex; align-items: center; padding: 70px 7vw; }
+  .zp-row__copy-inner { max-width: 560px; width: 100%; }
+  .zp-row--img-right .zp-row__copy { order: 1; }
+  .zp-row--img-right .zp-row__media { order: 2; }
+
+  .zp-row h2 {
+    font-family: 'Inter', sans-serif;
+    color: #0E1A2B;
+    font-size: clamp(22px, 2.4vw, 30px);
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+    margin: 0 0 18px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #e8590a;
+    display: inline-block;
+  }
+  .zp-row p {
+    font-family: 'Inter', sans-serif;
+    color: #2a2f3a;
+    font-size: 16px;
+    line-height: 1.75;
+    margin: 0 0 14px;
+  }
+  .zp-row__link a {
+    color: #021372;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .zp-row__link a:hover { color: #e8590a; }
+
+  @media (max-width: 900px) {
+    .zp-row { grid-template-columns: 1fr; min-height: 0; }
+    .zp-row__media { min-height: 240px; order: 1 !important; }
+    .zp-row__copy { order: 2 !important; padding: 48px 7vw; }
+    #zp-hero { padding: 100px 6vw 48px; }
+    .zp-hero__overlay {
+      background: linear-gradient(180deg, rgba(14,26,43,0.85) 0%, rgba(14,26,43,0.85) 100%);
+    }
+  }
+</style>
