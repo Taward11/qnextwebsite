@@ -17,7 +17,7 @@ tags:
   - "Enterprise Risk"
   - "CISO"
 toc: true
-draft: true
+draft: false
 faq:
   - q: "What is agentic AI?"
     a: "Agentic AI refers to AI systems that can plan, decide, and execute multi-step tasks autonomously in pursuit of a defined goal, rather than simply responding to prompts with static outputs."
