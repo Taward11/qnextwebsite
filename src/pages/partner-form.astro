@@ -157,7 +157,11 @@ const HS_FORM = '7f266485-c9ed-4a4c-94fd-884177054240';
           <p class="pf-consent__fine">By clicking Submit below, you consent to allow fileflex.com to store and process the personal information submitted above to provide you the content requested.</p>
         </div>
 
-        <div id="pf-recaptcha" class="pf-recaptcha"></div>
+        <!-- Honeypot: real users won't fill this; bots usually will. Visually hidden, hidden from a11y tree. -->
+        <div class="pf-honeypot" aria-hidden="true">
+          <label for="pf-website-url-2">Leave this field blank</label>
+          <input id="pf-website-url-2" type="text" name="website_url_confirm" tabindex="-1" autocomplete="off" />
+        </div>
 
         <div class="pf-actions">
           <button type="submit" class="pf-submit">Submit</button>
@@ -170,18 +174,17 @@ const HS_FORM = '7f266485-c9ed-4a4c-94fd-884177054240';
   </div>
 </section>
 
-<script is:inline src="https://www.google.com/recaptcha/api.js?onload=pfOnRecaptchaLoad&render=explicit" async defer></script>
 <script is:inline>
   (function () {
-    var RECAPTCHA_SITE_KEY = '6Lewn1AsAAAAAFK5txfiwVScHASHFDoR0eIZ99Vh'; // HubSpot's shared v2-invisible key
     var form = document.getElementById('pf-form');
     if (!form) return;
     var status = document.getElementById('pf-status');
     var submitBtn = form.querySelector('.pf-submit');
     var portalId = form.dataset.portalId;
     var formId = form.dataset.formId;
-    var endpoint = 'https://forms.hsforms.com/submissions/v3/public/submit/formsnext/multipart/' + portalId + '/' + formId;
-    var widgetId = null;
+    var endpoint = 'https://api.hsforms.com/submissions/v3/integration/submit/' + portalId + '/' + formId;
+    var MIN_FILL_MS = 2500; // bots typically submit < 2.5s after page load
+    var renderedAt = Date.now();
 
     function setStatus(msg, cls) {
       status.textContent = msg;
@@ -192,63 +195,39 @@ const HS_FORM = '7f266485-c9ed-4a4c-94fd-884177054240';
       return m ? m[1] : '';
     }
 
-    // reCAPTCHA load callback (global)
-    window.pfOnRecaptchaLoad = function () {
-      try {
-        widgetId = window.grecaptcha.render('pf-recaptcha', {
-          sitekey: RECAPTCHA_SITE_KEY,
-          size: 'invisible',
-          badge: 'inline',
-          callback: onCaptchaSuccess,
-          'error-callback': onCaptchaError,
-          'expired-callback': onCaptchaError,
-        });
-      } catch (err) {
-        setStatus('Captcha failed to initialize: ' + (err && err.message ? err.message : 'unknown error'), 'err');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+
+      // Honeypot — if filled, silently "succeed" so bots don't retry
+      var honey = form.querySelector('[name="website_url_confirm"]');
+      if (honey && honey.value) {
+        form.style.display = 'none';
+        setStatus('Thanks for submitting the Partner Application Form. Someone will contact you shortly.', 'ok');
+        return;
       }
-    };
 
-    function onCaptchaError() {
-      setStatus('Captcha verification failed. Please try again.', 'err');
-      submitBtn.disabled = false;
-      if (widgetId !== null && window.grecaptcha) window.grecaptcha.reset(widgetId);
-    }
+      // Timing gate — too-fast submits are almost certainly bots
+      if (Date.now() - renderedAt < MIN_FILL_MS) {
+        setStatus('Please take a moment to review your entries before submitting.', 'err');
+        return;
+      }
 
-    function onCaptchaSuccess(token) {
-      submitToHubspot(token);
-    }
-
-    function buildPayload(token) {
-      var fields = [];
-      var SKIP = { communicationConsent: 1 };
       var fd = new FormData(form);
+      var fields = [];
+      var SKIP = { communicationConsent: 1, website_url_confirm: 1 };
       fd.forEach(function (value, name) {
         if (SKIP[name]) return;
-        fields.push({ name: name, value: String(value), objectTypeId: '0-1' });
+        fields.push({ name: name, value: String(value) });
       });
 
       var commConsent = form.querySelector('#pf-comm-consent').checked;
       var hutk = getHsCookie();
-
-      var hsContext = {
-        formId: formId,
-        portalId: Number(portalId),
-        pageUrl: window.location.href,
-        pageName: document.title,
-        pageId: '',
-        embedAtTimestamp: String(Date.now()),
-        formTarget: '#pf-form',
-        rumScriptExecuteTime: 0,
-        rumServiceResponseTime: 0,
-        rumFormRenderTime: 0,
-        renderRawHtml: 'true',
-        userAgent: navigator.userAgent,
-        pageTitle: document.title,
-        source: 'forms-embed-1.0',
-        sourceName: 'forms-embed',
-        sourceVersion: '1.0',
-        timestamp: Date.now(),
-        legalConsentOptions: JSON.stringify({
+      var payload = {
+        submittedAt: Date.now(),
+        fields: fields,
+        context: { pageUri: window.location.href, pageName: document.title },
+        legalConsentOptions: {
           consent: {
             consentToProcess: true,
             text: 'By clicking Submit below, you consent to allow fileflex.com to store and process the personal information submitted above to provide you the content requested.',
@@ -258,37 +237,20 @@ const HS_FORM = '7f266485-c9ed-4a4c-94fd-884177054240';
               text: 'I agree to receive other communications from fileflex.com.',
             }],
           },
-        }),
+        },
       };
-      if (hutk) hsContext.hutk = hutk;
+      if (hutk) payload.context.hutk = hutk;
 
-      return {
-        fields: fields,
-        hsContext: hsContext,
-        captchaToken: token,
-      };
-    }
-
-    function submitToHubspot(token) {
-      var payload = buildPayload(token);
-
-      var fd = new FormData();
-      // each field as JSON-encoded value per multipart contract
-      payload.fields.forEach(function (f) {
-        fd.append(f.name, f.value);
-      });
-      fd.append('hs_context', JSON.stringify(payload.hsContext));
-      fd.append('g-recaptcha-response', token);
-
+      submitBtn.disabled = true;
       setStatus('Sending…', 'pending');
 
-      fetch(endpoint, { method: 'POST', body: fd })
+      fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
         .then(function (r) {
-          return r.text().then(function (t) {
-            var body;
-            try { body = JSON.parse(t); } catch (_) { body = { raw: t }; }
-            return { ok: r.ok, status: r.status, body: body };
-          });
+          return r.json().then(function (j) { return { ok: r.ok, status: r.status, body: j }; });
         })
         .then(function (res) {
           if (res.ok) {
@@ -303,27 +265,12 @@ const HS_FORM = '7f266485-c9ed-4a4c-94fd-884177054240';
             }
             setStatus(msg + ' (HTTP ' + res.status + ')', 'err');
             submitBtn.disabled = false;
-            if (widgetId !== null && window.grecaptcha) window.grecaptcha.reset(widgetId);
           }
         })
-        .catch(function (err) {
-          setStatus('Network error: ' + (err && err.message ? err.message : 'unknown'), 'err');
+        .catch(function () {
+          setStatus('Network error. Please try again or contact us directly.', 'err');
           submitBtn.disabled = false;
-          if (widgetId !== null && window.grecaptcha) window.grecaptcha.reset(widgetId);
         });
-    }
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-      if (widgetId === null || !window.grecaptcha) {
-        setStatus('Captcha is still loading — please try again in a moment.', 'err');
-        return;
-      }
-      submitBtn.disabled = true;
-      setStatus('Verifying…', 'pending');
-      window.grecaptcha.reset(widgetId);
-      window.grecaptcha.execute(widgetId);
     });
   })();
 </script>
@@ -490,8 +437,15 @@ const HS_FORM = '7f266485-c9ed-4a4c-94fd-884177054240';
   .pf-checkbox input { margin-top: 3px; accent-color: #e8590a; }
   .pf-consent a { color: #021372; text-decoration: underline; }
 
-  .pf-recaptcha { margin: 14px 0 4px; min-height: 0; }
-  .pf-recaptcha :global(.grecaptcha-badge) { box-shadow: 0 1px 4px rgba(0,0,0,0.08) !important; }
+  /* Honeypot — visually hidden but reachable by bots that fill all inputs */
+  .pf-honeypot {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
 
   .pf-actions { margin-top: 18px; }
   .pf-submit {
