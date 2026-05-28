@@ -122,4 +122,4 @@ For more reading about using zero trust data access in a Microsoft ecosystem see
 
 \* [Statistica](https://www.statista.com/statistics/983321/worldwide-office-365-user-numbers-by-country/), [SignHouse](https://www.usesignhouse.com/blog/microsoft-365-suite-stats)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

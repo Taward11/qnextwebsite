@@ -95,4 +95,4 @@ To learn more about the benefits of a Zero Trust Data Access Architecture see T[
 
 \*[IBM](https://d110erj175o600.cloudfront.net/wp-content/uploads/2023/07/25111651/Cost-of-a-Data-Breach-Report-2023.pdf)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

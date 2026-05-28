@@ -87,4 +87,4 @@ For further reading see [File Sharing and Collaboration Evolution from First Gen
 
 \*[ComputerWorld](https://www.computerworld.com/article/2991924/some-scary-for-some-statistics-around-file-sharing-usage.html)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

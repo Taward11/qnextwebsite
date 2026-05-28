@@ -94,8 +94,8 @@ The SEC's cybersecurity disclosure rules have transformed cybersecurity into a s
 
 Organizations that adopt Zero Trust today will not only satisfy SEC compliance but also build a resilient security foundation capable of withstanding increasingly sophisticated cyber threats.
 
-See also [The Zero Trust Data Gap](/blog/the-zero-trust-data-gap/), [How to Build a Complete Zero Trust Security Framework](https://fileflex.com/blog/complete-zero-trust-security-framework/), and [Zero Trust for FFIEC Compliance: Why ZTDA Is the Missing Link](https://fileflex.com/blog/meeting-ffiec-guidelines-using-zero-trust-data-access/).
+See also [The Zero Trust Data Gap](/blog/the-zero-trust-data-gap/), [How to Build a Complete Zero Trust Security Framework](/blog/complete-zero-trust-security-framework/), and [Zero Trust for FFIEC Compliance: Why ZTDA Is the Missing Link](/blog/meeting-ffiec-guidelines-using-zero-trust-data-access/).
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
 
 \*[Axon Partners Group](https://axonpartnersgroup.com/axon2023/wp-content/uploads/2024/01/4105-Axon-zero-trust-whitepaper-3.pdf)

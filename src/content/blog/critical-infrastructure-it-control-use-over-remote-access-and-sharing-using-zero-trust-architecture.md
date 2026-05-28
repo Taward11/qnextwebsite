@@ -83,4 +83,4 @@ For more information about the protection of critical infrastructure see “[The
 
 \*\* [State of the Digital Workplace](https://resources.igloosoftware.com/state-of-the-digital-workplace/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

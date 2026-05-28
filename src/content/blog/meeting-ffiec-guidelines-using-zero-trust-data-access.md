@@ -128,4 +128,4 @@ The FFIEC has started to include concepts aligned with zero trust principles wit
     
     \*[Statistica.com](https://www.statista.com/statistics/1310985/number-of-cyber-incidents-in-financial-industry-worldwide/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

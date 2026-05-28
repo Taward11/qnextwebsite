@@ -105,4 +105,4 @@ FileFlex Enterprise uses a zero trust architecture and various security features
 
 To learn more, read [Ransomware + Unstructured Data = Double Trouble](/blog/ransomware-unstructured-data-double-trouble/) or  [ZTNA, ZTAA and ZTDA – A Deep Dive](/blog/ztna-ztaa-and-ztda-a-deep-dive/),
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

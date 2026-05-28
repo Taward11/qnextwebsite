@@ -71,4 +71,4 @@ In the podinar produced by the Edge Computing Association below, Tom Ward, VP of
 
 [\[4\]](#_ftnref4)  [https://www.symantec.com/security-center/threat-report](https://www.symantec.com/security-center/threat-report)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

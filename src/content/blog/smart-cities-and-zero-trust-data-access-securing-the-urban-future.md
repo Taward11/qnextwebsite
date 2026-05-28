@@ -145,4 +145,4 @@ With the right implementation strategy and technologies like FileFlex Enterprise
 ### Want to learn more about smart cities and Zero Trust Data Access?
 Contact us to see how we can help you build a secure, compliant, and future-ready data architecture.
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

@@ -68,4 +68,4 @@ To learn more, check out our other blogs – [Why Your Zero Trust Security Model
 
 Infographic Reference: [Cybersecurity Insiders 2023 INSIDER THREAT REPORT](https://www.cybersecurity-insiders.com/portfolio/2023-insider-threat-report-gurucul/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

@@ -64,4 +64,4 @@ To learn more, check out our other blogs [Network Security: The Power of Zero Tr
 
 \*\* [Cybereason](https://www.cybereason.com/ransomware-the-true-cost-to-business-2022)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

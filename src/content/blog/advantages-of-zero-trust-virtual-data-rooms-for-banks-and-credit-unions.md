@@ -83,4 +83,4 @@ For further information see [Top 13 Reasons to Adopt Zero Trust Secure Virtual D
 
 \*[dataroom.org](https://datarooms.org/vdr-blog/secure-file-sharing-in-banking/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

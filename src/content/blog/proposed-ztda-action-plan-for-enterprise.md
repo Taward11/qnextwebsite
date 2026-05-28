@@ -55,4 +55,4 @@ In Article 1, TAG Cyber CEO  Ed Amoroso examines “[How To Securely Share Data
 
 Copyright © 2022 TAG Cyber LLC
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

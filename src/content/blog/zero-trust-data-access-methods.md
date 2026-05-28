@@ -48,8 +48,8 @@ This article is the third in a series of 5 from TAG Cyber on Understanding Zero 
 
 The implementation of ZTDA by commercial vendors is becoming more common. In the next article of our series, we will highlight the method in the context of commercial solution provider Qnext with their FileFlex platform. The TAG Cyber analyst team has worked with Qnext to review its ZTDA design and has concluded that it compares favorably with the objectives of the model for corporate cyber risk reduction.
 
-In Article 1, TAG Cyber CEO  Dr. Edward Amoroso examines “[How To Securely Share Data](/blog/how-to-securely-share-data/)?”.  In Article 2, TAG Cyber’s Chirs Wilder looks at the [risks associated with unstructured data](/blog/risks-to-unstructured-data/).  Article 4 from Dr. Edward Amoroso provides an overview of their [commercial platform for zero trust data access](/blog/the-fileflex-enterprise-commercial-platform-for-zero-trust-data-access/). Article 5 from TAG Cyber proposes an [action plan for enterprises](https://fileflex.com/blog/proposed-zdta-action-plan-for-enterprise/) in this area.
+In Article 1, TAG Cyber CEO  Dr. Edward Amoroso examines “[How To Securely Share Data](/blog/how-to-securely-share-data/)?”.  In Article 2, TAG Cyber’s Chirs Wilder looks at the [risks associated with unstructured data](/blog/risks-to-unstructured-data/).  Article 4 from Dr. Edward Amoroso provides an overview of their [commercial platform for zero trust data access](/blog/the-fileflex-enterprise-commercial-platform-for-zero-trust-data-access/). Article 5 from TAG Cyber proposes an [action plan for enterprises](/blog/proposed-ztda-action-plan-for-enterprise/) in this area.
 
 Copyright © 2022 TAG Cyber LLC
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

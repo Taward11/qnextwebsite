@@ -64,4 +64,4 @@ Potential savings will be different for every organization depending on the plat
 
 By serving as a cost-effective alternative to VPNs, file-sharing services, collaboration platforms, and virtual data rooms, coupled with potential savings in SharePoint, cloud storage, and bandwidth, organizations that implement a Zero Trust Data Access platform like FileFlex Enterprise can realize substantial cost reductions while strengthening their data access and collaboration strategies.
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

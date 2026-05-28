@@ -96,4 +96,4 @@ For more information on using FileFlex to complement SharePoint see [19 Reasons 
 
 \*[Cybersecurity Drive](https://www.cybersecuritydive.com/news/sharepoint-hacking-campaign-affects-hundreds-of-systems-worldwide/753836/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

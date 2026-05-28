@@ -115,4 +115,4 @@ See also [Distributed Administration of Remote Unstructured Data Access for the 
 
 \*[g2.com](https://www.g2.com/articles/it-statistics)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

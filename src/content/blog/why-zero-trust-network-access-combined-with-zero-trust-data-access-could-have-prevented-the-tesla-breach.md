@@ -89,4 +89,4 @@ Combining ZTNA platforms with FileFlex Enterprise Zero Trust Data Access provide
 
 \*[TechCrunch](https://techcrunch.com/2023/08/21/tesla-breach-employee-insider/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

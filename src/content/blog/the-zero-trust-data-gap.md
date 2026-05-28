@@ -92,4 +92,4 @@ Achieving true Zero Trust maturity requires more than securing identity, devices
 
 For further reading see [Federated Hybrid Access: Why Modern Organizations Can't Afford to Ignore It](/blog/federated-hybrid-access-why-modern-organizations-cant-afford-to-ignore-it/) and [Zero Trust and Regulatory Compliance](/blog/zero-trust-and-regulatory-compliance/).
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

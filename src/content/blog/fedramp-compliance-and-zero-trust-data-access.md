@@ -159,4 +159,4 @@ For related posts see [Using Zero Trust Data Access for NIST Compliance](/blog/u
 
 \*[FedRAMP](https://marketplace.fedramp.gov/products)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

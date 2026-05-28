@@ -87,4 +87,4 @@ To learn more, check out our other blogs – [What is Zero Trust Data Access (ZT
 
 Infographics Source[: VentureBeat 2023](https://venturebeat.com/security/the-top-20-zero-trust-startups-to-watch-in-2023/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

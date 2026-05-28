@@ -87,4 +87,4 @@ As organizations navigate the intricacies of unstructured data management, the i
 
 \*[ComputerWorld](https://www.computerworld.com/article/2991924/some-scary-for-some-statistics-around-file-sharing-usage.html)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

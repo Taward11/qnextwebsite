@@ -122,4 +122,4 @@ In conclusion, Zero Trust Data Access provides a powerful solution for financial
 
 \*
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

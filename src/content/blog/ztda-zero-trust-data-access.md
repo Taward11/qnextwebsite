@@ -67,4 +67,4 @@ Zero Trust not only delivers significant security improvements but also reduces 
 
 Given what is going at the moment with the Microsoft Exchange Server hacking debacle and other incidents, what is clear is that now is the time to explore, expand and accelerate Zero Trust initiatives.  For more reading on zero trust and zero trust data access see “[How to Meet NIST Guidelines for Zero Trust for Remote Data Access](/blog/nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access/)“, “[Why Zero Trust and Why Now?](/blog/why-zero-trust-and-why-now/)“, and “[How to Protect Your Data With Zero Trust Data Access](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)“.
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

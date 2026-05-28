@@ -82,8 +82,8 @@ It’s important to note that while FileFlex Enterprise’s capabilities can sup
 ## Summary:
 Quebec Bill 64 and other privacy regulations aim to modernize data protection provisions, granting individuals greater control over their personal information and holding organizations accountable for data handling practices. FileFlex Enterprise, a cutting-edge software-only solution, offers data classification, encryption, and secure remote access and sharing features that assist organizations in regulatory compliance with privacy legislations, and safeguarding personal data in the digital age.
 
-For more reading, see [Critical Infrastructure Regulatory Compliance via Zero Trust Architectures](/blog/critical-infrastructure-regulatory-compliance-via-zero-trust-architectures/), and [Protecting Personal Health Information (PHI): Ensuring Secure File Access and Sharing with Zero Trust Data Access (ZTDA).](https://fileflex.com/blog/protecting-personal-health-information-phi-ensuring-secure-file-access-and-sharing-with-zero-trust-data-access-ztda/)
+For more reading, see [Critical Infrastructure Regulatory Compliance via Zero Trust Architectures](/blog/critical-infrastructure-regulatory-compliance-via-zero-trust-architectures/), and [Protecting Personal Health Information (PHI): Ensuring Secure File Access and Sharing with Zero Trust Data Access (ZTDA).](/blog/hippa-compliant-file-sharing/)
 
 \*[Statistica](https://www.statista.com/statistics/1175672/population-personal-data-regulations-worldwide/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

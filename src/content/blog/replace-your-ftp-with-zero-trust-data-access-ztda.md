@@ -69,4 +69,4 @@ That is critical and as the above points prove there is one reality that simply 
 
 For more information on the advantages of using a zero trust data access platform see [ZTNA, ZTAA and ZTDA – A Deep Dive](/blog/ztna-ztaa-and-ztda-a-deep-dive/) and [Accelerating Digital Transformation Leveraging Zero Trust Data Access (ZTDA) in a Microsoft Ecosystem.](/blog/accelerating-digital-transformation-leveraging-zero-trust-data-access-in-a-microsoft-ecosystem/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

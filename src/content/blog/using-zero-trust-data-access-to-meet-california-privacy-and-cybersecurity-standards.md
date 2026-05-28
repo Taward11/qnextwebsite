@@ -85,4 +85,4 @@ In conclusion, implementing Zero Trust Data Access (ZTDA) through solutions like
 
 \* [cdt.ca.gov](https://cdt.ca.gov/wp-content/uploads/2021/10/Cybersecurity_Strategy_Plan_FINAL.pdf)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

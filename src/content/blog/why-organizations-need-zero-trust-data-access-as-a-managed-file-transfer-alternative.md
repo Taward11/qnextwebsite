@@ -147,4 +147,4 @@ The early 2023 security breaches in Managed File Transfer (MFT) services, exempl
 
 \*[Straits Research](https://straitsresearch.com/report/managed-file-transfer-market)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

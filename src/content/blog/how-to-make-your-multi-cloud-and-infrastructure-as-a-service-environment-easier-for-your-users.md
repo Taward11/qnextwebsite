@@ -111,4 +111,4 @@ Not only is FileFlex an easy tool to provide file management between cloud platf
 
 Get the full How to **_Make Your Multi-Cloud and Infrastructure-as-a-Service Environment Easier for Your Users_** whitepaper by providing your email below.
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

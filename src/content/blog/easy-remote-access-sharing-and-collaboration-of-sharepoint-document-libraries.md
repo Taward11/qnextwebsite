@@ -80,4 +80,4 @@ _Sharing an On-Premises Implementation of SharePoint_
 
 **Watch the Webinar:**
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

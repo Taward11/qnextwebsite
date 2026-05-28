@@ -164,4 +164,4 @@ For additional information see 19 Reasons [Why Zero Trust Data Access is an Esse
 -   Request a personalized demo.
 -   Explore how we helped a major financial institution eliminate email-based file sharing and meet compliance with Zero Trust for data.
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

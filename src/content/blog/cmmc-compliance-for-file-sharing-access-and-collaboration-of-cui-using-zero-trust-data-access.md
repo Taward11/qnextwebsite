@@ -198,4 +198,4 @@ For more information on protecting critical infrastructure with Zero Trust Data 
 
 \* [US Congressional Research Service](https://crsreports.congress.gov/product/pdf/IF/IF10548)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

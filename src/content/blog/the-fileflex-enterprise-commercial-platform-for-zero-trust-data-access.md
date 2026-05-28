@@ -53,6 +53,6 @@ Cloud solutions create fragmented separate silos, compromise privacy and require
 
 This article is the fourth in a series of 5 from TAG Cyber on Understanding Zero Trust Data Access.
 
-In Article 1, TAG Cyber CEO  Dr. Edward Amoroso examines “[How To Securely Share Data?](/blog/how-to-securely-share-data/)”.  In the second article, TAG Cyber’s Chris Wilder looked at the [risks to unstructured data](/blog/risks-to-unstructured-data/).  In Article 3, TAG Cyber’s Ed Amoroso expands on this theme to outline [zero trust access method](/blog/zero-trust-data-access-methods/)s and how zero trust data access might work at the file and folder level for customers. Article 5 from TAG Cyber’s Dr. Ed Amoroso proposes an [action plan for enterprises](https://fileflex.com/blog/proposed-zdta-action-plan-for-enterprise/) in this area.
+In Article 1, TAG Cyber CEO  Dr. Edward Amoroso examines “[How To Securely Share Data?](/blog/how-to-securely-share-data/)”.  In the second article, TAG Cyber’s Chris Wilder looked at the [risks to unstructured data](/blog/risks-to-unstructured-data/).  In Article 3, TAG Cyber’s Ed Amoroso expands on this theme to outline [zero trust access method](/blog/zero-trust-data-access-methods/)s and how zero trust data access might work at the file and folder level for customers. Article 5 from TAG Cyber’s Dr. Ed Amoroso proposes an [action plan for enterprises](/blog/proposed-ztda-action-plan-for-enterprise/) in this area.
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

@@ -136,4 +136,4 @@ For related articles see [Why Zero Trust Data Access User Management is Crucial 
 
 \*[Blocks & Files](https://blocksandfiles.com/2023/02/21/on-premises-file-storage-increasing/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

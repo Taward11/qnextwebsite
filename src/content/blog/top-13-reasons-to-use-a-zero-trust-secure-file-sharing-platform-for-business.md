@@ -136,4 +136,4 @@ To understand more about how a Zero Trust Data Access platform can help your org
 
 \*Finances Online
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

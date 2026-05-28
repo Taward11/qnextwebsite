@@ -64,4 +64,4 @@ Source: [Gartner](https://www.gartner.com/en/newsroom/press-releases/2021-12-2-g
 
 For more information about critical infrastructure protection, check out “[Critical Infrastructure Regulatory Compliance via Zero Trust Architecture](/blog/critical-infrastructure-regulatory-compliance-via-zero-trust-architectures/)s”, [Critical Infrastructure Management Over Remote Access and Sharing Using Zero Trust Architecture](/blog/critical-infrastructure-it-control-use-over-remote-access-and-sharing-using-zero-trust-architecture/)”, “[Critical Infrastructure Onboarding and Ease of Use Using Zero Trust Data Access](/blog/critical-infrastructure-ease-of-use-over-remote-access-and-sharing-using-zero-trust-architecture/)” and “[What is Zero Trust Data Access (ZTDA)](/blog/what-is-zero-trust-data-access-ztda/)“.
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

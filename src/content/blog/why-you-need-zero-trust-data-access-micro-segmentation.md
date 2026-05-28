@@ -128,6 +128,6 @@ For more reading, see [File Sharing and Collaboration Evolution from First Gener
 -   Request a personalized demo.
 -   Explore how we helped other organizations in their Zero Trust journeys.
 
-\*[Okta](https://www.okta.com/blog/2022/08/state-of-zero-trust-report-2022-takeaways/)
+\*[Okta](https://www.okta.com/blog/08/state-of-zero-trust-report-2022-takeaways/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

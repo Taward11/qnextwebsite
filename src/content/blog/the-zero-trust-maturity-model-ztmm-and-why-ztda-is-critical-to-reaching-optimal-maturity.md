@@ -211,4 +211,4 @@ For further reading see **[Using Zero Trust Data Access for NIST Compliance](/bl
 
 \*[CSOOnline](https://www.csoonline.com/article/656108/most-organizations-globally-have-implemented-zero-trust.html)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

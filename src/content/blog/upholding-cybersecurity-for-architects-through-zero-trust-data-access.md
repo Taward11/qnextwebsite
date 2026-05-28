@@ -134,4 +134,4 @@ Architects stand at the intersection of art, science, and technology, driving in
 
 \*[zippia](https://www.zippia.com/architect-jobs/demographics/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

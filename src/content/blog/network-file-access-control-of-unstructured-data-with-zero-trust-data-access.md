@@ -80,4 +80,4 @@ For more information see our related blogs: [The Power of Zero Trust Data Access
 
 \*\*[Positive Technologies](https://www.ptsecurity.com/ww-en/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

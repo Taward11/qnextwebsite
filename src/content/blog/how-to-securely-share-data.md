@@ -34,7 +34,7 @@ The reality is that solutions to this problem have proven difficult, given the m
 ### _A Five-Part Series of Articles from TAG Cyber_
 In this series of articles, we plan to outline the basics of the emerging ZTDA model, which involves the creation of a secure remote access infrastructure that allows secure sharing of data files and folders both internal and external, regardless of the details of their underlying network support and hosting implementation. The commercial FileFlex platform from cybersecurity company Qnext is shown to provide ZTDA capabilities effectively.[\[2\]](#_ftn2)
 
-In Article 2, TAG Cyber analyst Chris Wilder[\[3\]](#_ftn3) addresses [risks to unstructured data](/blog/risks-to-unstructured-data/). In Article 3, TAG Cyber’s Dr. Edward Amoroso[\[4\]](#_ftn4) expands on this theme to outline [zero trust data access methods](/blog/zero-trust-data-access-methods/) and how zero trust data access might work at the file and folder level for customers. Article 4 provides an overview of their [commercial platform for zero trust data access](/blog/the-fileflex-enterprise-commercial-platform-for-zero-trust-data-access/). Article 5 proposes [an action plan for enterprises](https://fileflex.com/blog/proposed-zdta-action-plan-for-enterprise/) in this area.
+In Article 2, TAG Cyber analyst Chris Wilder[\[3\]](#_ftn3) addresses [risks to unstructured data](/blog/risks-to-unstructured-data/). In Article 3, TAG Cyber’s Dr. Edward Amoroso[\[4\]](#_ftn4) expands on this theme to outline [zero trust data access methods](/blog/zero-trust-data-access-methods/) and how zero trust data access might work at the file and folder level for customers. Article 4 provides an overview of their [commercial platform for zero trust data access](/blog/the-fileflex-enterprise-commercial-platform-for-zero-trust-data-access/). Article 5 proposes [an action plan for enterprises](/blog/proposed-ztda-action-plan-for-enterprise/) in this area.
 
 [\[1\]](#_ftnref1) Customers of TAG Cyber’s Research as a Service (RaaS) can review modern ZTNA and SASE commercial offerings either through the perusal of curated libraries on the TAG Cyber RaaS portal or through live tailored engagements with expert analysts.
 
@@ -46,4 +46,4 @@ In Article 2, TAG Cyber analyst Chris Wilder[\[3\]](#_ftn3) addresses [risks to 
 
 Copyright © 2022 TAG Cyber LLC
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

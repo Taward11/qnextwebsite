@@ -129,4 +129,4 @@ In today’s complex financial landscape, where cybersecurity threats and compli
 
 \*[Worldmetrics](https://www.worldmetrics.org/global-financial-services-industry-statistics/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

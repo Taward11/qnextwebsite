@@ -94,4 +94,4 @@ Data is stored in source locations which all now have cloud functionality of rem
 
 \[1\] [https://www.salesforce.com/content/dam/web/en\_us/www/documents/legal/Agreements/policies/ExternalFacing\_Services\_Policy.pdf](https://www.salesforce.com/content/dam/web/en_us/www/documents/legal/Agreements/policies/ExternalFacing_Services_Policy.pdf)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

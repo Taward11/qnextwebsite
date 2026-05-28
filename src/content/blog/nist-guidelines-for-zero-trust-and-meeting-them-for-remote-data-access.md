@@ -114,4 +114,4 @@ For more reading on zero trust security, see our other blogs – [‘Why Zero Tr
 
 [![](/images/blog/nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access/BrightTALK-Webinar-cover-for-NIST-webinar-640x360-2.webp)](https://youtu.be/_CAG_BcRxP8)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

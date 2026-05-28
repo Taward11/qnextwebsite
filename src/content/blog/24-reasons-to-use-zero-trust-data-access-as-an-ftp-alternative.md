@@ -164,4 +164,4 @@ The early 2023 security breaches in File Transfer services, exemplified by GoAny
 
 For further reading see [Why Organizations Need Zero Trust Data Access as a Managed File Transfer Alternative](/blog/why-organizations-need-zero-trust-data-access-as-a-managed-file-transfer-alternative/), [Why replacing FTP with ZTDA is a No-Brainer](/blog/replace-your-ftp-with-zero-trust-data-access-ztda/), [How to Securely Share Data](/blog/how-to-securely-share-data/), and [Zero Trust Data Access Methods](/blog/zero-trust-data-access-methods/).
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

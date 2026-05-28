@@ -98,6 +98,6 @@ To understand more about how a Zero Trust Data Access platform can help your org
 
 For more study also see, [21 Reasons to Supplement Microsoft 365 E5 Security with Zero Trust Data Access](/blog/21-reasons-to-supplement-microsoft-365-e5-security-with-zero-trust-data-access/), [Accelerating Digital Transformation Leveraging Zero Trust Data Access (ZTDA) in a Microsoft Ecosystem](/blog/accelerating-digital-transformation-leveraging-zero-trust-data-access-in-a-microsoft-ecosystem/), and [How to Remotely Access and Share Self-Hosted SharePoint Securely](/blog/easy-remote-access-sharing-and-collaboration-of-sharepoint-document-libraries/).
 
-\* [Microsoft](https://www.microsoft.com/en-us/microsoft-365/blog/2020/12/08/over-200-million-users-rely-on-sharepoint-as-microsoft-is-again-recognized-as-a-leader-in-the-2020-gartner-content-services-platforms-magic-quadrant-report/)
+\* [Microsoft](https://www.microsoft.com/en-us/microsoft-365/blog/12/08/over-200-million-users-rely-on-sharepoint-as-microsoft-is-again-recognized-as-a-leader-in-the-2020-gartner-content-services-platforms-magic-quadrant-report/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

@@ -105,4 +105,4 @@ Your DSPM platform tells you where your data is at risk. FileFlex makes sure it 
 -   Request a personalized demo.
 -   Explore how we helped a major financial institution eliminate email-based file sharing and meet compliance with Zero Trust for data.
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

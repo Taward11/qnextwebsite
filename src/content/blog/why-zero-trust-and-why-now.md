@@ -70,4 +70,4 @@ Fortunately, the path to Zero Trust is much easier than ever. With the FileFlex 
 
 For more information on how your organization can adopt Zero Trust, please visit [www.fileflex.com](http://www.fileflex.com) or check out [How to Protect Your Data with Zero Trust Data Access](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/) and find out where you are in your journey of identity, devices, apps, infrastructure, and data security and what the best next step is to establish a trust-based access strategy.
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

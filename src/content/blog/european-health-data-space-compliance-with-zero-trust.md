@@ -127,4 +127,4 @@ Contact us to see how we can help you build a secure, compliant, and future-read
 
 \*[Eurodis](https://www.eurordis.org/ehds-training-session/?utm_source=chatgpt.com)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

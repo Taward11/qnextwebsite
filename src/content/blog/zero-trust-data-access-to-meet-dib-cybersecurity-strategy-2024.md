@@ -80,4 +80,4 @@ In conclusion, the Defense Industrial Base Cybersecurity Strategy 2024 stands as
 
 \*[FederalRegister.gov](https://www.federalregister.gov/documents/2023/05/03/2023-09021/department-of-defense-dod-defense-industrial-base-dib-cybersecurity-cs-activities)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

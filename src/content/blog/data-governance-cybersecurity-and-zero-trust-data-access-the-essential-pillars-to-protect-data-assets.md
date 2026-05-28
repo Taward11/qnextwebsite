@@ -57,4 +57,4 @@ To learn more see [Network File Access Control of Unstructured Data with Zero Tr
 
 \*[Gartner](https://www.gartner.com/en/articles/choose-adaptive-data-governance-over-one-size-fits-all-for-greater-flexibility)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

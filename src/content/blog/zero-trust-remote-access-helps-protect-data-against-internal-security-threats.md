@@ -72,4 +72,4 @@ If so, contact us to learn more about FileFlex Enterprise – the world’s #1 Z
 
 For more reading on why Zero Trust remote access is fast becoming the go-to for enterprise security, read [Why Zero Trust, Why Now](/blog/why-zero-trust-and-why-now/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

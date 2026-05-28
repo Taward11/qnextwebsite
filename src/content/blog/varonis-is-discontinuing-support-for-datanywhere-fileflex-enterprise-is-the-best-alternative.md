@@ -81,4 +81,4 @@ You can also talk to us in person and/or arrange a demo or free trial via this [
 
 Get the full **_FileFlex Enterprise for the Varonis DatAnywhere Organization_** whitepaper by submitting your email below.
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

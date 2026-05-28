@@ -122,4 +122,4 @@ For related articles see [Why Zero Trust Data Access User Management is Crucial 
 
 \*[Computerworld](https://www.computerworld.com/article/1621655/some-scary-for-some-statistics-around-file-sharing-usage.html)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

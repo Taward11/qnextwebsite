@@ -140,6 +140,6 @@ See also [Law Firm Secure and Controlled Access to Confidential Client Informati
 
 [\[ii\]](#_ednref2) [Hiscox Cyber Readiness Report 2021](https://www.hiscoxgroup.com/cyber-readiness-2021)
 
-[\[iii\]](#_ednref3) [Process Bolt](https://processbolt.com/insights/blog/why-law-firm-data-breaches-are-skyrocketing-in-2024/)
+[\[iii\]](#_ednref3) [Process Bolt](https://processbolt.com/insights/law-firms/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

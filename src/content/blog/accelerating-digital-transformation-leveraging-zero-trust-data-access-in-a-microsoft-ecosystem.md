@@ -86,4 +86,4 @@ From here, users can interact with their assigned content repositories. Using th
 
 The FileFlex Enterprise Windows client communicates to the FileFlex Enterprise server which is hosted on Microsoft Azure inside a clustered, high availability Microsoft Azure Virtual Machines.  The server then communicates with a FileFlex connector which can connect a user to their Azure, SharePoint, OneDrive, on-premises or local storage and it keeps an activity log for all users and all transactions.  The activity log works stand-alone or together with Microsoft Sentinel to provide IT visibility and alerts over suspicious activity.
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

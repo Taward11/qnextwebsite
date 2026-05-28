@@ -55,4 +55,4 @@ Alice’s story isn’t uncommon. Keep in mind that your business is only ever o
 
 For more reading on how Zero Trust security protects you against spear phishing, read [Why Zero Trust, Why Now](/blog/why-zero-trust-and-why-now/) and [Zero Trust Security Promises to Cast a Wide Net on Spear-Phishers](/blog/how-zero-trust-security-promises-to-cast-a-wide-net-on-spear-phishers/).
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

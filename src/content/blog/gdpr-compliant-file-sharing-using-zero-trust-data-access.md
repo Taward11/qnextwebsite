@@ -111,6 +111,6 @@ For more information, see [Accelerates Compliance to GDPR](/gdpr-compliance/), [
 **Handling EU personal data?**  
 Book a demo to see how FileFlex helps your organization achieve GDPR-compliant file sharing — without moving your data to the cloud.
 
-\* [legaljobs.io](https://legaljobs.io/blog/gdpr-statistics/)
+\* [legaljobs.io](https://legaljobs.io/gdpr-compliance/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

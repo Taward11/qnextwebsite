@@ -203,6 +203,6 @@ NIST SP 1800-35 reinforces that effective Zero Trust requires more than identity
 
 For related reading see [The Zero Trust Data Gap](/blog/the-zero-trust-data-gap/) and [Zero Trust and Regulatory Compliance](/blog/zero-trust-and-regulatory-compliance/).
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
 
-\*[Gartner via FileFlex coverage](https://fileflex.com/blog/nist-sp-1800-35-how-data-level-enforcement-strengthens-zero-trust-security/)
+\*[Gartner via FileFlex coverage](/blog/nist-sp-1800-35-how-data-level-enforcement-strengthens-zero-trust-security/)

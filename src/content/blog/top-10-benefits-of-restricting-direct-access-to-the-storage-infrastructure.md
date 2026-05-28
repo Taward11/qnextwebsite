@@ -227,4 +227,4 @@ For further information read [9 Top Reasons Why Your Organization Needs Zero Tru
 
 \*[Version Data Breach Investigations Report](https://www.verizon.com/business/resources/Tf91/reports/2023-data-breach-investigations-report-dbir.pdf)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

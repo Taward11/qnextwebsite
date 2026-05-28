@@ -103,4 +103,4 @@ For related articles see [Why Zero Trust Data Access User Management is Crucial 
 
 \*[IBM Cost of a Data Breach Report 2022](https://www.ibm.com/downloads/cas/3R8N1DZJ)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

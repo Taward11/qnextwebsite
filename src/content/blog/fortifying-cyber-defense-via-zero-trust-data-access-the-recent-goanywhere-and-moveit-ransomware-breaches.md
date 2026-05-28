@@ -53,4 +53,4 @@ The escalating threat posed by unstructured data breaches underscores the critic
 
 For further reading see [Top 11 Ways Zero Trust Data Access Aids Unstructured Data Management](/blog/unstructured-data-access-and-sharing-controlled-and-secured-using-zero-trust-data-access/), and [Why You Need Zero Trust Data Access Micro-Segmentation](/blog/why-you-need-zero-trust-data-access-micro-segmentation/).
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

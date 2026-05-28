@@ -68,4 +68,4 @@ To read more about zero trust architecture for critical infrastructure organizat
 
 \*[Digital Workplace Report](https://resources.igloosoftware.com/state-of-the-digital-workplace/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

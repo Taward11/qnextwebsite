@@ -109,4 +109,4 @@ This blog looks at FileFlex Enterprise and shows how it meets the published best
 
 For more reading on zero trust and zero trust data access see “[How to Meet NIST Guidelines for Zero Trust for Remote Data Access](/blog/nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access/)“, “[Why Zero Trust and Why Now?](/blog/why-zero-trust-and-why-now/)“, and “[How to Protect Your Data With Zero Trust Data Access](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)“.  For more information on CMMC go to [https://cmmcab.org/](https://cmmcab.org/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

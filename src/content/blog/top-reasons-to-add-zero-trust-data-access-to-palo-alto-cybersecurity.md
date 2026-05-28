@@ -103,4 +103,4 @@ For further reading see [How to Build a Complete Zero Trust Security Framework](
 
 \*[Wikipedia](https://en.wikipedia.org/wiki/Palo_Alto_Networks)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

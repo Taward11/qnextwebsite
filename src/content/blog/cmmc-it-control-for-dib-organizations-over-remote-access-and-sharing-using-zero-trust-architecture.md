@@ -79,4 +79,4 @@ Zero Trust Data Access as implemented by FileFlex Enterprise provides IT departm
 
 \* [Wikipedia](https://en.wikipedia.org/wiki/Cybersecurity_Maturity_Model_Certification)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

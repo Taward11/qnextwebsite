@@ -57,4 +57,4 @@ To learn more, check out some of our related blogs such as [What is Zero Trust D
 
 \*[ComputerWorld](https://www.computerworld.com/article/2991924/some-scary-for-some-statistics-around-file-sharing-usage.html)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

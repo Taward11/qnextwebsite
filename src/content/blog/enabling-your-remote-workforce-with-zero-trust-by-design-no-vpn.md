@@ -65,4 +65,4 @@ Finally, FileFlex Enterprise is a low-cost, software-only solution that runs fro
 
 [\[3\]](#_ftnref3) [The VPN is dying, long live zero trust](https://www.networkworld.com/article/3487720/the-vpn-is-dying-long-live-zero-trust.html)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

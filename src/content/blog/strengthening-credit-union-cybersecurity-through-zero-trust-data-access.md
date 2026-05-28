@@ -153,6 +153,6 @@ These Zero Trust Data Access use cases provide robust security for credit unions
 ## Conclusion: Building Member Trust Through Advanced Zero Trust Cybersecurity Measures
 In conclusion, by adopting Zero Trust Data Access technology, credit unions can significantly enhance their data protection measures and ensure regulatory compliance, ultimately creating a safer operating environment and strengthening member trust. For a related article see [Zero Trust for FFIEC Compliance: Why ZTDA Is the Missing Link](/blog/meeting-ffiec-guidelines-using-zero-trust-data-access/), [Zero Trust for GLBA Compliance: File-Level Data Protection](/blog/strengthening-glba-compliance-with-zero-trust-data-access/), [DORA Compliance for File Sharing, Access and Collaboration Using Zero Trust Data Access](/blog/dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access/)
 
-\*[mx.com](https://www.mx.com/blog/biggest-us-credit-unions-by-asset-size/)
+\*[mx.com](https://www.mx.com/blog/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

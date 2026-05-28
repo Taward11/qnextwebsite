@@ -74,8 +74,8 @@ While Cloudflare One secures access to applications and the network, FileFlex En
 
 By combining Cloudflare One with FileFlex Enterprise, organizations can achieve a truly comprehensive Zero Trust strategy that protects both the applications users access and the sensitive data those applications handle. Cloudflare secures and optimizes traffic while enforcing identity- and device-based access controls, and FileFlex extends that protection directly to files, providing granular permissions, auditing, and governance wherever data resides. Together, they reduce risk, ensure regulatory compliance, and simplify security management—enabling organizations to confidently operate in today's hybrid and distributed IT environments.
 
-For further reading, see [The Zero Trust Data Gap: Closing the Blind Spot in Modern Security Architectures](/blog/the-zero-trust-data-gap/) and [How to Build a Complete Zero Trust Security Framework](https://fileflex.com/blog/complete-zero-trust-security-framework/).
+For further reading, see [The Zero Trust Data Gap: Closing the Blind Spot in Modern Security Architectures](/blog/the-zero-trust-data-gap/) and [How to Build a Complete Zero Trust Security Framework](/blog/complete-zero-trust-security-framework/).
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
 
 \*[Cloudflare](https://blog.cloudflare.com/cloudflare-sse-gartner-magic-quadrant/)

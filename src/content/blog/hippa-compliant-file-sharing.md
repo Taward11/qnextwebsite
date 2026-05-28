@@ -63,4 +63,4 @@ For more information, see [HIPAA Compliant File Sharing](/hipaa-compliance/), [P
 
 \*[HIPAA Journal](https://www.hipaajournal.com/global-healthcare-cyberattacks-increased-by-74-in-2022/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

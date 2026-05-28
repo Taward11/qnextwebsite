@@ -80,4 +80,4 @@ Adversaries know this and they’re looking for ways to exploit any and all secu
 
 For more reading on Zero Trust Architecture (ZTA) and Zero Trust Data Access (ZTDA), see [How to Use Zero Trust to Meet CMMC Access Control Practices for Remote Data Access](/blog/how-fileflex-enterprise-helps-dod-contractors-meet-cmmc-best-practices-for-access-control/), [How to Meet NIST Guidelines for Zero Trust for Remote Data Access](/blog/nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access/), [Why Zero Trust and Why Now?](/blog/why-zero-trust-and-why-now/), and [How to Protect Your Data With Zero Trust Data Access](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

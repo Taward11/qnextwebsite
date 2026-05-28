@@ -63,4 +63,4 @@ AES-256 is the first publicly accessible and open cipher approved by the United 
 
 In closing, the FileFlex Enterprise platform provides secure ZTDA based remote data access and sharing across a hybrid-IT infrastructure to protect remote access what is no doubt an organization’s most valuable asset – its unstructured corporate data.  To learn more, check out [our web page](/security/) that details our zero trust based security or go to our [virtual learning center](/virtual-learning-centre/).
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

@@ -49,4 +49,4 @@ Implement the next generation of defense. Zero Trust shifts the way humans inter
 
 For more reading on spear-phishing prevention and Zero Trust security, see “[How to Mitigate Spear-Phishing via the FileFlex Enterprise Zero Trust Platform](/blog/mitigate-spear-phishing-via-the-fileflex-enterprise-zero-trust-platform/).”
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

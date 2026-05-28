@@ -135,6 +135,6 @@ By using FileFlex and Microsoft Fabric, organizations extend Zero Trust protecti
 
 For further reading see [What is Zero Trust Data Access (ZTDA)?](/blog/what-is-zero-trust-data-access-ztda/), [Why Microsoft-Centric Security Isn’t Enough: The Case for Zero Trust Data Access](/blog/why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access/), [Why Zero Trust Data Access is an Essential SharePoint Add-in](/blog/19-reasons-why-zero-trust-data-access-is-an-essential-sharepoint-add-in/), [21 Reasons to Supplement Microsoft 365 E5 Security with Zero Trust Data Access](/blog/21-reasons-to-supplement-microsoft-365-e5-security-with-zero-trust-data-access/), and  [Accelerating Digital Transformation Leveraging Zero Trust Data Access (ZTDA) in a Microsoft Ecosystem](/blog/accelerating-digital-transformation-leveraging-zero-trust-data-access-in-a-microsoft-ecosystem/).
 
-\*[Microsoft](https://www.microsoft.com/en-us/microsoft-fabric/blog/2023/11/15/prepare-your-data-for-ai-innovation-with-microsoft-fabric-now-generally-available/?utm_source=chatgpt.com)
+\*[Microsoft](https://www.microsoft.com/en-us/microsoft-fabric/blog/11/15/prepare-your-data-for-ai-innovation-with-microsoft-fabric-now-generally-available/?utm_source=chatgpt.com)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

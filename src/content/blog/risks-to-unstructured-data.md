@@ -66,8 +66,8 @@ CISOs, IT leaders, and data owners must understand effective data risk managemen
 
 This article is the second in a series of 5 from TAG Cyber on Understanding Zero Trust Data Access.
 
-In Article 1, TAG Cyber CEO  Dr. Edward Amoroso examines “[How To Securely Share Data](/blog/how-to-securely-share-data/)?”.  In Article 3, TAG Cyber’s Dr. Edward Amoroso expands on this theme to outline [zero trust access methods](/blog/zero-trust-data-access-methods/) and how zero trust data access might work at the file and folder level for customers. Article 4  provides an overview of their [commercial platform for zero trust data access](/blog/the-fileflex-enterprise-commercial-platform-for-zero-trust-data-access/). Article 5 from TAG Cyber’ proposes an a[ction plan for enterprises](https://fileflex.com/blog/proposed-zdta-action-plan-for-enterprise/) in this area.
+In Article 1, TAG Cyber CEO  Dr. Edward Amoroso examines “[How To Securely Share Data](/blog/how-to-securely-share-data/)?”.  In Article 3, TAG Cyber’s Dr. Edward Amoroso expands on this theme to outline [zero trust access methods](/blog/zero-trust-data-access-methods/) and how zero trust data access might work at the file and folder level for customers. Article 4  provides an overview of their [commercial platform for zero trust data access](/blog/the-fileflex-enterprise-commercial-platform-for-zero-trust-data-access/). Article 5 from TAG Cyber’ proposes an a[ction plan for enterprises](/blog/proposed-ztda-action-plan-for-enterprise/) in this area.
 
 Copyright © 2022 TAG Cyber LLC
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

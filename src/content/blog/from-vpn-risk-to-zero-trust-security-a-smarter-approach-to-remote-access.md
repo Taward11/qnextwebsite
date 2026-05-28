@@ -67,6 +67,6 @@ In today’s threat environment, securing remote access requires a smarter, more
 
 For further information see [19 Advantages of the Zero Trust Data Access VPN Alternative](/blog/a-vpn-alternative-zero-trust-data-access/)
 
-\*[Seqrite](https://www.seqrite.com/blog/why-60-of-enterprises-are-moving-from-vpns-to-zero-trust-network-access/)
+\*[Seqrite](https://www.seqrite.com/blog/a-vpn-alternative-zero-trust-data-access/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

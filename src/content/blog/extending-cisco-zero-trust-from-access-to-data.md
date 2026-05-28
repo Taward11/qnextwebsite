@@ -98,4 +98,4 @@ For related blogs on how FileFlex closes the data security gap see [Extending Mi
 
 Source: [Cisco](https://investor.cisco.com/news/news-details/2024/Cisco-Study-Reveals-Very-Few-Organizations-Prepared-to-Defend-Against-Todays-Rapidly-Evolving-Threat-Landscape/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

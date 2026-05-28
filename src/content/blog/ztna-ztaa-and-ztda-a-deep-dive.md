@@ -76,4 +76,4 @@ Still, it was an attack that no company, regardless of how large or small, would
 
 For further reading see W[hy Your Zero Trust Security Model Must Include Zero Trust Data Access (ZTDA)](/blog/zero-trust-security-model-must-include-zero-trust-data-access-ztda/) and [What is Zero Trust Data Access (ZTDA)?](/blog/what-is-zero-trust-data-access-ztda/).
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

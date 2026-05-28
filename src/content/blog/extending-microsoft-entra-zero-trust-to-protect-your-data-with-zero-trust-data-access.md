@@ -127,6 +127,6 @@ In today’s hybrid and cloud-driven environments, securing identities and netwo
 
 For more information on using FileFlex to complement a Microsoft ecosystem see [SharePoint Under Siege: Why Zero Trust Access Is Now Critical](/blog/sharepoint-zero-trust-security-and-defending-against-zero-day-vulnerabilities/),  [Why Microsoft-Centric Security Isn’t Enough: The Case for Zero Trust Data Access](/blog/why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access/), and [Accelerating Digital Transformation Leveraging Zero Trust Data Access (ZTDA) in a Microsoft Ecosystem](/blog/accelerating-digital-transformation-leveraging-zero-trust-data-access-in-a-microsoft-ecosystem/).
 
-\*[Microsoft](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/introducing-microsoft-entra-license-utilization-insights/3796393?utm_source=chatgpt.com)
+\*[Microsoft](https://techcommunity.microsoft.com/blog/extending-microsoft-entra-zero-trust-to-protect-your-data-with-zero-trust-data-access/introducing-microsoft-entra-license-utilization-insights/3796393?utm_source=chatgpt.com)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

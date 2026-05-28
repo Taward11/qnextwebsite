@@ -158,4 +158,4 @@ For further information, read [What is Zero Trust Data Access (ZTDA)?,](/blog/wh
 
 \*\* [Techradar](https://www.techradar.com/news/businesses-are-replacing-vpns-with-zero-trust-network-access)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

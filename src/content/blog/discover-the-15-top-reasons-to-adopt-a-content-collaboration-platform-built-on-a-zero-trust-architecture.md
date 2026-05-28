@@ -159,4 +159,4 @@ To understand more about how a Zero Trust Data Access platform can help your org
 
 \* [Zippia](https://www.zippia.com/advice/workplace-collaboration-statistics/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

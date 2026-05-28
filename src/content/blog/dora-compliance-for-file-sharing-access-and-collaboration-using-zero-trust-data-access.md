@@ -120,4 +120,4 @@ In conclusion, the integration of Zero Trust Data Access (ZTDA) as implemented b
 
 For further reading also see [Critical Infrastructure Regulatory Compliance via Zero Trust Architectures](/blog/critical-infrastructure-regulatory-compliance-via-zero-trust-architectures/) and [GDPR Compliant File Sharing Using Zero Trust Data Access](/blog/gdpr-compliant-file-sharing-using-zero-trust-data-access/).
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

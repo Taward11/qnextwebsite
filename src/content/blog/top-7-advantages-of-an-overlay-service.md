@@ -123,4 +123,4 @@ See also **[What is Zero Trust Data Access](/blog/what-is-zero-trust-data-access
 
 \*[Statistica](https://www.statista.com/topics/6198/it-budgets-and-investments/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

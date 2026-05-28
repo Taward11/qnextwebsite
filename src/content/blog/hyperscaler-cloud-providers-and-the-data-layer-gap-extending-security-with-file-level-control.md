@@ -173,8 +173,8 @@ Most enterprises use more than one hyperscaler — or combine cloud with on-prem
 
 As cloud adoption grows, hyperscalers provide world-class infrastructure security, but organizations still face critical responsibilities at the data layer—managing access, sharing, collaboration, and compliance for unstructured data. Solutions like FileFlex Enterprise complement hyperscaler protections by applying Zero Trust principles directly to files and folders, enabling secure, policy-driven access without moving or duplicating data. By bridging the gap between infrastructure-level security and data-level control, enterprises can maintain governance, reduce risk, and empower teams to collaborate safely across hybrid and multi-cloud environments.
 
-For further reading see [The Zero Trust Data Gap](/blog/the-zero-trust-data-gap/), [How to Build a Complete Zero Trust Security Framework](https://fileflex.com/blog/complete-zero-trust-security-framework/), and [How to Make Your Hybrid-IT and Infrastructure-as-a-Service Environment Easier for Your Users](https://fileflex.com/blog/how-to-make-your-multi-cloud-and-infrastructure-as-a-service-environment-easier-for-your-users/).
+For further reading see [The Zero Trust Data Gap](/blog/the-zero-trust-data-gap/), [How to Build a Complete Zero Trust Security Framework](/blog/complete-zero-trust-security-framework/), and [How to Make Your Hybrid-IT and Infrastructure-as-a-Service Environment Easier for Your Users](/blog/how-to-make-your-multi-cloud-and-infrastructure-as-a-service-environment-easier-for-your-users/).
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
 
 \*[Gartner](https://www.gartner.com/en/newsroom/press-releases/2024-07-22-gartner-says-worldwide-iaas-public-cloud-services-revenue-grew-16-point-2-percent-in-2023)

@@ -93,4 +93,4 @@ They open the folder and then can drag and drop files into it.
 
  _![Create a Virtual Data Room](/images/blog/use-fileflex-enterprise-to-create-virtual-data-rooms/Create-a-Virtual-Data-Room-Pic-recipient-view-drag-and-drop.webp) Recipients drag and drop files and folders into the data room_
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

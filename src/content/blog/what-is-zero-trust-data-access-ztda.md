@@ -190,6 +190,6 @@ Overall, Zero Trust Data Access can help organizations to achieve a more compreh
 
 For more learning about zero trust protection for critical infrastructure organizations see [“Protecting Critical Infrastructure Using Zero Trust Data Access Architecture – The Top 8 List](/blog/critical-infrastructure-protection-using-zero-trust-data-access-top-8/)”, “[Critical Infrastructure Regulatory Compliance via Zero Trust Architectures](/blog/critical-infrastructure-regulatory-compliance-via-zero-trust-architectures/)”, “[Critical Infrastructure Management Over Remote Access and Sharing Using Zero Trust Architecture](/blog/critical-infrastructure-it-control-use-over-remote-access-and-sharing-using-zero-trust-architecture/)” and “[Critical Infrastructure Onboarding and Ease of Use Using Zero Trust Data Access](/blog/critical-infrastructure-ease-of-use-over-remote-access-and-sharing-using-zero-trust-architecture/)”.
 
-Source: [Okta](https://www.okta.com/blog/2022/08/state-of-zero-trust-report-2022-takeaways/)
+Source: [Okta](https://www.okta.com/blog/08/state-of-zero-trust-report-2022-takeaways/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

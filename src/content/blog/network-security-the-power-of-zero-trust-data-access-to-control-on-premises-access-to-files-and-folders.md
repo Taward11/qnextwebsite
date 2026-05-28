@@ -56,4 +56,4 @@ To learn more, check out our other blogs [How FileFlex Can Facilitate Secure and
 
 \*[Cybersecurity Ventures](https://cybersecurityventures.com/stats/)
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)

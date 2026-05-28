@@ -72,4 +72,4 @@ Watch the webinar
 
 <p class="blog-prose__caption--center"><em>Watch — the Webinar</em></p>
 
-[Learn More About FileFlex](/) · [Sign Up for a Free Trial](https://fileflex.com/fileflex-enterprise/try-plus/)
+[Learn More About FileFlex](/) · [Sign Up for a Free Trial](/try-fileflex/)
