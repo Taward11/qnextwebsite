@@ -6,7 +6,7 @@ excerpt: "Federated hybrid access enables organizations to securely and consiste
 date: 2026-01-13
 modified: 2026-01-13
 author: "Tom Ward"
-featuredImage: "/images/blog/federated-hybrid-access-why-modern-organizations-cant-afford-to-ignore-it/iStock-541282164-web-e1768340893420.webp"
+featuredImage: "/images/blog/federated-hybrid-access-why-modern-organizations-cant-afford-to-ignore-it/iStock-541282164-web-e1768340893420.jpg"
 featuredImageAlt: "Federated hybrid access across cloud, on-prem, and endpoints"
 readingTime: "2.5 min read"
 categories:
