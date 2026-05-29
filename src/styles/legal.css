@@ -1,0 +1,118 @@
+/* ============================================================
+   Legal pages — Privacy Policy, Terms of Service, License
+   Inter throughout, matches the site's dark navy/orange palette
+   ============================================================ */
+
+.legal-hero {
+  background: var(--bg-darkest);
+  padding: calc(var(--nav-h) + 72px) 7vw 64px;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-hero__inner {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.legal-hero__eyebrow {
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--orange);
+  margin: 0 0 14px;
+}
+
+.legal-hero h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+}
+
+.legal-body {
+  background: var(--bg-dark);
+  padding: 64px 7vw 96px;
+}
+
+.legal-body__inner {
+  max-width: 880px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+}
+
+.legal-body__inner h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.4rem, 2.6vw, 1.85rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.25;
+  margin: 0 0 28px;
+  padding-bottom: 18px;
+  border-bottom: 2px solid var(--orange);
+}
+
+.legal-body__inner h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+  margin: 40px 0 12px;
+}
+
+.legal-body__inner p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
+  margin: 0 0 20px;
+}
+
+.legal-body__inner strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.legal-body__inner a {
+  color: var(--orange);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(232, 89, 10, 0.4);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.legal-body__inner a:hover {
+  color: var(--orange-hover);
+  border-bottom-color: var(--orange-hover);
+}
+
+.legal-body__inner ul,
+.legal-body__inner ol {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
+  margin: 0 0 20px;
+  padding-left: 24px;
+}
+
+.legal-body__inner li {
+  margin-bottom: 10px;
+}
+
+/* The last paragraph is the revision date line — set it apart */
+.legal-body__inner > p:last-child {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  .legal-hero { padding: calc(var(--nav-h) + 48px) 7vw 48px; }
+  .legal-body { padding: 48px 7vw 72px; }
+}

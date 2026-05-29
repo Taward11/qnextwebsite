@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/legal.css';
+
+const body = `
+<h2>End User License Agreement</h2>
+<p><strong>PLEASE READ THIS SOFTWARE LICENSE AGREEMENT (</strong>&#8220;<strong>LICENSE</strong>&#8220;<strong>) CAREFULLY BEFORE USING THE ASSOCIATED QNEXT SOFTWARE.  BY USING THE SOFTWARE, YOU ARE AGREEING TO BE BOUND BY THE TERMS OF THIS LICENSE. IF YOU DO NOT AGREE TO THE TERMS OF THIS LICENSE, YOU MAY NOT INSTALL OR USE THE SOFTWARE.</strong></p>
+<p>This License is a legal agreement between you (the individual or single legal entity referred to hereinafter as &#8220;<strong>You</strong>&#8221; or &#8220;<strong>Your</strong>&#8220;, as grammatically appropriate) and Qnext (&#8220;<strong>Qnext</strong>&#8220;). By installing, copying, or otherwise using the Qnext software and services delivered to You in conjunction with this License (including all associated documentation, the &#8220;<strong>Software</strong>&#8220;), You agree to be bound by the terms of this License. You acknowledge and agree that the Software is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties and that the Software is licensed, not sold.</p>
+<p><strong>1.</strong> <strong>LICENSE GRANT</strong>. Qnext hereby grants You a nonexclusive, nontransferable right, without right to sublicense, to use a single copy of the Software loaded on any device specified as compatible with the Software by Qnext, solely for the purpose of utilizing other Qnext products and/or services. Additional terms and conditions may apply to Your use of such other Qnext products and services.</p>
+<p><strong>2.</strong> <strong>LICENSE RESTRICTIONS</strong>. You shall at all times comply with the following restrictions in exercising the license rights granted to You in Section 1 above:</p>
+<p>a. You may use the Software to reproduce materials only to the extent such use is limited to reproduction of non-copyrighted materials, materials in which you own the copyright or materials you are authorized or legally permitted to reproduce. If you are uncertain about Your right to copy or permit access to any material You should contact Your legal adviser.</p>
+<p>b. You shall not rent, lease or otherwise transfer the Software to any third party, nor use it to operate a rental, leasing, or service bureau business or any similar hosting or subscription arrangement. Except as and only to the extent expressly permitted in this License or by applicable law, you may not copy, distribute, or transmit, the Software (including accompanying documentation) or attempt to decompile, reverse engineer, disassemble, modify, or create derivative works of the Software.</p>
+<p>c. If You are an entity (e.g., corporation, partnership or limited liability company) You may permit Your employees and agents to use the Software solely on Your behalf. In such case, You shall inform Your employees and agents who use the Software of the terms and conditions governing such use, and You shall be responsible for their compliance with the terms of this License.</p>
+<p><strong>3.</strong> <strong>UPDATES</strong>. In the event that Qnext provides You with any updates to the Software or replacement versions of the Software (collectively &#8220;<strong>Updates</strong>&#8220;) this License shall continue to apply to such Updates, unless they are accompanied by a new software license agreement, in which case such new agreement will replace this License.</p>
+<p><strong>4.</strong> <strong>TERM</strong>. This License shall be effective upon Your first installation or use of the Software, and it shall remain in force indefinitely unless it is terminated. In the event You breach any provision of this License, this License shall be deemed to be automatically terminated, with or without notice to You. The failure of Qnext to insist upon strict adherence to the provisions of this License shall in no way constitute a waiver of its rights. Following termination of this License, You shall discontinue using the Software.</p>
+<p><strong>5.</strong> <strong>RESERVATION OF RIGHTS</strong>. Qnext and/or its suppliers retain all title, copyrights and other intellectual property and proprietary rights in and to the Software, including but not limited to all patent rights and trade secrets. This License shall be construed as a license agreement only, and any rights not expressly granted herein are reserved by Qnext and/or its suppliers or partners.</p>
+<p><strong>6.</strong> <strong>DISCLAIMER OF WARRANTIES</strong>. YOU ACKNOWLEDGE AND AGREE THAT USE OF THE SOFTWARE IS AT YOUR SOLE RISK, AND THAT THE SOFTWARE IS PROVIDED TO YOU BY QNEXT WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, QNEXT AND ITS SUPPLIERS DISCLAIM ALL WARRANTIES, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY IMPLIED WARRANTIES AS TO QUALITY, MERCHANTABILITY, OPERABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR TITLE.</p>
+<p><strong>7.</strong> <strong>LIMITATION OF LIABILITY</strong>. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL QNEXT OR ITS SUPPLIERS OR PARTNERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF DATA, TANGIBLE OR INTANGIBLE PROPERTY OR ANY OTHER LOSS WHATSOEVER) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF QNEXT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. BECAUSE SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES, THE ABOVE LIMITATION MAY NOT APPLY TO YOU.</p>
+<p><strong>8. LIMITATION OF DAMAGES. Qnext, its suppliers and OEM partners </strong>entire liability arising out of this License, irrespective of whether the action or claim giving rise to such liability is based in statute, contract, misrepresentation, warranty, indemnity, negligence, strict liability or other tort or otherwise, shall in no event exceed the fees paid by You for the Software licensed under this License. The foregoing limitation will apply even if the above-stated remedy fails of its essential purpose.</p>
+<p><strong>10.</strong> <strong>COMPLIANCE WITH EXPORT LAWS</strong>. You may not use or otherwise export or re-export the Software except as authorized by Canada and United States law and the laws of the jurisdiction in which the Software was obtained. In particular, but without limitation, the Software may not be exported or re-exported (a) into any Canadian or U.S. embargoed countries or (b) to anyone on the Canada and U.S. Treasury Department&#8217;s list of Specially Designated Nationals or the Canadian and U.S. Department of Commerce Denied Person&#8217;s List or Entity List. By using the Software, you represent and warrant that you are not located in any such country or on any such list. You also agree that you will not use the Software for any purposes prohibited by Canadian and United States law, including, without limitation, the development, design, manufacture or production of missiles, or nuclear, chemical or biological weapons.</p>
+<p><strong>11. GENERAL</strong>. This License will be governed by the laws of the province of Ontario, Canada. The United Nations Convention on Contracts for the International Sale of Goods shall not apply to this License. In the event any provision of this License is held to be invalid or unenforceable by a court of competent jurisdiction, the remainder of this License shall continue in full force and effect. This License constitutes the entire agreement between the parties with respect to the use of the Software licensed hereunder and supersedes all prior or contemporaneous understandings regarding such subject matter, with the exception of any additional terms and conditions that may be applicable to Your use of other Qnext products or services. The provisions of Sections 5, 6, 7, 8 and 11 of this License shall survive its termination, howsoever arising.</p>
+<p>License Agreement &#8211; April 2015</p>
+`;
+---
+
+<Layout
+  title="License Agreement | FileFlex"
+  description="End User License Agreement for the Qnext software, distributed as FileFlex. Please read carefully before using the associated Qnext software."
+>
+
+<Nav current="" />
+
+<section class="legal-hero" aria-labelledby="legal-heading">
+  <div class="legal-hero__inner">
+    <p class="legal-hero__eyebrow">Legal</p>
+    <h1 id="legal-heading">License Agreement</h1>
+  </div>
+</section>
+
+<section class="legal-body">
+  <div class="legal-body__inner" set:html={body}></div>
+</section>
+
+</Layout>
