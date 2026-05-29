@@ -11,6 +11,8 @@
   --pf-bg: #FAFBFC;
   --pf-dark: #0f1f2e;
   --pf-orange: #e8590a;
+  --pf-font-display: 'Inter', sans-serif;
+  --pf-font-body: 'Inter', sans-serif;
 }
 
 /* ============================================================
