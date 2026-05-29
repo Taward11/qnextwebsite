@@ -1,4 +1,5 @@
 import express from 'express';
+import compression from 'compression';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -6,6 +7,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dist = path.join(__dirname, 'dist');
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+app.use(compression());
 
 const YEAR = 31536000;
 const MONTH = 2592000;
