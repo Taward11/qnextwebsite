@@ -73,11 +73,31 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
   */}
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  {/*
+    Font Awesome: loaded non-render-blocking. It is only used for decorative
+    icons (all aria-hidden) on a handful of sub-pages, never on the homepage,
+    so it should not sit on the critical request chain. preload+onload swap
+    fetches it without blocking first paint; noscript covers the no-JS case.
+  */}
+  <link
+    rel="preload"
+    as="style"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </noscript>
   {isHome && (
     <>
-      {/* Hero image origin — preconnected because the LCP image lives here */}
-      <link rel="preconnect" href="https://fileflex.com" crossorigin />
+      {/*
+        Hero image origin — preconnected because the LCP image lives here.
+        No crossorigin: the hero image is a normal (non-CORS) request, so a
+        crossorigin preconnect would open a separate connection the image
+        never uses (PSI "Unused preconnect"). Plain preconnect matches the
+        actual fetch and captures the LCP savings.
+      */}
+      <link rel="preconnect" href="https://fileflex.com" />
       {/* YT iframe only loads on click — dns-prefetch is enough, preconnect would hold an unused socket */}
       <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
       {/* Analytics is async + non-blocking → dns-prefetch is enough */}
