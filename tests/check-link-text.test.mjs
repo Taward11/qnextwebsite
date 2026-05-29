@@ -1,5 +1,10 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import { spawnSync } from "node:child_process";
+import { mkdtemp, mkdir, writeFile, rm } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 
 import {
   normalize,
@@ -212,4 +217,108 @@ test("checkMarkdownLinks clears descriptive markdown links", () => {
 test("checkMarkdownLinks skips image links", () => {
   const v = checkMarkdownLinks("![more](/img.png)");
   assert.equal(v.length, 0);
+});
+
+// ---------------------------------------------------------------------------
+// Integration tests: exercise the full file-walking + reporting pipeline
+// (main/walk) by running the script as a subprocess against fixture files.
+// The script scans `<cwd>/src`, so we point cwd at a temp dir we populate.
+// ---------------------------------------------------------------------------
+
+const SCRIPT = fileURLToPath(
+  new URL("../scripts/check-link-text.mjs", import.meta.url),
+);
+
+// Create a temp project dir with the given fixture files (relative paths under
+// the temp root), run the script there, and return { status, stdout, stderr }.
+// Always cleans up the temp dir afterwards.
+async function runScript(files, args = []) {
+  const root = await mkdtemp(join(tmpdir(), "link-text-"));
+  try {
+    for (const [rel, content] of Object.entries(files)) {
+      const full = join(root, rel);
+      await mkdir(join(full, ".."), { recursive: true });
+      await writeFile(full, content, "utf8");
+    }
+    const result = spawnSync(process.execPath, [SCRIPT, ...args], {
+      cwd: root,
+      encoding: "utf8",
+    });
+    return result;
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+}
+
+test("main exits 0 and reports success when no violations exist", async () => {
+  const result = await runScript({
+    "src/clean.astro":
+      '<a href="/x" aria-label="Learn more about the platform">Learn More</a>',
+    "src/clean.md": "[read the zero trust guide](/blog/zt)",
+  });
+  assert.equal(result.status, 0);
+  assert.match(result.stdout, /link-text check passed/);
+  assert.equal(result.stderr.trim(), "");
+});
+
+test("main exits 1 and reports violations by default", async () => {
+  const result = await runScript({
+    "src/bad.astro": '<a href="/x">Learn More</a>',
+  });
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /ERROR: found 1 control/);
+  assert.match(result.stderr, /src\/bad\.astro:1\s+anchor text "learn more"/);
+});
+
+test("main exits 0 with --warn even when violations exist", async () => {
+  const result = await runScript(
+    { "src/bad.astro": '<a href="/x">Learn More</a>' },
+    ["--warn"],
+  );
+  assert.equal(result.status, 0);
+  assert.match(result.stderr, /WARNING: found 1 control/);
+});
+
+test("walk recurses into subdirectories and skips non-scanned extensions", async () => {
+  const result = await runScript({
+    // Nested directory should still be discovered by walk().
+    "src/sections/cta.astro": '<a href="/x">Click here</a>',
+    // .txt is not in the scanned extension list and must be ignored.
+    "src/notes.txt": '<a href="/x">Learn More</a>',
+  });
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /found 1 control/);
+  assert.match(result.stderr, /src\/sections\/cta\.astro:/);
+  assert.doesNotMatch(result.stderr, /notes\.txt/);
+});
+
+test("Markdown links are scanned only in .md/.mdx, not .astro", async () => {
+  const markdownLink = "See [click here](/x) for info.";
+  const result = await runScript({
+    // .astro: Markdown-link scanning is skipped, so no violation here.
+    "src/page.astro": markdownLink,
+    // .md and .mdx: Markdown links ARE scanned, so both are flagged.
+    "src/post.md": markdownLink,
+    "src/doc.mdx": markdownLink,
+  });
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /found 2 control/);
+  assert.match(result.stderr, /src\/doc\.mdx:1\s+markdown link/);
+  assert.match(result.stderr, /src\/post\.md:1\s+markdown link/);
+  assert.doesNotMatch(result.stderr, /page\.astro/);
+});
+
+test("offenders are sorted by file then line", async () => {
+  const result = await runScript({
+    "src/b.astro": '<a href="/x">More</a>',
+    "src/a.astro": '<p>ok</p>\n<a href="/x">Go</a>\n<a href="/y">Here</a>',
+  });
+  assert.equal(result.status, 1);
+  // Expected order: a.astro:2, a.astro:3, b.astro:1
+  const idxA2 = result.stderr.indexOf("src/a.astro:2");
+  const idxA3 = result.stderr.indexOf("src/a.astro:3");
+  const idxB1 = result.stderr.indexOf("src/b.astro:1");
+  assert.ok(idxA2 >= 0 && idxA3 >= 0 && idxB1 >= 0, "all offenders reported");
+  assert.ok(idxA2 < idxA3, "a.astro:2 before a.astro:3");
+  assert.ok(idxA3 < idxB1, "a.astro lines before b.astro");
 });
