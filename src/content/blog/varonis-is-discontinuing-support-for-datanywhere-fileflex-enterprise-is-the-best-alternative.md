@@ -77,7 +77,7 @@ Varonis DatAnywhere users who migrate over to FileFlex Enterprise receive the fo
 
 If you want to dig deeper, you can download our whitepaper that explains both the similarities between FileFlex Enterprise and Varonis DatAnywhere and the extra value that FileFlex brings to the DatAnywhere organization.
 
-You can also talk to us in person and/or arrange a demo or free trial via this [link](/fileflex-enterprise/try/).
+You can also talk to us in person and/or [arrange a demo or free trial](/fileflex-enterprise/try/).
 
 Get the full **_FileFlex Enterprise for the Varonis DatAnywhere Organization_** whitepaper by submitting your email below.
 

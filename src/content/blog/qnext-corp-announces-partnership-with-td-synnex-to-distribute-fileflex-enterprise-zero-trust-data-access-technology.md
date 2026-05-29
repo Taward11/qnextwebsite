@@ -29,7 +29,7 @@ The partnership between Qnext Corp and TD SYNNEX will enable the TD SYNNEX custo
 
 For more information on how to add FileFlex Enterprise to your solutions portfolio, contact your TD SYNNEX or Qnext representative.
 
-To learn more about how FileFlex Enterprise helps channel partners, click [here](/partner/).
+Learn more about [how FileFlex Enterprise helps channel partners](/partner/).
 
 ## About Qnext Corp.
 

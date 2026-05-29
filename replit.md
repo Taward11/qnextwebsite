@@ -17,9 +17,15 @@ package.json
 
 ```bash
 npm run dev      # Start dev server at port 5000
-npm run build    # Production build → dist/
+npm run build    # Production build → dist/ (runs lint:links first via prebuild)
 npm run preview  # Preview production build
+npm run lint:links  # Flag links with vague text (e.g. "Learn More") lacking a descriptive aria-label
 ```
+
+The `lint:links` check (`scripts/check-link-text.mjs`) scans `.astro`/`.md` files
+for anchors/markdown links whose accessible name is only a generic CTA phrase. It
+runs automatically before `build` (prebuild) and is registered as a validation step.
+Pass `--warn` to report without failing.
 
 ## Tech stack
 

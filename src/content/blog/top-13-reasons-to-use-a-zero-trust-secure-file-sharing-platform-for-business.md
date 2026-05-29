@@ -51,7 +51,7 @@ Secure file sharing is the process of transferring digital files between users o
 ## Why is a Zero Trust Architecture Important for Secure File Sharing?
 The architecture is used for adherence to zero trust best practices access control principles as outlined in NIST SP-800-171v2.  A zero trust architecture utilized for secure file sharing makes use of a server that verifies users and permissions for users and then sends the requested files to those users without allowing direct shared access to the current location of the resources.   This architecture allows shared access to cloud-hosted repositories, FTP repositories, SharePoint repositories, and on-premises storage over multiple domains.  Share access can be controlled and restricted by management according to Least Privilege Principles and IT chain of command and because all actions are controlled by a zero trust server, all actions are recorded for forensic investigation and for output to the SIEM to detect ransomware attacks in process.
 
-This approach is designed to enhance cybersecurity by minimizing the attack surface and reducing the risk of unauthorized access or data breaches. For more information on zero trust principles and zero trust architecture [click here](/blog/what-is-zero-trust-data-access-ztda/).
+This approach is designed to enhance cybersecurity by minimizing the attack surface and reducing the risk of unauthorized access or data breaches. Read more about [zero trust principles and zero trust architecture](/blog/what-is-zero-trust-data-access-ztda/).
 
 ## Key Aspects of Zero Trust Secure File Sharing
 The key principles of zero trust secure file sharing for business include:

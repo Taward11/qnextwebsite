@@ -6,7 +6,9 @@
     "dev": "astro dev --host 0.0.0.0 --port 5000",
     "build": "astro build",
     "preview": "astro preview --host 0.0.0.0 --port 5000",
-    "start": "node server.mjs"
+    "start": "node server.mjs",
+    "lint:links": "node scripts/check-link-text.mjs",
+    "prebuild": "node scripts/check-link-text.mjs"
   },
   "dependencies": {
     "astro": "^4.16.19",
