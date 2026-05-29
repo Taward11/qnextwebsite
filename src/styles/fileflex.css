@@ -987,7 +987,7 @@ ul { list-style: none; }
 }
 
 .ff-footer__col ul li {
-  margin: 0 0 15px;
+  margin: 0 0 8px;
   line-height: 1.08;
   font-size: 14px;
 }

@@ -146,798 +146,798 @@ declare module 'astro:content' {
   slug: "19-reasons-why-zero-trust-data-access-is-an-essential-sharepoint-add-in";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "21-reasons-to-supplement-microsoft-365-e5-security-with-zero-trust-data-access.md": {
 	id: "21-reasons-to-supplement-microsoft-365-e5-security-with-zero-trust-data-access.md";
   slug: "21-reasons-to-supplement-microsoft-365-e5-security-with-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "24-reasons-to-use-zero-trust-data-access-as-an-ftp-alternative.md": {
 	id: "24-reasons-to-use-zero-trust-data-access-as-an-ftp-alternative.md";
   slug: "24-reasons-to-use-zero-trust-data-access-as-an-ftp-alternative";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access.md": {
 	id: "9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access.md";
   slug: "9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "a-vpn-alternative-zero-trust-data-access.md": {
 	id: "a-vpn-alternative-zero-trust-data-access.md";
   slug: "a-vpn-alternative-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "accelerating-digital-transformation-leveraging-zero-trust-data-access-in-a-microsoft-ecosystem.md": {
 	id: "accelerating-digital-transformation-leveraging-zero-trust-data-access-in-a-microsoft-ecosystem.md";
   slug: "accelerating-digital-transformation-leveraging-zero-trust-data-access-in-a-microsoft-ecosystem";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "achieving-end-to-end-zero-trust-with-zscaler-and-fileflex.md": {
 	id: "achieving-end-to-end-zero-trust-with-zscaler-and-fileflex.md";
   slug: "achieving-end-to-end-zero-trust-with-zscaler-and-fileflex";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "advantages-of-zero-trust-virtual-data-rooms-for-banks-and-credit-unions.md": {
 	id: "advantages-of-zero-trust-virtual-data-rooms-for-banks-and-credit-unions.md";
   slug: "advantages-of-zero-trust-virtual-data-rooms-for-banks-and-credit-unions";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "ai-driven-cybercrime-at-zettabyte-scale.md": {
 	id: "ai-driven-cybercrime-at-zettabyte-scale.md";
   slug: "ai-driven-cybercrime-at-zettabyte-scale";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "anthony-decristofaro-speaks-at-hmg-global-ciso-leadership-summit.md": {
 	id: "anthony-decristofaro-speaks-at-hmg-global-ciso-leadership-summit.md";
   slug: "anthony-decristofaro-speaks-at-hmg-global-ciso-leadership-summit";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "centralized-vs-decentralized-cloud-storage.md": {
 	id: "centralized-vs-decentralized-cloud-storage.md";
   slug: "centralized-vs-decentralized-cloud-storage";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "cloudflare-one-and-fileflex-enterprise-securing-apps-and-data-together.md": {
 	id: "cloudflare-one-and-fileflex-enterprise-securing-apps-and-data-together.md";
   slug: "cloudflare-one-and-fileflex-enterprise-securing-apps-and-data-together";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "cmmc-compliance-for-file-sharing-access-and-collaboration-of-cui-using-zero-trust-data-access.md": {
 	id: "cmmc-compliance-for-file-sharing-access-and-collaboration-of-cui-using-zero-trust-data-access.md";
   slug: "cmmc-compliance-for-file-sharing-access-and-collaboration-of-cui-using-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "cmmc-it-control-for-dib-organizations-over-remote-access-and-sharing-using-zero-trust-architecture.md": {
 	id: "cmmc-it-control-for-dib-organizations-over-remote-access-and-sharing-using-zero-trust-architecture.md";
   slug: "cmmc-it-control-for-dib-organizations-over-remote-access-and-sharing-using-zero-trust-architecture";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "complete-zero-trust-security-framework.md": {
 	id: "complete-zero-trust-security-framework.md";
   slug: "complete-zero-trust-security-framework";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "critical-infrastructure-ease-of-use-over-remote-access-and-sharing-using-zero-trust-architecture.md": {
 	id: "critical-infrastructure-ease-of-use-over-remote-access-and-sharing-using-zero-trust-architecture.md";
   slug: "critical-infrastructure-ease-of-use-over-remote-access-and-sharing-using-zero-trust-architecture";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "critical-infrastructure-it-control-use-over-remote-access-and-sharing-using-zero-trust-architecture.md": {
 	id: "critical-infrastructure-it-control-use-over-remote-access-and-sharing-using-zero-trust-architecture.md";
   slug: "critical-infrastructure-it-control-use-over-remote-access-and-sharing-using-zero-trust-architecture";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "critical-infrastructure-protection-using-zero-trust-data-access-top-8.md": {
 	id: "critical-infrastructure-protection-using-zero-trust-data-access-top-8.md";
   slug: "critical-infrastructure-protection-using-zero-trust-data-access-top-8";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "critical-infrastructure-regulatory-compliance-via-zero-trust-architectures.md": {
 	id: "critical-infrastructure-regulatory-compliance-via-zero-trust-architectures.md";
   slug: "critical-infrastructure-regulatory-compliance-via-zero-trust-architectures";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "cybersecurity-for-law-firms-the-priority-of-zero-trust-data-access-security.md": {
 	id: "cybersecurity-for-law-firms-the-priority-of-zero-trust-data-access-security.md";
   slug: "cybersecurity-for-law-firms-the-priority-of-zero-trust-data-access-security";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "data-governance-cybersecurity-and-zero-trust-data-access-the-essential-pillars-to-protect-data-assets.md": {
 	id: "data-governance-cybersecurity-and-zero-trust-data-access-the-essential-pillars-to-protect-data-assets.md";
   slug: "data-governance-cybersecurity-and-zero-trust-data-access-the-essential-pillars-to-protect-data-assets";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture.md": {
 	id: "discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture.md";
   slug: "discover-the-15-top-reasons-to-adopt-a-content-collaboration-platform-built-on-a-zero-trust-architecture";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "distributed-administration-of-unstructured-data-access.md": {
 	id: "distributed-administration-of-unstructured-data-access.md";
   slug: "distributed-administration-of-unstructured-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access.md": {
 	id: "dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access.md";
   slug: "dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "dspms-and-zero-trust-data-access-a-powerful-duo-for-zero-trust-data-security.md": {
 	id: "dspms-and-zero-trust-data-access-a-powerful-duo-for-zero-trust-data-security.md";
   slug: "dspms-and-zero-trust-data-access-a-powerful-duo-for-zero-trust-data-security";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "easy-remote-access-sharing-and-collaboration-of-sharepoint-document-libraries.md": {
 	id: "easy-remote-access-sharing-and-collaboration-of-sharepoint-document-libraries.md";
   slug: "easy-remote-access-sharing-and-collaboration-of-sharepoint-document-libraries";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "ed-dubrovsky-joins-qnext-corp-in-key-advisory-role.md": {
 	id: "ed-dubrovsky-joins-qnext-corp-in-key-advisory-role.md";
   slug: "ed-dubrovsky-joins-qnext-corp-in-key-advisory-role";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "embracing-zero-trust-data-access-for-it-controlled-chain-of-command.md": {
 	id: "embracing-zero-trust-data-access-for-it-controlled-chain-of-command.md";
   slug: "embracing-zero-trust-data-access-for-it-controlled-chain-of-command";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn.md": {
 	id: "enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn.md";
   slug: "enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "european-health-data-space-compliance-with-zero-trust.md": {
 	id: "european-health-data-space-compliance-with-zero-trust.md";
   slug: "european-health-data-space-compliance-with-zero-trust";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "extending-cisco-zero-trust-from-access-to-data.md": {
 	id: "extending-cisco-zero-trust-from-access-to-data.md";
   slug: "extending-cisco-zero-trust-from-access-to-data";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "extending-microsoft-entra-zero-trust-to-protect-your-data-with-zero-trust-data-access.md": {
 	id: "extending-microsoft-entra-zero-trust-to-protect-your-data-with-zero-trust-data-access.md";
   slug: "extending-microsoft-entra-zero-trust-to-protect-your-data-with-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "extending-microsoft-fabric-with-zero-trust-data-access-for-unstructured-data.md": {
 	id: "extending-microsoft-fabric-with-zero-trust-data-access-for-unstructured-data.md";
   slug: "extending-microsoft-fabric-with-zero-trust-data-access-for-unstructured-data";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "extending-office-365-functionality-into-a-hybrid-it-infrastructure.md": {
 	id: "extending-office-365-functionality-into-a-hybrid-it-infrastructure.md";
   slug: "extending-office-365-functionality-into-a-hybrid-it-infrastructure";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "federated-hybrid-access-why-modern-organizations-cant-afford-to-ignore-it.md": {
 	id: "federated-hybrid-access-why-modern-organizations-cant-afford-to-ignore-it.md";
   slug: "federated-hybrid-access-why-modern-organizations-cant-afford-to-ignore-it";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "fedramp-compliance-and-zero-trust-data-access.md": {
 	id: "fedramp-compliance-and-zero-trust-data-access.md";
   slug: "fedramp-compliance-and-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "file-sharing-and-collaboration-evolution-from-first-generation-platforms-to-zero-trust-data-access.md": {
 	id: "file-sharing-and-collaboration-evolution-from-first-generation-platforms-to-zero-trust-data-access.md";
   slug: "file-sharing-and-collaboration-evolution-from-first-generation-platforms-to-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "fileflex-guardianai-agentically-secured-infrastructure-never-trust-the-agent.md": {
 	id: "fileflex-guardianai-agentically-secured-infrastructure-never-trust-the-agent.md";
   slug: "fileflex-guardianai-agentically-secured-infrastructure-never-trust-the-agent";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "fortifying-cyber-defense-via-zero-trust-data-access-the-recent-goanywhere-and-moveit-ransomware-breaches.md": {
 	id: "fortifying-cyber-defense-via-zero-trust-data-access-the-recent-goanywhere-and-moveit-ransomware-breaches.md";
   slug: "fortifying-cyber-defense-via-zero-trust-data-access-the-recent-goanywhere-and-moveit-ransomware-breaches";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "from-vpn-risk-to-zero-trust-security-a-smarter-approach-to-remote-access.md": {
 	id: "from-vpn-risk-to-zero-trust-security-a-smarter-approach-to-remote-access.md";
   slug: "from-vpn-risk-to-zero-trust-security-a-smarter-approach-to-remote-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "gdpr-compliant-file-sharing-using-zero-trust-data-access.md": {
 	id: "gdpr-compliant-file-sharing-using-zero-trust-data-access.md";
   slug: "gdpr-compliant-file-sharing-using-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "higher-education-institutions-bolster-data-security-with-zero-trust-data-access.md": {
 	id: "higher-education-institutions-bolster-data-security-with-zero-trust-data-access.md";
   slug: "higher-education-institutions-bolster-data-security-with-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "hippa-compliant-file-sharing.md": {
 	id: "hippa-compliant-file-sharing.md";
   slug: "hippa-compliant-file-sharing";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "how-fileflex-enterprise-helps-dod-contractors-meet-cmmc-best-practices-for-access-control.md": {
 	id: "how-fileflex-enterprise-helps-dod-contractors-meet-cmmc-best-practices-for-access-control.md";
   slug: "how-fileflex-enterprise-helps-dod-contractors-meet-cmmc-best-practices-for-access-control";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "how-to-enforce-zero-trust-access-control-to-mitigate-data-breach-and-ransomware.md": {
 	id: "how-to-enforce-zero-trust-access-control-to-mitigate-data-breach-and-ransomware.md";
   slug: "how-to-enforce-zero-trust-access-control-to-mitigate-data-breach-and-ransomware";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "how-to-make-your-multi-cloud-and-infrastructure-as-a-service-environment-easier-for-your-users.md": {
 	id: "how-to-make-your-multi-cloud-and-infrastructure-as-a-service-environment-easier-for-your-users.md";
   slug: "how-to-make-your-multi-cloud-and-infrastructure-as-a-service-environment-easier-for-your-users";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "how-to-protect-your-data-with-zero-trust-data-access-ztda.md": {
 	id: "how-to-protect-your-data-with-zero-trust-data-access-ztda.md";
   slug: "how-to-protect-your-data-with-zero-trust-data-access-ztda";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "how-to-reduce-the-risk-of-ransomware-with-zero-trust.md": {
 	id: "how-to-reduce-the-risk-of-ransomware-with-zero-trust.md";
   slug: "how-to-reduce-the-risk-of-ransomware-with-zero-trust";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "how-to-securely-share-data.md": {
 	id: "how-to-securely-share-data.md";
   slug: "how-to-securely-share-data";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "how-zero-trust-data-access-cuts-costs-in-organizational-operations.md": {
 	id: "how-zero-trust-data-access-cuts-costs-in-organizational-operations.md";
   slug: "how-zero-trust-data-access-cuts-costs-in-organizational-operations";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "how-zero-trust-security-promises-to-cast-a-wide-net-on-spear-phishers.md": {
 	id: "how-zero-trust-security-promises-to-cast-a-wide-net-on-spear-phishers.md";
   slug: "how-zero-trust-security-promises-to-cast-a-wide-net-on-spear-phishers";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "hyperscaler-cloud-providers-and-the-data-layer-gap-extending-security-with-file-level-control.md": {
 	id: "hyperscaler-cloud-providers-and-the-data-layer-gap-extending-security-with-file-level-control.md";
   slug: "hyperscaler-cloud-providers-and-the-data-layer-gap-extending-security-with-file-level-control";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "implement-zero-trust-security-avoid-this-nightmare-a-true-account.md": {
 	id: "implement-zero-trust-security-avoid-this-nightmare-a-true-account.md";
   slug: "implement-zero-trust-security-avoid-this-nightmare-a-true-account";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "key-benefits-of-extending-office-365-with-fileflex-enterprise.md": {
 	id: "key-benefits-of-extending-office-365-with-fileflex-enterprise.md";
   slug: "key-benefits-of-extending-office-365-with-fileflex-enterprise";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "meeting-ffiec-guidelines-using-zero-trust-data-access.md": {
 	id: "meeting-ffiec-guidelines-using-zero-trust-data-access.md";
   slug: "meeting-ffiec-guidelines-using-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "mitigate-spear-phishing-via-the-fileflex-enterprise-zero-trust-platform.md": {
 	id: "mitigate-spear-phishing-via-the-fileflex-enterprise-zero-trust-platform.md";
   slug: "mitigate-spear-phishing-via-the-fileflex-enterprise-zero-trust-platform";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "modernize-on-premises-storage-with-zero-trust-data-access.md": {
 	id: "modernize-on-premises-storage-with-zero-trust-data-access.md";
   slug: "modernize-on-premises-storage-with-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "network-access-secure-and-controlled-via-zero-trust-data-access.md": {
 	id: "network-access-secure-and-controlled-via-zero-trust-data-access.md";
   slug: "network-access-secure-and-controlled-via-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "network-file-access-control-of-unstructured-data-with-zero-trust-data-access.md": {
 	id: "network-file-access-control-of-unstructured-data-with-zero-trust-data-access.md";
   slug: "network-file-access-control-of-unstructured-data-with-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "network-security-the-power-of-zero-trust-data-access-to-control-on-premises-access-to-files-and-folders.md": {
 	id: "network-security-the-power-of-zero-trust-data-access-to-control-on-premises-access-to-files-and-folders.md";
   slug: "network-security-the-power-of-zero-trust-data-access-to-control-on-premises-access-to-files-and-folders";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access.md": {
 	id: "nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access.md";
   slug: "nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "nist-sp-1800-35-how-data-level-enforcement-strengthens-zero-trust-security.md": {
 	id: "nist-sp-1800-35-how-data-level-enforcement-strengthens-zero-trust-security.md";
   slug: "nist-sp-1800-35-how-data-level-enforcement-strengthens-zero-trust-security";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "nist-sp-800-171v2-access-control-practices-for-remote-data-access-2.md": {
 	id: "nist-sp-800-171v2-access-control-practices-for-remote-data-access-2.md";
   slug: "nist-sp-800-171v2-access-control-practices-for-remote-data-access-2";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "proposed-ztda-action-plan-for-enterprise.md": {
 	id: "proposed-ztda-action-plan-for-enterprise.md";
   slug: "proposed-ztda-action-plan-for-enterprise";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "qnext-corp-announces-expansion-into-the-usa-led-by-cybersecurity-industry-leader-larry-hurtado.md": {
 	id: "qnext-corp-announces-expansion-into-the-usa-led-by-cybersecurity-industry-leader-larry-hurtado.md";
   slug: "qnext-corp-announces-expansion-into-the-usa-led-by-cybersecurity-industry-leader-larry-hurtado";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "qnext-corp-announces-partnership-with-td-synnex-to-distribute-fileflex-enterprise-zero-trust-data-access-technology.md": {
 	id: "qnext-corp-announces-partnership-with-td-synnex-to-distribute-fileflex-enterprise-zero-trust-data-access-technology.md";
   slug: "qnext-corp-announces-partnership-with-td-synnex-to-distribute-fileflex-enterprise-zero-trust-data-access-technology";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "ransomware-unstructured-data-double-trouble.md": {
 	id: "ransomware-unstructured-data-double-trouble.md";
   slug: "ransomware-unstructured-data-double-trouble";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "regulatory-compliance-in-the-digital-age-unveiling-quebec-bill-64-and-how-fileflex-enterprise-can-help.md": {
 	id: "regulatory-compliance-in-the-digital-age-unveiling-quebec-bill-64-and-how-fileflex-enterprise-can-help.md";
   slug: "regulatory-compliance-in-the-digital-age-unveiling-quebec-bill-64-and-how-fileflex-enterprise-can-help";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "replace-your-ftp-with-zero-trust-data-access-ztda.md": {
 	id: "replace-your-ftp-with-zero-trust-data-access-ztda.md";
   slug: "replace-your-ftp-with-zero-trust-data-access-ztda";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "risks-to-unstructured-data.md": {
 	id: "risks-to-unstructured-data.md";
   slug: "risks-to-unstructured-data";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "sec-cybersecurity-rules-zero-trust-architecture-what-cios-and-cisos-need-to-know.md": {
 	id: "sec-cybersecurity-rules-zero-trust-architecture-what-cios-and-cisos-need-to-know.md";
   slug: "sec-cybersecurity-rules-zero-trust-architecture-what-cios-and-cisos-need-to-know";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "sharepoint-zero-trust-security-and-defending-against-zero-day-vulnerabilities.md": {
 	id: "sharepoint-zero-trust-security-and-defending-against-zero-day-vulnerabilities.md";
   slug: "sharepoint-zero-trust-security-and-defending-against-zero-day-vulnerabilities";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "smart-cities-and-zero-trust-data-access-securing-the-urban-future.md": {
 	id: "smart-cities-and-zero-trust-data-access-securing-the-urban-future.md";
   slug: "smart-cities-and-zero-trust-data-access-securing-the-urban-future";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "strengthening-credit-union-cybersecurity-through-zero-trust-data-access.md": {
 	id: "strengthening-credit-union-cybersecurity-through-zero-trust-data-access.md";
   slug: "strengthening-credit-union-cybersecurity-through-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "strengthening-glba-compliance-with-zero-trust-data-access.md": {
 	id: "strengthening-glba-compliance-with-zero-trust-data-access.md";
   slug: "strengthening-glba-compliance-with-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "supporting-financial-services-cybersecurity-through-zero-trust-data-access.md": {
 	id: "supporting-financial-services-cybersecurity-through-zero-trust-data-access.md";
   slug: "supporting-financial-services-cybersecurity-through-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "the-fileflex-enterprise-commercial-platform-for-zero-trust-data-access.md": {
 	id: "the-fileflex-enterprise-commercial-platform-for-zero-trust-data-access.md";
   slug: "the-fileflex-enterprise-commercial-platform-for-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "the-most-important-new-name-in-disruptive-cybersecurity-tech-youve-never-heard-of.md": {
 	id: "the-most-important-new-name-in-disruptive-cybersecurity-tech-youve-never-heard-of.md";
   slug: "the-most-important-new-name-in-disruptive-cybersecurity-tech-youve-never-heard-of";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk.md": {
 	id: "the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk.md";
   slug: "the-power-of-zero-trust-data-access-ztda-in-reducing-ransomware-risk";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "the-uks-icloud-backdoor-demand-and-the-need-for-on-premises-storage-secured-by-zero-trust-data-access.md": {
 	id: "the-uks-icloud-backdoor-demand-and-the-need-for-on-premises-storage-secured-by-zero-trust-data-access.md";
   slug: "the-uks-icloud-backdoor-demand-and-the-need-for-on-premises-storage-secured-by-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "the-zero-trust-data-gap.md": {
 	id: "the-zero-trust-data-gap.md";
   slug: "the-zero-trust-data-gap";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "the-zero-trust-maturity-model-ztmm-and-why-ztda-is-critical-to-reaching-optimal-maturity.md": {
 	id: "the-zero-trust-maturity-model-ztmm-and-why-ztda-is-critical-to-reaching-optimal-maturity.md";
   slug: "the-zero-trust-maturity-model-ztmm-and-why-ztda-is-critical-to-reaching-optimal-maturity";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure.md": {
 	id: "top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure.md";
   slug: "top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "top-13-reasons-to-adopt-zero-trust-secure-virtual-data-rooms.md": {
 	id: "top-13-reasons-to-adopt-zero-trust-secure-virtual-data-rooms.md";
   slug: "top-13-reasons-to-adopt-zero-trust-secure-virtual-data-rooms";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business.md": {
 	id: "top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business.md";
   slug: "top-13-reasons-to-use-a-zero-trust-secure-file-sharing-platform-for-business";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "top-6-reasons-you-need-zero-trust-file-sharing-management.md": {
 	id: "top-6-reasons-you-need-zero-trust-file-sharing-management.md";
   slug: "top-6-reasons-you-need-zero-trust-file-sharing-management";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "top-7-advantages-of-an-overlay-service.md": {
 	id: "top-7-advantages-of-an-overlay-service.md";
   slug: "top-7-advantages-of-an-overlay-service";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "top-8-reasons-for-zero-trust-storage-management.md": {
 	id: "top-8-reasons-for-zero-trust-storage-management.md";
   slug: "top-8-reasons-for-zero-trust-storage-management";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "top-8-reasons-your-organization-needs-zero-trust-activity-tracking.md": {
 	id: "top-8-reasons-your-organization-needs-zero-trust-activity-tracking.md";
   slug: "top-8-reasons-your-organization-needs-zero-trust-activity-tracking";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "top-reasons-to-add-zero-trust-data-access-to-illumio-core.md": {
 	id: "top-reasons-to-add-zero-trust-data-access-to-illumio-core.md";
   slug: "top-reasons-to-add-zero-trust-data-access-to-illumio-core";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity.md": {
 	id: "top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity.md";
   slug: "top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "unstructured-data-access-and-sharing-controlled-and-secured-using-zero-trust-data-access.md": {
 	id: "unstructured-data-access-and-sharing-controlled-and-secured-using-zero-trust-data-access.md";
   slug: "unstructured-data-access-and-sharing-controlled-and-secured-using-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "upholding-cybersecurity-for-architects-through-zero-trust-data-access.md": {
 	id: "upholding-cybersecurity-for-architects-through-zero-trust-data-access.md";
   slug: "upholding-cybersecurity-for-architects-through-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "use-fileflex-enterprise-to-create-virtual-data-rooms.md": {
 	id: "use-fileflex-enterprise-to-create-virtual-data-rooms.md";
   slug: "use-fileflex-enterprise-to-create-virtual-data-rooms";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "using-zero-trust-architecture-zta-to-protect-remote-data-access.md": {
 	id: "using-zero-trust-architecture-zta-to-protect-remote-data-access.md";
   slug: "using-zero-trust-architecture-zta-to-protect-remote-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "using-zero-trust-data-access-for-nist-compliance.md": {
 	id: "using-zero-trust-data-access-for-nist-compliance.md";
   slug: "using-zero-trust-data-access-for-nist-compliance";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "using-zero-trust-data-access-to-meet-california-privacy-and-cybersecurity-standards.md": {
 	id: "using-zero-trust-data-access-to-meet-california-privacy-and-cybersecurity-standards.md";
   slug: "using-zero-trust-data-access-to-meet-california-privacy-and-cybersecurity-standards";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative.md": {
 	id: "varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative.md";
   slug: "varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "what-is-zero-trust-data-access-ztda.md": {
 	id: "what-is-zero-trust-data-access-ztda.md";
   slug: "what-is-zero-trust-data-access-ztda";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "why-a-zero-trust-data-access-decentralized-data-platform-is-strategically-superior-to-centralized-cloud-file-access-sharing-and-collaboration.md": {
 	id: "why-a-zero-trust-data-access-decentralized-data-platform-is-strategically-superior-to-centralized-cloud-file-access-sharing-and-collaboration.md";
   slug: "why-a-zero-trust-data-access-decentralized-data-platform-is-strategically-superior-to-centralized-cloud-file-access-sharing-and-collaboration";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "why-data-is-now-the-real-target.md": {
 	id: "why-data-is-now-the-real-target.md";
   slug: "why-data-is-now-the-real-target";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access.md": {
 	id: "why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access.md";
   slug: "why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "why-organizations-need-zero-trust-data-access-as-a-managed-file-transfer-alternative.md": {
 	id: "why-organizations-need-zero-trust-data-access-as-a-managed-file-transfer-alternative.md";
   slug: "why-organizations-need-zero-trust-data-access-as-a-managed-file-transfer-alternative";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "why-you-need-zero-trust-data-access-micro-segmentation.md": {
 	id: "why-you-need-zero-trust-data-access-micro-segmentation.md";
   slug: "why-you-need-zero-trust-data-access-micro-segmentation";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "why-zero-trust-and-why-now.md": {
 	id: "why-zero-trust-and-why-now.md";
   slug: "why-zero-trust-and-why-now";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "why-zero-trust-data-access-user-management-is-crucial-for-it.md": {
 	id: "why-zero-trust-data-access-user-management-is-crucial-for-it.md";
   slug: "why-zero-trust-data-access-user-management-is-crucial-for-it";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "why-zero-trust-network-access-combined-with-zero-trust-data-access-could-have-prevented-the-tesla-breach.md": {
 	id: "why-zero-trust-network-access-combined-with-zero-trust-data-access-could-have-prevented-the-tesla-breach.md";
   slug: "why-zero-trust-network-access-combined-with-zero-trust-data-access-could-have-prevented-the-tesla-breach";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "zero-trust-and-regulatory-compliance.md": {
 	id: "zero-trust-and-regulatory-compliance.md";
   slug: "zero-trust-and-regulatory-compliance";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "zero-trust-data-access-methods.md": {
 	id: "zero-trust-data-access-methods.md";
   slug: "zero-trust-data-access-methods";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "zero-trust-data-access-to-meet-dib-cybersecurity-strategy-2024.md": {
 	id: "zero-trust-data-access-to-meet-dib-cybersecurity-strategy-2024.md";
   slug: "zero-trust-data-access-to-meet-dib-cybersecurity-strategy-2024";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "zero-trust-remote-access-helps-protect-data-against-internal-security-threats.md": {
 	id: "zero-trust-remote-access-helps-protect-data-against-internal-security-threats.md";
   slug: "zero-trust-remote-access-helps-protect-data-against-internal-security-threats";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "zero-trust-security-model-must-include-zero-trust-data-access-ztda.md": {
 	id: "zero-trust-security-model-must-include-zero-trust-data-access-ztda.md";
   slug: "zero-trust-security-model-must-include-zero-trust-data-access-ztda";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "ztda-zero-trust-data-access.md": {
 	id: "ztda-zero-trust-data-access.md";
   slug: "ztda-zero-trust-data-access";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "ztna-ztaa-and-ztda-a-deep-dive.md": {
 	id: "ztna-ztaa-and-ztda-a-deep-dive.md";
   slug: "ztna-ztaa-and-ztda-a-deep-dive";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 };
 
@@ -949,5 +949,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = never;
+	export type ContentConfig = typeof import("../../src/content/config.js");
 }
