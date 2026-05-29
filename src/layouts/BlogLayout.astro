@@ -10,12 +10,14 @@ interface Props {
   description?: string;
   /** Heading shown above the content column (e.g. "Blog", "Category: X") */
   heading?: string;
+  /** Load Font Awesome — set when the post body renders fa-* icons. */
+  icons?: boolean;
 }
 
-const { title, description, heading } = Astro.props;
+const { title, description, heading, icons = false } = Astro.props;
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} icons={icons}>
   <Nav />
   <div class="blog-shell">
     <div class="blog-shell__inner">

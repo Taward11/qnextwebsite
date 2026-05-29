@@ -4,6 +4,8 @@ interface Props {
   title: string;
   description?: string;
   faq?: FaqItem[];
+  /** Load Font Awesome — only on pages that actually render fa-* icons. */
+  icons?: boolean;
 }
 
 const defaultFaq: FaqItem[] = [
@@ -13,7 +15,7 @@ const defaultFaq: FaqItem[] = [
   { q: "Does FileFlex work with existing enterprise systems like Active Directory and cloud storage?", a: "Yes. FileFlex integrates with enterprise identity providers such as Active Directory and Azure AD for authentication and policy enforcement. It federates access to existing on-premises and cloud file systems, SharePoint, and NAS without requiring changes to your infrastructure." },
 ];
 
-const { title, description = "FileFlex Enterprise applies Zero Trust Data Access to unstructured data wherever it resides — without migration or VPN.", faq = defaultFaq } = Astro.props;
+const { title, description = "FileFlex Enterprise applies Zero Trust Data Access to unstructured data wherever it resides — without migration or VPN.", faq = defaultFaq, icons = false } = Astro.props;
 const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
 ---
 <!DOCTYPE html>
@@ -74,20 +76,26 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
   {/*
-    Font Awesome: loaded non-render-blocking. It is only used for decorative
-    icons (all aria-hidden) on a handful of sub-pages, never on the homepage,
-    so it should not sit on the critical request chain. preload+onload swap
-    fetches it without blocking first paint; noscript covers the no-JS case.
+    Font Awesome: loaded non-render-blocking AND only on pages that actually
+    render fa-* icons (opt-in via the `icons` prop). It is decorative-only
+    (all aria-hidden) and unused on the homepage and most pages, so loading
+    its full stylesheet everywhere is wasted bytes (PSI "unused CSS"). When
+    needed, preload+onload swap fetches it without blocking first paint;
+    noscript covers the no-JS case.
   */}
-  <link
-    rel="preload"
-    as="style"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    onload="this.onload=null;this.rel='stylesheet'"
-  />
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  </noscript>
+  {icons && (
+    <>
+      <link
+        rel="preload"
+        as="style"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        onload="this.onload=null;this.rel='stylesheet'"
+      />
+      <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+      </noscript>
+    </>
+  )}
   {isHome && (
     <>
       {/*

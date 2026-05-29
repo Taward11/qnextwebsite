@@ -16,6 +16,9 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content, headings } = await post.render();
 
+// Only load Font Awesome when this post's body actually renders fa-* icons.
+const usesIcons = /\bfa[srlb]?-/.test(post.body);
+
 // TOC from H2s only
 const h2s = headings.filter((h) => h.depth === 2);
 const showToc = post.data.toc && h2s.length > 1;
@@ -72,7 +75,7 @@ const tableSchemas = post.data.tables.map((t) => ({
 }));
 ---
 
-<BlogLayout title={post.data.seoTitle ?? `${post.data.title} | FileFlex Blog`} description={post.data.description ?? post.data.excerpt}>
+<BlogLayout title={post.data.seoTitle ?? `${post.data.title} | FileFlex Blog`} description={post.data.description ?? post.data.excerpt} icons={usesIcons}>
 
   <article class="blog-post">
 
