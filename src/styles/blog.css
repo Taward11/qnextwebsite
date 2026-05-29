@@ -156,7 +156,7 @@
 /* TOC */
 .blog-post__toc {
   background: #f6f8fd;
-  border-left: 4px solid #021372;
+  border-left: 4px solid #e8590a;
   padding: 20px 24px;
   margin: 0 0 36px;
   border-radius: 0 4px 4px 0;
@@ -164,14 +164,14 @@
 .blog-post__toc-title {
   font-family: 'Inter', sans-serif;
   font-size: 14px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 0.12em; margin: 0 0 12px; color: #021372;
+  letter-spacing: 0.12em; margin: 0 0 12px; color: #e8590a;
 }
 .blog-post__toc ol {
   margin: 0; padding-left: 22px;
   display: grid; gap: 6px;
   font-size: 15px;
 }
-.blog-post__toc a { color: #021372; text-decoration: none; }
+.blog-post__toc a { color: #e8590a; text-decoration: none; }
 .blog-post__toc a:hover { text-decoration: underline; }
 
 /* ---------- Editorial typography for post body ---------- */
