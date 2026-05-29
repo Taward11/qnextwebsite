@@ -7,6 +7,13 @@
  * scans .astro and .md/.mdx files and flags any link whose accessible name is only
  * a generic phrase without a contextual aria-label (HTML) or descriptive text (Markdown).
  *
+ * It also catches the same SEO/accessibility gap on other controls:
+ *   - <button> elements whose accessible name is only a generic phrase and that
+ *     lack an aria-label (Lighthouse: "Buttons do not have an accessible name").
+ *   - Icon-only <a>/<button> (their only child is an <img>/<svg>) that expose no
+ *     accessible name — i.e. no aria-label/aria-labelledby/title on the control,
+ *     no non-empty <img alt>, and no labelled <svg>.
+ *
  * Usage:
  *   node scripts/check-link-text.mjs            # fail (exit 1) on any violation
  *   node scripts/check-link-text.mjs --warn     # report only, always exit 0
@@ -81,6 +88,90 @@ function checkHtmlAnchors(content) {
   return violations;
 }
 
+// Scan HTML/Astro buttons: flag <button ...>generic text</button> without an aria-label.
+function checkHtmlButtons(content) {
+  const violations = [];
+  const buttonRe = /<button\b([^>]*)>([\s\S]*?)<\/button>/gi;
+  let m;
+  while ((m = buttonRe.exec(content)) !== null) {
+    const attrs = m[1];
+    const inner = m[2];
+    // An aria-label (or aria-labelledby) supplies the accessible name.
+    if (/\baria-label(ledby)?\s*=/i.test(attrs)) continue;
+    if (isGeneric(inner)) {
+      violations.push({
+        line: lineOf(content, m.index),
+        text: normalize(inner) || inner.trim(),
+        kind: "button",
+      });
+    }
+  }
+  return violations;
+}
+
+// True when `name` is present with a non-empty quoted value or any expression
+// value ({...}, e.g. an Astro/JSX binding). Empty strings (alt="") don't count.
+function hasNonEmptyAttr(attrs, name) {
+  const re = new RegExp(
+    `\\b${name}\\s*=\\s*(?:["'][^"']*\\S[^"']*["']|\\{)`,
+    "i",
+  );
+  return re.test(attrs);
+}
+
+// True when the control itself carries an accessible name via attributes.
+function hasOwnAccessibleName(attrs) {
+  return (
+    hasNonEmptyAttr(attrs, "aria-label") ||
+    hasNonEmptyAttr(attrs, "aria-labelledby") ||
+    hasNonEmptyAttr(attrs, "title")
+  );
+}
+
+// True when nested icon markup supplies an accessible name.
+function iconHasAccessibleName(inner) {
+  // <img alt="something non-empty"> or <img alt={expression}>
+  const imgRe = /<img\b([^>]*)>/gi;
+  let img;
+  while ((img = imgRe.exec(inner)) !== null) {
+    if (hasNonEmptyAttr(img[1], "alt")) return true;
+  }
+  // <svg aria-label="..."> or <svg ... role="img">...<title>...</title>
+  const svgRe = /<svg\b([^>]*)>/gi;
+  let svg;
+  while ((svg = svgRe.exec(inner)) !== null) {
+    if (hasNonEmptyAttr(svg[1], "aria-label")) return true;
+  }
+  if (/<svg\b[^>]*\brole\s*=\s*["']img["'][\s\S]*?<title>\s*\S[\s\S]*?<\/title>/i.test(inner))
+    return true;
+  return false;
+}
+
+// Scan icon-only <a>/<button>: their only child is an <img>/<svg> and they expose
+// no accessible name (no aria-label/title on the control, no img alt, no labelled svg).
+function checkIconOnlyControls(content) {
+  const violations = [];
+  const controlRe = /<(a|button)\b([^>]*)>([\s\S]*?)<\/\1>/gi;
+  let m;
+  while ((m = controlRe.exec(content)) !== null) {
+    const tag = m[1].toLowerCase();
+    const attrs = m[2];
+    const inner = m[3];
+    // Must contain an icon and no visible text to be "icon-only".
+    if (!/<img\b|<svg\b/i.test(inner)) continue;
+    if (normalize(inner)) continue;
+    // Any accessible name (on the control or its icon) clears it.
+    if (hasOwnAccessibleName(attrs)) continue;
+    if (iconHasAccessibleName(inner)) continue;
+    violations.push({
+      line: lineOf(content, m.index),
+      text: "(icon-only, no accessible name)",
+      kind: tag === "a" ? "icon-only anchor" : "icon-only button",
+    });
+  }
+  return violations;
+}
+
 // Scan Markdown links: flag [generic text](url).
 function checkMarkdownLinks(content) {
   const violations = [];
@@ -119,10 +210,15 @@ async function main() {
     const ext = extname(file).toLowerCase();
     if (![".astro", ".md", ".mdx"].includes(ext)) continue;
     const content = await readFile(file, "utf8");
+    const htmlViolations = [
+      ...checkHtmlAnchors(content),
+      ...checkHtmlButtons(content),
+      ...checkIconOnlyControls(content),
+    ];
     const violations =
       ext === ".astro"
-        ? checkHtmlAnchors(content)
-        : [...checkHtmlAnchors(content), ...checkMarkdownLinks(content)];
+        ? htmlViolations
+        : [...htmlViolations, ...checkMarkdownLinks(content)];
     for (const v of violations) {
       offenders.push({ file: relative(ROOT, file), ...v });
     }
@@ -139,7 +235,7 @@ async function main() {
 
   const label = WARN_ONLY ? "WARNING" : "ERROR";
   console.error(
-    `\n${label}: found ${offenders.length} link(s) with vague text and no descriptive aria-label:\n`,
+    `\n${label}: found ${offenders.length} control(s) with no descriptive accessible name:\n`,
   );
   for (const o of offenders) {
     console.error(
@@ -147,9 +243,10 @@ async function main() {
     );
   }
   console.error(
-    `\nFix: give the link descriptive visible text, or add an aria-label that` +
-      ` describes its destination, e.g.\n` +
+    `\nFix: give the control descriptive visible text, or add an aria-label that` +
+      ` describes its purpose/destination, e.g.\n` +
       `  <a href="/platform/" aria-label="Learn more about the FileFlex platform">Learn More</a>\n` +
+      `  <button type="button" aria-label="Open search">…</button>   (icon-only)\n` +
       `  [read the zero trust guide](/blog/...)   (Markdown)\n`,
   );
 
