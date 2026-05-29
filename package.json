@@ -8,7 +8,8 @@
     "preview": "astro preview --host 0.0.0.0 --port 5000",
     "start": "node server.mjs",
     "lint:links": "node scripts/check-link-text.mjs",
-    "prebuild": "node scripts/check-link-text.mjs"
+    "prebuild": "node scripts/check-link-text.mjs",
+    "test": "node --test"
   },
   "dependencies": {
     "astro": "^4.16.19",

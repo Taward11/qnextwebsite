@@ -51,7 +51,7 @@ const GENERIC_PHRASES = [
 const GENERIC_SET = new Set(GENERIC_PHRASES);
 
 // Strip tags/entities/punctuation and normalize whitespace for comparison.
-function normalize(text) {
+export function normalize(text) {
   return text
     .replace(/<[^>]*>/g, " ") // drop nested tags
     .replace(/&[a-z]+;/gi, " ") // drop HTML entities (&rarr;, &nbsp; etc.)
@@ -62,7 +62,7 @@ function normalize(text) {
     .toLowerCase();
 }
 
-function isGeneric(text) {
+export function isGeneric(text) {
   return GENERIC_SET.has(normalize(text));
 }
 
@@ -71,7 +71,7 @@ function lineOf(content, index) {
 }
 
 // Scan HTML/Astro anchors: flag <a ...>generic text</a> without an aria-label.
-function checkHtmlAnchors(content) {
+export function checkHtmlAnchors(content) {
   const violations = [];
   const anchorRe = /<a\b([^>]*)>([\s\S]*?)<\/a>/gi;
   let m;
@@ -92,7 +92,7 @@ function checkHtmlAnchors(content) {
 }
 
 // Scan HTML/Astro buttons: flag <button ...>generic text</button> without an aria-label.
-function checkHtmlButtons(content) {
+export function checkHtmlButtons(content) {
   const violations = [];
   const buttonRe = /<button\b([^>]*)>([\s\S]*?)<\/button>/gi;
   let m;
@@ -152,7 +152,7 @@ function iconHasAccessibleName(inner) {
 
 // Scan icon-only <a>/<button>: their only child is an <img>/<svg> and they expose
 // no accessible name (no aria-label/title on the control, no img alt, no labelled svg).
-function checkIconOnlyControls(content) {
+export function checkIconOnlyControls(content) {
   const violations = [];
   const controlRe = /<(a|button)\b([^>]*)>([\s\S]*?)<\/\1>/gi;
   let m;
@@ -178,7 +178,7 @@ function checkIconOnlyControls(content) {
 // Scan empty <a>/<button>: no visible text, no child icon (<img>/<svg>), and no
 // accessible name on the control (no aria-label/aria-labelledby/title). Screen
 // readers report these as "element has no accessible name".
-function checkEmptyControls(content) {
+export function checkEmptyControls(content) {
   const violations = [];
   const controlRe = /<(a|button)\b([^>]*)>([\s\S]*?)<\/\1>/gi;
   let m;
@@ -202,7 +202,7 @@ function checkEmptyControls(content) {
 }
 
 // Scan Markdown links: flag [generic text](url).
-function checkMarkdownLinks(content) {
+export function checkMarkdownLinks(content) {
   const violations = [];
   const linkRe = /\[([^\]]+)\]\(([^)]+)\)/g;
   let m;
@@ -283,7 +283,12 @@ async function main() {
   if (!WARN_ONLY) process.exitCode = 1;
 }
 
-main().catch((err) => {
-  console.error("check-link-text failed to run:", err);
-  process.exitCode = 1;
-});
+const isDirectRun =
+  process.argv[1] && import.meta.url === `file://${process.argv[1]}`;
+
+if (isDirectRun) {
+  main().catch((err) => {
+    console.error("check-link-text failed to run:", err);
+    process.exitCode = 1;
+  });
+}
