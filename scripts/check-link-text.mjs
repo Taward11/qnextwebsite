@@ -13,6 +13,9 @@
  *   - Icon-only <a>/<button> (their only child is an <img>/<svg>) that expose no
  *     accessible name — i.e. no aria-label/aria-labelledby/title on the control,
  *     no non-empty <img alt>, and no labelled <svg>.
+ *   - Completely empty <a>/<button> — no visible text, no child icon, and no
+ *     aria-label/aria-labelledby/title (Lighthouse/screen readers: "element has
+ *     no accessible name").
  *
  * Usage:
  *   node scripts/check-link-text.mjs            # fail (exit 1) on any violation
@@ -172,6 +175,32 @@ function checkIconOnlyControls(content) {
   return violations;
 }
 
+// Scan empty <a>/<button>: no visible text, no child icon (<img>/<svg>), and no
+// accessible name on the control (no aria-label/aria-labelledby/title). Screen
+// readers report these as "element has no accessible name".
+function checkEmptyControls(content) {
+  const violations = [];
+  const controlRe = /<(a|button)\b([^>]*)>([\s\S]*?)<\/\1>/gi;
+  let m;
+  while ((m = controlRe.exec(content)) !== null) {
+    const tag = m[1].toLowerCase();
+    const attrs = m[2];
+    const inner = m[3];
+    // Must have no visible text.
+    if (normalize(inner)) continue;
+    // An icon child is handled by checkIconOnlyControls, not here.
+    if (/<img\b|<svg\b/i.test(inner)) continue;
+    // Any accessible name on the control clears it.
+    if (hasOwnAccessibleName(attrs)) continue;
+    violations.push({
+      line: lineOf(content, m.index),
+      text: "(empty, no accessible name)",
+      kind: tag === "a" ? "empty anchor" : "empty button",
+    });
+  }
+  return violations;
+}
+
 // Scan Markdown links: flag [generic text](url).
 function checkMarkdownLinks(content) {
   const violations = [];
@@ -214,6 +243,7 @@ async function main() {
       ...checkHtmlAnchors(content),
       ...checkHtmlButtons(content),
       ...checkIconOnlyControls(content),
+      ...checkEmptyControls(content),
     ];
     const violations =
       ext === ".astro"
