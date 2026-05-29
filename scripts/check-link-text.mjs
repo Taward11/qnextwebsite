@@ -201,6 +201,50 @@ export function checkEmptyControls(content) {
   return violations;
 }
 
+// Remove subtrees marked aria-hidden="true" (their content is hidden from
+// assistive tech and therefore contributes nothing to the accessible name).
+export function stripAriaHidden(html) {
+  const re =
+    /<([a-zA-Z][\w-]*)\b[^>]*\baria-hidden\s*=\s*["']true["'][^>]*>[\s\S]*?<\/\1>/gi;
+  let prev;
+  let out = html;
+  do {
+    prev = out;
+    out = out.replace(re, " ");
+  } while (out !== prev);
+  return out;
+}
+
+// Scan <a>/<button> whose only text content sits inside an aria-hidden subtree.
+// Such controls look named on screen but expose no accessible name to screen
+// readers (unless they also carry an aria-label/aria-labelledby/title, or a
+// labelled icon). These become focusable-but-nameless targets.
+export function checkAriaHiddenNameControls(content) {
+  const violations = [];
+  const controlRe = /<(a|button)\b([^>]*)>([\s\S]*?)<\/\1>/gi;
+  let m;
+  while ((m = controlRe.exec(content)) !== null) {
+    const tag = m[1].toLowerCase();
+    const attrs = m[2];
+    const inner = m[3];
+    // Must have visible text (empty/icon-only controls are handled elsewhere).
+    if (!normalize(inner)) continue;
+    // If text survives removing aria-hidden subtrees, the name is exposed.
+    if (normalize(stripAriaHidden(inner))) continue;
+    // The visible text lives only inside an aria-hidden subtree. Any accessible
+    // name on the control itself or a labelled icon still clears it.
+    if (hasOwnAccessibleName(attrs)) continue;
+    if (iconHasAccessibleName(inner)) continue;
+    violations.push({
+      line: lineOf(content, m.index),
+      text: "(name only in aria-hidden subtree)",
+      kind:
+        tag === "a" ? "aria-hidden-name anchor" : "aria-hidden-name button",
+    });
+  }
+  return violations;
+}
+
 // Scan Markdown links: flag [generic text](url).
 export function checkMarkdownLinks(content) {
   const violations = [];
@@ -244,6 +288,7 @@ async function main() {
       ...checkHtmlButtons(content),
       ...checkIconOnlyControls(content),
       ...checkEmptyControls(content),
+      ...checkAriaHiddenNameControls(content),
     ];
     const violations =
       ext === ".astro"

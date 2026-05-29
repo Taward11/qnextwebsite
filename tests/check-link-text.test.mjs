@@ -8,6 +8,8 @@ import {
   checkHtmlButtons,
   checkIconOnlyControls,
   checkEmptyControls,
+  checkAriaHiddenNameControls,
+  stripAriaHidden,
   checkMarkdownLinks,
 } from "../scripts/check-link-text.mjs";
 
@@ -132,6 +134,66 @@ test("checkEmptyControls clears empty control with aria-label", () => {
 
 test("checkEmptyControls ignores controls containing an icon", () => {
   const v = checkEmptyControls("<button><svg></svg></button>");
+  assert.equal(v.length, 0);
+});
+
+test("stripAriaHidden removes aria-hidden subtrees and their text", () => {
+  assert.equal(
+    normalize(stripAriaHidden('<span aria-hidden="true">More</span>')),
+    "",
+  );
+  assert.equal(
+    normalize(stripAriaHidden('Read <span aria-hidden="true">more</span>')),
+    "read",
+  );
+});
+
+test("checkAriaHiddenNameControls flags anchor whose text is only aria-hidden", () => {
+  const v = checkAriaHiddenNameControls(
+    '<a href="/x"><span aria-hidden="true">Continue</span></a>',
+  );
+  assert.equal(v.length, 1);
+  assert.equal(v[0].kind, "aria-hidden-name anchor");
+});
+
+test("checkAriaHiddenNameControls flags button whose text is only aria-hidden", () => {
+  const v = checkAriaHiddenNameControls(
+    '<button><span aria-hidden="true">Submit</span></button>',
+  );
+  assert.equal(v.length, 1);
+  assert.equal(v[0].kind, "aria-hidden-name button");
+});
+
+test("checkAriaHiddenNameControls clears control with aria-label", () => {
+  const v = checkAriaHiddenNameControls(
+    '<a href="/x" aria-label="Continue to checkout"><span aria-hidden="true">Continue</span></a>',
+  );
+  assert.equal(v.length, 0);
+});
+
+test("checkAriaHiddenNameControls clears control with title", () => {
+  const v = checkAriaHiddenNameControls(
+    '<button title="Submit form"><span aria-hidden="true">Submit</span></button>',
+  );
+  assert.equal(v.length, 0);
+});
+
+test("checkAriaHiddenNameControls clears control with visible text outside aria-hidden", () => {
+  const v = checkAriaHiddenNameControls(
+    '<a href="/x">Read <span aria-hidden="true">&rarr;</span></a>',
+  );
+  assert.equal(v.length, 0);
+});
+
+test("checkAriaHiddenNameControls clears control with a labelled icon", () => {
+  const v = checkAriaHiddenNameControls(
+    '<a href="/x"><img src="i.svg" alt="Download"><span aria-hidden="true">Get it</span></a>',
+  );
+  assert.equal(v.length, 0);
+});
+
+test("checkAriaHiddenNameControls ignores fully empty controls", () => {
+  const v = checkAriaHiddenNameControls('<a href="/x"></a>');
   assert.equal(v.length, 0);
 });
 
