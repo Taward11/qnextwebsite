@@ -108,7 +108,7 @@
   color: #e8590a; text-decoration: none; border-radius: 12px;
   font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
 }
-.blog-list__cats a:hover { background: #021372; color: #fff; }
+.blog-list__cats a:hover { background: #e8590a; color: #fff; }
 
 /* ---------- Single post ---------- */
 .blog-post { max-width: 760px; min-width: 0; }
