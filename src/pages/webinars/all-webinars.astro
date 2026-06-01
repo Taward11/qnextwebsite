@@ -1,0 +1,228 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import '../../styles/fileflex.css';
+import '../../styles/webinars.css';
+
+interface Webinar {
+  id: string;
+  title: string;
+  desc: string;
+}
+
+const webinars: Webinar[] = [
+  {
+    id: '_CAG_BcRxP8',
+    title: 'Meeting NIST Standards for Zero Trust Data Access & Sharing',
+    desc: 'ECA webinar that discusses the standards set by NIST for zero trust, and how they apply to zero trust for remote data access and sharing.',
+  },
+  {
+    id: 'DEQ5EvWCanA',
+    title: 'How Zero Trust Data Access Extends Office 365 Functionality into a Hybrid IT Infrastructure',
+    desc: 'Edge Computing Association webinar on how Zero Trust Data Access extends Office 365 functionality into a modern hybrid-IT infrastructure.',
+  },
+  {
+    id: 'Fi72zy7kwzI',
+    title: 'Zero Trust Sharing of On Premises Implementations of SharePoint',
+    desc: 'Edge Computing Association webinar on how to use Zero Trust Data Access to share with external parties and provide remote access to an on-premises implementation of SharePoint.',
+  },
+  {
+    id: 'clBaM6iv4k8',
+    title: 'Securely Enable Your Remote Workforce with Zero Trust Data Access and no VPN',
+    desc: 'Edge Computing Association webinar on how to use Zero Trust to securely enable your remote workforce to remotely share and access your entire hybrid-IT infrastructure over the internet without using a VPN.',
+  },
+  {
+    id: 'CImcdNpznp0',
+    title: 'Zero Trust Data Collaboration for Remote Workers',
+    desc: 'Edge Computing Association webinar on zero trust data collaboration for remote workers.',
+  },
+  {
+    id: 'JlYgLzBiW0k',
+    title: 'Understanding and Addressing Vectors of Attack',
+    desc: 'Edge Computing President Phil Bliss interviews Tom Ward – VP of Qnext Corp – about vectors of attack and how they are addressed with FileFlex Enterprise.',
+  },
+  {
+    id: '9mIzspb-yJs',
+    title: 'Increase Security Through Remote Data Access & Sharing of On Premises Storage',
+    desc: 'Edge Computing Association hosted webinar on providing remote data access and sharing to on-premises storage of servers, server-attached, NAS and SharePoint to protect confidentiality and increase security vs duplicating files to third-party servers.',
+  },
+  {
+    id: 'T7T6Zo585s8',
+    title: 'The Next Evolution in Secure Computing Architecture',
+    desc: 'Global research firm Markets and Markets discusses the next evolution in secure computing architecture with the Edge Computing Association.',
+  },
+];
+---
+
+<Layout
+  title="All Webinars | FileFlex Enterprise"
+  description="Watch FileFlex Enterprise webinars on Zero Trust Data Access — NIST standards, Office 365, SharePoint, remote workforce enablement, vectors of attack and more."
+>
+
+<Nav current="support" />
+
+<!-- HERO -->
+<section class="web-hero" aria-labelledby="web-hero-heading">
+  <div class="web-hero__inner">
+    <p class="web-hero__eyebrow">Virtual Learning Centre</p>
+    <h1 id="web-hero-heading" class="web-hero__title">All Webinars</h1>
+    <p class="web-hero__lede">
+      Watch our on-demand webinar library and learn how FileFlex Enterprise applies Zero Trust Data
+      Access to secure remote access, sharing and collaboration across your hybrid-IT infrastructure.
+    </p>
+  </div>
+</section>
+
+<!-- WEBINAR GRID -->
+<section class="web-grid-section" aria-label="Webinar library">
+  <div class="web-grid">
+    {webinars.map((w) => (
+      <article class="web-card">
+        <button
+          type="button"
+          class="web-card__play"
+          data-video-id={w.id}
+          data-video-title={w.title}
+          aria-label={`Play webinar: ${w.title}`}
+        >
+          <img
+            class="web-card__thumb"
+            src={`https://i.ytimg.com/vi/${w.id}/hqdefault.jpg`}
+            alt=""
+            width="480"
+            height="360"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="web-card__overlay" aria-hidden="true">
+            <svg viewBox="0 0 68 48" width="68" height="48">
+              <path class="web-card__ytbg" d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#e8590a"/>
+              <path d="M45 24 27 14v20" fill="#fff"/>
+            </svg>
+          </span>
+        </button>
+        <div class="web-card__body">
+          <h2 class="web-card__title">{w.title}</h2>
+          <p class="web-card__desc">{w.desc}</p>
+          <button type="button" class="web-card__cta" data-video-id={w.id} data-video-title={w.title} aria-label={`Watch webinar: ${w.title}`}>
+            <span aria-hidden="true">Watch webinar</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+          </button>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<!-- VIDEO PLAYER MODAL -->
+<div id="web-modal" class="web-modal" role="dialog" aria-modal="true" aria-labelledby="web-modal-title" hidden>
+  <div class="web-modal__backdrop" data-close></div>
+  <div class="web-modal__dialog">
+    <div class="web-modal__bar">
+      <h2 id="web-modal-title" class="web-modal__title"></h2>
+      <button type="button" class="web-modal__close" data-close aria-label="Close video player">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="web-modal__frame">
+      <iframe
+        id="web-modal-iframe"
+        title="FileFlex webinar video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    var modal = document.getElementById('web-modal');
+    var iframe = document.getElementById('web-modal-iframe');
+    var titleEl = document.getElementById('web-modal-title');
+    var dialog = modal && modal.querySelector('.web-modal__dialog');
+    if (!modal || !iframe || !titleEl || !dialog) return;
+    var lastFocused = null;
+
+    // Siblings of the modal that should become inert while it is open.
+    var background = [];
+    Array.prototype.forEach.call(document.body.children, function (el) {
+      if (el !== modal) background.push(el);
+    });
+
+    function setBackgroundInert(on) {
+      background.forEach(function (el) {
+        if (on) {
+          el.setAttribute('inert', '');
+          el.setAttribute('aria-hidden', 'true');
+        } else {
+          el.removeAttribute('inert');
+          el.removeAttribute('aria-hidden');
+        }
+      });
+    }
+
+    function focusable() {
+      return Array.prototype.filter.call(
+        dialog.querySelectorAll('button, [href], iframe, input, select, textarea, [tabindex]:not([tabindex="-1"])'),
+        function (el) { return !el.hasAttribute('disabled') && el.offsetParent !== null; }
+      );
+    }
+
+    function openModal(id, title) {
+      if (!id) return;
+      lastFocused = document.activeElement;
+      titleEl.textContent = title || 'FileFlex webinar';
+      iframe.src =
+        'https://www.youtube-nocookie.com/embed/' +
+        encodeURIComponent(id) +
+        '?autoplay=1&rel=0&modestbranding=1';
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      setBackgroundInert(true);
+      var closeBtn = modal.querySelector('.web-modal__close');
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function closeModal() {
+      modal.hidden = true;
+      iframe.src = '';
+      document.body.style.overflow = '';
+      setBackgroundInert(false);
+      if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+    }
+
+    document.querySelectorAll('[data-video-id]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        openModal(el.getAttribute('data-video-id'), el.getAttribute('data-video-title'));
+      });
+    });
+
+    modal.querySelectorAll('[data-close]').forEach(function (el) {
+      el.addEventListener('click', closeModal);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (modal.hidden) return;
+      if (e.key === 'Escape') {
+        closeModal();
+        return;
+      }
+      if (e.key === 'Tab') {
+        var items = focusable();
+        if (!items.length) return;
+        var first = items[0];
+        var last = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    });
+  })();
+</script>
+
+</Layout>
