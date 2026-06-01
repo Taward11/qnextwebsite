@@ -197,7 +197,7 @@ const { blogs, webinars } = cards;
   <p>Stop ransomware, insider risk, and accidental leaks. Experience Zero-Trust Data Access today.</p>
   <div class="sec-cta__btns">
     <a class="sec-cta__btn" href="/try-fileflex/">Book a Demo</a>
-    <a class="sec-cta__btn sec-cta__btn--ghost" href="/contact-us/">Launch a Pilot</a>
+    <a class="sec-cta__btn sec-cta__btn--ghost" href="/try-fileflex/">Launch a Pilot</a>
   </div>
 </section>
 
@@ -210,7 +210,7 @@ const { blogs, webinars } = cards;
     <h2 id="sec-blogs-heading" class="pf-title pf-title--center">Check Out These Related Blogs</h2>
     <div class="sec-blog__grid">
       {blogs.map((b) => (
-        <a class="sec-blog__card" href={b.href} target="_blank" rel="noopener">
+        <a class="sec-blog__card" href={b.href}>
           <div class="sec-blog__thumb">
             {b.thumb && <img src={b.thumb} alt="" loading="lazy" decoding="async" />}
           </div>

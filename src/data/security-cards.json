@@ -2,152 +2,152 @@
   "blogs": [
     {
       "title": "Why Data Is Now the Real Target",
-      "href": "https://fileflex.com/blog/why-data-is-now-the-real-target/",
+      "href": "/blog/why-data-is-now-the-real-target/",
       "thumb": "/images/security/iStock-1280171152-web-1-e1688134925238.webp"
     },
     {
       "title": "AI-Driven Cybercrime at Zettabyte Scale",
-      "href": "https://fileflex.com/blog/ai-driven-cybercrime-at-zettabyte-scale/",
+      "href": "/blog/ai-driven-cybercrime-at-zettabyte-scale/",
       "thumb": "/images/security/Hospital-Results-1-e1769804769555.webp"
     },
     {
       "title": "Zero Trust and Regulatory Compliance",
-      "href": "https://fileflex.com/blog/zero-trust-and-regulatory-compliance/",
+      "href": "/blog/zero-trust-and-regulatory-compliance/",
       "thumb": "/images/security/Compliance-blog-cover-pic.webp"
     },
     {
       "title": "Cloudflare One and FileFlex Enterprise—Securing Apps and Data Together",
-      "href": "https://fileflex.com/blog/cloudflare-one-and-fileflex-enterprise-securing-apps-and-data-together/",
+      "href": "/blog/cloudflare-one-and-fileflex-enterprise-securing-apps-and-data-together/",
       "thumb": "/images/security/Cloudflare.webp"
     },
     {
       "title": "NIST SP 1800-35: How Data-Level Enforcement Strengthens Zero Trust Security",
-      "href": "https://fileflex.com/blog/nist-sp-1800-35-how-data-level-enforcement-strengthens-zero-trust-security/",
+      "href": "/blog/nist-sp-1800-35-how-data-level-enforcement-strengthens-zero-trust-security/",
       "thumb": "/images/security/NIST_campus_sign.webp"
     },
     {
       "title": "The Zero Trust Data Gap",
-      "href": "https://fileflex.com/blog/the-zero-trust-data-gap/",
+      "href": "/blog/the-zero-trust-data-gap/",
       "thumb": "/images/security/Data-access-gap.webp"
     },
     {
       "title": "SEC Cybersecurity Rules Driving Enterprise Security to Zero Trust Architecture: What CIOs and CISOs Need to Know",
-      "href": "https://fileflex.com/blog/sec-cybersecurity-rules-zero-trust-architecture-what-cios-and-cisos-need-to-know/",
+      "href": "/blog/sec-cybersecurity-rules-zero-trust-architecture-what-cios-and-cisos-need-to-know/",
       "thumb": "/images/security/ztda-blog-cover-pic-e1702064668299.webp"
     },
     {
       "title": "Hyperscaler Cloud Providers and the Data-Layer Gap: Extending Security with File-Level Control",
-      "href": "https://fileflex.com/blog/hyperscaler-cloud-providers-and-the-data-layer-gap-extending-security-with-file-level-control/",
+      "href": "/blog/hyperscaler-cloud-providers-and-the-data-layer-gap-extending-security-with-file-level-control/",
       "thumb": "/images/security/iStock-1187536032-web-e1760727068952.webp"
     },
     {
       "title": "Achieving End-to-End Zero Trust with Zscaler and FileFlex",
-      "href": "https://fileflex.com/blog/achieving-end-to-end-zero-trust-with-zscaler-and-fileflex/",
+      "href": "/blog/achieving-end-to-end-zero-trust-with-zscaler-and-fileflex/",
       "thumb": "/images/security/ip-GOV-Panel2-web-e1758645190169.webp"
     },
     {
       "title": "Extending Cisco Zero Trust from Access to Data",
-      "href": "https://fileflex.com/blog/extending-cisco-zero-trust-from-access-to-data/",
+      "href": "/blog/extending-cisco-zero-trust-from-access-to-data/",
       "thumb": "/images/security/Network-security-blog-cover-picture.webp"
     },
     {
       "title": "Extending Microsoft Entra to Protect Your Data with Zero Trust Data Access",
-      "href": "https://fileflex.com/blog/extending-microsoft-entra-zero-trust-to-protect-your-data-with-zero-trust-data-access/",
+      "href": "/blog/extending-microsoft-entra-zero-trust-to-protect-your-data-with-zero-trust-data-access/",
       "thumb": "/images/security/ip-GOV-Panel6-web-e1755273019719.webp"
     },
     {
       "title": "Top Reasons to Add Zero Trust Data Access to Palo Alto Cybersecurity",
-      "href": "https://fileflex.com/blog/top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity/",
+      "href": "/blog/top-reasons-to-add-zero-trust-data-access-to-palo-alto-cybersecurity/",
       "thumb": "/images/security/Screen-Shot-2022-12-20-at-10.52.56-AM-web-e1687290744790.webp"
     },
     {
       "title": "SharePoint Under Siege: Why Zero Trust Access Is Now Critical",
-      "href": "https://fileflex.com/blog/sharepoint-zero-trust-security-and-defending-against-zero-day-vulnerabilities/",
+      "href": "/blog/sharepoint-zero-trust-security-and-defending-against-zero-day-vulnerabilities/",
       "thumb": "/images/security/iStock-1150693468.webp"
     },
     {
       "title": "European Health Data Space Compliance with Zero Trust",
-      "href": "https://fileflex.com/blog/european-health-data-space-compliance-with-zero-trust/",
+      "href": "/blog/european-health-data-space-compliance-with-zero-trust/",
       "thumb": "/images/security/z-pattern-tranfer-1-e1751643612815.webp"
     },
     {
       "title": "Why Microsoft-Centric Security Isn’t Enough: The Case for Zero Trust Data Access",
-      "href": "https://fileflex.com/blog/why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access/",
+      "href": "/blog/why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access/",
       "thumb": "/images/security/What-is-Zero-Trust-Data-Access-Cover-Pic-e1766427780710.webp"
     },
     {
       "title": "From VPN Risk to Zero Trust Security: A Smarter Approach to Remote Access",
-      "href": "https://fileflex.com/blog/from-vpn-risk-to-zero-trust-security-a-smarter-approach-to-remote-access/",
+      "href": "/blog/from-vpn-risk-to-zero-trust-security-a-smarter-approach-to-remote-access/",
       "thumb": "/images/security/Zero-Trust-Access-Control-Cover-Pic.webp"
     },
     {
       "title": "The Zero Trust Maturity Model and the Role of ZTDA",
-      "href": "https://fileflex.com/blog/the-zero-trust-maturity-model-ztmm-and-why-ztda-is-critical-to-reaching-optimal-maturity/",
+      "href": "/blog/the-zero-trust-maturity-model-ztmm-and-why-ztda-is-critical-to-reaching-optimal-maturity/",
       "thumb": "/images/security/Panel1-city-web-e1744660611501.webp"
     },
     {
       "title": "How to Build a Complete Zero Trust Security Framework",
-      "href": "https://fileflex.com/blog/complete-zero-trust-security-framework/",
+      "href": "/blog/complete-zero-trust-security-framework/",
       "thumb": "/images/security/Data-governance-cover-e1740155573172.webp"
     },
     {
       "title": "UK iCloud Backdoor: Secure On‑Prem iCloud with ZTDA",
-      "href": "https://fileflex.com/blog/the-uks-icloud-backdoor-demand-and-the-need-for-on-premises-storage-secured-by-zero-trust-data-access/",
+      "href": "/blog/the-uks-icloud-backdoor-demand-and-the-need-for-on-premises-storage-secured-by-zero-trust-data-access/",
       "thumb": "/images/security/new-20220309.webp"
     },
     {
       "title": "Why a Zero Trust Data Access Decentralized Data Platform is Strategically Superior to Centralized Cloud File Access, Sharing and Collaboration",
-      "href": "https://fileflex.com/blog/why-a-zero-trust-data-access-decentralized-data-platform-is-strategically-superior-to-centralized-cloud-file-access-sharing-and-collaboration/",
+      "href": "/blog/why-a-zero-trust-data-access-decentralized-data-platform-is-strategically-superior-to-centralized-cloud-file-access-sharing-and-collaboration/",
       "thumb": "/images/security/iStock-1211994283-web-e1737140449164.webp"
     },
     {
       "title": "Top 10 Benefits of Restricting Direct Access to the Storage Infrastructure",
-      "href": "https://fileflex.com/blog/top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure/",
+      "href": "/blog/top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure/",
       "thumb": "/images/security/iStock-914788014-web-e1736273722899.webp"
     },
     {
       "title": "Benefits of Zero Trust Least Privilege Access: 9 Key Reasons",
-      "href": "https://fileflex.com/blog/9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access/",
+      "href": "/blog/9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access/",
       "thumb": "/images/security/ip-LF-Panel2-web-e1734469679436.webp"
     },
     {
       "title": "Benefits of Zero Trust File Sharing Management: 6 Key Reasons",
-      "href": "https://fileflex.com/blog/top-6-reasons-you-need-zero-trust-file-sharing-management/",
+      "href": "/blog/top-6-reasons-you-need-zero-trust-file-sharing-management/",
       "thumb": "/images/security/vlc-footer-banner-col-web-e1733929687437.webp"
     },
     {
       "title": "8 Benefits of Zero Trust Activity Monitoring",
-      "href": "https://fileflex.com/blog/top-8-reasons-your-organization-needs-zero-trust-activity-tracking/",
+      "href": "/blog/top-8-reasons-your-organization-needs-zero-trust-activity-tracking/",
       "thumb": "/images/security/iStock-1208273278-web.webp"
     },
     {
       "title": "Zero Trust User Access Management: 4 Best Practices",
-      "href": "https://fileflex.com/blog/why-zero-trust-data-access-user-management-is-crucial-for-it/",
+      "href": "/blog/why-zero-trust-data-access-user-management-is-crucial-for-it/",
       "thumb": "/images/security/zero-trust-remote-sharing-e1732897963404.webp"
     },
     {
       "title": "Upholding Cybersecurity for Architects Through Zero Trust Data Access",
-      "href": "https://fileflex.com/blog/upholding-cybersecurity-for-architects-through-zero-trust-data-access/",
+      "href": "/blog/upholding-cybersecurity-for-architects-through-zero-trust-data-access/",
       "thumb": "/images/security/ip-Arch-Panel1-web-e1732657705979.webp"
     },
     {
       "title": "Supporting Financial Services Cybersecurity Through Zero Trust Data Access",
-      "href": "https://fileflex.com/blog/supporting-financial-services-cybersecurity-through-zero-trust-data-access/",
+      "href": "/blog/supporting-financial-services-cybersecurity-through-zero-trust-data-access/",
       "thumb": "/images/security/Data-Sovereignty-2-e1730312868476.webp"
     },
     {
       "title": "Zero Trust Cybersecurity for Credit Unions",
-      "href": "https://fileflex.com/blog/strengthening-credit-union-cybersecurity-through-zero-trust-data-access/",
+      "href": "/blog/strengthening-credit-union-cybersecurity-through-zero-trust-data-access/",
       "thumb": "/images/security/enterprise-people.webp"
     },
     {
       "title": "Cybersecurity for Law Firms: The Priority of Zero Trust  Data Access Security",
-      "href": "https://fileflex.com/blog/cybersecurity-for-law-firms-the-priority-of-zero-trust-data-access-security/",
+      "href": "/blog/cybersecurity-for-law-firms-the-priority-of-zero-trust-data-access-security/",
       "thumb": "/images/security/iStock-825810126-web-e1727981340953.webp"
     },
     {
       "title": "How to Enforce Zero Trust Access Control to Mitigate Data Breach and Ransomware",
-      "href": "https://fileflex.com/blog/how-to-enforce-zero-trust-access-control-to-mitigate-data-breach-and-ransomware/",
+      "href": "/blog/how-to-enforce-zero-trust-access-control-to-mitigate-data-breach-and-ransomware/",
       "thumb": "/images/security/Zero-Trust-Access-Control-Cover-Pic.webp"
     }
   ],

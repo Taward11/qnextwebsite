@@ -219,7 +219,11 @@
    ============================================================ */
 .pf-zt__flow {
   margin: 16px auto 64px;
+  width: 75%;
   max-width: 1100px;
+}
+@media (max-width: 768px) {
+  .pf-zt__flow { width: 100%; }
 }
 .pf-zt__flow img {
   width: 100%;
@@ -650,7 +654,14 @@
 }
 .pf-reg__item {
   text-align: center;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
 }
+a.pf-reg__item:hover { transform: translateY(-3px); }
+.pf-reg__badge { transition: box-shadow 0.2s ease; }
+a.pf-reg__item:hover .pf-reg__badge { box-shadow: 0 18px 44px -26px rgba(14,26,43,0.5); }
 .pf-reg__badge {
   width: 150px; height: 150px;
   border-radius: 50%;
