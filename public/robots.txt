@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://qnextwebsite.pages.dev/sitemap-index.xml
