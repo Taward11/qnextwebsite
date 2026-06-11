@@ -6,4 +6,5 @@
 - [FileFlex fonts](fileflex-fonts.md) — site-wide font is Inter (from fileflex.css); global.css with Syne/DM Sans is NOT imported despite what replit.md says.
 - [HubSpot native HTML forms](hubspot-native-forms.md) — v3 integration API needs captcha OFF, silently drops `@example.com` (200 OK, no contact), internal multipart endpoint 401 from third-party origins, status DOM must be sibling of `<form>` if form is hidden on success.
 - [Self-referencing asset URLs](self-referencing-asset-urls.md) — never ref own assets via absolute prod-domain URL; copy to public/images. Recover originals from www.fileflex.com (still proxies old WP origin).
+- [Lockfile replit registry URLs](lockfile-replit-registry-urls.md) — package-lock `resolved` pointing at package-firewall.replit.local breaks Cloudflare/CI npm ci; rewrite host to registry.npmjs.org. Pushed changes appear stuck/not live.
 - [Ad-blocker class-name collisions](ad-blocker-class-collisions.md) — uBlock/Brave cosmetic filters auto-hide elements with `gdpr-*`, `cookie-*`, `consent-*`, `banner-*`, `popup-*`, `newsletter-*` class prefixes; pick neutral prefixes (e.g. `zp-*`, `pf-*`, `tf-*`).
