@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://qnextwebsite.pages.dev',
+  site: 'https://fileflex.com',
   integrations: [sitemap()],
   server: {
     host: '0.0.0.0',

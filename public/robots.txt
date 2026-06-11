@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://qnextwebsite.pages.dev/sitemap-index.xml
+Sitemap: https://fileflex.com/sitemap-index.xml
