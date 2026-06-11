@@ -78,7 +78,7 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <link rel="shortcut icon" type="image/x-icon" href="https://fileflex.com/wp-content/uploads/2015/03/favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
   {/*
     Preconnect is reserved for the 2-3 origins on the critical render path.
     Google PSI warns when there are more than 4 preconnects, since each one
@@ -124,9 +124,9 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
       <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       {/* Preload the hero background image (LCP) so it's discoverable in the initial HTML */}
-      <link rel="preload" as="image" href="https://fileflex.com/wp-content/uploads/2015/03/iStock-1445140730-scaled.jpg.webp" fetchpriority="high" />
+      <link rel="preload" as="image" href="/images/iStock-1445140730-scaled.jpg.webp" fetchpriority="high" />
       {/* Preload the hero logo so it paints with the first frame */}
-      <link rel="preload" as="image" href="https://fileflex.com/wp-content/uploads/2015/03/fileflex-enterprise-logo-small.png.webp" fetchpriority="high" />
+      <link rel="preload" as="image" href="/images/fileflex-enterprise-logo-small.png.webp" fetchpriority="high" />
     </>
   )}
   {/*
