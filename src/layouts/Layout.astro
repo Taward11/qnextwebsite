@@ -110,21 +110,15 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
   )}
   {isHome && (
     <>
-      {/*
-        Hero image origin — preconnected because the LCP image lives here.
-        No crossorigin: the hero image is a normal (non-CORS) request, so a
-        crossorigin preconnect would open a separate connection the image
-        never uses (PSI "Unused preconnect"). Plain preconnect matches the
-        actual fetch and captures the LCP savings.
-      */}
-      <link rel="preconnect" href="https://fileflex.com" />
+      {/* Hero image is now same-origin (/images/...), so no extra preconnect is needed for it. */}
       {/* YT iframe only loads on click — dns-prefetch is enough, preconnect would hold an unused socket */}
       <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
       {/* Analytics is async + non-blocking → dns-prefetch is enough */}
       <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-      {/* Preload the hero background image (LCP) so it's discoverable in the initial HTML */}
-      <link rel="preload" as="image" href="/images/iStock-1445140730-scaled.jpg.webp" fetchpriority="high" />
+      {/* Preload the hero background image (LCP), media-scoped so phones fetch only the small ~42 KiB variant */}
+      <link rel="preload" as="image" href="/images/iStock-hero-1024.webp" media="(max-width: 1024px)" fetchpriority="high" />
+      <link rel="preload" as="image" href="/images/iStock-hero-1920.webp" media="(min-width: 1025px)" fetchpriority="high" />
       {/* Preload the hero logo so it paints with the first frame */}
       <link rel="preload" as="image" href="/images/fileflex-enterprise-logo-small.png.webp" fetchpriority="high" />
     </>

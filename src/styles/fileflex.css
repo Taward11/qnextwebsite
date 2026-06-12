@@ -177,11 +177,20 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   padding: 180px 10vw 120px 8vw;
+  /* Mobile-first: small variant (~42 KiB) so phones don't fetch the 2560px image. */
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
-              url('/images/iStock-1445140730-scaled.jpg.webp');
+              url('/images/iStock-hero-1024.webp');
   background-size: cover;
   background-position: 80% center;
   overflow: hidden;
+}
+
+/* Larger viewports get the higher-resolution hero. */
+@media (min-width: 1025px) {
+  #ff-hero {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+                      url('/images/iStock-hero-1920.webp');
+  }
 }
 
 #ff-hero::before {
