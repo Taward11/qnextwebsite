@@ -106,6 +106,20 @@
   transform: rotate(45deg);
 }
 
+/* ---------- THREAT-LANDSCAPE INFOGRAPHIC ---------- */
+.cu-infographic {
+  margin: 8px auto 56px;
+  max-width: 1024px;
+  padding: 0;
+}
+.cu-infographic img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 30px 80px -45px rgba(0,0,0,0.6);
+}
+
 /* ---------- CHALLENGES (dark card grid) ---------- */
 .cu-grid {
   display: grid;
