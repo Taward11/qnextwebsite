@@ -1,0 +1,288 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+import '../styles/credit-unions.css';
+---
+
+<Layout
+  title="Zero Trust Data Access for Credit Unions | FileFlex Enterprise"
+  description="FileFlex gives credit unions secure, policy-driven access to member documents, mortgage and loan files — without migration. Protect member data, retire email attachments, meet GLBA, FFIEC, NCUA and DORA requirements, and enable secure remote collaboration."
+  faq={[
+    { q: "How does FileFlex help credit unions protect member information?", a: "FileFlex applies Zero Trust Data Access to member documents wherever they live \u2014 on-premises file servers, SharePoint, or cloud storage. Access is granted per request at the file and folder level with least privilege, storage stays \u2018dark\u2019, and every action is immutably logged for examiners. Member data is never copied or migrated." },
+    { q: "Can FileFlex replace email attachments and consumer file-sharing tools for loan and mortgage documents?", a: "Yes. Instead of emailing sensitive mortgage and loan documents or using consumer file-sharing apps, FileFlex provides policy-controlled links and secure data rooms with view-only, no-download, watermarking and instant revocation \u2014 keeping documents under the credit union\u2019s control with a full audit trail." },
+    { q: "Which regulations does FileFlex help credit unions address?", a: "FileFlex supports the access-control, auditing and data-governance expectations behind GLBA, FFIEC guidance, NCUA examinations, NIST and DORA by enforcing least-privilege access to unstructured data and producing immutable, exportable activity logs." },
+    { q: "Do credit unions need to migrate their data to use FileFlex?", a: "No. FileFlex deploys as a non-invasive overlay. Files remain in their existing storage; FileFlex federates secure access to them. Pilots can be stood up in days and removed without leaving persistent changes to storage." }
+  ]}
+>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<Nav />
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="cu-hero" aria-labelledby="cu-hero-heading">
+  <div class="cu-hero__content">
+    <span class="cu-hero__eyebrow">FileFlex for Credit Unions</span>
+    <h1 id="cu-hero-heading" class="cu-hero__title">
+      Zero Trust Data Access for Credit Unions
+    </h1>
+    <p class="cu-hero__lede">
+      Protect member information, retire email-based document sharing, and enable secure remote
+      collaboration on mortgage, loan and member files — without moving your data. Purpose-built
+      Zero Trust Data Access keeps every document under the credit union's control.
+    </p>
+
+    <div class="cu-aud">
+      <span class="cu-aud__label">Built for credit union leadership</span>
+      <span class="cu-pill">CIO</span>
+      <span class="cu-pill">CISO</span>
+      <span class="cu-pill">VP Lending</span>
+      <span class="cu-pill">Chief Risk Officer</span>
+      <span class="cu-pill">COO</span>
+    </div>
+
+    <p class="cu-hero__needs-label">Credit unions need to:</p>
+    <ul class="cu-hero__needs">
+      <li>Protect member information</li>
+      <li>Eliminate email-based document sharing</li>
+      <li>Meet regulatory requirements</li>
+      <li>Improve member experience</li>
+      <li>Enable secure remote collaboration</li>
+    </ul>
+
+    <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Book a Credit Union Security Assessment &rsaquo;</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     CREDIT UNION CHALLENGES
+     ============================================================ -->
+<section class="pf-section pf-section--dark" aria-labelledby="cu-challenges-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Landscape</p>
+    <h2 id="cu-challenges-heading" class="pf-title pf-title--center pf-title--light">Credit Union Challenges</h2>
+    <p class="pf-lede pf-lede--center pf-lede--light">
+      Credit unions hold deeply sensitive member data and operate under intense regulatory scrutiny —
+      while members expect the same seamless digital experience they get from the largest banks.
+    </p>
+    <div class="cu-grid">
+      <article class="cu-card--dark">
+        <p class="cu-card__num">01</p>
+        <h3>Rising Cyberattacks</h3>
+        <p>Ransomware and data-exfiltration campaigns increasingly target financial institutions and the unstructured member data they hold.</p>
+      </article>
+      <article class="cu-card--dark">
+        <p class="cu-card__num">02</p>
+        <h3>Data Privacy Requirements</h3>
+        <p>GLBA, FFIEC guidance, NCUA examinations and emerging privacy laws demand provable, least-privilege control over member information.</p>
+      </article>
+      <article class="cu-card--dark">
+        <p class="cu-card__num">03</p>
+        <h3>Member Expectations</h3>
+        <p>Members expect fast, frictionless, secure access to documents — not clunky portals or insecure email attachments.</p>
+      </article>
+      <article class="cu-card--dark">
+        <p class="cu-card__num">04</p>
+        <h3>Hybrid Workforce</h3>
+        <p>Loan officers, branches and remote staff need secure access to files from anywhere, without opening the network to risk.</p>
+      </article>
+      <article class="cu-card--dark">
+        <p class="cu-card__num">05</p>
+        <h3>Third-Party Collaboration</h3>
+        <p>Mortgage processing, auditors, attorneys and fintech partners all need scoped, time-limited access to specific documents.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY TRADITIONAL APPROACHES FAIL
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="cu-fail-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Gap</p>
+    <h2 id="cu-fail-heading" class="pf-title pf-title--center">Why Traditional Approaches Fail</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      The tools most credit unions rely on to move member documents were never built for Zero Trust —
+      they expose data, lose control after delivery, and leave gaps examiners notice.
+    </p>
+    <div class="pf-deep__grid">
+      <article class="pf-deep__card">
+        <img class="pf-deep__icon" src="/images/platform/office-icon.webp" alt="" loading="lazy" decoding="async" />
+        <h3>Email</h3>
+        <p>Attachments leave your control the moment they're sent — no revocation, no audit trail, and a prime target for interception and phishing.</p>
+      </article>
+      <article class="pf-deep__card">
+        <img class="pf-deep__icon" src="/images/platform/vpn-icon.webp" alt="" loading="lazy" decoding="async" />
+        <h3>VPNs</h3>
+        <p>VPNs grant broad network access, enabling lateral movement. One compromised credential can expose far more than a single member's file.</p>
+      </article>
+      <article class="pf-deep__card">
+        <img class="pf-deep__icon" src="/images/platform/ftp-icon.webp" alt="" loading="lazy" decoding="async" />
+        <h3>FTP</h3>
+        <p>Open ports and shared credentials with little granular control or visibility — a legacy pattern that examiners and attackers both flag.</p>
+      </article>
+      <article class="pf-deep__card">
+        <img class="pf-deep__icon" src="/images/platform/File-sharing-icon-for-home-page.webp" alt="" loading="lazy" decoding="async" />
+        <h3>Consumer File Sharing</h3>
+        <p>Copies member data into third-party clouds outside your governance, breaking data sovereignty and complicating compliance.</p>
+      </article>
+      <article class="pf-deep__card">
+        <img class="pf-deep__icon" src="/images/platform/Centralized-control-decentralized-administration-icon.webp" alt="" loading="lazy" decoding="async" />
+        <h3>Multiple Disconnected Systems</h3>
+        <p>Stitching together point tools creates inconsistent policies, fragmented audit logs, and blind spots no single team fully owns.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY FILEFLEX
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="cu-why-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Answer</p>
+    <h2 id="cu-why-heading" class="pf-title pf-title--center">Why FileFlex</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      FileFlex is purpose-built Zero Trust Data Access — secure, policy-driven access to member
+      documents wherever they reside, with the control and auditability credit unions require.
+    </p>
+    <div class="cu-why__grid">
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Data Sovereignty</p>
+        <h3>Data Remains Under Credit Union Control</h3>
+        <p>Member files never move into third-party clouds. FileFlex federates access to data in place, so it stays in your storage, under your governance.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Non-Invasive Overlay</p>
+        <h3>No Migration Required</h3>
+        <p>Deploy as an overlay on your existing on-premises, SharePoint and cloud storage. Pilot in days, roll back in minutes — nothing is copied or restructured.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Least Privilege</p>
+        <h3>Granular Permissions</h3>
+        <p>Enforce access at the file and folder level: view-only, no download, no share, watermarking and time-limited access for third parties.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Examiner-Ready</p>
+        <h3>Full Audit Trails</h3>
+        <p>Every access and action is immutably logged and exportable to your SIEM — providing the evidence GLBA, FFIEC and NCUA reviews expect.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Per-Request Enforcement</p>
+        <h3>Zero Trust Architecture</h3>
+        <p>Every file request is authenticated and authorized in real time against central policy. Storage stays dark; nothing is trusted by default.</p>
+      </article>
+    </div>
+    <div class="pf-cta-row">
+      <a href="/demo-request/" class="pf-btn pf-btn--lg pf-btn--uppercase">Book a Credit Union Security Assessment &rsaquo;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     USE CASES — MAGIC COLUMNS
+     ============================================================ -->
+<section class="pf-magic pf-magic--left" style="background-image:url('/images/financial/ip-ACC-MainBanner-web.jpg');" aria-labelledby="cu-mortgage-heading">
+  <div class="pf-magic__panel">
+    <p class="pf-eyebrow">Lending</p>
+    <h2 id="cu-mortgage-heading">Secure Mortgage &amp; Loan Document Sharing</h2>
+    <p>Replace email attachments and consumer apps with policy-controlled access to mortgage and loan files. Share with borrowers, processors and attorneys using view-only, no-download and instant revocation — with a complete audit trail.</p>
+    <a class="pf-magic__more" href="/blog/advantages-of-zero-trust-virtual-data-rooms-for-banks-and-credit-unions/" target="_blank" rel="noopener">Virtual Data Rooms for Banks &amp; Credit Unions &rarr;</a>
+  </div>
+</section>
+
+<section class="pf-magic pf-magic--right" style="background-image:url('/images/financial/The-solution.jpg');" aria-labelledby="cu-portal-heading">
+  <div class="pf-magic__panel">
+    <p class="pf-eyebrow">Member Experience</p>
+    <h2 id="cu-portal-heading">A Secure Member Document Portal</h2>
+    <p>Give members and staff fast, secure, branch-anywhere access to documents — without exposing your file servers or copying data to the cloud. Zero Trust enforcement keeps every interaction least-privilege and logged.</p>
+    <a class="pf-magic__more" href="/blog/strengthening-credit-union-cybersecurity-through-zero-trust-data-access/" target="_blank" rel="noopener">Zero Trust Cybersecurity for Credit Unions &rarr;</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     COMPLIANCE
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="cu-reg-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Compliance</p>
+    <h2 id="cu-reg-heading" class="pf-title pf-title--center">Built to Meet Regulatory Requirements</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Enforce least-privilege access, auditability and data governance over member data to support
+      the frameworks credit unions are measured against.
+    </p>
+    <div class="pf-reg__grid">
+      <a class="pf-reg__item" href="/blog/strengthening-glba-compliance-with-zero-trust-data-access/" target="_blank" rel="noopener">
+        <div class="pf-reg__badge"><img src="/images/platform/sociale-media-social-network-multimedia-online-P4H8N5F-e1733239547217.webp" alt="GLBA" loading="lazy" decoding="async" /></div>
+        <h3>GLBA</h3><p>Safeguards Rule support through file-level data protection and auditing.</p>
+      </a>
+      <a class="pf-reg__item" href="/blog/meeting-ffiec-guidelines-using-zero-trust-data-access/" target="_blank" rel="noopener">
+        <div class="pf-reg__badge"><img src="/images/platform/iStock-537743911-web-e1731689756904.webp" alt="FFIEC" loading="lazy" decoding="async" /></div>
+        <h3>FFIEC</h3><p>Helps meet FFIEC cybersecurity guidance for protecting member data.</p>
+      </a>
+      <a class="pf-reg__item" href="/blog/strengthening-credit-union-cybersecurity-through-zero-trust-data-access/" target="_blank" rel="noopener">
+        <div class="pf-reg__badge pf-reg__badge--text">NCUA</div>
+        <h3>NCUA</h3><p>Provides the least-privilege controls and evidence NCUA examinations expect.</p>
+      </a>
+      <a class="pf-reg__item" href="/blog/dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access/" target="_blank" rel="noopener">
+        <div class="pf-reg__badge"><img src="/images/platform/Supports-Privacy-by-Design-Mandates--e1704482747769.webp" alt="DORA" loading="lazy" decoding="async" /></div>
+        <h3>DORA</h3><p>DORA compliance for file sharing, access and collaboration with ZTDA.</p>
+      </a>
+      <a class="pf-reg__item" href="/blog/nist-sp-800-171v2-access-control-practices-for-remote-data-access-2/" target="_blank" rel="noopener">
+        <div class="pf-reg__badge"><img src="/images/platform/iStock-502806184-e1678994380758.webp" alt="NIST" loading="lazy" decoding="async" /></div>
+        <h3>NIST</h3><p>Supports the access-control best practices outlined in NIST SP-800-171 v2.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FURTHER READING
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="cu-read-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Further Reading</p>
+    <h2 id="cu-read-heading" class="pf-title pf-title--center">Zero Trust for Financial Institutions</h2>
+    <div class="pf-deep__grid">
+      <article class="pf-deep__card">
+        <h3>Zero Trust Cybersecurity for Credit Unions</h3>
+        <p>Why credit union security must go beyond the network and protect member data at the file level.</p>
+        <a class="pf-deep__more" href="/blog/strengthening-credit-union-cybersecurity-through-zero-trust-data-access/" target="_blank" rel="noopener" aria-label="Read more about Zero Trust cybersecurity for credit unions">Read more &rarr;</a>
+      </article>
+      <article class="pf-deep__card">
+        <h3>Virtual Data Rooms for Banks &amp; Credit Unions</h3>
+        <p>How Zero Trust VDRs secure sensitive client interactions for lending and member services.</p>
+        <a class="pf-deep__more" href="/blog/advantages-of-zero-trust-virtual-data-rooms-for-banks-and-credit-unions/" target="_blank" rel="noopener" aria-label="Read more about Zero Trust virtual data rooms for banks and credit unions">Read more &rarr;</a>
+      </article>
+      <article class="pf-deep__card">
+        <h3>Financial Services Cybersecurity with ZTDA</h3>
+        <p>Strengthening data security and regulatory compliance across financial institutions.</p>
+        <a class="pf-deep__more" href="/blog/supporting-financial-services-cybersecurity-through-zero-trust-data-access/" target="_blank" rel="noopener" aria-label="Read more about financial services cybersecurity with Zero Trust Data Access">Read more &rarr;</a>
+      </article>
+      <article class="pf-deep__card">
+        <h3>DORA Compliance Using Zero Trust Data Access</h3>
+        <p>Meeting DORA's requirements for resilient, controlled file sharing and collaboration.</p>
+        <a class="pf-deep__more" href="/blog/dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access/" target="_blank" rel="noopener" aria-label="Read more about DORA compliance using Zero Trust Data Access">Read more &rarr;</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FINAL CTA
+     ============================================================ -->
+<section id="pf-cta" aria-labelledby="cu-cta-heading">
+  <h2 id="cu-cta-heading">See how Zero Trust Data Access protects your members — in days, not months.</h2>
+  <div class="pf-cta-buttons">
+    <a class="pf-btn pf-btn--uppercase" href="/demo-request/">Book a Credit Union Security Assessment &rsaquo;</a>
+    <a class="pf-btn pf-btn--uppercase pf-btn--outline" href="/contact-us/">Talk to Sales &rsaquo;</a>
+  </div>
+</section>
+
+</Layout>
