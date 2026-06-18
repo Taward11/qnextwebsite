@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "wssrYHILOy549CZAkG2ky"
+uri = "file://public/images/lending/lending-collaboration-framework.svg"
+type = "image"
+title = "Lending Collaboration Framework"
