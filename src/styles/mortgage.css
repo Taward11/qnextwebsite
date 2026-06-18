@@ -11,7 +11,7 @@
   min-height: 640px;
   padding: 120px 5vw 100px;
   color: #fff;
-  background: #02060c url('/images/mortgage/hero.jpg') center / cover no-repeat;
+  background: #02060c url('/images/mortgage/hero.jpg?v=2') center / cover no-repeat;
   isolation: isolate;
 }
 #mr-hero::before {
