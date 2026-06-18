@@ -106,6 +106,51 @@
   transform: rotate(45deg);
 }
 
+/* hero customer quote */
+.cu-hero__quote {
+  margin: 36px 0 0;
+  max-width: 720px;
+  padding: 22px 26px;
+  border-left: 3px solid var(--pf-orange);
+  background: rgba(255,255,255,0.06);
+  border-radius: 0 10px 10px 0;
+}
+.cu-hero__quote blockquote {
+  margin: 0;
+  font-size: 16.5px;
+  line-height: 1.6;
+  font-style: italic;
+  color: #f3f6fa;
+}
+.cu-hero__quote figcaption {
+  margin: 14px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+.cu-hero__quote-name {
+  font-weight: 600;
+  font-size: 14.5px;
+  color: #fff;
+}
+.cu-hero__quote-title {
+  font-size: 13px;
+  color: #9fb0c2;
+}
+@media (min-width: 1200px) {
+  .cu-hero__content { max-width: 720px; }
+  .cu-hero__quote {
+    position: absolute;
+    top: 50%;
+    right: 5vw;
+    transform: translateY(-50%);
+    width: 340px;
+    margin: 0;
+    background: rgba(2,6,12,0.74);
+    backdrop-filter: blur(2px);
+    z-index: 1;
+  }
+}
+
 /* ---------- THREAT-LANDSCAPE INFOGRAPHIC ---------- */
 .cu-infographic {
   margin: 8px auto 56px;
