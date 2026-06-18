@@ -1,0 +1,272 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+import '../styles/mortgage.css';
+---
+
+<Layout
+  title="Secure Mortgage Collaboration & Document Sharing | FileFlex Enterprise"
+  description="Accelerate mortgage approvals without sacrificing security. FileFlex gives borrowers, brokers, underwriters, appraisers and lawyers secure document exchange, granular permissions and full activity tracking — without email attachments or moving your data."
+  faq={[
+    { q: "How does FileFlex secure mortgage document sharing?", a: "FileFlex applies Zero Trust Data Access to mortgage and loan files wherever they live \u2014 on-premises, SharePoint or cloud. Borrowers, brokers, underwriters, appraisers and attorneys get scoped, least-privilege access per request with view-only, no-download, watermarking and instant revocation, and every action is immutably logged." },
+    { q: "Can external parties access documents without copying data out of our systems?", a: "Yes. FileFlex federates secure access to files in place, so brokers, appraisers and outside counsel can view exactly what they need without files being emailed, downloaded or copied into third-party clouds. Access is time-limited and fully audited." },
+    { q: "Does FileFlex replace email attachments for mortgage workflows?", a: "It does. Instead of emailing sensitive borrower documents, teams share policy-controlled links and secure data rooms. Nothing leaves your control, and you keep a complete audit trail of who accessed what and when." },
+    { q: "Do we need to migrate our mortgage files to use FileFlex?", a: "No. FileFlex deploys as a non-invasive overlay on your existing storage. Files stay where they are; FileFlex secures access to them. Pilots can be running in days and removed without leaving persistent changes." }
+  ]}
+>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<Nav />
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="mr-hero" aria-labelledby="mr-hero-heading">
+  <div class="mr-hero__content">
+    <span class="mr-hero__eyebrow">FileFlex for Mortgage Operations</span>
+    <h1 id="mr-hero-heading" class="mr-hero__title">
+      Accelerate Mortgage Approvals Without Sacrificing Security
+    </h1>
+    <p class="mr-hero__lede">
+      Every mortgage moves through many hands — borrowers, brokers, underwriters, appraisers and
+      lawyers — with sensitive documents in constant motion. FileFlex secures each exchange with
+      Zero Trust Data Access, so approvals move faster without exposing borrower data or relying on
+      email attachments.
+    </p>
+
+    <div class="mr-aud">
+      <span class="mr-aud__label">Built for everyone in the mortgage process</span>
+      <span class="mr-pill">Borrowers</span>
+      <span class="mr-pill">Brokers</span>
+      <span class="mr-pill">Underwriters</span>
+      <span class="mr-pill">Appraisers</span>
+      <span class="mr-pill">Lawyers</span>
+    </div>
+
+    <p class="mr-hero__needs-label">Mortgage teams need to:</p>
+    <ul class="mr-hero__needs">
+      <li>Exchange documents securely</li>
+      <li>Give external parties controlled access</li>
+      <li>Enforce granular permissions</li>
+      <li>Track every action with a full audit trail</li>
+      <li>Eliminate email attachments</li>
+    </ul>
+
+    <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request Mortgage Workflow Demo &rsaquo;</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHALLENGES
+     ============================================================ -->
+<section class="pf-section pf-section--dark" aria-labelledby="mr-challenges-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Challenge</p>
+    <h2 id="mr-challenges-heading" class="pf-title pf-title--center pf-title--light">Mortgage Collaboration Is Complex</h2>
+    <p class="pf-lede pf-lede--center pf-lede--light">
+      A single mortgage passes through borrowers, brokers, underwriters, appraisers and attorneys.
+      Each party needs the right documents at the right time — and every handoff is a chance for
+      sensitive data to leak, stall or fall out of compliance.
+    </p>
+    <div class="mr-grid">
+      <article class="mr-card--dark">
+        <p class="mr-card__num">01</p>
+        <h3>Borrowers</h3>
+        <p>Submit income, identity and financial documents — sensitive personal data that must be protected from the very first upload.</p>
+      </article>
+      <article class="mr-card--dark">
+        <p class="mr-card__num">02</p>
+        <h3>Brokers</h3>
+        <p>Move files between borrowers and lenders, often across organizations — a constant stream of external sharing that's hard to control.</p>
+      </article>
+      <article class="mr-card--dark">
+        <p class="mr-card__num">03</p>
+        <h3>Underwriters</h3>
+        <p>Review complete, accurate documentation to make decisions — without copies scattering across inboxes and shared drives.</p>
+      </article>
+      <article class="mr-card--dark">
+        <p class="mr-card__num">04</p>
+        <h3>Appraisers</h3>
+        <p>Need scoped access to property and supporting files, then nothing more once their work is done.</p>
+      </article>
+      <article class="mr-card--dark">
+        <p class="mr-card__num">05</p>
+        <h3>Lawyers</h3>
+        <p>Handle closing documents and disclosures that demand confidentiality, traceability and provable, time-limited access.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     THE SECURE MORTGAGE LIFECYCLE (infographic)
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="mr-lifecycle-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">How It Works</p>
+    <h2 id="mr-lifecycle-heading" class="pf-title pf-title--center">The Secure Mortgage Lifecycle</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      FileFlex Enterprise enables secure collaboration at every step of the mortgage lifecycle —
+      the right information, to the right people, at the right time, without email, copying or
+      unnecessary risk.
+    </p>
+    <figure class="mr-infographic">
+      <img src="/images/mortgage/secure-mortgage-collaboration.png" alt="The secure mortgage collaboration lifecycle in seven steps: pre-application and pre-approval, application submission, initial review and credit assessment, property appraisal and underwriting, conditional approval and final verification, loan approval and closing disclosure, and loan closing and funding — with secure access, controlled sharing, real-time visibility, data protection and compliance throughout." loading="lazy" decoding="async" />
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY TRADITIONAL APPROACHES FAIL
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="mr-fail-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Gap</p>
+    <h2 id="mr-fail-heading" class="pf-title pf-title--center">Why Traditional Approaches Fail</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      The tools most lenders rely on to move mortgage documents were never built for Zero Trust —
+      they expose borrower data, lose control after delivery, and leave gaps auditors notice.
+    </p>
+    <div class="pf-deep__grid">
+      <article class="pf-deep__card">
+        <img class="pf-deep__icon" src="/images/platform/office-icon.webp" alt="" loading="lazy" decoding="async" />
+        <h3>Email</h3>
+        <p>Attachments leave your control the moment they're sent — no revocation, no audit trail, and a prime target for interception and wire-fraud phishing.</p>
+      </article>
+      <article class="pf-deep__card">
+        <img class="pf-deep__icon" src="/images/platform/vpn-icon.webp" alt="" loading="lazy" decoding="async" />
+        <h3>VPNs</h3>
+        <p>VPNs grant broad network access, enabling lateral movement. One compromised credential can expose far more than a single borrower's file.</p>
+      </article>
+      <article class="pf-deep__card">
+        <img class="pf-deep__icon" src="/images/platform/ftp-icon.webp" alt="" loading="lazy" decoding="async" />
+        <h3>FTP</h3>
+        <p>Open ports and shared credentials with little granular control or visibility — a legacy pattern that auditors and attackers both flag.</p>
+      </article>
+      <article class="pf-deep__card">
+        <img class="pf-deep__icon" src="/images/platform/File-sharing-icon-for-home-page.webp" alt="" loading="lazy" decoding="async" />
+        <h3>Consumer File Sharing</h3>
+        <p>Copies borrower data into third-party clouds outside your governance, breaking data sovereignty and complicating compliance.</p>
+      </article>
+      <article class="pf-deep__card">
+        <img class="pf-deep__icon" src="/images/platform/Centralized-control-decentralized-administration-icon.webp" alt="" loading="lazy" decoding="async" />
+        <h3>Multiple Disconnected Systems</h3>
+        <p>Stitching together point tools creates inconsistent policies, fragmented audit logs, and blind spots no single team fully owns.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY FILEFLEX
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="mr-why-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Answer</p>
+    <h2 id="mr-why-heading" class="pf-title pf-title--center">Why FileFlex for Mortgage Workflows</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      FileFlex is purpose-built Zero Trust Data Access — secure, policy-driven collaboration on
+      mortgage documents wherever they reside, with the control and auditability lenders require.
+    </p>
+    <div class="mr-why__grid">
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Secure Exchange</p>
+        <h3>Secure Document Exchange</h3>
+        <p>Share mortgage and loan files through policy-controlled links and data rooms — view-only, no-download, watermarked and revocable in an instant.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Outside Parties</p>
+        <h3>External Party Access</h3>
+        <p>Give brokers, appraisers and attorneys scoped, time-limited access to exactly the documents they need — and nothing more.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Least Privilege</p>
+        <h3>Granular Permissions</h3>
+        <p>Enforce access at the file and folder level: who can view, download, share or print, with controls that adapt to each stage of the workflow.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Full Visibility</p>
+        <h3>Activity Tracking</h3>
+        <p>Every access and action is immutably logged and exportable to your SIEM — a complete, audit-ready record of the entire mortgage file.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">No Attachments</p>
+        <h3>No Email Attachments</h3>
+        <p>Replace risky email attachments entirely. Documents stay in your storage, under your control, and never leave your governance.</p>
+      </article>
+    </div>
+    <div class="pf-cta-row">
+      <a href="/demo-request/" class="pf-btn pf-btn--lg pf-btn--uppercase">Request Mortgage Workflow Demo &rsaquo;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     USE CASES — MAGIC COLUMNS
+     ============================================================ -->
+<section class="pf-magic pf-magic--left" style="background-image:url('/images/financial/ip-ACC-MainBanner-web.jpg');" aria-labelledby="mr-exchange-heading">
+  <div class="pf-magic__panel">
+    <p class="pf-eyebrow">Collaboration</p>
+    <h2 id="mr-exchange-heading">Secure Document Exchange for Every Party</h2>
+    <p>Bring borrowers, brokers, underwriters, appraisers and attorneys into one secure workflow. Each party sees only what they're authorized to, with no-download, watermarking and instant revocation — and a complete audit trail of every interaction.</p>
+    <a class="pf-magic__more" href="/blog/advantages-of-zero-trust-virtual-data-rooms-for-banks-and-credit-unions/" target="_blank" rel="noopener">Virtual Data Rooms for Banks &amp; Credit Unions &rarr;</a>
+  </div>
+</section>
+
+<section class="pf-magic pf-magic--right" style="background-image:url('/images/credit-unions/member-portal.jpg');" aria-labelledby="mr-vdr-heading">
+  <div class="pf-magic__panel">
+    <p class="pf-eyebrow">Closings</p>
+    <h2 id="mr-vdr-heading">A Virtual Data Room for Closings</h2>
+    <p>Stand up a secure, branded data room for each loan in minutes. Centralize closing documents and disclosures, control exactly who can access them, and retire them when the deal is done — without copying data to the cloud.</p>
+    <a class="pf-magic__more" href="/blog/use-fileflex-enterprise-to-create-virtual-data-rooms/" target="_blank" rel="noopener">Create Virtual Data Rooms with FileFlex &rarr;</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     FURTHER READING
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="mr-read-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Further Reading</p>
+    <h2 id="mr-read-heading" class="pf-title pf-title--center">Zero Trust for Lending &amp; Financial Services</h2>
+    <div class="pf-deep__grid">
+      <article class="pf-deep__card">
+        <h3>Virtual Data Rooms for Banks &amp; Credit Unions</h3>
+        <p>How Zero Trust VDRs secure sensitive client interactions for lending and closings.</p>
+        <a class="pf-deep__more" href="/blog/advantages-of-zero-trust-virtual-data-rooms-for-banks-and-credit-unions/" target="_blank" rel="noopener" aria-label="Read more about Zero Trust virtual data rooms for banks and credit unions">Read more &rarr;</a>
+      </article>
+      <article class="pf-deep__card">
+        <h3>Create Virtual Data Rooms with FileFlex</h3>
+        <p>Stand up secure, controlled data rooms for deals, closings and document exchange.</p>
+        <a class="pf-deep__more" href="/blog/use-fileflex-enterprise-to-create-virtual-data-rooms/" target="_blank" rel="noopener" aria-label="Read more about creating virtual data rooms with FileFlex Enterprise">Read more &rarr;</a>
+      </article>
+      <article class="pf-deep__card">
+        <h3>13 Reasons to Adopt Zero Trust Data Rooms</h3>
+        <p>The case for secure virtual data rooms over email and consumer file sharing.</p>
+        <a class="pf-deep__more" href="/blog/top-13-reasons-to-adopt-zero-trust-secure-virtual-data-rooms/" target="_blank" rel="noopener" aria-label="Read more about the top 13 reasons to adopt Zero Trust secure virtual data rooms">Read more &rarr;</a>
+      </article>
+      <article class="pf-deep__card">
+        <h3>Financial Services Cybersecurity with ZTDA</h3>
+        <p>Strengthening data security and regulatory compliance across financial institutions.</p>
+        <a class="pf-deep__more" href="/blog/supporting-financial-services-cybersecurity-through-zero-trust-data-access/" target="_blank" rel="noopener" aria-label="Read more about financial services cybersecurity with Zero Trust Data Access">Read more &rarr;</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FINAL CTA
+     ============================================================ -->
+<section id="pf-cta" aria-labelledby="mr-cta-heading">
+  <h2 id="mr-cta-heading">See how FileFlex accelerates mortgage approvals — securely, in days, not months.</h2>
+  <div class="pf-cta-buttons">
+    <a class="pf-btn pf-btn--uppercase" href="/demo-request/">Request Mortgage Workflow Demo &rsaquo;</a>
+    <a class="pf-btn pf-btn--uppercase pf-btn--outline" href="/demo-request/">Book a Demo &rsaquo;</a>
+  </div>
+</section>
+
+</Layout>

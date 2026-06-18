@@ -1,0 +1,174 @@
+/* ============================================================
+   SECURE MORTGAGE COLLABORATION — solution landing page
+   Builds on the Platform page creative system (platform.css):
+   reuses pf-* section/eyebrow/title/card primitives and tokens.
+   Only mortgage-specific pieces live here, prefixed mr-.
+   ============================================================ */
+
+/* ---------- HERO (mirrors #pf-hero) ---------- */
+#mr-hero {
+  position: relative;
+  min-height: 640px;
+  padding: 120px 5vw 100px;
+  color: #fff;
+  background: #02060c url('/images/platform/home-hero-2023q1.webp') center / cover no-repeat;
+  isolation: isolate;
+}
+#mr-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(2,6,12,0.82) 0%, rgba(2,6,12,0.6) 55%, rgba(2,6,12,0.1) 100%);
+  z-index: -1;
+}
+.mr-hero__content { max-width: 900px; margin: 0 auto 0 0; }
+.mr-hero__eyebrow {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pf-orange);
+  margin: 0 0 22px;
+}
+.mr-hero__title {
+  font-size: clamp(30px, 3.9vw, 52px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0 0 28px;
+  color: #fff;
+}
+.mr-hero__lede {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #d6dce4;
+  max-width: 760px;
+  margin: 0 0 28px;
+}
+
+/* audience pills */
+.mr-aud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 32px;
+}
+.mr-aud__label {
+  width: 100%;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9fb0c2;
+  margin: 0 0 4px;
+}
+.mr-pill {
+  display: inline-block;
+  padding: 7px 14px;
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #eef2f7;
+  background: rgba(255,255,255,0.05);
+}
+
+/* key-messaging list */
+.mr-hero__needs-label {
+  font-weight: 600;
+  font-size: 17px;
+  color: #fff;
+  margin: 8px 0 12px;
+}
+.mr-hero__needs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 36px;
+  max-width: 720px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 28px;
+}
+.mr-hero__needs li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: #ecedf0;
+}
+.mr-hero__needs li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 4px;
+  width: 13px; height: 13px;
+  border: 2px solid var(--pf-orange);
+  border-radius: 3px;
+  transform: rotate(45deg);
+}
+
+/* ---------- WORKFLOW INFOGRAPHIC ---------- */
+.mr-infographic {
+  margin: 8px auto 0;
+  max-width: 1024px;
+  padding: 0;
+}
+.mr-infographic img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 30px 80px -45px rgba(0,0,0,0.35);
+}
+
+/* ---------- CHALLENGES (dark card grid) ---------- */
+.mr-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+.mr-card--dark {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: left;
+}
+.mr-card--dark .mr-card__num {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--pf-orange);
+  margin: 0 0 14px;
+}
+.mr-card--dark h3 {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  color: #fff;
+  margin: 0 0 10px;
+}
+.mr-card--dark p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #aebac7;
+  margin: 0;
+}
+
+/* ---------- WHY FILEFLEX 5-up (reuses pf-zt cards) ---------- */
+.mr-why__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .mr-grid { grid-template-columns: repeat(3, 1fr); }
+  .mr-why__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .mr-hero__needs { grid-template-columns: 1fr; }
+  .mr-grid { grid-template-columns: 1fr; }
+  .mr-why__grid { grid-template-columns: 1fr; }
+}
