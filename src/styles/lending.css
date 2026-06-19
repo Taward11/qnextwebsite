@@ -273,6 +273,13 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
+.ld-adv__icon {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 0 18px;
+  color: var(--pf-orange);
+}
 
 /* ---------- SECTION 6: WHY ZTDA (dark comparison) ---------- */
 .ld-compare {
