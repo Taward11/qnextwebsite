@@ -1,0 +1,385 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+import '../styles/lending.css';
+---
+
+<Layout
+  title="Secure Lending Collaboration & Document Sharing | FileFlex Enterprise"
+  description="Accelerate loan processing and protect borrower data with Zero Trust Data Access. FileFlex gives lenders, borrowers, brokers, attorneys, auditors and underwriters secure, audited document collaboration — without email attachments or moving your data."
+  faq={[
+    { q: "How does FileFlex secure lending document collaboration?", a: "FileFlex applies Zero Trust Data Access to loan and borrower files wherever they live \u2014 on-premises, SharePoint or cloud. Borrowers, loan processors, underwriters, attorneys, auditors and brokers get scoped, least-privilege access per request with view-only, no-download, watermarking and instant revocation, and every action is immutably logged." },
+    { q: "Can external parties access lending documents without copying data out of our systems?", a: "Yes. FileFlex federates secure access to files in place, so attorneys, appraisers, auditors and brokers can view exactly what they need without files being emailed, downloaded or copied into third-party clouds. Access is time-limited and fully audited." },
+    { q: "Does FileFlex replace email attachments for lending workflows?", a: "It does. Instead of emailing financial statements, tax returns and credit reports, teams share policy-controlled links and secure data rooms. Nothing leaves your control, and you keep a complete audit trail of who accessed what and when." },
+    { q: "How does FileFlex help with lending audit and compliance?", a: "FileFlex records every access, share and document interaction in an immutable, exportable log, and enforces granular, least-privilege permissions. That gives auditors clear evidence of access controls, data governance and activity tracking across the entire lending lifecycle." }
+  ]}
+>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<Nav />
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="ld-hero" aria-labelledby="ld-hero-heading">
+  <div class="ld-hero__content">
+    <span class="ld-hero__eyebrow">FileFlex for Lending Operations</span>
+    <h1 id="ld-hero-heading" class="ld-hero__title">
+      Secure Collaboration for Modern Lending Operations
+    </h1>
+    <p class="ld-hero__lede">
+      Accelerate loan processing, improve borrower experiences, and protect sensitive financial
+      information with Zero Trust Data Access.
+    </p>
+
+    <p class="ld-hero__sub-title">Lending has become a collaboration challenge.</p>
+    <p class="ld-hero__sub">
+      Today's lending processes require secure collaboration among employees, borrowers, brokers,
+      attorneys, auditors, consultants and regulators. Yet many lending organizations still rely on:
+    </p>
+    <ul class="ld-hero__needs">
+      <li>Email attachments</li>
+      <li>Shared network folders</li>
+      <li>Consumer file-sharing services</li>
+      <li>Multiple disconnected systems</li>
+    </ul>
+    <p class="ld-hero__sub">
+      These approaches increase risk, slow approvals and create compliance challenges.
+    </p>
+
+    <p class="ld-hero__solution">
+      FileFlex enables lenders to securely collaborate on sensitive financial information while
+      maintaining control, visibility and auditability throughout the lending lifecycle.
+    </p>
+
+    <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request a Lending Collaboration Assessment &rsaquo;</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 1 — STAKEHOLDERS
+     ============================================================ -->
+<section class="pf-section pf-section--dark" aria-labelledby="ld-stake-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Landscape</p>
+    <h2 id="ld-stake-heading" class="pf-title pf-title--center pf-title--light">Lending Workflows Are More Complex Than Ever</h2>
+    <p class="pf-lede pf-lede--center pf-lede--light">
+      A single loan moves through many hands. Lending teams collaborate with a wide range of internal
+      and external participants — each requiring access to specific information.
+    </p>
+    <div class="ld-stake__grid">
+      <div class="ld-stake__tile">Borrowers</div>
+      <div class="ld-stake__tile">Commercial clients</div>
+      <div class="ld-stake__tile">Equipment vendors</div>
+      <div class="ld-stake__tile">Loan brokers</div>
+      <div class="ld-stake__tile">Legal counsel</div>
+      <div class="ld-stake__tile">Underwriters</div>
+      <div class="ld-stake__tile">Auditors</div>
+      <div class="ld-stake__tile">Regulators</div>
+      <div class="ld-stake__tile">Third-party consultants</div>
+    </div>
+    <p class="ld-stake__note">
+      Each participant requires access to specific information. <strong>Not every participant should
+      see every document.</strong>
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 2 — COMMON CHALLENGES
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="ld-chal-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Challenge</p>
+    <h2 id="ld-chal-heading" class="pf-title pf-title--center">Common Lending Collaboration Challenges</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      The tools most lenders rely on to move documents were never built for secure, auditable
+      collaboration — they expose borrower data, over-share access and leave gaps auditors notice.
+    </p>
+    <div class="ld-chal__grid">
+      <article class="ld-chal__card">
+        <p class="ld-chal__num">CHALLENGE 01</p>
+        <h3>Sensitive Information Shared Through Email</h3>
+        <p>Loan applications often include:</p>
+        <ul class="ld-list">
+          <li>Financial statements</li>
+          <li>Tax returns</li>
+          <li>Credit reports</li>
+          <li>Business plans</li>
+          <li>Collateral documents</li>
+        </ul>
+        <p class="ld-chal__note">Email was never designed for secure lending collaboration.</p>
+      </article>
+
+      <article class="ld-chal__card">
+        <p class="ld-chal__num">CHALLENGE 02</p>
+        <h3>Excessive Access Permissions</h3>
+        <p>Many organizations grant broad folder access because it is easier to manage — creating unnecessary exposure. Questions arise such as:</p>
+        <ul class="ld-list">
+          <li>Who accessed the file?</li>
+          <li>Was it downloaded?</li>
+          <li>Was it forwarded?</li>
+          <li>Is access still required?</li>
+        </ul>
+      </article>
+
+      <article class="ld-chal__card">
+        <p class="ld-chal__num">CHALLENGE 03</p>
+        <h3>Third-Party Collaboration Risk</h3>
+        <p>External participants frequently need temporary access. Examples include:</p>
+        <ul class="ld-list">
+          <li>Attorneys</li>
+          <li>Appraisers</li>
+          <li>Auditors</li>
+          <li>Brokers</li>
+        </ul>
+        <p class="ld-chal__note">Managing external access manually can create operational and compliance risks.</p>
+      </article>
+
+      <article class="ld-chal__card">
+        <p class="ld-chal__num">CHALLENGE 04</p>
+        <h3>Audit and Compliance Requirements</h3>
+        <p>Financial institutions must demonstrate:</p>
+        <ul class="ld-list">
+          <li>Appropriate access controls</li>
+          <li>Data governance</li>
+          <li>Activity tracking</li>
+          <li>Secure handling of borrower information</li>
+        </ul>
+        <p class="ld-chal__note">Without proper visibility, audits become difficult and time-consuming.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 3 — LENDING USE CASES
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="ld-use-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Use Cases</p>
+    <h2 id="ld-use-heading" class="pf-title pf-title--center">Lending Use Cases</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      FileFlex secures collaboration across every type of lending — keeping sensitive information in
+      place while the right people get exactly the access they need.
+    </p>
+    <div class="ld-use__grid">
+      <article class="ld-use__card">
+        <p class="ld-use__kicker">Commercial</p>
+        <h3>Commercial Lending</h3>
+        <p class="ld-use__intro">Secure collaboration on:</p>
+        <ul class="ld-list">
+          <li>Financial statements</li>
+          <li>Tax returns</li>
+          <li>Business plans</li>
+          <li>Loan packages</li>
+          <li>Collateral documentation</li>
+        </ul>
+      </article>
+
+      <article class="ld-use__card">
+        <p class="ld-use__kicker">Equipment</p>
+        <h3>Equipment Financing</h3>
+        <p class="ld-use__intro">Coordinate securely with:</p>
+        <ul class="ld-list">
+          <li>Borrowers</li>
+          <li>Equipment vendors</li>
+          <li>Leasing partners</li>
+          <li>Underwriters</li>
+        </ul>
+        <p class="ld-use__intro ld-use__intro--tail">…without moving sensitive information to third-party repositories.</p>
+      </article>
+
+      <article class="ld-use__card">
+        <p class="ld-use__kicker">Agricultural</p>
+        <h3>Agricultural Lending</h3>
+        <p class="ld-use__intro">Support collaboration among:</p>
+        <ul class="ld-list">
+          <li>Producers</li>
+          <li>Advisors</li>
+          <li>Lenders</li>
+          <li>Government agencies</li>
+        </ul>
+        <p class="ld-use__intro ld-use__intro--tail">…while protecting sensitive financial and operational data.</p>
+      </article>
+
+      <article class="ld-use__card">
+        <p class="ld-use__kicker">Business</p>
+        <h3>Business Lending</h3>
+        <p class="ld-use__intro">Provide secure access for:</p>
+        <ul class="ld-list">
+          <li>Business owners</li>
+          <li>Accountants</li>
+          <li>Legal counsel</li>
+          <li>Loan officers</li>
+        </ul>
+        <p class="ld-use__intro ld-use__intro--tail">…throughout the lending process.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 4 — HOW IT WORKS (infographic)
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="ld-how-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">How It Works</p>
+    <h2 id="ld-how-heading" class="pf-title pf-title--center">How Secure Lending Collaboration Works</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      A secure, controlled workflow that protects sensitive information while keeping your lending
+      process moving forward.
+    </p>
+    <figure class="ld-figure">
+      <img src="/images/lending/how-secure-lending-collaboration-works.png" alt="How secure lending collaboration works: a six-step workflow — borrower submits required documentation, the loan processor reviews and organizes documents, the underwriter evaluates financial information, external advisors receive controlled access, loan conditions are fulfilled, and approval and funding is processed securely. At every stage access is controlled, activity is monitored, data remains protected and collaboration stays seamless." loading="lazy" decoding="async" />
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 5 — THE FILEFLEX ADVANTAGE
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="ld-adv-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Answer</p>
+    <h2 id="ld-adv-heading" class="pf-title pf-title--center">The FileFlex Advantage</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      FileFlex is purpose-built Zero Trust Data Access — secure, policy-driven collaboration on
+      lending documents wherever they reside, measured by the outcomes that matter to lenders.
+    </p>
+    <div class="ld-adv__grid">
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Least Privilege</p>
+        <h3>Granular Access Controls</h3>
+        <p>Provide users access only to the information they need — at the file and folder level, adapted to each stage of the workflow.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Outside Parties</p>
+        <h3>Secure External Collaboration</h3>
+        <p>Enable collaboration with third parties without exposing unrelated information, using scoped, time-limited access.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Full Visibility</p>
+        <h3>Complete Audit Visibility</h3>
+        <p>Track access, sharing activity and document interactions in an immutable, audit-ready record exportable to your SIEM.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Data Sovereignty</p>
+        <h3>Reduced Data Exposure</h3>
+        <p>Eliminate unnecessary copies of sensitive documents — files stay in your storage, under your governance.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Speed</p>
+        <h3>Faster Loan Processing</h3>
+        <p>Improve efficiency without compromising security, so approvals move faster across every party in the process.</p>
+      </article>
+    </div>
+    <div class="pf-cta-row">
+      <a href="/demo-request/" class="pf-btn pf-btn--lg pf-btn--uppercase">Request a Lending Collaboration Assessment &rsaquo;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 6 — WHY ZERO TRUST DATA ACCESS MATTERS
+     ============================================================ -->
+<section class="pf-section pf-section--dark" aria-labelledby="ld-why-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Approach</p>
+    <h2 id="ld-why-heading" class="pf-title pf-title--center pf-title--light">Why Zero Trust Data Access Matters for Lending</h2>
+    <p class="pf-lede pf-lede--center pf-lede--light">
+      Most security solutions protect the perimeter around your data. Lending workflows require
+      protection of the data itself.
+    </p>
+    <div class="ld-compare">
+      <article class="ld-compare__card ld-compare__card--muted">
+        <p class="ld-compare__kicker">Traditional Security</p>
+        <h3>Most security solutions focus on</h3>
+        <ul class="ld-list ld-list--light">
+          <li>Users</li>
+          <li>Devices</li>
+          <li>Networks</li>
+        </ul>
+      </article>
+      <article class="ld-compare__card ld-compare__card--accent">
+        <p class="ld-compare__kicker">FileFlex ZTDA</p>
+        <h3>Zero Trust extended to the data itself</h3>
+        <ul class="ld-list ld-list--light">
+          <li>Granular permissions</li>
+          <li>Secure external collaboration</li>
+          <li>Activity monitoring</li>
+          <li>Data governance controls</li>
+        </ul>
+      </article>
+    </div>
+    <p class="ld-why__close">
+      FileFlex extends Zero Trust principles directly to borrower and lending information — helping
+      lenders <strong>balance security, compliance and operational efficiency.</strong>
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 7 — LENDING COLLABORATION FRAMEWORK (graphic)
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="ld-fw-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Framework</p>
+    <h2 id="ld-fw-heading" class="pf-title pf-title--center">Lending Collaboration Framework</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      A loan moves from borrower to funding through every party — secured at each step by Zero Trust
+      Data Access.
+    </p>
+    <figure class="ld-framework">
+      <img src="/images/lending/lending-collaboration-framework.svg" alt="Lending collaboration framework: a vertical workflow from Borrower to Loan Processor, Underwriter, Legal Counsel and Approval and Funding, all secured by Zero Trust Data Access — verify identity, control access, monitor activity, maintain audit trail and protect data." loading="lazy" decoding="async" />
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 8 — CUSTOMER SUCCESS
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="ld-success-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Customer Success</p>
+    <h2 id="ld-success-heading" class="pf-title pf-title--center">Proven in Financial Services</h2>
+    <div class="ld-success">
+      <p class="ld-success__eyebrow">Success Story</p>
+      <p class="ld-success__title">How a Financial Institution Reduced Reliance on Email for Sensitive Lending Documents</p>
+      <div class="ld-success__cols">
+        <div class="ld-success__col">
+          <h4>Challenge</h4>
+          <p>Loan teams routinely emailed financial statements, tax returns and credit reports to borrowers, brokers and outside counsel — with no control or audit trail once a message was sent.</p>
+        </div>
+        <div class="ld-success__col">
+          <h4>Solution</h4>
+          <p>FileFlex replaced email attachments with policy-controlled, in-place access to documents — granular permissions for each party, secure external collaboration and complete activity logging.</p>
+        </div>
+        <div class="ld-success__col">
+          <h4>Outcome</h4>
+          <p>Sensitive documents stayed in the institution's systems, external access became time-limited and fully audited, and loan processing moved faster with audit-ready visibility.</p>
+        </div>
+      </div>
+      <a class="pf-btn pf-btn--uppercase" href="https://fileflex.com/financial-services/" target="_blank" rel="noopener" aria-label="Read the full financial services success story on fileflex.com">Read the Full Success Story &rsaquo;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FINAL CTA
+     ============================================================ -->
+<section id="pf-cta" aria-labelledby="ld-cta-heading">
+  <h2 id="ld-cta-heading">Modern Lending Requires Modern Collaboration</h2>
+  <p class="ld-cta__sub">
+    Protect borrower information, reduce risk and accelerate loan processing with Zero Trust Data Access.
+  </p>
+  <div class="pf-cta-buttons">
+    <a class="pf-btn pf-btn--uppercase" href="/demo-request/">Schedule a Lending Collaboration Assessment &rsaquo;</a>
+  </div>
+</section>
+
+</Layout>

@@ -1,0 +1,398 @@
+/* ============================================================
+   SECURE LENDING COLLABORATION — solution landing page
+   Builds on the Platform creative system (platform.css):
+   reuses pf-* section/eyebrow/title/card primitives and tokens.
+   Only lending-specific pieces live here, prefixed ld-.
+   ============================================================ */
+
+/* ---------- HERO (mirrors #pf-hero) ---------- */
+#ld-hero {
+  position: relative;
+  min-height: 660px;
+  padding: 120px 5vw 100px;
+  color: #fff;
+  background: #02060c url('/images/mortgage/hero.jpg?v=2') center / cover no-repeat;
+  isolation: isolate;
+}
+#ld-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(2,6,12,0.86) 0%, rgba(2,6,12,0.66) 55%, rgba(2,6,12,0.18) 100%);
+  z-index: -1;
+}
+.ld-hero__content { max-width: 920px; margin: 0 auto 0 0; }
+.ld-hero__eyebrow {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pf-orange);
+  margin: 0 0 22px;
+}
+.ld-hero__title {
+  font-size: clamp(30px, 3.9vw, 52px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0 0 26px;
+  color: #fff;
+}
+.ld-hero__lede {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #d6dce4;
+  max-width: 780px;
+  margin: 0 0 36px;
+}
+.ld-hero__sub-title {
+  font-size: 19px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 10px;
+}
+.ld-hero__sub {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #c7d0da;
+  max-width: 760px;
+  margin: 0 0 18px;
+}
+.ld-hero__needs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  max-width: 640px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 28px;
+}
+.ld-hero__needs li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: #ecedf0;
+}
+.ld-hero__needs li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 5px;
+  width: 12px; height: 12px;
+  border: 2px solid var(--pf-orange);
+  border-radius: 3px;
+  transform: rotate(45deg);
+}
+.ld-hero__solution {
+  border-left: 3px solid var(--pf-orange);
+  padding: 4px 0 4px 20px;
+  margin: 0 0 36px;
+  max-width: 760px;
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: #eef2f7;
+}
+
+/* ---------- SHARED BULLET LIST (orange diamond) ---------- */
+.ld-list { list-style: none; padding: 0; margin: 0; }
+.ld-list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--pf-ink-soft);
+  margin-bottom: 8px;
+}
+.ld-list li:last-child { margin-bottom: 0; }
+.ld-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 6px;
+  width: 10px; height: 10px;
+  border: 2px solid var(--pf-orange);
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+.ld-list--light li { color: #c7d0da; }
+
+/* ---------- SECTION 1: STAKEHOLDERS (dark) ---------- */
+.ld-stake__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto 36px;
+}
+.ld-stake__tile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 22px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #eef2f7;
+}
+.ld-stake__tile::before {
+  content: '';
+  flex: 0 0 auto;
+  width: 10px; height: 10px;
+  border: 2px solid var(--pf-orange);
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+.ld-stake__note {
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #cbd3dd;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.ld-stake__note strong { color: #fff; font-weight: 600; }
+
+/* ---------- SECTION 2: CHALLENGES (2x2 cards) ---------- */
+.ld-chal__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.ld-chal__card {
+  background: #fff;
+  border: 1px solid var(--pf-line);
+  border-radius: 16px;
+  padding: 34px 32px;
+  display: flex;
+  flex-direction: column;
+}
+.ld-chal__num {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--pf-orange);
+  margin: 0 0 12px;
+}
+.ld-chal__card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  color: var(--pf-ink);
+  margin: 0 0 14px;
+}
+.ld-chal__card > p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--pf-ink-soft);
+  margin: 0 0 14px;
+}
+.ld-chal__note {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--pf-ink);
+  font-weight: 600;
+  margin: 16px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--pf-line);
+}
+
+/* ---------- SECTION 3: USE CASES (4 cards) ---------- */
+.ld-use__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.ld-use__card {
+  background: #fff;
+  border: 1px solid var(--pf-line);
+  border-radius: 16px;
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.ld-use__card:hover { border-color: var(--pf-orange); transform: translateY(-2px); }
+.ld-use__kicker {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pf-orange);
+  margin: 0 0 12px;
+}
+.ld-use__card h3 {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  color: var(--pf-ink);
+  margin: 0 0 16px;
+}
+.ld-use__card .ld-use__intro {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--pf-ink-soft);
+  margin: 0 0 14px;
+}
+.ld-use__card .ld-use__intro--tail { margin: 14px 0 0; }
+
+/* ---------- SECTION 4 & 7: FIGURES ---------- */
+.ld-figure {
+  margin: 8px auto 0;
+  max-width: 1080px;
+  padding: 0;
+}
+.ld-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 30px 80px -45px rgba(14,26,43,0.35);
+}
+.ld-framework {
+  margin: 8px auto 0;
+  max-width: 540px;
+  padding: 0;
+}
+.ld-framework img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  border: 1px solid var(--pf-line);
+  box-shadow: 0 30px 80px -50px rgba(14,26,43,0.25);
+}
+
+/* ---------- SECTION 5: FILEFLEX ADVANTAGE (5 outcome cards) ---------- */
+.ld-adv__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* ---------- SECTION 6: WHY ZTDA (dark comparison) ---------- */
+.ld-compare {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 980px;
+  margin: 0 auto 40px;
+}
+.ld-compare__card {
+  border-radius: 16px;
+  padding: 34px 32px;
+}
+.ld-compare__card--muted {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.ld-compare__card--accent {
+  background: rgba(232,89,10,0.08);
+  border: 1px solid rgba(232,89,10,0.4);
+}
+.ld-compare__kicker {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pf-orange);
+  margin: 0 0 10px;
+}
+.ld-compare__card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  color: #fff;
+  margin: 0 0 18px;
+}
+.ld-why__close {
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #cbd3dd;
+  max-width: 820px;
+  margin: 0 auto;
+}
+.ld-why__close strong { color: #fff; font-weight: 600; }
+
+/* ---------- SECTION 8: CUSTOMER SUCCESS ---------- */
+.ld-success {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid var(--pf-line);
+  border-radius: 18px;
+  padding: 48px 44px;
+}
+.ld-success__eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pf-orange);
+  margin: 0 0 12px;
+}
+.ld-success__title {
+  font-size: clamp(21px, 2.3vw, 28px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--pf-ink);
+  margin: 0 0 32px;
+  max-width: 760px;
+}
+.ld-success__cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin: 0 0 36px;
+}
+.ld-success__col h4 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pf-ink);
+  margin: 0 0 12px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--pf-orange);
+  display: inline-block;
+}
+.ld-success__col p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--pf-ink-soft);
+  margin: 0;
+}
+
+/* ---------- FINAL CTA sub-copy ---------- */
+#pf-cta .ld-cta__sub {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #cfd8f0;
+  max-width: 720px;
+  margin: -16px auto 32px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .ld-stake__grid { grid-template-columns: repeat(2, 1fr); }
+  .ld-use__grid { grid-template-columns: repeat(2, 1fr); }
+  .ld-adv__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  #ld-hero { padding: 90px 6vw 64px; min-height: auto; }
+  .ld-hero__needs { grid-template-columns: 1fr; }
+  .ld-stake__grid { grid-template-columns: 1fr; }
+  .ld-chal__grid { grid-template-columns: 1fr; }
+  .ld-use__grid { grid-template-columns: 1fr; }
+  .ld-adv__grid { grid-template-columns: 1fr; }
+  .ld-compare { grid-template-columns: 1fr; }
+  .ld-success__cols { grid-template-columns: 1fr; }
+  .ld-success { padding: 36px 26px; }
+}
