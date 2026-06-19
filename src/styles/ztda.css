@@ -280,36 +280,6 @@
   margin: 36px auto 0;
 }
 
-/* ---------- SECTION 5: NIST PRINCIPLES (5 cards) ---------- */
-.zt-nist__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  max-width: 1120px;
-  margin: 0 auto;
-}
-.zt-nist__card {
-  background: #fff;
-  border: 1px solid var(--pf-line);
-  border-radius: 16px;
-  padding: 28px 26px;
-  border-left: 4px solid var(--pf-orange);
-}
-.zt-nist__card h3 {
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  line-height: 1.25;
-  color: var(--pf-ink);
-  margin: 0 0 10px;
-}
-.zt-nist__card p {
-  font-size: 14.5px;
-  line-height: 1.6;
-  color: var(--pf-ink-soft);
-  margin: 0;
-}
-
 /* ---------- SECTION 6: MATURITY GAP ---------- */
 .zt-gap {
   display: grid;
@@ -465,7 +435,6 @@
 @media (max-width: 1024px) {
   .zt-check__grid { grid-template-columns: repeat(2, 1fr); }
   .zt-evo__grid { grid-template-columns: 1fr; max-width: 560px; }
-  .zt-nist__grid { grid-template-columns: repeat(2, 1fr); }
   .zt-cap__grid { grid-template-columns: repeat(2, 1fr); }
   .zt-out__grid { grid-template-columns: repeat(2, 1fr); }
   .zt-gap { grid-template-columns: 1fr; }
@@ -475,7 +444,6 @@
   .zt-hero__needs { grid-template-columns: 1fr; }
   .zt-check__grid { grid-template-columns: 1fr; }
   .zt-examples { grid-template-columns: 1fr; }
-  .zt-nist__grid { grid-template-columns: 1fr; }
   .zt-cap__grid { grid-template-columns: 1fr; }
   .zt-out__grid { grid-template-columns: 1fr; }
   .zt-gap__mature { grid-template-columns: 1fr; }
