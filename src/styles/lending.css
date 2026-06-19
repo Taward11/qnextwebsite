@@ -216,6 +216,13 @@
   transition: border-color 0.15s ease, transform 0.15s ease;
 }
 .ld-use__card:hover { border-color: var(--pf-orange); transform: translateY(-2px); }
+.ld-use__icon {
+  width: 36px;
+  height: 36px;
+  display: block;
+  margin: 0 0 16px;
+  color: var(--pf-orange);
+}
 .ld-use__kicker {
   font-size: 12px;
   font-weight: 600;
