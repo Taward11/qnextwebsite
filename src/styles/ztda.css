@@ -1,0 +1,482 @@
+/* ============================================================
+   ZERO TRUST DATA ACCESS — solution landing page
+   Builds on the Platform creative system (platform.css):
+   reuses pf-* section/eyebrow/title/card primitives and tokens.
+   Only ZTDA-specific pieces live here, prefixed zt-.
+   ============================================================ */
+
+/* ---------- HERO (mirrors #pf-hero) ---------- */
+#zt-hero {
+  position: relative;
+  min-height: 640px;
+  padding: 120px 5vw 100px;
+  color: #fff;
+  background: #02060c url('/images/platform/home-hero-2023q1.webp') center / cover no-repeat;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+}
+#zt-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(2,6,12,0.88) 0%, rgba(2,6,12,0.66) 55%, rgba(2,6,12,0.22) 100%);
+  z-index: -1;
+}
+.zt-hero__content { max-width: 880px; margin: 0 auto 0 0; }
+.zt-hero__eyebrow {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pf-orange);
+  margin: 0 0 22px;
+}
+.zt-hero__title {
+  font-size: clamp(30px, 3.9vw, 52px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0 0 26px;
+  color: #fff;
+}
+.zt-hero__lede {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #d6dce4;
+  max-width: 780px;
+  margin: 0 0 22px;
+}
+.zt-hero__needs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  max-width: 720px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 28px;
+}
+.zt-hero__needs li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: #ecedf0;
+}
+.zt-hero__needs li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 5px;
+  width: 12px; height: 12px;
+  border: 2px solid var(--pf-orange);
+  border-radius: 3px;
+  transform: rotate(45deg);
+}
+.zt-hero__solution {
+  border-left: 3px solid var(--pf-orange);
+  padding: 4px 0 4px 20px;
+  margin: 0 0 36px;
+  max-width: 760px;
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: #eef2f7;
+}
+.zt-hero__cta { display: flex; flex-wrap: wrap; gap: 16px; }
+
+/* ---------- SHARED BULLET LIST (orange diamond) ---------- */
+.zt-list { list-style: none; padding: 0; margin: 0; }
+.zt-list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--pf-ink-soft);
+  margin-bottom: 8px;
+}
+.zt-list li:last-child { margin-bottom: 0; }
+.zt-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 6px;
+  width: 10px; height: 10px;
+  border: 2px solid var(--pf-orange);
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+/* ---------- SECTION 1: WHAT IS ZTDA (check grid) ---------- */
+.zt-check__grid {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 940px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.zt-check {
+  position: relative;
+  padding: 22px 24px 22px 56px;
+  background: var(--pf-bg);
+  border: 1px solid var(--pf-line);
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--pf-ink);
+  line-height: 1.4;
+}
+.zt-check::before {
+  content: '';
+  position: absolute;
+  left: 22px; top: 50%;
+  margin-top: -9px;
+  width: 18px; height: 18px;
+  background: var(--pf-orange);
+  border-radius: 50%;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>") center / 12px no-repeat;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>") center / 12px no-repeat;
+}
+
+/* ---------- SECTION 2: FALLS SHORT (3 example cards) ---------- */
+.zt-examples {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1080px;
+  margin: 0 auto 40px;
+}
+.zt-example {
+  background: #fff;
+  border: 1px solid var(--pf-line);
+  border-radius: 16px;
+  border-top: 3px solid var(--pf-orange);
+  padding: 30px 28px;
+}
+.zt-example__num {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pf-orange);
+  margin: 0 0 14px;
+}
+.zt-example > p:not(.zt-example__num) {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--pf-ink-soft);
+  margin: 0;
+}
+.zt-short__close {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--pf-ink-soft);
+  max-width: 760px;
+  margin: 0 auto;
+}
+.zt-short__close strong { color: var(--pf-ink); font-weight: 700; }
+
+/* ---------- SECTION 3: EVOLUTION (3 flow cards, dark) ---------- */
+.zt-evo__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.zt-evo__card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+}
+.zt-evo__card--accent {
+  background: rgba(232,89,10,0.08);
+  border: 1px solid rgba(232,89,10,0.4);
+}
+.zt-evo__kicker {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pf-orange);
+  margin: 0 0 20px;
+}
+.zt-evo__flow {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+}
+.zt-evo__flow li {
+  position: relative;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 8px;
+  padding: 11px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #eef2f7;
+  text-align: center;
+}
+.zt-evo__flow li:not(:last-child) { margin-bottom: 26px; }
+.zt-evo__flow li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 50%; bottom: -20px;
+  width: 2px; height: 14px;
+  background: var(--pf-orange);
+  transform: translateX(-50%);
+}
+.zt-evo__flow li:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 50%; bottom: -22px;
+  width: 8px; height: 8px;
+  border-right: 2px solid var(--pf-orange);
+  border-bottom: 2px solid var(--pf-orange);
+  transform: translateX(-50%) rotate(45deg);
+  z-index: 1;
+}
+.zt-evo__card--accent .zt-evo__flow li:last-child {
+  background: rgba(232,89,10,0.16);
+  border-color: rgba(232,89,10,0.5);
+  color: #fff;
+  font-weight: 600;
+}
+.zt-evo__note {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #c7d0da;
+  margin: 0;
+}
+.zt-evo__note strong { color: #fff; font-weight: 600; }
+
+/* ---------- SECTION 4: ARCHITECTURE FIGURE ---------- */
+.zt-figure {
+  margin: 8px auto 0;
+  max-width: 1080px;
+  padding: 0;
+}
+.zt-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  border: 1px solid var(--pf-line);
+  box-shadow: 0 30px 80px -45px rgba(14,26,43,0.35);
+}
+.zt-arch__key {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--pf-ink);
+  max-width: 760px;
+  margin: 36px auto 0;
+}
+
+/* ---------- SECTION 5: NIST PRINCIPLES (5 cards) ---------- */
+.zt-nist__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.zt-nist__card {
+  background: #fff;
+  border: 1px solid var(--pf-line);
+  border-radius: 16px;
+  padding: 28px 26px;
+  border-left: 4px solid var(--pf-orange);
+}
+.zt-nist__card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  color: var(--pf-ink);
+  margin: 0 0 10px;
+}
+.zt-nist__card p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--pf-ink-soft);
+  margin: 0;
+}
+
+/* ---------- SECTION 6: MATURITY GAP ---------- */
+.zt-gap {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 28px;
+  max-width: 1120px;
+  margin: 0 auto;
+  align-items: start;
+}
+.zt-gap__mature {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.zt-gap__card {
+  background: var(--pf-bg);
+  border: 1px solid var(--pf-line);
+  border-radius: 16px;
+  padding: 26px 24px;
+}
+.zt-gap__card--accent {
+  background: rgba(232,89,10,0.06);
+  border: 1px solid rgba(232,89,10,0.35);
+}
+.zt-gap__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pf-ink);
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--pf-line);
+}
+.zt-gap__label--accent { color: var(--pf-orange); border-bottom-color: rgba(232,89,10,0.3); }
+.zt-gap__close {
+  margin: 18px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(232,89,10,0.25);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--pf-orange);
+}
+
+/* ---------- SECTION 7: CAPABILITIES (6 cards w/ icons) ---------- */
+.zt-cap__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.zt-cap__icon {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 0 18px;
+  color: var(--pf-orange);
+}
+
+/* ---------- SECTION 8: BUSINESS OUTCOMES (4 cards) ---------- */
+.zt-out__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.zt-out__card {
+  background: #fff;
+  border: 1px solid var(--pf-line);
+  border-radius: 16px;
+  padding: 30px 26px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.zt-out__card:hover { border-color: var(--pf-orange); transform: translateY(-2px); }
+.zt-out__card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  color: var(--pf-ink);
+  margin: 0 0 12px;
+}
+.zt-out__card p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--pf-ink-soft);
+  margin: 0;
+}
+
+/* ---------- SECTION 9: SECURITY STACK TABLE ---------- */
+.zt-table__wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow-x: auto;
+  border: 1px solid var(--pf-line);
+  border-radius: 16px;
+  background: #fff;
+}
+.zt-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 560px;
+}
+.zt-table th,
+.zt-table td {
+  text-align: left;
+  padding: 16px 22px;
+  font-size: 15px;
+  border-bottom: 1px solid var(--pf-line);
+}
+.zt-table thead th {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--pf-dark);
+}
+.zt-table tbody th {
+  font-weight: 600;
+  color: var(--pf-ink);
+}
+.zt-table tbody td { color: var(--pf-ink-soft); }
+.zt-table tbody tr:last-child th,
+.zt-table tbody tr:last-child td { border-bottom: 0; }
+.zt-table tbody tr:nth-child(even) { background: var(--pf-bg); }
+.zt-role {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--pf-ink-soft);
+  background: var(--pf-bg);
+  border: 1px solid var(--pf-line);
+  border-radius: 999px;
+  padding: 5px 14px;
+}
+.zt-role--accent {
+  color: #fff;
+  background: var(--pf-orange);
+  border-color: var(--pf-orange);
+}
+
+/* ---------- FINAL CTA sub-copy ---------- */
+#pf-cta .zt-cta__sub {
+  font-size: 17px;
+  line-height: 1.65;
+  color: #cfd8f0;
+  max-width: 760px;
+  margin: -16px auto 32px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .zt-check__grid { grid-template-columns: repeat(2, 1fr); }
+  .zt-evo__grid { grid-template-columns: 1fr; max-width: 560px; }
+  .zt-nist__grid { grid-template-columns: repeat(2, 1fr); }
+  .zt-cap__grid { grid-template-columns: repeat(2, 1fr); }
+  .zt-out__grid { grid-template-columns: repeat(2, 1fr); }
+  .zt-gap { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  #zt-hero { padding: 90px 6vw 64px; min-height: auto; }
+  .zt-hero__needs { grid-template-columns: 1fr; }
+  .zt-check__grid { grid-template-columns: 1fr; }
+  .zt-examples { grid-template-columns: 1fr; }
+  .zt-nist__grid { grid-template-columns: 1fr; }
+  .zt-cap__grid { grid-template-columns: 1fr; }
+  .zt-out__grid { grid-template-columns: 1fr; }
+  .zt-gap__mature { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,442 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+import '../styles/ztda.css';
+---
+
+<Layout
+  title="Zero Trust Data Access — The Missing Layer in Zero Trust Architecture | FileFlex Enterprise"
+  description="Most Zero Trust initiatives secure identities, devices, applications, and networks—but not the movement of data itself. Learn why Zero Trust Data Access is the next stage of Zero Trust maturity."
+  faq={[
+    { q: "What is Zero Trust Data Access (ZTDA)?", a: "Zero Trust Data Access applies Zero Trust principles directly to data access, sharing and collaboration. Instead of trusting users after they authenticate, ZTDA continuously verifies every user, authorizes every request, enforces least-privilege access, controls data sharing, monitors activity and maintains a complete audit trail." },
+    { q: "Why does traditional Zero Trust fall short?", a: "MFA, IAM, endpoint security, ZTNA and network segmentation secure access to applications and networks — but once a user gains access, the data itself often becomes uncontrolled. Files get emailed externally, copied to unmanaged devices or over-shared, even when the identity was verified and the network was secure." },
+    { q: "Does FileFlex replace my existing Zero Trust investments?", a: "No. FileFlex complements identity, endpoint, network and DSPM solutions. It extends Zero Trust principles to the data layer — protecting access to storage and securing collaboration — without replacing the controls you already have." },
+    { q: "How does ZTDA align with the NIST Zero Trust Maturity Model?", a: "ZTDA supports key NIST principles: continuous verification of every access request, least-privilege access, data-centric security that follows the data, continuous monitoring of user actions, and access decisions based on organizational policy." }
+  ]}
+>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<Nav current="security" />
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="zt-hero" aria-labelledby="zt-hero-heading">
+  <div class="zt-hero__content">
+    <span class="zt-hero__eyebrow">Zero Trust Data Access</span>
+    <h1 id="zt-hero-heading" class="zt-hero__title">
+      Zero Trust Doesn&rsquo;t End at the Network
+    </h1>
+    <p class="zt-hero__lede">
+      Organizations have invested heavily in Zero Trust technologies such as identity management,
+      multi-factor authentication, endpoint security, and Zero Trust Network Access (ZTNA). Yet
+      sensitive information continues to be:
+    </p>
+    <ul class="zt-hero__needs">
+      <li>Emailed externally</li>
+      <li>Downloaded to unmanaged devices</li>
+      <li>Shared through consumer cloud services</li>
+      <li>Exposed through oversharing</li>
+      <li>Accessed without adequate visibility or audit controls</li>
+    </ul>
+    <p class="zt-hero__solution">
+      The reality is simple: most Zero Trust architectures stop before they reach the data. FileFlex
+      extends Zero Trust principles directly to the information organizations are trying to protect.
+    </p>
+
+    <div class="zt-hero__cta">
+      <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request a Demo &rsaquo;</a>
+      <a class="pf-btn pf-btn--lg pf-btn--uppercase pf-btn--outline" href="/contact-us/">Download the White Paper</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 1 — WHAT IS ZTDA
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="zt-what-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Definition</p>
+    <h2 id="zt-what-heading" class="pf-title pf-title--center">What is Zero Trust Data Access?</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Zero Trust Data Access (ZTDA) applies Zero Trust principles directly to data access, sharing and
+      collaboration. Instead of trusting users after they successfully authenticate, ZTDA continuously
+      enforces security controls whenever users access sensitive information.
+    </p>
+    <ul class="zt-check__grid">
+      <li class="zt-check">Verify every user</li>
+      <li class="zt-check">Authorize every request</li>
+      <li class="zt-check">Enforce least-privilege access</li>
+      <li class="zt-check">Control data sharing</li>
+      <li class="zt-check">Monitor activity</li>
+      <li class="zt-check">Maintain a complete audit trail</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 2 — WHY TRADITIONAL ZERO TRUST FALLS SHORT
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="zt-short-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Gap</p>
+    <h2 id="zt-short-heading" class="pf-title pf-title--center">Why Traditional Zero Trust Falls Short</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Many organizations have implemented MFA, Identity and Access Management, Endpoint Security, ZTNA
+      and Network Segmentation. These technologies secure access to applications and networks — but
+      once a user gains access, the data itself often becomes largely uncontrolled.
+    </p>
+    <div class="zt-examples">
+      <article class="zt-example">
+        <p class="zt-example__num">Example 01</p>
+        <p>An employee downloads confidential loan documents and emails them externally.</p>
+      </article>
+      <article class="zt-example">
+        <p class="zt-example__num">Example 02</p>
+        <p>A contractor accesses a file repository and copies information to an unmanaged device.</p>
+      </article>
+      <article class="zt-example">
+        <p class="zt-example__num">Example 03</p>
+        <p>A partner receives access to an entire folder when only one document was required.</p>
+      </article>
+    </div>
+    <p class="zt-short__close">
+      The identity was verified. The network was secure. <strong>Yet the data remained vulnerable.</strong>
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 3 — THE EVOLUTION OF ZERO TRUST
+     ============================================================ -->
+<section class="pf-section pf-section--dark" aria-labelledby="zt-evo-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Evolution</p>
+    <h2 id="zt-evo-heading" class="pf-title pf-title--center pf-title--light">The Evolution of Zero Trust</h2>
+    <p class="pf-lede pf-lede--center pf-lede--light">
+      Zero Trust has matured in stages — and each stage moves trust enforcement closer to the data
+      itself.
+    </p>
+    <div class="zt-evo__grid">
+      <article class="zt-evo__card">
+        <p class="zt-evo__kicker">Traditional Security</p>
+        <ol class="zt-evo__flow">
+          <li>Perimeter</li>
+          <li>Network</li>
+          <li>Application</li>
+          <li>Data</li>
+        </ol>
+        <p class="zt-evo__note">Trust is granted after users enter the network.</p>
+      </article>
+      <article class="zt-evo__card">
+        <p class="zt-evo__kicker">First Generation Zero Trust</p>
+        <ol class="zt-evo__flow">
+          <li>Identity</li>
+          <li>Device</li>
+          <li>Network</li>
+          <li>Application</li>
+        </ol>
+        <p class="zt-evo__note">Trust is continuously evaluated.</p>
+      </article>
+      <article class="zt-evo__card zt-evo__card--accent">
+        <p class="zt-evo__kicker">Next Generation Zero Trust</p>
+        <ol class="zt-evo__flow">
+          <li>Identity</li>
+          <li>Device</li>
+          <li>Network</li>
+          <li>Data Access Controls</li>
+          <li>Data</li>
+        </ol>
+        <p class="zt-evo__note">Trust extends directly to information. <strong>This is Zero Trust Data Access.</strong></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 4 — ZTDA ARCHITECTURE (infographic)
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="zt-arch-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Architecture</p>
+    <h2 id="zt-arch-heading" class="pf-title pf-title--center">Zero Trust Data Access Architecture</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Traditional models protect everything up to the data — but not the data itself. Zero Trust Data
+      Access inserts continuous data access controls between the network and the data.
+    </p>
+    <figure class="zt-figure">
+      <img src="/images/ztda/zero-trust-data-access-architecture.png" alt="Zero Trust Data Access architecture comparison. Traditional model: User to Identity to Network to Application to Data — once inside, users may have broad access to sensitive data they don't need (the gap). Zero Trust Data Access model: User to Identity to Network to Data Access Controls to Data — continuous verification of who, what, when, where and how limits access to only what is needed (the solution). Zero Trust is incomplete without data access controls: verify every access, limit to least privilege, monitor continuously, maintain an audit trail and protect what matters most." loading="lazy" decoding="async" />
+    </figure>
+    <p class="zt-arch__key">Zero Trust is incomplete without data access controls.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 5 — NIST ZERO TRUST MATURITY MODEL
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="zt-nist-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Standards Alignment</p>
+    <h2 id="zt-nist-heading" class="pf-title pf-title--center">Aligning with the NIST Zero Trust Maturity Model</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      The ultimate goal of Zero Trust is not simply securing network connections — it is protecting
+      organizational resources through continuous verification and policy enforcement. ZTDA directly
+      supports key principles defined by the NIST Zero Trust framework.
+    </p>
+    <div class="zt-nist__grid">
+      <article class="zt-nist__card">
+        <h3>Continuous Verification</h3>
+        <p>Every access request is evaluated.</p>
+      </article>
+      <article class="zt-nist__card">
+        <h3>Least Privilege Access</h3>
+        <p>Users receive only the permissions required.</p>
+      </article>
+      <article class="zt-nist__card">
+        <h3>Data-Centric Security</h3>
+        <p>Protection follows the data wherever it resides.</p>
+      </article>
+      <article class="zt-nist__card">
+        <h3>Continuous Monitoring</h3>
+        <p>User actions are tracked and logged.</p>
+      </article>
+      <article class="zt-nist__card">
+        <h3>Policy Enforcement</h3>
+        <p>Access decisions are based on organizational policy.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 6 — ZERO TRUST MATURITY GAP
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="zt-gap-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Maturity Gap</p>
+    <h2 id="zt-gap-heading" class="pf-title pf-title--center">Zero Trust Maturity Gap</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Many organizations have progressed significantly across identity, network and endpoint maturity —
+      yet remain early-stage where it matters most: the data.
+    </p>
+    <div class="zt-gap">
+      <div class="zt-gap__mature">
+        <article class="zt-gap__card">
+          <p class="zt-gap__label">Identity Maturity</p>
+          <ul class="zt-list">
+            <li>MFA</li>
+            <li>SSO</li>
+            <li>Identity Governance</li>
+          </ul>
+        </article>
+        <article class="zt-gap__card">
+          <p class="zt-gap__label">Network Maturity</p>
+          <ul class="zt-list">
+            <li>ZTNA</li>
+            <li>Microsegmentation</li>
+            <li>Secure Access</li>
+          </ul>
+        </article>
+        <article class="zt-gap__card">
+          <p class="zt-gap__label">Endpoint Maturity</p>
+          <ul class="zt-list">
+            <li>Device Compliance</li>
+            <li>Endpoint Detection &amp; Response</li>
+          </ul>
+        </article>
+      </div>
+      <article class="zt-gap__card zt-gap__card--accent">
+        <p class="zt-gap__label zt-gap__label--accent">Data Access Maturity — Early Stage</p>
+        <ul class="zt-list">
+          <li>Controlled file sharing</li>
+          <li>External collaboration</li>
+          <li>Auditability</li>
+          <li>Data access governance</li>
+          <li>Secure partner access</li>
+        </ul>
+        <p class="zt-gap__close">ZTDA closes this gap.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 7 — HOW FILEFLEX ENABLES ZTDA
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="zt-cap-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Capabilities</p>
+    <h2 id="zt-cap-heading" class="pf-title pf-title--center">How FileFlex Enables Zero Trust Data Access</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      FileFlex provides organizations with the controls necessary to extend Zero Trust principles
+      directly to data access and collaboration.
+    </p>
+    <div class="zt-cap__grid">
+      <article class="pf-zt__card">
+        <svg class="zt-cap__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <rect x="3" y="11" width="18" height="11" rx="2" />
+          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          <path d="M12 15v3" />
+        </svg>
+        <p class="pf-zt__kicker">Access Control</p>
+        <h3>Granular Access Controls</h3>
+        <p>Control who accesses information — at the file and folder level, adapted to each workflow.</p>
+      </article>
+      <article class="pf-zt__card">
+        <svg class="zt-cap__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+        </svg>
+        <p class="pf-zt__kicker">Collaboration</p>
+        <h3>Secure External Collaboration</h3>
+        <p>Share data without email attachments — scoped, time-limited and fully controlled.</p>
+      </article>
+      <article class="pf-zt__card">
+        <svg class="zt-cap__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M9 2h6a1 1 0 0 1 1 1v1h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2V3a1 1 0 0 1 1-1Z" />
+          <path d="M9 4h6" />
+          <path d="M8 12h8M8 16h5" />
+        </svg>
+        <p class="pf-zt__kicker">Auditability</p>
+        <h3>Detailed Audit Trails</h3>
+        <p>Track every access event in an immutable, exportable record.</p>
+      </article>
+      <article class="pf-zt__card">
+        <svg class="zt-cap__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
+          <path d="M9 12l2 2 4-4" />
+        </svg>
+        <p class="pf-zt__kicker">Sovereignty</p>
+        <h3>Data Sovereignty</h3>
+        <p>Keep data under organizational control — files stay in your storage, under your governance.</p>
+      </article>
+      <article class="pf-zt__card">
+        <svg class="zt-cap__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <rect x="2" y="3" width="20" height="8" rx="2" />
+          <rect x="2" y="13" width="20" height="8" rx="2" />
+          <path d="M6 7h.01M6 17h.01" />
+        </svg>
+        <p class="pf-zt__kicker">Hybrid</p>
+        <h3>Hybrid Infrastructure Support</h3>
+        <p>Extend Zero Trust to on-premises storage, private cloud and hybrid environments.</p>
+      </article>
+      <article class="pf-zt__card">
+        <svg class="zt-cap__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
+          <path d="M9 12h6" />
+        </svg>
+        <p class="pf-zt__kicker">Risk Reduction</p>
+        <h3>Reduced Attack Surface</h3>
+        <p>Eliminate unnecessary data replication and exposure.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 8 — BUSINESS OUTCOMES
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="zt-out-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Outcomes</p>
+    <h2 id="zt-out-heading" class="pf-title pf-title--center">Business Outcomes</h2>
+    <div class="zt-out__grid">
+      <article class="zt-out__card">
+        <h3>Reduce Data Exposure</h3>
+        <p>Prevent uncontrolled file sharing.</p>
+      </article>
+      <article class="zt-out__card">
+        <h3>Improve Regulatory Compliance</h3>
+        <p>Support requirements for financial services, privacy regulations and internal governance programs.</p>
+      </article>
+      <article class="zt-out__card">
+        <h3>Enhance Operational Efficiency</h3>
+        <p>Enable secure collaboration without introducing additional storage silos.</p>
+      </article>
+      <article class="zt-out__card">
+        <h3>Accelerate Zero Trust Maturity</h3>
+        <p>Extend Zero Trust initiatives directly to the information layer.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 9 — WHERE ZTDA FITS IN YOUR SECURITY STACK
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="zt-stack-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Security Stack</p>
+    <h2 id="zt-stack-heading" class="pf-title pf-title--center">Where Zero Trust Data Access Fits in Your Security Stack</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      FileFlex does not replace your Zero Trust investments. It extends them to the data layer.
+    </p>
+    <div class="zt-table__wrap">
+      <table class="zt-table">
+        <thead>
+          <tr>
+            <th scope="col">Security Layer</th>
+            <th scope="col">Typical Solutions</th>
+            <th scope="col">FileFlex Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Identity</th>
+            <td>Microsoft Entra, Okta</td>
+            <td><span class="zt-role">Complements</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Endpoint</th>
+            <td>CrowdStrike, SentinelOne</td>
+            <td><span class="zt-role">Complements</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Network</th>
+            <td>ZTNA Solutions</td>
+            <td><span class="zt-role">Complements</span></td>
+          </tr>
+          <tr>
+            <th scope="row">DSPM</th>
+            <td>Data Discovery &amp; Classification</td>
+            <td><span class="zt-role">Complements</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Storage</th>
+            <td>NAS, File Servers, Object Storage</td>
+            <td><span class="zt-role zt-role--accent">Protects Access</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Collaboration</th>
+            <td>Email &amp; File Sharing</td>
+            <td><span class="zt-role zt-role--accent">Secures Data Access</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FINAL CTA
+     ============================================================ -->
+<section id="pf-cta" aria-labelledby="zt-cta-heading">
+  <h2 id="zt-cta-heading">Complete Your Zero Trust Architecture</h2>
+  <p class="zt-cta__sub">
+    Identity controls are essential. Network controls are essential. But neither protects data once
+    access has been granted. Zero Trust Data Access closes the final gap by applying Zero Trust
+    principles directly to information access, sharing and collaboration.
+  </p>
+  <div class="pf-cta-buttons">
+    <a class="pf-btn pf-btn--uppercase" href="/demo-request/">Schedule a Demo &rsaquo;</a>
+    <a class="pf-btn pf-btn--uppercase pf-btn--outline" href="/contact-us/">Download the White Paper</a>
+  </div>
+</section>
+
+</Layout>

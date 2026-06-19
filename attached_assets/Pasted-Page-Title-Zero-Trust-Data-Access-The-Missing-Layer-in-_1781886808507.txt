@@ -1,0 +1,301 @@
+Page Title
+Zero Trust Data Access
+The Missing Layer in Zero Trust Architecture
+
+Meta Description
+
+Most Zero Trust initiatives secure identities, devices, applications, and networks—but not the movement of data itself. Learn why Zero Trust Data Access is the next stage of Zero Trust maturity.
+
+Hero Section
+Zero Trust Doesn't End at the Network
+
+Organizations have invested heavily in Zero Trust technologies such as identity management, multi-factor authentication, endpoint security, and Zero Trust Network Access (ZTNA).
+
+Yet sensitive information continues to be:
+
+Emailed externally
+Downloaded to unmanaged devices
+Shared through consumer cloud services
+Exposed through oversharing
+Accessed without adequate visibility or audit controls
+
+The reality is simple:
+
+Most Zero Trust architectures stop before they reach the data.
+
+FileFlex extends Zero Trust principles directly to the information organizations are trying to protect.
+
+CTA Buttons
+
+Download the Zero Trust Data Access White Paper
+
+Request a Demo
+
+Section 1
+What is Zero Trust Data Access?
+
+Zero Trust Data Access (ZTDA) applies Zero Trust principles directly to data access, sharing, and collaboration.
+
+Instead of trusting users after they successfully authenticate, ZTDA continuously enforces security controls whenever users access sensitive information.
+
+ZTDA ensures:
+
+✓ Verify every user
+
+✓ Authorize every request
+
+✓ Enforce least-privilege access
+
+✓ Control data sharing
+
+✓ Monitor activity
+
+✓ Maintain a complete audit trail
+
+Section 2
+Why Traditional Zero Trust Falls Short
+
+Many organizations have implemented:
+
+MFA
+Identity and Access Management
+Endpoint Security
+ZTNA
+Network Segmentation
+
+These technologies secure access to applications and networks.
+
+However, once a user gains access, the data itself often becomes largely uncontrolled.
+
+Common examples include:
+
+Example 1
+
+Employee downloads confidential loan documents and emails them externally.
+
+Example 2
+
+Contractor accesses a file repository and copies information to an unmanaged device.
+
+Example 3
+
+A partner receives access to an entire folder when only one document was required.
+
+The identity was verified.
+
+The network was secure.
+
+Yet the data remained vulnerable.
+
+Section 3
+The Evolution of Zero Trust
+Traditional Security
+
+Perimeter → Network → Application → Data
+
+Trust is granted after users enter the network.
+
+First Generation Zero Trust
+
+Identity → Device → Network → Application
+
+Trust is continuously evaluated.
+
+Next Generation Zero Trust
+
+Identity → Device → Network → Data Access Controls → Data
+
+Trust extends directly to information.
+
+This is Zero Trust Data Access.
+
+Section 4
+Zero Trust Data Access Architecture
+
+This is where the infographic should appear.
+
+4
+Diagram Content
+
+Traditional Model
+
+User
+  │
+  ▼
+Identity
+  │
+  ▼
+Network
+  │
+  ▼
+Application
+  │
+  ▼
+Data
+
+Security decisions typically stop at the application.
+
+Zero Trust Data Access Model
+
+User
+  │
+  ▼
+Identity
+  │
+  ▼
+Network
+  │
+  ▼
+Data Access Controls
+      │
+      ├── Granular Permissions
+      ├── Data Sharing Controls
+      ├── Activity Monitoring
+      ├── Audit Logging
+      └── Continuous Verification
+  │
+  ▼
+Data
+Key Message
+
+Zero Trust is incomplete without data access controls.
+
+Section 5
+Aligning with the NIST Zero Trust Maturity Model
+
+The ultimate goal of Zero Trust is not simply securing network connections.
+
+The goal is protecting organizational resources through continuous verification and policy enforcement.
+
+ZTDA directly supports key principles defined by the National Institute of Standards and Technology Zero Trust framework:
+
+Continuous Verification
+
+Every access request is evaluated.
+
+Least Privilege Access
+
+Users receive only the permissions required.
+
+Data-Centric Security
+
+Protection follows the data wherever it resides.
+
+Continuous Monitoring
+
+User actions are tracked and logged.
+
+Policy Enforcement
+
+Access decisions are based on organizational policy.
+
+Section 6
+Zero Trust Maturity Gap
+
+Many organizations have progressed significantly in:
+
+Identity Maturity
+MFA
+SSO
+Identity Governance
+Network Maturity
+ZTNA
+Microsegmentation
+Secure Access
+Endpoint Maturity
+Device Compliance
+Endpoint Detection & Response
+
+Yet they remain early-stage in:
+
+Data Access Maturity
+Controlled file sharing
+External collaboration
+Auditability
+Data access governance
+Secure partner access
+
+ZTDA closes this gap.
+
+Section 7
+How FileFlex Enables Zero Trust Data Access
+
+FileFlex provides organizations with the controls necessary to extend Zero Trust principles directly to data access and collaboration.
+
+Capabilities
+Granular Access Controls
+
+Control who accesses information.
+
+Secure External Collaboration
+
+Share data without email attachments.
+
+Detailed Audit Trails
+
+Track every access event.
+
+Data Sovereignty
+
+Keep data under organizational control.
+
+Hybrid Infrastructure Support
+
+Extend Zero Trust to on-premises storage, private cloud, and hybrid environments.
+
+Reduced Attack Surface
+
+Eliminate unnecessary data replication and exposure.
+
+Section 8
+Business Outcomes
+Reduce Data Exposure
+
+Prevent uncontrolled file sharing.
+
+Improve Regulatory Compliance
+
+Support requirements for:
+
+Financial Services
+Privacy Regulations
+Internal Governance Programs
+Enhance Operational Efficiency
+
+Enable secure collaboration without introducing additional storage silos.
+
+Accelerate Zero Trust Maturity
+
+Extend Zero Trust initiatives directly to the information layer.
+
+Section 9
+Where Zero Trust Data Access Fits in Your Security Stack
+
+This section helps position FileFlex alongside—not against—existing investments.
+
+Security Layer	Typical Solutions	FileFlex Role
+Identity	Microsoft Entra, Okta	Complements
+Endpoint	CrowdStrike, SentinelOne	Complements
+Network	ZTNA Solutions	Complements
+DSPM	Data Discovery & Classification	Complements
+Storage	NAS, File Servers, Object Storage	Protects Access
+Collaboration	Email & File Sharing	Secures Data Access
+
+FileFlex does not replace your Zero Trust investments. It extends them to the data layer.
+
+Final CTA Section
+Complete Your Zero Trust Architecture
+
+Identity controls are essential.
+
+Network controls are essential.
+
+But neither protects data once access has been granted.
+
+Zero Trust Data Access closes the final gap by applying Zero Trust principles directly to information access, sharing, and collaboration.
+
+CTA
+
+Download the Zero Trust Data Access White Paper
+
+Schedule a Demo
