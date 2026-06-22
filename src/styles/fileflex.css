@@ -168,6 +168,87 @@ ul { list-style: none; }
   user-select: none;
 }
 
+/* ---------- DROPDOWN MENUS ---------- */
+.ff-nav__item { position: relative; display: flex; align-items: center; }
+.ff-nav__top {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0 3px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.6;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.ff-nav__top[aria-current='true'] { color: var(--orange); }
+.ff-nav__item:hover .ff-nav__top,
+.ff-nav__item:focus-within .ff-nav__top { color: var(--orange); }
+.ff-nav__caret {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.ff-nav__item:hover .ff-nav__caret,
+.ff-nav__item:focus-within .ff-nav__caret { transform: rotate(180deg); }
+
+.ff-nav__menu {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 250px;
+  background: #1c1c1c;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  box-shadow: 0 24px 60px -24px rgba(0,0,0,0.7);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s ease;
+  z-index: 210;
+}
+/* invisible hover bridge so the menu doesn't close in the gap below the trigger */
+.ff-nav__menu::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -12px;
+  height: 12px;
+}
+.ff-nav__item:hover .ff-nav__menu,
+.ff-nav__item:focus-within .ff-nav__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.ff-nav__menu li { margin: 0; }
+.ff-nav__menu a {
+  display: block;
+  padding: 9px 12px;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+  white-space: nowrap;
+  border-radius: 5px;
+  transition: background 0.15s, color 0.15s;
+}
+.ff-nav__menu a:hover,
+.ff-nav__menu a[aria-current='page'] {
+  background: rgba(255,255,255,0.06);
+  color: var(--orange);
+}
+
 /* ============================================================
    HERO
    ============================================================ */
@@ -1165,9 +1246,12 @@ html:has(.ff-modal-overlay:target) { overflow: hidden; }
   .ff-nav__toggle:checked ~ .ff-nav__inner .ff-nav__links {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
     position: fixed;
     top: var(--nav-h);
     left: 0; right: 0;
+    max-height: calc(100vh - var(--nav-h));
+    overflow-y: auto;
     background: #111;
     border-bottom: 1px solid var(--border);
     padding: 1.5rem 5vw;
@@ -1176,6 +1260,36 @@ html:has(.ff-modal-overlay:target) { overflow: hidden; }
   }
   .ff-nav__cta { margin-left: 0; }
   .ff-nav__hamburger { display: block; }
+
+  /* Dropdowns expand inline within the mobile drawer */
+  .ff-nav__item { display: block; }
+  .ff-nav__top {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 13px;
+  }
+  .ff-nav__item:hover .ff-nav__caret,
+  .ff-nav__item:focus-within .ff-nav__caret { transform: none; }
+  .ff-nav__menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    min-width: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 6px 0 2px 14px;
+    margin-top: 8px;
+    border-left: 1px solid rgba(255,255,255,0.12);
+  }
+  .ff-nav__menu::before { display: none; }
+  .ff-nav__menu a {
+    white-space: normal;
+    padding: 7px 6px;
+    font-size: 12.5px;
+  }
 }
 
 @media (max-width: 900px) {

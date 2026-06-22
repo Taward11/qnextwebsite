@@ -1,10 +1,52 @@
 ---
 const { current } = Astro.props as { current?: string };
-const isPlatform = current === 'platform';
-const isSecurity = current === 'security';
-const isChallenge = current === 'challenge';
-const isPartner = current === 'partner';
-const isSupport = current === 'support';
+
+const norm = (h: string) => (h.replace(/\/+$/, '') || '/');
+const path = norm(Astro.url.pathname);
+
+type NavItem = { label: string; href: string };
+type NavMenu = { label: string; items: NavItem[] };
+
+const menus: NavMenu[] = [
+  {
+    label: 'Technology',
+    items: [
+      { label: 'The FileFlex Enterprise Platform', href: '/platform/' },
+      { label: 'FileFlex Enterprise Security', href: '/security/' },
+      { label: 'Zero Trust Data Access', href: '/zero-trust-data-access/' },
+      { label: 'The Challenge', href: '/challenge/' },
+      { label: 'Pricing', href: '/pricing/' },
+      { label: 'Try FileFlex Enterprise', href: '/try-fileflex/' },
+      { label: 'Request a Demo', href: '/demo-request/' },
+    ],
+  },
+  {
+    label: 'Solutions',
+    items: [
+      { label: 'Credit Unions', href: '/credit-unions/' },
+      { label: 'Financial Services', href: '/financial-services/' },
+      { label: 'Healthcare', href: '/healthcare/' },
+      { label: 'Manufacturing', href: '/manufacturing/' },
+      { label: 'Government & Military', href: '/government-and-military-contractors-2/' },
+      { label: 'Architecture & Engineering', href: '/architecture-engineering/' },
+      { label: 'Law Firms', href: '/law-firms/' },
+      { label: 'Accounting & Consulting', href: '/accounting-and-consulting-firm/' },
+    ],
+  },
+  {
+    label: 'Use Cases',
+    items: [
+      { label: 'Secure Mortgage Collaboration', href: '/secure-mortgage-collaboration/' },
+      { label: 'Secure Lending Collaboration', href: '/secure-lending-collaboration/' },
+    ],
+  },
+];
+
+const isItemActive = (href: string) => norm(href) === path;
+const isMenuActive = (menu: NavMenu) => menu.items.some((it) => isItemActive(it.href));
+const isPartner = current === 'partner' || path === '/partner' || path.startsWith('/partner/');
+const isSupport = current === 'support' || path === '/contact-us';
+const isBlog = path === '/blog' || path.startsWith('/blog/');
 ---
 <nav id="ff-nav" aria-label="Main navigation">
   <input type="checkbox" id="ff-nav-toggle" class="ff-nav__toggle" aria-label="Toggle navigation" />
@@ -15,12 +57,31 @@ const isSupport = current === 'support';
     <div class="ff-nav__divider" aria-hidden="true"></div>
     <span class="ff-nav__tagline">The Genius of Zero Trust Data Access™</span>
     <ul class="ff-nav__links">
-      <li><a href="/challenge" aria-current={isChallenge ? 'page' : undefined}>The Challenge</a></li>
-      <li><a href="/platform" aria-current={isPlatform ? 'page' : undefined}>Platform</a></li>
-      <li><a href="/security" aria-current={isSecurity ? 'page' : undefined}>Security</a></li>
+      {menus.map((menu) => (
+        <li class="ff-nav__item ff-nav__item--has-menu">
+          <button
+            type="button"
+            class="ff-nav__top"
+            aria-haspopup="true"
+            aria-current={isMenuActive(menu) ? 'true' : undefined}
+          >
+            {menu.label}
+            <svg class="ff-nav__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <ul class="ff-nav__menu">
+            {menu.items.map((item) => (
+              <li>
+                <a href={item.href} aria-current={isItemActive(item.href) ? 'page' : undefined}>{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))}
       <li><a href="/partner" aria-current={isPartner ? 'page' : undefined}>Partner</a></li>
       <li><a href="/contact-us/" aria-current={isSupport ? 'page' : undefined}>Support</a></li>
-      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/blog/" aria-current={isBlog ? 'page' : undefined}>Blog</a></li>
       <li><a href="/try-fileflex/" class="ff-nav__cta">Try FileFlex</a></li>
     </ul>
     <label class="ff-nav__hamburger" for="ff-nav-toggle" aria-hidden="true">&#9776;</label>
