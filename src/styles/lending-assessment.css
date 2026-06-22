@@ -567,3 +567,9 @@
   .sla-card, .sla-analysis__item, .sla-road__item { break-inside: avoid; box-shadow: none; }
   .sla-bar__fill, .sla-rate, .sla-badge, .sla-cta { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
+
+/* Email/PDF delivery status under the report tools */
+.sla-report__status { margin: .15rem 0 1.1rem; font-size: .95rem; color: #5a6473; min-height: 1.2em; }
+.sla-report__status.is-ok { color: #1d7a4d; }
+.sla-report__status.is-warn { color: #9a6a00; }
+@media print { .sla-report__status, .sla-report__tools { display: none !important; } }

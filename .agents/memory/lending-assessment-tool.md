@@ -15,10 +15,27 @@ Managed Collaboration, Moderate Risk. Don't "fix" it to show raw 67 — that bre
 **How to apply:** If questions/points change, the 105 max auto-derives from the frontmatter
 `SECTIONS` config; keep `totalMax` computed, never hardcode 100/105.
 
-## Email / PDF delivery limitation
-The spec asked to email the PDF to the prospect AND a copy + all answers to the owner. The site
-is fully static (Cloudflare Pages, no backend), so it cannot send email. Delivered: on-screen
-report + `window.print()` PDF. Lead capture reuses the client-side HubSpot pattern but is **gated
-behind an empty `HS_FORM` constant** (no dedicated form/properties exist) so submissions don't 400.
-Full automation (prospect PDF + owner answers/scores) needs a serverless function + email service
-and is a follow-up pending the owner's choice + email address.
+## Email / PDF delivery (Cloudflare Pages Function + Resend)
+Email automation IS implemented (the old HubSpot-gated path was removed). A static Astro site on
+Cloudflare Pages can still run server code via a **top-level `functions/` dir** (Cloudflare Pages
+Functions) — no Astro adapter, no change to the static build. The handler is
+`functions/api/send-assessment.js` (`onRequestPost`, route `/api/send-assessment`).
+
+Flow: client lazy-loads jsPDF + jspdf-autotable from cdnjs, builds the report PDF in the browser,
+and POSTs it as base64 plus the scores/answers. The Function emails the prospect (PDF attached) and,
+if `OWNER_EMAIL` is set, the owner (PDF + full answers table) via Resend.
+
+**Why client-side PDF:** Cloudflare Workers runtime has no Puppeteer / Node PDF libs; generating in
+the browser and attaching base64 avoids server-side PDF generation entirely and gives a real attachment.
+
+**Open-endpoint risk:** `/api/send-assessment` is a public, unauthenticated mail-sending surface
+(honeypot is trivially bypassable). It's hardened with strict input clamps + size caps, but real
+abuse protection (Cloudflare Turnstile and/or rate-limiting rules) needs dashboard setup and is a
+recommended follow-up before heavy promotion.
+
+**How to apply / config:** Secrets live in the Cloudflare Pages dashboard env vars, NEVER in the
+repo — `RESEND_API_KEY` (required), `OWNER_EMAIL` (owner copy), `FROM_EMAIL` (optional; must be a
+Resend-verified sender, defaults to `onboarding@resend.dev` which only delivers to the Resend account
+owner). The Astro dev server does NOT run Pages Functions, so `/api/send-assessment` 404s locally —
+the client treats a failed POST as non-fatal (report still shows, PDF still downloadable). Note: email
+was NOT previously wired anywhere in this repo despite a user belief that a "ZTDA assessment" had it.

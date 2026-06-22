@@ -4,11 +4,8 @@ import Nav from '../components/Nav.astro';
 import '../styles/fileflex.css';
 import '../styles/lending-assessment.css';
 
-// HubSpot lead capture. Leave HS_FORM empty to disable submission until a
-// dedicated HubSpot form (with the required properties) is created and its ID
-// pasted here. The on-screen report + PDF work regardless.
-const HS_PORTAL = '21348727';
-const HS_FORM = '';
+// Lead capture + report delivery is handled server-side by the Cloudflare Pages
+// Function at functions/api/send-assessment.js (Resend). No API keys live here.
 
 // ---- Assessment configuration ------------------------------------------------
 // Each question: id, text, optional note, and options [label, points].
@@ -146,7 +143,7 @@ const CATEGORY_META = {
 const totalMax = SECTIONS.reduce((s, sec) => s + sec.max, 0);
 
 // Data passed to the client for scoring + rendering.
-const CONFIG = { sections: SECTIONS, meta: CATEGORY_META, totalMax, hsPortal: HS_PORTAL, hsForm: HS_FORM };
+const CONFIG = { sections: SECTIONS, meta: CATEGORY_META, totalMax };
 
 let qCounter = 0;
 ---
@@ -191,15 +188,14 @@ let qCounter = 0;
 
     <div class="sla-intro" id="sla-intro">
       <p>
-        Your answers stay private. Your results appear on-screen instantly and you can download
-        them as a PDF. We use your contact details only to share your results and, with your
-        consent, to follow up about improving secure lending collaboration. The whole assessment
-        takes about five minutes.
+        Your results appear on-screen instantly, and we email you a PDF copy of your report. We
+        use your contact details only to send your results and, with your consent, to follow up
+        about improving secure lending collaboration. The whole assessment takes about five minutes.
       </p>
     </div>
 
     <!-- FORM -->
-    <form id="sla-form" class="sla-form" novalidate data-portal-id={HS_PORTAL} data-form-id={HS_FORM}>
+    <form id="sla-form" class="sla-form" novalidate>
 
       <div class="sla-progress" aria-hidden="true">
         <div class="sla-progress__track"><div class="sla-progress__fill" id="sla-progress-fill"></div></div>
@@ -383,9 +379,10 @@ let qCounter = 0;
       html += '<p class="sla-report__for">Prepared for ' + esc(name || 'you') + (company ? ', ' + esc(company) : '') + '</p>';
 
       html += '<div class="sla-report__tools">';
-      html += '<button type="button" class="sla-btn" id="sla-print">Download / print report (PDF)</button>';
+      html += '<button type="button" class="sla-btn" id="sla-print">Download PDF report</button>';
       html += '<button type="button" class="sla-btn--ghost sla-btn" id="sla-retake">Retake assessment</button>';
       html += '</div>';
+      html += '<p class="sla-report__status" id="sla-email-status" role="status"></p>';
 
       html += '<div class="sla-score">';
       html += '<div class="sla-score__dial" style="--pct:' + overall + '"><div class="sla-score__num">' + overall + '<span>/100</span></div></div>';
@@ -459,7 +456,7 @@ let qCounter = 0;
         bars.forEach(function (el) { el.style.width = (el.getAttribute('data-w') || 0) + '%'; });
       });
 
-      document.getElementById('sla-print').addEventListener('click', function () { window.print(); });
+      document.getElementById('sla-print').addEventListener('click', function () { if (pdfState && pdfState.save) { pdfState.save(); } else { window.print(); } });
       document.getElementById('sla-retake').addEventListener('click', function () {
         reportEl.classList.remove('is-show');
         reportEl.innerHTML = '';
@@ -472,29 +469,200 @@ let qCounter = 0;
       });
     }
 
-    function getHsCookie() {
-      var m = document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]+)/);
-      return m ? m[1] : '';
+    // ---- PDF generation + email delivery -----------------------------------
+    var ENDPOINT = '/api/send-assessment';
+    var pdfState = null; // { base64, save }
+    var pdfLibs = null;
+
+    function loadScript(src) {
+      return new Promise(function (resolve, reject) {
+        var s = document.createElement('script');
+        s.src = src; s.async = true;
+        s.onload = function () { resolve(); };
+        s.onerror = function () { reject(new Error('Failed to load ' + src)); };
+        document.head.appendChild(s);
+      });
     }
-    function submitToHubSpot(data) {
-      if (!CONFIG.hsForm) return; // disabled until a dedicated form is configured
-      var endpoint = 'https://api.hsforms.com/submissions/v3/integration/submit/' + CONFIG.hsPortal + '/' + CONFIG.hsForm;
-      var fields = [
-        { name: 'firstname', value: (form.querySelector('#sla-name').value || '').trim() },
-        { name: 'jobtitle', value: (form.querySelector('#sla-title').value || '').trim() },
-        { name: 'company', value: (form.querySelector('#sla-company').value || '').trim() },
-        { name: 'email', value: (form.querySelector('#sla-email').value || '').trim() },
-      ];
-      var consent = form.querySelector('#sla-consent').checked;
-      var hutk = getHsCookie();
-      var payload = {
-        submittedAt: Date.now(),
-        fields: fields,
-        context: { pageUri: window.location.href, pageName: document.title },
-        legalConsentOptions: { consent: { consentToProcess: true, text: 'Consent to process for the requested assessment report.', communications: [{ value: consent, subscriptionTypeId: 32387186, text: 'I agree to receive communications from fileflex.com.' }] } },
+    function ensurePdfLibs() {
+      if (pdfLibs) return pdfLibs;
+      pdfLibs = loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js').then(function () {
+        return loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js');
+      });
+      return pdfLibs;
+    }
+
+    function gatherContact() {
+      var users = form.querySelector('#sla-users');
+      return {
+        name: (form.querySelector('#sla-name').value || '').trim(),
+        title: (form.querySelector('#sla-title').value || '').trim(),
+        company: (form.querySelector('#sla-company').value || '').trim(),
+        email: (form.querySelector('#sla-email').value || '').trim(),
+        users: users ? (users.value || '').trim() : '',
+        consent: !!(form.querySelector('#sla-consent') && form.querySelector('#sla-consent').checked)
       };
-      if (hutk) payload.context.hutk = hutk;
-      fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }).catch(function () {});
+    }
+    function gatherAnswers() {
+      var out = [];
+      sections.forEach(function (s) {
+        s.questions.forEach(function (q) {
+          var el = form.querySelector('input[name="' + q.id + '"]:checked');
+          var label = '';
+          if (el) {
+            var lbl = el.closest('label');
+            var sp = lbl ? lbl.querySelector('span') : null;
+            label = sp ? sp.textContent.trim() : el.value;
+          }
+          out.push({ section: s.short, question: q.text, answer: label, points: el ? (Number(el.getAttribute('data-points')) || 0) : 0 });
+        });
+      });
+      return out;
+    }
+
+    function setEmailStatus(msg, kind) {
+      var el = document.getElementById('sla-email-status');
+      if (!el) return;
+      el.textContent = msg;
+      el.className = 'sla-report__status' + (kind ? ' is-' + kind : '');
+    }
+
+    function buildPdf(data, contact) {
+      var jsPDF = window.jspdf.jsPDF;
+      var doc = new jsPDF({ unit: 'pt', format: 'a4' });
+      var pageW = doc.internal.pageSize.getWidth();
+      var pageH = doc.internal.pageSize.getHeight();
+      var M = 40;
+      var orange = [232, 89, 10];
+      var navy = [14, 26, 43];
+      var grey = [90, 100, 115];
+      var y;
+
+      doc.setFillColor(navy[0], navy[1], navy[2]);
+      doc.rect(0, 0, pageW, 92, 'F');
+      doc.setTextColor(255, 255, 255);
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(17);
+      doc.text('Secure Lending Collaboration Assessment', M, 40);
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(10);
+      doc.setTextColor(orange[0], orange[1], orange[2]);
+      doc.text('Zero Trust Lending Collaboration Assessment', M, 60);
+      doc.setTextColor(210, 216, 224);
+      doc.text('Prepared for ' + (contact.name || 'you') + (contact.company ? ', ' + contact.company : '') + '  -  ' + new Date().toLocaleDateString(), M, 78);
+
+      y = 124;
+      doc.setTextColor(navy[0], navy[1], navy[2]);
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(38);
+      doc.text(String(data.overall) + ' / 100', M, y);
+      doc.setFontSize(13); doc.setTextColor(orange[0], orange[1], orange[2]);
+      doc.text(maturity(data.overall), M, y + 22);
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(11); doc.setTextColor(grey[0], grey[1], grey[2]);
+      doc.text('Overall risk rating: ' + riskOf(data.overall), M, y + 40);
+      y += 62;
+
+      doc.autoTable({
+        startY: y,
+        head: [['Category', 'Score', '%', 'Rating']],
+        body: data.cats.map(function (c) { return [c.short, c.raw + ' / ' + c.max, c.pct + '%', rateLabel(band(c.pct))]; }),
+        theme: 'grid', headStyles: { fillColor: navy, textColor: 255 },
+        styles: { fontSize: 10, cellPadding: 6 }, margin: { left: M, right: M }
+      });
+      y = doc.lastAutoTable.finalY + 22;
+
+      doc.autoTable({
+        startY: y,
+        head: [['Category', 'Your %', 'Peer avg %', 'Delta']],
+        body: data.cats.map(function (c) { var d = c.pct - c.benchmark; return [c.short, c.pct + '%', c.benchmark + '%', (d >= 0 ? '+' : '') + d + ' pts']; }),
+        theme: 'grid', headStyles: { fillColor: navy, textColor: 255 },
+        styles: { fontSize: 10, cellPadding: 6 }, margin: { left: M, right: M }
+      });
+      y = doc.lastAutoTable.finalY + 26;
+
+      function ensureSpace(need) { if (y + need > pageH - M) { doc.addPage(); y = M + 10; } }
+
+      ensureSpace(28);
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(14); doc.setTextColor(navy[0], navy[1], navy[2]);
+      doc.text('Section Analysis', M, y); y += 18;
+      data.cats.forEach(function (c) {
+        var m = meta[c.id].bands[band(c.pct)];
+        ensureSpace(54);
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(navy[0], navy[1], navy[2]);
+        doc.text(c.title + '  (' + c.raw + '/' + c.max + ' - ' + c.pct + '%)', M, y); y += 14;
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor(grey[0], grey[1], grey[2]);
+        var l1 = doc.splitTextToSize(m.assessment, pageW - M * 2);
+        ensureSpace(l1.length * 12 + 6); doc.text(l1, M, y); y += l1.length * 12 + 4;
+        var l2 = doc.splitTextToSize((m.type === 'strength' ? 'Strength: ' : 'Opportunity: ') + m.note, pageW - M * 2);
+        ensureSpace(l2.length * 12 + 10); doc.setTextColor(orange[0], orange[1], orange[2]);
+        doc.text(l2, M, y); y += l2.length * 12 + 12;
+      });
+
+      var ranked = data.cats.slice().sort(function (a, b) { return a.pct - b.pct; }).slice(0, 3);
+      ensureSpace(28);
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(14); doc.setTextColor(navy[0], navy[1], navy[2]);
+      doc.text('Your Improvement Roadmap', M, y); y += 18;
+      ranked.forEach(function (c, i) {
+        ensureSpace(36);
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(navy[0], navy[1], navy[2]);
+        doc.text('Priority #' + (i + 1) + ' - ' + c.short + ' (' + c.pct + '%)', M, y); y += 14;
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor(grey[0], grey[1], grey[2]);
+        meta[c.id].actions.forEach(function (a) {
+          var la = doc.splitTextToSize('-  ' + a, pageW - M * 2 - 10);
+          ensureSpace(la.length * 12 + 4); doc.text(la, M + 8, y); y += la.length * 12 + 2;
+        });
+        y += 8;
+      });
+
+      var pages = doc.internal.getNumberOfPages();
+      for (var p = 1; p <= pages; p++) {
+        doc.setPage(p);
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(150, 158, 170);
+        doc.text('FileFlex Enterprise - Zero Trust Data Access - fileflex.com', M, pageH - 20);
+        doc.text(p + ' / ' + pages, pageW - M, pageH - 20, { align: 'right' });
+      }
+
+      var uri = doc.output('datauristring');
+      var base64 = uri.substring(uri.indexOf(',') + 1);
+      var fname = 'FileFlex-Lending-Assessment' + (contact.company ? '-' + contact.company.replace(/[^a-z0-9]+/gi, '-') : '') + '.pdf';
+      return { base64: base64, save: function () { doc.save(fname); } };
+    }
+
+    function finalize(data) {
+      var contact = gatherContact();
+      setEmailStatus('Preparing your PDF report...');
+      ensurePdfLibs().then(function () {
+        try {
+          pdfState = buildPdf(data, contact);
+        } catch (err) {
+          setEmailStatus('Your report is shown below. (PDF generation was unavailable.)', 'warn');
+          return;
+        }
+        var honeyEl = form.querySelector('[name="website_url_confirm"]');
+        var payload = {
+          contact: contact,
+          overall: data.overall,
+          maturity: maturity(data.overall),
+          risk: riskOf(data.overall),
+          categories: data.cats.map(function (c) {
+            return { short: c.short, title: c.title, raw: c.raw, max: c.max, pct: c.pct, benchmark: c.benchmark, rating: rateLabel(band(c.pct)) };
+          }),
+          answers: gatherAnswers(),
+          pdfBase64: pdfState.base64,
+          website_url_confirm: honeyEl ? honeyEl.value : ''
+        };
+        setEmailStatus('Emailing your report to ' + (contact.email || 'you') + '...');
+        fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+          .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); })
+          .then(function (res) {
+            if (res.ok && res.j && res.j.ok) {
+              setEmailStatus('We have emailed your report to ' + contact.email + '. You can also download it above.', 'ok');
+            } else {
+              setEmailStatus('Your report is ready below - use "Download PDF report" to save it. (We could not email it just now.)', 'warn');
+            }
+          })
+          .catch(function () {
+            setEmailStatus('Your report is ready below - use "Download PDF report" to save it. (We could not email it just now.)', 'warn');
+          });
+      }).catch(function () {
+        setEmailStatus('Your report is shown below - use "Download PDF report" to print/save it.', 'warn');
+      });
     }
 
     form.addEventListener('submit', function (e) {
@@ -529,11 +697,11 @@ let qCounter = 0;
 
       var data = score();
       submitBtn.disabled = true;
-      submitToHubSpot(data);
 
       form.style.display = 'none';
       document.getElementById('sla-intro').style.display = 'none';
       render(data);
+      finalize(data);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   })();
