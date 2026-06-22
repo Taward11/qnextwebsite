@@ -11,10 +11,17 @@
   min-height: 640px;
   padding: 120px 5vw 100px;
   color: #fff;
-  background: #02060c url('/images/platform/home-hero-2023q1.webp') center / cover no-repeat;
+  /* Mobile-first: small variant (~11 KiB) so phones skip the 1920px image. */
+  background: #02060c url('/images/ztda/ztda-hero-1024.webp') center / cover no-repeat;
   isolation: isolate;
   display: flex;
   align-items: center;
+}
+/* Larger viewports get the higher-resolution hero. */
+@media (min-width: 1025px) {
+  #zt-hero {
+    background-image: url('/images/ztda/ztda-hero-1920.webp');
+  }
 }
 #zt-hero::before {
   content: '';
