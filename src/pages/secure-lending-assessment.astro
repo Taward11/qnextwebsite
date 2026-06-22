@@ -1,0 +1,542 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/lending-assessment.css';
+
+// HubSpot lead capture. Leave HS_FORM empty to disable submission until a
+// dedicated HubSpot form (with the required properties) is created and its ID
+// pasted here. The on-screen report + PDF work regardless.
+const HS_PORTAL = '21348727';
+const HS_FORM = '';
+
+// ---- Assessment configuration ------------------------------------------------
+// Each question: id, text, optional note, and options [label, points].
+const SECTIONS = [
+  {
+    id: 's1',
+    short: 'Lending Processes',
+    title: 'Lending Collaboration Processes',
+    max: 15,
+    benchmark: 62,
+    questions: [
+      { id: 'q1', text: 'How are borrower documents typically exchanged?', options: [['Primarily email attachments', 0], ['Mix of email and shared folders', 2], ['Secure portal used for some processes', 4], ['Secure collaboration platform used consistently', 5]] },
+      { id: 'q2', text: 'How many external parties typically participate in lending transactions?', note: 'Helps qualify transaction complexity.', options: [['0–1', 5], ['2–3', 4], ['4–6', 3], ['More than 6', 2]] },
+      { id: 'q3', text: 'Can external participants access documents without receiving email attachments?', options: [['No', 0], ['Sometimes', 2], ['Usually', 4], ['Always', 5]] },
+    ],
+  },
+  {
+    id: 's2',
+    short: 'Access Controls',
+    title: 'Access Controls',
+    max: 20,
+    benchmark: 58,
+    questions: [
+      { id: 'q4', text: 'How is access granted to lending documents?', options: [['Shared folders with broad permissions', 0], ['Group-based permissions', 2], ['Role-based permissions', 4], ['Granular document-level permissions', 5]] },
+      { id: 'q5', text: 'Can access be revoked immediately when no longer required?', options: [['No', 0], ['Manually with significant effort', 2], ['Usually', 4], ['Immediately and consistently', 5]] },
+      { id: 'q6', text: 'Are external parties restricted to only the documents they need?', options: [['Rarely', 0], ['Sometimes', 2], ['Usually', 4], ['Always', 5]] },
+      { id: 'q7', text: 'Are temporary access periods automatically enforced?', options: [['No', 0], ['Rarely', 1], ['Sometimes', 3], ['Consistently', 5]] },
+    ],
+  },
+  {
+    id: 's3',
+    short: 'Auditability',
+    title: 'Visibility and Auditability',
+    max: 20,
+    benchmark: 64,
+    questions: [
+      { id: 'q8', text: 'Can you identify who accessed a document?', options: [['No', 0], ['For some systems', 2], ['Usually', 4], ['Always', 5]] },
+      { id: 'q9', text: 'Can you determine when a document was accessed?', options: [['No', 0], ['Limited visibility', 2], ['Most activity', 4], ['Complete visibility', 5]] },
+      { id: 'q10', text: 'Can you determine whether documents were downloaded?', options: [['No', 0], ['Some visibility', 2], ['Most cases', 4], ['Complete visibility', 5]] },
+      { id: 'q11', text: 'Can audit reports be generated easily?', options: [['No', 0], ['Manual effort required', 2], ['Moderate effort', 4], ['Automated reporting', 5]] },
+    ],
+  },
+  {
+    id: 's4',
+    short: 'Data Protection',
+    title: 'Data Protection',
+    max: 20,
+    benchmark: 47,
+    questions: [
+      { id: 'q12', text: 'How many copies of borrower documents typically exist during a loan process?', options: [['Many uncontrolled copies', 0], ['Several copies', 2], ['Limited copies', 4], ['Minimal duplication', 5]] },
+      { id: 'q13', text: 'Can users access documents without downloading them?', options: [['No', 0], ['Limited scenarios', 2], ['Most scenarios', 4], ['Consistently', 5]] },
+      { id: 'q14', text: 'Can external parties share documents with your institution through a secure process?', options: [['No', 0], ['Limited capabilities', 2], ['Most use cases supported', 4], ['Fully supported', 5]] },
+      { id: 'q15', text: 'Does sensitive borrower information remain under organizational control throughout the process?', options: [['Rarely', 0], ['Sometimes', 2], ['Usually', 4], ['Consistently', 5]] },
+    ],
+  },
+  {
+    id: 's5',
+    short: 'Zero Trust Readiness',
+    title: 'Zero Trust Readiness',
+    max: 20,
+    benchmark: 55,
+    questions: [
+      { id: 'q16', text: 'Do you currently use Multi-Factor Authentication (MFA)?', options: [['No', 0], ['Partial deployment', 2], ['Broad deployment', 4], ['Universal deployment', 5]] },
+      { id: 'q17', text: 'Do you currently use Conditional Access policies?', options: [['No', 0], ['Limited deployment', 2], ['Moderate deployment', 4], ['Extensive deployment', 5]] },
+      { id: 'q18', text: "How would you describe your organization's Zero Trust maturity?", options: [['Not started', 0], ['Early stages', 2], ['Developing', 3], ['Mature', 4], ['Advanced', 5]] },
+      { id: 'q19', text: 'Does your Zero Trust strategy explicitly address data access and collaboration?', options: [['No', 0], ['Under consideration', 2], ['Partially implemented', 4], ['Fully implemented', 5]] },
+    ],
+  },
+  {
+    id: 's6',
+    short: 'Business Impact',
+    title: 'Business Impact',
+    max: 10,
+    benchmark: 52,
+    questions: [
+      { id: 'q20', text: 'How often do document-sharing issues delay loan processing?', options: [['Frequently', 0], ['Occasionally', 2], ['Rarely', 4], ['Never', 5]] },
+      { id: 'q21', text: 'How confident are you that current lending collaboration processes support both compliance and operational efficiency?', options: [['Not confident', 0], ['Somewhat confident', 2], ['Confident', 4], ['Very confident', 5]] },
+    ],
+  },
+];
+
+// Per-category narrative (assessment + opportunity/strength) by band, plus
+// recommended actions used in the improvement roadmap.
+const CATEGORY_META = {
+  s1: {
+    actions: ['Eliminate email-based document exchange', 'Adopt a consistent secure collaboration platform', 'Enable external access without attachments'],
+    bands: {
+      strong: { assessment: 'Your organization relies on secure collaboration for most of the lending workflow, with limited dependence on manual document exchange.', note: 'You are well positioned to scale secure lending collaboration.', type: 'strength' },
+      moderate: { assessment: 'Your organization has reduced dependence on manual document exchange and has implemented secure collaboration practices for portions of the lending workflow.', note: 'Further reducing email-based document sharing may improve both security and operational efficiency.', type: 'opportunity' },
+      weak: { assessment: 'Borrower documents are still exchanged largely through email and ad-hoc methods, increasing exposure and slowing the workflow.', note: 'Introducing a secure collaboration platform can reduce risk and accelerate loan processing.', type: 'opportunity' },
+    },
+  },
+  s2: {
+    actions: ['Implement granular, document-level permissions', 'Automate access expiration', 'Improve external user governance'],
+    bands: {
+      strong: { assessment: 'Granular, least-privilege permissions govern most access, with timely revocation when access is no longer required.', note: 'Access governance is a competitive strength for your institution.', type: 'strength' },
+      moderate: { assessment: 'Basic access controls are in place; however, permissions may still be broader than necessary for some internal and external participants.', note: 'Implementing more granular controls can reduce unnecessary exposure of borrower information.', type: 'opportunity' },
+      weak: { assessment: 'Access is largely governed by broad, shared permissions that are difficult to revoke once granted.', note: 'Adopting role- and document-level permissions with automatic expiration will materially lower risk.', type: 'opportunity' },
+    },
+  },
+  s3: {
+    actions: ['Centralize access and activity logging', 'Automate audit reporting', 'Track document downloads and actions'],
+    bands: {
+      strong: { assessment: 'You maintain strong visibility into document access and user activity.', note: 'Your organization appears well-positioned for compliance and audit requirements.', type: 'strength' },
+      moderate: { assessment: 'You have partial visibility into who accessed documents and when, but reporting still requires manual effort.', note: 'Centralizing activity logging and automating reports will strengthen audit readiness.', type: 'opportunity' },
+      weak: { assessment: 'Visibility into document access and downloads is limited, making audits difficult and time-consuming.', note: 'Implementing complete, exportable activity logging should be a near-term priority for compliance.', type: 'opportunity' },
+    },
+  },
+  s4: {
+    actions: ['Reduce document duplication', 'Limit downloads with view-only access', 'Improve external collaboration controls'],
+    bands: {
+      strong: { assessment: 'Borrower data largely stays under organizational control, with minimal duplication and downloading.', note: 'Strong data control reduces breach and compliance exposure.', type: 'strength' },
+      moderate: { assessment: 'Borrower information may still be duplicated or downloaded during portions of the lending lifecycle.', note: 'Reducing data movement and improving controlled access could significantly lower risk.', type: 'opportunity' },
+      weak: { assessment: 'Borrower documents are frequently copied and downloaded, leaving sensitive data outside your control.', note: 'Adopting view-only, no-download access to files in place will dramatically reduce exposure.', type: 'opportunity' },
+    },
+  },
+  s5: {
+    actions: ['Expand MFA toward universal coverage', 'Adopt conditional access policies', 'Extend Zero Trust to data and collaboration'],
+    bands: {
+      strong: { assessment: 'Zero Trust is broadly deployed and beginning to extend toward data and collaboration workflows.', note: 'You are positioned to lead on Zero Trust Data Access.', type: 'strength' },
+      moderate: { assessment: 'Identity and authentication controls are well established.', note: 'Expanding Zero Trust principles directly to lending data and collaboration workflows may further strengthen security.', type: 'opportunity' },
+      weak: { assessment: 'Zero Trust adoption is at an early stage, with limited MFA and conditional access in place.', note: 'Establishing MFA and conditional access is the foundation for securing lending data.', type: 'opportunity' },
+    },
+  },
+  s6: {
+    actions: ['Eliminate email attachments', 'Streamline borrower document collection', 'Improve third-party collaboration'],
+    bands: {
+      strong: { assessment: 'Collaboration processes reliably support both compliance and operational efficiency.', note: 'Efficient, compliant collaboration is a measurable business advantage.', type: 'strength' },
+      moderate: { assessment: 'Collaboration mostly supports operations, though occasional document-sharing friction affects loan timelines.', note: 'Streamlining secure collaboration can further improve borrower experience and efficiency.', type: 'opportunity' },
+      weak: { assessment: 'Document-sharing inefficiencies may be contributing to delays in loan processing.', note: 'Modernizing collaboration workflows may improve borrower experiences and operational productivity.', type: 'opportunity' },
+    },
+  },
+};
+
+const totalMax = SECTIONS.reduce((s, sec) => s + sec.max, 0);
+
+// Data passed to the client for scoring + rendering.
+const CONFIG = { sections: SECTIONS, meta: CATEGORY_META, totalMax, hsPortal: HS_PORTAL, hsForm: HS_FORM };
+
+let qCounter = 0;
+---
+
+<Layout
+  title="Secure Lending Collaboration Assessment | FileFlex Enterprise"
+  description="Take the free Secure Lending Collaboration Assessment. Benchmark your lending document collaboration against peers across access control, auditability, data protection and Zero Trust readiness — and get a maturity score with a prioritized improvement roadmap."
+>
+
+<Nav />
+
+<!-- HERO -->
+<section id="sla-hero" aria-labelledby="sla-hero-heading">
+  <div class="sla-hero__inner">
+    <span class="sla-hero__eyebrow">Free Assessment · 5 minutes</span>
+    <h1 id="sla-hero-heading" class="sla-hero__title">Secure Lending Collaboration Assessment</h1>
+    <p class="sla-hero__lede">
+      Measure how securely and efficiently your institution shares borrower documents across
+      the lending lifecycle. Answer 21 short questions to receive your maturity score, a
+      category-by-category breakdown, a peer benchmark, and a prioritized improvement roadmap.
+    </p>
+    <ul class="sla-hero__meta">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Personalized maturity score
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+        Benchmark against peers
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Downloadable PDF report
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- MAIN -->
+<section id="sla-main">
+  <div class="sla-main__inner">
+
+    <div class="sla-intro" id="sla-intro">
+      <p>
+        Your answers stay private. Your results appear on-screen instantly and you can download
+        them as a PDF. We use your contact details only to share your results and, with your
+        consent, to follow up about improving secure lending collaboration. The whole assessment
+        takes about five minutes.
+      </p>
+    </div>
+
+    <!-- FORM -->
+    <form id="sla-form" class="sla-form" novalidate data-portal-id={HS_PORTAL} data-form-id={HS_FORM}>
+
+      <div class="sla-progress" aria-hidden="true">
+        <div class="sla-progress__track"><div class="sla-progress__fill" id="sla-progress-fill"></div></div>
+        <p class="sla-progress__label" id="sla-progress-label">0 of 21 questions answered</p>
+      </div>
+
+      <!-- Pre-survey -->
+      <fieldset class="sla-section" style="border:0;padding:28px 28px 22px;">
+        <div class="sla-section__head">
+          <span class="sla-section__num">About you</span>
+        </div>
+        <h2 class="sla-section__title">Where should we send your report?</h2>
+        <p class="sla-section__max">All fields required.</p>
+        <div class="sla-fields">
+          <div class="sla-field sla-field--full">
+            <label for="sla-name">Full name <span class="sla-req" aria-hidden="true">*</span></label>
+            <input id="sla-name" name="fullname" type="text" autocomplete="name" required />
+          </div>
+          <div class="sla-field">
+            <label for="sla-title">Title <span class="sla-req" aria-hidden="true">*</span></label>
+            <input id="sla-title" name="jobtitle" type="text" autocomplete="organization-title" required />
+          </div>
+          <div class="sla-field">
+            <label for="sla-company">Company <span class="sla-req" aria-hidden="true">*</span></label>
+            <input id="sla-company" name="company" type="text" autocomplete="organization" required />
+          </div>
+          <div class="sla-field sla-field--full">
+            <label for="sla-email">Work email <span class="sla-req" aria-hidden="true">*</span></label>
+            <input id="sla-email" name="email" type="email" autocomplete="email" required />
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Sections -->
+      {SECTIONS.map((sec, si) => (
+        <fieldset class="sla-section" data-section={sec.id} data-max={sec.max}>
+          <div class="sla-section__head">
+            <span class="sla-section__num">Section {si + 1}</span>
+          </div>
+          <h2 class="sla-section__title">{sec.title}</h2>
+          <p class="sla-section__max">{sec.max} points possible</p>
+          {sec.questions.map((q) => {
+            qCounter += 1;
+            const n = qCounter;
+            return (
+              <div class="sla-q" role="group" aria-labelledby={`lbl-${q.id}`}>
+                <p class="sla-q__text" id={`lbl-${q.id}`}>
+                  {n}. {q.text} <span class="sla-req" aria-hidden="true">*</span>
+                  {q.note && <span class="sla-q__note">{q.note}</span>}
+                </p>
+                <div class="sla-opts">
+                  {q.options.map((opt, oi) => (
+                    <label class="sla-opt">
+                      <input type="radio" name={q.id} value={opt[1]} data-points={opt[1]} required={oi === 0} />
+                      <span>{opt[0]}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </fieldset>
+      ))}
+
+      <!-- Post-survey -->
+      <fieldset class="sla-section">
+        <div class="sla-section__head">
+          <span class="sla-section__num">One last thing</span>
+        </div>
+        <h2 class="sla-section__title">Organization size</h2>
+        <p class="sla-section__max">Helps us tailor recommendations.</p>
+        <div class="sla-field sla-field--full">
+          <label for="sla-users">How many users are managed by your IT department? <span class="sla-req" aria-hidden="true">*</span></label>
+          <select id="sla-users" name="it_user_range" required>
+            <option value="" selected disabled>Select a range…</option>
+            <option value="1–50">1–50</option>
+            <option value="51–250">51–250</option>
+            <option value="251–1,000">251–1,000</option>
+            <option value="1,001–5,000">1,001–5,000</option>
+            <option value="5,000+">5,000+</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- consent + honeypot -->
+      <div class="sla-consent">
+        <label class="sla-opt" style="border:0;padding:0;background:none;">
+          <input type="checkbox" id="sla-consent" name="communicationConsent" value="true" />
+          <span>I agree to receive communications from fileflex.com about my results and related topics. You can unsubscribe at any time. See our <a href="https://www.qnext.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.</span>
+        </label>
+      </div>
+      <div class="sla-honeypot" aria-hidden="true">
+        <label for="sla-website-url">Leave this field blank</label>
+        <input id="sla-website-url" type="text" name="website_url_confirm" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <div class="sla-actions">
+        <button type="submit" class="sla-btn" id="sla-submit">See my results</button>
+      </div>
+      <div class="sla-error" id="sla-error" role="alert"></div>
+    </form>
+
+    <!-- REPORT (rendered by JS) -->
+    <div id="sla-report" aria-live="polite"></div>
+
+  </div>
+</section>
+
+<script is:inline define:vars={{ CONFIG }}>
+  (function () {
+    var form = document.getElementById('sla-form');
+    if (!form) return;
+    var sections = CONFIG.sections;
+    var meta = CONFIG.meta;
+    var totalMax = CONFIG.totalMax;
+    var errorEl = document.getElementById('sla-error');
+    var fillEl = document.getElementById('sla-progress-fill');
+    var labelEl = document.getElementById('sla-progress-label');
+    var reportEl = document.getElementById('sla-report');
+    var submitBtn = document.getElementById('sla-submit');
+    var renderedAt = Date.now();
+
+    var allQ = [];
+    sections.forEach(function (s) { s.questions.forEach(function (q) { allQ.push(q.id); }); });
+
+    function answeredCount() {
+      var c = 0;
+      allQ.forEach(function (id) { if (form.querySelector('input[name="' + id + '"]:checked')) c++; });
+      return c;
+    }
+    function updateProgress() {
+      var c = answeredCount();
+      var pct = Math.round((c / allQ.length) * 100);
+      if (fillEl) fillEl.style.width = pct + '%';
+      if (labelEl) labelEl.textContent = c + ' of ' + allQ.length + ' questions answered';
+    }
+    form.addEventListener('change', updateProgress);
+    updateProgress();
+
+    function esc(s) {
+      return String(s).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      });
+    }
+    function band(pct) { return pct >= 70 ? 'strong' : (pct >= 40 ? 'moderate' : 'weak'); }
+    function rateLabel(b) { return b === 'strong' ? 'Strong' : (b === 'moderate' ? 'Moderate' : 'High Risk'); }
+    function riskOf(pct) { return pct >= 70 ? 'Low Risk' : (pct >= 40 ? 'Moderate Risk' : 'High Risk'); }
+    function riskClass(pct) { return pct >= 70 ? 'low' : (pct >= 40 ? 'moderate' : 'high'); }
+    function maturity(pct) {
+      if (pct >= 81) return 'Level 5 — Optimized Collaboration';
+      if (pct >= 61) return 'Level 4 — Managed Collaboration';
+      if (pct >= 41) return 'Level 3 — Defined Collaboration';
+      if (pct >= 21) return 'Level 2 — Developing Collaboration';
+      return 'Level 1 — Ad Hoc Collaboration';
+    }
+
+    function score() {
+      var cats = sections.map(function (s) {
+        var raw = 0;
+        s.questions.forEach(function (q) {
+          var el = form.querySelector('input[name="' + q.id + '"]:checked');
+          if (el) raw += Number(el.getAttribute('data-points')) || 0;
+        });
+        var pct = Math.round((raw / s.max) * 100);
+        return { id: s.id, short: s.short, title: s.title, raw: raw, max: s.max, pct: pct, benchmark: s.benchmark };
+      });
+      var totalRaw = cats.reduce(function (a, c) { return a + c.raw; }, 0);
+      var overall = Math.round((totalRaw / totalMax) * 100);
+      return { cats: cats, totalRaw: totalRaw, overall: overall };
+    }
+
+    function render(data) {
+      var cats = data.cats;
+      var overall = data.overall;
+      var name = (form.querySelector('#sla-name').value || '').trim();
+      var company = (form.querySelector('#sla-company').value || '').trim();
+
+      // score header
+      var html = '';
+      html += '<p class="sla-report__brand">Zero Trust Lending Collaboration Assessment™</p>';
+      html += '<p class="sla-report__for">Prepared for ' + esc(name || 'you') + (company ? ', ' + esc(company) : '') + '</p>';
+
+      html += '<div class="sla-report__tools">';
+      html += '<button type="button" class="sla-btn" id="sla-print">Download / print report (PDF)</button>';
+      html += '<button type="button" class="sla-btn--ghost sla-btn" id="sla-retake">Retake assessment</button>';
+      html += '</div>';
+
+      html += '<div class="sla-score">';
+      html += '<div class="sla-score__dial" style="--pct:' + overall + '"><div class="sla-score__num">' + overall + '<span>/100</span></div></div>';
+      html += '<div class="sla-score__meta"><h2>' + esc(maturity(overall)) + '</h2><div class="sla-score__badges">';
+      html += '<span class="sla-badge">Overall maturity</span>';
+      html += '<span class="sla-badge sla-badge--risk-' + riskClass(overall) + '">' + riskOf(overall) + '</span>';
+      html += '</div></div></div>';
+
+      // category table
+      html += '<div class="sla-card"><h3 class="sla-card__title">Category Scores</h3><p class="sla-card__sub">How each area of your lending collaboration scored.</p>';
+      html += '<table class="sla-table"><thead><tr><th>Category</th><th>Score</th><th>Rating</th></tr></thead><tbody>';
+      cats.forEach(function (c) {
+        var b = band(c.pct);
+        html += '<tr><td>' + esc(c.short) + '</td><td>' + c.raw + ' / ' + c.max + '</td><td><span class="sla-rate sla-rate--' + b + '">' + rateLabel(b) + '</span></td></tr>';
+      });
+      html += '</tbody></table></div>';
+
+      // dashboard bars
+      html += '<div class="sla-card"><h3 class="sla-card__title">Results Dashboard</h3><p class="sla-card__sub">Your score per category, with the peer benchmark marked.</p><div class="sla-bars">';
+      cats.forEach(function (c) {
+        var b = band(c.pct);
+        var fillCls = b === 'strong' ? ' sla-bar__fill--strong' : (b === 'weak' ? ' sla-bar__fill--weak' : '');
+        html += '<div class="sla-bar"><div class="sla-bar__top"><span class="sla-bar__label">' + esc(c.short) + '</span><span class="sla-bar__val">' + c.pct + '%</span></div>';
+        html += '<div class="sla-bar__track"><div class="sla-bar__fill' + fillCls + '" data-w="' + c.pct + '"></div><span class="sla-bar__bench" style="left:' + c.benchmark + '%"></span></div></div>';
+      });
+      html += '</div><p class="sla-bars__legend"><span></span> Credit Union peer average</p></div>';
+
+      // section analysis
+      html += '<div class="sla-card"><h3 class="sla-card__title">Section Analysis</h3><p class="sla-card__sub">What your scores mean — and where the opportunities are.</p><div class="sla-analysis">';
+      cats.forEach(function (c) {
+        var b = band(c.pct);
+        var m = meta[c.id].bands[b];
+        var tagCls = m.type === 'strength' ? 'sla-analysis__tag--strength' : 'sla-analysis__tag--opp';
+        var tagTxt = m.type === 'strength' ? 'Strength' : 'Opportunity';
+        html += '<div class="sla-analysis__item"><div class="sla-analysis__head"><p class="sla-analysis__name">' + esc(c.title) + '</p><span class="sla-analysis__score">' + c.raw + ' / ' + c.max + ' · ' + c.pct + '%</span></div>';
+        html += '<p>' + esc(m.assessment) + '</p>';
+        html += '<p><span class="sla-analysis__tag ' + tagCls + '">' + tagTxt + ':</span> ' + esc(m.note) + '</p></div>';
+      });
+      html += '</div></div>';
+
+      // roadmap — 3 lowest categories
+      var ranked = cats.slice().sort(function (a, b) { return a.pct - b.pct; }).slice(0, 3);
+      html += '<div class="sla-card"><h3 class="sla-card__title">Your Improvement Roadmap</h3><p class="sla-card__sub">The three areas where focused effort will have the greatest impact.</p><div class="sla-road">';
+      ranked.forEach(function (c, i) {
+        html += '<div class="sla-road__item"><p class="sla-road__rank">Priority #' + (i + 1) + '</p><p class="sla-road__name">' + esc(c.short) + '</p><p class="sla-road__score">Current score: ' + c.pct + '%</p><ul class="sla-road__actions">';
+        meta[c.id].actions.forEach(function (a) { html += '<li>' + esc(a) + '</li>'; });
+        html += '</ul></div>';
+      });
+      html += '</div></div>';
+
+      // benchmark table
+      html += '<div class="sla-card"><h3 class="sla-card__title">How You Compare to Peers</h3><p class="sla-card__sub">Your score vs. the Credit Union average.</p>';
+      html += '<table class="sla-table"><thead><tr><th>Category</th><th>Your Score</th><th>Peer Average</th></tr></thead><tbody>';
+      cats.forEach(function (c) {
+        var delta = c.pct - c.benchmark;
+        var dCls = delta >= 0 ? 'sla-bench__delta--up' : 'sla-bench__delta--down';
+        var dTxt = (delta >= 0 ? '+' : '') + delta + ' pts';
+        html += '<tr><td>' + esc(c.short) + '</td><td>' + c.pct + '% <span class="' + dCls + '">(' + dTxt + ')</span></td><td>' + c.benchmark + '%</td></tr>';
+      });
+      html += '</tbody></table></div>';
+
+      // CTA
+      html += '<div class="sla-cta"><h2>See where FileFlex closes your gaps</h2><p>FileFlex Enterprise applies Zero Trust Data Access to your lending documents — least-privilege, view-only, no-download access with a complete audit trail, without moving your data. Talk to us about your priority areas above.</p><div class="sla-cta__row"><a class="sla-btn" href="/demo-request/">Request a demo</a><a class="sla-btn sla-btn--ghost" href="/secure-lending-collaboration/">Explore secure lending</a></div></div>';
+
+      reportEl.innerHTML = html;
+      reportEl.classList.add('is-show');
+
+      // animate bars
+      requestAnimationFrame(function () {
+        var bars = reportEl.querySelectorAll('.sla-bar__fill');
+        bars.forEach(function (el) { el.style.width = (el.getAttribute('data-w') || 0) + '%'; });
+      });
+
+      document.getElementById('sla-print').addEventListener('click', function () { window.print(); });
+      document.getElementById('sla-retake').addEventListener('click', function () {
+        reportEl.classList.remove('is-show');
+        reportEl.innerHTML = '';
+        form.reset();
+        updateProgress();
+        submitBtn.disabled = false;
+        form.style.display = '';
+        document.getElementById('sla-intro').style.display = '';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    function getHsCookie() {
+      var m = document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]+)/);
+      return m ? m[1] : '';
+    }
+    function submitToHubSpot(data) {
+      if (!CONFIG.hsForm) return; // disabled until a dedicated form is configured
+      var endpoint = 'https://api.hsforms.com/submissions/v3/integration/submit/' + CONFIG.hsPortal + '/' + CONFIG.hsForm;
+      var fields = [
+        { name: 'firstname', value: (form.querySelector('#sla-name').value || '').trim() },
+        { name: 'jobtitle', value: (form.querySelector('#sla-title').value || '').trim() },
+        { name: 'company', value: (form.querySelector('#sla-company').value || '').trim() },
+        { name: 'email', value: (form.querySelector('#sla-email').value || '').trim() },
+      ];
+      var consent = form.querySelector('#sla-consent').checked;
+      var hutk = getHsCookie();
+      var payload = {
+        submittedAt: Date.now(),
+        fields: fields,
+        context: { pageUri: window.location.href, pageName: document.title },
+        legalConsentOptions: { consent: { consentToProcess: true, text: 'Consent to process for the requested assessment report.', communications: [{ value: consent, subscriptionTypeId: 32387186, text: 'I agree to receive communications from fileflex.com.' }] } },
+      };
+      if (hutk) payload.context.hutk = hutk;
+      fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }).catch(function () {});
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      errorEl.classList.remove('is-show');
+
+      var honey = form.querySelector('[name="website_url_confirm"]');
+      if (honey && honey.value) return;
+      if (Date.now() - renderedAt < 2500) {
+        errorEl.textContent = 'Please take a moment to review your answers before submitting.';
+        errorEl.classList.add('is-show');
+        return;
+      }
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      var c = answeredCount();
+      if (c < allQ.length) {
+        errorEl.textContent = 'Please answer all ' + allQ.length + ' questions — ' + (allQ.length - c) + ' remaining.';
+        errorEl.classList.add('is-show');
+        var firstMissing = null;
+        for (var i = 0; i < allQ.length; i++) {
+          if (!form.querySelector('input[name="' + allQ[i] + '"]:checked')) { firstMissing = allQ[i]; break; }
+        }
+        if (firstMissing) {
+          var grp = document.getElementById('lbl-' + firstMissing);
+          if (grp) grp.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        return;
+      }
+
+      var data = score();
+      submitBtn.disabled = true;
+      submitToHubSpot(data);
+
+      form.style.display = 'none';
+      document.getElementById('sla-intro').style.display = 'none';
+      render(data);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+</script>
+
+</Layout>

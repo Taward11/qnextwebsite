@@ -1,0 +1,325 @@
+I would like you to create a web-based Secure Lending Assessment tool for the website similar to the Zero Trust Data Access Maturity report that we just made last week. The goal should be to:
+1.	Educate the prospect. 
+2.	Reveal gaps in their lending collaboration process. 
+3.	Produce a maturity score. 
+4.	Generate a lead. 
+5.	Give the sales team insight before the first conversation. 
+Assessment Output
+At completion, respondents receive: an on-screen report and an emailed report in pdf format.  A copy of the pdf and the answers to each question would be emailed to me 
+Pre survey questions:
+Name
+Title
+Company
+Email
+SECTION 1
+Lending Collaboration Processes
+Question 1
+How are borrower documents typically exchanged?
+•	Primarily email attachments (0) 
+•	Mix of email and shared folders (2) 
+•	Secure portal used for some processes (4) 
+•	Secure collaboration platform used consistently (5) 
+
+Question 2
+How many external parties typically participate in lending transactions?
+•	0-1 (5) 
+•	2-3 (4) 
+•	4-6 (3) 
+•	More than 6 (2) 
+(This is informational only and helps qualify complexity.)
+
+Question 3
+Can external participants access documents without receiving email attachments?
+•	No (0) 
+•	Sometimes (2) 
+•	Usually (4) 
+•	Always (5) 
+
+Section Maximum
+15 Points
+
+SECTION 2
+Access Controls
+Question 4
+How is access granted to lending documents?
+•	Shared folders with broad permissions (0) 
+•	Group-based permissions (2) 
+•	Role-based permissions (4) 
+•	Granular document-level permissions (5) 
+
+Question 5
+Can access be revoked immediately when no longer required?
+•	No (0) 
+•	Manually with significant effort (2) 
+•	Usually (4) 
+•	Immediately and consistently (5) 
+
+Question 6
+Are external parties restricted to only the documents they need?
+•	Rarely (0) 
+•	Sometimes (2) 
+•	Usually (4) 
+•	Always (5) 
+
+Question 7
+Are temporary access periods automatically enforced?
+•	No (0) 
+•	Rarely (1) 
+•	Sometimes (3) 
+•	Consistently (5) 
+
+Section Maximum
+20 Points
+
+SECTION 3
+Visibility and Auditability
+Question 8
+Can you identify who accessed a document?
+•	No (0) 
+•	For some systems (2) 
+•	Usually (4) 
+•	Always (5) 
+
+Question 9
+Can you determine when a document was accessed?
+•	No (0) 
+•	Limited visibility (2) 
+•	Most activity (4) 
+•	Complete visibility (5) 
+
+Question 10
+Can you determine whether documents were downloaded?
+•	No (0) 
+•	Some visibility (2) 
+•	Most cases (4) 
+•	Complete visibility (5) 
+
+Question 11
+Can audit reports be generated easily?
+•	No (0) 
+•	Manual effort required (2) 
+•	Moderate effort (4) 
+•	Automated reporting (5) 
+
+Section Maximum
+20 Points
+
+SECTION 4
+Data Protection
+Question 12
+How many copies of borrower documents typically exist during a loan process?
+•	Many uncontrolled copies (0) 
+•	Several copies (2) 
+•	Limited copies (4) 
+•	Minimal duplication (5) 
+
+Question 13
+Can users access documents without downloading them?
+•	No (0) 
+•	Limited scenarios (2) 
+•	Most scenarios (4) 
+•	Consistently (5) 
+
+Question 14
+Can external parties share documents with your institution through a secure process?
+•	No (0) 
+•	Limited capabilities (2) 
+•	Most use cases supported (4) 
+•	Fully supported (5) 
+
+Question 15
+Does sensitive borrower information remain under organizational control throughout the process?
+•	Rarely (0) 
+•	Sometimes (2) 
+•	Usually (4) 
+•	Consistently (5) 
+
+Section Maximum
+20 Points
+
+SECTION 5
+Zero Trust Readiness
+Question 16
+Do you currently use Multi-Factor Authentication (MFA)?
+•	No (0) 
+•	Partial deployment (2) 
+•	Broad deployment (4) 
+•	Universal deployment (5) 
+
+Question 17
+Do you currently use Conditional Access policies?
+•	No (0) 
+•	Limited deployment (2) 
+•	Moderate deployment (4) 
+•	Extensive deployment (5) 
+
+Question 18
+How would you describe your organization's Zero Trust maturity?
+•	Not started (0) 
+•	Early stages (2) 
+•	Developing (3) 
+•	Mature (4) 
+•	Advanced (5) 
+
+Question 19
+Does your Zero Trust strategy explicitly address data access and collaboration?
+•	No (0) 
+•	Under consideration (2) 
+•	Partially implemented (4) 
+•	Fully implemented (5) 
+
+Section Maximum
+20 Points
+
+SECTION 6
+Business Impact
+This section is powerful because it translates security issues into business value.
+Question 20
+How often do document-sharing issues delay loan processing?
+•	Frequently (0) 
+•	Occasionally (2) 
+•	Rarely (4) 
+•	Never (5) 
+
+Question 21
+How confident are you that current lending collaboration processes support both compliance and operational efficiency?
+•	Not confident (0) 
+•	Somewhat confident (2) 
+•	Confident (4) 
+•	Very confident (5) 
+Post survey questions
+How may users are managed by your IT department (check box selection of ranges)
+Section Maximum
+10 Points the assessment produce three levels of results:
+Level 1: Overall Score
+Example:
+Zero Trust Lending Collaboration Assessment™
+
+Overall Score
+
+67 / 100
+
+Maturity Level:
+Level 4 - Managed Collaboration
+
+Risk Rating:
+Moderate Risk
+
+Level 2: Category Scores
+This is where the value really starts.
+Example:
+Category	Score	Rating
+Lending Processes	11/15	Strong
+Access Controls	12/20	Moderate
+Auditability	18/20	Strong
+Data Protection	10/20	Moderate
+Zero Trust Readiness	13/20	Moderate
+Business Impact	3/10	High Risk
+Immediately they can see:
+•	Auditability is strong 
+•	Lending process is good 
+•	Business efficiency is poor 
+•	Data protection needs work 
+
+Level 3: Section Analysis
+This is where you create opportunities.
+Lending Processes
+Score: 11/15
+Assessment
+Your organization has reduced dependence on manual document exchange and has implemented secure collaboration practices for portions of the lending workflow.
+Opportunity
+Further reducing email-based document sharing may improve both security and operational efficiency.
+
+Access Controls
+Score: 12/20
+Assessment
+Basic access controls are in place; however, permissions may still be broader than necessary for some internal and external participants.
+Opportunity
+Implementing more granular controls can reduce unnecessary exposure of borrower information.
+
+Auditability
+Score: 18/20
+Assessment
+You maintain strong visibility into document access and user activity.
+Strength
+Your organization appears well-positioned for compliance and audit requirements.
+
+Data Protection
+Score: 10/20
+Assessment
+Borrower information may still be duplicated or downloaded during portions of the lending lifecycle.
+Opportunity
+Reducing data movement and improving controlled access could significantly lower risk.
+
+Zero Trust Readiness
+Score: 13/20
+Assessment
+Identity and authentication controls are well established.
+Opportunity
+Expanding Zero Trust principles directly to lending data and collaboration workflows may further strengthen security.
+
+Business Impact
+Score: 3/10
+Assessment
+Document-sharing inefficiencies may be contributing to delays in loan processing.
+Opportunity
+Modernizing collaboration workflows may improve borrower experiences and operational productivity.
+
+Visual Results Dashboard
+I would actually show horizontal bar chart with percentage scores out of 100 for each section something like:
+Lending Processes        ███████████░░░ 73%
+
+Access Controls          ██████░░░░░░░ 60%
+
+Auditability             █████████████ 90%
+
+Data Protection          █████░░░░░░░░ 50%
+
+Zero Trust Readiness     ███████░░░░░░ 65%
+
+Business Impact          ███░░░░░░░░░░ 30%
+This instantly shows where improvement is needed.
+
+Improvement Roadmap
+Then automatically generate:
+Top 3 Priority Areas
+Priority #1
+Data Protection
+Current Score: 50%
+Recommended Actions:
+•	Reduce document duplication 
+•	Limit downloads 
+•	Improve external collaboration controls 
+
+Priority #2
+Business Impact
+Current Score: 30%
+Recommended Actions:
+•	Eliminate email attachments 
+•	Streamline borrower document collection 
+•	Improve third-party collaboration 
+
+Priority #3
+Access Controls
+Current Score: 60%
+Recommended Actions:
+•	Implement granular permissions 
+•	Automate access expiration 
+•	Improve external user governance 
+
+The Most Valuable Addition
+If possible I would also benchmark them against peers.
+Example:
+Category	Your Score	Credit Union Average
+Lending Processes	73%	62%
+Access Controls	60%	58%
+Auditability	90%	64%
+Data Protection	50%	47%
+Zero Trust Readiness	65%	55%
+Business Impact	30%	52%
+Executives love benchmarking.
+Even if the benchmark initially comes from your own survey respondents over time, it transforms the assessment from:
+"Here's your score"
+to
+"Here's how you compare to your peers."
+That significantly increases engagement and creates a stronger reason for a follow-up conversation with FileFlex.
