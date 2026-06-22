@@ -6,6 +6,11 @@ import '../styles/lending-assessment.css';
 
 // Lead capture + report delivery is handled server-side by the Cloudflare Pages
 // Function at functions/api/send-assessment.js (Resend). No API keys live here.
+//
+// Optional bot protection (Cloudflare Turnstile): set PUBLIC_TURNSTILE_SITE_KEY as a
+// build env var to render the widget, and set TURNSTILE_SECRET in the Function's env
+// to enforce verification. Both unset = no widget, endpoint works as before.
+const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
 
 // ---- Assessment configuration ------------------------------------------------
 // Each question: id, text, optional note, and options [label, points].
@@ -143,7 +148,7 @@ const CATEGORY_META = {
 const totalMax = SECTIONS.reduce((s, sec) => s + sec.max, 0);
 
 // Data passed to the client for scoring + rendering.
-const CONFIG = { sections: SECTIONS, meta: CATEGORY_META, totalMax };
+const CONFIG = { sections: SECTIONS, meta: CATEGORY_META, totalMax, turnstile: !!TURNSTILE_SITE_KEY };
 
 let qCounter = 0;
 ---
@@ -291,6 +296,12 @@ let qCounter = 0;
         <label for="sla-website-url">Leave this field blank</label>
         <input id="sla-website-url" type="text" name="website_url_confirm" tabindex="-1" autocomplete="off" />
       </div>
+
+      {TURNSTILE_SITE_KEY && (
+        <div class="sla-turnstile">
+          <div class="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-theme="light" data-action="lending-assessment"></div>
+        </div>
+      )}
 
       <div class="sla-actions">
         <button type="submit" class="sla-btn" id="sla-submit">See my results</button>
@@ -465,6 +476,7 @@ let qCounter = 0;
         submitBtn.disabled = false;
         form.style.display = '';
         document.getElementById('sla-intro').style.display = '';
+        if (CONFIG.turnstile && window.turnstile) { try { window.turnstile.reset(); } catch (e) {} }
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     }
@@ -645,6 +657,7 @@ let qCounter = 0;
           }),
           answers: gatherAnswers(),
           pdfBase64: pdfState.base64,
+          turnstileToken: (function () { var t = form.querySelector('[name="cf-turnstile-response"]'); return t ? t.value : ''; })(),
           website_url_confirm: honeyEl ? honeyEl.value : ''
         };
         setEmailStatus('Emailing your report to ' + (contact.email || 'you') + '...');
@@ -695,6 +708,15 @@ let qCounter = 0;
         return;
       }
 
+      if (CONFIG.turnstile) {
+        var tEl = form.querySelector('[name="cf-turnstile-response"]');
+        if (!tEl || !tEl.value) {
+          errorEl.textContent = 'Please complete the verification check, then submit.';
+          errorEl.classList.add('is-show');
+          return;
+        }
+      }
+
       var data = score();
       submitBtn.disabled = true;
 
@@ -706,5 +728,7 @@ let qCounter = 0;
     });
   })();
 </script>
+
+{TURNSTILE_SITE_KEY && <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer is:inline></script>}
 
 </Layout>

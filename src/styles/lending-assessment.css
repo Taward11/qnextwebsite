@@ -573,3 +573,6 @@
 .sla-report__status.is-ok { color: #1d7a4d; }
 .sla-report__status.is-warn { color: #9a6a00; }
 @media print { .sla-report__status, .sla-report__tools { display: none !important; } }
+
+.sla-turnstile { margin: .25rem 0 1rem; }
+@media print { .sla-turnstile { display: none; } }

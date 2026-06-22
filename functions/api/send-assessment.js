@@ -176,6 +176,30 @@ async function sendEmail(env, msg) {
   return { ok: res.ok, status: res.status, body: body };
 }
 
+// Cloudflare Turnstile verification. If TURNSTILE_SECRET is not set, verification is
+// skipped (treated as success) so the endpoint keeps working until it's configured.
+async function verifyTurnstile(env, token, ip) {
+  if (!env.TURNSTILE_SECRET) return { ok: true, skipped: true };
+  if (!token || typeof token !== 'string') return { ok: false };
+  var body = new URLSearchParams();
+  body.set('secret', env.TURNSTILE_SECRET);
+  body.set('response', token);
+  if (ip) body.set('remoteip', ip);
+  try {
+    var res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body.toString(),
+    });
+    var j = await res.json();
+    // Also bind the token to this form's action to limit cross-context token reuse.
+    var actionOk = !j.action || j.action === 'lending-assessment';
+    return { ok: !!j.success && actionOk, data: j };
+  } catch (e) {
+    return { ok: false };
+  }
+}
+
 export async function onRequestPost(context) {
   var request = context.request;
   var env = context.env;
@@ -193,6 +217,10 @@ export async function onRequestPost(context) {
 
   // Honeypot — silently accept and drop.
   if (data.website_url_confirm) return json({ ok: true });
+
+  // Bot protection (enforced only when TURNSTILE_SECRET is configured).
+  var ts = await verifyTurnstile(env, data.turnstileToken, request.headers.get('CF-Connecting-IP'));
+  if (!ts.ok) return json({ ok: false, error: 'verification_failed' }, 403);
 
   var pdf = typeof data.pdfBase64 === 'string' ? data.pdfBase64 : '';
   if (pdf.length > 4 * 1024 * 1024) {

@@ -39,3 +39,12 @@ Resend-verified sender, defaults to `onboarding@resend.dev` which only delivers 
 owner). The Astro dev server does NOT run Pages Functions, so `/api/send-assessment` 404s locally —
 the client treats a failed POST as non-fatal (report still shows, PDF still downloadable). Note: email
 was NOT previously wired anywhere in this repo despite a user belief that a "ZTDA assessment" had it.
+
+**Turnstile bot protection (the abuse follow-up above):** two-key, deliberately fail-open design so
+the endpoint never breaks before config is set. `PUBLIC_TURNSTILE_SITE_KEY` (Cloudflare *build* env
+var, public, read in Astro frontmatter) gates whether the widget renders + whether the client blocks
+submit on a missing token. `TURNSTILE_SECRET` (Function env) gates server enforcement — when UNSET,
+`verifyTurnstile` returns ok (skipped), so protection is OFF until BOTH keys exist.
+**Why fail-open:** keeps form/email working through staged rollout; **trade-off:** the endpoint stays
+abuseable until the secret is set, so treat both keys as required prod config (consider flipping to
+fail-closed after rollout). Server also binds the token to `action === 'lending-assessment'`.
