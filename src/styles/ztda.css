@@ -189,11 +189,36 @@
   margin: 0 auto 40px;
 }
 .zt-example {
+  display: flex;
+  flex-direction: column;
   background: #fff;
   border: 1px solid var(--pf-line);
   border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.zt-example:hover {
+  transform: translateY(-4px);
+  border-color: var(--pf-orange);
+  box-shadow: 0 18px 40px -22px rgba(2, 6, 12, 0.45);
+}
+.zt-example__media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #02060c;
+  overflow: hidden;
+}
+.zt-example__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.zt-example:hover .zt-example__media img { transform: scale(1.05); }
+.zt-example__body {
+  padding: 26px 28px 30px;
   border-top: 3px solid var(--pf-orange);
-  padding: 30px 28px;
 }
 .zt-example__num {
   font-size: 12px;
@@ -203,11 +228,17 @@
   color: var(--pf-orange);
   margin: 0 0 14px;
 }
-.zt-example > p:not(.zt-example__num) {
+.zt-example__body > p:not(.zt-example__num) {
   font-size: 15.5px;
   line-height: 1.6;
   color: var(--pf-ink-soft);
   margin: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .zt-example,
+  .zt-example__media img { transition: none; }
+  .zt-example:hover { transform: none; }
+  .zt-example:hover .zt-example__media img { transform: none; }
 }
 .zt-short__close {
   text-align: center;

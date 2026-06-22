@@ -1,5 +1,22 @@
 uploads = []
-generated = []
+
+[[generated]]
+id = "9QebNUalB-v26_sJ1TgzN"
+uri = "file://attached_assets/generated_images/ztda-gap-email.png"
+type = "image"
+title = "gap email leak"
+
+[[generated]]
+id = "w2u3NPrTqyx8m78VZ4vYP"
+uri = "file://attached_assets/generated_images/ztda-gap-usb.png"
+type = "image"
+title = "gap usb copy"
+
+[[generated]]
+id = "QxTSvT3tXryTHG0B9Rdql"
+uri = "file://attached_assets/generated_images/ztda-gap-folder.png"
+type = "image"
+title = "gap folder oversharing"
 
 [[outputs]]
 id = "wssrYHILOy549CZAkG2ky"
