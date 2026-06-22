@@ -7,10 +7,11 @@ import '../styles/lending-assessment.css';
 // Lead capture + report delivery is handled server-side by the Cloudflare Pages
 // Function at functions/api/send-assessment.js (Resend). No API keys live here.
 //
-// Optional bot protection (Cloudflare Turnstile): set PUBLIC_TURNSTILE_SITE_KEY as a
-// build env var to render the widget, and set TURNSTILE_SECRET in the Function's env
-// to enforce verification. Both unset = no widget, endpoint works as before.
-const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
+// Bot protection (Cloudflare Turnstile). The site key is public by design (it ships in
+// the page HTML), so it's embedded as the default; override via PUBLIC_TURNSTILE_SITE_KEY
+// build env var if needed. Server enforcement is separate: it only kicks in once
+// TURNSTILE_SECRET is set in the Cloudflare Function env (the secret NEVER lives in code).
+const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '0x4AAAAAAAepoW6FVjST6ttz';
 
 // ---- Assessment configuration ------------------------------------------------
 // Each question: id, text, optional note, and options [label, points].
