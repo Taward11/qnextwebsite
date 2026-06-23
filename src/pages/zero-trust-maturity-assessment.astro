@@ -1,0 +1,806 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/zt-assessment.css';
+
+// Lead capture + report delivery is handled server-side by the Cloudflare Pages
+// Function at functions/api/send-zt-assessment.js (Resend). No API keys live here.
+//
+// Bot protection (Cloudflare Turnstile). The site key is public by design (it ships in
+// the page HTML), so it's embedded as the default; override via PUBLIC_TURNSTILE_SITE_KEY
+// build env var if needed. Server enforcement is separate: it only kicks in once
+// TURNSTILE_SECRET is set in the Cloudflare Function env (the secret NEVER lives in code).
+const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '0x4AAAAAAAepoW6FVjST6ttz';
+
+// ---- Assessment configuration ------------------------------------------------
+// Scored questions: options are [label, points]. Info-only questions (info:true)
+// and Section E collect sales intelligence and are not scored. q9 is a scored
+// multi-select: it contributes the MAX points among the selected options.
+// Section dimensions and gates (validated against the live app, 94/94 captures):
+//   identity (q2+q3+q4, max 7, gate >=5)
+//   ztna     (q5+q7+q8, max 8, gate >=5)
+//   dataAccess (q9 max + q10..q16, max 17, gate >=11)
+//   governance (q17..q21, max 10, gate >=8)
+const SECTIONS = [
+  {
+    id: 'A', dim: 'identity', title: 'Current Security Foundation',
+    questions: [
+      { id: 'q1', type: 'multi', info: true, text: 'Which identity platform do you currently use?', note: 'Your identity platform is the foundation of Zero Trust — it controls who is authenticated and what policies govern their access.', options: ['Microsoft Entra ID', 'Okta', 'Ping Identity', 'ForgeRock', 'IBM Verify', 'Other'] },
+      { id: 'q2', type: 'single', text: 'Is MFA enforced for all employees?', note: 'MFA prevents the majority of credential-based attacks — even if a password is stolen, MFA blocks unauthorized access.', options: [['Yes', 3], ['Most users', 2], ['Some users', 1], ['No', 0]] },
+      { id: 'q3', type: 'single', text: 'Do you use centralized IAM?', note: 'Centralized Identity and Access Management ensures access policies are applied consistently across all applications and systems.', options: [['Yes', 2], ['Partial', 1], ['No', 0]] },
+      { id: 'q4', type: 'single', text: 'Do you use Conditional Access policies?', note: 'Conditional Access evaluates context — user risk, device compliance, location, sensitivity — before granting access.', options: [['Extensive', 2], ['Limited', 1], ['None', 0]] },
+    ],
+  },
+  {
+    id: 'B', dim: 'ztna', title: 'ZTNA Maturity',
+    questions: [
+      { id: 'q5', type: 'single', text: 'How do remote users access internal applications?', note: 'VPNs grant broad network-level access; ZTNA grants access only to specific applications with continuous verification.', options: [['VPN', 0], ['Mostly VPN', 1], ['Mix of VPN and ZTNA', 2], ['Mostly ZTNA', 3], ['Fully ZTNA', 4]] },
+      { id: 'q6', type: 'multi', info: true, text: 'Which ZTNA solution do you currently use?', note: 'Understanding your ZTNA platform helps us assess current capability and how it can integrate with data-layer controls.', options: ['Microsoft', 'Zscaler', 'Palo Alto', 'Cisco', 'Cloudflare', 'Netskope', 'Other', 'None'] },
+      { id: 'q7', type: 'single', text: 'Can users access applications without network-level access?', note: 'In a true Zero Trust model, users reach specific applications without access to the underlying network, preventing lateral movement.', options: [['Yes', 2], ['Partial', 1], ['No', 0]] },
+      { id: 'q8', type: 'single', text: 'Do access decisions rely on identity verification?', note: 'Zero Trust requires access decisions that continuously verify identity posture and device compliance — not just at login.', options: [['Fully', 2], ['Partially', 1], ['No', 0]] },
+    ],
+  },
+  {
+    id: 'C', dim: 'dataAccess', title: 'Data Access & Collaboration',
+    questions: [
+      { id: 'q9', type: 'multi', scored: true, text: 'How are sensitive documents typically shared externally? (select all that apply)', note: 'A controlled access platform keeps data inside your environment; external parties access it without receiving a copy.', options: [['Email attachments', 0], ['Cloud links (SharePoint, Drive etc.)', 1], ['Secure portal', 2], ['Controlled access platform', 3]] },
+      { id: 'q10', type: 'single', text: 'Can access to shared files be revoked after sharing?', note: 'If a vendor relationship ends or a breach is suspected, can you immediately cut off access to files you have already shared?', options: [['Immediately', 2], ['Limited', 1], ['No', 0]] },
+      { id: 'q11', type: 'single', text: 'Can permissions be modified after sharing?', note: 'Dynamic permission control lets you adapt as trust relationships evolve — for example, moving a vendor from full access to read-only.', options: [['Yes', 2], ['Limited', 1], ['No', 0]] },
+      { id: 'q12', type: 'single', text: 'Can external parties collaborate without receiving copies of files?', note: 'Zero Trust data access means collaboration happens inside your controlled environment, with no copies distributed.', options: [['Yes', 2], ['Partially', 1], ['No', 0]] },
+      { id: 'q13', type: 'single', text: 'Can access be controlled at the file and folder level?', note: 'Granular file and folder-level control ensures users and external parties see only what they specifically need.', options: [['Fully', 2], ['Partially', 1], ['No', 0]] },
+      { id: 'q14', type: 'single', text: 'Can external auditors access information without receiving copies?', note: 'A governed access portal lets auditors review information without taking custody of it, simplifying evidence management.', options: [['Yes', 2], ['Sometimes', 1], ['No', 0]] },
+      { id: 'q15', type: 'single', text: 'Can board members securely access sensitive documents remotely?', note: 'Secure remote access without local copies is a governance and cybersecurity best practice for board materials.', options: [['Yes', 2], ['Partially', 1], ['No', 0]] },
+      { id: 'q16', type: 'single', text: 'Can mortgage applicants securely access and submit documents without email attachments?', note: 'A secure portal reduces fraud risk, meets regulatory expectations, and improves the client experience.', options: [['Yes', 2], ['Partially', 1], ['No', 0]] },
+    ],
+  },
+  {
+    id: 'D', dim: 'governance', title: 'Data Governance',
+    questions: [
+      { id: 'q17', type: 'single', text: 'Can you identify who currently has access to sensitive information?', note: 'Real-time access visibility is foundational — without it you cannot scope a breach or demonstrate least-privilege compliance.', options: [['Immediately', 2], ['With effort', 1], ['No', 0]] },
+      { id: 'q18', type: 'single', text: 'Can you identify every external party with access to a document?', note: 'Most compliance frameworks require you to know exactly which third parties hold access to sensitive information at any time.', options: [['Yes', 2], ['Partial', 1], ['No', 0]] },
+      { id: 'q19', type: 'single', text: 'Do you maintain complete audit trails for document access?', note: 'Complete audit trails capture every access event and are essential for compliance and post-incident forensics.', options: [['Yes', 2], ['Partial', 1], ['No', 0]] },
+      { id: 'q20', type: 'single', text: 'Do you monitor file access activity?', note: 'Continuous monitoring detects anomalous access patterns before they escalate to a breach.', options: [['Yes', 2], ['Partial', 1], ['No', 0]] },
+      { id: 'q21', type: 'single', text: 'Can third-party access be revoked immediately?', note: 'Immediate revocation capability is a Zero Trust requirement for managing supply chain risk.', options: [['Yes', 2], ['Partial', 1], ['No', 0]] },
+    ],
+  },
+];
+
+// Section E — sales intelligence (not scored, emailed to the assessment owner).
+const SALES = [
+  { id: 'collaborationMethods', type: 'multi', text: 'Primary collaboration methods', options: ['Email', 'SharePoint', 'OneDrive', 'Dropbox', 'Box', 'Google Drive', 'Secure Portal', 'Other'] },
+  { id: 'primaryUseCases', type: 'multi', text: 'Primary use cases', options: ['Mortgage processing', 'Commercial lending', 'Board communications', 'Member document exchange', 'Vendor collaboration', 'Auditor access', 'Legal document exchange', 'Branch collaboration'] },
+  { id: 'dataStorage', type: 'multi', text: 'Where do you currently store your data? (select all that apply)', options: ['On-Premises Servers', 'Private Cloud', 'Public Cloud (e.g., AWS, Azure, Google Cloud)', 'Hybrid (Mix of On-Prem & Cloud)', 'Network-Attached Storage (NAS)', 'SharePoint / OneDrive', 'Other'] },
+];
+
+// Section dimension labels, maxima and gates.
+const DIMS = {
+  identity: { label: 'Identity & Access Foundation', max: 7, gate: 5 },
+  ztna: { label: 'Zero Trust Network Access', max: 8, gate: 5 },
+  dataAccess: { label: 'Data Access & Collaboration', max: 17, gate: 11 },
+  governance: { label: 'Data Governance', max: 10, gate: 8 },
+};
+const DIM_ORDER = ['identity', 'ztna', 'dataAccess', 'governance'];
+
+// Maturity levels.
+const LEVELS = [
+  null,
+  { name: 'Perimeter Security', desc: "Your organization's security is primarily built around protecting the network boundary. While this provides a foundation, it leaves data vulnerable to insider threats and sophisticated attackers who bypass perimeter controls." },
+  { name: 'Identity-Centric Security', desc: 'Your organization has made significant progress by implementing identity-based security controls. MFA, IAM, and conditional access policies provide strong user verification, significantly reducing account-based attack vectors.' },
+  { name: 'Zero Trust Network Access', desc: 'Your organization has embraced Zero Trust Network Access principles, enabling secure application access without implicit network trust. This is a meaningful step forward, though the data layer remains an opportunity for further improvement.' },
+  { name: 'Zero Trust Data Access', desc: 'Your organization has achieved Zero Trust Data Access, with granular controls over who can access specific files and folders, the ability to revoke access at any time, and support for secure external collaboration without transferring data ownership.' },
+  { name: 'Adaptive Data Governance', desc: 'Your organization has achieved the highest level of Zero Trust Data Access maturity, with comprehensive visibility, continuous monitoring, and full governance across all data access activities — including external parties and third-party collaborators.' },
+];
+
+// Conditional text library (S0..S10, G0..G13, R0..R17) — verified against the live app.
+const TEXT = {
+  strengths: [
+    'Strong identity foundation with robust MFA enforcement and centralized IAM — the cornerstone of a Zero Trust architecture.',
+    'Extensive use of Conditional Access policies demonstrates a mature, context-aware approach to access control.',
+    'Significant ZTNA deployment reduces dependency on traditional VPN, shrinking the network attack surface.',
+    'Strong data access controls are in place, including granular permissions, access revocation, and secure external collaboration.',
+    'Comprehensive audit trails and access monitoring provide the visibility needed for compliance and rapid incident response.',
+    'Immediate access revocation capability is a critical security control that significantly limits data exposure after sharing.',
+    'The ability to enable external collaboration without distributing file copies is a key differentiator that keeps data under organizational control.',
+    'Your organization has taken the first step by evaluating your security posture — awareness is the foundation of improvement.',
+    'Identity security controls are partially in place, providing a meaningful baseline for further Zero Trust development.',
+    'Some data access controls exist, indicating an awareness of the need to protect information beyond the network perimeter.',
+    'Partial governance capabilities provide some visibility into data access, forming a basis for more comprehensive monitoring.',
+  ],
+  gaps: [
+    'Full Zero Trust Data Access — where sensitive files can be shared externally without losing control — has not yet been achieved, leaving a gap between your network security and true data-centric protection.',
+    'MFA is not fully enforced — leaving your organization exposed to credential-based attacks that compromised passwords alone could enable.',
+    'Without centralized IAM, access policies are fragmented across systems, creating governance blind spots that attackers can exploit.',
+    'Without Conditional Access policies, every login is treated the same regardless of risk — missing a key layer of context-aware defense.',
+    'Heavy reliance on VPN grants remote users broad network-level access, expanding the attack surface if a single credential is compromised.',
+    'Your remote users require full network-level access to reach applications, enabling lateral movement if an account is breached.',
+    'Sensitive documents shared as email attachments are permanently outside your control — they cannot be revoked, tracked, or audited once sent.',
+    'Shared files that cannot be revoked remain accessible indefinitely, even after a vendor relationship ends or an employee departs.',
+    'Every file copy sent to an external party is data you no longer control — it lives on their systems, devices, and email servers beyond your governance.',
+    'Without file and folder-level access controls, you cannot enforce least-privilege, leading to over-permissioning and unnecessary data exposure.',
+    'If you cannot immediately identify who has access to sensitive information, you cannot scope a breach or demonstrate least-privilege compliance.',
+    'Untracked external access is a critical third-party risk — you cannot prove which vendors, auditors, or partners hold access at any point in time.',
+    'Without complete audit trails, you cannot prove what happened during an incident — incomplete logs are themselves a compliance violation.',
+    'When vendor relationships end or security incidents occur, the inability to revoke third-party access immediately leaves an open window of exposure.',
+  ],
+  recommendations: [
+    'Continue advancing toward adaptive, AI-driven access governance — leveraging behavioral analytics and automated policy enforcement to stay ahead of emerging threats.',
+    'Consider sharing your Zero Trust Data Access maturity journey externally — your organization is positioned as a leader and a reference for peers.',
+    'Deploy a Zero Trust Data Access solution such as FileFlex Enterprise to extend Zero Trust principles to the data layer — securing files wherever they live without moving them.',
+    'Prioritize MFA rollout across all users and systems — this is the single highest-impact control for preventing credential-based breaches.',
+    'Implement a centralized Identity and Access Management platform to apply consistent access policies across every application and system.',
+    'Begin deploying Conditional Access policies that evaluate user risk, device compliance, and context before granting access.',
+    'Replace email attachment and cloud link sharing for sensitive documents with a controlled access platform that retains ownership and auditability.',
+    'Evaluate Zero Trust Network Access solutions such as Microsoft Entra Private Access or Zscaler to replace broad VPN access with per-application access.',
+    'Pilot ZTNA for a subset of remote workers or high-risk applications to demonstrate value before a broader rollout.',
+    'Integrate your existing IAM platform with ZTNA to ensure access decisions consistently rely on verified identity and device posture.',
+    'Enable auditors and regulators to access information directly through a governed portal, eliminating the compliance risk of emailed copies.',
+    'Establish a secure, controlled board communication platform so sensitive materials are accessed remotely without uncontrolled local copies.',
+    'Implement Zero Trust Data Access controls to extend your security posture to the data layer — granular, revocable, copy-free external collaboration.',
+    'Evaluate FileFlex Enterprise as the next step in your Zero Trust journey — adding file- and folder-level access, revocation, and audit trails to data you already store.',
+    'Establish policy-based access controls for sensitive documents, enforcing least-privilege at the file and folder level.',
+    'Implement comprehensive audit trails and real-time activity monitoring to capture every access event for compliance and forensics.',
+    'Develop automated access review workflows that continuously verify who has access and revoke it the moment it is no longer required.',
+    'Integrate data access governance reporting with your compliance program to demonstrate control over internal and third-party access on demand.',
+  ],
+};
+
+// Data passed to the client for scoring + rendering.
+const CONFIG = { sections: SECTIONS, sales: SALES, dims: DIMS, dimOrder: DIM_ORDER, levels: LEVELS, text: TEXT, turnstile: !!TURNSTILE_SITE_KEY };
+
+let qCounter = 0;
+---
+
+<Layout
+  title="Zero Trust Data Access Maturity Assessment | FileFlex Enterprise"
+  description="Take the free Zero Trust Data Access Maturity Assessment. Benchmark your organization across identity, ZTNA, data access and governance — and get your maturity level, your strengths and gaps, and a prioritized set of recommendations."
+>
+
+<Nav />
+
+<!-- HERO -->
+<section id="zta-hero" aria-labelledby="zta-hero-heading">
+  <div class="zta-hero__inner">
+    <span class="zta-hero__eyebrow">Free Assessment · 5 minutes</span>
+    <h1 id="zta-hero-heading" class="zta-hero__title">Zero Trust Data Access Maturity Assessment</h1>
+    <p class="zta-hero__lede">
+      Discover where your organization stands on the journey to Zero Trust Data Access. Answer 21
+      short questions across identity, network access, data collaboration, and governance to receive
+      your maturity level, a breakdown of your strengths and gaps, and a prioritized set of
+      recommendations.
+    </p>
+    <ul class="zta-hero__meta">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Your maturity level (1–5)
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+        Strengths, gaps &amp; next steps
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Downloadable PDF report
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- MAIN -->
+<section id="zta-main">
+  <div class="zta-main__inner">
+
+    <div class="zta-intro" id="zta-intro">
+      <p>
+        Your results appear on-screen instantly, and we email you a PDF copy of your report. We
+        use your contact details only to send your results and, with your consent, to follow up
+        about advancing your Zero Trust Data Access maturity. The whole assessment takes about five minutes.
+      </p>
+    </div>
+
+    <!-- FORM -->
+    <form id="zta-form" class="zta-form" novalidate>
+
+      <div class="zta-progress" aria-hidden="true">
+        <div class="zta-progress__track"><div class="zta-progress__fill" id="zta-progress-fill"></div></div>
+        <p class="zta-progress__label" id="zta-progress-label">0 of 21 questions answered</p>
+      </div>
+
+      <!-- Pre-survey -->
+      <fieldset class="zta-section" style="border:0;padding:28px 28px 22px;">
+        <div class="zta-section__head">
+          <span class="zta-section__num">About you</span>
+        </div>
+        <h2 class="zta-section__title">Where should we send your report?</h2>
+        <p class="zta-section__max">All fields required.</p>
+        <div class="zta-fields">
+          <div class="zta-field sla-field--full zta-field--full">
+            <label for="zta-name">Full name <span class="zta-req" aria-hidden="true">*</span></label>
+            <input id="zta-name" name="fullname" type="text" autocomplete="name" required />
+          </div>
+          <div class="zta-field">
+            <label for="zta-company">Company <span class="zta-req" aria-hidden="true">*</span></label>
+            <input id="zta-company" name="company" type="text" autocomplete="organization" required />
+          </div>
+          <div class="zta-field">
+            <label for="zta-email">Work email <span class="zta-req" aria-hidden="true">*</span></label>
+            <input id="zta-email" name="email" type="email" autocomplete="email" required />
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Scored sections -->
+      {SECTIONS.map((sec, si) => (
+        <fieldset class="zta-section" data-section={sec.id} data-dim={sec.dim}>
+          <div class="zta-section__head">
+            <span class="zta-section__num">Section {si + 1}</span>
+          </div>
+          <h2 class="zta-section__title">{sec.title}</h2>
+          <p class="zta-section__max">{DIMS[sec.dim].label}</p>
+          {sec.questions.map((q) => {
+            qCounter += 1;
+            const n = qCounter;
+            const isMulti = q.type === 'multi';
+            return (
+              <div class="zta-q" role="group" aria-labelledby={`lbl-${q.id}`} data-qid={q.id} data-multi={isMulti ? '1' : '0'}>
+                <p class="zta-q__text" id={`lbl-${q.id}`}>
+                  {n}. {q.text} <span class="zta-req" aria-hidden="true">*</span>
+                  {q.note && <span class="zta-q__note">{q.note}</span>}
+                </p>
+                <div class="zta-opts">
+                  {q.options.map((opt) => {
+                    const label = Array.isArray(opt) ? opt[0] : opt;
+                    const points = Array.isArray(opt) ? opt[1] : '';
+                    return (
+                      <label class="zta-opt">
+                        <input type={isMulti ? 'checkbox' : 'radio'} name={q.id} value={label} data-points={points} />
+                        <span>{label}</span>
+                      </label>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
+        </fieldset>
+      ))}
+
+      <!-- Section E — sales intelligence -->
+      <fieldset class="zta-section">
+        <div class="zta-section__head">
+          <span class="zta-section__num">One last thing</span>
+        </div>
+        <h2 class="zta-section__title">Help us personalize your results</h2>
+        <p class="zta-section__max">Optional — these help us tailor your recommendations.</p>
+        {SALES.map((q) => (
+          <div class="zta-q" role="group" aria-labelledby={`lbl-${q.id}`} data-qid={q.id} data-multi="1" data-sales="1">
+            <p class="zta-q__text" id={`lbl-${q.id}`}>{q.text}</p>
+            <div class="zta-opts">
+              {q.options.map((opt) => (
+                <label class="zta-opt">
+                  <input type="checkbox" name={q.id} value={opt} />
+                  <span>{opt}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+        ))}
+        <div class="zta-field zta-field--full" style="margin-top:18px;">
+          <label for="zta-users">How many users are supported by IT? <span class="zta-req" aria-hidden="true">*</span></label>
+          <select id="zta-users" name="itUserCount" required>
+            <option value="" selected disabled>Select a range…</option>
+            <option value="1–50">1–50</option>
+            <option value="51–250">51–250</option>
+            <option value="251–1,000">251–1,000</option>
+            <option value="1,001–5,000">1,001–5,000</option>
+            <option value="5,001–10,000">5,001–10,000</option>
+            <option value="10,000+">10,000+</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- consent + honeypot -->
+      <div class="zta-consent">
+        <label class="zta-opt" style="border:0;padding:0;background:none;">
+          <input type="checkbox" id="zta-consent" name="communicationConsent" value="true" />
+          <span>I agree to receive communications from fileflex.com about my results and related topics. You can unsubscribe at any time. See our <a href="https://www.qnext.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.</span>
+        </label>
+      </div>
+      <div class="zta-honeypot" aria-hidden="true">
+        <label for="zta-website-url">Leave this field blank</label>
+        <input id="zta-website-url" type="text" name="website_url_confirm" tabindex="-1" autocomplete="off" />
+      </div>
+
+      {TURNSTILE_SITE_KEY && (
+        <div class="zta-turnstile">
+          <div class="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-theme="light" data-action="zt-assessment"></div>
+        </div>
+      )}
+
+      <div class="zta-actions">
+        <button type="submit" class="zta-btn" id="zta-submit">See my results</button>
+      </div>
+      <div class="zta-error" id="zta-error" role="alert"></div>
+    </form>
+
+    <!-- REPORT (rendered by JS) -->
+    <div id="zta-report" aria-live="polite"></div>
+
+  </div>
+</section>
+
+<script is:inline define:vars={{ CONFIG }}>
+  (function () {
+    var form = document.getElementById('zta-form');
+    if (!form) return;
+    var sections = CONFIG.sections;
+    var sales = CONFIG.sales;
+    var dims = CONFIG.dims;
+    var dimOrder = CONFIG.dimOrder;
+    var LEVELS = CONFIG.levels;
+    var TEXT = CONFIG.text;
+    var errorEl = document.getElementById('zta-error');
+    var fillEl = document.getElementById('zta-progress-fill');
+    var labelEl = document.getElementById('zta-progress-label');
+    var reportEl = document.getElementById('zta-report');
+    var submitBtn = document.getElementById('zta-submit');
+    var renderedAt = Date.now();
+
+    var allQ = [];
+    sections.forEach(function (s) { s.questions.forEach(function (q) { allQ.push(q.id); }); });
+
+    function isAnswered(id) {
+      return !!form.querySelector('input[name="' + id + '"]:checked');
+    }
+    function answeredCount() {
+      var c = 0;
+      allQ.forEach(function (id) { if (isAnswered(id)) c++; });
+      return c;
+    }
+    function updateProgress() {
+      var c = answeredCount();
+      var pct = Math.round((c / allQ.length) * 100);
+      if (fillEl) fillEl.style.width = pct + '%';
+      if (labelEl) labelEl.textContent = c + ' of ' + allQ.length + ' questions answered';
+    }
+    form.addEventListener('change', updateProgress);
+    updateProgress();
+
+    function esc(s) {
+      return String(s).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      });
+    }
+
+    function selectedValues(id) {
+      var els = form.querySelectorAll('input[name="' + id + '"]:checked');
+      var out = [];
+      els.forEach(function (el) { out.push(el.value); });
+      return out;
+    }
+    function selectedPoints(id) {
+      var els = form.querySelectorAll('input[name="' + id + '"]:checked');
+      var max = 0, any = false;
+      els.forEach(function (el) {
+        var p = Number(el.getAttribute('data-points'));
+        if (!isNaN(p)) { any = true; if (p > max) max = p; }
+      });
+      return any ? max : 0;
+    }
+    function singlePoints(id) {
+      var el = form.querySelector('input[name="' + id + '"]:checked');
+      return el ? (Number(el.getAttribute('data-points')) || 0) : 0;
+    }
+    function answerLabel(id) {
+      return selectedValues(id).join(', ');
+    }
+    function has(id, val) {
+      return selectedValues(id).indexOf(val) !== -1;
+    }
+
+    // ---- scoring (validated 94/94 against the live app) ----
+    function score() {
+      var s = {
+        identity: singlePoints('q2') + singlePoints('q3') + singlePoints('q4'),
+        ztna: singlePoints('q5') + singlePoints('q7') + singlePoints('q8'),
+        dataAccess: selectedPoints('q9') + singlePoints('q10') + singlePoints('q11') + singlePoints('q12') + singlePoints('q13') + singlePoints('q14') + singlePoints('q15') + singlePoints('q16'),
+        governance: singlePoints('q17') + singlePoints('q18') + singlePoints('q19') + singlePoints('q20') + singlePoints('q21'),
+      };
+      return s;
+    }
+    function levelOf(s) {
+      var l = 1;
+      if (s.identity >= 5) { l = 2;
+        if (s.ztna >= 5) { l = 3;
+          if (s.dataAccess >= 11) { l = 4;
+            if (s.governance >= 8) { l = 5; } } } }
+      return l;
+    }
+    function strengthsOf(s) {
+      var R = TEXT.strengths, out = [];
+      if (s.identity >= 5) out.push(R[0]); else if (s.identity >= 2) out.push(R[8]);
+      if (has('q4', 'Extensive')) out.push(R[1]);
+      if (s.ztna >= 5) out.push(R[2]);
+      if (s.dataAccess >= 11) out.push(R[3]); else if (s.dataAccess >= 6) out.push(R[9]);
+      if (has('q10', 'Immediately')) out.push(R[5]);
+      if (has('q12', 'Yes')) out.push(R[6]);
+      if (s.governance >= 8) out.push(R[4]); else if (s.governance >= 4) out.push(R[10]);
+      if (out.length === 0) out.push(R[7]);
+      return out.slice().sort(function (a, b) { return R.indexOf(a) - R.indexOf(b); });
+    }
+    function gapsOf(s) {
+      var G = TEXT.gaps, out = [];
+      out.push(G[0]);
+      if (s.identity < 5) {
+        if (!has('q2', 'Yes')) out.push(G[1]);
+        if (!has('q3', 'Yes')) out.push(G[2]);
+        if (!has('q4', 'Extensive')) out.push(G[3]);
+      }
+      if (s.ztna < 5) {
+        if (has('q5', 'VPN') || has('q5', 'Mostly VPN')) out.push(G[4]);
+        if (!has('q7', 'Yes') || !has('q8', 'Fully')) out.push(G[5]);
+      }
+      if (s.dataAccess < 11 && has('q9', 'Email attachments')) out.push(G[6]);
+      if (s.dataAccess < 4) out.push(G[7]);
+      if (s.dataAccess <= 6) out.push(G[8]);
+      if (s.dataAccess <= 9) out.push(G[9]);
+      if (s.governance < 2) out.push(G[10]);
+      if (s.governance < 4) out.push(G[11]);
+      if (s.governance < 6) out.push(G[12]);
+      if (s.governance < 8) out.push(G[13]);
+      return out.slice().sort(function (a, b) { return G.indexOf(a) - G.indexOf(b); });
+    }
+    function recsOf(s, lvl) {
+      var R = TEXT.recommendations, out = [];
+      out.push(R[2]);
+      if (lvl === 1) out.push(R[3], R[4], R[5]);
+      else if (lvl === 2) out.push(R[7], R[8], R[9]);
+      else if (lvl === 3) out.push(R[12], R[13], R[14]);
+      else if (lvl === 4) out.push(R[15], R[16], R[17]);
+      else if (lvl === 5) out.push(R[0], R[1]);
+      var emailCloud = has('q9', 'Email attachments') || has('q9', 'Cloud links (SharePoint, Drive etc.)');
+      if (emailCloud) out.push(R[6]);
+      if (!has('q14', 'Yes') && !emailCloud) out.push(R[10]);
+      if (!has('q15', 'Yes') && s.dataAccess >= 11) out.push(R[11]);
+      return out.slice().sort(function (a, b) { return R.indexOf(a) - R.indexOf(b); });
+    }
+
+    function compute() {
+      var s = score();
+      var lvl = levelOf(s);
+      return {
+        scores: s,
+        level: lvl,
+        levelName: LEVELS[lvl].name,
+        levelDesc: LEVELS[lvl].desc,
+        next: lvl < 5 ? { name: LEVELS[lvl + 1].name, desc: LEVELS[lvl + 1].desc } : null,
+        sections: dimOrder.map(function (k) {
+          return { key: k, label: dims[k].label, score: s[k], max: dims[k].max, gate: dims[k].gate };
+        }),
+        strengths: strengthsOf(s),
+        gaps: gapsOf(s),
+        recommendations: recsOf(s, lvl),
+      };
+    }
+
+    var CHK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+    var ALERT = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>';
+    var ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
+
+    function render(data) {
+      var name = (form.querySelector('#zta-name').value || '').trim();
+      var company = (form.querySelector('#zta-company').value || '').trim();
+      var html = '';
+      html += '<p class="zta-report__brand">Zero Trust Data Access Maturity Assessment™</p>';
+      html += '<p class="zta-report__for">Prepared for ' + esc(name || 'you') + (company ? ', ' + esc(company) : '') + '</p>';
+
+      html += '<div class="zta-report__tools">';
+      html += '<button type="button" class="zta-btn" id="zta-print">Download PDF report</button>';
+      html += '<button type="button" class="zta-btn zta-btn--ghost" id="zta-retake">Retake assessment</button>';
+      html += '</div>';
+      html += '<p class="zta-report__status" id="zta-email-status" role="status"></p>';
+
+      // level header
+      var pct = Math.round((data.level / 5) * 100);
+      html += '<div class="zta-level">';
+      html += '<div class="zta-level__dial" style="--pct:' + pct + '"><div class="zta-level__dial-inner"><div class="zta-level__dial-num">' + data.level + '<span class="zta-level__dial-of">/5</span></div><span class="zta-level__dial-word">Maturity</span></div></div>';
+      html += '<div class="zta-level__meta"><p class="zta-level__eyebrow">Level ' + data.level + ' of 5</p><h2 class="zta-level__name">' + esc(data.levelName) + '</h2><p class="zta-level__desc">' + esc(data.levelDesc) + '</p></div>';
+      html += '</div>';
+
+      // next milestone
+      if (data.next) {
+        html += '<div class="zta-next"><p class="zta-next__eyebrow">Your next milestone</p>';
+        html += '<p class="zta-next__name">Level ' + (data.level + 1) + ' — ' + esc(data.next.name) + '</p>';
+        html += '<p>' + esc(data.next.desc) + '</p></div>';
+      }
+
+      // section scores
+      html += '<div class="zta-card"><h3 class="zta-card__title">Your Section Scores</h3><p class="zta-card__sub">How you scored across the four dimensions of Zero Trust Data Access. The marker shows the score needed to clear each level gate.</p><div class="zta-bars">';
+      data.sections.forEach(function (c) {
+        var p = Math.round((c.score / c.max) * 100);
+        var gatePct = Math.round((c.gate / c.max) * 100);
+        var cls = c.score >= c.gate ? ' zta-bar__fill--strong' : (p < 40 ? ' zta-bar__fill--weak' : '');
+        html += '<div class="zta-bar"><div class="zta-bar__top"><span class="zta-bar__label">' + esc(c.label) + '</span><span class="zta-bar__val">' + c.score + ' / ' + c.max + '</span></div>';
+        html += '<div class="zta-bar__track"><div class="zta-bar__fill' + cls + '" data-w="' + p + '"></div><span class="zta-bar__gate" style="left:' + gatePct + '%"></span></div></div>';
+      });
+      html += '</div><p class="zta-bars__legend"><span></span> Score required to reach the next maturity level</p></div>';
+
+      // strengths
+      if (data.strengths.length) {
+        html += '<div class="zta-card"><h3 class="zta-card__title">Your Strengths</h3><p class="zta-card__sub">What your organization is doing well today.</p><div class="zta-list zta-list--strength">';
+        data.strengths.forEach(function (t) { html += '<div class="zta-list__item">' + CHK + '<span>' + esc(t) + '</span></div>'; });
+        html += '</div></div>';
+      }
+      // gaps
+      if (data.gaps.length) {
+        html += '<div class="zta-card"><h3 class="zta-card__title">Your Gaps</h3><p class="zta-card__sub">Where data remains exposed and control is incomplete.</p><div class="zta-list zta-list--gap">';
+        data.gaps.forEach(function (t) { html += '<div class="zta-list__item">' + ALERT + '<span>' + esc(t) + '</span></div>'; });
+        html += '</div></div>';
+      }
+      // recommendations
+      if (data.recommendations.length) {
+        html += '<div class="zta-card"><h3 class="zta-card__title">Recommended Next Steps</h3><p class="zta-card__sub">The actions that will most advance your Zero Trust Data Access maturity.</p><div class="zta-list zta-list--rec">';
+        data.recommendations.forEach(function (t) { html += '<div class="zta-list__item">' + ARROW + '<span>' + esc(t) + '</span></div>'; });
+        html += '</div></div>';
+      }
+
+      // CTA
+      html += '<div class="zta-cta"><h2>See where FileFlex closes your gaps</h2><p>FileFlex Enterprise applies Zero Trust Data Access to your files — least-privilege, view-only, no-download access with a complete audit trail, without moving your data. Talk to us about the gaps and recommendations above.</p><div class="zta-cta__row"><a class="zta-btn" href="/demo-request/">Request a demo</a><a class="zta-btn zta-btn--ghost" href="/credit-unions/">Explore Zero Trust for credit unions</a></div></div>';
+
+      reportEl.innerHTML = html;
+      reportEl.classList.add('is-show');
+
+      requestAnimationFrame(function () {
+        reportEl.querySelectorAll('.zta-bar__fill').forEach(function (el) { el.style.width = (el.getAttribute('data-w') || 0) + '%'; });
+      });
+
+      document.getElementById('zta-print').addEventListener('click', function () { if (pdfState && pdfState.save) { pdfState.save(); } else { window.print(); } });
+      document.getElementById('zta-retake').addEventListener('click', function () {
+        reportEl.classList.remove('is-show');
+        reportEl.innerHTML = '';
+        form.reset();
+        updateProgress();
+        submitBtn.disabled = false;
+        form.style.display = '';
+        document.getElementById('zta-intro').style.display = '';
+        if (CONFIG.turnstile && window.turnstile) { try { window.turnstile.reset(); } catch (e) {} }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // ---- PDF generation + email delivery -----------------------------------
+    var ENDPOINT = '/api/send-zt-assessment';
+    var pdfState = null;
+    var pdfLibs = null;
+
+    function loadScript(src) {
+      return new Promise(function (resolve, reject) {
+        var s = document.createElement('script');
+        s.src = src; s.async = true;
+        s.onload = function () { resolve(); };
+        s.onerror = function () { reject(new Error('Failed to load ' + src)); };
+        document.head.appendChild(s);
+      });
+    }
+    function ensurePdfLibs() {
+      if (pdfLibs) return pdfLibs;
+      pdfLibs = loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js').then(function () {
+        return loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js');
+      });
+      return pdfLibs;
+    }
+
+    function gatherContact() {
+      var users = form.querySelector('#zta-users');
+      return {
+        name: (form.querySelector('#zta-name').value || '').trim(),
+        company: (form.querySelector('#zta-company').value || '').trim(),
+        email: (form.querySelector('#zta-email').value || '').trim(),
+        users: users ? (users.value || '').trim() : '',
+        consent: !!(form.querySelector('#zta-consent') && form.querySelector('#zta-consent').checked)
+      };
+    }
+    function gatherSalesIntelligence() {
+      var out = {};
+      sales.forEach(function (q) { out[q.id] = selectedValues(q.id); });
+      var users = form.querySelector('#zta-users');
+      out.itUserCount = users ? (users.value || '').trim() : '';
+      return out;
+    }
+    function gatherAnswers() {
+      var out = [];
+      sections.forEach(function (s) {
+        s.questions.forEach(function (q) {
+          out.push({ section: s.title, question: q.text, answer: answerLabel(q.id), points: q.info ? '' : (q.type === 'multi' ? selectedPoints(q.id) : singlePoints(q.id)) });
+        });
+      });
+      return out;
+    }
+
+    function setEmailStatus(msg, kind) {
+      var el = document.getElementById('zta-email-status');
+      if (!el) return;
+      el.textContent = msg;
+      el.className = 'zta-report__status' + (kind ? ' is-' + kind : '');
+    }
+
+    function buildPdf(data, contact) {
+      var jsPDF = window.jspdf.jsPDF;
+      var doc = new jsPDF({ unit: 'pt', format: 'a4' });
+      var pageW = doc.internal.pageSize.getWidth();
+      var pageH = doc.internal.pageSize.getHeight();
+      var M = 40;
+      var orange = [232, 89, 10];
+      var navy = [14, 26, 43];
+      var grey = [90, 100, 115];
+      var y;
+
+      doc.setFillColor(navy[0], navy[1], navy[2]);
+      doc.rect(0, 0, pageW, 92, 'F');
+      doc.setTextColor(255, 255, 255);
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(16);
+      doc.text('Zero Trust Data Access Maturity Assessment', M, 40);
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(10);
+      doc.setTextColor(210, 216, 224);
+      doc.text('Prepared for ' + (contact.name || 'you') + (contact.company ? ', ' + contact.company : '') + '  -  ' + new Date().toLocaleDateString(), M, 64);
+
+      y = 124;
+      doc.setTextColor(navy[0], navy[1], navy[2]);
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(30);
+      doc.text('Level ' + data.level + ' of 5', M, y);
+      doc.setFontSize(15); doc.setTextColor(orange[0], orange[1], orange[2]);
+      doc.text(data.levelName, M, y + 22);
+      y += 44;
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(10.5); doc.setTextColor(grey[0], grey[1], grey[2]);
+      var ld = doc.splitTextToSize(data.levelDesc, pageW - M * 2);
+      doc.text(ld, M, y); y += ld.length * 13 + 12;
+
+      if (data.next) {
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(navy[0], navy[1], navy[2]);
+        doc.text('Next milestone: Level ' + (data.level + 1) + ' - ' + data.next.name, M, y); y += 15;
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor(grey[0], grey[1], grey[2]);
+        var nd = doc.splitTextToSize(data.next.desc, pageW - M * 2);
+        doc.text(nd, M, y); y += nd.length * 12 + 14;
+      }
+
+      doc.autoTable({
+        startY: y,
+        head: [['Section', 'Score', 'Level gate', 'Status']],
+        body: data.sections.map(function (c) { return [c.label, c.score + ' / ' + c.max, c.gate + ' / ' + c.max, c.score >= c.gate ? 'Achieved' : 'In progress']; }),
+        theme: 'grid', headStyles: { fillColor: navy, textColor: 255 },
+        styles: { fontSize: 10, cellPadding: 6 }, margin: { left: M, right: M }
+      });
+      y = doc.lastAutoTable.finalY + 24;
+
+      function ensureSpace(need) { if (y + need > pageH - M) { doc.addPage(); y = M + 10; } }
+      function block(title, items, color) {
+        ensureSpace(30);
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(14); doc.setTextColor(navy[0], navy[1], navy[2]);
+        doc.text(title, M, y); y += 16;
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(10);
+        items.forEach(function (t) {
+          var lines = doc.splitTextToSize('-  ' + t, pageW - M * 2 - 8);
+          ensureSpace(lines.length * 12 + 6);
+          doc.setTextColor(color[0], color[1], color[2]);
+          doc.text(lines, M + 6, y); y += lines.length * 12 + 6;
+        });
+        y += 8;
+      }
+      if (data.strengths.length) block('Your Strengths', data.strengths, [30, 107, 52]);
+      if (data.gaps.length) block('Your Gaps', data.gaps, [176, 0, 32]);
+      if (data.recommendations.length) block('Recommended Next Steps', data.recommendations, grey);
+
+      var pages = doc.internal.getNumberOfPages();
+      for (var p = 1; p <= pages; p++) {
+        doc.setPage(p);
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(150, 158, 170);
+        doc.text('FileFlex Enterprise - Zero Trust Data Access - fileflex.com', M, pageH - 20);
+        doc.text(p + ' / ' + pages, pageW - M, pageH - 20, { align: 'right' });
+      }
+
+      var uri = doc.output('datauristring');
+      var base64 = uri.substring(uri.indexOf(',') + 1);
+      var fname = 'FileFlex-Zero-Trust-Assessment' + (contact.company ? '-' + contact.company.replace(/[^a-z0-9]+/gi, '-') : '') + '.pdf';
+      return { base64: base64, save: function () { doc.save(fname); } };
+    }
+
+    function finalize(data) {
+      var contact = gatherContact();
+      setEmailStatus('Preparing your PDF report...');
+      ensurePdfLibs().then(function () {
+        try {
+          pdfState = buildPdf(data, contact);
+        } catch (err) {
+          setEmailStatus('Your report is shown below. (PDF generation was unavailable.)', 'warn');
+          return;
+        }
+        var honeyEl = form.querySelector('[name="website_url_confirm"]');
+        var payload = {
+          contact: contact,
+          level: data.level,
+          levelName: data.levelName,
+          levelDescription: data.levelDesc,
+          nextLevelName: data.next ? data.next.name : '',
+          nextLevelDescription: data.next ? data.next.desc : '',
+          sections: data.sections,
+          strengths: data.strengths,
+          gaps: data.gaps,
+          recommendations: data.recommendations,
+          salesIntelligence: gatherSalesIntelligence(),
+          answers: gatherAnswers(),
+          pdfBase64: pdfState.base64,
+          turnstileToken: (function () { var t = form.querySelector('[name="cf-turnstile-response"]'); return t ? t.value : ''; })(),
+          website_url_confirm: honeyEl ? honeyEl.value : ''
+        };
+        setEmailStatus('Emailing your report to ' + (contact.email || 'you') + '...');
+        fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+          .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); })
+          .then(function (res) {
+            if (res.ok && res.j && res.j.ok) {
+              setEmailStatus('We have emailed your report to ' + contact.email + '. You can also download it above.', 'ok');
+            } else {
+              setEmailStatus('Your report is ready below - use "Download PDF report" to save it. (We could not email it just now.)', 'warn');
+            }
+          })
+          .catch(function () {
+            setEmailStatus('Your report is ready below - use "Download PDF report" to save it. (We could not email it just now.)', 'warn');
+          });
+      }).catch(function () {
+        setEmailStatus('Your report is shown below - use "Download PDF report" to print/save it.', 'warn');
+      });
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      errorEl.classList.remove('is-show');
+
+      var honey = form.querySelector('[name="website_url_confirm"]');
+      if (honey && honey.value) return;
+      if (Date.now() - renderedAt < 2500) {
+        errorEl.textContent = 'Please take a moment to review your answers before submitting.';
+        errorEl.classList.add('is-show');
+        return;
+      }
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      var c = answeredCount();
+      if (c < allQ.length) {
+        errorEl.textContent = 'Please answer all ' + allQ.length + ' questions — ' + (allQ.length - c) + ' remaining.';
+        errorEl.classList.add('is-show');
+        var firstMissing = null;
+        for (var i = 0; i < allQ.length; i++) {
+          if (!isAnswered(allQ[i])) { firstMissing = allQ[i]; break; }
+        }
+        if (firstMissing) {
+          var grp = document.getElementById('lbl-' + firstMissing);
+          if (grp) grp.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        return;
+      }
+
+      if (CONFIG.turnstile) {
+        var tEl = form.querySelector('[name="cf-turnstile-response"]');
+        if (!tEl || !tEl.value) {
+          errorEl.textContent = 'Please complete the verification check, then submit.';
+          errorEl.classList.add('is-show');
+          return;
+        }
+      }
+
+      var data = compute();
+      submitBtn.disabled = true;
+
+      form.style.display = 'none';
+      document.getElementById('zta-intro').style.display = 'none';
+      render(data);
+      finalize(data);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+</script>
+
+{TURNSTILE_SITE_KEY && <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer is:inline></script>}
+
+</Layout>
