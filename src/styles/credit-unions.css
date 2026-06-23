@@ -21,6 +21,7 @@
   z-index: -1;
 }
 .cu-hero__content { max-width: 900px; margin: 0 auto 0 0; }
+.cu-hero__ctas { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
 .cu-hero__eyebrow {
   display: inline-block;
   font-size: 14px;
