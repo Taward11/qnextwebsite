@@ -18,6 +18,36 @@ uri = "file://attached_assets/generated_images/ztda-gap-folder.png"
 type = "image"
 title = "gap folder oversharing"
 
+[[generated]]
+id = "dPKp5Oh20Nf2GNeEPpOlx"
+uri = "file://attached_assets/generated_images/mr-challenge-borrowers.png"
+type = "image"
+title = "borrowers card"
+
+[[generated]]
+id = "fIJfjpdzHsx-5MPxgwfOc"
+uri = "file://attached_assets/generated_images/mr-challenge-brokers.png"
+type = "image"
+title = "brokers card"
+
+[[generated]]
+id = "NWAyub-GDkK7IvHKsna62"
+uri = "file://attached_assets/generated_images/mr-challenge-underwriters.png"
+type = "image"
+title = "underwriters card"
+
+[[generated]]
+id = "JIpRaax5-nIA_wdvnOnzB"
+uri = "file://attached_assets/generated_images/mr-challenge-appraisers.png"
+type = "image"
+title = "appraisers card"
+
+[[generated]]
+id = "_21sT94DlMDpmMx4cOzxY"
+uri = "file://attached_assets/generated_images/mr-challenge-lawyers.png"
+type = "image"
+title = "lawyers card"
+
 [[outputs]]
 id = "wssrYHILOy549CZAkG2ky"
 uri = "file://public/images/lending/lending-collaboration-framework.svg"

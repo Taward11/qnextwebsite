@@ -130,8 +130,17 @@
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 16px;
-  padding: 28px 24px;
+  overflow: hidden;
+  padding: 0 24px 28px;
   text-align: left;
+}
+.mr-card__img {
+  display: block;
+  width: calc(100% + 48px);
+  margin: 0 -24px 24px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .mr-card--dark .mr-card__num {
   font-size: 13px;
