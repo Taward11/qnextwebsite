@@ -330,6 +330,10 @@ let qCounter = 0;
     var submitBtn = document.getElementById('sla-submit');
     var renderedAt = Date.now();
 
+    // Preload the FileFlex logo so it is ready to embed on the PDF cover.
+    var brandLogo = new Image();
+    brandLogo.src = '/images/fileflex-logo.webp';
+
     var allQ = [];
     sections.forEach(function (s) { s.questions.forEach(function (q) { allQ.push(q.id); }); });
 
@@ -600,6 +604,21 @@ let qCounter = 0;
         doc.setFont('helvetica', 'normal'); setColor(ORANGE);
         doc.text(' Enterprise', x + w, by);
       }
+      // Draw the FileFlex logo in the cover's upper-left; fall back to the
+      // text wordmark if the image hasn't loaded or can't be rasterized.
+      function coverLogo() {
+        try {
+          if (brandLogo && brandLogo.complete && brandLogo.naturalWidth) {
+            var c = document.createElement('canvas');
+            c.width = brandLogo.naturalWidth; c.height = brandLogo.naturalHeight;
+            c.getContext('2d').drawImage(brandLogo, 0, 0);
+            var lw = 132, lh = lw * (brandLogo.naturalHeight / brandLogo.naturalWidth);
+            doc.addImage(c.toDataURL('image/png'), 'PNG', M, 44, lw, lh);
+            return;
+          }
+        } catch (e) {}
+        brandMark(M, 64, 12);
+      }
 
       // Maturity levels (LV / NEXT / levelOf) are defined once at IIFE scope
       // and shared by the on-screen report and this PDF.
@@ -610,6 +629,8 @@ let qCounter = 0;
       // COVER PAGE
       // ---------------------------------------------------------------
       fill(ORANGE); doc.rect(0, 0, pageW, 12, 'F');
+
+      coverLogo();
 
       doc.setFont('helvetica', 'bold'); doc.setFontSize(10); setColor(SOFT);
       doc.text('CONFIDENTIAL ASSESSMENT REPORT', cx, 132, { align: 'center', charSpace: 1.4 });

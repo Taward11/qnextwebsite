@@ -29,6 +29,15 @@ as answered. Checkboxes must NOT use the native `required` attr (only the first 
 does) — rely on the JS validation. Apply the same averaging in both score() and
 gatherAnswers() so on-screen and emailed scores match.
 
+## PDF cover logo
+Both assessment PDFs draw the real FileFlex logo (`/images/fileflex-logo.webp`) in
+the cover's upper-left via a `coverLogo()` helper, falling back to the text wordmark
+(`brandMark`) if the image isn't ready. **Why:** jsPDF runs synchronously, so the
+logo is preloaded into an `Image` at script init; at draw time it's rasterized
+through a canvas to a PNG data URL (jsPDF doesn't reliably take webp directly).
+**How to apply:** keep both pages' coverLogo()/preload in sync; any brand-image
+change must go through the canvas→PNG path, not addImage(webp) directly.
+
 ## Report design parity with the Zero Trust assessment
 Both the on-screen report and the downloadable PDF of the lending assessment are
 intentionally kept visually identical to the Zero Trust Maturity Assessment's
