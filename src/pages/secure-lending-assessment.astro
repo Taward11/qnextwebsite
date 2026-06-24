@@ -544,91 +544,308 @@ let qCounter = 0;
       var doc = new jsPDF({ unit: 'pt', format: 'a4' });
       var pageW = doc.internal.pageSize.getWidth();
       var pageH = doc.internal.pageSize.getHeight();
-      var M = 40;
-      var orange = [232, 89, 10];
-      var navy = [14, 26, 43];
-      var grey = [90, 100, 115];
-      var y;
+      var M = 56;
+      var contentW = pageW - M * 2;
+      var cx = pageW / 2;
 
-      doc.setFillColor(navy[0], navy[1], navy[2]);
-      doc.rect(0, 0, pageW, 92, 'F');
-      doc.setTextColor(255, 255, 255);
+      var ORANGE = [232, 89, 10];
+      var INK = [23, 23, 26];
+      var SOFT = [92, 100, 112];
+      var LINE = [224, 227, 232];
+      var TRACK = [234, 236, 240];
+      var WASH = [250, 244, 238];
+      var WHITE = [255, 255, 255];
+
+      var today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+      var year = new Date().getFullYear();
+
+      function setColor(c) { doc.setTextColor(c[0], c[1], c[2]); }
+      function fill(c) { doc.setFillColor(c[0], c[1], c[2]); }
+      function brandMark(x, by, size) {
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(size); setColor(INK);
+        doc.text('FileFlex', x, by);
+        var w = doc.getTextWidth('FileFlex');
+        doc.setFont('helvetica', 'normal'); setColor(ORANGE);
+        doc.text(' Enterprise', x + w, by);
+      }
+
+      // Maturity levels for the lending collaboration journey.
+      var LV = {
+        1: { name: 'Ad Hoc Collaboration', desc: 'Borrower documents are exchanged largely through email and ad-hoc methods with little central control. Access, auditability and data protection depend on manual effort, leaving sensitive lending information exposed and slowing loan processing.' },
+        2: { name: 'Developing Collaboration', desc: 'Your institution has begun moving beyond email-based document exchange, with secure collaboration used for parts of the lending workflow. Foundational controls exist but coverage is inconsistent across access, auditability and data protection.' },
+        3: { name: 'Defined Collaboration', desc: 'Secure collaboration practices are established across much of the lending lifecycle. Access controls and activity logging are in place, though gaps in granular permissions, data control or auditability still create avoidable risk and friction.' },
+        4: { name: 'Managed Collaboration', desc: 'Borrower collaboration is governed by consistent, least-privilege controls with strong visibility into document access. Sensitive data largely stays under your control, and most lending workflows are both secure and efficient.' },
+        5: { name: 'Optimized Collaboration', desc: 'Secure lending collaboration is fully optimized — granular least-privilege access, complete auditability, and minimal data duplication across the entire lending lifecycle. Zero Trust principles extend directly to your borrower documents and external collaboration.' }
+      };
+      var NEXT = {
+        1: 'Reaching Developing Collaboration means replacing email attachments with a secure collaboration platform for your highest-risk lending workflows, and establishing basic access controls and activity logging.',
+        2: 'Reaching Defined Collaboration means extending secure collaboration consistently across the lending lifecycle, with role-based access, exportable audit trails, and reduced document duplication.',
+        3: 'Reaching Managed Collaboration means tightening to granular, least-privilege permissions with automatic expiration, view-only access that keeps borrower data under your control, and automated audit reporting.',
+        4: 'Reaching Optimized Collaboration means extending Zero Trust Data Access across every borrower document and external party — granular permissions, instant revocation, and complete audit trails with no data movement.'
+      };
+      function levelOf(pct) { return pct >= 81 ? 5 : pct >= 61 ? 4 : pct >= 41 ? 3 : pct >= 21 ? 2 : 1; }
+      var level = levelOf(data.overall);
+      var levelName = LV[level].name;
+
+      // ---------------------------------------------------------------
+      // COVER PAGE
+      // ---------------------------------------------------------------
+      fill(ORANGE); doc.rect(0, 0, pageW, 12, 'F');
+
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(10); setColor(SOFT);
+      doc.text('CONFIDENTIAL ASSESSMENT REPORT', cx, 132, { align: 'center', charSpace: 1.4 });
+      fill(ORANGE); doc.rect(cx - 30, 150, 60, 3, 'F');
+
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(25); setColor(INK);
+      doc.text('Secure Lending Collaboration', cx, 320, { align: 'center' });
+      doc.text('Assessment', cx, 354, { align: 'center' });
+
+      var pf = 452;
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(9.5); setColor(SOFT);
+      doc.text('PREPARED FOR', cx, pf, { align: 'center', charSpace: 1.2 });
+      var ny = pf + 30;
+      if (contact.company) {
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(18); setColor(INK);
+        doc.text(contact.company, cx, ny, { align: 'center' }); ny += 24;
+      }
+      var line2 = (contact.name ? contact.name.toUpperCase() : 'PREPARED FOR YOU') + (contact.email ? '   |   ' + contact.email : '');
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(11); setColor(INK);
+      doc.text(line2, cx, ny, { align: 'center' }); ny += 20;
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(10); setColor(SOFT);
+      doc.text(today, cx, ny, { align: 'center' });
+
+      // Current maturity level indicator with L1..L5 progression
+      var mlY = 612;
+      fill(WASH); doc.roundedRect(M + 24, mlY - 36, contentW - 48, 150, 10, 10, 'F');
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(9.5); setColor(ORANGE);
+      doc.text('CURRENT MATURITY LEVEL', cx, mlY, { align: 'center', charSpace: 1.2 });
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(20); setColor(INK);
+      doc.text('Level ' + level + ': ' + levelName, cx, mlY + 34, { align: 'center' });
+      (function () {
+        var n = 5, gap = 10, w = 56, h = 26;
+        var total = n * w + (n - 1) * gap;
+        var sx = cx - total / 2;
+        var py = mlY + 56;
+        for (var i = 1; i <= n; i++) {
+          var x = sx + (i - 1) * (w + gap);
+          var on = i <= level;
+          fill(on ? ORANGE : TRACK); doc.roundedRect(x, py, w, h, 5, 5, 'F');
+          doc.setFont('helvetica', 'bold'); doc.setFontSize(10); setColor(on ? WHITE : SOFT);
+          doc.text('L' + i, x + w / 2, py + 17, { align: 'center' });
+        }
+      })();
+
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); setColor(SOFT);
+      doc.text('\u00A9 ' + year + ' Qnext Corp. All rights reserved.   |   fileflex.com', cx, pageH - 52, { align: 'center' });
+
+      // ---------------------------------------------------------------
+      // CONTENT PAGES
+      // ---------------------------------------------------------------
+      var y = 0;
+      function pageHeader() {
+        fill(ORANGE); doc.rect(0, 0, pageW, 6, 'F');
+        brandMark(M, 38, 9.5);
+        fill(LINE); doc.rect(M, 50, contentW, 0.8, 'F');
+        y = 90;
+      }
+      function newPage() { doc.addPage(); pageHeader(); }
+      function ensure(need) { if (y + need > pageH - 60) { newPage(); } }
+
+      function sectionHeading(txt) {
+        ensure(50);
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(11); setColor(INK);
+        doc.text(txt.toUpperCase(), M, y, { charSpace: 1.7 });
+        y += 9;
+        fill(ORANGE); doc.rect(M, y, 38, 2.5, 'F');
+        y += 24;
+      }
+      function paragraph(txt, opts) {
+        opts = opts || {};
+        var size = opts.size || 10.5;
+        var color = opts.color || INK;
+        var lead = opts.lead || 15;
+        doc.setFont('helvetica', opts.bold ? 'bold' : 'normal'); doc.setFontSize(size); setColor(color);
+        var lines = doc.splitTextToSize(txt, contentW);
+        for (var i = 0; i < lines.length; i++) {
+          ensure(lead);
+          doc.text(lines[i], M, y);
+          y += lead;
+        }
+        y += (opts.gap == null ? 11 : opts.gap);
+      }
+      function bulletBlock(txt) {
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(10.5); setColor(INK);
+        var lines = doc.splitTextToSize(txt, contentW - 18);
+        ensure(lines.length * 15 + 6);
+        fill(ORANGE); doc.circle(M + 3, y - 3.5, 2, 'F');
+        for (var j = 0; j < lines.length; j++) {
+          doc.text(lines[j], M + 18, y); y += 15;
+        }
+        y += 10;
+      }
+
+      newPage();
+
+      // ---- Executive summary ----
+      sectionHeading('Executive Summary');
+      var leadName = contact.company || contact.name || 'Your organization';
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(11); setColor(INK);
+      doc.text(leadName + ' is at', M, y); y += 26;
       doc.setFont('helvetica', 'bold'); doc.setFontSize(17);
-      doc.text('Secure Lending Collaboration Assessment', M, 40);
-      doc.setFont('helvetica', 'normal'); doc.setFontSize(10);
-      doc.setTextColor(orange[0], orange[1], orange[2]);
-      doc.text('Zero Trust Lending Collaboration Assessment', M, 60);
-      doc.setTextColor(210, 216, 224);
-      doc.text('Prepared for ' + (contact.name || 'you') + (contact.company ? ', ' + contact.company : '') + '  -  ' + new Date().toLocaleDateString(), M, 78);
+      var lp = 'Level ' + level + ': ';
+      setColor(INK); doc.text(lp, M, y);
+      setColor(ORANGE); doc.text(levelName, M + doc.getTextWidth(lp), y); y += 24;
+      paragraph(LV[level].desc, { size: 10.5 });
 
-      y = 124;
-      doc.setTextColor(navy[0], navy[1], navy[2]);
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(38);
-      doc.text(String(data.overall) + ' / 100', M, y);
-      doc.setFontSize(13); doc.setTextColor(orange[0], orange[1], orange[2]);
-      doc.text(maturity(data.overall), M, y + 22);
-      doc.setFont('helvetica', 'normal'); doc.setFontSize(11); doc.setTextColor(grey[0], grey[1], grey[2]);
-      doc.text('Overall risk rating: ' + riskOf(data.overall), M, y + 40);
-      y += 62;
+      if (level < 5) {
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(10);
+        var ndesc = doc.splitTextToSize(NEXT[level], contentW - 32);
+        var boxH = 26 + 18 + ndesc.length * 14 + 16;
+        ensure(boxH + 12);
+        fill(WASH); doc.rect(M, y, contentW, boxH, 'F');
+        fill(ORANGE); doc.rect(M, y, 3.5, boxH, 'F');
+        var bx = M + 18, by = y + 24;
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(9); setColor(ORANGE);
+        doc.text('YOUR NEXT STEP', bx, by, { charSpace: 1 }); by += 22;
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(12); setColor(INK);
+        doc.text('Level ' + (level + 1) + ': ' + LV[level + 1].name, bx, by); by += 18;
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(10); setColor(SOFT);
+        for (var i = 0; i < ndesc.length; i++) { doc.text(ndesc[i], bx, by); by += 14; }
+        y += boxH + 20;
+      }
 
-      doc.autoTable({
-        startY: y,
-        head: [['Category', 'Score', '%', 'Rating']],
-        body: data.cats.map(function (c) { return [c.short, c.raw + ' / ' + c.max, c.pct + '%', rateLabel(band(c.pct))]; }),
-        theme: 'grid', headStyles: { fillColor: navy, textColor: 255 },
-        styles: { fontSize: 10, cellPadding: 6 }, margin: { left: M, right: M }
-      });
-      y = doc.lastAutoTable.finalY + 22;
+      // ---- Maturity roadmap ----
+      sectionHeading('Lending Collaboration Maturity Roadmap');
+      for (var li = 1; li <= 5; li++) {
+        ensure(30);
+        var current = (li === level);
+        var rowH = 26;
+        if (current) {
+          fill(WASH); doc.rect(M, y - 4, contentW, rowH, 'F');
+          fill(ORANGE); doc.rect(M, y - 4, 3.5, rowH, 'F');
+        }
+        fill(current ? ORANGE : TRACK); doc.circle(M + 18, y + 9, 3.5, 'F');
+        doc.setFont('helvetica', current ? 'bold' : 'normal'); doc.setFontSize(10.5); setColor(current ? INK : SOFT);
+        doc.text('Level ' + li + ' — ' + LV[li].name, M + 32, y + 12);
+        if (current) {
+          doc.setFont('helvetica', 'bold'); doc.setFontSize(8.5); setColor(ORANGE);
+          doc.text('YOUR POSITION', pageW - M - 6, y + 12, { align: 'right', charSpace: 0.8 });
+        }
+        y += rowH + 5;
+      }
+      y += 12;
 
-      doc.autoTable({
-        startY: y,
-        head: [['Category', 'Your %', 'Peer avg %', 'Delta']],
-        body: data.cats.map(function (c) { var d = c.pct - c.benchmark; return [c.short, c.pct + '%', c.benchmark + '%', (d >= 0 ? '+' : '') + d + ' pts']; }),
-        theme: 'grid', headStyles: { fillColor: navy, textColor: 255 },
-        styles: { fontSize: 10, cellPadding: 6 }, margin: { left: M, right: M }
-      });
-      y = doc.lastAutoTable.finalY + 26;
-
-      function ensureSpace(need) { if (y + need > pageH - M) { doc.addPage(); y = M + 10; } }
-
-      ensureSpace(28);
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(14); doc.setTextColor(navy[0], navy[1], navy[2]);
-      doc.text('Section Analysis', M, y); y += 18;
+      // ---- Score breakdown by category (scores + bars + notes + peer benchmark) ----
+      sectionHeading('Score Breakdown by Category');
       data.cats.forEach(function (c) {
-        var m = meta[c.id].bands[band(c.pct)];
-        ensureSpace(54);
-        doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(navy[0], navy[1], navy[2]);
-        doc.text(c.title + '  (' + c.raw + '/' + c.max + ' - ' + c.pct + '%)', M, y); y += 14;
-        doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor(grey[0], grey[1], grey[2]);
-        var l1 = doc.splitTextToSize(m.assessment, pageW - M * 2);
-        ensureSpace(l1.length * 12 + 6); doc.text(l1, M, y); y += l1.length * 12 + 4;
-        var l2 = doc.splitTextToSize((m.type === 'strength' ? 'Strength: ' : 'Opportunity: ') + m.note, pageW - M * 2);
-        ensureSpace(l2.length * 12 + 10); doc.setTextColor(orange[0], orange[1], orange[2]);
-        doc.text(l2, M, y); y += l2.length * 12 + 12;
+        var pct = Math.min(100, Math.max(4, c.pct));
+        ensure(78);
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(11); setColor(INK);
+        doc.text(c.title, M, y);
+        doc.text(c.raw + ' / ' + c.max, pageW - M, y, { align: 'right' });
+        y += 10;
+        var barH = 8;
+        fill(TRACK); doc.roundedRect(M, y, contentW, barH, 4, 4, 'F');
+        fill(ORANGE); doc.roundedRect(M, y, Math.min(contentW, Math.max(barH, contentW * pct / 100)), barH, 4, 4, 'F');
+        // peer benchmark tick
+        var bxp = M + contentW * Math.min(100, Math.max(0, c.benchmark)) / 100;
+        fill(INK); doc.rect(bxp - 0.75, y - 3, 1.5, barH + 6, 'F');
+        y += barH + 15;
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(9.5); setColor(SOFT);
+        var nl = doc.splitTextToSize(meta[c.id].bands[band(c.pct)].assessment, contentW);
+        for (var k = 0; k < nl.length; k++) { ensure(13); doc.text(nl[k], M, y); y += 13; }
+        y += 3;
+        var delta = c.pct - c.benchmark;
+        ensure(13);
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(9); setColor(SOFT);
+        doc.text('Peer average ' + c.benchmark + '%  ·  You scored ' + c.pct + '% (' + (delta >= 0 ? '+' : '') + delta + ' pts vs peers)', M, y);
+        y += 16;
+      });
+      y += 2;
+
+      // ---- What your organization is doing well ----
+      var strengths = [];
+      var gaps = [];
+      data.cats.forEach(function (c) {
+        var bnd = meta[c.id].bands[band(c.pct)];
+        var txt = bnd.assessment + ' ' + bnd.note;
+        if (bnd.type === 'strength') strengths.push(txt); else gaps.push(txt);
       });
 
+      if (strengths.length) {
+        sectionHeading('What Your Organization Is Doing Well');
+        strengths.forEach(function (t) { bulletBlock(t); });
+        y += 4;
+      }
+
+      // ---- Identified gaps & opportunities ----
+      if (gaps.length) {
+        sectionHeading('Identified Gaps & Opportunities');
+        paragraph('The following areas represent opportunities to strengthen your secure lending collaboration — each describes the gap and the risk it creates for your institution.', { color: SOFT, size: 10 });
+        gaps.forEach(function (t) { bulletBlock(t); });
+        y += 4;
+      }
+
+      // ---- Recommendations (numbered, orange tiles) — actions for the 3 priority areas ----
       var ranked = data.cats.slice().sort(function (a, b) { return a.pct - b.pct; }).slice(0, 3);
-      ensureSpace(28);
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(14); doc.setTextColor(navy[0], navy[1], navy[2]);
-      doc.text('Your Improvement Roadmap', M, y); y += 18;
-      ranked.forEach(function (c, i) {
-        ensureSpace(36);
-        doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(navy[0], navy[1], navy[2]);
-        doc.text('Priority #' + (i + 1) + ' - ' + c.short + ' (' + c.pct + '%)', M, y); y += 14;
-        doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor(grey[0], grey[1], grey[2]);
-        meta[c.id].actions.forEach(function (a) {
-          var la = doc.splitTextToSize('-  ' + a, pageW - M * 2 - 10);
-          ensureSpace(la.length * 12 + 4); doc.text(la, M + 8, y); y += la.length * 12 + 2;
+      var recs = [];
+      ranked.forEach(function (c) { meta[c.id].actions.forEach(function (a) { if (recs.indexOf(a) === -1) recs.push(a); }); });
+      if (recs.length) {
+        sectionHeading('Recommendations');
+        paragraph('Prioritized actions for the three areas where focused effort will have the greatest impact on your lending collaboration maturity.', { color: SOFT, size: 10 });
+        var numW = 32;
+        recs.forEach(function (t, i) {
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(10.5);
+          var lines = doc.splitTextToSize(t, contentW - numW);
+          ensure(Math.max(28, lines.length * 15) + 14);
+          fill(ORANGE); doc.roundedRect(M, y - 12, 20, 20, 3, 3, 'F');
+          doc.setFont('helvetica', 'bold'); doc.setFontSize(10.5); setColor(WHITE);
+          doc.text(String(i + 1), M + 10, y + 2, { align: 'center' });
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(10.5); setColor(INK);
+          for (var j = 0; j < lines.length; j++) {
+            if (j > 0) ensure(15);
+            doc.text(lines[j], M + numW, y); y += 15;
+          }
+          y += 16;
         });
-        y += 8;
-      });
+      }
 
-      var pages = doc.internal.getNumberOfPages();
-      for (var p = 1; p <= pages; p++) {
+      var lastContentPage = doc.internal.getNumberOfPages();
+
+      // ---------------------------------------------------------------
+      // CLOSING CTA PAGE
+      // ---------------------------------------------------------------
+      doc.addPage();
+      fill(ORANGE); doc.rect(0, 0, pageW, 6, 'F');
+      var ccy = 232;
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(10); setColor(ORANGE);
+      doc.text('READY TO SECURE YOUR LENDING COLLABORATION?', cx, ccy, { align: 'center', charSpace: 1.2 });
+      ccy += 18;
+      fill(ORANGE); doc.rect(cx - 26, ccy, 52, 3, 'F');
+      ccy += 48;
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(23); setColor(INK);
+      doc.text('See How FileFlex Can Close', cx, ccy, { align: 'center' }); ccy += 32;
+      doc.text('Your Lending Collaboration Gaps', cx, ccy, { align: 'center' }); ccy += 42;
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(11); setColor(SOFT);
+      var ctaDesc = doc.splitTextToSize('FileFlex Enterprise applies Zero Trust Data Access to your lending documents — least-privilege, view-only, no-download access with a complete audit trail, without moving your data.', 400);
+      for (var ci = 0; ci < ctaDesc.length; ci++) { doc.text(ctaDesc[ci], cx, ccy, { align: 'center' }); ccy += 17; }
+      ccy += 30;
+      var btnW = 156, btnH = 40;
+      fill(ORANGE); doc.roundedRect(cx - btnW / 2, ccy, btnW, btnH, 6, 6, 'F');
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(11.5); setColor(WHITE);
+      doc.text('Request a Demo', cx, ccy + 25, { align: 'center' });
+      ccy += btnH + 42;
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(10.5); setColor(INK);
+      doc.text('fileflex.com   |   info@qnext.com', cx, ccy, { align: 'center' });
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); setColor(SOFT);
+      doc.text('\u00A9 ' + year + ' Qnext Corp. All rights reserved.', cx, pageH - 52, { align: 'center' });
+
+      // ---- footers / page numbers on narrative content pages ----
+      for (var p = 2; p <= lastContentPage; p++) {
         doc.setPage(p);
-        doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(150, 158, 170);
-        doc.text('FileFlex Enterprise - Zero Trust Data Access - fileflex.com', M, pageH - 20);
-        doc.text(p + ' / ' + pages, pageW - M, pageH - 20, { align: 'right' });
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(8); setColor(SOFT);
+        doc.text('\u00A9 ' + year + ' Qnext Corp. All rights reserved.   |   fileflex.com', M, pageH - 28);
+        doc.text('Page ' + (p - 1) + ' of ' + (lastContentPage - 1), pageW - M, pageH - 28, { align: 'right' });
       }
 
       var uri = doc.output('datauristring');
