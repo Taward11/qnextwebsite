@@ -103,6 +103,8 @@
   line-height: 1.6;
   color: #eef2f7;
 }
+.ld-hero__ctas { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.ld-cta-row { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
 
 /* ---------- SHARED BULLET LIST (orange diamond) ---------- */
 .ld-list { list-style: none; padding: 0; margin: 0; }
