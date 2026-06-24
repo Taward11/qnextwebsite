@@ -15,6 +15,20 @@ Managed Collaboration, Moderate Risk. Don't "fix" it to show raw 67 — that bre
 **How to apply:** If questions/points change, the 105 max auto-derives from the frontmatter
 `SECTIONS` config; keep `totalMax` computed, never hardcode 100/105.
 
+## Multi-select questions & hidden section points
+Some survey questions accept multiple answers (flagged `multi: true` in the SECTIONS
+config; they render as checkboxes with a "Select all that apply" hint, single-answer
+questions stay radios). Per-section "points possible" copy is intentionally hidden
+from respondents. **Why:** the user asked to allow multiple responses where it makes
+sense (e.g. how documents are exchanged / how access is granted) and to not reveal
+the point weighting. **How to apply:** a multi question's score is the *rounded
+average* of its selected options' points (keeps each question within its 0–5 range so
+section maxima/percentages stay valid); scoring + the email payload + the answered/
+required validation all key off `:checked` (querySelectorAll), so ≥1 selection counts
+as answered. Checkboxes must NOT use the native `required` attr (only the first radio
+does) — rely on the JS validation. Apply the same averaging in both score() and
+gatherAnswers() so on-screen and emailed scores match.
+
 ## Report design parity with the Zero Trust assessment
 Both the on-screen report and the downloadable PDF of the lending assessment are
 intentionally kept visually identical to the Zero Trust Maturity Assessment's

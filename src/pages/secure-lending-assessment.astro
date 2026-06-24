@@ -23,7 +23,7 @@ const SECTIONS = [
     max: 15,
     benchmark: 62,
     questions: [
-      { id: 'q1', text: 'How are borrower documents typically exchanged?', options: [['Primarily email attachments', 0], ['Mix of email and shared folders', 2], ['Secure portal used for some processes', 4], ['Secure collaboration platform used consistently', 5]] },
+      { id: 'q1', text: 'How are borrower documents typically exchanged?', multi: true, options: [['Primarily email attachments', 0], ['Mix of email and shared folders', 2], ['Secure portal used for some processes', 4], ['Secure collaboration platform used consistently', 5]] },
       { id: 'q2', text: 'How many external parties typically participate in lending transactions?', note: 'Helps qualify transaction complexity.', options: [['0–1', 5], ['2–3', 4], ['4–6', 3], ['More than 6', 2]] },
       { id: 'q3', text: 'Can external participants access documents without receiving email attachments?', options: [['No', 0], ['Sometimes', 2], ['Usually', 4], ['Always', 5]] },
     ],
@@ -35,7 +35,7 @@ const SECTIONS = [
     max: 20,
     benchmark: 58,
     questions: [
-      { id: 'q4', text: 'How is access granted to lending documents?', options: [['Shared folders with broad permissions', 0], ['Group-based permissions', 2], ['Role-based permissions', 4], ['Granular document-level permissions', 5]] },
+      { id: 'q4', text: 'How is access granted to lending documents?', multi: true, options: [['Shared folders with broad permissions', 0], ['Group-based permissions', 2], ['Role-based permissions', 4], ['Granular document-level permissions', 5]] },
       { id: 'q5', text: 'Can access be revoked immediately when no longer required?', options: [['No', 0], ['Manually with significant effort', 2], ['Usually', 4], ['Immediately and consistently', 5]] },
       { id: 'q6', text: 'Are external parties restricted to only the documents they need?', options: [['Rarely', 0], ['Sometimes', 2], ['Usually', 4], ['Always', 5]] },
       { id: 'q7', text: 'Are temporary access periods automatically enforced?', options: [['No', 0], ['Rarely', 1], ['Sometimes', 3], ['Consistently', 5]] },
@@ -242,7 +242,6 @@ let qCounter = 0;
             <span class="sla-section__num">Section {si + 1}</span>
           </div>
           <h2 class="sla-section__title">{sec.title}</h2>
-          <p class="sla-section__max">{sec.max} points possible</p>
           {sec.questions.map((q) => {
             qCounter += 1;
             const n = qCounter;
@@ -250,12 +249,13 @@ let qCounter = 0;
               <div class="sla-q" role="group" aria-labelledby={`lbl-${q.id}`}>
                 <p class="sla-q__text" id={`lbl-${q.id}`}>
                   {n}. {q.text} <span class="sla-req" aria-hidden="true">*</span>
+                  {q.multi && <span class="sla-q__note">Select all that apply.</span>}
                   {q.note && <span class="sla-q__note">{q.note}</span>}
                 </p>
                 <div class="sla-opts">
                   {q.options.map((opt, oi) => (
                     <label class="sla-opt">
-                      <input type="radio" name={q.id} value={opt[1]} data-points={opt[1]} required={oi === 0} />
+                      <input type={q.multi ? 'checkbox' : 'radio'} name={q.id} value={opt[1]} data-points={opt[1]} required={!q.multi && oi === 0} />
                       <span>{opt[0]}</span>
                     </label>
                   ))}
@@ -388,8 +388,15 @@ let qCounter = 0;
       var cats = sections.map(function (s) {
         var raw = 0;
         s.questions.forEach(function (q) {
-          var el = form.querySelector('input[name="' + q.id + '"]:checked');
-          if (el) raw += Number(el.getAttribute('data-points')) || 0;
+          var sel = form.querySelectorAll('input[name="' + q.id + '"]:checked');
+          if (!sel.length) return;
+          if (q.multi) {
+            var sum = 0;
+            for (var i = 0; i < sel.length; i++) sum += Number(sel[i].getAttribute('data-points')) || 0;
+            raw += Math.round(sum / sel.length);
+          } else {
+            raw += Number(sel[0].getAttribute('data-points')) || 0;
+          }
         });
         var pct = Math.round((raw / s.max) * 100);
         return { id: s.id, short: s.short, title: s.title, raw: raw, max: s.max, pct: pct, benchmark: s.benchmark };
@@ -534,14 +541,24 @@ let qCounter = 0;
       var out = [];
       sections.forEach(function (s) {
         s.questions.forEach(function (q) {
-          var el = form.querySelector('input[name="' + q.id + '"]:checked');
-          var label = '';
-          if (el) {
-            var lbl = el.closest('label');
+          var sel = form.querySelectorAll('input[name="' + q.id + '"]:checked');
+          var labels = [];
+          var points = 0;
+          for (var i = 0; i < sel.length; i++) {
+            var lbl = sel[i].closest('label');
             var sp = lbl ? lbl.querySelector('span') : null;
-            label = sp ? sp.textContent.trim() : el.value;
+            labels.push(sp ? sp.textContent.trim() : sel[i].value);
           }
-          out.push({ section: s.short, question: q.text, answer: label, points: el ? (Number(el.getAttribute('data-points')) || 0) : 0 });
+          if (sel.length) {
+            if (q.multi) {
+              var sum = 0;
+              for (var j = 0; j < sel.length; j++) sum += Number(sel[j].getAttribute('data-points')) || 0;
+              points = Math.round(sum / sel.length);
+            } else {
+              points = Number(sel[0].getAttribute('data-points')) || 0;
+            }
+          }
+          out.push({ section: s.short, question: q.text, answer: labels.join('; '), points: points });
         });
       });
       return out;
