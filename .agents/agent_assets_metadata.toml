@@ -48,6 +48,18 @@ uri = "file://attached_assets/generated_images/mr-challenge-lawyers.png"
 type = "image"
 title = "lawyers card"
 
+[[generated]]
+id = "qh4ESDs0DHVRk_8WCr7Ed"
+uri = "file://attached_assets/generated_images/mr-challenge-underwriters-orange.png"
+type = "image"
+title = "underwriters orange"
+
+[[generated]]
+id = "1uDEKVq2hnpjghr9P4iVZ"
+uri = "file://attached_assets/generated_images/mr-challenge-lawyers-orange.png"
+type = "image"
+title = "lawyers orange"
+
 [[outputs]]
 id = "wssrYHILOy549CZAkG2ky"
 uri = "file://public/images/lending/lending-collaboration-framework.svg"
