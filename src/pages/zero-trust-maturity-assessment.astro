@@ -143,6 +143,44 @@ const TEXT = {
     'Develop automated access review workflows that continuously verify who has access and revoke it the moment it is no longer required.',
     'Integrate data access governance reporting with your compliance program to demonstrate control over internal and third-party access on demand.',
   ],
+  // Expanded, threat-focused versions of each gap (index-aligned with `gaps`) used in the PDF report.
+  gapsDetailed: [
+    'Full Zero Trust Data Access — where sensitive files can be shared externally with granular permissions, instant revocation, and without distributing file copies — has not yet been achieved. Without a purpose-built platform, every external share creates data you no longer control, every vendor with file access represents a lingering risk, and every document sent by email or cloud link becomes permanently unrecoverable. This gap exists regardless of how strong your identity and network controls are, and it is the single most impactful step remaining on your Zero Trust journey.',
+    'Multi-factor authentication is not fully enforced across your environment, leaving accounts protected by passwords alone. Credential-based attacks — phishing, password spraying, and credential stuffing — remain the most common entry point in modern breaches, and a single compromised password without MFA can hand an attacker a legitimate, trusted foothold inside your systems. Every account without MFA is an open door that bypasses the rest of your security investment.',
+    'Without a centralized Identity and Access Management platform, access policies are fragmented across systems and applied inconsistently from one application to the next. These governance blind spots are exactly where attackers operate — orphaned accounts, excessive permissions, and unmanaged access that no single team can see or control. Fragmented identity also makes it nearly impossible to prove who has access to what during an audit or incident.',
+    'Without Conditional Access policies, every login is treated identically regardless of risk — the same trust is granted to a known device on the corporate network as to an unrecognized device from a high-risk location. This missing layer of context-aware defense means risky sign-ins proceed unchallenged, giving attackers with stolen credentials a clear path in. Adaptive, risk-based access is now a baseline expectation for a mature Zero Trust posture.',
+    'Heavy reliance on VPN grants remote users broad network-level access — meaning a single compromised session exposes your entire internal network to lateral movement. Modern ransomware attacks routinely exploit this exact vector to achieve organization-wide compromise, encrypting servers and backups across the enterprise. VPN-based architectures have been directly implicated in some of the most damaging breaches of the past five years.',
+    'Your remote users require full network-level access to reach applications, which means every remote session carries the risk of full network exposure if the endpoint is compromised. Without application-specific access controls, a single infected laptop can give an attacker a foothold to reach every system on your network — an attack surface that is simply too large to defend effectively.',
+    'Sensitive documents shared as email attachments are permanently beyond your control the moment they are sent — they can be forwarded, saved to personal devices, printed, or accessed indefinitely after an employee leaves or a vendor is breached. In regulated industries, a single improperly distributed document can trigger compliance violations, regulatory fines, and civil liability. You have no visibility into who has opened the file, who they shared it with, or whether it still exists on systems outside your control.',
+    'Shared files that cannot be revoked remain accessible indefinitely — long after a project ends, a vendor relationship is terminated, or an employee departs. Access that never expires accumulates into a sprawling, invisible attack surface, where former insiders and breached third parties retain a live path to your sensitive data. Without revocation, you are trusting that no one who ever had access will ever be compromised.',
+    'Every file copy sent to an external party is data you no longer control. When a vendor is breached, acquired, or an employee departs, your sensitive information goes with them — and you have no way to recover it or prevent further distribution. Third-party data breaches caused by oversharing are now one of the most common and costly sources of enterprise data loss, with average breach costs exceeding $4 million when a third party is involved.',
+    'Without file- and folder-level access controls, you cannot enforce least-privilege, so users routinely accumulate far more access than their role requires. Over-permissioning turns every compromised account into a potential mass-data-exfiltration event, because the attacker inherits everything that user could reach. The broader each user\u2019s access, the larger the blast radius of a single breach.',
+    'If you cannot immediately identify who has access to sensitive information, you cannot scope a breach, enforce least-privilege, or demonstrate compliance on demand. When an incident occurs, the inability to answer \u201cwho could have seen this data?\u201d delays containment and notification — and regulators treat that uncertainty as a failure of control in its own right.',
+    'Untracked external access is a critical third-party risk — you cannot prove which vendors, auditors, or partners hold access to your data at any given moment. As supply-chain attacks become a leading breach vector, this blind spot means a partner\u2019s compromise can become your breach without warning. You cannot govern, audit, or revoke access you cannot even see.',
+    'Without complete audit trails, you cannot prove what happened — or did not happen — to sensitive data after the fact. In the event of a breach, incomplete logs are themselves a compliance violation that regulators treat seriously: they limit your ability to scope the incident, notify affected parties within required timeframes, and defend against liability. Clients, insurers, and auditors are increasingly demanding evidence of complete access logging as a baseline expectation.',
+    'When vendor relationships end or security incidents occur, third-party access that cannot be revoked immediately becomes indefinite exposure. In supply chain attacks — now among the most destructive breach vectors — compromised third parties with lingering access have caused catastrophic losses at organizations far larger and better-resourced than most. Every day of delayed revocation is a day an attacker retains a foothold inside your data environment.',
+  ],
+  // Expanded versions of each recommendation (index-aligned with `recommendations`) used in the PDF report.
+  recommendationsDetailed: [
+    'Continue advancing toward adaptive, AI-driven access governance — using behavioral analytics and automated policy enforcement to detect anomalous access and respond to emerging threats in real time, without waiting for human review.',
+    'Consider sharing your Zero Trust Data Access maturity journey externally. Your organization is positioned as a leader, and a documented reference can strengthen client, partner, and regulator confidence in your security posture.',
+    'Deploy a Zero Trust Data Access solution such as FileFlex Enterprise to close your Zero Trust Data Access gap. ZTDA enables your organization to access, collaborate and share sensitive files externally with granular, real-time permissions — with immediate access revocation at any time, zero file copies leaving your environment, and a complete audit trail of every access event.',
+    'Prioritize multi-factor authentication across all users, applications, and administrative accounts. This is the single highest-impact control for preventing credential-based breaches, and closing the gaps where MFA is not yet enforced removes the most commonly exploited path into your environment.',
+    'Implement a centralized Identity and Access Management platform to apply consistent, auditable access policies across every application and system — eliminating the fragmented, unmanaged access that creates governance blind spots.',
+    'Begin deploying Conditional Access policies that evaluate user risk, device compliance, and context before granting access, so that risky sign-ins are challenged or blocked rather than trusted by default.',
+    'Replace email attachment and cloud link sharing for sensitive documents with a controlled access platform that maintains organizational custody of data after every share — with real-time revocation and full audit trails.',
+    'Evaluate Zero Trust Network Access solutions such as Microsoft Entra Private Access, Zscaler, or Cloudflare to begin replacing VPN-based remote access with application-specific, identity-verified connectivity.',
+    'Pilot ZTNA for a subset of remote workers or high-risk applications to validate the approach before broader rollout.',
+    'Integrate your existing IAM platform with ZTNA to ensure access decisions leverage identity posture and device compliance in real time.',
+    'Enable auditors and regulators to access information directly through a governed portal, eliminating the compliance risk of emailed copies and giving you a complete record of every access.',
+    'Establish a secure, controlled platform for board and executive communications so sensitive materials are accessed remotely without uncontrolled local copies living on personal devices.',
+    'Implement Zero Trust Data Access controls to extend your security posture to the data layer — granular, revocable, copy-free external collaboration that keeps sensitive files under your control wherever they travel.',
+    'Evaluate FileFlex Enterprise as the next step in your Zero Trust journey — adding file- and folder-level access, instant revocation, and complete audit trails to the data you already store, without moving it.',
+    'Establish policy-based access controls for sensitive documents, enforcing least-privilege at the file and folder level so users hold only the access their role genuinely requires.',
+    'Implement comprehensive audit trails and real-time activity monitoring to capture every access event — providing the forensic evidence and compliance assurance that incomplete logs cannot.',
+    'Develop automated access-review workflows that continuously verify who has access and revoke it the moment it is no longer required, closing the window of lingering exposure.',
+    'Integrate data access governance reporting with your compliance program to demonstrate control over internal and third-party access on demand.',
+  ],
 };
 
 // Data passed to the client for scoring + rendering.
@@ -429,45 +467,50 @@ let qCounter = 0;
       return out.slice().sort(function (a, b) { return R.indexOf(a) - R.indexOf(b); });
     }
     function gapsOf(s) {
-      var G = TEXT.gaps, out = [];
-      out.push(G[0]);
+      var out = [];
+      out.push(0);
       if (s.identity < 5) {
-        if (!has('q2', 'Yes')) out.push(G[1]);
-        if (!has('q3', 'Yes')) out.push(G[2]);
-        if (!has('q4', 'Extensive')) out.push(G[3]);
+        if (!has('q2', 'Yes')) out.push(1);
+        if (!has('q3', 'Yes')) out.push(2);
+        if (!has('q4', 'Extensive')) out.push(3);
       }
       if (s.ztna < 5) {
-        if (has('q5', 'VPN') || has('q5', 'Mostly VPN')) out.push(G[4]);
-        if (!has('q7', 'Yes') || !has('q8', 'Fully')) out.push(G[5]);
+        if (has('q5', 'VPN') || has('q5', 'Mostly VPN')) out.push(4);
+        if (!has('q7', 'Yes') || !has('q8', 'Fully')) out.push(5);
       }
-      if (s.dataAccess < 11 && has('q9', 'Email attachments')) out.push(G[6]);
-      if (s.dataAccess < 4) out.push(G[7]);
-      if (s.dataAccess <= 6) out.push(G[8]);
-      if (s.dataAccess <= 9) out.push(G[9]);
-      if (s.governance < 2) out.push(G[10]);
-      if (s.governance < 4) out.push(G[11]);
-      if (s.governance < 6) out.push(G[12]);
-      if (s.governance < 8) out.push(G[13]);
-      return out.slice().sort(function (a, b) { return G.indexOf(a) - G.indexOf(b); });
+      if (s.dataAccess < 11 && has('q9', 'Email attachments')) out.push(6);
+      if (s.dataAccess < 4) out.push(7);
+      if (s.dataAccess <= 6) out.push(8);
+      if (s.dataAccess <= 9) out.push(9);
+      if (s.governance < 2) out.push(10);
+      if (s.governance < 4) out.push(11);
+      if (s.governance < 6) out.push(12);
+      if (s.governance < 8) out.push(13);
+      return out.slice().sort(function (a, b) { return a - b; });
     }
     function recsOf(s, lvl) {
-      var R = TEXT.recommendations, out = [];
-      out.push(R[2]);
-      if (lvl === 1) out.push(R[3], R[4], R[5]);
-      else if (lvl === 2) out.push(R[7], R[8], R[9]);
-      else if (lvl === 3) out.push(R[12], R[13], R[14]);
-      else if (lvl === 4) out.push(R[15], R[16], R[17]);
-      else if (lvl === 5) out.push(R[0], R[1]);
+      var out = [];
+      out.push(2);
+      if (lvl === 1) out.push(3, 4, 5);
+      else if (lvl === 2) out.push(7, 8, 9);
+      else if (lvl === 3) out.push(12, 13, 14);
+      else if (lvl === 4) out.push(15, 16, 17);
+      else if (lvl === 5) out.push(0, 1);
       var emailCloud = has('q9', 'Email attachments') || has('q9', 'Cloud links (SharePoint, Drive etc.)');
-      if (emailCloud) out.push(R[6]);
-      if (!has('q14', 'Yes') && !emailCloud) out.push(R[10]);
-      if (!has('q15', 'Yes') && s.dataAccess >= 11) out.push(R[11]);
-      return out.slice().sort(function (a, b) { return R.indexOf(a) - R.indexOf(b); });
+      if (emailCloud) out.push(6);
+      if (!has('q14', 'Yes') && !emailCloud) out.push(10);
+      if (!has('q15', 'Yes') && s.dataAccess >= 11) out.push(11);
+      return out.slice().sort(function (a, b) { return a - b; });
     }
 
     function compute() {
       var s = score();
       var lvl = levelOf(s);
+      var gapIdx = gapsOf(s);
+      var recIdx = recsOf(s, lvl);
+      // For the PDF, lead with the specific gaps and close with the overarching ZTDA gap (index 0).
+      var gapPdfIdx = gapIdx.filter(function (i) { return i !== 0; });
+      if (gapIdx.indexOf(0) !== -1) gapPdfIdx.push(0);
       return {
         scores: s,
         level: lvl,
@@ -478,8 +521,10 @@ let qCounter = 0;
           return { key: k, label: dims[k].label, score: s[k], max: dims[k].max, gate: dims[k].gate };
         }),
         strengths: strengthsOf(s),
-        gaps: gapsOf(s),
-        recommendations: recsOf(s, lvl),
+        gaps: gapIdx.map(function (i) { return TEXT.gaps[i]; }),
+        gapsDetailed: gapPdfIdx.map(function (i) { return (TEXT.gapsDetailed && TEXT.gapsDetailed[i]) || TEXT.gaps[i]; }),
+        recommendations: recIdx.map(function (i) { return TEXT.recommendations[i]; }),
+        recommendationsDetailed: recIdx.map(function (i) { return (TEXT.recommendationsDetailed && TEXT.recommendationsDetailed[i]) || TEXT.recommendations[i]; }),
       };
     }
 
@@ -629,53 +674,86 @@ let qCounter = 0;
       var pageH = doc.internal.pageSize.getHeight();
       var M = 56;
       var contentW = pageW - M * 2;
+      var cx = pageW / 2;
 
       var ORANGE = [232, 89, 10];
       var INK = [23, 23, 26];
       var SOFT = [92, 100, 112];
       var LINE = [224, 227, 232];
       var TRACK = [234, 236, 240];
+      var WASH = [250, 244, 238];
+      var WHITE = [255, 255, 255];
 
       var today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-      var who = (contact.name || 'You');
+      var year = new Date().getFullYear();
 
       function setColor(c) { doc.setTextColor(c[0], c[1], c[2]); }
       function fill(c) { doc.setFillColor(c[0], c[1], c[2]); }
+      function brandMark(x, by, size) {
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(size); setColor(INK);
+        doc.text('FileFlex', x, by);
+        var w = doc.getTextWidth('FileFlex');
+        doc.setFont('helvetica', 'normal'); setColor(ORANGE);
+        doc.text(' Enterprise', x + w, by);
+      }
+      function categoryNote(c) {
+        var pct = c.max > 0 ? (Number(c.score) || 0) / c.max * 100 : 0;
+        var lbl = String(c.label);
+        if (pct >= 80) return 'Strong coverage — your ' + lbl.toLowerCase() + ' controls are well established and anchor your Zero Trust posture.';
+        if (pct >= 50) return 'Partial coverage — ' + lbl.toLowerCase() + ' controls are in progress with clear room for advancement.';
+        return lbl + ' represents a key opportunity for maturity advancement in your Zero Trust journey.';
+      }
 
       // ---------------------------------------------------------------
       // COVER PAGE
       // ---------------------------------------------------------------
       fill(ORANGE); doc.rect(0, 0, pageW, 12, 'F');
 
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(13); setColor(INK);
-      doc.text('FileFlex', M, 84);
-      var ffw = doc.getTextWidth('FileFlex');
-      doc.setFont('helvetica', 'normal'); setColor(ORANGE);
-      doc.text(' Enterprise', M + ffw, 84);
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(10); setColor(SOFT);
+      doc.text('CONFIDENTIAL ASSESSMENT REPORT', cx, 132, { align: 'center', charSpace: 1.4 });
+      fill(ORANGE); doc.rect(cx - 30, 150, 60, 3, 'F');
 
-      var ty = 312;
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(11.5); setColor(ORANGE);
-      doc.text('ZERO TRUST DATA ACCESS', M, ty);
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(38); setColor(INK);
-      doc.text('Maturity', M, ty + 50);
-      doc.text('Assessment Report', M, ty + 94);
-      fill(ORANGE); doc.rect(M, ty + 120, 72, 4, 'F');
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(31); setColor(INK);
+      doc.text('Zero Trust Data Access', cx, 322, { align: 'center' });
+      doc.text('Maturity Assessment', cx, 362, { align: 'center' });
 
-      var py = ty + 178;
+      var pf = 452;
       doc.setFont('helvetica', 'bold'); doc.setFontSize(9.5); setColor(SOFT);
-      doc.text('PREPARED FOR', M, py);
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(16); setColor(INK);
-      doc.text(who, M, py + 24);
-      var py2 = py + 24;
+      doc.text('PREPARED FOR', cx, pf, { align: 'center', charSpace: 1.2 });
+      var ny = pf + 30;
       if (contact.company) {
-        doc.setFont('helvetica', 'normal'); doc.setFontSize(12); setColor(SOFT);
-        doc.text(contact.company, M, py + 44); py2 = py + 44;
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(18); setColor(INK);
+        doc.text(contact.company, cx, ny, { align: 'center' }); ny += 24;
       }
+      var line2 = (contact.name ? contact.name.toUpperCase() : 'PREPARED FOR YOU') + (contact.email ? '   |   ' + contact.email : '');
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(11); setColor(INK);
+      doc.text(line2, cx, ny, { align: 'center' }); ny += 20;
       doc.setFont('helvetica', 'normal'); doc.setFontSize(10); setColor(SOFT);
-      doc.text(today, M, py2 + 22);
+      doc.text(today, cx, ny, { align: 'center' });
 
-      doc.setFont('helvetica', 'normal'); doc.setFontSize(9); setColor(SOFT);
-      doc.text('FileFlex Enterprise   |   Zero Trust Data Access   |   fileflex.com', M, pageH - 52);
+      // Current maturity level indicator with L1..L5 progression
+      var mlY = 612;
+      fill(WASH); doc.roundedRect(M + 24, mlY - 36, contentW - 48, 150, 10, 10, 'F');
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(9.5); setColor(ORANGE);
+      doc.text('CURRENT MATURITY LEVEL', cx, mlY, { align: 'center', charSpace: 1.2 });
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(21); setColor(INK);
+      doc.text('Level ' + data.level + ': ' + data.levelName, cx, mlY + 34, { align: 'center' });
+      (function () {
+        var n = 5, gap = 10, w = 56, h = 26;
+        var total = n * w + (n - 1) * gap;
+        var sx = cx - total / 2;
+        var py = mlY + 56;
+        for (var i = 1; i <= n; i++) {
+          var x = sx + (i - 1) * (w + gap);
+          var on = i <= data.level;
+          fill(on ? ORANGE : TRACK); doc.roundedRect(x, py, w, h, 5, 5, 'F');
+          doc.setFont('helvetica', 'bold'); doc.setFontSize(10); setColor(on ? WHITE : SOFT);
+          doc.text('L' + i, x + w / 2, py + 17, { align: 'center' });
+        }
+      })();
+
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); setColor(SOFT);
+      doc.text('\u00A9 ' + year + ' Qnext Corp. All rights reserved.   |   fileflex.com', cx, pageH - 52, { align: 'center' });
 
       // ---------------------------------------------------------------
       // CONTENT PAGES
@@ -683,20 +761,19 @@ let qCounter = 0;
       var y = 0;
       function pageHeader() {
         fill(ORANGE); doc.rect(0, 0, pageW, 6, 'F');
-        doc.setFont('helvetica', 'normal'); doc.setFontSize(8); setColor(SOFT);
-        doc.text('Zero Trust Data Access Maturity Assessment', M, 36);
-        fill(LINE); doc.rect(M, 48, contentW, 0.8, 'F');
-        y = 84;
+        brandMark(M, 38, 9.5);
+        fill(LINE); doc.rect(M, 50, contentW, 0.8, 'F');
+        y = 90;
       }
       function newPage() { doc.addPage(); pageHeader(); }
       function ensure(need) { if (y + need > pageH - 60) { newPage(); } }
 
-      function heading(txt) {
-        ensure(52);
-        doc.setFont('helvetica', 'bold'); doc.setFontSize(16); setColor(INK);
-        doc.text(txt, M, y);
-        y += 11;
-        fill(ORANGE); doc.rect(M, y, 40, 3, 'F');
+      function sectionHeading(txt) {
+        ensure(50);
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(11); setColor(INK);
+        doc.text(txt.toUpperCase(), M, y, { charSpace: 1.7 });
+        y += 9;
+        fill(ORANGE); doc.rect(M, y, 38, 2.5, 'F');
         y += 24;
       }
       function paragraph(txt, opts) {
@@ -713,92 +790,161 @@ let qCounter = 0;
         }
         y += (opts.gap == null ? 11 : opts.gap);
       }
+      function bulletBlock(txt) {
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(10.5); setColor(INK);
+        var lines = doc.splitTextToSize(txt, contentW - 18);
+        ensure(lines.length * 15 + 6);
+        fill(ORANGE); doc.circle(M + 3, y - 3.5, 2, 'F');
+        for (var j = 0; j < lines.length; j++) {
+          doc.text(lines[j], M + 18, y); y += 15;
+        }
+        y += 10;
+      }
 
       newPage();
 
       // ---- Executive summary ----
-      heading('Executive Summary');
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(9.5); setColor(ORANGE);
-      doc.text('YOUR MATURITY LEVEL', M, y); y += 22;
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(22); setColor(INK);
-      doc.text('Level ' + data.level + ' of 5', M, y); y += 26;
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(14); setColor(ORANGE);
-      doc.text(data.levelName, M, y); y += 26;
-      paragraph(data.levelDesc, { size: 11 });
+      sectionHeading('Executive Summary');
+      var leadName = contact.company || contact.name || 'Your organization';
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(11); setColor(INK);
+      doc.text(leadName + ' is at', M, y); y += 26;
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(17);
+      var lp = 'Level ' + data.level + ': ';
+      setColor(INK); doc.text(lp, M, y);
+      setColor(ORANGE); doc.text(data.levelName, M + doc.getTextWidth(lp), y); y += 24;
+      paragraph(data.levelDesc, { size: 10.5 });
+
       if (data.next) {
-        paragraph('Your next milestone is Level ' + (data.level + 1) + ' — ' + data.next.name + '. ' + data.next.desc, { color: SOFT });
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(10);
+        var ndesc = doc.splitTextToSize(data.next.desc, contentW - 32);
+        var boxH = 26 + 18 + ndesc.length * 14 + 16;
+        ensure(boxH + 12);
+        fill(WASH); doc.rect(M, y, contentW, boxH, 'F');
+        fill(ORANGE); doc.rect(M, y, 3.5, boxH, 'F');
+        var bx = M + 18, by = y + 24;
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(9); setColor(ORANGE);
+        doc.text('YOUR NEXT STEP', bx, by, { charSpace: 1 }); by += 22;
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(12); setColor(INK);
+        doc.text('Level ' + (data.level + 1) + ': ' + data.next.name, bx, by); by += 18;
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(10); setColor(SOFT);
+        for (var i = 0; i < ndesc.length; i++) { doc.text(ndesc[i], bx, by); by += 14; }
+        y += boxH + 20;
       }
 
-      // ---- Maturity by dimension (status bars, no scores) ----
-      heading('Maturity by Dimension');
-      paragraph('The bars below show your relative maturity across the four dimensions that make up Zero Trust Data Access. Longer bars reflect stronger, more established controls; shorter bars highlight where the greatest opportunity to improve remains.', { color: SOFT });
+      // ---- Zero Trust maturity roadmap ----
+      sectionHeading('Zero Trust Maturity Roadmap');
+      for (var li = 1; li <= 5; li++) {
+        ensure(30);
+        var current = (li === data.level);
+        var rowH = 26;
+        if (current) {
+          fill(WASH); doc.rect(M, y - 4, contentW, rowH, 'F');
+          fill(ORANGE); doc.rect(M, y - 4, 3.5, rowH, 'F');
+        }
+        fill(current ? ORANGE : TRACK); doc.circle(M + 18, y + 9, 3.5, 'F');
+        doc.setFont('helvetica', current ? 'bold' : 'normal'); doc.setFontSize(10.5); setColor(current ? INK : SOFT);
+        doc.text('Level ' + li + ' — ' + LEVELS[li].name, M + 32, y + 12);
+        if (current) {
+          doc.setFont('helvetica', 'bold'); doc.setFontSize(8.5); setColor(ORANGE);
+          doc.text('YOUR POSITION', pageW - M - 6, y + 12, { align: 'right', charSpace: 0.8 });
+        }
+        y += rowH + 5;
+      }
+      y += 12;
+
+      // ---- Score breakdown by category (scores + bars + notes) ----
+      sectionHeading('Score Breakdown by Category');
       data.sections.forEach(function (c) {
         var maxSafe = c.max > 0 ? c.max : 1;
         var rawPct = Math.round((Number(c.score) || 0) / maxSafe * 100);
-        var pct = Math.min(100, Math.max(6, isFinite(rawPct) ? rawPct : 0));
-        var achieved = c.score >= c.gate;
-        var statusWord = achieved ? 'Established' : (pct < 40 ? 'Emerging' : 'Developing');
-        ensure(40);
-        doc.setFont('helvetica', 'bold'); doc.setFontSize(10.5); setColor(INK);
+        var pct = Math.min(100, Math.max(4, isFinite(rawPct) ? rawPct : 0));
+        ensure(64);
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(11); setColor(INK);
         doc.text(c.label, M, y);
-        doc.setFont('helvetica', 'bold'); doc.setFontSize(9); setColor(achieved ? ORANGE : SOFT);
-        doc.text(statusWord.toUpperCase(), pageW - M, y, { align: 'right' });
-        y += 9;
-        var barH = 9;
+        doc.text((Number(c.score) || 0) + ' / ' + c.max, pageW - M, y, { align: 'right' });
+        y += 10;
+        var barH = 8;
         fill(TRACK); doc.roundedRect(M, y, contentW, barH, 4, 4, 'F');
         fill(ORANGE); doc.roundedRect(M, y, Math.min(contentW, Math.max(barH, contentW * pct / 100)), barH, 4, 4, 'F');
-        y += barH + 20;
+        y += barH + 15;
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(9.5); setColor(SOFT);
+        var nl = doc.splitTextToSize(categoryNote(c), contentW);
+        for (var k = 0; k < nl.length; k++) { ensure(13); doc.text(nl[k], M, y); y += 13; }
+        y += 16;
       });
-      y += 4;
+      y += 2;
 
-      // ---- Where you're strong (paragraph format) ----
+      // ---- What your organization is doing well ----
       if (data.strengths.length) {
-        heading("Where You're Strong");
-        paragraph('The following capabilities are working in your favor today and form the foundation to build on.', { color: SOFT });
-        data.strengths.forEach(function (t) { paragraph(t, { gap: 9 }); });
+        sectionHeading('What Your Organization Is Doing Well');
+        data.strengths.forEach(function (t) { bulletBlock(t); });
+        y += 4;
       }
 
-      // ---- Gaps and threats (paragraph format) ----
-      if (data.gaps.length) {
-        heading('Gaps and Threats Facing Your Organization');
-        paragraph('These are the areas where sensitive data remains exposed and control is incomplete. Each point describes both the gap and the risk it creates for your organization.', { color: SOFT });
-        data.gaps.forEach(function (t) { paragraph(t, { gap: 9 }); });
+      // ---- Identified gaps & opportunities (threat narratives) ----
+      if (data.gapsDetailed.length) {
+        sectionHeading('Identified Gaps & Opportunities');
+        paragraph('The following areas represent opportunities to advance your Zero Trust Data Access maturity — each describes the gap and the threat it creates for your organization.', { color: SOFT, size: 10 });
+        data.gapsDetailed.forEach(function (t) { bulletBlock(t); });
+        y += 4;
       }
 
-      // ---- Recommended next steps (numbered, orange numerals) ----
-      if (data.recommendations.length) {
-        heading('Recommended Next Steps');
-        paragraph('These actions, in priority order, will most advance your Zero Trust Data Access maturity.', { color: SOFT });
-        var numW = 20;
-        data.recommendations.forEach(function (t, i) {
+      // ---- Recommendations (numbered, orange tiles) ----
+      if (data.recommendationsDetailed.length) {
+        sectionHeading('Recommendations');
+        var numW = 32;
+        data.recommendationsDetailed.forEach(function (t, i) {
           doc.setFont('helvetica', 'normal'); doc.setFontSize(10.5);
           var lines = doc.splitTextToSize(t, contentW - numW);
-          ensure(lines.length * 15 + 8);
-          doc.setFont('helvetica', 'bold'); setColor(ORANGE);
-          doc.text((i + 1) + '.', M, y);
-          doc.setFont('helvetica', 'normal'); setColor(INK);
+          ensure(Math.max(28, lines.length * 15) + 14);
+          fill(ORANGE); doc.roundedRect(M, y - 12, 20, 20, 3, 3, 'F');
+          doc.setFont('helvetica', 'bold'); doc.setFontSize(10.5); setColor(WHITE);
+          doc.text(String(i + 1), M + 10, y + 2, { align: 'center' });
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(10.5); setColor(INK);
           for (var j = 0; j < lines.length; j++) {
-            doc.text(lines[j], M + numW, y);
-            y += 15;
-            if (j < lines.length - 1) ensure(15);
+            if (j > 0) ensure(15);
+            doc.text(lines[j], M + numW, y); y += 15;
           }
-          y += 8;
+          y += 16;
         });
       }
 
-      // ---- Closing ----
-      heading('Closing the Gaps');
-      paragraph('FileFlex Enterprise extends Zero Trust principles to the data layer — applying least-privilege, view-only and no-download access with a complete audit trail, without moving your data or surrendering control to a third party. The gaps and recommendations in this report map directly to capabilities FileFlex can put in place.', {});
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(10.5); setColor(ORANGE);
-      paragraph('Talk to us about closing the gaps identified above — fileflex.com', { bold: true, color: ORANGE });
+      var lastContentPage = doc.internal.getNumberOfPages();
 
-      // ---- footers / page numbers on content pages ----
-      var pages = doc.internal.getNumberOfPages();
-      for (var p = 2; p <= pages; p++) {
+      // ---------------------------------------------------------------
+      // CLOSING CTA PAGE
+      // ---------------------------------------------------------------
+      doc.addPage();
+      fill(ORANGE); doc.rect(0, 0, pageW, 6, 'F');
+      var ccy = 232;
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(10); setColor(ORANGE);
+      doc.text('READY TO ADVANCE TO THE NEXT LEVEL?', cx, ccy, { align: 'center', charSpace: 1.2 });
+      ccy += 18;
+      fill(ORANGE); doc.rect(cx - 26, ccy, 52, 3, 'F');
+      ccy += 48;
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(23); setColor(INK);
+      doc.text('See How FileFlex Can Close', cx, ccy, { align: 'center' }); ccy += 32;
+      doc.text('Your Data Access Gaps', cx, ccy, { align: 'center' }); ccy += 42;
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(11); setColor(SOFT);
+      var ctaDesc = doc.splitTextToSize('FileFlex Enterprise delivers Zero Trust Data Access — enabling granular file permissions, instant revocation, and secure external collaboration without data transfer.', 380);
+      for (var ci = 0; ci < ctaDesc.length; ci++) { doc.text(ctaDesc[ci], cx, ccy, { align: 'center' }); ccy += 17; }
+      ccy += 30;
+      var btnW = 156, btnH = 40;
+      fill(ORANGE); doc.roundedRect(cx - btnW / 2, ccy, btnW, btnH, 6, 6, 'F');
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(11.5); setColor(WHITE);
+      doc.text('Request a Demo', cx, ccy + 25, { align: 'center' });
+      ccy += btnH + 42;
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(10.5); setColor(INK);
+      doc.text('fileflex.com   |   info@qnext.com', cx, ccy, { align: 'center' });
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); setColor(SOFT);
+      doc.text('\u00A9 ' + year + ' Qnext Corp. All rights reserved.', cx, pageH - 52, { align: 'center' });
+
+      // ---- footers / page numbers on narrative content pages ----
+      for (var p = 2; p <= lastContentPage; p++) {
         doc.setPage(p);
         doc.setFont('helvetica', 'normal'); doc.setFontSize(8); setColor(SOFT);
-        doc.text('FileFlex Enterprise   |   fileflex.com', M, pageH - 28);
-        doc.text('Page ' + (p - 1) + ' of ' + (pages - 1), pageW - M, pageH - 28, { align: 'right' });
+        doc.text('\u00A9 ' + year + ' Qnext Corp. All rights reserved.   |   fileflex.com', M, pageH - 28);
+        doc.text('Page ' + (p - 1) + ' of ' + (lastContentPage - 1), pageW - M, pageH - 28, { align: 'right' });
       }
 
       var uri = doc.output('datauristring');
