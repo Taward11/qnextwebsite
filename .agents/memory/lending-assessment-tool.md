@@ -15,15 +15,15 @@ Managed Collaboration, Moderate Risk. Don't "fix" it to show raw 67 — that bre
 **How to apply:** If questions/points change, the 105 max auto-derives from the frontmatter
 `SECTIONS` config; keep `totalMax` computed, never hardcode 100/105.
 
-## PDF report design (shared with Zero Trust assessment)
-`buildPdf()` produces the same multi-page report layout as the Zero Trust Maturity
-Assessment (cover w/ L1–L5 maturity pips, exec summary + next-step box, roadmap w/
-"Your Position", per-category score+bar breakdown, strengths/gaps, numbered recs,
-CTA page; black text + orange highlights, Qnext footer). Lending-specific extra:
-each score-breakdown bar keeps a **peer-benchmark tick + delta line** (the ZT one
-has no benchmark). Maturity level names/descriptions are authored locally in
-buildPdf (LV/NEXT maps, levelOf 81/61/41/21). **Why:** keep both assessment PDFs
-visually identical so the brand reads consistently — port design changes to both.
+## Report design parity with the Zero Trust assessment
+Both the on-screen report and the downloadable PDF of the lending assessment are
+intentionally kept visually identical to the Zero Trust Maturity Assessment's
+report (level/maturity framing, score bars, strengths/gaps/recommendations, CTA).
+The one lending-only deviation: score bars carry a peer-benchmark marker the ZT
+version lacks. Maturity level copy (`LV`/`NEXT`) and `levelOf` thresholds match the
+ZT page's levels. **Why:** consistent brand across both tools. **How to apply:** any
+design change must be ported to both the screen and PDF, and ideally to the ZT page
+too; keep the level/threshold definitions in sync across pages.
 
 ## Email / PDF delivery (Cloudflare Pages Function + Resend)
 Email automation IS implemented (the old HubSpot-gated path was removed). A static Astro site on

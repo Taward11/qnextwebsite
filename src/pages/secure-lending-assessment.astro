@@ -355,7 +355,6 @@ let qCounter = 0;
     function band(pct) { return pct >= 70 ? 'strong' : (pct >= 40 ? 'moderate' : 'weak'); }
     function rateLabel(b) { return b === 'strong' ? 'Strong' : (b === 'moderate' ? 'Moderate' : 'High Risk'); }
     function riskOf(pct) { return pct >= 70 ? 'Low Risk' : (pct >= 40 ? 'Moderate Risk' : 'High Risk'); }
-    function riskClass(pct) { return pct >= 70 ? 'low' : (pct >= 40 ? 'moderate' : 'high'); }
     function maturity(pct) {
       if (pct >= 81) return 'Level 5 — Optimized Collaboration';
       if (pct >= 61) return 'Level 4 — Managed Collaboration';
@@ -363,6 +362,27 @@ let qCounter = 0;
       if (pct >= 21) return 'Level 2 — Developing Collaboration';
       return 'Level 1 — Ad Hoc Collaboration';
     }
+
+    // Maturity levels for the lending collaboration journey (shared by the
+    // on-screen report and the PDF). Thresholds match maturity() above.
+    var LV = {
+      1: { name: 'Ad Hoc Collaboration', desc: 'Borrower documents are exchanged largely through email and ad-hoc methods with little central control. Access, auditability and data protection depend on manual effort, leaving sensitive lending information exposed and slowing loan processing.' },
+      2: { name: 'Developing Collaboration', desc: 'Your institution has begun moving beyond email-based document exchange, with secure collaboration used for parts of the lending workflow. Foundational controls exist but coverage is inconsistent across access, auditability and data protection.' },
+      3: { name: 'Defined Collaboration', desc: 'Secure collaboration practices are established across much of the lending lifecycle. Access controls and activity logging are in place, though gaps in granular permissions, data control or auditability still create avoidable risk and friction.' },
+      4: { name: 'Managed Collaboration', desc: 'Borrower collaboration is governed by consistent, least-privilege controls with strong visibility into document access. Sensitive data largely stays under your control, and most lending workflows are both secure and efficient.' },
+      5: { name: 'Optimized Collaboration', desc: 'Secure lending collaboration is fully optimized — granular least-privilege access, complete auditability, and minimal data duplication across the entire lending lifecycle. Zero Trust principles extend directly to your borrower documents and external collaboration.' }
+    };
+    var NEXT = {
+      1: 'Reaching Developing Collaboration means replacing email attachments with a secure collaboration platform for your highest-risk lending workflows, and establishing basic access controls and activity logging.',
+      2: 'Reaching Defined Collaboration means extending secure collaboration consistently across the lending lifecycle, with role-based access, exportable audit trails, and reduced document duplication.',
+      3: 'Reaching Managed Collaboration means tightening to granular, least-privilege permissions with automatic expiration, view-only access that keeps borrower data under your control, and automated audit reporting.',
+      4: 'Reaching Optimized Collaboration means extending Zero Trust Data Access across every borrower document and external party — granular permissions, instant revocation, and complete audit trails with no data movement.'
+    };
+    function levelOf(pct) { return pct >= 81 ? 5 : pct >= 61 ? 4 : pct >= 41 ? 3 : pct >= 21 ? 2 : 1; }
+
+    var CHK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+    var ALERT = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>';
+    var ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
 
     function score() {
       var cats = sections.map(function (s) {
@@ -396,24 +416,23 @@ let qCounter = 0;
       html += '</div>';
       html += '<p class="sla-report__status" id="sla-email-status" role="status"></p>';
 
-      html += '<div class="sla-score">';
-      html += '<div class="sla-score__dial" style="--pct:' + overall + '"><div class="sla-score__num">' + overall + '<span>/100</span></div></div>';
-      html += '<div class="sla-score__meta"><h2>' + esc(maturity(overall)) + '</h2><div class="sla-score__badges">';
-      html += '<span class="sla-badge">Overall maturity</span>';
-      html += '<span class="sla-badge sla-badge--risk-' + riskClass(overall) + '">' + riskOf(overall) + '</span>';
-      html += '</div></div></div>';
+      // level header
+      var level = levelOf(overall);
+      var pct = Math.round((level / 5) * 100);
+      html += '<div class="sla-level">';
+      html += '<div class="sla-level__dial" style="--pct:' + pct + '"><div class="sla-level__dial-inner"><div class="sla-level__dial-num">' + level + '<span class="sla-level__dial-of">/5</span></div><span class="sla-level__dial-word">Maturity</span></div></div>';
+      html += '<div class="sla-level__meta"><p class="sla-level__eyebrow">Level ' + level + ' of 5</p><h2 class="sla-level__name">' + esc(LV[level].name) + '</h2><p class="sla-level__desc">' + esc(LV[level].desc) + '</p></div>';
+      html += '</div>';
 
-      // category table
-      html += '<div class="sla-card"><h3 class="sla-card__title">Category Scores</h3><p class="sla-card__sub">How each area of your lending collaboration scored.</p>';
-      html += '<table class="sla-table"><thead><tr><th>Category</th><th>Score</th><th>Rating</th></tr></thead><tbody>';
-      cats.forEach(function (c) {
-        var b = band(c.pct);
-        html += '<tr><td>' + esc(c.short) + '</td><td>' + c.raw + ' / ' + c.max + '</td><td><span class="sla-rate sla-rate--' + b + '">' + rateLabel(b) + '</span></td></tr>';
-      });
-      html += '</tbody></table></div>';
+      // next milestone
+      if (level < 5) {
+        html += '<div class="sla-next"><p class="sla-next__eyebrow">Your next milestone</p>';
+        html += '<p class="sla-next__name">Level ' + (level + 1) + ' — ' + esc(LV[level + 1].name) + '</p>';
+        html += '<p>' + esc(NEXT[level]) + '</p></div>';
+      }
 
-      // dashboard bars
-      html += '<div class="sla-card"><h3 class="sla-card__title">Results Dashboard</h3><p class="sla-card__sub">Your score per category, with the peer benchmark marked.</p><div class="sla-bars">';
+      // category score bars
+      html += '<div class="sla-card"><h3 class="sla-card__title">Your Category Scores</h3><p class="sla-card__sub">How you scored across the dimensions of secure lending collaboration. The marker shows the Credit Union peer average for each area.</p><div class="sla-bars">';
       cats.forEach(function (c) {
         var b = band(c.pct);
         var fillCls = b === 'strong' ? ' sla-bar__fill--strong' : (b === 'weak' ? ' sla-bar__fill--weak' : '');
@@ -422,39 +441,35 @@ let qCounter = 0;
       });
       html += '</div><p class="sla-bars__legend"><span></span> Credit Union peer average</p></div>';
 
-      // section analysis
-      html += '<div class="sla-card"><h3 class="sla-card__title">Section Analysis</h3><p class="sla-card__sub">What your scores mean — and where the opportunities are.</p><div class="sla-analysis">';
+      // strengths / gaps
+      var strengths = [], gaps = [];
       cats.forEach(function (c) {
-        var b = band(c.pct);
-        var m = meta[c.id].bands[b];
-        var tagCls = m.type === 'strength' ? 'sla-analysis__tag--strength' : 'sla-analysis__tag--opp';
-        var tagTxt = m.type === 'strength' ? 'Strength' : 'Opportunity';
-        html += '<div class="sla-analysis__item"><div class="sla-analysis__head"><p class="sla-analysis__name">' + esc(c.title) + '</p><span class="sla-analysis__score">' + c.raw + ' / ' + c.max + ' · ' + c.pct + '%</span></div>';
-        html += '<p>' + esc(m.assessment) + '</p>';
-        html += '<p><span class="sla-analysis__tag ' + tagCls + '">' + tagTxt + ':</span> ' + esc(m.note) + '</p></div>';
+        var m = meta[c.id].bands[band(c.pct)];
+        if (m.type === 'strength') strengths.push(m.assessment);
+        else gaps.push(m.assessment);
       });
-      html += '</div></div>';
+      if (strengths.length) {
+        html += '<div class="sla-card"><h3 class="sla-card__title">Your Strengths</h3><p class="sla-card__sub">What your organization is doing well today.</p><div class="sla-list sla-list--strength">';
+        strengths.forEach(function (t) { html += '<div class="sla-list__item">' + CHK + '<span>' + esc(t) + '</span></div>'; });
+        html += '</div></div>';
+      }
+      if (gaps.length) {
+        html += '<div class="sla-card"><h3 class="sla-card__title">Your Gaps</h3><p class="sla-card__sub">Where lending data remains exposed and collaboration is incomplete.</p><div class="sla-list sla-list--gap">';
+        gaps.forEach(function (t) { html += '<div class="sla-list__item">' + ALERT + '<span>' + esc(t) + '</span></div>'; });
+        html += '</div></div>';
+      }
 
-      // roadmap — 3 lowest categories
+      // recommendations — deduped actions from the 3 lowest categories
       var ranked = cats.slice().sort(function (a, b) { return a.pct - b.pct; }).slice(0, 3);
-      html += '<div class="sla-card"><h3 class="sla-card__title">Your Improvement Roadmap</h3><p class="sla-card__sub">The three areas where focused effort will have the greatest impact.</p><div class="sla-road">';
-      ranked.forEach(function (c, i) {
-        html += '<div class="sla-road__item"><p class="sla-road__rank">Priority #' + (i + 1) + '</p><p class="sla-road__name">' + esc(c.short) + '</p><p class="sla-road__score">Current score: ' + c.pct + '%</p><ul class="sla-road__actions">';
-        meta[c.id].actions.forEach(function (a) { html += '<li>' + esc(a) + '</li>'; });
-        html += '</ul></div>';
+      var recs = [], seen = {};
+      ranked.forEach(function (c) {
+        meta[c.id].actions.forEach(function (a) { if (!seen[a]) { seen[a] = 1; recs.push(a); } });
       });
-      html += '</div></div>';
-
-      // benchmark table
-      html += '<div class="sla-card"><h3 class="sla-card__title">How You Compare to Peers</h3><p class="sla-card__sub">Your score vs. the Credit Union average.</p>';
-      html += '<table class="sla-table"><thead><tr><th>Category</th><th>Your Score</th><th>Peer Average</th></tr></thead><tbody>';
-      cats.forEach(function (c) {
-        var delta = c.pct - c.benchmark;
-        var dCls = delta >= 0 ? 'sla-bench__delta--up' : 'sla-bench__delta--down';
-        var dTxt = (delta >= 0 ? '+' : '') + delta + ' pts';
-        html += '<tr><td>' + esc(c.short) + '</td><td>' + c.pct + '% <span class="' + dCls + '">(' + dTxt + ')</span></td><td>' + c.benchmark + '%</td></tr>';
-      });
-      html += '</tbody></table></div>';
+      if (recs.length) {
+        html += '<div class="sla-card"><h3 class="sla-card__title">Recommended Next Steps</h3><p class="sla-card__sub">The actions that will most advance your secure lending collaboration maturity.</p><div class="sla-list sla-list--rec">';
+        recs.forEach(function (t) { html += '<div class="sla-list__item">' + ARROW + '<span>' + esc(t) + '</span></div>'; });
+        html += '</div></div>';
+      }
 
       // CTA
       html += '<div class="sla-cta"><h2>See where FileFlex closes your gaps</h2><p>FileFlex Enterprise applies Zero Trust Data Access to your lending documents — least-privilege, view-only, no-download access with a complete audit trail, without moving your data. Talk to us about your priority areas above.</p><div class="sla-cta__row"><a class="sla-btn" href="/demo-request/">Request a demo</a><a class="sla-btn sla-btn--ghost" href="/secure-lending-collaboration/">Explore secure lending</a></div></div>';
@@ -569,21 +584,8 @@ let qCounter = 0;
         doc.text(' Enterprise', x + w, by);
       }
 
-      // Maturity levels for the lending collaboration journey.
-      var LV = {
-        1: { name: 'Ad Hoc Collaboration', desc: 'Borrower documents are exchanged largely through email and ad-hoc methods with little central control. Access, auditability and data protection depend on manual effort, leaving sensitive lending information exposed and slowing loan processing.' },
-        2: { name: 'Developing Collaboration', desc: 'Your institution has begun moving beyond email-based document exchange, with secure collaboration used for parts of the lending workflow. Foundational controls exist but coverage is inconsistent across access, auditability and data protection.' },
-        3: { name: 'Defined Collaboration', desc: 'Secure collaboration practices are established across much of the lending lifecycle. Access controls and activity logging are in place, though gaps in granular permissions, data control or auditability still create avoidable risk and friction.' },
-        4: { name: 'Managed Collaboration', desc: 'Borrower collaboration is governed by consistent, least-privilege controls with strong visibility into document access. Sensitive data largely stays under your control, and most lending workflows are both secure and efficient.' },
-        5: { name: 'Optimized Collaboration', desc: 'Secure lending collaboration is fully optimized — granular least-privilege access, complete auditability, and minimal data duplication across the entire lending lifecycle. Zero Trust principles extend directly to your borrower documents and external collaboration.' }
-      };
-      var NEXT = {
-        1: 'Reaching Developing Collaboration means replacing email attachments with a secure collaboration platform for your highest-risk lending workflows, and establishing basic access controls and activity logging.',
-        2: 'Reaching Defined Collaboration means extending secure collaboration consistently across the lending lifecycle, with role-based access, exportable audit trails, and reduced document duplication.',
-        3: 'Reaching Managed Collaboration means tightening to granular, least-privilege permissions with automatic expiration, view-only access that keeps borrower data under your control, and automated audit reporting.',
-        4: 'Reaching Optimized Collaboration means extending Zero Trust Data Access across every borrower document and external party — granular permissions, instant revocation, and complete audit trails with no data movement.'
-      };
-      function levelOf(pct) { return pct >= 81 ? 5 : pct >= 61 ? 4 : pct >= 41 ? 3 : pct >= 21 ? 2 : 1; }
+      // Maturity levels (LV / NEXT / levelOf) are defined once at IIFE scope
+      // and shared by the on-screen report and this PDF.
       var level = levelOf(data.overall);
       var levelName = LV[level].name;
 
