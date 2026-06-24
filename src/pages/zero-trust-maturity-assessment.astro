@@ -584,9 +584,7 @@ let qCounter = 0;
     }
     function ensurePdfLibs() {
       if (pdfLibs) return pdfLibs;
-      pdfLibs = loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js').then(function () {
-        return loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js');
-      });
+      pdfLibs = loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
       return pdfLibs;
     }
 
@@ -629,73 +627,178 @@ let qCounter = 0;
       var doc = new jsPDF({ unit: 'pt', format: 'a4' });
       var pageW = doc.internal.pageSize.getWidth();
       var pageH = doc.internal.pageSize.getHeight();
-      var M = 40;
-      var orange = [232, 89, 10];
-      var navy = [14, 26, 43];
-      var grey = [90, 100, 115];
-      var y;
+      var M = 56;
+      var contentW = pageW - M * 2;
 
-      doc.setFillColor(navy[0], navy[1], navy[2]);
-      doc.rect(0, 0, pageW, 92, 'F');
-      doc.setTextColor(255, 255, 255);
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(16);
-      doc.text('Zero Trust Data Access Maturity Assessment', M, 40);
-      doc.setFont('helvetica', 'normal'); doc.setFontSize(10);
-      doc.setTextColor(210, 216, 224);
-      doc.text('Prepared for ' + (contact.name || 'you') + (contact.company ? ', ' + contact.company : '') + '  -  ' + new Date().toLocaleDateString(), M, 64);
+      var ORANGE = [232, 89, 10];
+      var INK = [23, 23, 26];
+      var SOFT = [92, 100, 112];
+      var LINE = [224, 227, 232];
+      var TRACK = [234, 236, 240];
 
-      y = 124;
-      doc.setTextColor(navy[0], navy[1], navy[2]);
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(30);
-      doc.text('Level ' + data.level + ' of 5', M, y);
-      doc.setFontSize(15); doc.setTextColor(orange[0], orange[1], orange[2]);
-      doc.text(data.levelName, M, y + 22);
-      y += 44;
-      doc.setFont('helvetica', 'normal'); doc.setFontSize(10.5); doc.setTextColor(grey[0], grey[1], grey[2]);
-      var ld = doc.splitTextToSize(data.levelDesc, pageW - M * 2);
-      doc.text(ld, M, y); y += ld.length * 13 + 12;
+      var today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+      var who = (contact.name || 'You');
 
+      function setColor(c) { doc.setTextColor(c[0], c[1], c[2]); }
+      function fill(c) { doc.setFillColor(c[0], c[1], c[2]); }
+
+      // ---------------------------------------------------------------
+      // COVER PAGE
+      // ---------------------------------------------------------------
+      fill(ORANGE); doc.rect(0, 0, pageW, 12, 'F');
+
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(13); setColor(INK);
+      doc.text('FileFlex', M, 84);
+      var ffw = doc.getTextWidth('FileFlex');
+      doc.setFont('helvetica', 'normal'); setColor(ORANGE);
+      doc.text(' Enterprise', M + ffw, 84);
+
+      var ty = 312;
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(11.5); setColor(ORANGE);
+      doc.text('ZERO TRUST DATA ACCESS', M, ty);
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(38); setColor(INK);
+      doc.text('Maturity', M, ty + 50);
+      doc.text('Assessment Report', M, ty + 94);
+      fill(ORANGE); doc.rect(M, ty + 120, 72, 4, 'F');
+
+      var py = ty + 178;
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(9.5); setColor(SOFT);
+      doc.text('PREPARED FOR', M, py);
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(16); setColor(INK);
+      doc.text(who, M, py + 24);
+      var py2 = py + 24;
+      if (contact.company) {
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(12); setColor(SOFT);
+        doc.text(contact.company, M, py + 44); py2 = py + 44;
+      }
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(10); setColor(SOFT);
+      doc.text(today, M, py2 + 22);
+
+      doc.setFont('helvetica', 'normal'); doc.setFontSize(9); setColor(SOFT);
+      doc.text('FileFlex Enterprise   |   Zero Trust Data Access   |   fileflex.com', M, pageH - 52);
+
+      // ---------------------------------------------------------------
+      // CONTENT PAGES
+      // ---------------------------------------------------------------
+      var y = 0;
+      function pageHeader() {
+        fill(ORANGE); doc.rect(0, 0, pageW, 6, 'F');
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(8); setColor(SOFT);
+        doc.text('Zero Trust Data Access Maturity Assessment', M, 36);
+        fill(LINE); doc.rect(M, 48, contentW, 0.8, 'F');
+        y = 84;
+      }
+      function newPage() { doc.addPage(); pageHeader(); }
+      function ensure(need) { if (y + need > pageH - 60) { newPage(); } }
+
+      function heading(txt) {
+        ensure(52);
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(16); setColor(INK);
+        doc.text(txt, M, y);
+        y += 11;
+        fill(ORANGE); doc.rect(M, y, 40, 3, 'F');
+        y += 24;
+      }
+      function paragraph(txt, opts) {
+        opts = opts || {};
+        var size = opts.size || 10.5;
+        var color = opts.color || INK;
+        var lead = opts.lead || 15;
+        doc.setFont('helvetica', opts.bold ? 'bold' : 'normal'); doc.setFontSize(size); setColor(color);
+        var lines = doc.splitTextToSize(txt, contentW);
+        for (var i = 0; i < lines.length; i++) {
+          ensure(lead);
+          doc.text(lines[i], M, y);
+          y += lead;
+        }
+        y += (opts.gap == null ? 11 : opts.gap);
+      }
+
+      newPage();
+
+      // ---- Executive summary ----
+      heading('Executive Summary');
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(9.5); setColor(ORANGE);
+      doc.text('YOUR MATURITY LEVEL', M, y); y += 22;
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(22); setColor(INK);
+      doc.text('Level ' + data.level + ' of 5', M, y); y += 26;
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(14); setColor(ORANGE);
+      doc.text(data.levelName, M, y); y += 26;
+      paragraph(data.levelDesc, { size: 11 });
       if (data.next) {
-        doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(navy[0], navy[1], navy[2]);
-        doc.text('Next milestone: Level ' + (data.level + 1) + ' - ' + data.next.name, M, y); y += 15;
-        doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor(grey[0], grey[1], grey[2]);
-        var nd = doc.splitTextToSize(data.next.desc, pageW - M * 2);
-        doc.text(nd, M, y); y += nd.length * 12 + 14;
+        paragraph('Your next milestone is Level ' + (data.level + 1) + ' — ' + data.next.name + '. ' + data.next.desc, { color: SOFT });
       }
 
-      doc.autoTable({
-        startY: y,
-        head: [['Section', 'Score', 'Level gate', 'Status']],
-        body: data.sections.map(function (c) { return [c.label, c.score + ' / ' + c.max, c.gate + ' / ' + c.max, c.score >= c.gate ? 'Achieved' : 'In progress']; }),
-        theme: 'grid', headStyles: { fillColor: navy, textColor: 255 },
-        styles: { fontSize: 10, cellPadding: 6 }, margin: { left: M, right: M }
+      // ---- Maturity by dimension (status bars, no scores) ----
+      heading('Maturity by Dimension');
+      paragraph('The bars below show your relative maturity across the four dimensions that make up Zero Trust Data Access. Longer bars reflect stronger, more established controls; shorter bars highlight where the greatest opportunity to improve remains.', { color: SOFT });
+      data.sections.forEach(function (c) {
+        var maxSafe = c.max > 0 ? c.max : 1;
+        var rawPct = Math.round((Number(c.score) || 0) / maxSafe * 100);
+        var pct = Math.min(100, Math.max(6, isFinite(rawPct) ? rawPct : 0));
+        var achieved = c.score >= c.gate;
+        var statusWord = achieved ? 'Established' : (pct < 40 ? 'Emerging' : 'Developing');
+        ensure(40);
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(10.5); setColor(INK);
+        doc.text(c.label, M, y);
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(9); setColor(achieved ? ORANGE : SOFT);
+        doc.text(statusWord.toUpperCase(), pageW - M, y, { align: 'right' });
+        y += 9;
+        var barH = 9;
+        fill(TRACK); doc.roundedRect(M, y, contentW, barH, 4, 4, 'F');
+        fill(ORANGE); doc.roundedRect(M, y, Math.min(contentW, Math.max(barH, contentW * pct / 100)), barH, 4, 4, 'F');
+        y += barH + 20;
       });
-      y = doc.lastAutoTable.finalY + 24;
+      y += 4;
 
-      function ensureSpace(need) { if (y + need > pageH - M) { doc.addPage(); y = M + 10; } }
-      function block(title, items, color) {
-        ensureSpace(30);
-        doc.setFont('helvetica', 'bold'); doc.setFontSize(14); doc.setTextColor(navy[0], navy[1], navy[2]);
-        doc.text(title, M, y); y += 16;
-        doc.setFont('helvetica', 'normal'); doc.setFontSize(10);
-        items.forEach(function (t) {
-          var lines = doc.splitTextToSize('-  ' + t, pageW - M * 2 - 8);
-          ensureSpace(lines.length * 12 + 6);
-          doc.setTextColor(color[0], color[1], color[2]);
-          doc.text(lines, M + 6, y); y += lines.length * 12 + 6;
-        });
-        y += 8;
+      // ---- Where you're strong (paragraph format) ----
+      if (data.strengths.length) {
+        heading("Where You're Strong");
+        paragraph('The following capabilities are working in your favor today and form the foundation to build on.', { color: SOFT });
+        data.strengths.forEach(function (t) { paragraph(t, { gap: 9 }); });
       }
-      if (data.strengths.length) block('Your Strengths', data.strengths, [30, 107, 52]);
-      if (data.gaps.length) block('Your Gaps', data.gaps, [176, 0, 32]);
-      if (data.recommendations.length) block('Recommended Next Steps', data.recommendations, grey);
 
+      // ---- Gaps and threats (paragraph format) ----
+      if (data.gaps.length) {
+        heading('Gaps and Threats Facing Your Organization');
+        paragraph('These are the areas where sensitive data remains exposed and control is incomplete. Each point describes both the gap and the risk it creates for your organization.', { color: SOFT });
+        data.gaps.forEach(function (t) { paragraph(t, { gap: 9 }); });
+      }
+
+      // ---- Recommended next steps (numbered, orange numerals) ----
+      if (data.recommendations.length) {
+        heading('Recommended Next Steps');
+        paragraph('These actions, in priority order, will most advance your Zero Trust Data Access maturity.', { color: SOFT });
+        var numW = 20;
+        data.recommendations.forEach(function (t, i) {
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(10.5);
+          var lines = doc.splitTextToSize(t, contentW - numW);
+          ensure(lines.length * 15 + 8);
+          doc.setFont('helvetica', 'bold'); setColor(ORANGE);
+          doc.text((i + 1) + '.', M, y);
+          doc.setFont('helvetica', 'normal'); setColor(INK);
+          for (var j = 0; j < lines.length; j++) {
+            doc.text(lines[j], M + numW, y);
+            y += 15;
+            if (j < lines.length - 1) ensure(15);
+          }
+          y += 8;
+        });
+      }
+
+      // ---- Closing ----
+      heading('Closing the Gaps');
+      paragraph('FileFlex Enterprise extends Zero Trust principles to the data layer — applying least-privilege, view-only and no-download access with a complete audit trail, without moving your data or surrendering control to a third party. The gaps and recommendations in this report map directly to capabilities FileFlex can put in place.', {});
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(10.5); setColor(ORANGE);
+      paragraph('Talk to us about closing the gaps identified above — fileflex.com', { bold: true, color: ORANGE });
+
+      // ---- footers / page numbers on content pages ----
       var pages = doc.internal.getNumberOfPages();
-      for (var p = 1; p <= pages; p++) {
+      for (var p = 2; p <= pages; p++) {
         doc.setPage(p);
-        doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(150, 158, 170);
-        doc.text('FileFlex Enterprise - Zero Trust Data Access - fileflex.com', M, pageH - 20);
-        doc.text(p + ' / ' + pages, pageW - M, pageH - 20, { align: 'right' });
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(8); setColor(SOFT);
+        doc.text('FileFlex Enterprise   |   fileflex.com', M, pageH - 28);
+        doc.text('Page ' + (p - 1) + ' of ' + (pages - 1), pageW - M, pageH - 28, { align: 'right' });
       }
 
       var uri = doc.output('datauristring');
