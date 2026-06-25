@@ -39,9 +39,36 @@
   background: #fff;
   border: 1px solid var(--pf-line);
   border-radius: 16px;
-  padding: 34px 32px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .mp-panel--accent { border-color: rgba(232,89,10,0.4); }
+.mp-panel__media {
+  position: relative;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+}
+.mp-panel__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.mp-panel__media::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(2,6,12,0) 45%, rgba(2,6,12,0.30));
+}
+.mp-panel--accent .mp-panel__media::after {
+  background: linear-gradient(180deg, rgba(232,89,10,0) 35%, rgba(232,89,10,0.26));
+}
+.mp-panel__body {
+  padding: 30px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 .mp-panel h3 {
   font-size: 19px;
   font-weight: 600;
@@ -125,81 +152,31 @@
   box-shadow: 0 30px 80px -50px rgba(14,26,43,0.25);
 }
 
-/* ---------- SECTION 10: ASSESSMENT CTA BOX ---------- */
-.mp-assess {
-  max-width: 1000px;
-  margin: 0 auto;
-  background: #fff;
-  border: 1px solid var(--pf-line);
-  border-radius: 18px;
-  padding: 48px 44px;
-}
-.mp-assess__title {
-  font-size: clamp(22px, 2.4vw, 30px);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  color: var(--pf-ink);
-  margin: 0 0 14px;
-  text-align: center;
-}
-.mp-assess__lede {
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--pf-ink-soft);
-  max-width: 680px;
-  margin: 0 auto 32px;
-  text-align: center;
-}
-.mp-assess__cols {
+/* ---------- ICON BADGES (cards) ---------- */
+.mp-badge {
+  width: 52px; height: 52px;
+  border-radius: 14px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 36px;
-  margin: 0 0 36px;
+  place-items: center;
+  background: rgba(232,89,10,0.1);
+  color: var(--pf-orange);
+  margin: 0 0 18px;
+  flex: 0 0 auto;
 }
-.mp-assess__col h3 {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--pf-ink);
+.mp-badge svg { width: 26px; height: 26px; }
+
+/* risk cards: badge + RISK label share one row */
+.mp-risk-card__head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   margin: 0 0 16px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--pf-orange);
-  display: inline-block;
 }
-.mp-check {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.mp-check li {
-  position: relative;
-  padding-left: 30px;
-  font-size: 15px;
-  line-height: 1.5;
-  color: var(--pf-ink-soft);
-  margin-bottom: 12px;
-}
-.mp-check li:last-child { margin-bottom: 0; }
-.mp-check li::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 2px;
-  width: 18px; height: 18px;
-  border-radius: 50%;
-  background: rgba(232,89,10,0.12);
-}
-.mp-check li::after {
-  content: '';
-  position: absolute;
-  left: 6px; top: 6px;
-  width: 6px; height: 9px;
-  border: solid var(--pf-orange);
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-.mp-assess__cta { text-align: center; }
+.mp-risk-card__head .mp-badge { margin: 0; }
+.mp-risk-card__head .ld-chal__num { margin: 0; }
+
+/* benefit cards: badge sits above the kicker */
+.ld-use__card .mp-badge { margin-bottom: 16px; }
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 1024px) {
@@ -210,6 +187,4 @@
   .mp-two { grid-template-columns: 1fr; }
   .mp-grid-3 { grid-template-columns: 1fr; }
   .mp-short__lacks { grid-template-columns: 1fr; }
-  .mp-assess__cols { grid-template-columns: 1fr; gap: 28px; }
-  .mp-assess { padding: 36px 26px; }
 }

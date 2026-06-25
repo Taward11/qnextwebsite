@@ -26,6 +26,15 @@ linking a download button to a missing asset would be a broken/misleading link.
 **How to apply:** if a real guide PDF or member-portal assessment tool is added
 later, repoint those CTAs.
 
+## Card visual-richness pattern (mp-badge)
+To make card groups "more creative" without breaking the design system, use
+`.mp-badge` (orange rounded-square icon chip, `rgba(232,89,10,0.1)` bg + line SVG)
+above the kicker/label. For larger 2-up panels, add a photo header
+(`.mp-panel__media` + `.mp-panel__body`, panel becomes a flex column with
+`overflow:hidden`). Risk cards put the badge inline with the RISK label via
+`.mp-risk-card__head`. Icons are inline aria-hidden line SVGs matching the
+existing `.ld-use__icon` style — never icon-only links (the lint flags those).
+
 ## Attached image handling
 Attached PNG infographics were large (hero 5MB); convert to webp via ImageMagick
 (`magick in.png -quality 82 out.webp`) and resize oversized backgrounds (hero to

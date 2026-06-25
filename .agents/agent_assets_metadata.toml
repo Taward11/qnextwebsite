@@ -65,3 +65,15 @@ id = "wssrYHILOy549CZAkG2ky"
 uri = "file://public/images/lending/lending-collaboration-framework.svg"
 type = "image"
 title = "Lending Collaboration Framework"
+
+[[outputs]]
+id = "gCHZsw5ppTPb0N8L_51AM"
+uri = "file://attached_assets/stock_images/members_digital.jpg"
+type = "image"
+title = "happy member using mobile banking app on smartphone, modern bright lifestyle"
+
+[[outputs]]
+id = "OIfc7wnwRY6xL1WmlwEaS"
+uri = "file://attached_assets/stock_images/paperwork_manual.jpg"
+type = "image"
+title = "stacks of paper documents folders and paperwork on an office desk"

@@ -57,7 +57,7 @@ import '../styles/member-portals.css';
     </p>
 
     <div class="mp-hero__ctas">
-      <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request a Member Portal Assessment &rsaquo;</a>
+      <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request a Demo &rsaquo;</a>
       <a class="pf-btn pf-btn--lg pf-btn--uppercase pf-btn--outline" href="/contact-us/">Talk to a Member Experience Specialist &rsaquo;</a>
     </div>
   </div>
@@ -76,27 +76,50 @@ import '../styles/member-portals.css';
     </p>
     <div class="mp-two">
       <article class="mp-panel mp-panel--accent">
-        <p class="mp-panel__kicker">What Members Want</p>
-        <h3>A modern, self-service experience</h3>
-        <ul class="ld-list">
-          <li>Upload documents online</li>
-          <li>Receive statements securely</li>
-          <li>Submit loan applications</li>
-          <li>Exchange sensitive information digitally</li>
-          <li>Access documents from anywhere</li>
-          <li>Avoid branch visits whenever possible</li>
-        </ul>
+        <div class="mp-panel__media">
+          <img src="/images/member-portals/members-want-digital.webp" alt="A credit union member using a secure mobile banking app on a smartphone" loading="lazy" decoding="async" width="800" height="450" />
+        </div>
+        <div class="mp-panel__body">
+          <span class="mp-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <rect x="7" y="2" width="10" height="20" rx="2" />
+              <path d="M11 18h2" />
+            </svg>
+          </span>
+          <p class="mp-panel__kicker">What Members Want</p>
+          <h3>A modern, self-service experience</h3>
+          <ul class="ld-list">
+            <li>Upload documents online</li>
+            <li>Receive statements securely</li>
+            <li>Submit loan applications</li>
+            <li>Exchange sensitive information digitally</li>
+            <li>Access documents from anywhere</li>
+            <li>Avoid branch visits whenever possible</li>
+          </ul>
+        </div>
       </article>
       <article class="mp-panel">
-        <p class="mp-panel__kicker">What Many Still Rely On</p>
-        <h3>Disconnected, manual processes</h3>
-        <ul class="ld-list">
-          <li>Email attachments</li>
-          <li>Physical document collection</li>
-          <li>Shared links</li>
-          <li>Multiple disconnected systems</li>
-        </ul>
-        <p class="ld-chal__note">These approaches create friction for members and increase organizational risk.</p>
+        <div class="mp-panel__media">
+          <img src="/images/member-portals/manual-processes.webp" alt="Stacks of paper documents and folders representing manual, disconnected processes" loading="lazy" decoding="async" width="800" height="450" />
+        </div>
+        <div class="mp-panel__body">
+          <span class="mp-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z" />
+              <path d="M12 9v4" />
+              <path d="M12 17h.01" />
+            </svg>
+          </span>
+          <p class="mp-panel__kicker">What Many Still Rely On</p>
+          <h3>Disconnected, manual processes</h3>
+          <ul class="ld-list">
+            <li>Email attachments</li>
+            <li>Physical document collection</li>
+            <li>Shared links</li>
+            <li>Multiple disconnected systems</li>
+          </ul>
+          <p class="ld-chal__note">These approaches create friction for members and increase organizational risk.</p>
+        </div>
       </article>
     </div>
   </div>
@@ -114,8 +137,16 @@ import '../styles/member-portals.css';
       auditable collaboration.
     </p>
     <div class="mp-grid-3">
-      <article class="ld-chal__card">
-        <p class="ld-chal__num">RISK 01</p>
+      <article class="ld-chal__card mp-risk-card">
+        <div class="mp-risk-card__head">
+          <span class="mp-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-10 5L2 7" />
+            </svg>
+          </span>
+          <p class="ld-chal__num">RISK 01</p>
+        </div>
         <h3>Email Attachments</h3>
         <p>Sensitive information often includes:</p>
         <ul class="ld-list">
@@ -128,8 +159,18 @@ import '../styles/member-portals.css';
         <p class="ld-chal__note">Email creates challenges for security, visibility, auditability and compliance.</p>
       </article>
 
-      <article class="ld-chal__card">
-        <p class="ld-chal__num">RISK 02</p>
+      <article class="ld-chal__card mp-risk-card">
+        <div class="mp-risk-card__head">
+          <span class="mp-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <circle cx="18" cy="5" r="3" />
+              <circle cx="6" cy="12" r="3" />
+              <circle cx="18" cy="19" r="3" />
+              <path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4" />
+            </svg>
+          </span>
+          <p class="ld-chal__num">RISK 02</p>
+        </div>
         <h3>Public File-Sharing Services</h3>
         <p>Consumer-oriented platforms often result in:</p>
         <ul class="ld-list">
@@ -141,8 +182,16 @@ import '../styles/member-portals.css';
         <p class="ld-chal__note">Member data leaves your systems — and your governance.</p>
       </article>
 
-      <article class="ld-chal__card">
-        <p class="ld-chal__num">RISK 03</p>
+      <article class="ld-chal__card mp-risk-card">
+        <div class="mp-risk-card__head">
+          <span class="mp-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <circle cx="12" cy="12" r="9" />
+              <polyline points="12 7 12 12 15 14" />
+            </svg>
+          </span>
+          <p class="ld-chal__num">RISK 03</p>
+        </div>
         <h3>Manual Processes</h3>
         <p>Manual document collection often leads to:</p>
         <ul class="ld-list">
@@ -366,21 +415,44 @@ import '../styles/member-portals.css';
     </p>
     <div class="ld-adv__grid">
       <article class="ld-use__card">
+        <span class="mp-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+            <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z" />
+          </svg>
+        </span>
         <p class="ld-use__kicker">Faster Service</p>
         <h3>Reduce Delays</h3>
         <p class="ld-use__intro">Eliminate the delays associated with manual document collection.</p>
       </article>
       <article class="ld-use__card">
+        <span class="mp-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M2 12h20" />
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z" />
+          </svg>
+        </span>
         <p class="ld-use__kicker">Convenience</p>
         <h3>Access Anywhere</h3>
         <p class="ld-use__intro">Access documents and services from anywhere, at any time.</p>
       </article>
       <article class="ld-use__card">
+        <span class="mp-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
+            <path d="M9 12l2 2 4-4" />
+          </svg>
+        </span>
         <p class="ld-use__kicker">Security</p>
         <h3>Enhanced Protection</h3>
         <p class="ld-use__intro">Exchange sensitive information through a secure, controlled environment.</p>
       </article>
       <article class="ld-use__card">
+        <span class="mp-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z" />
+          </svg>
+        </span>
         <p class="ld-use__kicker">Communication</p>
         <h3>Better Interactions</h3>
         <p class="ld-use__intro">Streamline communication with credit union staff.</p>
@@ -393,70 +465,63 @@ import '../styles/member-portals.css';
     </p>
     <div class="ld-adv__grid">
       <article class="ld-use__card">
+        <span class="mp-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+            <path d="M9 9h.01M15 9h.01" />
+          </svg>
+        </span>
         <p class="ld-use__kicker">Satisfaction</p>
         <h3>Improve Member Satisfaction</h3>
         <p class="ld-use__intro">Deliver modern digital experiences members expect.</p>
       </article>
       <article class="ld-use__card">
+        <span class="mp-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
+            <path d="M12 8v4" />
+            <path d="M12 16h.01" />
+          </svg>
+        </span>
         <p class="ld-use__kicker">Risk</p>
         <h3>Reduce Risk</h3>
         <p class="ld-use__intro">Protect sensitive member information at every interaction.</p>
       </article>
       <article class="ld-use__card">
+        <span class="mp-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+            <rect x="8" y="2" width="8" height="4" rx="1" />
+            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+            <path d="m9 14 2 2 4-4" />
+          </svg>
+        </span>
         <p class="ld-use__kicker">Compliance</p>
         <h3>Strengthen Compliance</h3>
         <p class="ld-use__intro">Maintain complete visibility and auditability.</p>
       </article>
       <article class="ld-use__card">
+        <span class="mp-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+            <polyline points="16 7 22 7 22 13" />
+          </svg>
+        </span>
         <p class="ld-use__kicker">Efficiency</p>
         <h3>Increase Operational Efficiency</h3>
         <p class="ld-use__intro">Reduce manual processing and document handling.</p>
       </article>
       <article class="ld-use__card">
+        <span class="mp-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+            <rect x="3" y="11" width="18" height="11" rx="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          </svg>
+        </span>
         <p class="ld-use__kicker">Zero Trust</p>
         <h3>Support Zero Trust Initiatives</h3>
         <p class="ld-use__intro">Extend security controls directly to member interactions.</p>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     SECTION 10 — MEMBER PORTAL SECURITY ASSESSMENT
-     ============================================================ -->
-<section class="pf-section pf-section--light" aria-labelledby="mp-assess-heading">
-  <div class="pf-section__inner">
-    <div class="mp-assess">
-      <p class="ld-success__eyebrow" style="text-align:center;">Free Assessment</p>
-      <h2 id="mp-assess-heading" class="mp-assess__title">Secure Member Portal Assessment</h2>
-      <p class="mp-assess__lede">
-        Evaluate how your organization currently handles member collaboration and identify
-        opportunities to improve.
-      </p>
-      <div class="mp-assess__cols">
-        <div class="mp-assess__col">
-          <h3>What You'll Evaluate</h3>
-          <ul class="mp-check">
-            <li>Security</li>
-            <li>Compliance</li>
-            <li>Member Experience</li>
-            <li>Operational Efficiency</li>
-            <li>Zero Trust Readiness</li>
-          </ul>
-        </div>
-        <div class="mp-assess__col">
-          <h3>What You'll Receive</h3>
-          <ul class="mp-check">
-            <li>Member Collaboration Maturity Score</li>
-            <li>Risk Assessment</li>
-            <li>Gap Analysis</li>
-            <li>Improvement Roadmap</li>
-          </ul>
-        </div>
-      </div>
-      <div class="mp-assess__cta">
-        <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Schedule Your Assessment &rsaquo;</a>
-      </div>
     </div>
   </div>
 </section>
@@ -471,7 +536,7 @@ import '../styles/member-portals.css';
     and governance — with Zero Trust Data Access.
   </p>
   <div class="pf-cta-buttons">
-    <a class="pf-btn pf-btn--uppercase" href="/demo-request/">Request a Member Portal Assessment &rsaquo;</a>
+    <a class="pf-btn pf-btn--uppercase" href="/demo-request/">Request a Demo &rsaquo;</a>
     <a class="pf-btn pf-btn--uppercase pf-btn--outline" href="/contact-us/">Contact Us &rsaquo;</a>
   </div>
 </section>
