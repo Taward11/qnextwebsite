@@ -1,0 +1,33 @@
+---
+name: Use-case landing pages
+description: How the "Use Cases" nav landing pages are structured and a CTA-target decision for member portals.
+---
+
+## Pattern
+Use-case landing pages (secure-lending-collaboration, secure-mortgage-collaboration,
+secure-member-portals) all share one creative system: import `platform.css` (pf-*
+primitives: pf-section/eyebrow/title/lede/zt__card/btn, #pf-cta) + `lending.css`
+(ld-* classes: ld-hero__*, ld-list, ld-chal__card, ld-use__grid/card, ld-adv__grid,
+ld-figure) and add only a small page-specific delta stylesheet. The ld-hero__* inner
+classes are plain classes (not nested under #ld-hero), so a new hero id (e.g.
+#mp-hero) can reuse them while supplying its own background image + gradient.
+
+**How to apply:** new use-case page = clone an existing one, reuse pf-*/ld-*, add a
+`<prefix>-*` css only for genuinely new layout, register it in Nav.astro under the
+"Use Cases" menu.
+
+## Member-portal CTA targets
+The Secure Member Portals outline implied a "Member Portal Assessment" tool and a
+"Secure Member Collaboration Guide" download that don't exist as deliverables.
+**Decision:** assessment/guide CTAs point to existing /demo-request/ and /contact-us/
+rather than build a new interactive assessment or link a nonexistent PDF.
+**Why:** the task was "create a webpage," not build another jsPDF assessment tool;
+linking a download button to a missing asset would be a broken/misleading link.
+**How to apply:** if a real guide PDF or member-portal assessment tool is added
+later, repoint those CTAs.
+
+## Attached image handling
+Attached PNG infographics were large (hero 5MB); convert to webp via ImageMagick
+(`magick in.png -quality 82 out.webp`) and resize oversized backgrounds (hero to
+1920px wide) before committing, to match the site's webp-everywhere performance norm.
+Store under public/images/<page>/ (attached_assets/ is NOT web-served).

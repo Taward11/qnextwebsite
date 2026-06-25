@@ -1,0 +1,479 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+import '../styles/lending.css';
+import '../styles/member-portals.css';
+---
+
+<Layout
+  title="Secure Member Portals for Credit Unions | FileFlex Enterprise"
+  description="Deliver a secure digital member experience without sacrificing control. FileFlex gives credit unions secure document exchange, member self-service and digital collaboration powered by Zero Trust Data Access — without email attachments or moving your data."
+  faq={[
+    { q: "What is a secure member portal?", a: "A secure member portal lets credit union members log in to upload documents, submit applications, receive statements and communicate with staff in a controlled, audited environment. FileFlex powers it with Zero Trust Data Access, so identity is verified, access is least-privilege, every action is logged and member data stays in your systems." },
+    { q: "How does FileFlex protect sensitive member information?", a: "FileFlex governs access at the data level. Members and staff get scoped, least-privilege access to exactly the documents a request requires, with view-only, no-download and instant revocation options. Files stay in your existing storage, nothing is copied into third-party clouds, and every access, upload, download and share is immutably logged." },
+    { q: "Can members exchange documents without email attachments or public file-sharing?", a: "Yes. Instead of emailing driver's licenses, tax returns and financial statements or using consumer file-sharing services, members upload and access documents through a policy-controlled portal. The credit union keeps full visibility and a complete audit trail of who accessed what and when." },
+    { q: "How does a secure member portal support compliance and audit?", a: "FileFlex records every member and staff interaction in an immutable, exportable log and enforces granular permissions. That gives examiners and auditors clear evidence of access controls, data governance and activity tracking across loan applications, account opening and ongoing member services." }
+  ]}
+>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<Nav />
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="mp-hero" aria-labelledby="mp-hero-heading">
+  <div class="ld-hero__content">
+    <span class="ld-hero__eyebrow">FileFlex for Member Experience</span>
+    <h1 id="mp-hero-heading" class="ld-hero__title">
+      Deliver a Secure Digital Member Experience Without Sacrificing Control
+    </h1>
+    <p class="ld-hero__lede">
+      Provide members with secure, convenient access to documents, applications and collaboration
+      tools while keeping sensitive information under your control.
+    </p>
+
+    <p class="ld-hero__sub-title">Enable secure member collaboration with Zero Trust Data Access.</p>
+    <p class="ld-hero__sub">
+      Members move through a simple, secure journey — and your credit union keeps governance at
+      every step:
+    </p>
+    <ul class="ld-hero__needs">
+      <li>Verify identity</li>
+      <li>Control access</li>
+      <li>Monitor activity</li>
+      <li>Protect member data</li>
+      <li>Maintain audit trails</li>
+      <li>Keep the experience simple</li>
+    </ul>
+
+    <p class="ld-hero__solution">
+      Members receive a modern digital experience while the credit union maintains security,
+      visibility and governance from member to portal to core systems.
+    </p>
+
+    <div class="mp-hero__ctas">
+      <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request a Member Portal Assessment &rsaquo;</a>
+      <a class="pf-btn pf-btn--lg pf-btn--uppercase pf-btn--outline" href="/contact-us/">Talk to a Member Experience Specialist &rsaquo;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 1 — MEMBER EXPECTATIONS HAVE CHANGED
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="mp-expect-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Shift</p>
+    <h2 id="mp-expect-heading" class="pf-title pf-title--center">Member Expectations Have Changed</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Today's members expect digital convenience comparable to what they receive from major banks
+      and technology providers.
+    </p>
+    <div class="mp-two">
+      <article class="mp-panel mp-panel--accent">
+        <p class="mp-panel__kicker">What Members Want</p>
+        <h3>A modern, self-service experience</h3>
+        <ul class="ld-list">
+          <li>Upload documents online</li>
+          <li>Receive statements securely</li>
+          <li>Submit loan applications</li>
+          <li>Exchange sensitive information digitally</li>
+          <li>Access documents from anywhere</li>
+          <li>Avoid branch visits whenever possible</li>
+        </ul>
+      </article>
+      <article class="mp-panel">
+        <p class="mp-panel__kicker">What Many Still Rely On</p>
+        <h3>Disconnected, manual processes</h3>
+        <ul class="ld-list">
+          <li>Email attachments</li>
+          <li>Physical document collection</li>
+          <li>Shared links</li>
+          <li>Multiple disconnected systems</li>
+        </ul>
+        <p class="ld-chal__note">These approaches create friction for members and increase organizational risk.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 2 — THE HIDDEN RISKS OF TRADITIONAL COLLABORATION
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="mp-risk-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Challenge</p>
+    <h2 id="mp-risk-heading" class="pf-title pf-title--center">The Hidden Risks of Traditional Member Collaboration</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      The tools most credit unions rely on to move member documents were never built for secure,
+      auditable collaboration.
+    </p>
+    <div class="mp-grid-3">
+      <article class="ld-chal__card">
+        <p class="ld-chal__num">RISK 01</p>
+        <h3>Email Attachments</h3>
+        <p>Sensitive information often includes:</p>
+        <ul class="ld-list">
+          <li>Driver's licenses</li>
+          <li>Income verification</li>
+          <li>Tax returns</li>
+          <li>Financial statements</li>
+          <li>Loan documentation</li>
+        </ul>
+        <p class="ld-chal__note">Email creates challenges for security, visibility, auditability and compliance.</p>
+      </article>
+
+      <article class="ld-chal__card">
+        <p class="ld-chal__num">RISK 02</p>
+        <h3>Public File-Sharing Services</h3>
+        <p>Consumer-oriented platforms often result in:</p>
+        <ul class="ld-list">
+          <li>Loss of control</li>
+          <li>Data duplication</li>
+          <li>Compliance concerns</li>
+          <li>Unmanaged sharing</li>
+        </ul>
+        <p class="ld-chal__note">Member data leaves your systems — and your governance.</p>
+      </article>
+
+      <article class="ld-chal__card">
+        <p class="ld-chal__num">RISK 03</p>
+        <h3>Manual Processes</h3>
+        <p>Manual document collection often leads to:</p>
+        <ul class="ld-list">
+          <li>Delays</li>
+          <li>Missing documents</li>
+          <li>Increased operational costs</li>
+          <li>Poor member experiences</li>
+        </ul>
+        <p class="ld-chal__note">Friction slows service and frustrates members.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 3 — SECURE MEMBER PORTAL USE CASES
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="mp-use-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Use Cases</p>
+    <h2 id="mp-use-heading" class="pf-title pf-title--center">Secure Member Portal Use Cases</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      FileFlex secures collaboration across every member interaction — keeping sensitive information
+      in place while members and staff get exactly the access they need.
+    </p>
+    <div class="ld-use__grid">
+      <article class="ld-use__card">
+        <svg class="ld-use__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+          <path d="M14 2v6h6" />
+          <path d="M9 15l2 2 4-4" />
+        </svg>
+        <p class="ld-use__kicker">Apply</p>
+        <h3>Loan Applications</h3>
+        <p class="ld-use__intro">Allow members to securely:</p>
+        <ul class="ld-list">
+          <li>Submit applications</li>
+          <li>Upload supporting documents</li>
+          <li>Receive requests for additional information</li>
+        </ul>
+      </article>
+
+      <article class="ld-use__card">
+        <svg class="ld-use__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M3 10.5 12 3l9 7.5" />
+          <path d="M5 9.5V21h14V9.5" />
+          <path d="M9 21v-6h6v6" />
+        </svg>
+        <p class="ld-use__kicker">Mortgage</p>
+        <h3>Mortgage Collaboration</h3>
+        <p class="ld-use__intro">A secure environment for exchanging:</p>
+        <ul class="ld-list">
+          <li>Income verification</li>
+          <li>Tax documents</li>
+          <li>Appraisals</li>
+          <li>Closing documentation</li>
+        </ul>
+      </article>
+
+      <article class="ld-use__card">
+        <svg class="ld-use__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1" />
+        </svg>
+        <p class="ld-use__kicker">Onboard</p>
+        <h3>Account Opening</h3>
+        <p class="ld-use__intro">Enable secure collection of:</p>
+        <ul class="ld-list">
+          <li>Identification documents</li>
+          <li>Compliance forms</li>
+          <li>Supporting documentation</li>
+        </ul>
+      </article>
+
+      <article class="ld-use__card">
+        <svg class="ld-use__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z" />
+          <path d="M8 9h8M8 13h5" />
+        </svg>
+        <p class="ld-use__kicker">Service</p>
+        <h3>Ongoing Member Services</h3>
+        <p class="ld-use__intro">Allow members to:</p>
+        <ul class="ld-list">
+          <li>Access statements</li>
+          <li>Exchange sensitive documents</li>
+          <li>Communicate securely with staff</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 4 — HOW SECURE MEMBER COLLABORATION WORKS (infographic)
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="mp-how-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">How It Works</p>
+    <h2 id="mp-how-heading" class="pf-title pf-title--center">How Secure Member Collaboration Works</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      A simple, secure process that protects member information while making collaboration easy.
+    </p>
+    <figure class="ld-figure">
+      <img src="/images/member-portals/how-secure-member-collaboration-works.webp" alt="How secure member collaboration works: a six-step process — the member logs in securely, identity is verified with multi-factor authentication, the member uploads or accesses documents within the portal, credit union staff review the information in controlled workflows, the member receives secure updates and requested actions, and all activity is logged and auditable. At every stage identity is verified, access is controlled, activity is monitored, data remains protected and the member experience remains simple." loading="lazy" decoding="async" />
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 5 — WHY TRADITIONAL PORTALS FALL SHORT
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="mp-short-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Gap</p>
+    <h2 id="mp-short-heading" class="pf-title pf-title--center">Why Traditional Portals Fall Short</h2>
+    <div class="mp-short">
+      <p class="pf-lede pf-lede--center pf-lede--soft">
+        Most portals focus primarily on convenience. They often lack:
+      </p>
+      <ul class="mp-short__lacks">
+        <li>Granular access controls</li>
+        <li>Secure external collaboration</li>
+        <li>Complete audit visibility</li>
+        <li>Zero Trust principles</li>
+      </ul>
+      <p class="mp-short__result">
+        The result: organizations gain a portal but <strong>lose visibility and control.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 6 — THE FILEFLEX DIFFERENCE
+     ============================================================ -->
+<section class="pf-section pf-section--dark" aria-labelledby="mp-diff-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Answer</p>
+    <h2 id="mp-diff-heading" class="pf-title pf-title--center pf-title--light">The FileFlex Difference</h2>
+    <p class="pf-lede pf-lede--center pf-lede--light">
+      FileFlex is purpose-built Zero Trust Data Access — secure, policy-driven member collaboration
+      on documents wherever they reside.
+    </p>
+    <div class="ld-adv__grid">
+      <article class="pf-zt__card">
+        <svg class="ld-adv__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
+          <path d="M9 12l2 2 4-4" />
+        </svg>
+        <p class="pf-zt__kicker">At the Data Level</p>
+        <h3>Zero Trust Data Access</h3>
+        <p>Access is governed at the data level — not just the network or application perimeter.</p>
+      </article>
+      <article class="pf-zt__card">
+        <svg class="ld-adv__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <rect x="3" y="11" width="18" height="11" rx="2" />
+          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          <path d="M12 15v3" />
+        </svg>
+        <p class="pf-zt__kicker">Least Privilege</p>
+        <h3>Granular Permissions</h3>
+        <p>Users access only the information they require — scoped to each request and each stage.</p>
+      </article>
+      <article class="pf-zt__card">
+        <svg class="ld-adv__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" />
+          <circle cx="12" cy="12" r="3" />
+        </svg>
+        <p class="pf-zt__kicker">Full Visibility</p>
+        <h3>Complete Audit Visibility</h3>
+        <p>Track access events, downloads, uploads and sharing activity in an immutable, audit-ready record.</p>
+      </article>
+      <article class="pf-zt__card">
+        <svg class="ld-adv__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M4 7V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2" />
+          <path d="M4 7h16v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" />
+          <path d="M9 12h6" />
+        </svg>
+        <p class="pf-zt__kicker">Data Sovereignty</p>
+        <h3>Maintain Data Ownership</h3>
+        <p>Data remains under credit union control — files stay in your storage, under your governance.</p>
+      </article>
+      <article class="pf-zt__card">
+        <svg class="ld-adv__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z" />
+        </svg>
+        <p class="pf-zt__kicker">Experience</p>
+        <h3>Improve Member Experience</h3>
+        <p>Provide cloud-like convenience to members without sacrificing governance.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 7 — SECURE MEMBER COLLABORATION FRAMEWORK (graphic)
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="mp-fw-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Framework</p>
+    <h2 id="mp-fw-heading" class="pf-title pf-title--center">Secure Member Collaboration Framework</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Members exchange documents and information through a secure portal that flows into your core
+      systems — secured at every step by Zero Trust Data Access.
+    </p>
+    <figure class="mp-framework">
+      <img src="/images/member-portals/secure-member-collaboration-framework.webp" alt="Secure Member Collaboration Framework: a member accesses the portal to securely exchange documents and information; the secure member portal — powered by Zero Trust Data Access — lets them upload and share documents, communicate securely, view and access documents, receive updates and notifications, and complete requests in a seamless, simple experience; information then flows securely into credit union core systems and workflows for processing and servicing. Zero Trust Data Access verifies identity, controls access, monitors activity, protects member data and maintains audit trails throughout. Modern experience, maximum security, complete control." loading="lazy" decoding="async" />
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 8 & 9 — BENEFITS
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="mp-ben-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Payoff</p>
+    <h2 id="mp-ben-heading" class="pf-title pf-title--center">Benefits for Members</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      A modern, secure experience members can rely on.
+    </p>
+    <div class="ld-adv__grid">
+      <article class="ld-use__card">
+        <p class="ld-use__kicker">Faster Service</p>
+        <h3>Reduce Delays</h3>
+        <p class="ld-use__intro">Eliminate the delays associated with manual document collection.</p>
+      </article>
+      <article class="ld-use__card">
+        <p class="ld-use__kicker">Convenience</p>
+        <h3>Access Anywhere</h3>
+        <p class="ld-use__intro">Access documents and services from anywhere, at any time.</p>
+      </article>
+      <article class="ld-use__card">
+        <p class="ld-use__kicker">Security</p>
+        <h3>Enhanced Protection</h3>
+        <p class="ld-use__intro">Exchange sensitive information through a secure, controlled environment.</p>
+      </article>
+      <article class="ld-use__card">
+        <p class="ld-use__kicker">Communication</p>
+        <h3>Better Interactions</h3>
+        <p class="ld-use__intro">Streamline communication with credit union staff.</p>
+      </article>
+    </div>
+
+    <h2 class="pf-title pf-title--center" style="margin-top:72px;">Benefits for Credit Unions</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Modernize the member experience while strengthening security and governance.
+    </p>
+    <div class="ld-adv__grid">
+      <article class="ld-use__card">
+        <p class="ld-use__kicker">Satisfaction</p>
+        <h3>Improve Member Satisfaction</h3>
+        <p class="ld-use__intro">Deliver modern digital experiences members expect.</p>
+      </article>
+      <article class="ld-use__card">
+        <p class="ld-use__kicker">Risk</p>
+        <h3>Reduce Risk</h3>
+        <p class="ld-use__intro">Protect sensitive member information at every interaction.</p>
+      </article>
+      <article class="ld-use__card">
+        <p class="ld-use__kicker">Compliance</p>
+        <h3>Strengthen Compliance</h3>
+        <p class="ld-use__intro">Maintain complete visibility and auditability.</p>
+      </article>
+      <article class="ld-use__card">
+        <p class="ld-use__kicker">Efficiency</p>
+        <h3>Increase Operational Efficiency</h3>
+        <p class="ld-use__intro">Reduce manual processing and document handling.</p>
+      </article>
+      <article class="ld-use__card">
+        <p class="ld-use__kicker">Zero Trust</p>
+        <h3>Support Zero Trust Initiatives</h3>
+        <p class="ld-use__intro">Extend security controls directly to member interactions.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 10 — MEMBER PORTAL SECURITY ASSESSMENT
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="mp-assess-heading">
+  <div class="pf-section__inner">
+    <div class="mp-assess">
+      <p class="ld-success__eyebrow" style="text-align:center;">Free Assessment</p>
+      <h2 id="mp-assess-heading" class="mp-assess__title">Secure Member Portal Assessment</h2>
+      <p class="mp-assess__lede">
+        Evaluate how your organization currently handles member collaboration and identify
+        opportunities to improve.
+      </p>
+      <div class="mp-assess__cols">
+        <div class="mp-assess__col">
+          <h3>What You'll Evaluate</h3>
+          <ul class="mp-check">
+            <li>Security</li>
+            <li>Compliance</li>
+            <li>Member Experience</li>
+            <li>Operational Efficiency</li>
+            <li>Zero Trust Readiness</li>
+          </ul>
+        </div>
+        <div class="mp-assess__col">
+          <h3>What You'll Receive</h3>
+          <ul class="mp-check">
+            <li>Member Collaboration Maturity Score</li>
+            <li>Risk Assessment</li>
+            <li>Gap Analysis</li>
+            <li>Improvement Roadmap</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mp-assess__cta">
+        <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Schedule Your Assessment &rsaquo;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FINAL CTA
+     ============================================================ -->
+<section id="pf-cta" aria-labelledby="mp-cta-heading">
+  <h2 id="mp-cta-heading">Modern Member Experience Requires Modern Collaboration</h2>
+  <p class="ld-cta__sub">
+    Give members a secure digital experience while your credit union keeps full visibility, security
+    and governance — with Zero Trust Data Access.
+  </p>
+  <div class="pf-cta-buttons">
+    <a class="pf-btn pf-btn--uppercase" href="/demo-request/">Request a Member Portal Assessment &rsaquo;</a>
+    <a class="pf-btn pf-btn--uppercase pf-btn--outline" href="/contact-us/">Contact Us &rsaquo;</a>
+  </div>
+</section>
+
+</Layout>

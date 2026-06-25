@@ -1,0 +1,215 @@
+/* ============================================================
+   SECURE MEMBER PORTALS — use-case landing page
+   Builds on the Platform creative system (platform.css) and reuses
+   the lending page primitives (lending.css): pf-* + ld-* classes.
+   Only member-portal-specific pieces live here, prefixed mp-.
+   ============================================================ */
+
+/* ---------- HERO (reuses .ld-hero__* inner classes) ---------- */
+#mp-hero {
+  position: relative;
+  min-height: 640px;
+  padding: 120px 5vw 100px;
+  color: #fff;
+  background: #02060c url('/images/member-portals/hero.webp') center / cover no-repeat;
+  isolation: isolate;
+}
+#mp-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(2,6,12,0.92) 0%, rgba(2,6,12,0.72) 50%, rgba(2,6,12,0.20) 100%);
+  z-index: -1;
+}
+.mp-hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+/* ---------- SECTION 1: MEMBER EXPECTATIONS (2 panels) ---------- */
+.mp-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.mp-panel {
+  background: #fff;
+  border: 1px solid var(--pf-line);
+  border-radius: 16px;
+  padding: 34px 32px;
+}
+.mp-panel--accent { border-color: rgba(232,89,10,0.4); }
+.mp-panel h3 {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  color: var(--pf-ink);
+  margin: 0 0 18px;
+}
+.mp-panel__kicker {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pf-orange);
+  margin: 0 0 12px;
+}
+
+/* ---------- 3-COLUMN CARD GRID (risks, difference) ---------- */
+.mp-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* ---------- SECTION 5: WHY TRADITIONAL PORTALS FALL SHORT ---------- */
+.mp-short {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+.mp-short__lacks {
+  display: inline-grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 12px 40px;
+  text-align: left;
+  margin: 8px auto 36px;
+}
+.mp-short__lacks li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: var(--pf-ink);
+}
+.mp-short__lacks li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 5px;
+  width: 11px; height: 11px;
+  border: 2px solid var(--pf-orange);
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+.mp-short__result {
+  background: rgba(232,89,10,0.08);
+  border: 1px solid rgba(232,89,10,0.35);
+  border-radius: 14px;
+  padding: 26px 30px;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--pf-ink);
+  max-width: 700px;
+  margin: 0 auto;
+}
+.mp-short__result strong { color: var(--pf-orange); }
+
+/* ---------- SECTION 7: FRAMEWORK FIGURE ---------- */
+.mp-framework {
+  margin: 8px auto 0;
+  max-width: 960px;
+  padding: 0;
+}
+.mp-framework img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid var(--pf-line);
+  box-shadow: 0 30px 80px -50px rgba(14,26,43,0.25);
+}
+
+/* ---------- SECTION 10: ASSESSMENT CTA BOX ---------- */
+.mp-assess {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid var(--pf-line);
+  border-radius: 18px;
+  padding: 48px 44px;
+}
+.mp-assess__title {
+  font-size: clamp(22px, 2.4vw, 30px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--pf-ink);
+  margin: 0 0 14px;
+  text-align: center;
+}
+.mp-assess__lede {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--pf-ink-soft);
+  max-width: 680px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+.mp-assess__cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+  margin: 0 0 36px;
+}
+.mp-assess__col h3 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pf-ink);
+  margin: 0 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--pf-orange);
+  display: inline-block;
+}
+.mp-check {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.mp-check li {
+  position: relative;
+  padding-left: 30px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--pf-ink-soft);
+  margin-bottom: 12px;
+}
+.mp-check li:last-child { margin-bottom: 0; }
+.mp-check li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 2px;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: rgba(232,89,10,0.12);
+}
+.mp-check li::after {
+  content: '';
+  position: absolute;
+  left: 6px; top: 6px;
+  width: 6px; height: 9px;
+  border: solid var(--pf-orange);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.mp-assess__cta { text-align: center; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .mp-grid-3 { grid-template-columns: 1fr; max-width: 560px; }
+}
+@media (max-width: 768px) {
+  #mp-hero { padding: 90px 6vw 64px; min-height: auto; }
+  .mp-two { grid-template-columns: 1fr; }
+  .mp-grid-3 { grid-template-columns: 1fr; }
+  .mp-short__lacks { grid-template-columns: 1fr; }
+  .mp-assess__cols { grid-template-columns: 1fr; gap: 28px; }
+  .mp-assess { padding: 36px 26px; }
+}
