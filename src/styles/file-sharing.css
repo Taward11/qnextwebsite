@@ -1,0 +1,163 @@
+/* ============================================================
+   ZERO TRUST FILE SHARING — use-case landing page
+   Builds on the Platform creative system (platform.css) and reuses
+   the lending page primitives (lending.css: ld-*) plus the shared
+   member-portals helpers (member-portals.css: mp-two, mp-panel,
+   mp-badge, mp-grid-3, mp-short, mp-framework, mp-hero__ctas).
+   Only file-sharing-specific pieces live here, prefixed fs-.
+   ============================================================ */
+
+/* ---------- HERO (reuses .ld-hero__* inner classes) ---------- */
+#fs-hero {
+  position: relative;
+  min-height: 640px;
+  padding: 120px 5vw 100px;
+  color: #fff;
+  background: #02060c url('/images/file-sharing/hero.webp') center / cover no-repeat;
+  isolation: isolate;
+}
+#fs-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(2,6,12,0.93) 0%, rgba(2,6,12,0.78) 50%, rgba(2,6,12,0.32) 100%);
+  z-index: -1;
+}
+
+/* ---------- KEY-MESSAGE HIGHLIGHT BANNER ---------- */
+.fs-banner {
+  background: rgba(232,89,10,0.08);
+  border: 1px solid rgba(232,89,10,0.35);
+  border-radius: 14px;
+  padding: 24px 30px;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--pf-ink);
+  max-width: 760px;
+  margin: 36px auto 0;
+  text-align: center;
+}
+.fs-banner strong { color: var(--pf-orange); }
+
+/* ---------- SECTION 4: HOW IT WORKS (6 numbered steps) ---------- */
+.fs-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1080px;
+  margin: 0 auto;
+  counter-reset: fs-step;
+}
+.fs-step {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--pf-line);
+  border-radius: 16px;
+  padding: 28px 26px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.fs-step__num {
+  width: 40px; height: 40px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--pf-orange);
+  color: #fff;
+  font-family: var(--pf-font-display, inherit);
+  font-size: 17px;
+  font-weight: 700;
+}
+.fs-step h3 {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  color: var(--pf-ink);
+  margin: 6px 0 0;
+}
+.fs-step p {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--pf-ink-soft);
+  margin: 0;
+}
+
+/* ---------- CHECK LIST (stage guarantees) ---------- */
+.fs-checks {
+  list-style: none;
+  padding: 0;
+  margin: 40px auto 0;
+  max-width: 920px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px 28px;
+}
+.fs-checks li {
+  position: relative;
+  padding-left: 32px;
+  font-size: 15.5px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--pf-ink);
+}
+.fs-checks li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--pf-orange)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E")
+    center / 13px no-repeat;
+}
+
+/* ---------- COMPARISON ("asks") INTRO ---------- */
+.fs-asks {
+  max-width: 760px;
+  margin: 0 auto 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.fs-ask {
+  border-radius: 14px;
+  padding: 24px 26px;
+  text-align: center;
+}
+.fs-ask--old {
+  background: rgba(14,26,43,0.04);
+  border: 1px solid var(--pf-line);
+}
+.fs-ask--new {
+  background: rgba(232,89,10,0.06);
+  border: 1px solid rgba(232,89,10,0.35);
+}
+.fs-ask__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  color: var(--pf-ink-soft);
+}
+.fs-ask--new .fs-ask__label { color: var(--pf-orange); }
+.fs-ask__q {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--pf-ink);
+  margin: 0;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .fs-steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .fs-steps { grid-template-columns: 1fr; }
+  .fs-asks { grid-template-columns: 1fr; }
+}

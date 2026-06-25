@@ -1,0 +1,372 @@
+Secure File Sharing
+Proposed Headline
+Secure File Sharing Without Losing Control of Your Data
+
+Enable employees, members, partners, and third parties to securely access and exchange information while maintaining complete visibility, governance, and control.
+
+Subheadline
+
+Replace email attachments, shared links, and unsecured file transfer methods with Zero Trust Data Access.
+
+Primary CTA
+
+Request a Secure File Sharing Assessment
+
+Secondary CTA
+
+Download the Secure File Sharing Guide
+
+Hero Section
+File Sharing Has Become a Security Problem
+
+Organizations share sensitive information every day:
+
+Financial records
+Loan documentation
+Client information
+Legal documents
+Contracts
+Board materials
+Compliance records
+
+Yet many organizations still rely on:
+
+Email attachments
+Shared drives
+Consumer file-sharing services
+FTP systems
+
+These approaches create unnecessary risk and limited visibility.
+
+Key Message
+
+Secure file sharing should not require sacrificing control of your data.
+
+Hero Graphic
+Users
+   │
+   ▼
+Secure File Sharing
+   │
+   ▼
+Protected Data
+
+──────────────────────
+
+Zero Trust Data Access
+
+✓ Verify Identity
+✓ Control Access
+✓ Monitor Activity
+✓ Protect Data
+✓ Maintain Audit Trails
+Section 1
+Why Traditional File Sharing Falls Short
+Email Attachments
+
+Challenges include:
+
+Multiple copies of files
+Uncontrolled forwarding
+Limited visibility
+Compliance concerns
+Shared Links
+
+Challenges include:
+
+Excessive permissions
+Uncontrolled distribution
+Expired governance
+Consumer File Sharing Platforms
+
+Challenges include:
+
+Data migration
+Third-party storage
+Loss of ownership
+Compliance concerns
+Legacy FTP Systems
+
+Challenges include:
+
+Poor user experience
+Limited collaboration
+Administrative complexity
+Section 2
+Modern Secure File Sharing Requirements
+
+Today's organizations require more than file transfer.
+
+They require:
+
+Secure Access
+
+Only authorized users should access information.
+
+Granular Permissions
+
+Control who can:
+
+View
+Download
+Upload
+Edit
+Share
+Activity Monitoring
+
+Track:
+
+Access events
+Downloads
+Uploads
+Sharing activity
+Auditability
+
+Generate records supporting:
+
+Compliance
+Security reviews
+Regulatory requirements
+Data Ownership
+
+Maintain organizational control over information.
+
+Section 3
+Common Secure File Sharing Use Cases
+
+This section should contain cards.
+
+Internal Collaboration
+
+Enable employees to securely share sensitive information.
+
+External Collaboration
+
+Work securely with:
+
+Customers
+Members
+Partners
+Vendors
+Contractors
+Financial Services
+
+Protect:
+
+Loan files
+Member records
+Financial statements
+Compliance documentation
+Legal and Compliance
+
+Securely exchange:
+
+Contracts
+Due diligence materials
+Audit documents
+Regulatory information
+Executive and Board Communications
+
+Protect sensitive business information.
+
+Virtual Data Rooms
+
+Enable controlled access for:
+
+M&A
+Due diligence
+Lending
+Regulatory reviews
+Section 4
+How Secure File Sharing Works
+Step 1
+
+User requests access.
+
+↓
+
+Step 2
+
+Identity is verified.
+
+↓
+
+Step 3
+
+Access permissions are applied.
+
+↓
+
+Step 4
+
+Information is accessed securely.
+
+↓
+
+Step 5
+
+Activity is monitored and logged.
+
+↓
+
+Step 6
+
+Access can be modified or revoked at any time.
+
+Key Message
+
+At every stage:
+
+✓ Identity is verified
+
+✓ Access is controlled
+
+✓ Activity is monitored
+
+✓ Data remains protected
+
+✓ Audit trails are maintained
+
+Section 5
+The Hidden Cost of Unsecured File Sharing
+
+Many organizations underestimate the risks associated with file sharing.
+
+Risks Include
+Data breaches
+Insider threats
+Compliance violations
+Excessive data duplication
+Loss of visibility
+Third-party exposure
+Business Impact
+Increased risk
+Slower audits
+Operational inefficiencies
+Reduced customer trust
+Section 6
+Why Zero Trust File Sharing Is Different
+
+Traditional file sharing asks:
+
+"How do we transfer a file?"
+
+Zero Trust Data Access asks:
+
+"How do we control access to information?"
+
+Traditional File Sharing
+Transfer-focused
+Multiple copies
+Limited visibility
+Static permissions
+Zero Trust File Sharing
+Access-focused
+Granular controls
+Continuous monitoring
+Complete auditability
+
+This section is where you introduce the category language.
+
+Section 7
+Secure File Sharing Framework
+Infographic
+User
+   │
+   ▼
+Verify Identity
+   │
+   ▼
+Apply Access Controls
+   │
+   ▼
+Secure Data Access
+   │
+   ▼
+Monitor Activity
+   │
+   ▼
+Audit & Compliance
+
+──────────────────────
+
+Zero Trust Data Access
+
+This becomes the signature graphic for the page.
+
+Section 8
+Benefits
+Improve Security
+
+Reduce unauthorized access and data exposure.
+
+Simplify Compliance
+
+Maintain visibility and auditability.
+
+Increase Productivity
+
+Enable secure collaboration without complexity.
+
+Improve User Experience
+
+Make secure sharing simple for employees and external users.
+
+Maintain Control
+
+Keep data under organizational governance.
+
+Section 9
+Secure File Sharing Assessment
+
+This should mirror your other assessment-based CTAs.
+
+Free Secure File Sharing Assessment
+
+Evaluate how your organization currently shares sensitive information and identify opportunities to improve:
+
+✓ Security
+
+✓ Governance
+
+✓ Compliance
+
+✓ User Experience
+
+✓ Zero Trust Readiness
+
+Deliverables
+Secure File Sharing Maturity Score
+Risk Assessment
+Gap Analysis
+Improvement Roadmap
+CTA
+
+Schedule Your Assessment
+
+Strategic Purpose of This Page
+
+Unlike the Mortgage, Lending, and Member Portal pages, this page addresses a broader audience:
+
+CIO
+CISO
+IT Director
+Compliance Officer
+Operations Executive
+Security Architect
+
+It also becomes an excellent SEO page because it can target high-volume search terms such as:
+
+secure file sharing
+secure document sharing
+secure file transfer
+enterprise file sharing
+encrypted file sharing
+secure external collaboration
+secure document exchange
+
+The key is that the page should never feel like "another file-sharing product page." It should consistently reinforce the larger narrative:
+
+Traditional file sharing moves files. Zero Trust Data Access governs access to information.
+
+That message ties the page directly into the broader category-creation strategy behind FileFlex.

@@ -77,3 +77,21 @@ id = "OIfc7wnwRY6xL1WmlwEaS"
 uri = "file://attached_assets/stock_images/paperwork_manual.jpg"
 type = "image"
 title = "stacks of paper documents folders and paperwork on an office desk"
+
+[[outputs]]
+id = "VWluBaZwSfP8B4yL-ZPLM"
+uri = "file://attached_assets/stock_images/fs_hero.jpg"
+type = "image"
+title = "abstract digital data security network, dark blue cyber security technology background"
+
+[[outputs]]
+id = "0rTEp_ZR222t3kJHrEubi"
+uri = "file://attached_assets/stock_images/fs_share.jpg"
+type = "image"
+title = "business team reviewing confidential financial documents and contracts in a modern office meeting"
+
+[[outputs]]
+id = "9QCEweRnck6ZIIu3uvTUQ"
+uri = "file://attached_assets/stock_images/fs_rely.jpg"
+type = "image"
+title = "close up of hands typing on a laptop sending an email with an attachment"
