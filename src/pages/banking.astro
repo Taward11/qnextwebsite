@@ -1,0 +1,505 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+import '../styles/banking.css';
+
+const faqs = [
+  {
+    q: "Does FileFlex replace SharePoint?",
+    a: "No. FileFlex complements SharePoint and other repositories rather than replacing them. It applies Zero Trust Data Access on top of your existing SharePoint, file servers, NAS and cloud storage so banks keep their current investments while gaining granular, least-privilege access and a complete audit trail.",
+  },
+  {
+    q: "Does data move into the cloud?",
+    a: "No. FileFlex federates secure access to data wherever it already lives — on-premises or cloud — without copying or migrating it. Files stay in your environment, under your governance, while customers and staff get a cloud-like experience.",
+  },
+  {
+    q: "Can customers upload documents securely?",
+    a: "Yes. Customers can be granted scoped, identity-verified access to securely submit and receive financial documents through protected links and data rooms — with view-only, no-download, watermarking and instant revocation available, and every action logged.",
+  },
+  {
+    q: "Can outside legal firms and third parties collaborate?",
+    a: "Yes. Attorneys, accountants, auditors and other third parties can be given time-limited, least-privilege access to only the specific documents they need, without VPNs or exposing internal storage — and access can be revoked instantly.",
+  },
+  {
+    q: "Can we integrate with Active Directory?",
+    a: "Yes. FileFlex integrates with your existing identity providers — Active Directory, Microsoft Entra ID, Okta, Ping and Duo — so authentication, MFA and policy follow your established identity controls.",
+  },
+  {
+    q: "Can FileFlex support hybrid storage?",
+    a: "Yes. FileFlex governs access across hybrid environments — Windows file servers, NAS/SAN, SharePoint, ECM/document repositories and cloud storage (AWS, Azure, GCP) — under one consistent set of Zero Trust policies.",
+  },
+  {
+    q: "Can we maintain complete audit logs?",
+    a: "Yes. Every view, upload, download, edit and share is immutably recorded and exportable to your SIEM, giving banks the audit visibility and evidence required for compliance and oversight.",
+  },
+];
+---
+
+<Layout
+  title="FileFlex for Banks | Secure Banking Collaboration & Zero Trust Data Access"
+  description="FileFlex enables banks to securely share, receive, collaborate on and govern sensitive financial information — without moving data to the cloud. Deliver cloud-like customer experiences with Zero Trust Data Access across existing on-premises, SharePoint and cloud storage."
+  faq={faqs}
+>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<Nav />
+
+<!-- ============================================================
+     SECTION 1 — HERO
+     ============================================================ -->
+<section id="bk-hero" aria-labelledby="bk-hero-heading">
+  <div class="bk-hero__grid">
+    <div class="bk-hero__content">
+      <span class="bk-hero__eyebrow">FileFlex for Banks</span>
+      <h1 id="bk-hero-heading" class="bk-hero__title">
+        Modernize Secure Banking Collaboration Without Moving Your Data
+      </h1>
+      <p class="bk-hero__lede">
+        FileFlex enables banks to securely share, receive, collaborate on, and govern sensitive
+        financial information while keeping data under your control. Deliver cloud-like customer
+        experiences without migrating files to the cloud.
+      </p>
+      <div class="bk-hero__ctas">
+        <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request Demo &rsaquo;</a>
+        <a class="pf-btn pf-btn--lg pf-btn--uppercase pf-btn--outline" href="#bk-use-cases">See Banking Use Cases &rsaquo;</a>
+      </div>
+    </div>
+    <figure class="bk-hero__figure">
+      <img
+        src="/images/banking/banking-collaboration-workflow.webp"
+        alt="Banking collaboration workflow: a customer's documents flow securely from loan officer to underwriter/commercial banking, risk management, compliance and legal — all protected by FileFlex Zero Trust Data Access with granular access controls, real-time activity monitoring and a complete audit trail."
+        width="850" height="744" loading="eager" fetchpriority="high" decoding="async"
+      />
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 2 — BANKING HAS CHANGED
+     ============================================================ -->
+<section class="pf-section pf-section--dark" aria-labelledby="bk-changed-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Problem</p>
+    <h2 id="bk-changed-heading" class="pf-title pf-title--center pf-title--light">Banking Has Changed. Traditional File Sharing Hasn't.</h2>
+    <p class="pf-lede pf-lede--center pf-lede--light">
+      Banks are expected to provide digital customer experiences while simultaneously protecting
+      sensitive financial information. Yet many organizations still rely on tools that were never
+      built for secure, auditable collaboration.
+    </p>
+    <div class="bk-split">
+      <div class="bk-split__card">
+        <h3>Banks still rely on</h3>
+        <div class="bk-tags">
+          <span class="bk-tag">Email</span>
+          <span class="bk-tag">Shared drives</span>
+          <span class="bk-tag">Consumer file-sharing</span>
+          <span class="bk-tag">Temporary cloud links</span>
+          <span class="bk-tag">Manual document exchange</span>
+        </div>
+      </div>
+      <div class="bk-split__card">
+        <h3>Which creates</h3>
+        <ul class="bk-risks">
+          <li>Oversharing</li>
+          <li>Compliance risk</li>
+          <li>Poor audit visibility</li>
+          <li>Version confusion</li>
+          <li>Data sprawl</li>
+          <li>Ransomware exposure</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 3 — WHY BANKS CHOOSE FILEFLEX
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="bk-why-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Answer</p>
+    <h2 id="bk-why-heading" class="pf-title pf-title--center">Why Banks Choose FileFlex</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Organize secure collaboration around the business outcomes that matter to your bank — not just
+      another tool to manage.
+    </p>
+    <div class="bk-grid-3">
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Customer Data Protection</p>
+        <h3>Protect Customer Financial Information</h3>
+        <p>Zero Trust access to documents without exposing internal storage. Sensitive financial information is governed per request, file by file.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Data Sovereignty</p>
+        <h3>Keep Data On-Premises</h3>
+        <p>No forced cloud migration. Continue leveraging your existing storage investments while delivering secure, modern collaboration.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Compliance</p>
+        <h3>Improve Regulatory Compliance</h3>
+        <p>Support internal governance, auditability and controlled access with least-privilege enforcement over unstructured data.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Collaboration</p>
+        <h3>Enable Secure Customer Collaboration</h3>
+        <p>Exchange financial documents with customers, advisors, attorneys and third parties — securely and under your control.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Visibility</p>
+        <h3>Complete Audit Trail</h3>
+        <p>Know who viewed, uploaded, downloaded, edited and shared every document — with an immutable, exportable record.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">Resilience</p>
+        <h3>Reduce Ransomware Exposure</h3>
+        <p>Reduce unnecessary copies of sensitive banking information and shrink the attack surface across your environment.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 4 — BANKING USE CASES
+     ============================================================ -->
+<section id="bk-use-cases" class="pf-section pf-section--white" aria-labelledby="bk-uc-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Use Cases</p>
+    <h2 id="bk-uc-heading" class="pf-title pf-title--center">Banking Use Cases</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Secure collaboration across the lines of business where sensitive documents move every day.
+    </p>
+    <div class="bk-uc__grid">
+      <article class="bk-uc__card">
+        <h3>Mortgage Processing</h3>
+        <ul>
+          <li>Secure document collection</li>
+          <li>Income verification</li>
+          <li>Customer collaboration</li>
+          <li>Appraisals</li>
+          <li>Approvals</li>
+        </ul>
+      </article>
+      <article class="bk-uc__card">
+        <h3>Commercial Lending</h3>
+        <ul>
+          <li>Large document packages</li>
+          <li>Financial statements</li>
+          <li>Legal review</li>
+          <li>Multiple approvers</li>
+          <li>Outside accountants</li>
+        </ul>
+      </article>
+      <article class="bk-uc__card">
+        <h3>Wealth Management</h3>
+        <ul>
+          <li>Secure communication</li>
+          <li>Client documents</li>
+          <li>Estate planning</li>
+          <li>Investment reporting</li>
+          <li>Advisor collaboration</li>
+        </ul>
+      </article>
+      <article class="bk-uc__card">
+        <h3>Treasury Management</h3>
+        <ul>
+          <li>Corporate customer documentation</li>
+          <li>Cash management</li>
+          <li>Vendor onboarding</li>
+          <li>Approvals</li>
+        </ul>
+      </article>
+      <article class="bk-uc__card">
+        <h3>Compliance</h3>
+        <ul>
+          <li>Policy documentation</li>
+          <li>Regulatory reviews</li>
+          <li>Internal audits</li>
+          <li>Evidence collection</li>
+        </ul>
+      </article>
+      <article class="bk-uc__card">
+        <h3>Executive Collaboration</h3>
+        <ul>
+          <li>Board documentation</li>
+          <li>Sensitive financial reports</li>
+          <li>Strategic planning</li>
+          <li>Mergers &amp; acquisitions</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 5 — HOW IT WORKS
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="bk-how-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">How It Works</p>
+    <h2 id="bk-how-heading" class="pf-title pf-title--center">How Secure Banking Collaboration Works</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Every interaction — from customer to compliance — is verified, least-privilege and audited,
+      all protected by Zero Trust Data Access.
+    </p>
+    <div class="bk-flow">
+      <ol class="bk-steps">
+        <li>
+          <h3>Customer logs in</h3>
+          <p>Customers and staff access a protected portal — no insecure email or consumer apps.</p>
+        </li>
+        <li>
+          <h3>Identity verified</h3>
+          <p>Every user is authenticated against your identity provider before any access is granted.</p>
+        </li>
+        <li>
+          <h3>Access granted</h3>
+          <p>Least-privilege permissions expose only the files and actions each user is authorized to use.</p>
+        </li>
+        <li>
+          <h3>Documents uploaded or shared</h3>
+          <p>Financial documents are submitted, received and exchanged securely — without moving data.</p>
+        </li>
+        <li>
+          <h3>Employees collaborate securely</h3>
+          <p>Loan officers, risk, compliance and legal collaborate with controlled, real-time access.</p>
+        </li>
+        <li>
+          <h3>Everything audited</h3>
+          <p>Every action is immutably recorded for full visibility, compliance and accountability.</p>
+        </li>
+      </ol>
+      <figure class="bk-flow__figure">
+        <img
+          src="/images/banking/secure-collaboration-for-banks.webp"
+          alt="Secure collaboration across the bank: documents flow from customer to loan officer, commercial banking, risk management, compliance and legal — protected by Zero Trust Data Access that verifies every user, limits access, protects every file, monitors continuously and audits everything."
+          width="880" height="1024" loading="lazy" decoding="async"
+        />
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 6 — DESIGNED FOR MODERN BANKING SECURITY
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="bk-zt-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Zero Trust</p>
+    <h2 id="bk-zt-heading" class="pf-title pf-title--center">Designed for Modern Banking Security</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      FileFlex aligns directly with Zero Trust — applying layered, continuous protection to your
+      most sensitive financial data.
+    </p>
+    <div class="bk-grid-4">
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">01</p>
+        <h3>Identity Verification</h3>
+        <p>Every user is authenticated before access is granted.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">02</p>
+        <h3>Least Privilege</h3>
+        <p>Users only see the information they are authorized to access.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">03</p>
+        <h3>Continuous Verification</h3>
+        <p>Access is governed throughout the entire session, not just at login.</p>
+      </article>
+      <article class="pf-zt__card">
+        <p class="pf-zt__kicker">04</p>
+        <h3>Comprehensive Audit</h3>
+        <p>Every action is recorded for full visibility and accountability.</p>
+      </article>
+    </div>
+    <figure class="bk-figure">
+      <img
+        src="/images/banking/zero-trust-data-access-banking.webp"
+        alt="Zero Trust Data Access for Banking — layered security with continuous protection: continuous identity verification, least-privilege access, secure document collaboration, activity monitoring, comprehensive audit logging, all built on your existing storage infrastructure where data stays on-premises or in the cloud."
+        width="938" height="660" loading="lazy" decoding="async"
+      />
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 7 — SUPPORTS EXISTING SECURITY INVESTMENTS
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="bk-stack-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Works With Your Stack</p>
+    <h2 id="bk-stack-heading" class="pf-title pf-title--center">Supports Your Existing Security Investments</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Banks have already invested heavily in identity, MFA, EDR, firewalls, SIEM and DSPM. FileFlex
+      complements — not replaces — those investments by governing secure data access between your
+      identity providers and your storage.
+    </p>
+    <figure class="bk-figure">
+      <img
+        src="/images/banking/banking-security-stack.webp"
+        alt="Banking security stack: identity and access providers (Microsoft Entra ID, Okta, Ping Identity, Duo) connect through FileFlex Zero Trust Data Access — providing granular access controls, policy enforcement, activity monitoring, audit and reporting, no data migration, least-privilege access, real-time governance and full visibility — down to existing storage and repositories (Windows file servers, NAS/SAN, SharePoint, cloud storage and ECM/document repositories)."
+        width="789" height="744" loading="lazy" decoding="async"
+      />
+      <figcaption>Leverage your existing investments. Extend them with Zero Trust Data Access.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 8 — REGULATORY & GOVERNANCE
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="bk-gov-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Governance</p>
+    <h2 id="bk-gov-heading" class="pf-title pf-title--center">Supports Regulatory and Governance Objectives</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      FileFlex helps banks support governance initiatives across the entire document lifecycle —
+      from secure submission through audit and reporting.
+    </p>
+    <ul class="bk-gov">
+      <li>Customer privacy</li>
+      <li>Audit readiness</li>
+      <li>Controlled data access</li>
+      <li>Information governance</li>
+      <li>Secure collaboration</li>
+      <li>Operational resilience</li>
+    </ul>
+    <figure class="bk-figure">
+      <img
+        src="/images/banking/banking-document-lifecycle.webp"
+        alt="Banking document lifecycle secured at every step: submission, intake and review, collaboration and evaluation, approval and decision, archive, and audit and reporting — with FileFlex governance and protection throughout, including access controls and permissions, data loss prevention, activity monitoring, version control, retention policies and a comprehensive audit trail."
+        width="1024" height="520" loading="lazy" decoding="async"
+      />
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 9 — WHY FILEFLEX IS DIFFERENT (COMPARISON)
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="bk-compare-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Difference</p>
+    <h2 id="bk-compare-heading" class="pf-title pf-title--center">Why FileFlex Is Different</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      See how FileFlex compares to the tools banks have traditionally relied on to move sensitive
+      documents.
+    </p>
+    <div class="bk-compare__wrap">
+      <table class="bk-compare">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Traditional File Sharing</th>
+            <th scope="col">Cloud Storage</th>
+            <th scope="col">VPN</th>
+            <th scope="col">Secure Email</th>
+            <th scope="col" class="bk-col-ff">FileFlex</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="bk-compare__feature">Keep data on-prem</th>
+            <td><span class="bk-yes" aria-label="Yes">&#10003;</span></td>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td><span class="bk-yes" aria-label="Yes">&#10003;</span></td>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td class="bk-col-ff"><span class="bk-yes" aria-label="Yes">&#10003;</span></td>
+          </tr>
+          <tr>
+            <th scope="row" class="bk-compare__feature">Granular permissions</th>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td class="bk-col-ff"><span class="bk-yes" aria-label="Yes">&#10003;</span></td>
+          </tr>
+          <tr>
+            <th scope="row" class="bk-compare__feature">External collaboration</th>
+            <td><span class="bk-yes" aria-label="Yes">&#10003;</span></td>
+            <td><span class="bk-yes" aria-label="Yes">&#10003;</span></td>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td><span class="bk-yes" aria-label="Yes">&#10003;</span></td>
+            <td class="bk-col-ff"><span class="bk-yes" aria-label="Yes">&#10003;</span></td>
+          </tr>
+          <tr>
+            <th scope="row" class="bk-compare__feature">Audit trail</th>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td class="bk-col-ff"><span class="bk-yes" aria-label="Yes">&#10003;</span></td>
+          </tr>
+          <tr>
+            <th scope="row" class="bk-compare__feature">Zero Trust architecture</th>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td class="bk-col-ff"><span class="bk-yes" aria-label="Yes">&#10003;</span></td>
+          </tr>
+          <tr>
+            <th scope="row" class="bk-compare__feature">Works with existing storage</th>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td><span class="bk-yes" aria-label="Yes">&#10003;</span></td>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td class="bk-col-ff"><span class="bk-yes" aria-label="Yes">&#10003;</span></td>
+          </tr>
+          <tr>
+            <th scope="row" class="bk-compare__feature">Cloud-like user experience</th>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td><span class="bk-yes" aria-label="Yes">&#10003;</span></td>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td class="bk-col-ff"><span class="bk-yes" aria-label="Yes">&#10003;</span></td>
+          </tr>
+          <tr>
+            <th scope="row" class="bk-compare__feature">No VPN required</th>
+            <td><span class="bk-yes" aria-label="Yes">&#10003;</span></td>
+            <td><span class="bk-yes" aria-label="Yes">&#10003;</span></td>
+            <td><span class="bk-no" aria-label="No">&#10007;</span></td>
+            <td><span class="bk-yes" aria-label="Yes">&#10003;</span></td>
+            <td class="bk-col-ff"><span class="bk-yes" aria-label="Yes">&#10003;</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 10 — FAQ
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="bk-faq-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">FAQ</p>
+    <h2 id="bk-faq-heading" class="pf-title pf-title--center">Frequently Asked Questions</h2>
+    <div class="bk-faq__list">
+      {faqs.map((f) => (
+        <details class="bk-faq__item">
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 11 — FINAL CTA
+     ============================================================ -->
+<section id="pf-cta" aria-labelledby="bk-cta-heading">
+  <h2 id="bk-cta-heading">Ready to Modernize Secure Banking Collaboration?</h2>
+  <p>Give customers secure digital banking experiences while maintaining control of your data.</p>
+  <div class="pf-cta-buttons">
+    <a class="pf-btn pf-btn--uppercase" href="/demo-request/">Book a Demo &rsaquo;</a>
+    <a class="pf-btn pf-btn--uppercase pf-btn--outline" href="#bk-use-cases">See Banking Use Cases &rsaquo;</a>
+  </div>
+</section>
+
+</Layout>

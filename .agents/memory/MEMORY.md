@@ -1,4 +1,5 @@
 - [Use-case landing pages](use-case-pages.md) — Use Cases nav pages share pf-*/ld-* CSS system + small delta sheet; member-portal CTA targets; attached-image→webp norm.
+- [Sector landing pages](sector-landing-pages.md) — how to build a new industry/solutions page: pf-* primitives, no @assets alias (copy to public/images + webp via sharp), FAQ via Layout schema + details accordion.
 - [Blog system conventions](blog-system.md) — Astro content collection, marker-based table injection, image float-by-filename, author lookup map.
 - [WP→Astro blog migration pipeline](wp-to-astro-migration.md) — META authoring, FAQ scanner, legacy-restore step, link rewriting, code-block trap, normalizeDesc, category cap.
 - [WP orphan-bullet re-indent](wp-orphan-bullet-transform.md) — body bullets under `N.  ### **Heading:**` need `N.length+3` space indent or the list splits.

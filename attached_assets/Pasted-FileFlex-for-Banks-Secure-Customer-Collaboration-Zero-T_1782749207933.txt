@@ -1,0 +1,381 @@
+FileFlex for Banks
+Secure Customer Collaboration. Zero Trust Data Access.
+Hero Section
+
+Headline
+
+Modernize Secure Banking Collaboration Without Moving Your Data
+
+Subheadline
+
+FileFlex enables banks to securely share, receive, collaborate on, and govern sensitive financial information while keeping data under your control. Deliver cloud-like customer experiences without migrating files to the cloud.
+
+CTA
+
+Request Demo
+
+Secondary CTA
+
+See Banking Use Cases
+
+Hero illustration:
+
+A modern banking workflow showing
+
+Customer
+↓
+Loan Officer
+↓
+Commercial Banking
+↓
+Risk Management
+↓
+Compliance
+↓
+Legal
+
+Protected by
+
+Zero Trust Data Access
+
+Section 2
+Banking Has Changed.
+Traditional File Sharing Hasn't.
+
+Introduce the industry problem.
+
+Banks are expected to provide digital customer experiences while simultaneously protecting sensitive financial information.
+
+Unfortunately many organizations still rely upon
+
+Email
+Shared drives
+Consumer file-sharing
+Temporary cloud links
+Manual document exchange
+
+These methods create
+
+• Oversharing
+
+• Compliance risk
+
+• Poor audit visibility
+
+• Version confusion
+
+• Data sprawl
+
+• Ransomware exposure
+
+This creates a perfect transition into FileFlex.
+
+Section 3
+Why Banks Choose FileFlex
+
+Instead of features...
+
+Organize around business outcomes.
+
+Six icon cards.
+
+Protect Customer Financial Information
+
+Zero Trust access to documents without exposing internal storage.
+
+Keep Data On-Premises
+
+No forced cloud migration.
+
+Continue leveraging existing storage investments.
+
+Improve Regulatory Compliance
+
+Support internal governance, auditability and controlled access.
+
+Enable Secure Customer Collaboration
+
+Exchange financial documents with customers, advisors, attorneys and third parties.
+
+Complete Audit Trail
+
+Know
+
+Who
+
+Viewed
+
+Uploaded
+
+Downloaded
+
+Edited
+
+Shared
+
+Reduce Ransomware Exposure
+
+Reduce unnecessary copies of sensitive banking information.
+
+Section 4
+Banking Use Cases
+
+This becomes one of the strongest sections.
+
+Rather than paragraphs...
+
+Create industry cards.
+
+Mortgage Processing
+
+Secure document collection
+
+Income verification
+
+Customer collaboration
+
+Appraisals
+
+Approvals
+
+Commercial Lending
+
+Large document packages
+
+Financial statements
+
+Legal review
+
+Multiple approvers
+
+Outside accountants
+
+Wealth Management
+
+Secure communication
+
+Client documents
+
+Estate planning
+
+Investment reporting
+
+Advisor collaboration
+
+Treasury Management
+
+Corporate customer documentation
+
+Cash management
+
+Vendor onboarding
+
+Approvals
+
+Compliance
+
+Policy documentation
+
+Regulatory reviews
+
+Internal audits
+
+Evidence collection
+
+Executive Collaboration
+
+Board documentation
+
+Sensitive financial reports
+
+Strategic planning
+
+M&A
+
+Section 5
+How Secure Banking Collaboration Works
+
+This is almost identical to the Credit Union workflow.
+
+Customer logs in
+
+↓
+
+Identity verified
+
+↓
+
+Access granted
+
+↓
+
+Documents uploaded or shared
+
+↓
+
+Employees collaborate securely
+
+↓
+
+Everything audited
+
+Center graphic
+
+Zero Trust Data Access
+
+Section 6
+Designed for Modern Banking Security
+
+This section aligns directly with Zero Trust.
+
+Four columns.
+
+Identity Verification
+
+Every user authenticated before access.
+
+Least Privilege
+
+Users only see authorized information.
+
+Continuous Verification
+
+Access governed throughout the session.
+
+Comprehensive Audit
+
+Every action recorded.
+
+Section 7
+Supports Your Existing Security Investments
+
+One of my favorite sections because it positions FileFlex alongside—not against—existing security tools.
+
+Graphic
+
+Identity
+
+      ↓
+
+Okta
+Entra ID
+Ping
+Duo
+
+      ↓
+
+FileFlex
+
+Zero Trust Data Access
+
+      ↓
+
+Storage
+
+Windows
+NAS
+SharePoint
+Cloud Storage
+ECM
+
+Message
+
+Banks have already invested heavily in
+
+Identity
+
+MFA
+
+EDR
+
+Firewalls
+
+SIEM
+
+DSPM
+
+FileFlex complements—not replaces—those investments by governing secure data access.
+
+Section 8
+Supports Regulatory and Governance Objectives
+
+Avoid promising certification.
+
+Instead state
+
+FileFlex helps banks support governance initiatives related to
+
+• Customer privacy
+
+• Audit readiness
+
+• Controlled data access
+
+• Information governance
+
+• Secure collaboration
+
+• Operational resilience
+
+Section 9
+Why FileFlex Is Different
+
+Comparison table.
+
+Traditional File Sharing
+
+Cloud Storage
+
+VPN
+
+Secure Email
+
+FileFlex
+
+Rows
+
+Keep data on-prem
+
+Granular permissions
+
+External collaboration
+
+Audit trail
+
+Zero Trust architecture
+
+Works with existing storage
+
+Cloud-like user experience
+
+No VPN required
+
+Section 10
+Frequently Asked Questions
+
+Questions such as
+
+Does FileFlex replace SharePoint?
+
+Does data move into the cloud?
+
+Can customers upload documents securely?
+
+Can outside legal firms collaborate?
+
+Can we integrate with Active Directory?
+
+Can FileFlex support hybrid storage?
+
+Can we maintain complete audit logs?
+
+Section 11
+Ready to Modernize Secure Banking Collaboration?
+
+Closing message.
+
+Give customers secure digital banking experiences while maintaining control of your data.
+
+CTA
+
+Book a Demo

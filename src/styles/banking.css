@@ -1,0 +1,406 @@
+/* ============================================================
+   BANKING — solution landing page
+   Builds on the Platform creative system (platform.css): reuses
+   pf-* section/eyebrow/title/card primitives and tokens. Only
+   banking-specific pieces live here, prefixed bk-.
+   ============================================================ */
+
+/* ---------- HERO ---------- */
+#bk-hero {
+  position: relative;
+  padding: 116px 5vw 96px;
+  color: #fff;
+  background: #02060c url('/images/platform/home-hero-2023q1.webp') center / cover no-repeat;
+  isolation: isolate;
+}
+#bk-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(2,6,12,0.9) 0%, rgba(2,6,12,0.72) 50%, rgba(2,6,12,0.45) 100%);
+  z-index: -1;
+}
+.bk-hero__grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+.bk-hero__eyebrow {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pf-orange);
+  margin: 0 0 20px;
+}
+.bk-hero__title {
+  font-size: clamp(30px, 3.9vw, 52px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0 0 24px;
+  color: #fff;
+}
+.bk-hero__lede {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #d6dce4;
+  max-width: 620px;
+  margin: 0 0 32px;
+}
+.bk-hero__ctas { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.bk-hero__figure { margin: 0; }
+.bk-hero__figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 40px 90px -45px rgba(0,0,0,0.8);
+}
+
+/* ---------- SHARED INFOGRAPHIC FIGURE ---------- */
+.bk-figure {
+  margin: 8px auto 0;
+  max-width: 1024px;
+}
+.bk-figure--narrow { max-width: 760px; }
+.bk-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  background: #fff;
+  padding: 12px;
+  box-shadow: 0 30px 80px -45px rgba(0,0,0,0.5);
+}
+.bk-figure figcaption {
+  margin: 16px auto 0;
+  max-width: 760px;
+  text-align: center;
+  font-size: 13.5px;
+  color: #6a7686;
+}
+
+/* ---------- "BANKING HAS CHANGED" (dark split) ---------- */
+.bk-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 44px;
+}
+.bk-split__card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 30px 28px;
+}
+.bk-split__card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #9fb0c2;
+  margin: 0 0 18px;
+}
+.bk-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+.bk-tag {
+  display: inline-block;
+  padding: 8px 15px;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 999px;
+  font-size: 14px;
+  color: #eef2f7;
+  background: rgba(255,255,255,0.05);
+}
+.bk-risks { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.bk-risks li {
+  position: relative;
+  padding-left: 30px;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: #e7ebf1;
+}
+.bk-risks li::before {
+  content: '!';
+  position: absolute;
+  left: 0; top: 1px;
+  width: 20px; height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(232,89,10,0.18);
+  color: var(--pf-orange);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ---------- OUTCOME / 6-up grids ---------- */
+.bk-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ---------- USE-CASE CARDS ---------- */
+.bk-uc__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+.bk-uc__card {
+  background: #fff;
+  border: 1px solid #e6e9ef;
+  border-radius: 16px;
+  padding: 28px 26px;
+  text-align: left;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.bk-uc__card:hover {
+  border-color: rgba(28,57,142,0.3);
+  box-shadow: 0 18px 40px -28px rgba(0,0,0,0.35);
+  transform: translateY(-2px);
+}
+.bk-uc__card h3 {
+  font-family: var(--pf-font-display, 'Syne', sans-serif);
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--pf-ink, #1a1f2c);
+  margin: 0 0 16px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #eef1f6;
+}
+.bk-uc__card ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 9px; }
+.bk-uc__card li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: #4a5566;
+}
+.bk-uc__card li::before {
+  content: '';
+  position: absolute;
+  left: 2px; top: 7px;
+  width: 8px; height: 8px;
+  border-radius: 2px;
+  background: var(--pf-orange);
+  transform: rotate(45deg);
+}
+
+/* ---------- HOW IT WORKS (steps + tall figure) ---------- */
+.bk-flow {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 12px;
+}
+.bk-steps { list-style: none; padding: 0; margin: 0; counter-reset: bk-step; }
+.bk-steps li {
+  counter-increment: bk-step;
+  position: relative;
+  padding: 0 0 26px 64px;
+  min-height: 48px;
+}
+.bk-steps li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 23px; top: 44px; bottom: 4px;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(28,57,142,0.4), rgba(28,57,142,0.08));
+}
+.bk-steps li::before {
+  content: counter(bk-step);
+  position: absolute;
+  left: 0; top: 0;
+  width: 46px; height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #1c398e;
+  color: #fff;
+  font-family: var(--pf-font-display, 'Syne', sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+}
+.bk-steps h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--pf-ink, #1a1f2c);
+  margin: 8px 0 6px;
+}
+.bk-steps p { margin: 0; font-size: 14.5px; line-height: 1.55; color: #5a6473; }
+.bk-flow__figure { margin: 0; }
+.bk-flow__figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  background: #fff;
+  padding: 12px;
+  box-shadow: 0 30px 80px -48px rgba(0,0,0,0.5);
+}
+
+/* ---------- 4-COLUMN ZERO TRUST ---------- */
+.bk-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+/* ---------- GOVERNANCE LIST ---------- */
+.bk-gov {
+  list-style: none;
+  padding: 0;
+  margin: 28px auto 44px;
+  max-width: 880px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 32px;
+}
+.bk-gov li {
+  position: relative;
+  padding: 14px 18px 14px 48px;
+  background: #fff;
+  border: 1px solid #e6e9ef;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--pf-ink, #1a1f2c);
+}
+.bk-gov li::before {
+  content: '';
+  position: absolute;
+  left: 16px; top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 12px; height: 12px;
+  border: 2px solid var(--pf-orange);
+  border-radius: 3px;
+}
+
+/* ---------- COMPARISON TABLE ---------- */
+.bk-compare__wrap { overflow-x: auto; margin-top: 36px; }
+.bk-compare {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14.5px;
+}
+.bk-compare th, .bk-compare td {
+  padding: 16px 14px;
+  text-align: center;
+  border-bottom: 1px solid #e6e9ef;
+}
+.bk-compare thead th {
+  font-family: var(--pf-font-display, 'Syne', sans-serif);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #5a6473;
+  background: #f6f8fb;
+  vertical-align: bottom;
+  line-height: 1.25;
+}
+.bk-compare thead th:first-child { background: transparent; }
+.bk-compare tbody th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--pf-ink, #1a1f2c);
+  white-space: nowrap;
+}
+.bk-compare__feature {
+  background: #fff;
+  position: sticky;
+  left: 0;
+}
+.bk-compare .bk-col-ff {
+  background: #1c398e;
+  color: #fff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.bk-compare tbody td.bk-col-ff {
+  background: rgba(28,57,142,0.06);
+  border-bottom-color: rgba(28,57,142,0.16);
+}
+.bk-compare tbody tr:last-child td.bk-col-ff {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.bk-yes { color: #16a34a; font-weight: 700; font-size: 18px; }
+.bk-no  { color: #c2cad6; font-weight: 700; font-size: 18px; }
+.bk-compare tbody td.bk-col-ff .bk-yes { color: #1c398e; }
+
+/* ---------- FAQ ---------- */
+.bk-faq__list { max-width: 880px; margin: 36px auto 0; display: grid; gap: 14px; }
+.bk-faq__item {
+  background: #fff;
+  border: 1px solid #e6e9ef;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.bk-faq__item[open] {
+  border-color: rgba(28,57,142,0.35);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.05);
+}
+.bk-faq__item > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 20px 56px 20px 24px;
+  position: relative;
+  font-family: var(--pf-font-display, 'Syne', sans-serif);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--pf-ink, #1a1f2c);
+  line-height: 1.35;
+}
+.bk-faq__item > summary::-webkit-details-marker { display: none; }
+.bk-faq__item > summary::after {
+  content: "+";
+  position: absolute;
+  right: 24px; top: 50%;
+  transform: translateY(-50%);
+  width: 28px; height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #1c398e;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.bk-faq__item[open] > summary::after { content: "\2212"; background: #e8590a; }
+.bk-faq__item > p {
+  margin: 0;
+  padding: 0 24px 22px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #4a5566;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .bk-hero__grid { grid-template-columns: 1fr; gap: 40px; }
+  .bk-hero__figure { max-width: 560px; }
+  .bk-grid-3, .bk-uc__grid { grid-template-columns: repeat(2, 1fr); }
+  .bk-grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .bk-flow { grid-template-columns: 1fr; gap: 36px; }
+}
+@media (max-width: 768px) {
+  .bk-split { grid-template-columns: 1fr; }
+  .bk-grid-3, .bk-uc__grid, .bk-grid-4 { grid-template-columns: 1fr; }
+  .bk-gov { grid-template-columns: 1fr; }
+}
