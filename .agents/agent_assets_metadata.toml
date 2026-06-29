@@ -95,3 +95,39 @@ id = "9QCEweRnck6ZIIu3uvTUQ"
 uri = "file://attached_assets/stock_images/fs_rely.jpg"
 type = "image"
 title = "close up of hands typing on a laptop sending an email with an attachment"
+
+[[outputs]]
+id = "QAauux9A7zVhZrGOsj6Y7"
+uri = "file://attached_assets/stock_images/mortgage_processing.jpg"
+type = "image"
+title = "house keys and mortgage home loan paperwork on a desk, warm professional"
+
+[[outputs]]
+id = "D06gopUDLupYxffQh32Iy"
+uri = "file://attached_assets/stock_images/commercial_lending.jpg"
+type = "image"
+title = "business professionals shaking hands in a modern office, commercial lending deal"
+
+[[outputs]]
+id = "V9pyHcUbYvtDUTpOANJK4"
+uri = "file://attached_assets/stock_images/wealth_management.jpg"
+type = "image"
+title = "financial advisor meeting with client reviewing investment portfolio"
+
+[[outputs]]
+id = "LnpyOu94gpihXqKSxQ8Zv"
+uri = "file://attached_assets/stock_images/treasury_management.jpg"
+type = "image"
+title = "corporate finance professional working with cash flow charts in office"
+
+[[outputs]]
+id = "qjlZTPILnTuEQeppgjOg7"
+uri = "file://attached_assets/stock_images/compliance_banking.jpg"
+type = "image"
+title = "compliance officer reviewing audit documents and regulatory paperwork"
+
+[[outputs]]
+id = "JX2PDTCAxTpBRNg_BIt5U"
+uri = "file://attached_assets/stock_images/executive_collaboration.jpg"
+type = "image"
+title = "executives in a boardroom meeting around a conference table"
