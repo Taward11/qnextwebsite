@@ -19,13 +19,9 @@
   background: linear-gradient(90deg, rgba(2,6,12,0.9) 0%, rgba(2,6,12,0.72) 50%, rgba(2,6,12,0.45) 100%);
   z-index: -1;
 }
-.bk-hero__grid {
-  max-width: 1200px;
+.bk-hero__content {
+  max-width: 900px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 56px;
-  align-items: center;
 }
 .bk-hero__eyebrow {
   display: inline-block;
@@ -52,16 +48,6 @@
   margin: 0 0 32px;
 }
 .bk-hero__ctas { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
-.bk-hero__figure { margin: 0; }
-.bk-hero__figure img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 16px;
-  background: #fff;
-  padding: 10px;
-  box-shadow: 0 40px 90px -45px rgba(0,0,0,0.8);
-}
 
 /* ---------- SHARED INFOGRAPHIC FIGURE ---------- */
 .bk-figure {
@@ -393,8 +379,6 @@
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 1024px) {
-  .bk-hero__grid { grid-template-columns: 1fr; gap: 40px; }
-  .bk-hero__figure { max-width: 560px; }
   .bk-grid-3, .bk-uc__grid { grid-template-columns: repeat(2, 1fr); }
   .bk-grid-4 { grid-template-columns: repeat(2, 1fr); }
   .bk-flow { grid-template-columns: 1fr; gap: 36px; }
