@@ -191,10 +191,24 @@
   transform: translateY(-2px);
 }
 .bk-uc__media {
+  position: relative;
   margin: 0 0 22px;
   aspect-ratio: 3 / 2;
   overflow: hidden;
   background: #eef1f6;
+}
+.bk-uc__num {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--pf-orange);
+  background: rgba(14, 26, 43, 0.72);
+  padding: 5px 11px;
+  border-radius: 999px;
 }
 .bk-uc__media img {
   width: 100%;
