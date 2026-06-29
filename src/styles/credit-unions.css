@@ -229,3 +229,49 @@
   .cu-grid { grid-template-columns: 1fr; }
   .cu-why__grid { grid-template-columns: 1fr; }
 }
+
+/* ---------- BRANDED EXPERIENCE (dark media + points) ---------- */
+.cu-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 40px;
+}
+.cu-media__figure { margin: 0; }
+.cu-media__figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  background: #fff;
+  padding: 12px;
+  box-shadow: 0 30px 80px -45px rgba(0,0,0,0.5);
+}
+.cu-points { list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; }
+.cu-points li {
+  position: relative;
+  padding-left: 34px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #c8d2de;
+}
+.cu-points li::before {
+  content: '';
+  position: absolute;
+  left: 4px; top: 6px;
+  width: 12px; height: 12px;
+  border: 2px solid var(--pf-orange);
+  border-radius: 3px;
+  transform: rotate(45deg);
+}
+.cu-points strong {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+@media (max-width: 1024px) {
+  .cu-media { grid-template-columns: 1fr; gap: 36px; }
+}
