@@ -97,51 +97,75 @@ const SECTIONS = [
 // recommended actions used in the improvement roadmap.
 const CATEGORY_META = {
   s1: {
-    actions: ['Eliminate email-based document exchange', 'Adopt a consistent secure collaboration platform', 'Enable external access without attachments'],
+    actions: [
+      { title: 'Eliminate email-based document exchange', detail: 'Stop using email attachments and consumer apps to move borrower documents, and route every exchange through a single secure channel instead. Email leaves uncontrollable copies in inboxes you cannot monitor or revoke, so removing it from the workflow directly closes one of the largest sources of lending data exposure and version confusion.' },
+      { title: 'Adopt a consistent secure collaboration platform', detail: 'Standardize the entire lending team — and your external participants — on one secure collaboration platform rather than a patchwork of tools. Consistency means access, auditability, and data-protection controls apply uniformly to every transaction instead of varying by whoever set up the share, which both lowers risk and speeds processing.' },
+      { title: 'Enable external access without attachments', detail: 'Give borrowers, processors, and attorneys a way to view and exchange documents through secure, permissioned access rather than receiving copies as attachments. This keeps the institution in control of the file at all times, so access can be limited and revoked and sensitive data never leaves your environment in the first place.' },
+    ],
     bands: {
-      strong: { assessment: 'Your organization relies on secure collaboration for most of the lending workflow, with limited dependence on manual document exchange.', note: 'You are well positioned to scale secure lending collaboration.', type: 'strength' },
-      moderate: { assessment: 'Your organization has reduced dependence on manual document exchange and has implemented secure collaboration practices for portions of the lending workflow.', note: 'Further reducing email-based document sharing may improve both security and operational efficiency.', type: 'opportunity' },
-      weak: { assessment: 'Borrower documents are still exchanged largely through email and ad-hoc methods, increasing exposure and slowing the workflow.', note: 'Introducing a secure collaboration platform can reduce risk and accelerate loan processing.', type: 'opportunity' },
+      strong: { assessment: 'Your organization relies on secure collaboration for most of the lending workflow, with limited dependence on manual document exchange.', note: 'You are well positioned to scale secure lending collaboration.', detail: 'Because most borrower documents already move through a controlled platform rather than email or consumer apps, sensitive financial information spends little time in uncontrolled inboxes or on personal devices. This reduces your attack surface, shortens loan cycle times, and gives you a defensible position with examiners. The remaining opportunity is to bring the last manual workflows — and any holdout external parties — onto the same secure channel.', type: 'strength' },
+      moderate: { assessment: 'Your organization has reduced dependence on manual document exchange and has implemented secure collaboration practices for portions of the lending workflow.', note: 'Further reducing email-based document sharing may improve both security and operational efficiency.', detail: 'Parts of your lending workflow still rely on email attachments or ad-hoc file sharing, which means borrower tax returns, pay stubs, and account statements periodically leave your control and land in inboxes you cannot monitor or revoke. Each of those exchanges is a potential disclosure event and a gap in your audit trail, and it slows processing whenever participants hunt for the latest version. Consolidating every exchange onto one secure platform closes that exposure and speeds the workflow.', type: 'opportunity' },
+      weak: { assessment: 'Borrower documents are still exchanged largely through email and ad-hoc methods, increasing exposure and slowing the workflow.', note: 'Introducing a secure collaboration platform can reduce risk and accelerate loan processing.', detail: 'Borrower documents are exchanged largely through email and other ad-hoc methods, so highly sensitive financial information routinely leaves your control the moment it is sent — copied to personal devices, forwarded beyond the intended recipient, and impossible to recall. This creates continuous disclosure and compliance risk, leaves no reliable record of who received what, and causes frequent processing delays from version confusion. Replacing email-based exchange with a secure platform is the single highest-impact step you can take.', type: 'opportunity' },
     },
   },
   s2: {
-    actions: ['Implement granular, document-level permissions', 'Automate access expiration', 'Improve external user governance'],
+    actions: [
+      { title: 'Implement granular, document-level permissions', detail: 'Move from broad folder- or group-level sharing to least-privilege permissions set at the individual document level, so each participant sees only what their role in the transaction requires. This shrinks the blast radius of any compromised or stale account and gives you defensible evidence that access was appropriately limited.' },
+      { title: 'Automate access expiration', detail: 'Configure access to expire automatically when a transaction stage completes or a set period elapses, rather than relying on staff to remember to revoke it. Standing, never-removed access is a primary cause of data exposure; time-bounding it ensures borrower files stop being reachable the moment there is no longer a business reason for access.' },
+      { title: 'Improve external user governance', detail: 'Put clear controls around how external parties are verified, granted access, monitored, and removed, including tracking exactly what each outside participant can reach. External users are the hardest to track and the easiest to over-provision, so governing them tightly removes one of the most common and overlooked sources of lending data leakage.' },
+    ],
     bands: {
-      strong: { assessment: 'Granular, least-privilege permissions govern most access, with timely revocation when access is no longer required.', note: 'Access governance is a competitive strength for your institution.', type: 'strength' },
-      moderate: { assessment: 'Basic access controls are in place; however, permissions may still be broader than necessary for some internal and external participants.', note: 'Implementing more granular controls can reduce unnecessary exposure of borrower information.', type: 'opportunity' },
-      weak: { assessment: 'Access is largely governed by broad, shared permissions that are difficult to revoke once granted.', note: 'Adopting role- and document-level permissions with automatic expiration will materially lower risk.', type: 'opportunity' },
+      strong: { assessment: 'Granular, least-privilege permissions govern most access, with timely revocation when access is no longer required.', note: 'Access governance is a competitive strength for your institution.', detail: 'Least-privilege permissions mean each borrower, processor, attorney, and staff member sees only the documents they genuinely need, and access ends the moment it is no longer required. This dramatically limits how much data any single compromised or departing account can reach, and it gives you clean, defensible evidence of access governance during audits and examinations.', type: 'strength' },
+      moderate: { assessment: 'Basic access controls are in place; however, permissions may still be broader than necessary for some internal and external participants.', note: 'Implementing more granular controls can reduce unnecessary exposure of borrower information.', detail: 'Access today is governed mostly by group- or folder-level permissions that are often broader than any one participant actually needs, and revocation depends on someone remembering to remove access manually. That means borrower files frequently stay reachable by people who no longer have a business reason to see them, widening the blast radius of any compromised or stale account. Moving to document-level permissions with automatic expiration shrinks that exposure without adding day-to-day work.', type: 'opportunity' },
+      weak: { assessment: 'Access is largely governed by broad, shared permissions that are difficult to revoke once granted.', note: 'Adopting role- and document-level permissions with automatic expiration will materially lower risk.', detail: 'Access is largely controlled through broad shared folders that are difficult to revoke once granted, so once someone is let in they often retain access indefinitely — including external parties and former staff. A single compromised credential can therefore expose a large volume of borrower information, and you have little ability to prove access was appropriately limited. Adopting role- and document-level permissions with automatic expiration is essential to bringing this risk under control.', type: 'opportunity' },
     },
   },
   s3: {
-    actions: ['Centralize access and activity logging', 'Automate audit reporting', 'Track document downloads and actions'],
+    actions: [
+      { title: 'Centralize access and activity logging', detail: 'Bring document access and activity records into one place so every view, share, and download is captured in a single, consistent log. Scattered or missing logs make audits slow and incident investigations unreliable; a unified record lets you prove who accessed what and quickly scope any potential exposure.' },
+      { title: 'Automate audit reporting', detail: 'Replace manual log gathering with automated, exportable audit reports you can produce on demand. This turns examiner and compliance requests from multi-day fire drills into a few clicks, and ensures the evidence you hand over is complete and consistent every time.' },
+      { title: 'Track document downloads and actions', detail: 'Capture not just who opened a document but whether it was downloaded, printed, or shared onward, so you have a complete picture of how borrower data has been handled. Download and re-share events are exactly where data slips out of your control, so tracking them is essential for both early detection and breach-scope analysis.' },
+    ],
     bands: {
-      strong: { assessment: 'You maintain strong visibility into document access and user activity.', note: 'Your organization appears well-positioned for compliance and audit requirements.', type: 'strength' },
-      moderate: { assessment: 'You have partial visibility into who accessed documents and when, but reporting still requires manual effort.', note: 'Centralizing activity logging and automating reports will strengthen audit readiness.', type: 'opportunity' },
-      weak: { assessment: 'Visibility into document access and downloads is limited, making audits difficult and time-consuming.', note: 'Implementing complete, exportable activity logging should be a near-term priority for compliance.', type: 'opportunity' },
+      strong: { assessment: 'You maintain strong visibility into document access and user activity.', note: 'Your organization appears well-positioned for compliance and audit requirements.', detail: 'You can readily show who accessed each document, when, and what they did, and you can produce that evidence on demand. That turns audits and examiner requests from fire drills into routine exports, and it lets you detect unusual access before it becomes an incident.', type: 'strength' },
+      moderate: { assessment: 'You have partial visibility into who accessed documents and when, but reporting still requires manual effort.', note: 'Centralizing activity logging and automating reports will strengthen audit readiness.', detail: 'You have partial visibility — you can reconstruct some access activity, but it is spread across systems and assembling a complete picture still takes manual effort. In an examination or a suspected incident, that delay matters: you may be unable to quickly prove who saw a borrower file or whether data was downloaded. Centralizing activity logging and automating reporting closes that gap and shortens your response time.', type: 'opportunity' },
+      weak: { assessment: 'Visibility into document access and downloads is limited, making audits difficult and time-consuming.', note: 'Implementing complete, exportable activity logging should be a near-term priority for compliance.', detail: 'Visibility into who accessed borrower documents, when, and whether they were downloaded is limited, so audits are slow and incident investigations are largely guesswork. Without a complete, exportable record of document activity you cannot reliably demonstrate compliance to examiners or determine the scope of a potential breach. Implementing centralized, automated activity logging should be a near-term priority.', type: 'opportunity' },
     },
   },
   s4: {
-    actions: ['Reduce document duplication', 'Limit downloads with view-only access', 'Improve external collaboration controls'],
+    actions: [
+      { title: 'Reduce document duplication', detail: 'Cut down the number of copies of each borrower document created during a loan by keeping files in a single controlled location instead of emailing and re-saving them. Every uncontrolled copy is an independent breach and compliance liability that lingers after closing, so minimizing duplication directly reduces your long-term exposure.' },
+      { title: 'Limit downloads with view-only access', detail: 'Default to view-only access so participants can read and work with documents without pulling copies onto their own devices and cloud accounts. Keeping files in place under your control — rather than downloaded and scattered — removes the most common and hardest-to-track source of data breaches.' },
+      { title: 'Improve external collaboration controls', detail: 'Provide a secure, controlled way for outside parties to both receive and submit documents, instead of relying on email or unmanaged uploads. Controlled two-way collaboration keeps borrower data inside your governed environment throughout the transaction, closing the gap that opens whenever files move to or from third parties.' },
+    ],
     bands: {
-      strong: { assessment: 'Borrower data largely stays under organizational control, with minimal duplication and downloading.', note: 'Strong data control reduces breach and compliance exposure.', type: 'strength' },
-      moderate: { assessment: 'Borrower information may still be duplicated or downloaded during portions of the lending lifecycle.', note: 'Reducing data movement and improving controlled access could significantly lower risk.', type: 'opportunity' },
-      weak: { assessment: 'Borrower documents are frequently copied and downloaded, leaving sensitive data outside your control.', note: 'Adopting view-only, no-download access to files in place will dramatically reduce exposure.', type: 'opportunity' },
+      strong: { assessment: 'Borrower data largely stays under organizational control, with minimal duplication and downloading.', note: 'Strong data control reduces breach and compliance exposure.', detail: 'Borrower data largely stays in place under your control, with minimal copying and downloading, so there are few uncontrolled copies of sensitive files scattered across devices and cloud accounts. That sharply reduces both your breach exposure and the compliance burden of tracking where regulated data lives.', type: 'strength' },
+      moderate: { assessment: 'Borrower information may still be duplicated or downloaded during portions of the lending lifecycle.', note: 'Reducing data movement and improving controlled access could significantly lower risk.', detail: 'Borrower information is still duplicated or downloaded during parts of the lending lifecycle, which means copies of sensitive files accumulate on laptops, personal cloud storage, and third-party systems beyond your visibility. Every uncontrolled copy is a separate breach and compliance liability that persists long after the loan closes. Shifting to view-only, no-download access that keeps files in place would materially reduce that footprint.', type: 'opportunity' },
+      weak: { assessment: 'Borrower documents are frequently copied and downloaded, leaving sensitive data outside your control.', note: 'Adopting view-only, no-download access to files in place will dramatically reduce exposure.', detail: 'Borrower documents are frequently copied and downloaded, leaving sensitive financial data sitting outside your control on devices and systems you cannot monitor or wipe. Those scattered copies are the most common source of data breaches and the hardest to account for during an audit or a regulatory inquiry. Adopting view-only, no-download access to files in place would dramatically cut this exposure.', type: 'opportunity' },
     },
   },
   s5: {
-    actions: ['Expand MFA toward universal coverage', 'Adopt conditional access policies', 'Extend Zero Trust to data and collaboration'],
+    actions: [
+      { title: 'Expand MFA toward universal coverage', detail: 'Extend multi-factor authentication to all users and access paths rather than a subset, so a stolen password alone can never unlock borrower data. MFA is the most cost-effective control against the credential theft behind most breaches, and partial coverage simply tells attackers where the unprotected doors are.' },
+      { title: 'Adopt conditional access policies', detail: 'Use conditional access to evaluate context — device, location, and risk — before granting access, so logins that look risky are challenged or blocked. This moves you from "correct password equals trusted" toward continuous, risk-based verification, a core Zero Trust principle and a meaningful barrier to account takeover.' },
+      { title: 'Extend Zero Trust to data and collaboration', detail: 'Carry Zero Trust beyond identity and the network all the way to the lending documents themselves by implementing FileFlex Enterprise. FileFlex Enterprise applies Zero Trust Data Access to borrower files wherever they already live, enforcing least-privilege, view-only, no-download access with instant revocation and a complete audit trail — without moving or copying your data. This closes the final gap between a strong login posture and genuinely protected borrower information, and is the highest-impact step toward optimized, secure lending collaboration.' },
+    ],
     bands: {
-      strong: { assessment: 'Zero Trust is broadly deployed and beginning to extend toward data and collaboration workflows.', note: 'You are positioned to lead on Zero Trust Data Access.', type: 'strength' },
-      moderate: { assessment: 'Identity and authentication controls are well established.', note: 'Expanding Zero Trust principles directly to lending data and collaboration workflows may further strengthen security.', type: 'opportunity' },
-      weak: { assessment: 'Zero Trust adoption is at an early stage, with limited MFA and conditional access in place.', note: 'Establishing MFA and conditional access is the foundation for securing lending data.', type: 'opportunity' },
+      strong: { assessment: 'Zero Trust is broadly deployed and beginning to extend toward data and collaboration workflows.', note: 'You are positioned to lead on Zero Trust Data Access.', detail: 'Zero Trust is broadly deployed across identity and access, and you are beginning to extend those principles toward the data and collaboration layer where lending information actually lives. Carrying Zero Trust all the way to the document itself — not just the network and login — is what closes the final gap between a strong security posture and genuinely protected borrower data.', type: 'strength' },
+      moderate: { assessment: 'Identity and authentication controls are well established.', note: 'Expanding Zero Trust principles directly to lending data and collaboration workflows may further strengthen security.', detail: 'Your identity and authentication controls are well established, but Zero Trust largely stops at the login and network layer and does not yet follow the data itself. That leaves a gap: once a user is authenticated, borrower documents are often broadly accessible, downloadable, and untracked. Extending Zero Trust principles directly to lending data and collaboration — for example with FileFlex Enterprise — is what turns a strong identity posture into actual protection for sensitive files.', type: 'opportunity' },
+      weak: { assessment: 'Zero Trust adoption is at an early stage, with limited MFA and conditional access in place.', note: 'Establishing MFA and conditional access is the foundation for securing lending data.', detail: 'Zero Trust adoption is at an early stage, with limited MFA and conditional access, so access to borrower data depends heavily on perimeter trust and standing permissions. That model assumes anyone inside is trustworthy, which is exactly the assumption modern attacks exploit. Establishing MFA and conditional access is the foundation, and from there Zero Trust must be extended to the lending data itself.', type: 'opportunity' },
     },
   },
   s6: {
-    actions: ['Eliminate email attachments', 'Streamline borrower document collection', 'Improve third-party collaboration'],
+    actions: [
+      { title: 'Eliminate email attachments', detail: 'Remove email attachments from the borrower document workflow entirely, replacing them with secure, permissioned access. Beyond the security benefit, this ends the version confusion and re-sending that slow loan processing, so it improves both compliance and cycle time at once.' },
+      { title: 'Streamline borrower document collection', detail: 'Give borrowers a simple, secure way to submit required documents in one place rather than over scattered emails and channels. A smoother intake reduces back-and-forth, shortens time-to-close, and keeps sensitive financial data inside your controlled environment from the very first handoff.' },
+      { title: 'Improve third-party collaboration', detail: 'Make it easy for processors, attorneys, and other third parties to participate through secure, auditable access instead of insecure workarounds. When the secure path is also the fastest path, staff and partners stop reverting to email — improving borrower experience, productivity, and data protection together.' },
+    ],
     bands: {
-      strong: { assessment: 'Collaboration processes reliably support both compliance and operational efficiency.', note: 'Efficient, compliant collaboration is a measurable business advantage.', type: 'strength' },
-      moderate: { assessment: 'Collaboration mostly supports operations, though occasional document-sharing friction affects loan timelines.', note: 'Streamlining secure collaboration can further improve borrower experience and efficiency.', type: 'opportunity' },
-      weak: { assessment: 'Document-sharing inefficiencies may be contributing to delays in loan processing.', note: 'Modernizing collaboration workflows may improve borrower experiences and operational productivity.', type: 'opportunity' },
+      strong: { assessment: 'Collaboration processes reliably support both compliance and operational efficiency.', note: 'Efficient, compliant collaboration is a measurable business advantage.', detail: 'Your collaboration processes reliably support both compliance and day-to-day efficiency, so secure document handling is helping rather than hindering loan timelines and borrower experience. That alignment is a genuine competitive advantage — security that speeds the business instead of slowing it.', type: 'strength' },
+      moderate: { assessment: 'Collaboration mostly supports operations, though occasional document-sharing friction affects loan timelines.', note: 'Streamlining secure collaboration can further improve borrower experience and efficiency.', detail: 'Collaboration mostly supports operations, but occasional document-sharing friction — chasing the right version, re-sending attachments, waiting on external parties — still adds delay to loan timelines and frustration for borrowers. Those frictions also tend to push staff back toward insecure shortcuts like email. Streamlining secure collaboration removes the delay and the temptation at the same time.', type: 'opportunity' },
+      weak: { assessment: 'Document-sharing inefficiencies may be contributing to delays in loan processing.', note: 'Modernizing collaboration workflows may improve borrower experiences and operational productivity.', detail: 'Document-sharing inefficiencies are likely contributing to measurable delays in loan processing and a poorer borrower experience, and they push staff toward insecure workarounds to get deals done. Slow, friction-filled collaboration costs you both in cycle time and in risk. Modernizing these workflows improves borrower experience, productivity, and security together.', type: 'opportunity' },
     },
   },
 };
@@ -474,11 +498,11 @@ let qCounter = 0;
       var ranked = cats.slice().sort(function (a, b) { return a.pct - b.pct; }).slice(0, 3);
       var recs = [], seen = {};
       ranked.forEach(function (c) {
-        meta[c.id].actions.forEach(function (a) { if (!seen[a]) { seen[a] = 1; recs.push(a); } });
+        meta[c.id].actions.forEach(function (a) { if (!seen[a.title]) { seen[a.title] = 1; recs.push(a); } });
       });
       if (recs.length) {
-        html += '<div class="sla-card"><h3 class="sla-card__title">Recommended Next Steps</h3><p class="sla-card__sub">The actions that will most advance your secure lending collaboration maturity.</p><div class="sla-list sla-list--rec">';
-        recs.forEach(function (t) { html += '<div class="sla-list__item">' + ARROW + '<span>' + esc(t) + '</span></div>'; });
+        html += '<div class="sla-card"><h3 class="sla-card__title">Recommended Next Steps</h3><p class="sla-card__sub">The actions that will most advance your secure lending collaboration maturity — what each recommendation is and why it matters.</p><div class="sla-list sla-list--rec">';
+        recs.forEach(function (t) { html += '<div class="sla-list__item">' + ARROW + '<span><strong>' + esc(t.title) + '</strong><br>' + esc(t.detail) + '</span></div>'; });
         html += '</div></div>';
       }
 
@@ -723,6 +747,29 @@ let qCounter = 0;
         }
         y += 10;
       }
+      // Heading (bold, bulleted) + a "what" body line and a "why it matters"
+      // detail paragraph. Used for the strengths and gaps sections so each
+      // entry explains the area and its impact in depth.
+      function richBlock(heading, body, detail) {
+        ensure(46);
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(11); setColor(INK);
+        var hl = doc.splitTextToSize(heading, contentW - 18);
+        fill(ORANGE); doc.circle(M + 3, y - 3.5, 2.2, 'F');
+        for (var i = 0; i < hl.length; i++) { ensure(15); doc.text(hl[i], M + 18, y); y += 15; }
+        y += 3;
+        if (body) {
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(10); setColor(INK);
+          var bl = doc.splitTextToSize(body, contentW - 18);
+          for (var j = 0; j < bl.length; j++) { ensure(14); doc.text(bl[j], M + 18, y); y += 14; }
+        }
+        if (detail) {
+          y += 3;
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(10); setColor(SOFT);
+          var dl = doc.splitTextToSize(detail, contentW - 18);
+          for (var k = 0; k < dl.length; k++) { ensure(14); doc.text(dl[k], M + 18, y); y += 14; }
+        }
+        y += 14;
+      }
 
       newPage();
 
@@ -808,43 +855,51 @@ let qCounter = 0;
       var gaps = [];
       data.cats.forEach(function (c) {
         var bnd = meta[c.id].bands[band(c.pct)];
-        var txt = bnd.assessment + ' ' + bnd.note;
-        if (bnd.type === 'strength') strengths.push(txt); else gaps.push(txt);
+        var entry = { title: c.title, body: bnd.assessment + ' ' + bnd.note, detail: bnd.detail };
+        if (bnd.type === 'strength') strengths.push(entry); else gaps.push(entry);
       });
 
       if (strengths.length) {
         sectionHeading('What Your Organization Is Doing Well');
-        strengths.forEach(function (t) { bulletBlock(t); });
+        paragraph('The areas below are working in your favor today — each notes the strength and why it benefits your institution.', { color: SOFT, size: 10 });
+        strengths.forEach(function (s) { richBlock(s.title, s.body, s.detail); });
         y += 4;
       }
 
       // ---- Identified gaps & opportunities ----
       if (gaps.length) {
         sectionHeading('Identified Gaps & Opportunities');
-        paragraph('The following areas represent opportunities to strengthen your secure lending collaboration — each describes the gap and the risk it creates for your institution.', { color: SOFT, size: 10 });
-        gaps.forEach(function (t) { bulletBlock(t); });
+        paragraph('The following areas represent opportunities to strengthen your secure lending collaboration. For each, we explain what the gap is and why it matters — the specific risk it creates for your institution.', { color: SOFT, size: 10 });
+        gaps.forEach(function (g) { richBlock(g.title, g.body, g.detail); });
         y += 4;
       }
 
       // ---- Recommendations (numbered, orange tiles) — actions for the 3 priority areas ----
       var ranked = data.cats.slice().sort(function (a, b) { return a.pct - b.pct; }).slice(0, 3);
       var recs = [];
-      ranked.forEach(function (c) { meta[c.id].actions.forEach(function (a) { if (recs.indexOf(a) === -1) recs.push(a); }); });
+      var recSeen = {};
+      ranked.forEach(function (c) { meta[c.id].actions.forEach(function (a) { if (!recSeen[a.title]) { recSeen[a.title] = 1; recs.push(a); } }); });
       if (recs.length) {
         sectionHeading('Recommendations');
-        paragraph('Prioritized actions for the three areas where focused effort will have the greatest impact on your lending collaboration maturity.', { color: SOFT, size: 10 });
+        paragraph('Prioritized actions for the three areas where focused effort will have the greatest impact on your lending collaboration maturity. For each, we describe what the recommendation is and why it matters.', { color: SOFT, size: 10 });
         var numW = 32;
         recs.forEach(function (t, i) {
-          doc.setFont('helvetica', 'normal'); doc.setFontSize(10.5);
-          var lines = doc.splitTextToSize(t, contentW - numW);
-          ensure(Math.max(28, lines.length * 15) + 14);
+          var titleLines = doc.splitTextToSize(t.title, contentW - numW);
+          var detailLines = doc.splitTextToSize(t.detail, contentW - numW);
+          ensure(Math.max(24, titleLines.length * 15 + detailLines.length * 14) + 18);
           fill(ORANGE); doc.roundedRect(M, y - 12, 20, 20, 3, 3, 'F');
           doc.setFont('helvetica', 'bold'); doc.setFontSize(10.5); setColor(WHITE);
           doc.text(String(i + 1), M + 10, y + 2, { align: 'center' });
-          doc.setFont('helvetica', 'normal'); doc.setFontSize(10.5); setColor(INK);
-          for (var j = 0; j < lines.length; j++) {
+          doc.setFont('helvetica', 'bold'); doc.setFontSize(11); setColor(INK);
+          for (var j = 0; j < titleLines.length; j++) {
             if (j > 0) ensure(15);
-            doc.text(lines[j], M + numW, y); y += 15;
+            doc.text(titleLines[j], M + numW, y); y += 15;
+          }
+          y += 3;
+          doc.setFont('helvetica', 'normal'); doc.setFontSize(10); setColor(SOFT);
+          for (var k = 0; k < detailLines.length; k++) {
+            ensure(14);
+            doc.text(detailLines[k], M + numW, y); y += 14;
           }
           y += 16;
         });
