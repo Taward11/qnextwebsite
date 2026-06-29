@@ -243,6 +243,34 @@
   background: var(--pf-orange);
   transform: rotate(45deg);
 }
+.bk-uc__media--glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  background:
+    radial-gradient(125% 95% at 100% 0%, rgba(232,89,10,0.78), rgba(232,89,10,0) 55%),
+    linear-gradient(118deg, rgba(232,89,10,0) 60%, rgba(255,148,54,0.55) 71%, rgba(232,89,10,0) 84%);
+}
+.bk-uc__link {
+  display: inline-block;
+  margin: 18px 26px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--pf-orange);
+  text-decoration: none;
+}
+.bk-uc__link:hover { text-decoration: underline; }
+.bk-changed__link { text-align: center; margin: 34px 0 0; }
+.bk-changed__link a {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--pf-orange);
+  text-decoration: none;
+}
+.bk-changed__link a:hover { text-decoration: underline; }
 
 /* ---------- HOW IT WORKS (steps + tall figure) ---------- */
 .bk-flow {
