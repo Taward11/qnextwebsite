@@ -60,6 +60,12 @@ uri = "file://attached_assets/generated_images/mr-challenge-lawyers-orange.png"
 type = "image"
 title = "lawyers orange"
 
+[[generated]]
+id = "_K3Q9t3PMt7ah6PKaNNjQ"
+uri = "file://attached_assets/generated_images/branded-portal.png"
+type = "image"
+title = "generated_image"
+
 [[outputs]]
 id = "wssrYHILOy549CZAkG2ky"
 uri = "file://public/images/lending/lending-collaboration-framework.svg"

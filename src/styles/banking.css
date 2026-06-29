@@ -97,6 +97,8 @@
   font-weight: 600;
   color: var(--pf-ink, #1a1f2c);
 }
+.pf-section--dark .bk-points li { color: #c8d2de; }
+.pf-section--dark .bk-points strong { color: #fff; }
 
 /* ---------- "BANKING HAS CHANGED" (dark split) ---------- */
 .bk-split {
