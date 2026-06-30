@@ -1,0 +1,471 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+import '../styles/platform.css';
+import '../styles/vdr.css';
+
+const faqs = [
+  {
+    q: "What is a Virtual Data Room?",
+    a: "A Virtual Data Room (VDR) is a secure online environment used to share and collaborate on confidential documents with internal and external parties. Financial institutions use VDRs for loan packages, due diligence, audits, regulatory requests and board materials — replacing email, FTP and public cloud links with controlled, auditable access.",
+  },
+  {
+    q: "How is a Zero Trust Virtual Data Room different?",
+    a: "A Zero Trust VDR never assumes trust. Every user and device is verified before access is granted, permissions follow least-privilege principles, files stay encrypted in transit and at rest, and every action is logged. Access can be revoked instantly — so sensitive financial information stays under your control at all times.",
+  },
+  {
+    q: "Can FileFlex use our existing file servers?",
+    a: "Yes. FileFlex applies Zero Trust Data Access on top of your existing storage — Windows file servers, NAS/SAN, SharePoint, ECM repositories and cloud — without copying or migrating data. Your files stay exactly where they are, governed by one consistent set of policies.",
+  },
+  {
+    q: "Can external users access only specific documents?",
+    a: "Yes. Borrowers, auditors, legal counsel, investors and partners receive scoped, identity-verified access to only the specific documents or folders they are authorized to see — with view-only, no-download, watermarking and time-limited options available.",
+  },
+  {
+    q: "Does FileFlex create copies of our data?",
+    a: "No. FileFlex accesses your original files in place rather than copying them into a separate cloud repository. This eliminates data sprawl, reduces your attack surface and keeps a single source of truth under your governance.",
+  },
+  {
+    q: "Can access be revoked instantly?",
+    a: "Yes. Access can be revoked immediately for any user or the entire workspace — for example when a project ends, an engagement closes or an employee leaves. Revocation takes effect right away, with no lingering copies on external systems.",
+  },
+  {
+    q: "Is every activity logged?",
+    a: "Yes. Every view, upload, download, edit and share is immutably recorded and exportable to your SIEM, giving you the complete audit trail required for regulatory examinations, internal audit and compliance oversight.",
+  },
+  {
+    q: "Can FileFlex support regulatory audits?",
+    a: "Yes. FileFlex provides controlled, least-privilege access for examiners and auditors plus a complete, exportable audit trail — supporting FFIEC guidance, NIST Zero Trust principles, GLBA requirements, DORA and local privacy regulations.",
+  },
+];
+---
+
+<Layout
+  title="Zero Trust Virtual Data Rooms for Financial Institutions | FileFlex"
+  description="Collaborate securely with customers, auditors, legal counsel, regulators, investors and partners using a Zero Trust Virtual Data Room. Keep sensitive financial information under your control — no public links, no unsecured email attachments, no unnecessary cloud migration."
+  faq={faqs}
+>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<Nav />
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="vdr-hero" aria-labelledby="vdr-hero-heading">
+  <div class="vdr-hero__content">
+    <span class="vdr-hero__eyebrow">Virtual Data Rooms</span>
+    <h1 id="vdr-hero-heading" class="vdr-hero__title">
+      Zero Trust Virtual Data Rooms for Financial Institutions
+    </h1>
+    <p class="vdr-hero__lede">
+      Collaborate securely with customers, auditors, legal counsel, regulators, investors and business
+      partners using a Zero Trust Virtual Data Room that keeps sensitive financial information under
+      your control.
+    </p>
+    <ul class="vdr-hero__nos">
+      <li>No public links</li>
+      <li>No unsecured email attachments</li>
+      <li>No unnecessary cloud migration</li>
+    </ul>
+    <div class="vdr-hero__ctas">
+      <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request a Demo &rsaquo;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 1 — CONCEPT OVERVIEW
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="vdr-concept-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Concept</p>
+    <h2 id="vdr-concept-heading" class="pf-title pf-title--center">One Secure Room for Every Financial Connection</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Your institution connects to borrowers, auditors, legal counsel, investors, regulators and
+      business partners through a single secure Zero Trust Virtual Data Room — where every connection
+      is verified, governed and logged.
+    </p>
+    <div class="vdr-media">
+      <ul class="vdr-points">
+        <li><strong>Connect every stakeholder</strong>Borrowers, auditors, legal counsel, investors, regulators and business partners collaborate in one secure room.</li>
+        <li><strong>Identity verification</strong>Every user and device is authenticated before any access is granted.</li>
+        <li><strong>Least privilege access</strong>Participants see only the documents they are explicitly permitted to access.</li>
+        <li><strong>Encrypted data access</strong>Files stay encrypted in transit and at rest, wherever they already live.</li>
+        <li><strong>Complete audit trail</strong>Every action is recorded for full visibility and accountability.</li>
+      </ul>
+      <figure class="vdr-media__figure">
+        <img
+          src="/images/vdr/ecosystem-overview.webp"
+          alt="Secure financial collaboration with a Zero Trust Virtual Data Room at the center, connecting borrowers, investors, auditors, regulators, legal counsel and business partners — each connection passing through identity verification, least-privilege access, encrypted data access and a complete audit trail."
+          width="688" height="691" loading="lazy" decoding="async"
+        />
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 2 — WHAT IS A FINANCIAL VDR?
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="vdr-what-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Basics</p>
+    <h2 id="vdr-what-heading" class="pf-title pf-title--center">What Is a Financial Virtual Data Room?</h2>
+    <div class="vdr-media">
+      <figure class="vdr-media__figure">
+        <img
+          src="/images/vdr/traditional-vs-vdr.webp"
+          alt="Traditional sharing versus a Zero Trust Virtual Data Room: email leads to lost control, no visibility and security risk; a Zero Trust VDR delivers identity-verified, controlled, encrypted access with every action logged and the ability to revoke access anytime."
+          width="680" height="674" loading="lazy" decoding="async"
+        />
+      </figure>
+      <div class="vdr-prose">
+        <p>Most financial institutions exchange highly confidential information every day. Examples include:</p>
+        <ul class="vdr-tags">
+          <li>Loan documentation</li>
+          <li>Commercial lending packages</li>
+          <li>Mortgage files</li>
+          <li>Due diligence</li>
+          <li>Regulatory requests</li>
+          <li>Audit evidence</li>
+          <li>Board documents</li>
+          <li>Wealth management files</li>
+          <li>Investment documentation</li>
+        </ul>
+        <h3>Traditional methods rely on:</h3>
+        <ul class="vdr-x">
+          <li>Email</li>
+          <li>FTP</li>
+          <li>Shared drives</li>
+          <li>Public cloud links</li>
+        </ul>
+        <p>Each increases the attack surface while reducing visibility and auditability. A Zero Trust
+          Virtual Data Room provides a secure collaboration environment where authorized users access
+          only the information they are permitted to see.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 3 — WHY FINANCIAL INSTITUTIONS NEED MODERN VDRs
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="vdr-need-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Opportunity</p>
+    <h2 id="vdr-need-heading" class="pf-title pf-title--center">Why Financial Institutions Need Modern Virtual Data Rooms</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      One secure platform supports the many critical workflows where sensitive financial documents
+      move between people — inside and outside your institution.
+    </p>
+    <div class="vdr-media">
+      <figure class="vdr-media__figure">
+        <img
+          src="/images/vdr/collaboration-ecosystem.webp"
+          alt="Financial collaboration ecosystem: eight use cases arranged around a central Zero Trust Virtual Data Room — commercial lending, mortgage processing, wealth management, internal audit, regulatory examinations, board collaboration, legal counsel and mergers and acquisitions."
+          width="731" height="710" loading="lazy" decoding="async"
+        />
+      </figure>
+      <ul class="vdr-points vdr-points--2col">
+        <li><strong>Commercial Lending</strong>Share confidential loan packages securely.</li>
+        <li><strong>Mortgage Processing</strong>Exchange borrower documentation without email.</li>
+        <li><strong>Wealth Management</strong>Protect investment portfolios and client records.</li>
+        <li><strong>Internal Audit</strong>Provide auditors controlled access.</li>
+        <li><strong>Regulatory Examinations</strong>Share requested documents while maintaining complete audit trails.</li>
+        <li><strong>Board Collaboration</strong>Securely distribute confidential board materials.</li>
+        <li><strong>Legal Counsel</strong>Work with outside legal firms without exposing entire file shares.</li>
+        <li><strong>Mergers &amp; Acquisitions</strong>Secure due diligence with investors and acquisition teams.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 4 — HOW IT WORKS
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="vdr-how-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Workflow</p>
+    <h2 id="vdr-how-heading" class="pf-title pf-title--center">How the FileFlex Virtual Data Room Works</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      From invitation to revocation — complete control at every step.
+    </p>
+    <div class="vdr-media">
+      <ol class="vdr-steps">
+        <li>
+          <h3>Administrator creates secure workspace</h3>
+          <p>Define the project, add documents and set baseline security.</p>
+        </li>
+        <li>
+          <h3>Invite participants</h3>
+          <p>Invite internal and external users via secure invitation.</p>
+        </li>
+        <li>
+          <h3>Identity verification</h3>
+          <p>Users authenticate using strong identity verification.</p>
+        </li>
+        <li>
+          <h3>Granular permissions applied</h3>
+          <p>Assign role-based access and document-level permissions.</p>
+        </li>
+        <li>
+          <h3>Participants collaborate</h3>
+          <p>Users view, upload, download and collaborate securely.</p>
+        </li>
+        <li>
+          <h3>Every action logged</h3>
+          <p>All user activity is recorded with detailed audit logs.</p>
+        </li>
+        <li>
+          <h3>Access revoked immediately when project ends</h3>
+          <p>Instantly revoke access and close the workspace.</p>
+        </li>
+      </ol>
+      <figure class="vdr-media__figure">
+        <img
+          src="/images/vdr/vdr-workflow.webp"
+          alt="Zero Trust Virtual Data Room workflow in seven steps: create secure workspace, invite participants, identity verification, granular permissions applied, participants collaborate, every action logged, and access revoked when the project ends."
+          width="626" height="636" loading="lazy" decoding="async"
+        />
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 5 — ZERO TRUST SECURITY BUILT IN
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="vdr-zt-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Zero Trust</p>
+    <h2 id="vdr-zt-heading" class="pf-title pf-title--center">Zero Trust Security Built In</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Security built into every layer — verify, authorize, protect and audit every interaction.
+    </p>
+    <figure class="vdr-figure--center">
+      <img
+        src="/images/vdr/zero-trust-framework.webp"
+        alt="Zero Trust Security Framework: identity verification, authorization with least-privilege access, encryption in transit and at rest, audit and monitoring of every action, and governance for compliance — all protecting a central secured vault."
+        width="680" height="666" loading="lazy" decoding="async"
+      />
+    </figure>
+    <div class="vdr-pillars">
+      <div class="vdr-pillar">
+        <h3>Verify</h3>
+        <p>Authenticate every user.</p>
+      </div>
+      <div class="vdr-pillar">
+        <h3>Authorize</h3>
+        <p>Grant least privilege access.</p>
+      </div>
+      <div class="vdr-pillar">
+        <h3>Protect</h3>
+        <p>Encrypt every connection.</p>
+      </div>
+      <div class="vdr-pillar">
+        <h3>Audit</h3>
+        <p>Record every activity.</p>
+      </div>
+    </div>
+    <p class="vdr-note">
+      Supports Zero Trust Data Access principles without exposing sensitive repositories.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 6 — WHY FILEFLEX IS DIFFERENT (COMPARISON)
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="vdr-diff-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Difference</p>
+    <h2 id="vdr-diff-heading" class="pf-title pf-title--center">Why FileFlex Is Different</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Built for how financial institutions actually work — not just for one-off deals.
+    </p>
+    <div class="vdr-vs__wrap">
+      <table class="vdr-vs">
+        <thead>
+          <tr>
+            <th scope="col" class="vdr-vs__trad">Traditional VDR</th>
+            <th scope="col" class="vdr-vs__ff">FileFlex</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="vdr-vs__trad-cell">Usually cloud hosted</td>
+            <td class="vdr-vs__ff">Supports on-premises storage</td>
+          </tr>
+          <tr>
+            <td class="vdr-vs__trad-cell">Copies documents</td>
+            <td class="vdr-vs__ff">Accesses original files</td>
+          </tr>
+          <tr>
+            <td class="vdr-vs__trad-cell">Project focused</td>
+            <td class="vdr-vs__ff">Continuous business collaboration</td>
+          </tr>
+          <tr>
+            <td class="vdr-vs__trad-cell">Limited integrations</td>
+            <td class="vdr-vs__ff">Works with existing repositories</td>
+          </tr>
+          <tr>
+            <td class="vdr-vs__trad-cell">Built primarily for M&amp;A</td>
+            <td class="vdr-vs__ff">Built for daily financial collaboration</td>
+          </tr>
+          <tr>
+            <td class="vdr-vs__trad-cell">Separate storage</td>
+            <td class="vdr-vs__ff">Leverages existing storage investments</td>
+          </tr>
+          <tr>
+            <td class="vdr-vs__trad-cell">Public cloud dependency</td>
+            <td class="vdr-vs__ff">Customer-controlled deployment options</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 7 — COMMON USE CASES (Problem / Solution / Benefit)
+     ============================================================ -->
+<section id="vdr-use-cases" class="pf-section pf-section--white" aria-labelledby="vdr-uc-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Use Cases</p>
+    <h2 id="vdr-uc-heading" class="pf-title pf-title--center">Common Financial Institution Use Cases</h2>
+    <div class="vdr-uc__grid">
+      <article class="vdr-uc__card">
+        <h3>Commercial Lending</h3>
+        <div class="vdr-psb">
+          <p class="vdr-psb__row"><span class="vdr-psb__label">Problem</span>Loan packages are emailed across teams and outside parties.</p>
+          <p class="vdr-psb__row"><span class="vdr-psb__label">Solution</span>Share confidential packages in a controlled, identity-verified room.</p>
+          <p class="vdr-psb__row vdr-psb__row--benefit"><span class="vdr-psb__label">Benefit</span>Faster deals with full visibility and no data sprawl.</p>
+        </div>
+      </article>
+      <article class="vdr-uc__card">
+        <h3>Mortgage Processing</h3>
+        <div class="vdr-psb">
+          <p class="vdr-psb__row"><span class="vdr-psb__label">Problem</span>Borrower documents arrive over insecure email attachments.</p>
+          <p class="vdr-psb__row"><span class="vdr-psb__label">Solution</span>Collect and exchange files through a secure borrower workspace.</p>
+          <p class="vdr-psb__row vdr-psb__row--benefit"><span class="vdr-psb__label">Benefit</span>Protected borrower data and a cleaner, auditable process.</p>
+        </div>
+      </article>
+      <article class="vdr-uc__card">
+        <h3>Credit Risk Reviews</h3>
+        <div class="vdr-psb">
+          <p class="vdr-psb__row"><span class="vdr-psb__label">Problem</span>Reviewers need sensitive files without broad share access.</p>
+          <p class="vdr-psb__row"><span class="vdr-psb__label">Solution</span>Grant least-privilege, time-boxed access to only the right files.</p>
+          <p class="vdr-psb__row vdr-psb__row--benefit"><span class="vdr-psb__label">Benefit</span>Thorough reviews with reduced exposure and full logging.</p>
+        </div>
+      </article>
+      <article class="vdr-uc__card">
+        <h3>External Audits</h3>
+        <div class="vdr-psb">
+          <p class="vdr-psb__row"><span class="vdr-psb__label">Problem</span>Auditors are given more access than they actually need.</p>
+          <p class="vdr-psb__row"><span class="vdr-psb__label">Solution</span>Provide controlled access to specific evidence, view-only if needed.</p>
+          <p class="vdr-psb__row vdr-psb__row--benefit"><span class="vdr-psb__label">Benefit</span>Smooth audits with a complete, exportable trail.</p>
+        </div>
+      </article>
+      <article class="vdr-uc__card">
+        <h3>Regulatory Compliance</h3>
+        <div class="vdr-psb">
+          <p class="vdr-psb__row"><span class="vdr-psb__label">Problem</span>Examiner requests are hard to fulfill and track.</p>
+          <p class="vdr-psb__row"><span class="vdr-psb__label">Solution</span>Share requested documents securely with full audit trails.</p>
+          <p class="vdr-psb__row vdr-psb__row--benefit"><span class="vdr-psb__label">Benefit</span>Confident examinations and demonstrable governance.</p>
+        </div>
+      </article>
+      <article class="vdr-uc__card">
+        <h3>Board Governance</h3>
+        <div class="vdr-psb">
+          <p class="vdr-psb__row"><span class="vdr-psb__label">Problem</span>Confidential board materials circulate by email and drives.</p>
+          <p class="vdr-psb__row"><span class="vdr-psb__label">Solution</span>Distribute materials in a secure, revocable board workspace.</p>
+          <p class="vdr-psb__row vdr-psb__row--benefit"><span class="vdr-psb__label">Benefit</span>Protected governance with control retained at all times.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 8 — COMPLIANCE SUPPORT
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="vdr-comp-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Compliance</p>
+    <h2 id="vdr-comp-heading" class="pf-title pf-title--center">Compliance Support</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      FileFlex supports the frameworks financial institutions are measured against — with
+      least-privilege access, data governance and complete audit logging.
+    </p>
+    <div class="vdr-comp__grid">
+      <a class="vdr-comp__item" href="/blog/meeting-ffiec-guidelines-using-zero-trust-data-access/">
+        <h3>FFIEC</h3>
+        <p>Supports Federal Financial Institutions Examination Council cybersecurity guidance.</p>
+        <span class="vdr-comp__more">Read the guide &rsaquo;</span>
+      </a>
+      <a class="vdr-comp__item" href="/blog/nist-sp-800-171v2-access-control-practices-for-remote-data-access-2/">
+        <h3>NIST Zero Trust</h3>
+        <p>Aligns with NIST Zero Trust principles and access-control best practices.</p>
+        <span class="vdr-comp__more">Read the guide &rsaquo;</span>
+      </a>
+      <a class="vdr-comp__item" href="/blog/strengthening-glba-compliance-with-zero-trust-data-access/">
+        <h3>GLBA</h3>
+        <p>Helps meet Gramm-Leach-Bliley Act Safeguards Rule requirements.</p>
+        <span class="vdr-comp__more">Read the guide &rsaquo;</span>
+      </a>
+      <a class="vdr-comp__item" href="/blog/dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access/">
+        <h3>DORA</h3>
+        <p>Supports DORA compliance for file sharing, access and collaboration.</p>
+        <span class="vdr-comp__more">Read the guide &rsaquo;</span>
+      </a>
+      <div class="vdr-comp__item">
+        <h3>Local Privacy Regulations</h3>
+        <p>Keep data in your jurisdiction with customer-controlled deployment options.</p>
+      </div>
+      <div class="vdr-comp__item">
+        <h3>Complete Audit Logging</h3>
+        <p>Every view, upload, download and share is recorded and exportable to your SIEM.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 9 — FAQ
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="vdr-faq-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">FAQ</p>
+    <h2 id="vdr-faq-heading" class="pf-title pf-title--center">Frequently Asked Questions</h2>
+    <div class="vdr-faq__list">
+      {faqs.map((f) => (
+        <details class="vdr-faq__item">
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 10 — FINAL CTA
+     ============================================================ -->
+<section id="pf-cta" aria-labelledby="vdr-cta-heading">
+  <h2 id="vdr-cta-heading">Secure Financial Collaboration Without Sacrificing Control</h2>
+  <p>
+    Whether you're supporting commercial lending, audits, board governance, regulatory reviews or
+    customer collaboration, FileFlex provides Zero Trust access to sensitive financial information
+    while preserving complete visibility and control.
+  </p>
+  <div class="pf-cta-buttons">
+    <a class="pf-btn pf-btn--uppercase" href="/demo-request/">Request a Demo &rsaquo;</a>
+    <a class="pf-btn pf-btn--uppercase pf-btn--outline" href="#vdr-use-cases">See Use Cases &rsaquo;</a>
+  </div>
+</section>
+
+</Layout>

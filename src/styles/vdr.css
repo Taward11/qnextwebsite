@@ -1,0 +1,392 @@
+/* ============================================================
+   VIRTUAL DATA ROOMS — use-case landing page
+   Builds on the Platform creative system (platform.css): reuses
+   pf-* section/eyebrow/title/btn primitives and tokens. Only
+   VDR-specific pieces live here, prefixed vdr-.
+   ============================================================ */
+
+/* ---------- HERO ---------- */
+#vdr-hero {
+  position: relative;
+  padding: 116px 5vw 96px;
+  color: #fff;
+  text-align: center;
+  background: #02060c url('/images/platform/home-hero-2023q1.webp') center / cover no-repeat;
+  isolation: isolate;
+}
+#vdr-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(2,6,12,0.82) 0%, rgba(2,6,12,0.78) 55%, rgba(2,6,12,0.88) 100%);
+  z-index: -1;
+}
+.vdr-hero__content { max-width: 940px; margin: 0 auto; }
+.vdr-hero__eyebrow {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pf-orange);
+  margin: 0 0 20px;
+}
+.vdr-hero__title {
+  font-size: clamp(30px, 3.9vw, 52px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0 0 24px;
+  color: #fff;
+}
+.vdr-hero__lede {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #d6dce4;
+  max-width: 760px;
+  margin: 0 auto 26px;
+}
+.vdr-hero__nos {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+.vdr-hero__nos li {
+  font-size: 14px;
+  font-weight: 600;
+  color: #eaeef3;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 999px;
+  padding: 8px 16px;
+}
+.vdr-hero__ctas { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: center; }
+
+/* ---------- MEDIA ROW (text/points + infographic) ---------- */
+.vdr-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 40px;
+}
+.vdr-media__figure { margin: 0; }
+.vdr-media__figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  background: #fff;
+  padding: 12px;
+  box-shadow: 0 30px 80px -45px rgba(0,0,0,0.5);
+}
+.vdr-media__figure figcaption {
+  margin: 14px 0 0;
+  text-align: center;
+  font-size: 13.5px;
+  color: #6a7686;
+}
+
+/* ---------- POINTS (diamond bullets) ---------- */
+.vdr-points { list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; }
+.vdr-points--2col { grid-template-columns: 1fr 1fr; gap: 18px 32px; }
+.vdr-points li {
+  position: relative;
+  padding-left: 34px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #5a6473;
+}
+.vdr-points li::before {
+  content: '';
+  position: absolute;
+  left: 4px; top: 6px;
+  width: 12px; height: 12px;
+  border: 2px solid var(--pf-orange);
+  border-radius: 3px;
+  transform: rotate(45deg);
+}
+.vdr-points strong {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--pf-ink, #1a1f2c);
+}
+.pf-section--dark .vdr-points li { color: #c8d2de; }
+.pf-section--dark .vdr-points strong { color: #fff; }
+
+/* ---------- PROSE (Section 2 right column) ---------- */
+.vdr-prose > * + * { margin-top: 18px; }
+.vdr-prose h3 {
+  font-family: var(--pf-font-display, 'Syne', sans-serif);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--pf-ink, #1a1f2c);
+  margin: 0;
+}
+.vdr-prose p { font-size: 15px; line-height: 1.65; color: #4a5566; margin: 0; }
+.vdr-tags { display: flex; flex-wrap: wrap; gap: 9px; margin: 0; padding: 0; list-style: none; }
+.vdr-tags li {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #3b4654;
+  background: #eef1f6;
+  border-radius: 999px;
+  padding: 7px 14px;
+}
+.vdr-x { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.vdr-x li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 14.5px;
+  color: #4a5566;
+}
+.vdr-x li::before {
+  content: '\2717';
+  position: absolute;
+  left: 0; top: 0;
+  color: #c2410c;
+  font-weight: 700;
+}
+
+/* ---------- STEPS (vertical numbered workflow) ---------- */
+.vdr-steps { list-style: none; padding: 0; margin: 0; counter-reset: vdr-step; }
+.vdr-steps li {
+  counter-increment: vdr-step;
+  position: relative;
+  padding: 0 0 26px 64px;
+  min-height: 48px;
+}
+.vdr-steps li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 23px; top: 44px; bottom: 4px;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(28,57,142,0.4), rgba(28,57,142,0.08));
+}
+.vdr-steps li::before {
+  content: counter(vdr-step);
+  position: absolute;
+  left: 0; top: 0;
+  width: 46px; height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #1c398e;
+  color: #fff;
+  font-family: var(--pf-font-display, 'Syne', sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+}
+.vdr-steps h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--pf-ink, #1a1f2c);
+  margin: 8px 0 6px;
+}
+.vdr-steps p { margin: 0; font-size: 14.5px; line-height: 1.55; color: #5a6473; }
+
+/* ---------- CENTERED FIGURE + PILLARS (Section 5) ---------- */
+.vdr-figure--center { margin: 40px auto 0; max-width: 560px; }
+.vdr-figure--center img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  background: #fff;
+  padding: 12px;
+  box-shadow: 0 30px 80px -48px rgba(0,0,0,0.5);
+}
+.vdr-pillars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-top: 44px;
+}
+.vdr-pillar {
+  background: #fff;
+  border: 1px solid #e6e9ef;
+  border-radius: 14px;
+  padding: 26px 22px;
+  text-align: center;
+}
+.vdr-pillar h3 {
+  font-family: var(--pf-font-display, 'Syne', sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: #1c398e;
+  margin: 0 0 8px;
+}
+.vdr-pillar p { margin: 0; font-size: 14.5px; line-height: 1.55; color: #5a6473; }
+.vdr-note { margin: 34px auto 0; max-width: 760px; text-align: center; font-size: 16px; color: #4a5566; }
+
+/* ---------- COMPARISON (Traditional VDR vs FileFlex) ---------- */
+.vdr-vs__wrap { overflow-x: auto; margin: 36px auto 0; max-width: 920px; }
+.vdr-vs {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 15px;
+}
+.vdr-vs th, .vdr-vs td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e6e9ef;
+  vertical-align: top;
+}
+.vdr-vs thead th {
+  font-family: var(--pf-font-display, 'Syne', sans-serif);
+  font-size: 15px;
+  font-weight: 700;
+}
+.vdr-vs thead th.vdr-vs__trad { color: #b91c1c; background: #fbeaea; border-top-left-radius: 12px; }
+.vdr-vs thead th.vdr-vs__ff { color: #fff; background: #1c398e; border-top-right-radius: 12px; }
+.vdr-vs tbody td { color: #4a5566; }
+.vdr-vs tbody td.vdr-vs__ff {
+  background: rgba(28,57,142,0.05);
+  color: var(--pf-ink, #1a1f2c);
+  font-weight: 500;
+  border-bottom-color: rgba(28,57,142,0.16);
+}
+.vdr-vs tbody tr:last-child td.vdr-vs__ff { border-bottom-left-radius: 0; border-bottom-right-radius: 12px; }
+.vdr-vs__trad-cell { color: #7a8694; }
+
+/* ---------- USE-CASE CARDS (Problem / Solution / Benefit) ---------- */
+.vdr-uc__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-top: 40px;
+}
+.vdr-uc__card {
+  background: #fff;
+  border: 1px solid #e6e9ef;
+  border-radius: 16px;
+  padding: 28px 26px 30px;
+  text-align: left;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.vdr-uc__card:hover {
+  border-color: rgba(28,57,142,0.3);
+  box-shadow: 0 18px 40px -28px rgba(0,0,0,0.35);
+  transform: translateY(-2px);
+}
+.vdr-uc__card h3 {
+  font-family: var(--pf-font-display, 'Syne', sans-serif);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--pf-ink, #1a1f2c);
+  margin: 0 0 16px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #eef1f6;
+}
+.vdr-psb { display: grid; gap: 11px; }
+.vdr-psb__row { font-size: 14.5px; line-height: 1.5; color: #4a5566; }
+.vdr-psb__row .vdr-psb__label {
+  display: inline-block;
+  min-width: 70px;
+  font-weight: 700;
+  color: #1c398e;
+}
+.vdr-psb__row--benefit .vdr-psb__label { color: var(--pf-orange); }
+
+/* ---------- COMPLIANCE GRID ---------- */
+.vdr-comp__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+.vdr-comp__item {
+  display: block;
+  background: #fff;
+  border: 1px solid #e6e9ef;
+  border-radius: 14px;
+  padding: 24px 24px 26px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+a.vdr-comp__item:hover {
+  border-color: rgba(28,57,142,0.3);
+  box-shadow: 0 14px 34px -26px rgba(0,0,0,0.4);
+  transform: translateY(-2px);
+}
+.vdr-comp__item h3 {
+  font-family: var(--pf-font-display, 'Syne', sans-serif);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--pf-ink, #1a1f2c);
+  margin: 0 0 8px;
+}
+.vdr-comp__item p { margin: 0; font-size: 14px; line-height: 1.55; color: #5a6473; }
+a.vdr-comp__item .vdr-comp__more { display: inline-block; margin-top: 12px; font-size: 13.5px; font-weight: 600; color: var(--pf-orange); }
+
+/* ---------- FAQ ---------- */
+.vdr-faq__list { max-width: 880px; margin: 36px auto 0; display: grid; gap: 14px; }
+.vdr-faq__item {
+  background: #fff;
+  border: 1px solid #e6e9ef;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.vdr-faq__item[open] {
+  border-color: rgba(28,57,142,0.35);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.05);
+}
+.vdr-faq__item > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 20px 56px 20px 24px;
+  position: relative;
+  font-family: var(--pf-font-display, 'Syne', sans-serif);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--pf-ink, #1a1f2c);
+  line-height: 1.35;
+}
+.vdr-faq__item > summary::-webkit-details-marker { display: none; }
+.vdr-faq__item > summary::after {
+  content: "+";
+  position: absolute;
+  right: 24px; top: 50%;
+  transform: translateY(-50%);
+  width: 28px; height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #1c398e;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.vdr-faq__item[open] > summary::after { content: "\2212"; background: #e8590a; }
+.vdr-faq__item > p {
+  margin: 0;
+  padding: 0 24px 22px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #4a5566;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .vdr-media { grid-template-columns: 1fr; gap: 36px; }
+  .vdr-uc__grid, .vdr-comp__grid { grid-template-columns: repeat(2, 1fr); }
+  .vdr-pillars { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .vdr-points--2col { grid-template-columns: 1fr; }
+  .vdr-uc__grid, .vdr-comp__grid { grid-template-columns: 1fr; }
+  .vdr-pillars { grid-template-columns: 1fr; }
+}
