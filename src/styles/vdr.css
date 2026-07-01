@@ -68,11 +68,12 @@
 /* ---------- MEDIA ROW (text/points + infographic) ---------- */
 .vdr-media {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 48px;
   align-items: center;
   margin-top: 40px;
 }
+.vdr-media--reverse { grid-template-columns: 1fr 2fr; }
 .vdr-media__figure { margin: 0; }
 .vdr-media__figure img {
   width: 100%;
