@@ -193,7 +193,7 @@
 .vdr-steps p { margin: 0; font-size: 14.5px; line-height: 1.55; color: #5a6473; }
 
 /* ---------- CENTERED FIGURE + PILLARS (Section 5) ---------- */
-.vdr-figure--center { margin: 40px auto 0; max-width: 560px; }
+.vdr-figure--center { margin: 40px auto 0; max-width: 760px; }
 .vdr-figure--center img {
   width: 100%;
   height: auto;
