@@ -278,6 +278,24 @@
   box-shadow: 0 18px 40px -28px rgba(0,0,0,0.35);
   transform: translateY(-2px);
 }
+.vdr-uc__icon, .vdr-comp__icon {
+  width: 48px; height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(28,57,142,0.08);
+  color: #1c398e;
+  margin-bottom: 16px;
+}
+.vdr-uc__icon svg, .vdr-comp__icon svg {
+  width: 24px; height: 24px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .vdr-uc__card h3 {
   font-family: var(--pf-font-display, 'Syne', sans-serif);
   font-size: 19px;
