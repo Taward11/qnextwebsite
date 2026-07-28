@@ -1,0 +1,449 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/fileflex.css';
+
+const bullets = [
+  'Talk directly with a FileFlex security specialist',
+  'Get answers on Zero Trust Data Access for your environment',
+  'Product, licensing and deployment questions welcome',
+  'Support questions routed straight to the right team',
+  'Typical response within one business day',
+];
+
+const HS_PORTAL = '21348727';
+const HS_FORM = '1f18f298-78dd-4182-951f-b20f4cbbf583';
+---
+
+<Layout
+  title="Contact FileFlex — Talk to a Specialist | FileFlex Enterprise"
+  description="Contact the FileFlex team. Talk to a security specialist about Zero Trust Data Access, products, licensing or support — we'll get back to you shortly."
+>
+
+<Nav />
+
+<section id="cf-hero" aria-labelledby="cf-hero-heading">
+  <div class="cf-hero__inner">
+    <h1 id="cf-hero-heading" class="cf-hero__title">
+      Contact FileFlex
+    </h1>
+  </div>
+</section>
+
+<section id="cf-main" aria-labelledby="cf-main-heading">
+  <div class="cf-main__inner">
+
+    <aside class="cf-aside" aria-label="Why contact FileFlex">
+      <h2 class="cf-aside__title">
+        We're Here to Help
+      </h2>
+      <ul class="cf-aside__list">
+        {bullets.map((b) => (
+          <li>
+            <svg class="cf-check" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="11" fill="#e8590a" />
+              <polyline points="7,12.5 10.5,16 17,9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>{b}</span>
+          </li>
+        ))}
+      </ul>
+    </aside>
+
+    <div class="cf-form-wrap">
+      <h2 id="cf-main-heading" class="cf-form__title">
+        Send Us a Message
+      </h2>
+
+      <form
+        id="cf-form"
+        class="cf-form"
+        novalidate
+        data-portal-id={HS_PORTAL}
+        data-form-id={HS_FORM}
+      >
+        <div class="cf-grid cf-grid--2">
+          <div class="cf-field">
+            <label for="cf-firstname">First name <span class="cf-req" aria-hidden="true">*</span></label>
+            <input id="cf-firstname" name="firstname" type="text" autocomplete="given-name" required />
+          </div>
+          <div class="cf-field">
+            <label for="cf-lastname">Last name <span class="cf-req" aria-hidden="true">*</span></label>
+            <input id="cf-lastname" name="lastname" type="text" autocomplete="family-name" required />
+          </div>
+        </div>
+
+        <div class="cf-grid cf-grid--2">
+          <div class="cf-field">
+            <label for="cf-company">Company name <span class="cf-req" aria-hidden="true">*</span></label>
+            <input id="cf-company" name="company" type="text" autocomplete="organization" required />
+          </div>
+          <div class="cf-field">
+            <label for="cf-employees">Number of employees <span class="cf-req" aria-hidden="true">*</span></label>
+            <input id="cf-employees" name="numberofemployees" type="number" min="1" step="1" required />
+          </div>
+        </div>
+
+        <div class="cf-grid cf-grid--2">
+          <div class="cf-field">
+            <label for="cf-email">Email <span class="cf-req" aria-hidden="true">*</span></label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="cf-field">
+            <label for="cf-phone">Phone</label>
+            <input id="cf-phone" name="phone" type="tel" autocomplete="tel" minlength="7" maxlength="20" />
+          </div>
+        </div>
+
+        <div class="cf-field">
+          <label for="cf-country">Country/Region <span class="cf-req" aria-hidden="true">*</span></label>
+          <input id="cf-country" name="country" type="text" autocomplete="country-name" required />
+        </div>
+
+        <div class="cf-field">
+          <label for="cf-subject">Subject <span class="cf-req" aria-hidden="true">*</span></label>
+          <input id="cf-subject" name="subject" type="text" required />
+        </div>
+
+        <fieldset class="cf-fieldset">
+          <legend>Nature of inquiry</legend>
+          <label class="cf-checkbox">
+            <input type="checkbox" name="nature_of_inquiry" value="I have a support question" />
+            <span>I have a support question</span>
+          </label>
+          <label class="cf-checkbox">
+            <input type="checkbox" name="nature_of_inquiry" value="I have a question about your products" />
+            <span>I have a question about your products</span>
+          </label>
+          <label class="cf-checkbox">
+            <input type="checkbox" name="nature_of_inquiry" value="Other" />
+            <span>Other</span>
+          </label>
+        </fieldset>
+
+        <div class="cf-consent">
+          <p>fileflex.com is committed to protecting and respecting your privacy, and we'll only use your personal information to administer your account and to provide the products and services you requested from us. From time to time, we would like to contact you about our products and services, as well as other content that may be of interest to you. If you consent to us contacting you for this purpose, please tick below to say how you would like us to contact you:</p>
+          <label class="cf-checkbox">
+            <input type="checkbox" id="cf-comm-consent" name="communicationConsent" value="true" />
+            <span>I agree to receive other communications from fileflex.com.</span>
+          </label>
+          <p>In order to provide you the content requested, we need to store and process your personal data. If you consent to us storing your personal data for this purpose, please tick the checkbox below.</p>
+          <label class="cf-checkbox">
+            <input type="checkbox" id="cf-process-consent" name="processConsent" value="true" required />
+            <span>I agree to allow fileflex.com to store and process my personal data. <span class="cf-req" aria-hidden="true">*</span></span>
+          </label>
+          <p class="cf-consent__fine">You can unsubscribe from these communications at any time. For more information on how to unsubscribe, our privacy practices, and how we are committed to protecting and respecting your privacy, please review our <a href="https://www.qnext.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+        </div>
+
+        <!-- Honeypot: real users won't fill this; bots usually will. Visually hidden, hidden from a11y tree. -->
+        <div class="cf-honeypot" aria-hidden="true">
+          <label for="cf-website-url-2">Leave this field blank</label>
+          <input id="cf-website-url-2" type="text" name="website_url_confirm" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div class="cf-actions">
+          <button type="submit" class="cf-submit">Submit</button>
+        </div>
+      </form>
+
+      <div id="cf-status" class="cf-status" role="status" aria-live="polite"></div>
+    </div>
+
+  </div>
+</section>
+
+<script is:inline>
+  (function () {
+    var form = document.getElementById('cf-form');
+    if (!form) return;
+    var status = document.getElementById('cf-status');
+    var submitBtn = form.querySelector('.cf-submit');
+    var portalId = form.dataset.portalId;
+    var formId = form.dataset.formId;
+    var endpoint = 'https://api.hsforms.com/submissions/v3/integration/submit/' + portalId + '/' + formId;
+    var MIN_FILL_MS = 2500;
+    var renderedAt = Date.now();
+    var SUCCESS_MSG = 'Thank you for contacting us. Someone will contact you shortly.';
+
+    function setStatus(msg, cls) {
+      status.textContent = msg;
+      status.className = 'cf-status cf-status--' + cls;
+    }
+    function getHsCookie() {
+      var m = document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]+)/);
+      return m ? m[1] : '';
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+
+      var honey = form.querySelector('[name="website_url_confirm"]');
+      if (honey && honey.value) {
+        form.style.display = 'none';
+        setStatus(SUCCESS_MSG, 'ok');
+        return;
+      }
+      if (Date.now() - renderedAt < MIN_FILL_MS) {
+        setStatus('Please take a moment to review your entries before submitting.', 'err');
+        return;
+      }
+
+      var fd = new FormData(form);
+      var fields = [];
+      var SKIP = { communicationConsent: 1, processConsent: 1, website_url_confirm: 1, nature_of_inquiry: 1 };
+      fd.forEach(function (value, name) {
+        if (SKIP[name]) return;
+        if (value === '' || value == null) return; // skip empty optional fields
+        fields.push({ name: name, value: String(value) });
+      });
+
+      // Multi-checkbox field: HubSpot expects semicolon-separated values
+      var inquiries = Array.prototype.slice
+        .call(form.querySelectorAll('[name="nature_of_inquiry"]:checked'))
+        .map(function (el) { return el.value; });
+      if (inquiries.length) {
+        fields.push({ name: 'nature_of_inquiry', value: inquiries.join(';') });
+      }
+
+      var commConsent = form.querySelector('#cf-comm-consent').checked;
+      var hutk = getHsCookie();
+      var payload = {
+        submittedAt: Date.now(),
+        fields: fields,
+        context: { pageUri: window.location.href, pageName: document.title },
+        legalConsentOptions: {
+          consent: {
+            consentToProcess: true,
+            text: 'I agree to allow fileflex.com to store and process my personal data.',
+            communications: [{
+              value: commConsent,
+              subscriptionTypeId: 32387186,
+              text: 'I agree to receive other communications from fileflex.com.',
+            }],
+          },
+        },
+      };
+      if (hutk) payload.context.hutk = hutk;
+
+      submitBtn.disabled = true;
+      setStatus('Sending…', 'pending');
+
+      fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+        .then(function (r) {
+          return r.text().then(function (t) {
+            var body;
+            try { body = JSON.parse(t); } catch (_) { body = { message: t.slice(0, 200) }; }
+            return { ok: r.ok, status: r.status, body: body };
+          });
+        })
+        .then(function (res) {
+          if (res.ok) {
+            form.style.display = 'none';
+            setStatus(SUCCESS_MSG, 'ok');
+            status.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            var msg = 'Submission failed. Please review the form and try again.';
+            if (res.body && res.body.errors && res.body.errors.length) {
+              msg = res.body.errors.map(function (e) { return e.message || e.errorType; }).join(' ');
+            } else if (res.body && res.body.message) {
+              msg = res.body.message;
+            }
+            setStatus(msg + ' (HTTP ' + res.status + ')', 'err');
+            submitBtn.disabled = false;
+          }
+        })
+        .catch(function () {
+          setStatus('Network error. Please try again or contact us directly.', 'err');
+          submitBtn.disabled = false;
+        });
+    });
+  })();
+</script>
+
+</Layout>
+
+<style>
+  /* HERO */
+  #cf-hero {
+    background: #0E1A2B;
+    padding: 120px 7vw 56px;
+  }
+  .cf-hero__inner { max-width: 1200px; margin: 0 auto; }
+  .cf-hero__title {
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    font-size: clamp(28px, 3.6vw, 48px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  /* MAIN — two-column */
+  #cf-main {
+    background: #f1f1f1;
+    padding: 72px 7vw 96px;
+  }
+  .cf-main__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(280px, 420px) 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  /* aside */
+  .cf-aside__title {
+    font-family: "Inter", sans-serif;
+    color: #0E1A2B;
+    font-size: clamp(22px, 2.2vw, 30px);
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+    margin: 0 0 24px;
+  }
+  .cf-aside__list { list-style: none; padding: 0; margin: 0; }
+  .cf-aside__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-family: "Inter", sans-serif;
+    color: #2a2f3a;
+    font-size: 16px;
+    line-height: 1.55;
+    margin-bottom: 14px;
+  }
+  .cf-check { flex: 0 0 22px; width: 22px; height: 22px; margin-top: 2px; }
+
+  /* form */
+  .cf-form__title {
+    font-family: "Inter", sans-serif;
+    color: #0E1A2B;
+    font-size: clamp(22px, 2.2vw, 30px);
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+    margin: 0 0 28px;
+  }
+  .cf-form { font-family: "Inter", sans-serif; }
+  .cf-req { color: #b00020; margin-left: 2px; }
+
+  .cf-field { margin-bottom: 16px; }
+  .cf-field label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0E1A2B;
+    margin-bottom: 6px;
+  }
+  .cf-field input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    color: #0E1A2B;
+    background: #fff;
+    border: 1px solid #cfd4dc;
+    border-radius: 3px;
+  }
+  .cf-field input:focus {
+    outline: none;
+    border-color: #e8590a;
+    box-shadow: 0 0 0 2px rgba(232, 89, 10, 0.18);
+  }
+  .cf-field input:user-invalid { border-color: #b00020; }
+
+  .cf-grid { display: grid; gap: 16px; }
+  .cf-grid--2 { grid-template-columns: 1fr 1fr; }
+
+  .cf-fieldset {
+    border: 1px solid #cfd4dc;
+    border-radius: 3px;
+    padding: 12px 16px 6px;
+    margin: 0 0 16px;
+    background: #fff;
+  }
+  .cf-fieldset legend {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0E1A2B;
+    padding: 0 6px;
+  }
+
+  .cf-consent {
+    margin: 18px 0 8px;
+    padding: 16px;
+    background: #f6f8fb;
+    border-left: 3px solid #021372;
+    border-radius: 2px;
+  }
+  .cf-consent p {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #2a2f3a;
+    margin: 0 0 12px;
+  }
+  .cf-consent__fine { color: #4a5260 !important; font-size: 12.5px !important; }
+  .cf-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: #0E1A2B;
+    cursor: pointer;
+    margin: 6px 0 12px;
+  }
+  .cf-checkbox input { margin-top: 3px; accent-color: #e8590a; }
+  .cf-consent a { color: #021372; text-decoration: underline; }
+
+  /* Honeypot */
+  .cf-honeypot {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .cf-actions { margin-top: 18px; }
+  .cf-submit {
+    background: #e8590a;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    padding: 12px 28px;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  .cf-submit:hover:not(:disabled) { background: #c54a07; }
+  .cf-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  .cf-status {
+    margin-top: 16px;
+    padding: 12px 14px;
+    border-radius: 3px;
+    font-size: 14px;
+    display: none;
+  }
+  .cf-status--pending { display: block; background: #eef2fb; color: #021372; }
+  .cf-status--ok      { display: block; background: #e6f4ea; color: #1e6b34; border: 1px solid #b6dcc1; }
+  .cf-status--err     { display: block; background: #fdecea; color: #b00020; border: 1px solid #f5c2c0; }
+
+  @media (max-width: 900px) {
+    #cf-hero { padding: 100px 6vw 40px; }
+    #cf-main { padding: 48px 6vw 64px; }
+    .cf-main__inner { grid-template-columns: 1fr; gap: 48px; }
+    .cf-grid--2 { grid-template-columns: 1fr; }
+  }
+</style>
