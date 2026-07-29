@@ -72,14 +72,7 @@ import '../styles/challenge.css';
      ============================================================ -->
 <section class="pf-section pf-section--light" aria-labelledby="ch-gap-heading">
   <div class="pf-section__inner">
-    <div class="ch-split ch-split--text-right">
-      <figure class="ch-figure ch-figure--portrait">
-        <img
-          src="/images/challenge/zero-trust-data-layer-gap.webp"
-          alt="The Zero Trust Data-Layer Gap: identity verifies users, device confirms the endpoint, network controls connections — but access is granted to the environment without governance at the file and folder level. Zero Trust Data Access closes the gap by controlling access to individual files and folders with least privilege, full governance and visibility."
-          width="1024" height="1536" loading="lazy" decoding="async"
-        />
-      </figure>
+    <div class="ch-split ch-split--copy-wide">
       <div class="ch-split__copy">
         <p class="pf-eyebrow">The Missing Layer</p>
         <h2 id="ch-gap-heading" class="pf-title">The Access-to-Data Gap</h2>
@@ -96,6 +89,13 @@ import '../styles/challenge.css';
           <p>Zero Trust should extend beyond the connection and <strong>all the way to the data.</strong></p>
         </div>
       </div>
+      <figure class="ch-figure ch-figure--portrait">
+        <img
+          src="/images/challenge/zero-trust-data-layer-gap.webp"
+          alt="The Zero Trust Data-Layer Gap: identity verifies users, device confirms the endpoint, network controls connections — but access is granted to the environment without governance at the file and folder level. Zero Trust Data Access closes the gap by controlling access to individual files and folders with least privilege, full governance and visibility."
+          width="1024" height="1536" loading="lazy" decoding="async"
+        />
+      </figure>
     </div>
   </div>
 </section>
@@ -190,7 +190,7 @@ import '../styles/challenge.css';
 <!-- ============================================================
      ZERO TRUST DATA ACCESS — photo panel (silos bg) + comparison
      ============================================================ -->
-<section class="ch-photo" style="background-image:url('/images/challenge/iStock-1175177391-web.webp');" aria-labelledby="ch-ztda-heading">
+<section class="ch-photo" style="background-image:url('/images/challenge/iStock-1392442626-web.webp');" aria-labelledby="ch-ztda-heading">
   <div class="ch-photo__overlay"></div>
   <div class="ch-photo__inner">
     <div class="ch-photo__copy">
@@ -198,13 +198,29 @@ import '../styles/challenge.css';
       <h2 id="ch-ztda-heading">Zero Trust Data Access</h2>
     </div>
     <div class="ch-compare">
-      <div class="ch-compare__card">
+      <div class="ch-compare__card ch-compare__card--old">
+        <span class="ch-compare__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
+          </svg>
+        </span>
         <p class="ch-compare__label">Traditional security asks</p>
-        <p class="ch-compare__q">Can this user connect?</p>
+        <p class="ch-compare__q">&ldquo;Can this user connect?&rdquo;</p>
+        <p class="ch-compare__sub">Access ends at the network edge</p>
       </div>
+      <div class="ch-compare__vs" aria-hidden="true"><span>vs</span></div>
       <div class="ch-compare__card ch-compare__card--accent">
+        <span class="ch-compare__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7z" />
+            <path d="M14 2v5h5" />
+            <path d="M9.5 14.5l1.8 1.8 3.4-3.6" />
+          </svg>
+        </span>
         <p class="ch-compare__label">FileFlex asks</p>
-        <p class="ch-compare__q">Should this user access this specific file?</p>
+        <p class="ch-compare__q">&ldquo;Should this user access this specific file?&rdquo;</p>
+        <p class="ch-compare__sub">Governance travels all the way to the data</p>
       </div>
     </div>
     <p class="ch-compare__note">That difference closes the access-to-data gap.</p>
