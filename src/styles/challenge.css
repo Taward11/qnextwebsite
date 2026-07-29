@@ -3,42 +3,53 @@
    Builds on the Platform creative system (platform.css):
    reuses pf-* section/eyebrow/title/btn primitives and tokens.
    Only page-specific pieces live here, prefixed ch-.
+   Hero + photo-panel treatments reuse the original challenge
+   page imagery (public/images/challenge/iStock-*.webp).
    ============================================================ */
 
-/* ---------- HERO (mirrors #pf-hero) ---------- */
+/* ---------- HERO (same layout/background as original page) ---------- */
 #ch-hero {
   position: relative;
-  padding: 140px 5vw 100px;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.25) 100%),
+    url('/images/challenge/iStock-912944126-web.webp') center/cover no-repeat;
   color: #fff;
-  background: #0E1A2B;
+  padding: clamp(110px, 14vw, 180px) 6vw clamp(90px, 12vw, 150px);
+  min-height: 560px;
+  display: flex;
+  align-items: center;
   isolation: isolate;
 }
 #ch-hero::before {
   content: '';
   position: absolute; inset: 0;
-  background:
-    radial-gradient(420px 260px at 82% 30%, rgba(232,89,10,0.22), rgba(232,89,10,0) 70%),
-    radial-gradient(600px 340px at 12% 85%, rgba(2,19,114,0.45), rgba(2,19,114,0) 70%);
-  mix-blend-mode: screen;
-  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.0) 50%);
   z-index: -1;
 }
-.ch-hero__content { max-width: 980px; margin: 0 auto; text-align: center; }
+.ch-hero__content {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
 .ch-hero__eyebrow {
   display: inline-block;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--pf-orange);
-  margin: 0 0 22px;
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+  margin: 0 0 24px;
 }
 .ch-hero__title {
-  font-size: clamp(30px, 3.9vw, 52px);
+  font-size: clamp(29px, 3.61vw, 49px);
   font-weight: 700;
-  line-height: 1.08;
+  line-height: 1.05;
   letter-spacing: -0.03em;
   margin: 0 0 14px;
+  max-width: 780px;
   color: #fff;
 }
 .ch-hero__title-sub {
@@ -51,77 +62,112 @@
   font-size: 18px;
   line-height: 1.6;
   color: #d6dce4;
-  max-width: 760px;
-  margin: 0 auto 36px;
+  max-width: 720px;
+  margin: 0 0 36px;
 }
-.ch-hero__ctas { display: inline-flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+.ch-hero__ctas { display: inline-flex; gap: 16px; flex-wrap: wrap; }
+
+/* ---------- Split panels (text/diagram thirds) ---------- */
+.ch-split {
+  display: grid;
+  align-items: center;
+  gap: 48px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.ch-split--text-left  { grid-template-columns: 1fr 2fr; }
+.ch-split--text-right { grid-template-columns: 2fr 1fr; }
+.ch-split .pf-title { margin-bottom: 18px; }
+.ch-split__copy p {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: #2a2f3a;
+  margin: 0 0 16px;
+}
 
 /* ---------- Figures ---------- */
 .ch-figure {
-  margin: 40px auto 0;
-  max-width: 940px;
+  margin: 0;
   background: #fff;
   border: 1px solid #e3e7ee;
   border-radius: 8px;
-  padding: 18px;
+  padding: 14px;
   box-shadow: 0 10px 30px rgba(14, 26, 43, 0.08);
 }
 .ch-figure img { display: block; width: 100%; height: auto; }
-.ch-figure--narrow { max-width: 620px; }
+.ch-split--text-right .ch-figure--portrait { max-width: 560px; }
+
+/* ---------- Photo panels (backgrounds from original page) ---------- */
+.ch-photo {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  isolation: isolate;
+  padding: clamp(80px, 10vw, 140px) 6vw;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+}
+.ch-photo__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.25) 100%);
+  z-index: -1;
+}
+.ch-photo__inner {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.ch-photo__copy { max-width: 640px; }
+.ch-photo .pf-eyebrow { color: var(--pf-orange); }
+.ch-photo__copy h2 {
+  font-size: clamp(23px, 2.89vw, 37px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin: 0 0 20px;
+  color: #fff;
+}
+.ch-photo__copy p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.92);
+  margin: 0 0 16px;
+}
+.ch-photo .ch-statement {
+  margin-left: 0;
+  background: rgba(255,255,255,0.06);
+  border-left-color: #ff8a3d;
+}
+.ch-photo .ch-statement p { color: #fff; margin: 0; }
+.ch-photo .ch-statement p strong { color: #ff8a3d; }
 
 /* ---------- Emphasis / pull statement ---------- */
 .ch-statement {
   max-width: 780px;
-  margin: 32px auto 0;
+  margin: 24px auto 0;
   padding: 22px 28px;
   border-left: 4px solid var(--pf-orange);
   background: #f6f8fb;
   border-radius: 4px;
 }
+.ch-split .ch-statement { margin-left: 0; padding: 16px 20px; }
 .ch-statement p {
   margin: 0;
-  font-size: clamp(17px, 1.8vw, 21px);
+  font-size: clamp(16px, 1.6vw, 20px);
   font-weight: 600;
   line-height: 1.5;
   color: #0E1A2B;
 }
 .ch-statement p strong { color: var(--pf-orange); }
 
-/* ---------- Two-column text lists ---------- */
-.ch-cols {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px 48px;
-  max-width: 900px;
-  margin: 28px auto 0;
-}
-.ch-cols ul { list-style: none; padding: 0; margin: 0; }
-.ch-cols li {
-  position: relative;
-  padding-left: 28px;
-  font-size: 15.5px;
-  line-height: 1.6;
-  color: #2a2f3a;
-  margin-bottom: 12px;
-}
-.ch-cols li::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 7px;
-  width: 10px; height: 10px;
-  border: 2px solid var(--pf-orange);
-  transform: rotate(45deg);
-}
-
 /* ---------- Capability list (With FileFlex you can) ---------- */
 .ch-caps {
   list-style: none;
   padding: 0;
-  max-width: 900px;
-  margin: 28px auto 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px 40px;
+  margin: 18px 0 0;
 }
 .ch-caps li {
   position: relative;
@@ -129,6 +175,7 @@
   font-size: 15.5px;
   line-height: 1.55;
   color: #2a2f3a;
+  margin-bottom: 12px;
 }
 .ch-caps li::before {
   content: '';
@@ -148,13 +195,13 @@
   transform: rotate(-45deg);
 }
 
-/* ---------- Question comparison ---------- */
+/* ---------- Question comparison (on photo panel) ---------- */
 .ch-compare {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 28px;
   max-width: 940px;
-  margin: 36px auto 0;
+  margin: 36px 0 0;
 }
 .ch-compare__card {
   background: #fff;
@@ -164,8 +211,8 @@
   text-align: center;
 }
 .ch-compare__card--accent {
-  border-color: rgba(232, 89, 10, 0.45);
-  box-shadow: 0 10px 30px rgba(232, 89, 10, 0.10);
+  border-color: rgba(232, 89, 10, 0.55);
+  box-shadow: 0 10px 30px rgba(232, 89, 10, 0.18);
 }
 .ch-compare__label {
   display: inline-block;
@@ -186,14 +233,20 @@
 }
 .ch-compare__note {
   max-width: 780px;
-  margin: 28px auto 0;
-  text-align: center;
-  font-size: 16.5px;
+  margin: 28px 0 0;
+  font-size: 17px;
+  font-weight: 600;
   line-height: 1.6;
-  color: #2a2f3a;
+  color: #fff;
 }
 
-@media (max-width: 860px) {
-  #ch-hero { padding: 110px 6vw 70px; }
-  .ch-cols, .ch-caps, .ch-compare { grid-template-columns: 1fr; }
+@media (max-width: 980px) {
+  .ch-split--text-left,
+  .ch-split--text-right { grid-template-columns: 1fr; gap: 32px; }
+  .ch-split--text-right .ch-split__copy { order: -1; }
+  .ch-compare { grid-template-columns: 1fr; }
+  .ch-photo__overlay { background: rgba(0,0,0,0.6); }
+}
+@media (max-width: 560px) {
+  #ch-hero { min-height: 480px; padding-top: 100px; }
 }

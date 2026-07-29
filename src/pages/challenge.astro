@@ -14,7 +14,7 @@ import '../styles/challenge.css';
 <Nav />
 
 <!-- ============================================================
-     HERO
+     HERO (layout + background from the original challenge page)
      ============================================================ -->
 <section id="ch-hero" aria-labelledby="ch-hero-heading">
   <div class="ch-hero__content">
@@ -33,148 +33,170 @@ import '../styles/challenge.css';
 </section>
 
 <!-- ============================================================
-     ENTERPRISE DATA HAS CHANGED
+     ENTERPRISE DATA HAS CHANGED — text left 1/3, diagram right 2/3
      ============================================================ -->
 <section class="pf-section pf-section--white" aria-labelledby="ch-changed-heading">
   <div class="pf-section__inner">
-    <p class="pf-eyebrow pf-eyebrow--center">Data Sprawl</p>
-    <h2 id="ch-changed-heading" class="pf-title pf-title--center">Enterprise Data Has Changed</h2>
-    <p class="pf-lede pf-lede--center pf-lede--soft">
-      Today's enterprise information is no longer stored in one place. It is distributed across
-      Windows file servers, NAS, SharePoint, cloud storage, FTP servers and employee devices.
-      At the same time, employees, customers, partners and contractors all need secure access
-      to that information.
-    </p>
-    <p class="pf-lede pf-lede--center pf-lede--soft">
-      Organizations have invested heavily in identity security, endpoint protection and Zero Trust
-      Network Access. Yet the data people actually need often remains governed by legacy
-      permissions and disconnected sharing tools.
-    </p>
-    <div class="ch-statement">
-      <p>The challenge is no longer where data is stored.<br />The challenge is <strong>how access to that data is governed.</strong></p>
+    <div class="ch-split ch-split--text-left">
+      <div class="ch-split__copy">
+        <p class="pf-eyebrow">Data Sprawl</p>
+        <h2 id="ch-changed-heading" class="pf-title">Enterprise Data Has Changed</h2>
+        <p>
+          Today's enterprise information is no longer stored in one place. It is distributed across
+          Windows file servers, NAS, SharePoint, cloud storage, FTP servers and employee devices.
+          At the same time, employees, customers, partners and contractors all need secure access
+          to that information.
+        </p>
+        <p>
+          Organizations have invested heavily in identity security, endpoint protection and Zero
+          Trust Network Access. Yet the data people actually need often remains governed by legacy
+          permissions and disconnected sharing tools.
+        </p>
+        <div class="ch-statement">
+          <p>The challenge is no longer where data is stored.<br />The challenge is <strong>how access to that data is governed.</strong></p>
+        </div>
+      </div>
+      <figure class="ch-figure">
+        <img
+          src="/images/challenge/enterprise-data-sprawl.webp"
+          alt="Enterprise Data Sprawl: employees, customers, partners and contractors all need access to enterprise data distributed across Windows file servers, NAS/SAN storage, SharePoint, Azure storage, Amazon S3, Google Cloud Storage, FTP servers and employee PCs — requiring identity verification, access control, activity logging and centralized governance."
+          width="1536" height="1024" loading="lazy" decoding="async"
+        />
+      </figure>
     </div>
-    <figure class="ch-figure">
-      <img
-        src="/images/challenge/enterprise-data-sprawl.webp"
-        alt="Enterprise Data Sprawl: employees, customers, partners and contractors all need access to enterprise data distributed across Windows file servers, NAS/SAN storage, SharePoint, Azure storage, Amazon S3, Google Cloud Storage, FTP servers and employee PCs — requiring identity verification, access control, activity logging and centralized governance."
-        width="1536" height="1024" loading="lazy" decoding="async"
-      />
-    </figure>
   </div>
 </section>
 
 <!-- ============================================================
-     THE ACCESS-TO-DATA GAP
+     THE ACCESS-TO-DATA GAP — diagram left 2/3, text right 1/3
      ============================================================ -->
 <section class="pf-section pf-section--light" aria-labelledby="ch-gap-heading">
   <div class="pf-section__inner">
-    <p class="pf-eyebrow pf-eyebrow--center">The Missing Layer</p>
-    <h2 id="ch-gap-heading" class="pf-title pf-title--center">The Access-to-Data Gap</h2>
-    <p class="pf-lede pf-lede--center pf-lede--soft">
-      Identity platforms verify who users are. ZTNA determines whether they can reach a network
-      or application. But neither necessarily governs which individual files and folders users
-      should access after they are authenticated.
-    </p>
-    <p class="pf-lede pf-lede--center pf-lede--soft">
-      As a result, organizations often grant broader access than necessary or copy information
-      into separate collaboration platforms.
-    </p>
-    <div class="ch-statement">
-      <p>Zero Trust should extend beyond the connection and <strong>all the way to the data.</strong></p>
+    <div class="ch-split ch-split--text-right">
+      <figure class="ch-figure ch-figure--portrait">
+        <img
+          src="/images/challenge/zero-trust-data-layer-gap.webp"
+          alt="The Zero Trust Data-Layer Gap: identity verifies users, device confirms the endpoint, network controls connections — but access is granted to the environment without governance at the file and folder level. Zero Trust Data Access closes the gap by controlling access to individual files and folders with least privilege, full governance and visibility."
+          width="1024" height="1536" loading="lazy" decoding="async"
+        />
+      </figure>
+      <div class="ch-split__copy">
+        <p class="pf-eyebrow">The Missing Layer</p>
+        <h2 id="ch-gap-heading" class="pf-title">The Access-to-Data Gap</h2>
+        <p>
+          Identity platforms verify who users are. ZTNA determines whether they can reach a network
+          or application. But neither necessarily governs which individual files and folders users
+          should access after they are authenticated.
+        </p>
+        <p>
+          As a result, organizations often grant broader access than necessary or copy information
+          into separate collaboration platforms.
+        </p>
+        <div class="ch-statement">
+          <p>Zero Trust should extend beyond the connection and <strong>all the way to the data.</strong></p>
+        </div>
+      </div>
     </div>
-    <figure class="ch-figure ch-figure--narrow">
-      <img
-        src="/images/challenge/zero-trust-data-layer-gap.webp"
-        alt="The Zero Trust Data-Layer Gap: identity verifies users, device confirms the endpoint, network controls connections — but access is granted to the environment without governance at the file and folder level. Zero Trust Data Access closes the gap by controlling access to individual files and folders with least privilege, full governance and visibility."
-        width="1024" height="1536" loading="lazy" decoding="async"
-      />
-    </figure>
   </div>
 </section>
 
 <!-- ============================================================
-     MOVING DATA ISN'T THE ANSWER
+     MOVING DATA ISN'T THE ANSWER — photo panel (ransomware bg)
      ============================================================ -->
-<section class="pf-section pf-section--white" aria-labelledby="ch-move-heading">
-  <div class="pf-section__inner">
-    <p class="pf-eyebrow pf-eyebrow--center">A Better Approach</p>
-    <h2 id="ch-move-heading" class="pf-title pf-title--center">Moving Data Isn't the Answer</h2>
-    <p class="pf-lede pf-lede--center pf-lede--soft">
-      Many collaboration platforms require organizations to upload, synchronize or duplicate
-      information into another repository before it can be shared. That creates additional copies
-      of sensitive information, fragmented permissions, version confusion and greater
-      administrative complexity.
-    </p>
-    <p class="pf-lede pf-lede--center pf-lede--soft">
-      A better approach is to leave information where it already resides and govern access directly.
-    </p>
-    <div class="ch-statement">
-      <p>Move <strong>governance</strong>&mdash;not data.</p>
+<section class="ch-photo" style="background-image:url('/images/challenge/iStock-911484556-web.webp');" aria-labelledby="ch-move-heading">
+  <div class="ch-photo__overlay"></div>
+  <div class="ch-photo__inner">
+    <div class="ch-photo__copy">
+      <p class="pf-eyebrow">A Better Approach</p>
+      <h2 id="ch-move-heading">Moving Data Isn't the Answer</h2>
+      <p>
+        Many collaboration platforms require organizations to upload, synchronize or duplicate
+        information into another repository before it can be shared. That creates additional copies
+        of sensitive information, fragmented permissions, version confusion and greater
+        administrative complexity.
+      </p>
+      <p>
+        A better approach is to leave information where it already resides and govern access directly.
+      </p>
+      <div class="ch-statement">
+        <p>Move <strong>governance</strong>&mdash;not data.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     WHY IT MATTERS
+     WHY IT MATTERS — photo panel (silos bg)
      ============================================================ -->
-<section class="pf-section pf-section--light" aria-labelledby="ch-why-heading">
-  <div class="pf-section__inner">
-    <p class="pf-eyebrow pf-eyebrow--center">Least Privilege</p>
-    <h2 id="ch-why-heading" class="pf-title pf-title--center">Why It Matters</h2>
-    <p class="pf-lede pf-lede--center pf-lede--soft">
-      When users receive access to more information than they need, the impact of compromised
-      credentials, insider threats and ransomware can increase dramatically. Applying
-      least-privilege access at the file and folder level helps reduce unnecessary exposure while
-      enabling secure collaboration across existing enterprise storage.
-    </p>
-    <div class="ch-statement">
-      <p>The goal is simple: give users access only to the information they need&mdash;<strong>and nothing more.</strong></p>
+<section class="ch-photo" style="background-image:url('/images/challenge/iStock-1175177391-web.webp');" aria-labelledby="ch-why-heading">
+  <div class="ch-photo__overlay"></div>
+  <div class="ch-photo__inner">
+    <div class="ch-photo__copy">
+      <p class="pf-eyebrow">Least Privilege</p>
+      <h2 id="ch-why-heading">Why It Matters</h2>
+      <p>
+        When users receive access to more information than they need, the impact of compromised
+        credentials, insider threats and ransomware can increase dramatically. Applying
+        least-privilege access at the file and folder level helps reduce unnecessary exposure while
+        enabling secure collaboration across existing enterprise storage.
+      </p>
+      <div class="ch-statement">
+        <p>The goal is simple: give users access only to the information they need&mdash;<strong>and nothing more.</strong></p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     COMPLETE YOUR ZERO TRUST ARCHITECTURE
+     COMPLETE YOUR ZERO TRUST ARCHITECTURE —
+     diagram left 2/3, text + bullets right 1/3
      ============================================================ -->
 <section class="pf-section pf-section--white" aria-labelledby="ch-arch-heading">
   <div class="pf-section__inner">
-    <p class="pf-eyebrow pf-eyebrow--center">The Missing Data Layer</p>
-    <h2 id="ch-arch-heading" class="pf-title pf-title--center">Complete Your Zero Trust Architecture</h2>
-    <p class="pf-lede pf-lede--center pf-lede--soft">
-      FileFlex Enterprise extends Zero Trust to the data layer. Instead of requiring organizations
-      to migrate or duplicate information, FileFlex applies centralized policies while data remains
-      in its original location.
-    </p>
-    <p class="pf-lede pf-lede--center pf-lede--soft"><strong>With FileFlex you can:</strong></p>
-    <ul class="ch-caps">
-      <li>Apply least-privilege access to individual files and folders</li>
-      <li>Support employees, customers, partners and contractors</li>
-      <li>Control viewing, editing, downloading and sharing</li>
-      <li>Keep data in existing storage</li>
-      <li>Centralize governance across hybrid infrastructure</li>
-      <li>Maintain complete activity logging</li>
-    </ul>
-    <p class="pf-lede pf-lede--center pf-lede--soft" style="margin-top: 28px;">
-      FileFlex complements your existing identity, endpoint and Zero Trust investments by adding
-      the missing data layer.
-    </p>
-    <figure class="ch-figure">
-      <img
-        src="/images/challenge/fileflex-architecture.webp"
-        alt="FileFlex Zero Trust Data Access architecture — move governance, not data: users on laptop, tablet and mobile connect through the FileFlex Enterprise platform (policy management, administration, activity logging, policy enforcement, sharing governance and identity integration) to storage repositories including cloud storage, SharePoint and file shares. Centralized governance; data remains in place."
-        width="1536" height="1024" loading="lazy" decoding="async"
-      />
-    </figure>
+    <div class="ch-split ch-split--text-right">
+      <figure class="ch-figure">
+        <img
+          src="/images/challenge/fileflex-architecture.webp"
+          alt="FileFlex Zero Trust Data Access architecture — move governance, not data: users on laptop, tablet and mobile connect through the FileFlex Enterprise platform (policy management, administration, activity logging, policy enforcement, sharing governance and identity integration) to storage repositories including cloud storage, SharePoint and file shares. Centralized governance; data remains in place."
+          width="1536" height="1024" loading="lazy" decoding="async"
+        />
+      </figure>
+      <div class="ch-split__copy">
+        <p class="pf-eyebrow">The Missing Data Layer</p>
+        <h2 id="ch-arch-heading" class="pf-title">Complete Your Zero Trust Architecture</h2>
+        <p>
+          FileFlex Enterprise extends Zero Trust to the data layer. Instead of requiring
+          organizations to migrate or duplicate information, FileFlex applies centralized policies
+          while data remains in its original location.
+        </p>
+        <p><strong>With FileFlex you can:</strong></p>
+        <ul class="ch-caps">
+          <li>Apply least-privilege access to individual files and folders</li>
+          <li>Support employees, customers, partners and contractors</li>
+          <li>Control viewing, editing, downloading and sharing</li>
+          <li>Keep data in existing storage</li>
+          <li>Centralize governance across hybrid infrastructure</li>
+          <li>Maintain complete activity logging</li>
+        </ul>
+        <p style="margin-top: 18px;">
+          FileFlex complements your existing identity, endpoint and Zero Trust investments by
+          adding the missing data layer.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ============================================================
-     ZERO TRUST DATA ACCESS — the question comparison
+     ZERO TRUST DATA ACCESS — photo panel (silos bg) + comparison
      ============================================================ -->
-<section class="pf-section pf-section--light" aria-labelledby="ch-ztda-heading">
-  <div class="pf-section__inner">
-    <p class="pf-eyebrow pf-eyebrow--center">The Difference</p>
-    <h2 id="ch-ztda-heading" class="pf-title pf-title--center">Zero Trust Data Access</h2>
+<section class="ch-photo" style="background-image:url('/images/challenge/iStock-1175177391-web.webp');" aria-labelledby="ch-ztda-heading">
+  <div class="ch-photo__overlay"></div>
+  <div class="ch-photo__inner">
+    <div class="ch-photo__copy">
+      <p class="pf-eyebrow">The Difference</p>
+      <h2 id="ch-ztda-heading">Zero Trust Data Access</h2>
+    </div>
     <div class="ch-compare">
       <div class="ch-compare__card">
         <p class="ch-compare__label">Traditional security asks</p>
