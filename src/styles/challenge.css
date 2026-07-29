@@ -1,416 +1,199 @@
-@import './platform.css';
-
 /* ============================================================
-   CHALLENGE PAGE — uses platform.css design system
-   Brand blue: #0080ed (the-challenge accent)
+   THE CHALLENGE — /challenge/
+   Builds on the Platform creative system (platform.css):
+   reuses pf-* section/eyebrow/title/btn primitives and tokens.
+   Only page-specific pieces live here, prefixed ch-.
    ============================================================ */
-:root {
-  --chg-blue: #0080ed;
-}
 
-/* ============================================================
-   HERO — full-bleed dark image with CTA
-   ============================================================ */
-#chg-hero {
+/* ---------- HERO (mirrors #pf-hero) ---------- */
+#ch-hero {
   position: relative;
-  background:
-    linear-gradient(90deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.25) 100%),
-    url('/images/challenge/iStock-912944126-web.webp') center/cover no-repeat;
+  padding: 140px 5vw 100px;
   color: #fff;
-  padding: clamp(110px, 14vw, 180px) 6vw clamp(90px, 12vw, 150px);
-  min-height: 560px;
-  display: flex;
-  align-items: center;
+  background: #0E1A2B;
   isolation: isolate;
 }
-.chg-hero__overlay {
+#ch-hero::before {
+  content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.0) 50%);
+  background:
+    radial-gradient(420px 260px at 82% 30%, rgba(232,89,10,0.22), rgba(232,89,10,0) 70%),
+    radial-gradient(600px 340px at 12% 85%, rgba(2,19,114,0.45), rgba(2,19,114,0) 70%);
+  mix-blend-mode: screen;
+  pointer-events: none;
   z-index: -1;
 }
-.chg-hero__inner {
-  width: 100%;
-  max-width: 1180px;
-  margin: 0 auto;
-}
-.chg-hero__eyebrow {
-  margin: 0 0 24px;
-}
-.chg-hero__eyebrow span {
+.ch-hero__content { max-width: 980px; margin: 0 auto; text-align: center; }
+.ch-hero__eyebrow {
   display: inline-block;
-  font-family: var(--pf-font-display, 'Syne', sans-serif);
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: #fff;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 2px;
-}
-#chg-hero h1 {
-  font-size: clamp(29px, 3.61vw, 49px);
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  margin: 0 0 36px;
-  max-width: 720px;
-  color: #fff;
-}
-.chg-hero__btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 26px;
-  background: #e8590a;
-  color: #fff;
-  text-decoration: none;
-  font-family: var(--pf-font-display, 'Syne', sans-serif);
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  border-radius: 6px;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-.chg-hero__btn:hover { background: #d24e07; transform: translateY(-1px); }
-.chg-hero__btn svg { flex-shrink: 0; }
-
-/* ============================================================
-   BLUE STATEMENT STRIP
-   ============================================================ */
-#chg-statement {
-  background: var(--chg-blue);
-  padding: 32px 6vw;
-}
-.chg-statement__inner {
-  max-width: 1180px;
-  margin: 0 auto;
-}
-.chg-statement__inner p {
-  margin: 0;
-  font-family: var(--pf-font-body, 'DM Sans', sans-serif);
-  font-size: clamp(16px, 1.5vw, 19px);
-  line-height: 1.5;
-  color: #fff;
-  font-weight: 400;
-}
-
-/* ============================================================
-   THE PROBLEM — Expanding Chaos two-col
-   ============================================================ */
-.chg-twocol {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 64px;
-  align-items: center;
-}
-.chg-twocol p {
-  font-size: 16px;
-  line-height: 1.65;
-  color: var(--pf-ink-soft, #51606F);
-  margin: 0 0 16px;
-}
-.chg-twocol p:last-child { margin-bottom: 0; }
-
-.chg-chaos__fig {
-  margin: 0;
-  text-align: center;
-}
-.chg-chaos__fig img {
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  display: block;
-  margin: 0 auto 22px;
-}
-.chg-chaos__fig figcaption {
-  text-align: center;
-}
-.chg-chaos__fig blockquote {
-  font-family: var(--pf-font-display, 'Syne', sans-serif);
-  font-size: clamp(18px, 1.8vw, 22px);
-  font-weight: 500;
-  font-style: italic;
-  color: var(--pf-ink, #0E1A2B);
-  line-height: 1.35;
-  margin: 0 0 8px;
-  max-width: 460px;
-  margin-inline: auto;
-}
-.chg-chaos__fig cite {
-  display: block;
-  font-family: var(--pf-font-display, 'Syne', sans-serif);
-  font-style: normal;
   font-size: 14px;
   font-weight: 600;
-  letter-spacing: 0.06em;
-  color: #e8590a;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pf-orange);
+  margin: 0 0 22px;
 }
-
-/* ============================================================
-   SPOTLIGHT SECTIONS — full-bleed image with dark overlay
-   ============================================================ */
-.chg-spot {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.ch-hero__title {
+  font-size: clamp(30px, 3.9vw, 52px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin: 0 0 14px;
   color: #fff;
-  isolation: isolate;
-  padding: clamp(80px, 10vw, 140px) 6vw;
-  min-height: 460px;
-  display: flex;
-  align-items: center;
 }
-.chg-spot__overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(90deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.25) 100%);
-  z-index: -1;
-}
-.chg-spot--right .chg-spot__overlay {
-  background: linear-gradient(270deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.25) 100%);
-}
-.chg-spot__inner {
-  width: 100%;
-  max-width: 1180px;
-  margin: 0 auto;
-}
-.chg-spot__copy {
-  max-width: 580px;
-}
-.chg-spot--right .chg-spot__copy {
-  margin-left: auto;
-}
-.chg-spot__copy h2 {
-  font-size: clamp(23px, 2.89vw, 37px);
+.ch-hero__title-sub {
+  font-size: clamp(19px, 2vw, 26px);
   font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -0.025em;
-  margin: 0 0 20px;
-  color: #fff;
+  color: var(--pf-orange);
+  margin: 0 0 26px;
 }
-.chg-spot__copy p {
-  font-size: 16px;
-  line-height: 1.65;
-  color: rgba(255,255,255,0.92);
-  margin: 0 0 16px;
+.ch-hero__lede {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #d6dce4;
+  max-width: 760px;
+  margin: 0 auto 36px;
 }
-.chg-spot__quote {
-  margin: 22px 0 0;
-  padding: 16px 20px;
-  border-left: 4px solid #ff8a3d;
-  background: rgba(255,255,255,0.06);
-  font-style: italic;
-  font-size: 16px;
-  line-height: 1.55;
-  color: #fff;
+.ch-hero__ctas { display: inline-flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+
+/* ---------- Figures ---------- */
+.ch-figure {
+  margin: 40px auto 0;
+  max-width: 940px;
+  background: #fff;
+  border: 1px solid #e3e7ee;
+  border-radius: 8px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(14, 26, 43, 0.08);
+}
+.ch-figure img { display: block; width: 100%; height: auto; }
+.ch-figure--narrow { max-width: 620px; }
+
+/* ---------- Emphasis / pull statement ---------- */
+.ch-statement {
+  max-width: 780px;
+  margin: 32px auto 0;
+  padding: 22px 28px;
+  border-left: 4px solid var(--pf-orange);
+  background: #f6f8fb;
   border-radius: 4px;
 }
-.chg-spot__list {
-  list-style: none;
-  padding: 0;
-  margin: 18px 0 0;
-}
-.chg-spot__list li {
-  position: relative;
-  padding: 6px 0 6px 22px;
-  font-size: 15.5px;
-  color: rgba(255,255,255,0.92);
-}
-.chg-spot__list li::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 14px;
-  width: 8px; height: 8px;
-  background: #ff8a3d;
-  border-radius: 50%;
-}
-
-/* Blue remediation strip after every spotlight */
-.chg-claim {
-  background: var(--chg-blue);
-  padding: 22px 6vw;
-  color: #fff;
-}
-.chg-claim p {
-  max-width: 1180px;
-  margin: 0 auto;
-  font-family: var(--pf-font-body, 'DM Sans', sans-serif);
-  font-size: clamp(15px, 1.35vw, 17px);
-  font-weight: 500;
-  line-height: 1.5;
-  color: #fff;
-}
-
-/* ============================================================
-   CURRENT SOLUTIONS — 3 cards
-   ============================================================ */
-.chg-current__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 40px;
-}
-.chg-current__card {
-  background: #fff;
-  border: 1px solid #e6e9ef;
-  border-top: 4px solid #1c398e;
-  border-radius: 10px;
-  padding: 30px 26px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.chg-current__card:nth-child(2) { border-top-color: var(--chg-blue); }
-.chg-current__card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(0,0,0,0.06); }
-.chg-current__card h3 {
-  font-family: var(--pf-font-display, 'Syne', sans-serif);
-  font-size: 20px;
+.ch-statement p {
+  margin: 0;
+  font-size: clamp(17px, 1.8vw, 21px);
   font-weight: 600;
-  margin: 0 0 14px;
-  color: var(--pf-ink, #0E1A2B);
+  line-height: 1.5;
+  color: #0E1A2B;
 }
-.chg-current__card p {
+.ch-statement p strong { color: var(--pf-orange); }
+
+/* ---------- Two-column text lists ---------- */
+.ch-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 48px;
+  max-width: 900px;
+  margin: 28px auto 0;
+}
+.ch-cols ul { list-style: none; padding: 0; margin: 0; }
+.ch-cols li {
+  position: relative;
+  padding-left: 28px;
   font-size: 15.5px;
   line-height: 1.6;
-  color: var(--pf-ink-soft, #51606F);
-  margin: 0;
+  color: #2a2f3a;
+  margin-bottom: 12px;
+}
+.ch-cols li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 7px;
+  width: 10px; height: 10px;
+  border: 2px solid var(--pf-orange);
+  transform: rotate(45deg);
 }
 
-/* ============================================================
-   ENTER FILEFLEX
-   ============================================================ */
-#chg-enter {
-  background: linear-gradient(135deg, #0b1224 0%, #1c398e 100%);
-  color: #fff;
-  padding: 90px 6vw;
+/* ---------- Capability list (With FileFlex you can) ---------- */
+.ch-caps {
+  list-style: none;
+  padding: 0;
+  max-width: 900px;
+  margin: 28px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 40px;
+}
+.ch-caps li {
+  position: relative;
+  padding-left: 34px;
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: #2a2f3a;
+}
+.ch-caps li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 1px;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: var(--pf-orange);
+}
+.ch-caps li::after {
+  content: '';
+  position: absolute;
+  left: 5px; top: 6px;
+  width: 9px; height: 5px;
+  border-left: 2.2px solid #fff;
+  border-bottom: 2.2px solid #fff;
+  transform: rotate(-45deg);
+}
+
+/* ---------- Question comparison ---------- */
+.ch-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 940px;
+  margin: 36px auto 0;
+}
+.ch-compare__card {
+  background: #fff;
+  border: 1px solid #e3e7ee;
+  border-radius: 8px;
+  padding: 32px 30px;
   text-align: center;
 }
-.chg-enter__inner { max-width: 920px; margin: 0 auto; }
-.chg-enter__eyebrow {
-  font-family: var(--pf-font-display, 'Syne', sans-serif);
-  font-size: 13px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: #ff8a3d;
-  margin: 0 0 16px;
+.ch-compare__card--accent {
+  border-color: rgba(232, 89, 10, 0.45);
+  box-shadow: 0 10px 30px rgba(232, 89, 10, 0.10);
 }
-#chg-enter h2 {
-  font-size: clamp(23px, 2.89vw, 37px);
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  margin: 0 0 22px;
-  color: #fff;
-  line-height: 1.1;
-}
-#chg-enter p {
-  font-size: 17px;
-  line-height: 1.65;
-  color: #d6deef;
-  margin: 0 auto 32px;
-  max-width: 780px;
-}
-.chg-enter__ctas {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.chg-enter__btn {
+.ch-compare__label {
   display: inline-block;
-  padding: 14px 28px;
-  background: #fff;
-  color: #1c398e;
-  text-decoration: none;
-  border-radius: 6px;
-  font-family: var(--pf-font-display, 'Syne', sans-serif);
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  transition: transform 0.2s ease, background 0.2s ease;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5a6472;
+  margin: 0 0 14px;
 }
-.chg-enter__btn:hover { transform: translateY(-1px); background: #f6f8fb; }
-.chg-enter__btn--ghost {
-  background: transparent;
-  color: #fff;
-  border: 2px solid rgba(255,255,255,0.6);
-  padding: 12px 26px;
+.ch-compare__card--accent .ch-compare__label { color: var(--pf-orange); }
+.ch-compare__q {
+  margin: 0;
+  font-size: clamp(18px, 1.9vw, 23px);
+  font-weight: 700;
+  line-height: 1.35;
+  color: #0E1A2B;
 }
-.chg-enter__btn--ghost:hover { background: rgba(255,255,255,0.12); }
+.ch-compare__note {
+  max-width: 780px;
+  margin: 28px auto 0;
+  text-align: center;
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: #2a2f3a;
+}
 
-/* ============================================================
-   REPORT CARD
-   ============================================================ */
-.chg-report__inner {
-  display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 48px;
-  align-items: center;
-  max-width: 1100px;
-}
-.chg-report__cover { margin: 0; }
-.chg-report__cover img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
-}
-#chg-report .pf-title { margin: 6px 0 8px; }
-.chg-report__by {
-  font-family: var(--pf-font-display, 'Syne', sans-serif);
-  font-size: 14px;
-  font-weight: 500;
-  color: #e8590a !important;
-  margin: 0 0 16px !important;
-  letter-spacing: 0.02em;
-}
-#chg-report p {
-  font-size: 16px;
-  line-height: 1.65;
-  color: var(--pf-ink-soft, #51606F);
-  margin: 0 0 22px;
-}
-.chg-report__ctas {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-.chg-report__btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 13px 26px;
-  background: #e8590a;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-family: var(--pf-font-display, 'Syne', sans-serif);
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-.chg-report__btn:hover { background: #d24e07; transform: translateY(-1px); }
-.chg-report__btn svg { flex-shrink: 0; }
-.chg-report__btn--ghost {
-  background: transparent;
-  color: #1c398e;
-  border: 2px solid #1c398e;
-  padding: 11px 24px;
-}
-.chg-report__btn--ghost:hover { background: #1c398e; color: #fff; }
-
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-@media (max-width: 980px) {
-  .chg-twocol,
-  .chg-current__grid,
-  .chg-report__inner { grid-template-columns: 1fr; gap: 32px; }
-  .chg-spot--right .chg-spot__copy { margin-left: 0; }
-  .chg-spot__overlay,
-  .chg-spot--right .chg-spot__overlay {
-    background: rgba(0,0,0,0.6);
-  }
-}
-@media (max-width: 560px) {
-  #chg-hero { min-height: 480px; padding-top: 100px; }
-  #chg-enter { padding: 70px 6vw; }
+@media (max-width: 860px) {
+  #ch-hero { padding: 110px 6vw 70px; }
+  .ch-cols, .ch-caps, .ch-compare { grid-template-columns: 1fr; }
 }

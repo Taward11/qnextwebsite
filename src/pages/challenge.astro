@@ -2,322 +2,202 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import '../styles/fileflex.css';
+import '../styles/platform.css';
 import '../styles/challenge.css';
 ---
 
 <Layout
-  title="The Challenge — Unstructured Data, Ransomware & the Data-Layer Gap | FileFlex Enterprise"
-  description="80% of enterprise data is unstructured. Stored across thousands of devices, clouds and domains, it has become the primary vector for ransomware and the hardest data to govern. See how FileFlex Enterprise closes the gap with Zero Trust Data Access."
+  title="The Challenge — Zero Trust Doesn't End at the Network | FileFlex Enterprise"
+  description="Most security stops before it reaches the data. FileFlex Enterprise closes the access-to-data gap by applying Zero Trust principles directly to the files and folders users access — without moving your data."
 >
 
-<Nav current="challenge" />
+<Nav />
 
 <!-- ============================================================
-     HERO — dark background image + CTA
+     HERO
      ============================================================ -->
-<section id="chg-hero" aria-labelledby="chg-hero-heading">
-  <div class="chg-hero__overlay"></div>
-  <div class="chg-hero__inner">
-    <p class="chg-hero__eyebrow"><span>THE CHALLENGE:</span></p>
-    <h1 id="chg-hero-heading">Unstructured Data is the Major Security Problem for Ransomware</h1>
-    <a class="chg-hero__btn" href="#chg-modal" aria-label="Watch Overview Video: 2 minutes 35 seconds">
-      <svg width="14" height="16" viewBox="0 0 14 16" aria-hidden="true"><path fill="currentColor" d="M0 0v16l14-8z"/></svg>
-      <span>Watch Overview Video (2:35)</span>
-    </a>
+<section id="ch-hero" aria-labelledby="ch-hero-heading">
+  <div class="ch-hero__content">
+    <p class="ch-hero__eyebrow">The Challenge</p>
+    <h1 id="ch-hero-heading" class="ch-hero__title">Zero Trust Doesn't End at the Network.</h1>
+    <p class="ch-hero__title-sub">It should extend all the way to your data.</p>
+    <p class="ch-hero__lede">
+      FileFlex Enterprise closes the access-to-data gap by applying Zero Trust principles directly
+      to the files and folders users access&mdash;without moving your data.
+    </p>
+    <div class="ch-hero__ctas">
+      <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/platform/">Explore FileFlex Enterprise &rsaquo;</a>
+      <a class="pf-btn pf-btn--lg pf-btn--uppercase pf-btn--outline" href="/demo-request/">Request a Demo &rsaquo;</a>
+    </div>
   </div>
 </section>
 
 <!-- ============================================================
-     BLUE STATEMENT STRIP
+     ENTERPRISE DATA HAS CHANGED
      ============================================================ -->
-<aside id="chg-statement" aria-label="Summary statement">
-  <div class="chg-statement__inner">
-    <p>
-      With your unstructured data stored over thousands of devices in multiple domains
-      and numerous methods of access, it has become a problem from a security,
-      productivity and data governance perspective.
+<section class="pf-section pf-section--white" aria-labelledby="ch-changed-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Data Sprawl</p>
+    <h2 id="ch-changed-heading" class="pf-title pf-title--center">Enterprise Data Has Changed</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Today's enterprise information is no longer stored in one place. It is distributed across
+      Windows file servers, NAS, SharePoint, cloud storage, FTP servers and employee devices.
+      At the same time, employees, customers, partners and contractors all need secure access
+      to that information.
     </p>
-  </div>
-</aside>
-
-<!-- ============================================================
-     THE PROBLEM — Expanding Chaos + 80% graphic
-     ============================================================ -->
-<section id="chg-chaos" class="pf-section pf-section--white" aria-labelledby="chg-chaos-heading">
-  <div class="pf-section__inner chg-twocol">
-    <div>
-      <p class="pf-eyebrow">The Problem</p>
-      <h2 id="chg-chaos-heading" class="pf-title">The Expanding Chaos of Unstructured Data</h2>
-      <p>
-        The storage infrastructure of modern organizations is incredibly complex. IDC
-        estimates that by 2025 there will be 175 zettabytes of data globally, with 80% of it
-        unstructured. Files and folders — your company data — are scattered across thousands
-        of locations: on‑premises servers, server‑attached, network‑attached and PC storage.
-      </p>
-      <p>
-        They can be cloud solutions hosted by Microsoft, Amazon or Google, or self‑hosted
-        and Microsoft‑hosted implementations of SharePoint — across multiple domains and
-        global locations.
-      </p>
-      <p>
-        As a result of this complexity, <strong>99% of IT security specialists have issues
-        governing and managing unstructured data</strong>. The massive and disparate amount
-        of unstructured data is a problem from a security, productivity and data governance
-        perspective.
-      </p>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Organizations have invested heavily in identity security, endpoint protection and Zero Trust
+      Network Access. Yet the data people actually need often remains governed by legacy
+      permissions and disconnected sharing tools.
+    </p>
+    <div class="ch-statement">
+      <p>The challenge is no longer where data is stored.<br />The challenge is <strong>how access to that data is governed.</strong></p>
     </div>
-    <figure class="chg-chaos__fig">
-      <img src="/images/challenge/80.webp" alt="Chart: 80 percent of enterprise data is unstructured" loading="lazy" decoding="async" />
-      <figcaption>
-        <blockquote>"Upward of 80% of enterprise data today is unstructured."</blockquote>
-        <cite>— Gartner</cite>
-      </figcaption>
+    <figure class="ch-figure">
+      <img
+        src="/images/challenge/enterprise-data-sprawl.webp"
+        alt="Enterprise Data Sprawl: employees, customers, partners and contractors all need access to enterprise data distributed across Windows file servers, NAS/SAN storage, SharePoint, Azure storage, Amazon S3, Google Cloud Storage, FTP servers and employee PCs — requiring identity verification, access control, activity logging and centralized governance."
+        width="1536" height="1024" loading="lazy" decoding="async"
+      />
     </figure>
   </div>
 </section>
 
 <!-- ============================================================
-     HOW FILEFLEX TRANSFORMS — mirrors /platform pf-ind grid
+     THE ACCESS-TO-DATA GAP
      ============================================================ -->
-<section id="chg-ind" class="pf-section pf-section--light" aria-labelledby="chg-ind-heading">
+<section class="pf-section pf-section--light" aria-labelledby="ch-gap-heading">
   <div class="pf-section__inner">
-    <p class="pf-eyebrow pf-eyebrow--center">Who It's For</p>
-    <h2 id="chg-ind-heading" class="pf-title pf-title--center">How FileFlex Transforms Enterprise Data Security</h2>
-    <p class="pf-lede pf-lede--center">
-      Unstructured data lives throughout a complex hybrid‑IT infrastructure — on‑premises,
-      public and private clouds, multiple domains, devices and locations. The unmanaged
-      growth, disparate silos and multiple methods of access have led to increased
-      organization‑wide exposure to ransomware.
+    <p class="pf-eyebrow pf-eyebrow--center">The Missing Layer</p>
+    <h2 id="ch-gap-heading" class="pf-title pf-title--center">The Access-to-Data Gap</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Identity platforms verify who users are. ZTNA determines whether they can reach a network
+      or application. But neither necessarily governs which individual files and folders users
+      should access after they are authenticated.
     </p>
-    <div class="pf-ind__grid">
-      <a class="pf-ind__tile" href="/healthcare/" target="_blank" rel="noopener">
-        <img src="/images/challenge/Healthcare.webp" alt="" loading="lazy" decoding="async" />
-        <h3>Healthcare</h3>
-      </a>
-      <a class="pf-ind__tile" href="/accounting-and-consulting-firm/" target="_blank" rel="noopener">
-        <img src="/images/challenge/Financial-Services.webp" alt="" loading="lazy" decoding="async" />
-        <h3>Financial Services</h3>
-      </a>
-      <a class="pf-ind__tile" href="/law-firms/" target="_blank" rel="noopener">
-        <img src="/images/challenge/law-firms.webp" alt="" loading="lazy" decoding="async" />
-        <h3>Law Firms</h3>
-      </a>
-      <a class="pf-ind__tile" href="/government-and-military-contractors-2/" target="_blank" rel="noopener">
-        <img src="/images/challenge/Govt_contr.webp" alt="" loading="lazy" decoding="async" />
-        <h3>Government &amp; Military Contractors</h3>
-      </a>
-      <a class="pf-ind__tile" href="/manufacturing/" target="_blank" rel="noopener">
-        <img src="/images/challenge/manufacturing.webp" alt="" loading="lazy" decoding="async" />
-        <h3>Manufacturing</h3>
-      </a>
-      <a class="pf-ind__tile" href="/architecture-engineering/" target="_blank" rel="noopener">
-        <img src="/images/challenge/arch-and-eng.webp" alt="" loading="lazy" decoding="async" />
-        <h3>Architecture &amp; Engineering</h3>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     SPOTLIGHT — Ransomware
-     ============================================================ -->
-<section class="chg-spot" style="background-image:url('/images/challenge/iStock-911484556-web.webp');" aria-labelledby="chg-ransom-heading">
-  <div class="chg-spot__overlay"></div>
-  <div class="chg-spot__inner">
-    <div class="chg-spot__copy">
-      <h2 id="chg-ransom-heading">Increased Vulnerability to Ransomware</h2>
-      <p>
-        According to IDC, <strong>37% of organizations have been hit with ransomware</strong>,
-        and ransomware complaints to the FBI are up 62%. Ransomware is at epidemic levels —
-        and Gartner identifies the rise of unstructured data as its primary vector, because
-        ransomware is fundamentally a data access issue. The cost isn't just payments to
-        hackers — it includes investigation, recovery, fines and credit remediation.
-      </p>
-      <blockquote class="chg-spot__quote">
-        "As ransomware continues to wreak havoc on organizations, security and risk
-        management leaders must take a <strong>data‑centric view</strong> of this
-        data‑focused threat."
-      </blockquote>
-    </div>
-  </div>
-</section>
-<aside class="chg-claim" aria-label="FileFlex remediation">
-  <p>FileFlex Enterprise reduces the risk of ransomware through security controls and a Zero Trust architecture.</p>
-</aside>
-
-<!-- ============================================================
-     SPOTLIGHT — Rogue Silos
-     ============================================================ -->
-<section class="chg-spot chg-spot--right" style="background-image:url('/images/challenge/iStock-1175177391-web.webp');" aria-labelledby="chg-silos-heading">
-  <div class="chg-spot__overlay"></div>
-  <div class="chg-spot__inner">
-    <div class="chg-spot__copy">
-      <h2 id="chg-silos-heading">Rogue Information Silos &amp; Access Solutions</h2>
-      <p>
-        Unstructured data is stored across thousands of repositories — from on‑premises
-        PCs, NAS and servers to cloud storage on Amazon, Microsoft and Google, and to
-        SharePoint. The result is thousands of silos of information and multiple methods
-        of access. Organizations lack a single solution that provides federated access
-        to these disparate silos.
-      </p>
-    </div>
-  </div>
-</section>
-<aside class="chg-claim" aria-label="FileFlex remediation">
-  <p>FileFlex Enterprise is a single solution that provides federated access to disparate silos of unstructured data.</p>
-</aside>
-
-<!-- ============================================================
-     SPOTLIGHT — Ungoverned Access
-     ============================================================ -->
-<section class="chg-spot" style="background-image:url('/images/challenge/iStock-1392442626-web.webp');" aria-labelledby="chg-gov-heading">
-  <div class="chg-spot__overlay"></div>
-  <div class="chg-spot__inner">
-    <div class="chg-spot__copy">
-      <h2 id="chg-gov-heading">Ungoverned Data Access Problems</h2>
-      <p>
-        With thousands of users accessing thousands of data silos, IT managers lack key
-        information as to who, what and when unstructured data is being accessed. It is
-        difficult to know where confidential information is stored, or to control access
-        to it.
-      </p>
-    </div>
-  </div>
-</section>
-<aside class="chg-claim" aria-label="FileFlex remediation">
-  <p>FileFlex Enterprise provides IT with a management console and real‑time activity log to govern and track remote access to unstructured data.</p>
-</aside>
-
-<!-- ============================================================
-     SPOTLIGHT — Remote Work
-     ============================================================ -->
-<section class="chg-spot chg-spot--right" style="background-image:url('/images/challenge/iStock-912944078-web.webp');" aria-labelledby="chg-remote-heading">
-  <div class="chg-spot__overlay"></div>
-  <div class="chg-spot__inner">
-    <div class="chg-spot__copy">
-      <h2 id="chg-remote-heading">Increased Headaches of Remote Work &amp; Contractors</h2>
-      <p>
-        The workforce has shifted from employees in organization‑owned facilities to a
-        distributed mix of employees, contractors and gig workers — often remote, often on
-        personal devices. They need controlled access to appropriate content on a complex
-        hybrid‑IT infrastructure without necessarily having VPN access. This paradigm shift
-        has been accelerated and magnified by the rise of work‑from‑home.
-      </p>
-      <ul class="chg-spot__list">
-        <li>On‑premises or remote</li>
-        <li>Corporate or personal computers</li>
-        <li>Mobile devices — tablets and phones</li>
-      </ul>
-    </div>
-  </div>
-</section>
-<aside class="chg-claim" aria-label="FileFlex remediation">
-  <p>FileFlex Enterprise allows IT to provide controlled, least‑privileged access to contractors and gig workers.</p>
-</aside>
-
-<!-- ============================================================
-     CURRENT SOLUTIONS — three insufficient approaches
-     ============================================================ -->
-<section id="chg-current" class="pf-section pf-section--white" aria-labelledby="chg-current-heading">
-  <div class="pf-section__inner">
-    <p class="pf-eyebrow pf-eyebrow--center">The Gap</p>
-    <h2 id="chg-current-heading" class="pf-title pf-title--center">Current Remote Access &amp; Sharing Solutions Are Insufficient</h2>
-    <p class="pf-lede pf-lede--center">
-      Multiple remote access and sharing solutions are the norm in enterprises today —
-      compounding issues in governance, security, productivity and costs.
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      As a result, organizations often grant broader access than necessary or copy information
+      into separate collaboration platforms.
     </p>
-    <div class="chg-current__grid">
-      <article class="chg-current__card">
-        <h3>VPNs</h3>
-        <p>
-          The VPN connects remote users and satellite offices to the organization's network,
-          but lacks a Zero Trust architecture, granular role‑based policy, micro‑segmentation,
-          least‑privilege access, detailed activity logs and file sharing. Widely used, VPNs
-          are a honeypot for hackers and require constant maintenance.
-        </p>
-      </article>
-      <article class="chg-current__card">
-        <h3>Enterprise File Sync &amp; Share</h3>
-        <p>
-          Built on a centralized cloud architecture where files are synced, copied or
-          duplicated to a third party — creating a fragmented, separate silo of information.
-          EFSS lacks Zero Trust security and does not access the company's infrastructure
-          or SharePoint.
-        </p>
-      </article>
-      <article class="chg-current__card">
-        <h3>ZTNA / ZTAA</h3>
-        <p>
-          Zero Trust Network Access and Application Access provide identity, micro‑segmentation
-          and least‑privilege access — but only to a network segment or application, allowing
-          access to every file and folder on that segment. They don't provide file sharing
-          or collaboration.
-        </p>
-      </article>
+    <div class="ch-statement">
+      <p>Zero Trust should extend beyond the connection and <strong>all the way to the data.</strong></p>
     </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     ENTER FILEFLEX
-     ============================================================ -->
-<section id="chg-enter" aria-labelledby="chg-enter-heading">
-  <div class="chg-enter__inner">
-    <p class="chg-enter__eyebrow">The Answer</p>
-    <h2 id="chg-enter-heading">Enter FileFlex Enterprise</h2>
-    <p>
-      FileFlex Enterprise provides the remote file access of a VPN — with a Zero Trust
-      architecture. It delivers the file‑sharing capability of EFSS — from all the storage
-      across your infrastructure, not just files synced to EFSS servers. And it complements
-      ZTNA / ZTAA by providing IT‑controlled access micro‑segmented to the file and folder
-      level, across on‑premises, cloud‑hosted and SharePoint storage.
-    </p>
-    <div class="chg-enter__ctas">
-      <a class="chg-enter__btn" href="/platform">Explore the Platform</a>
-      <a class="chg-enter__btn chg-enter__btn--ghost" href="/security">See the Security Model</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     ZTDA REPORT
-     ============================================================ -->
-<section id="chg-report" class="pf-section pf-section--white" aria-labelledby="chg-report-heading">
-  <div class="pf-section__inner chg-report__inner">
-    <figure class="chg-report__cover">
-      <img src="/images/challenge/Screen-Shot-2022-12-12-at-1.26.43-PM.webp" alt="Cover of the Understanding Zero Trust Data Access Using FileFlex report" loading="lazy" decoding="async" />
+    <figure class="ch-figure ch-figure--narrow">
+      <img
+        src="/images/challenge/zero-trust-data-layer-gap.webp"
+        alt="The Zero Trust Data-Layer Gap: identity verifies users, device confirms the endpoint, network controls connections — but access is granted to the environment without governance at the file and folder level. Zero Trust Data Access closes the gap by controlling access to individual files and folders with least privilege, full governance and visibility."
+        width="1024" height="1536" loading="lazy" decoding="async"
+      />
     </figure>
-    <div>
-      <p class="pf-eyebrow">Featured Report</p>
-      <h2 id="chg-report-heading" class="pf-title">Understanding Zero Trust Data Access Using FileFlex</h2>
-      <p class="chg-report__by">Edited by Dr. Edward Amoroso, CEO &amp; Senior Analyst, TAG Cyber</p>
-      <p>
-        This report explains how Zero Trust Data Access (ZTDA) can be implemented across
-        an enterprise — an effective means for securely sharing unstructured data and
-        enabling work‑from‑anywhere connections to enterprise applications without VPN
-        support. The publication outlines the basics of the emerging ZTDA model and the
-        creation of a secure, remote‑access infrastructure.
-      </p>
-      <div class="chg-report__ctas">
-        <a class="chg-report__btn" href="/downloads/Understanding-Zero-Trust-Data-Access-Using-FileFlex.pdf" download>
-          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0v10.5l3.5-3.5L13 8l-5 5-5-5 1.5-1L7 10.5V0h1zM0 14h16v2H0v-2z"/></svg>
-          <span>Download Free Report (PDF)</span>
-        </a>
-        <a class="chg-report__btn chg-report__btn--ghost" href="/try-fileflex/">Get FileFlex Enterprise</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     MOVING DATA ISN'T THE ANSWER
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="ch-move-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">A Better Approach</p>
+    <h2 id="ch-move-heading" class="pf-title pf-title--center">Moving Data Isn't the Answer</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      Many collaboration platforms require organizations to upload, synchronize or duplicate
+      information into another repository before it can be shared. That creates additional copies
+      of sensitive information, fragmented permissions, version confusion and greater
+      administrative complexity.
+    </p>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      A better approach is to leave information where it already resides and govern access directly.
+    </p>
+    <div class="ch-statement">
+      <p>Move <strong>governance</strong>&mdash;not data.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY IT MATTERS
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="ch-why-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">Least Privilege</p>
+    <h2 id="ch-why-heading" class="pf-title pf-title--center">Why It Matters</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      When users receive access to more information than they need, the impact of compromised
+      credentials, insider threats and ransomware can increase dramatically. Applying
+      least-privilege access at the file and folder level helps reduce unnecessary exposure while
+      enabling secure collaboration across existing enterprise storage.
+    </p>
+    <div class="ch-statement">
+      <p>The goal is simple: give users access only to the information they need&mdash;<strong>and nothing more.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     COMPLETE YOUR ZERO TRUST ARCHITECTURE
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="ch-arch-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Missing Data Layer</p>
+    <h2 id="ch-arch-heading" class="pf-title pf-title--center">Complete Your Zero Trust Architecture</h2>
+    <p class="pf-lede pf-lede--center pf-lede--soft">
+      FileFlex Enterprise extends Zero Trust to the data layer. Instead of requiring organizations
+      to migrate or duplicate information, FileFlex applies centralized policies while data remains
+      in its original location.
+    </p>
+    <p class="pf-lede pf-lede--center pf-lede--soft"><strong>With FileFlex you can:</strong></p>
+    <ul class="ch-caps">
+      <li>Apply least-privilege access to individual files and folders</li>
+      <li>Support employees, customers, partners and contractors</li>
+      <li>Control viewing, editing, downloading and sharing</li>
+      <li>Keep data in existing storage</li>
+      <li>Centralize governance across hybrid infrastructure</li>
+      <li>Maintain complete activity logging</li>
+    </ul>
+    <p class="pf-lede pf-lede--center pf-lede--soft" style="margin-top: 28px;">
+      FileFlex complements your existing identity, endpoint and Zero Trust investments by adding
+      the missing data layer.
+    </p>
+    <figure class="ch-figure">
+      <img
+        src="/images/challenge/fileflex-architecture.webp"
+        alt="FileFlex Zero Trust Data Access architecture — move governance, not data: users on laptop, tablet and mobile connect through the FileFlex Enterprise platform (policy management, administration, activity logging, policy enforcement, sharing governance and identity integration) to storage repositories including cloud storage, SharePoint and file shares. Centralized governance; data remains in place."
+        width="1536" height="1024" loading="lazy" decoding="async"
+      />
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================
+     ZERO TRUST DATA ACCESS — the question comparison
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="ch-ztda-heading">
+  <div class="pf-section__inner">
+    <p class="pf-eyebrow pf-eyebrow--center">The Difference</p>
+    <h2 id="ch-ztda-heading" class="pf-title pf-title--center">Zero Trust Data Access</h2>
+    <div class="ch-compare">
+      <div class="ch-compare__card">
+        <p class="ch-compare__label">Traditional security asks</p>
+        <p class="ch-compare__q">Can this user connect?</p>
+      </div>
+      <div class="ch-compare__card ch-compare__card--accent">
+        <p class="ch-compare__label">FileFlex asks</p>
+        <p class="ch-compare__q">Should this user access this specific file?</p>
       </div>
     </div>
+    <p class="ch-compare__note">That difference closes the access-to-data gap.</p>
   </div>
 </section>
 
 <!-- ============================================================
-     VIDEO MODAL
+     FINAL CTA
      ============================================================ -->
-<div class="pf-modal-overlay" id="chg-modal" role="dialog" aria-modal="true" aria-label="Overview video player">
-  <a class="pf-modal-backdrop" href="#!" aria-label="Close video"></a>
-  <div class="pf-modal">
-    <a class="pf-modal-close" href="#!" aria-label="Close video">&times;</a>
-    <iframe src="https://www.youtube-nocookie.com/embed/dzySf22Ssaw?rel=0&modestbranding=1" title="FileFlex Overview" loading="lazy" allow="encrypted-media" allowfullscreen></iframe>
+<section id="pf-cta" aria-labelledby="ch-cta-heading">
+  <h2 id="ch-cta-heading">Extend Zero Trust All the Way to Your Data</h2>
+  <div class="pf-cta-buttons">
+    <a class="pf-btn pf-btn--uppercase" href="/platform/">Explore FileFlex Enterprise &rsaquo;</a>
+    <a class="pf-btn pf-btn--uppercase pf-btn--outline" href="/demo-request/">Request a Demo &rsaquo;</a>
   </div>
-</div>
+</section>
 
 </Layout>
