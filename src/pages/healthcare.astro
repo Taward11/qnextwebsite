@@ -14,67 +14,266 @@ const blogs = [
     href: '/blog/hippa-compliant-file-sharing/',
   },
 ];
+
+const collabCards = [
+  {
+    title: 'Clinical Collaboration',
+    body: 'Enable physicians, nurses, specialists, laboratories, imaging centers, and administrative staff to securely access the information they need while maintaining centralized control over permissions and sharing.',
+    icon: 'stethoscope',
+  },
+  {
+    title: 'Medical Imaging and DICOM',
+    body: 'Securely access, view, and share DICOM medical images using existing DICOM viewers and imaging workflows while FileFlex governs access to the underlying data. Large diagnostic images can be securely shared without creating unnecessary copies or exposing storage systems directly to users.',
+    icon: 'scan',
+  },
+  {
+    title: 'Research Collaboration',
+    body: 'Provide researchers and authorized partners with secure access to research datasets, genomic information, medical images, and supporting documentation stored across existing repositories.',
+    icon: 'microscope',
+  },
+  {
+    title: 'External Partner Access',
+    body: 'Securely collaborate with insurers, auditors, contractors, consultants, legal counsel, and approved third parties by providing access only to the information they are authorized to use.',
+    icon: 'handshake',
+  },
+  {
+    title: 'Remote Healthcare Workforce',
+    body: 'Enable authorized employees to securely work with files stored within hospital infrastructure using Windows File Explorer and supported desktop applications while data remains within existing repositories.',
+    icon: 'laptop',
+  },
+];
+
+const whyCards = [
+  {
+    title: 'Data Stays Where It Belongs',
+    body: 'Access existing healthcare information without migrating or duplicating data.',
+    icon: 'anchor',
+  },
+  {
+    title: 'Granular Zero Trust Data Access',
+    body: 'Control access at the user, group, repository, folder, and file level.',
+    icon: 'lock',
+  },
+  {
+    title: 'Hybrid Infrastructure',
+    body: 'Govern information stored across on-premises, cloud, SharePoint, FTP, and hybrid storage environments through a single platform.',
+    icon: 'cloud',
+  },
+  {
+    title: 'Centralized Administration',
+    body: 'Manage users, policies, sharing, and activity from one administration platform.',
+    icon: 'dashboard',
+  },
+  {
+    title: 'Enterprise Scale',
+    body: 'Deploy across hospitals, healthcare systems, research organizations, and distributed healthcare networks while leveraging existing storage investments.',
+    icon: 'building',
+  },
+];
+
+const icons: Record<string, string> = {
+  stethoscope: '<path d="M5 3v6a5 5 0 0 0 10 0V3"/><path d="M10 14v3a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="12" r="2.5"/>',
+  scan: '<path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="4"/>',
+  microscope: '<path d="M6 18h8M3 22h18M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2M9 3h2v6a2 2 0 0 1-2 2V3z"/>',
+  handshake: '<path d="M11 17l-1.5-1.5M14 14l-1.5-1.5M2 9l4-4 5 5-1 1a2 2 0 0 0 3 3l1-1 5 5-4 4-2-2h-3l-6-6z"/><path d="M22 9l-4-4-3 3"/>',
+  laptop: '<rect x="4" y="4" width="16" height="11" rx="1.5"/><path d="M2 19h20"/>',
+  anchor: '<circle cx="12" cy="5" r="2.5"/><path d="M12 8v13M5 12H3a9 9 0 0 0 18 0h-2"/>',
+  lock: '<rect x="4.5" y="10" width="15" height="10.5" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1.6"/>',
+  cloud: '<path d="M17.5 19a4.5 4.5 0 0 0 .9-8.9A6 6 0 0 0 6.7 8.9 5 5 0 0 0 7 19h10.5z"/>',
+  dashboard: '<rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/>',
+  building: '<rect x="4" y="3" width="12" height="18" rx="1"/><path d="M16 9h4v12h-4M8 7h2M8 11h2M8 15h2M12 7h1M12 11h1M12 15h1M9 21v-3h3v3"/>',
+};
 ---
 
 <Layout
-  title="Healthcare — Protecting Access and Sharing of PHI with ZTDA for Windows | FileFlex"
-  description="FileFlex Enterprise uses Zero Trust Data Access to protect, access, and share unstructured medical files and DICOM images across disparate healthcare silos — in compliance with HIPAA and GDPR."
+  title="Healthcare — Zero Trust Data Access for Healthcare Information | FileFlex"
+  description="FileFlex extends Zero Trust to the data layer, giving healthcare organizations secure, policy-governed access to clinical documents, DICOM images and research data across existing storage — without moving or duplicating data."
 >
 
 <Nav />
 
 <!-- ============================================================
-     HERO
+     HERO (same background as before)
      ============================================================ -->
 <section id="hc-hero" aria-labelledby="hc-hero-heading">
   <div class="hc-hero__inner">
     <p class="hc-hero__eyebrow">HEALTHCARE</p>
     <h1 id="hc-hero-heading" class="hc-hero__title">
-      Protecting Access and Sharing of Personal Health Information with ZTDA for Windows
+      Healthcare Data Should Stay Protected&mdash;Not Locked Away
     </h1>
+    <p class="hc-hero__sub">
+      Give authorized users secure access while maintaining complete control over sensitive
+      healthcare information.
+    </p>
+    <p class="hc-hero__lede">
+      FileFlex extends Zero Trust to the data layer, enabling secure collaboration across your
+      existing storage infrastructure&mdash;without moving or duplicating your data.
+    </p>
+    <div class="hc-hero__ctas">
+      <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request a Demo &rsaquo;</a>
+    </div>
   </div>
 </section>
 
 <!-- ============================================================
-     BLUE INTRO STRIP
+     EVOLVED — graphic left ½, text right ½
      ============================================================ -->
-<section id="hc-intro" aria-label="Overview">
-  <div class="hc-intro__inner">
-    <p class="hc-intro__text">
-      Quality care means that unstructured medical files and DICOM images located in
-      multiple disparate silos often need to be accessed and shared while protecting the
-      privacy of personal health information (PHI) and in compliance with health and privacy
-      regulations such as HIPAA. Secure sharing, which can be time-limited, is subject to
-      user verification and can be micro-segmented down to file and folder level and access
-      is granted only to the least privilege needed to complete the task &mdash; all within
-      the secure framework of a ZTDA platform.
-    </p>
-    <p class="hc-intro__text">
-      See also <strong><a href="/hipaa-compliance/">HIPAA Compliant File Sharing</a>.</strong>
-    </p>
+<section class="pf-section pf-section--white" aria-labelledby="hc-evolved-heading">
+  <div class="pf-section__inner">
+    <div class="hc-split">
+      <figure class="hc-placeholder" aria-label="Graphic placeholder: The Healthcare Zero Trust Stack">
+        <span class="hc-placeholder__label">The Healthcare Zero Trust Stack</span>
+      </figure>
+      <div class="hc-split__copy">
+        <h2 id="hc-evolved-heading" class="pf-title">Healthcare Security Has Evolved. Healthcare Data Must Too.</h2>
+        <p>
+          Healthcare organizations have invested heavily in identity management, multi-factor
+          authentication (MFA), endpoint protection, Zero Trust Network Access (ZTNA), and modern
+          cybersecurity technologies. These solutions verify users and secure network connections,
+          but sensitive healthcare information often remains distributed across Windows file
+          servers, NAS systems, SharePoint, cloud storage, FTP servers, departmental repositories,
+          and medical imaging systems.
+        </p>
+        <p>
+          FileFlex Enterprise extends Zero Trust beyond identity and the network by governing
+          access directly to the data itself. Every request to access healthcare information is
+          evaluated against organizational policy before access is granted, helping IT enforce
+          least-privilege access while allowing data to remain securely within existing
+          infrastructure.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ============================================================
-     BODY — 3 image-left + text-right rows
+     EXISTING INFRASTRUCTURE — text left ½, graphic right ½
      ============================================================ -->
-<section id="fin-body" class="fin-body" aria-label="Healthcare use cases">
+<section class="pf-section pf-section--light" aria-labelledby="hc-infra-heading">
+  <div class="pf-section__inner">
+    <div class="hc-split">
+      <div class="hc-split__copy">
+        <h2 id="hc-infra-heading" class="pf-title">Secure Access Across Your Existing Healthcare Infrastructure</h2>
+        <p>
+          Healthcare information rarely resides in a single system. Clinical documents, medical
+          images, administrative records, research files, financial information, and operational
+          data are typically distributed across multiple storage platforms accumulated over many
+          years.
+        </p>
+        <p>
+          Rather than requiring organizations to migrate, synchronize, or duplicate information,
+          FileFlex provides a secure, centralized access layer across existing repositories while
+          preserving existing storage investments and workflows.
+        </p>
+        <p><strong>Supported repositories include:</strong></p>
+        <ul class="hc-list hc-list--cols">
+          <li>Windows File Servers</li>
+          <li>NAS Storage</li>
+          <li>SharePoint</li>
+          <li>Microsoft Azure Storage</li>
+          <li>Amazon S3</li>
+          <li>Google Cloud Storage</li>
+          <li>FTP Servers</li>
+          <li>Private and Hybrid Cloud Infrastructure</li>
+        </ul>
+        <p>
+          Data remains within the healthcare organization&rsquo;s own infrastructure while FileFlex
+          governs access through centralized policy enforcement.
+        </p>
+      </div>
+      <figure class="hc-placeholder" aria-label="Graphic placeholder: FileFlex Healthcare Architecture">
+        <span class="hc-placeholder__label">FileFlex Healthcare Architecture</span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECURE HEALTHCARE COLLABORATION — icon cards
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="hc-collab-heading">
+  <div class="pf-section__inner">
+    <div class="hc-section-head">
+      <h2 id="hc-collab-heading" class="pf-title">Secure Healthcare Collaboration</h2>
+      <p>
+        Healthcare professionals need immediate access to critical information without compromising
+        patient privacy or organizational security. FileFlex enables secure collaboration across
+        departments, facilities, and external organizations while maintaining centralized
+        governance and visibility.
+      </p>
+    </div>
+    <div class="hc-cards">
+      {collabCards.map((c) => (
+        <div class="hc-card">
+          <span class="hc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" set:html={icons[c.icon]} />
+          </span>
+          <h3 class="hc-card__title">{c.title}</h3>
+          <p class="hc-card__body">{c.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EVERY REQUEST GOVERNED — graphic left ½, text right ½
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="hc-governed-heading">
+  <div class="pf-section__inner">
+    <div class="hc-split">
+      <figure class="hc-placeholder" aria-label="Graphic placeholder: Every Data Access Request Is Governed">
+        <span class="hc-placeholder__label">Every Data Access Request Is Governed</span>
+      </figure>
+      <div class="hc-split__copy">
+        <h2 id="hc-governed-heading" class="pf-title">Every Data Access Request Is Governed</h2>
+        <p>Every request for healthcare information follows the same secure process.</p>
+        <ol class="hc-steps">
+          <li>User identity is authenticated through the organization&rsquo;s identity provider.</li>
+          <li>FileFlex evaluates the request against organizational access policies.</li>
+          <li>Least-privilege permissions are applied at the repository, folder, and file level.</li>
+          <li>Connector Agents securely retrieve approved content using outbound HTTPS connections.</li>
+          <li>Information is delivered securely without storing customer files on the FileFlex Server.</li>
+          <li>User activity is recorded within the FileFlex activity log, providing administrators with visibility into access and sharing activity.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     3 CASE ROWS — same layout + pictures as previous page
+     ============================================================ -->
+<section id="fin-body" class="fin-body" aria-label="Healthcare governance and security">
   <div class="fin-body__inner">
 
     <!-- Row 1 -->
     <div class="fin-block fin-row">
       <div class="fin-row__media">
-        <img src="/images/healthcare/Screen-Shot-2022-12-12-at-2.03.27-PM-865x1024.jpg" alt="Compliant communication flow protecting patient privacy" loading="lazy" decoding="async" />
+        <img src="/images/healthcare/Screen-Shot-2022-12-12-at-2.03.27-PM-865x1024.jpg" alt="Centralized governance across distributed healthcare storage" loading="lazy" decoding="async" />
       </div>
       <div class="fin-row__copy">
-        <h2 class="fin-h2">Improve Compliant Communication Flow While Protecting Patient Privacy</h2>
+        <h2 class="fin-h2">Centralized Governance Without Disrupting Existing Infrastructure</h2>
         <p class="fin-p">
-          Patient care today involves multiple unrelated health providers &ndash; the family
-          doctor, the specialist, the hospital, the clinic, labs, home care, physiotherapy,
-          pharmacy, insurance, etc. FileFlex Enterprise allows personal health information
-          (PHI) and DICOM images to be shared and accessed collaboratively and securely using
-          ZTDA. And all actions are managed by IT, in compliance with health and privacy
-          regulations such as HIPAA and GDPR.
+          FileFlex enables healthcare organizations to centrally manage access policies across
+          distributed storage environments while leaving existing infrastructure unchanged.
+        </p>
+        <p class="fin-p"><strong>Administrators can:</strong></p>
+        <ul class="hc-list">
+          <li>Control access by user or group</li>
+          <li>Apply file- and folder-level permissions</li>
+          <li>Enable view-only access</li>
+          <li>Restrict downloads where appropriate</li>
+          <li>Control uploads and editing</li>
+          <li>Govern internal and external sharing</li>
+          <li>Set expiration dates for shared content</li>
+          <li>Apply watermarking and redaction where appropriate</li>
+          <li>Export activity information to SIEM and Syslog platforms</li>
+          <li>Integrate with Microsoft Entra ID, Active Directory, LDAP, Okta, SAML, and other supported identity providers</li>
+        </ul>
+        <p class="fin-p">
+          Because FileFlex complements existing storage rather than replacing it, organizations can
+          strengthen governance without disrupting established workflows.
         </p>
       </div>
     </div>
@@ -84,21 +283,28 @@ const blogs = [
     <!-- Row 2 -->
     <div class="fin-block fin-row">
       <div class="fin-row__media">
-        <img src="/images/healthcare/Screen-Shot-2022-12-12-at-2.03.18-PM-1024x811.jpg" alt="Secure data sharing between unrelated health providers" loading="lazy" decoding="async" />
+        <img src="/images/healthcare/Screen-Shot-2022-12-12-at-2.03.18-PM-1024x811.jpg" alt="Secure healthcare infrastructure with mediated access" loading="lazy" decoding="async" />
       </div>
       <div class="fin-row__copy">
-        <h2 class="fin-h2">Secure Compliant Data Sharing Between Unrelated Health Providers</h2>
+        <h2 class="fin-h2">Designed for Secure Healthcare Infrastructure</h2>
         <p class="fin-p">
-          The location of unstructured data within the healthcare system can be incredibly
-          complex. Not only can it be located in on-premises storage, but it could be with a
-          cloud provider or on a SharePoint repository. Any of these can be used in the IT
-          ecosystems of hospitals, clinics, independent labs, independent digital imaging
-          providers, home care providers, physiotherapists, pharmacies, insurance agencies,
-          etc. all operating as separate silos of information. The Zero Trust Data Access
-          based platform of FileFlex Enterprise allows the many healthcare stakeholders
-          access to each other&rsquo;s permitted healthcare information within Windows under
-          a single-pane-of-glass where it can be accessed as if they were on a local drive,
-          regardless of the difficulties related to the disparate systems and technologies.
+          FileFlex is designed to reduce infrastructure exposure while maintaining secure access to
+          healthcare information.
+        </p>
+        <p class="fin-p">
+          Users never connect directly to storage repositories. Every request is mediated by the
+          FileFlex Policy Server before Connector Agents retrieve authorized information from
+          existing repositories.
+        </p>
+        <p class="fin-p">
+          Connector Agents remain safely behind the firewall and communicate using outbound HTTPS
+          connections, eliminating the need to expose storage systems to inbound Internet
+          connections.
+        </p>
+        <p class="fin-p">
+          The FileFlex Server never stores customer files or source-storage credentials. Healthcare
+          information remains under the organization&rsquo;s control and is encrypted in transit,
+          while the underlying storage platform continues to provide encryption at rest.
         </p>
       </div>
     </div>
@@ -108,24 +314,86 @@ const blogs = [
     <!-- Row 3 -->
     <div class="fin-block fin-row">
       <div class="fin-row__media">
-        <img src="/images/healthcare/Screen-Shot-2022-12-12-at-2.03.36-PM-1024x992.jpg" alt="IT control over remote access to PHI" loading="lazy" decoding="async" />
+        <img src="/images/healthcare/Screen-Shot-2022-12-12-at-2.03.36-PM-1024x992.jpg" alt="Policy-based access controls supporting healthcare security programs" loading="lazy" decoding="async" />
       </div>
       <div class="fin-row__copy">
-        <h2 class="fin-h2">IT Control Over Remote Access to PHI</h2>
+        <h2 class="fin-h2">Supporting Healthcare Security and Privacy Programs</h2>
         <p class="fin-p">
-          Governance and managing personal health information across disparate repository
-          types, locations, and third parties can be a major problem. FileFlex Enterprise
-          provides organizations with a management toolkit to control access to unstructured
-          data which may include personal health information. It allows them to control data
-          access, set policies, and assign access on a user-by-user or group-by-group basis
-          with storage location, folder, or even file-level granularity. They have complete
-          visibility to every action on every file or folder (including administrators)
-          &ndash; whether it is access, modification or share &ndash; and gives management
-          the ability to flag suspicious behavior.
+          Healthcare organizations face increasingly stringent privacy, security, and governance
+          requirements. FileFlex provides technical capabilities that help support healthcare
+          security programs by extending policy-based access controls directly to sensitive
+          healthcare information.
+        </p>
+        <p class="fin-p"><strong>FileFlex can help organizations implement:</strong></p>
+        <ul class="hc-list">
+          <li>Least-privilege access</li>
+          <li>Identity-based authorization</li>
+          <li>Secure external collaboration</li>
+          <li>Centralized policy enforcement</li>
+          <li>Activity logging</li>
+          <li>Secure transmission of sensitive information</li>
+          <li>Governance across hybrid storage environments</li>
+        </ul>
+        <p class="fin-p">
+          These capabilities can support broader organizational initiatives related to HIPAA,
+          HITECH, the NIST Cybersecurity Framework, NIST Zero Trust Architecture, GDPR, and other
+          healthcare privacy and security programs. Compliance ultimately depends on an
+          organization&rsquo;s overall governance, operational practices, and system configuration.
         </p>
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY HEALTHCARE ORGANIZATIONS CHOOSE FILEFLEX — icon cards
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="hc-why-heading">
+  <div class="pf-section__inner">
+    <div class="hc-section-head">
+      <h2 id="hc-why-heading" class="pf-title">Why Healthcare Organizations Choose FileFlex</h2>
+    </div>
+    <div class="hc-cards">
+      {whyCards.map((c) => (
+        <div class="hc-card">
+          <span class="hc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" set:html={icons[c.icon]} />
+          </span>
+          <h3 class="hc-card__title">{c.title}</h3>
+          <p class="hc-card__body">{c.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FUTURE / FINAL CTA
+     ============================================================ -->
+<section id="hc-future" aria-labelledby="hc-future-heading">
+  <div class="hc-future__inner">
+    <h2 id="hc-future-heading">The Future of Healthcare Security Is Data-Centric</h2>
+    <p>
+      Healthcare organizations have made tremendous progress securing identities, devices, and
+      networks. The next evolution of Zero Trust is extending those same principles directly to the
+      healthcare data that powers patient care, research, and daily operations.
+    </p>
+    <p>
+      Rather than moving sensitive information into another repository, FileFlex allows healthcare
+      organizations to govern access to data wherever it already resides. By enforcing centralized
+      policies across existing storage systems, organizations can strengthen security, simplify
+      collaboration, and reduce operational complexity without disrupting established workflows.
+    </p>
+    <p>
+      As healthcare continues its digital transformation, protecting patient information requires
+      more than secure connections&mdash;it requires intelligent governance of the data itself.
+    </p>
+    <p class="hc-future__tagline">
+      FileFlex Enterprise is the data layer of Zero Trust, helping healthcare organizations securely
+      access, collaborate on, and govern sensitive healthcare information wherever it resides.
+    </p>
+    <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request a Healthcare Demonstration &rsaquo;</a>
   </div>
 </section>
 

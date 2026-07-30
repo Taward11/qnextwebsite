@@ -1,0 +1,115 @@
+[Use the same background as the hero panel in https://fileflex.com/healthcare/]
+Healthcare
+Healthcare Data Should Stay Protected—Not Locked Away
+Give authorized users secure access while maintaining complete control over sensitive healthcare information.
+FileFlex extends Zero Trust to the data layer, enabling secure collaboration across your existing storage infrastructure—without moving or duplicating your data.
+Request a Demo
+________________________________________
+[Text right ½ and graphic on left ½]
+Healthcare Security Has Evolved. Healthcare Data Must Too.
+Healthcare organizations have invested heavily in identity management, multi-factor authentication (MFA), endpoint protection, Zero Trust Network Access (ZTNA), and modern cybersecurity technologies. These solutions verify users and secure network connections, but sensitive healthcare information often remains distributed across Windows file servers, NAS systems, SharePoint, cloud storage, FTP servers, departmental repositories, and medical imaging systems.
+FileFlex Enterprise extends Zero Trust beyond identity and the network by governing access directly to the data itself. Every request to access healthcare information is evaluated against organizational policy before access is granted, helping IT enforce least-privilege access while allowing data to remain securely within existing infrastructure.
+[Graphic Placeholder — The Healthcare Zero Trust Stack]
+________________________________________
+[Text left ½ and graphic on right ½]
+
+Secure Access Across Your Existing Healthcare Infrastructure
+Healthcare information rarely resides in a single system. Clinical documents, medical images, administrative records, research files, financial information, and operational data are typically distributed across multiple storage platforms accumulated over many years.
+Rather than requiring organizations to migrate, synchronize, or duplicate information, FileFlex provides a secure, centralized access layer across existing repositories while preserving existing storage investments and workflows.
+Supported repositories include:
+•	Windows File Servers
+•	NAS Storage
+•	SharePoint
+•	Microsoft Azure Storage
+•	Amazon S3
+•	Google Cloud Storage
+•	FTP Servers
+•	Private and Hybrid Cloud Infrastructure
+Data remains within the healthcare organization's own infrastructure while FileFlex governs access through centralized policy enforcement.
+[Graphic Placeholder — FileFlex Healthcare Architecture]
+________________________________________
+[make as cards with photo icons]
+Secure Healthcare Collaboration
+Healthcare professionals need immediate access to critical information without compromising patient privacy or organizational security. FileFlex enables secure collaboration across departments, facilities, and external organizations while maintaining centralized governance and visibility.
+Clinical Collaboration
+Enable physicians, nurses, specialists, laboratories, imaging centers, and administrative staff to securely access the information they need while maintaining centralized control over permissions and sharing.
+Medical Imaging and DICOM
+Securely access, view, and share DICOM medical images using existing DICOM viewers and imaging workflows while FileFlex governs access to the underlying data. Large diagnostic images can be securely shared without creating unnecessary copies or exposing storage systems directly to users.
+Research Collaboration
+Provide researchers and authorized partners with secure access to research datasets, genomic information, medical images, and supporting documentation stored across existing repositories.
+External Partner Access
+Securely collaborate with insurers, auditors, contractors, consultants, legal counsel, and approved third parties by providing access only to the information they are authorized to use.
+Remote Healthcare Workforce
+Enable authorized employees to securely work with files stored within hospital infrastructure using Windows File Explorer and supported desktop applications while data remains within existing repositories.
+________________________________________
+[Text right ½ and graphic on left ½]
+Every Data Access Request Is Governed
+Every request for healthcare information follows the same secure process.
+1.	User identity is authenticated through the organization's identity provider.
+2.	FileFlex evaluates the request against organizational access policies.
+3.	Least-privilege permissions are applied at the repository, folder, and file level.
+4.	Connector Agents securely retrieve approved content using outbound HTTPS connections.
+5.	Information is delivered securely without storing customer files on the FileFlex Server.
+6.	User activity is recorded within the FileFlex activity log, providing administrators with visibility into access and sharing activity.
+[Graphic Placeholder — Every Data Access Request Is Governed]
+________________________________________
+[use the same layout and picture as the ‘Improve Compliant Communication Flow While Protecting Patient Privacy’ panel on the current https://fileflex.com/healthcare/]
+Centralized Governance Without Disrupting Existing Infrastructure
+FileFlex enables healthcare organizations to centrally manage access policies across distributed storage environments while leaving existing infrastructure unchanged.
+Administrators can:
+•	Control access by user or group
+•	Apply file- and folder-level permissions
+•	Enable view-only access
+•	Restrict downloads where appropriate
+•	Control uploads and editing
+•	Govern internal and external sharing
+•	Set expiration dates for shared content
+•	Apply watermarking and redaction where appropriate
+•	Export activity information to SIEM and Syslog platforms
+•	Integrate with Microsoft Entra ID, Active Directory, LDAP, Okta, SAML, and other supported identity providers
+Because FileFlex complements existing storage rather than replacing it, organizations can strengthen governance without disrupting established workflows.
+________________________________________
+[use the same layout and picture as the ‘Secure Compliant Data Sharing Between Unrelated Health Providers’ panel on the current https://fileflex.com/healthcare/]
+
+Designed for Secure Healthcare Infrastructure
+FileFlex is designed to reduce infrastructure exposure while maintaining secure access to healthcare information.
+Users never connect directly to storage repositories. Every request is mediated by the FileFlex Policy Server before Connector Agents retrieve authorized information from existing repositories.
+Connector Agents remain safely behind the firewall and communicate using outbound HTTPS connections, eliminating the need to expose storage systems to inbound Internet connections.
+The FileFlex Server never stores customer files or source-storage credentials. Healthcare information remains under the organization's control and is encrypted in transit, while the underlying storage platform continues to provide encryption at rest.
+________________________________________
+[use the same layout and picture as the ‘IT Control Over Remote Access to PHI’ panel on the current https://fileflex.com/healthcare/]
+
+Supporting Healthcare Security and Privacy Programs
+Healthcare organizations face increasingly stringent privacy, security, and governance requirements. FileFlex provides technical capabilities that help support healthcare security programs by extending policy-based access controls directly to sensitive healthcare information.
+FileFlex can help organizations implement:
+•	Least-privilege access
+•	Identity-based authorization
+•	Secure external collaboration
+•	Centralized policy enforcement
+•	Activity logging
+•	Secure transmission of sensitive information
+•	Governance across hybrid storage environments
+These capabilities can support broader organizational initiatives related to HIPAA, HITECH, the NIST Cybersecurity Framework, NIST Zero Trust Architecture, GDPR, and other healthcare privacy and security programs. Compliance ultimately depends on an organization's overall governance, operational practices, and system configuration.
+________________________________________
+[make as cards with photo icons]
+
+Why Healthcare Organizations Choose FileFlex
+Data Stays Where It Belongs
+Access existing healthcare information without migrating or duplicating data.
+Granular Zero Trust Data Access
+Control access at the user, group, repository, folder, and file level.
+Hybrid Infrastructure
+Govern information stored across on-premises, cloud, SharePoint, FTP, and hybrid storage environments through a single platform.
+Centralized Administration
+Manage users, policies, sharing, and activity from one administration platform.
+Enterprise Scale
+Deploy across hospitals, healthcare systems, research organizations, and distributed healthcare networks while leveraging existing storage investments.
+________________________________________
+The Future of Healthcare Security Is Data-Centric
+Healthcare organizations have made tremendous progress securing identities, devices, and networks. The next evolution of Zero Trust is extending those same principles directly to the healthcare data that powers patient care, research, and daily operations.
+Rather than moving sensitive information into another repository, FileFlex allows healthcare organizations to govern access to data wherever it already resides. By enforcing centralized policies across existing storage systems, organizations can strengthen security, simplify collaboration, and reduce operational complexity without disrupting established workflows.
+As healthcare continues its digital transformation, protecting patient information requires more than secure connections—it requires intelligent governance of the data itself.
+FileFlex Enterprise is the data layer of Zero Trust, helping healthcare organizations securely access, collaborate on, and govern sensitive healthcare information wherever it resides.
+Request a Healthcare Demonstration
+
+[keep the link to ‘Check Out This Related Blog’ that is on the current page after the CTA]
