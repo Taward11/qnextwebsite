@@ -89,28 +89,18 @@
   margin: 0 0 16px;
 }
 
-/* ---------- Graphic placeholders (swap for real graphics later) ---------- */
-.hc-placeholder {
+/* ---------- Diagram figures ---------- */
+.hc-figure {
   margin: 0;
-  min-height: 380px;
-  border: 2px dashed #b9c3d0;
+  background: #fff;
+  border: 1px solid #e3e7ee;
   border-radius: 10px;
-  background:
-    linear-gradient(135deg, #f3f6fa 25%, #eaeff6 25%, #eaeff6 50%, #f3f6fa 50%, #f3f6fa 75%, #eaeff6 75%);
-  background-size: 28px 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 32px;
+  padding: 14px;
+  box-shadow: 0 10px 30px rgba(14, 26, 43, 0.08);
+  max-width: 520px;
+  justify-self: center;
 }
-.hc-placeholder__label {
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #7a8595;
-  text-align: center;
-}
+.hc-figure img { display: block; width: 100%; height: auto; }
 
 /* ---------- Bullet lists ---------- */
 .hc-list {
@@ -265,7 +255,7 @@
 
 @media (max-width: 900px) {
   .hc-split { grid-template-columns: 1fr; gap: 32px; }
-  .hc-split .hc-placeholder { order: 1; min-height: 260px; }
+  .hc-split .hc-figure { order: 1; }
   .hc-list--cols { columns: 1; }
 }
 @media (max-width: 760px) {
