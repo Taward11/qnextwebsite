@@ -90,6 +90,8 @@
 }
 /* Zero Trust section — copy 1/3, tall graphic 2/3 */
 .mfg-split--narrow-copy { grid-template-columns: 1fr 2fr; }
+/* Larger photo column (e.g. IP panel) */
+.mfg-split--photo-lg { grid-template-columns: 6fr 5fr; gap: 48px; }
 
 /* ---------- Figures & photos ---------- */
 .mfg-figure {
