@@ -10,22 +10,32 @@ const lifecycleCards = [
   {
     title: 'Engineering & Product Development',
     body: 'Provide secure access to CAD drawings, product specifications, engineering documentation, and large design files while maintaining centralized governance.',
+    img: '/images/manufacturing/card-engineering.webp',
+    alt: 'Engineer reviewing a 3D CAD model at a dual-monitor workstation',
   },
   {
     title: 'Supplier Collaboration',
     body: 'Share only the information suppliers require for a specific project without exposing internal file systems or unrelated engineering data.',
+    img: '/images/manufacturing/card-supplier.webp',
+    alt: 'Two professionals reviewing component specifications on a tablet in a parts warehouse',
   },
   {
     title: 'Contractors & Field Service',
     body: 'Provide temporary, controlled access to technical documentation, maintenance manuals, and operational procedures for contractors and field personnel.',
+    img: '/images/manufacturing/card-contractor.webp',
+    alt: 'Field service contractor consulting documentation on a rugged tablet beside industrial machinery',
   },
   {
     title: 'Procurement & RFQs',
     body: 'Securely exchange specifications, drawings, and supporting documentation with vendors throughout procurement and quotation processes.',
+    img: '/images/manufacturing/card-procurement.webp',
+    alt: 'Buyer and vendor reviewing technical drawings and quotation documents at a desk',
   },
   {
     title: 'Quality & Compliance',
     body: 'Govern access to quality documentation, certifications, inspection records, and manufacturing procedures while maintaining complete activity visibility.',
+    img: '/images/manufacturing/card-quality.webp',
+    alt: 'Quality inspector measuring a precision machined part with digital calipers',
   },
 ];
 
@@ -141,11 +151,16 @@ const blogs = [
         width="1800" height="1034" loading="lazy" decoding="async"
       />
     </figure>
-    <div class="mfg-cards mfg-cards--lifecycle">
+    <div id="mfg-lifecycle-cards" class="mfg-cards mfg-cards--lifecycle">
       {lifecycleCards.map((c) => (
-        <div class="mfg-card">
-          <h3 class="mfg-card__title">{c.title}</h3>
-          <p class="mfg-card__body">{c.body}</p>
+        <div class="mfg-card mfg-card--photo">
+          <div class="mfg-card__media">
+            <img src={c.img} alt={c.alt} width="800" height="480" loading="lazy" decoding="async" />
+          </div>
+          <div class="mfg-card__content">
+            <h3 class="mfg-card__title">{c.title}</h3>
+            <p class="mfg-card__body">{c.body}</p>
+          </div>
         </div>
       ))}
     </div>

@@ -200,6 +200,41 @@
   color: #3b4250;
   margin: 0;
 }
+/* Photo-topped lifecycle cards */
+.mfg-card--photo {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.mfg-card--photo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(14, 26, 43, 0.12);
+}
+.mfg-card__media {
+  position: relative;
+  aspect-ratio: 5 / 3;
+  overflow: hidden;
+}
+.mfg-card__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14, 26, 43, 0.08) 0%, rgba(14, 26, 43, 0) 45%);
+}
+.mfg-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mfg-card__content {
+  padding: 24px 26px 28px;
+  border-top: 3px solid var(--pf-orange, #e8590a);
+}
+.mfg-card--photo .mfg-card__title { font-size: 17px; }
+
 .mfg-card--why .mfg-card__title {
   font-size: 16px;
   margin: 0;
