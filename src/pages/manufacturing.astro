@@ -6,33 +6,50 @@ import '../styles/platform.css';
 import '../styles/financial.css';
 import '../styles/manufacturing.css';
 
-const rows = [
+const lifecycleCards = [
   {
-    title: 'Protect Intellectual Property',
-    img: '/images/manufacturing/Screen-Shot-2022-12-12-at-2.03.27-PM-865x1024.jpg',
-    body: `The Zero Trust Data Access technology of FileFlex Enterprise is the perfect tool to control remote access and sharing of the highly confidential specifications that manufacturers need to supply potential third-party contractors in the RFQ process. It allows them to control who can access confidential files, and also allows them the ability to restrict sharing and downloading and provides an audit log of every touch to this sensitive information.`,
+    title: 'Engineering & Product Development',
+    body: 'Provide secure access to CAD drawings, product specifications, engineering documentation, and large design files while maintaining centralized governance.',
   },
   {
-    title: 'Federate Disparate Silos and Connect to Content Wherever It Is Stored',
-    img: '/images/manufacturing/Screen-Shot-2022-12-12-at-2.03.18-PM-1024x811.jpg',
-    body: `Manufacturers store critical information in many different locations. Some may be on the FTP server, some on a local NAS, some on a cloud server and some on the corporate SharePoint. And the information could be spread across multiple domains. FileFlex Enterprise federates all the relevant locations together in a single-pane-of-glass in Windows.`,
+    title: 'Supplier Collaboration',
+    body: 'Share only the information suppliers require for a specific project without exposing internal file systems or unrelated engineering data.',
   },
   {
-    title: 'Access Needs to be Simplified',
-    img: '/images/manufacturing/Screen-Shot-2022-12-12-at-2.03.36-PM-1024x992.jpg',
-    body: `Critical information is created by your engineers and project managers, but needs to be found, accessed and used by front-line skilled trades who may be less tech-savvy. You don’t want to have to train them on how to use multiple apps to access these multiple technologies. When critical information is accessed as though it was on a local drive from within Windows, no training is required. Your workforce uses their normal workflow to get the information they need, when they need it, and in a manner that they are already familiar with.`,
+    title: 'Contractors & Field Service',
+    body: 'Provide temporary, controlled access to technical documentation, maintenance manuals, and operational procedures for contractors and field personnel.',
   },
   {
-    title: 'Avoid Shadow IT',
-    img: '/images/manufacturing/Screen-Shot-2022-12-12-at-2.03.36-PM-1024x992.jpg',
-    body: `Engineering diagrams, blueprints, manuals and instruction documents can be incredibly complex and enormous. Since sharing and accessing these files can be cumbersome, employees will be tempted to use easier and less secure alternatives that are not under the control of your IT department. FileFlex Enterprise allows access and controlled sharing of very large files from within Windows – no separate app required.\n\nSharing of confidential information can be tracked and controlled by either the user or IT. Files can be shared with ‘View Only’ permission where downloading is not permitted, sharing can be prohibited altogether and access restricted to authorized personnel or full sharing permissions can be granted that allow recipients to download and edit. All activities are tracked and logged. Users will not need to use their own alternatives.`,
+    title: 'Procurement & RFQs',
+    body: 'Securely exchange specifications, drawings, and supporting documentation with vendors throughout procurement and quotation processes.',
   },
   {
-    title: 'Replace Reliance on VPN Connections with their Slow Upload and Download Speeds',
-    img: '/images/manufacturing/Screen-Shot-2022-12-12-at-2.03.36-PM-1024x992.jpg',
-    body: `Traditionally your skilled labor workforce and contractor must download job-related CAD files and open them with a local copy of the CAD software over a VPN. Due to the large size of these files, this can be a slow and expensive process. FileFlex Enterprise provides access to files from their source locations over the network or the Internet without the need for a VPN.`,
+    title: 'Quality & Compliance',
+    body: 'Govern access to quality documentation, certifications, inspection records, and manufacturing procedures while maintaining complete activity visibility.',
   },
 ];
+
+const whyCards = [
+  { title: 'Protect intellectual property without moving data', icon: 'shield' },
+  { title: 'Secure collaboration across suppliers and contractors', icon: 'handshake' },
+  { title: 'Govern access at the file and folder level', icon: 'folder' },
+  { title: 'Preserve existing storage infrastructure', icon: 'server' },
+  { title: 'Simplify engineering workflows', icon: 'compass' },
+  { title: 'Reduce reliance on broad network access', icon: 'network' },
+  { title: 'Centralize policy management while enabling delegated administration', icon: 'sitemap' },
+  { title: 'Extend Zero Trust directly to manufacturing data', icon: 'lock' },
+];
+
+const icons: Record<string, string> = {
+  shield: '<path d="M12 3l7 3v5c0 4.6-3 8.6-7 10-4-1.4-7-5.4-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/>',
+  handshake: '<path d="M11 17l-1.5-1.5M14 14l-1.5-1.5M2 9l4-4 5 5-1 1a2 2 0 0 0 3 3l1-1 5 5-4 4-2-2h-3l-6-6z"/><path d="M22 9l-4-4-3 3"/>',
+  folder: '<path d="M3 6a2 2 0 0 1 2-2h4l2 2.5h8a2 2 0 0 1 2 2V18a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z"/><path d="M8 14l2 2 4-4"/>',
+  server: '<rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/><path d="M7 7.5h.01M7 16.5h.01"/>',
+  compass: '<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/>',
+  network: '<circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5V13M12 13l-5.2 4M12 13l5.2 4"/>',
+  sitemap: '<rect x="8.5" y="3" width="7" height="5" rx="1"/><rect x="2" y="16" width="7" height="5" rx="1"/><rect x="15" y="16" width="7" height="5" rx="1"/><path d="M12 8v4M5.5 16v-2.5h13V16"/>',
+  lock: '<rect x="4.5" y="10" width="15" height="10.5" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1.6"/>',
+};
 
 const blogs = [
   { title: 'Why Zero Trust Network Access Combined with Zero Trust Data Access Could Have Prevented the Tesla Breach', blurb: 'Zero Trust Network Access (ZTNA) combined with Zero Trust Data Access (ZTDA) enhances security at both the network and data levels, significantly […]', img: '/images/manufacturing/Virus-Scanning-1-e1721058001688-400x300.jpg', href: '/blog/why-zero-trust-network-access-combined-with-zero-trust-data-access-could-have-prevented-the-tesla-breach/' },
@@ -44,35 +61,333 @@ const blogs = [
 ];
 ---
 
-<Layout title="Manufacturing — Protect Your IP with Zero Trust Data Access | FileFlex" description="FileFlex Enterprise lets manufacturers federate disparate silos, protect IP, avoid shadow IT and replace slow VPNs — all from within Windows using Zero Trust Data Access.">
+<Layout
+  title="Manufacturing — Secure Manufacturing Data Across the Extended Enterprise | FileFlex"
+  description="FileFlex Enterprise extends Zero Trust Data Access to manufacturing data — protecting engineering files, IP and operational information while enabling secure collaboration across employees, plants, suppliers, contractors and partners."
+>
+
 <Nav />
 
+<!-- ============================================================
+     HERO — bg image, copy on left half
+     ============================================================ -->
 <section id="mfg-hero" aria-labelledby="mfg-hero-heading">
   <div class="mfg-hero__inner">
     <p class="mfg-hero__eyebrow">MANUFACTURING</p>
-    <h1 id="mfg-hero-heading" class="mfg-hero__title">Protect Your IP</h1>
+    <h1 id="mfg-hero-heading" class="mfg-hero__title">
+      Secure Manufacturing Data Across the Extended Enterprise
+    </h1>
+    <p class="mfg-hero__sub">
+      Protect engineering files, intellectual property, and operational information while enabling
+      secure collaboration across employees, plants, suppliers, contractors, and partners.
+    </p>
+    <p class="mfg-hero__lede">
+      Manufacturers depend on the secure exchange of engineering drawings, CAD files, technical
+      documentation, production records, quality documentation, and supplier information. Yet this
+      data is often distributed across file servers, NAS devices, SharePoint, FTP servers, cloud
+      storage, and multiple production facilities.
+    </p>
+    <p class="mfg-hero__lede">
+      FileFlex Enterprise extends Zero Trust Data Access directly to manufacturing
+      data&mdash;allowing organizations to govern access wherever information already resides,
+      without migrating files or replacing existing infrastructure.
+    </p>
+    <div class="mfg-hero__ctas">
+      <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request a Manufacturing Demonstration &rsaquo;</a>
+    </div>
   </div>
 </section>
 
-<section id="fin-body" class="fin-body" aria-label="Manufacturing use cases">
-  <div class="fin-body__inner">
-    {rows.map((r, i) => (
-      <>
-        <div class="fin-block fin-row">
-          <div class="fin-row__media">
-            <img src={r.img} alt={r.title} loading="lazy" decoding="async" />
-          </div>
-          <div class="fin-row__copy">
-            <h2 class="fin-h2">{r.title}</h2>
-            {r.body.split('\n\n').map((para) => <p class="fin-p">{para}</p>)}
-          </div>
+<!-- ============================================================
+     IP — Secure Manufacturing Collaboration photo + copy
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="mfg-ip-heading">
+  <div class="pf-section__inner">
+    <div class="mfg-split">
+      <figure class="mfg-photo">
+        <img
+          src="/images/manufacturing/man-using-computer-manufacturing.webp"
+          alt="Engineer reviewing manufacturing data on a computer in a production facility — secure manufacturing collaboration"
+          width="1200" height="800" loading="lazy" decoding="async"
+        />
+      </figure>
+      <div class="mfg-split__copy">
+        <h2 id="mfg-ip-heading" class="pf-title">Manufacturing&rsquo;s Greatest Asset Is Its Intellectual Property</h2>
+        <p>For manufacturers, competitive advantage is built on intellectual property.</p>
+        <ul class="mfg-list mfg-list--cols">
+          <li>Product designs</li>
+          <li>Engineering drawings</li>
+          <li>Bills of materials</li>
+          <li>Manufacturing processes</li>
+          <li>Quality documentation</li>
+          <li>Supplier specifications</li>
+        </ul>
+        <p>
+          The challenge isn&rsquo;t simply providing access to this information&mdash;it is
+          governing who can access it, under what conditions, and maintaining visibility into every
+          access request across an increasingly distributed workforce and supply chain.
+        </p>
+        <p>
+          FileFlex Enterprise enables manufacturers to securely collaborate without exposing their
+          underlying storage infrastructure or creating additional copies of sensitive information.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LIFECYCLE — ecosystem diagram + 5 cards
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="mfg-lifecycle-heading">
+  <div class="pf-section__inner">
+    <div class="mfg-section-head">
+      <h2 id="mfg-lifecycle-heading" class="pf-title">Secure Collaboration Across the Manufacturing Lifecycle</h2>
+      <p>Manufacturing organizations collaborate continuously across multiple internal and external teams.</p>
+    </div>
+    <figure class="mfg-figure mfg-figure--wide">
+      <img
+        src="/images/manufacturing/manufacturing-collaboration-ecosystem.webp"
+        alt="Manufacturing Collaboration Ecosystem — FileFlex Enterprise Zero Trust Data Access at the center, securely connecting Engineering (designs, CAD files, specifications), Production (production plans, work instructions), Quality (quality records, inspections, certifications), Maintenance (manuals, equipment docs, service records), Procurement (RFQs, supplier quotes, contracts), Suppliers (drawings, specs, project documents) and Contractors (project files, manuals, operational procedures); manufacturing data assets include CAD files and drawings, technical documents, bills of materials, production plans, quality records, RFQs and contracts, and maintenance manuals."
+        width="1800" height="1200" loading="lazy" decoding="async"
+      />
+    </figure>
+    <div class="mfg-cards mfg-cards--lifecycle">
+      {lifecycleCards.map((c) => (
+        <div class="mfg-card">
+          <h3 class="mfg-card__title">{c.title}</h3>
+          <p class="mfg-card__body">{c.body}</p>
         </div>
-        {i < rows.length - 1 && <hr class="fin-sep" />}
-      </>
-    ))}
+      ))}
+    </div>
   </div>
 </section>
 
+<!-- ============================================================
+     MOVE GOVERNANCE, NOT DATA — infographic + copy
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="mfg-governance-heading">
+  <div class="pf-section__inner">
+    <div class="mfg-split">
+      <div class="mfg-split__copy">
+        <h2 id="mfg-governance-heading" class="pf-title">Move Governance, Not Data</h2>
+        <p>
+          Traditional collaboration platforms often require organizations to upload, synchronize, or
+          migrate files into another repository before they can be shared.
+        </p>
+        <p><strong>FileFlex works differently.</strong></p>
+        <p>
+          Manufacturing data remains exactly where it already resides while FileFlex overlays
+          centralized governance across existing storage systems.
+        </p>
+        <p>
+          Organizations avoid costly migration projects while maintaining existing workflows and
+          preserving previous infrastructure investments.
+        </p>
+      </div>
+      <figure class="mfg-figure">
+        <img
+          src="/images/manufacturing/secure-manufacturing-data-without-infrastructure-change.webp"
+          alt="Secure Manufacturing Data Without Infrastructure Change — employees, engineers, plants, suppliers and contractors connect through FileFlex Enterprise Zero Trust Data Access (verify identity, evaluate policy, govern access, record activity) to existing storage: Windows servers, NAS/SAN storage, SharePoint, FTP servers, Microsoft Azure, Amazon S3, Google Cloud Storage and other cloud storage; your data stays where it is."
+          width="1800" height="1200" loading="lazy" decoding="async"
+        />
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CENTRALIZED CONTROL / DECENTRALIZED ENFORCEMENT
+     diagram + text 2/3 left, bullets 1/3 right
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="mfg-control-heading">
+  <div class="pf-section__inner">
+    <div class="mfg-section-head">
+      <h2 id="mfg-control-heading" class="pf-title">Centralized Control. Decentralized Enforcement.</h2>
+    </div>
+    <figure class="mfg-figure mfg-figure--wide">
+      <img
+        src="/images/manufacturing/centralized-control-decentralized-enforcement.webp"
+        alt="Centralized Control, Decentralized Enforcement — corporate IT manages centralized policies, enterprise visibility, activity logging, user and group management, and data governance through FileFlex Enterprise Zero Trust Data Access; Plant A, Plant B, regional offices, suppliers and contractor partners each run local administrators and outbound-only FileFlex Connector Agents over their existing storage, so files stay in place while policies stay consistent."
+        width="1800" height="1200" loading="lazy" decoding="async"
+      />
+    </figure>
+    <div class="mfg-control">
+      <div class="mfg-control__copy">
+        <p>
+          Modern manufacturers operate across distributed teams, facilities, suppliers, and
+          partners, creating a need for centralized governance without limiting local operational
+          control. FileFlex Enterprise combines centralized policy and visibility with delegated
+          administration and local enforcement, enabling secure collaboration across complex
+          manufacturing environments while data remains in its existing location.
+        </p>
+      </div>
+      <div class="mfg-control__lists">
+        <h3 class="mfg-control__subhead">Centralized Governance</h3>
+        <ul class="mfg-list">
+          <li>Enterprise-wide policy management</li>
+          <li>Organization-wide visibility</li>
+          <li>Centralized activity logging</li>
+          <li>Consistent Zero Trust Data Access policies</li>
+          <li>Secure collaboration across the supply chain</li>
+        </ul>
+        <h3 class="mfg-control__subhead">Delegated Administration</h3>
+        <ul class="mfg-list">
+          <li>Independent administration for plants and business units</li>
+          <li>Local control of users and repositories</li>
+          <li>Granular file and folder permissions</li>
+          <li>Secure supplier collaboration</li>
+          <li>Operational autonomy within enterprise governance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EXISTING INFRASTRUCTURE — text left ½, shop floor photo right ½
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="mfg-infra-heading">
+  <div class="pf-section__inner">
+    <div class="mfg-split">
+      <div class="mfg-split__copy">
+        <h2 id="mfg-infra-heading" class="pf-title">Built for Existing Manufacturing Infrastructure</h2>
+        <p>Manufacturing information rarely exists in one location.</p>
+        <p><strong>FileFlex provides governed access across:</strong></p>
+        <ul class="mfg-list mfg-list--cols">
+          <li>Windows File Servers</li>
+          <li>NAS, SAN, and Direct-Attached Storage</li>
+          <li>SharePoint</li>
+          <li>FTP Servers</li>
+          <li>Microsoft Azure Storage</li>
+          <li>Amazon S3</li>
+          <li>Google Cloud Storage</li>
+          <li>Dropbox, Box, Google Drive, and OneDrive</li>
+          <li>Private and Hybrid Infrastructure</li>
+          <li>Multiple geographic locations and domains</li>
+        </ul>
+        <p>Users experience a consistent interface while IT retains centralized governance.</p>
+      </div>
+      <figure class="mfg-photo">
+        <img
+          src="/images/manufacturing/manufacturer-shop-floor.webp"
+          alt="Manufacturing shop floor with production equipment — FileFlex governs access across existing manufacturing storage infrastructure"
+          width="1200" height="800" loading="lazy" decoding="async"
+        />
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ENGINEERING WORKFLOWS — photo left ½, text right ½
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="mfg-workflows-heading">
+  <div class="pf-section__inner">
+    <div class="mfg-split">
+      <figure class="mfg-photo">
+        <img
+          src="/images/manufacturing/confident-business-leader.webp"
+          alt="Business leader in a modern office — secure access without disrupting engineering workflows"
+          width="1200" height="800" loading="lazy" decoding="async"
+        />
+      </figure>
+      <div class="mfg-split__copy">
+        <h2 id="mfg-workflows-heading" class="pf-title">Secure Access Without Disrupting Engineering Workflows</h2>
+        <p>Security should never slow manufacturing.</p>
+        <p>
+          FileFlex allows authorized users to continue working with familiar applications including
+          Windows File Explorer, Microsoft Office, Adobe applications, and AutoCAD.
+        </p>
+        <p>
+          Rather than forcing users into another collaboration platform, FileFlex integrates secure
+          access directly into existing workflows, reducing training requirements and helping
+          minimize shadow IT.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EXTENDING ZERO TRUST — text left 1/3, graphic right 2/3
+     ============================================================ -->
+<section class="pf-section pf-section--white" aria-labelledby="mfg-zt-heading">
+  <div class="pf-section__inner">
+    <div class="mfg-split mfg-split--narrow-copy">
+      <div class="mfg-split__copy">
+        <h2 id="mfg-zt-heading" class="pf-title">Extending Zero Trust to Manufacturing Data</h2>
+        <p>Manufacturers have invested heavily in securing identities, devices, and networks.</p>
+        <p>
+          The next evolution of Zero Trust is extending those same principles directly to
+          engineering and manufacturing data.
+        </p>
+        <p>
+          FileFlex complements existing identity providers, Zero Trust Network Access solutions, and
+          security investments by governing access at the data layer&mdash;where sensitive
+          intellectual property, technical documentation, and operational information reside.
+        </p>
+      </div>
+      <figure class="mfg-figure mfg-figure--tall">
+        <img
+          src="/images/manufacturing/how-manufacturing-access-works.webp"
+          alt="How Manufacturing Access Works — every access request is evaluated, authorized and monitored in five steps: 1) a user requests access to a file or folder from an authorized application; 2) FileFlex verifies the user identity using enterprise identity providers and MFA; 3) the request is evaluated against centralized policies, permissions and context; 4) the FileFlex Connector Agent securely retrieves the authorized data from its existing location using outbound-only connections; 5) the access and user activity are logged for audit, monitoring and compliance."
+          width="864" height="1821" loading="lazy" decoding="async"
+        />
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY MANUFACTURERS CHOOSE FILEFLEX — icon cards
+     ============================================================ -->
+<section class="pf-section pf-section--light" aria-labelledby="mfg-why-heading">
+  <div class="pf-section__inner">
+    <div class="mfg-section-head">
+      <h2 id="mfg-why-heading" class="pf-title">Why Manufacturers Choose FileFlex</h2>
+    </div>
+    <div class="mfg-cards mfg-cards--why">
+      {whyCards.map((c) => (
+        <div class="mfg-card mfg-card--why">
+          <span class="mfg-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" set:html={icons[c.icon]} />
+          </span>
+          <h3 class="mfg-card__title">{c.title}</h3>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FINAL CTA
+     ============================================================ -->
+<section id="mfg-future" aria-labelledby="mfg-future-heading">
+  <div class="mfg-future__inner">
+    <h2 id="mfg-future-heading">The Data Layer of Zero Trust for Manufacturing</h2>
+    <p>
+      Manufacturing organizations have made significant investments securing identities, endpoints,
+      and networks. The next step is governing access to the engineering data, operational
+      documents, and intellectual property that drive the business.
+    </p>
+    <p>
+      FileFlex Enterprise extends Zero Trust directly to manufacturing data&mdash;providing
+      centralized governance, granular access control, and secure collaboration across employees,
+      production facilities, suppliers, contractors, and partners.
+    </p>
+    <p>
+      Sensitive information remains where it already resides. Policies remain centralized. Access
+      remains controlled.
+    </p>
+    <p class="mfg-future__tagline">FileFlex Enterprise is the data layer of Zero Trust for manufacturing.</p>
+    <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request a Manufacturing Demonstration &rsaquo;</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     RELATED BLOGS
+     ============================================================ -->
 <section id="fin-blogs" class="fin-section fin-section--white" aria-labelledby="mfg-blogs-heading">
   <div class="fin-section__inner">
     <h2 id="mfg-blogs-heading" class="fin-h2 fin-h2--center">Check Out These Related Blogs</h2>
