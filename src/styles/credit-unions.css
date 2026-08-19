@@ -180,15 +180,31 @@
 /* ---------- CHALLENGES (dark card grid) ---------- */
 .cu-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 .cu-card--dark {
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 16px;
-  padding: 28px 24px;
+  overflow: hidden;
   text-align: left;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+.cu-card--dark:hover {
+  transform: translateY(-4px);
+  border-color: rgba(232,89,10,0.72);
+  box-shadow: 0 18px 38px rgba(0,0,0,0.25);
+}
+.cu-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+  border-bottom: 3px solid var(--pf-orange);
+}
+.cu-card__content {
+  padding: 22px 24px 26px;
 }
 .cu-card--dark .cu-card__num {
   font-size: 13px;
@@ -221,7 +237,7 @@
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 1024px) {
-  .cu-grid { grid-template-columns: repeat(3, 1fr); }
+  .cu-grid { grid-template-columns: repeat(2, 1fr); }
   .cu-why__grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
