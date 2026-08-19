@@ -180,8 +180,8 @@
 /* ---------- CHALLENGES (dark card grid) ---------- */
 .cu-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
 }
 .cu-card--dark {
   background: rgba(255,255,255,0.04);
@@ -204,7 +204,7 @@
   border-bottom: 3px solid var(--pf-orange);
 }
 .cu-card__content {
-  padding: 22px 24px 26px;
+  padding: 18px 18px 22px;
 }
 .cu-card--dark .cu-card__num {
   font-size: 13px;
@@ -237,13 +237,16 @@
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 1024px) {
-  .cu-grid { grid-template-columns: repeat(2, 1fr); }
+  .cu-grid { grid-template-columns: repeat(3, 1fr); }
   .cu-why__grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
   .cu-hero__needs { grid-template-columns: 1fr; }
-  .cu-grid { grid-template-columns: 1fr; }
+  .cu-grid { grid-template-columns: repeat(2, 1fr); }
   .cu-why__grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .cu-grid { grid-template-columns: 1fr; }
 }
 
 /* ---------- BRANDED EXPERIENCE (dark media + points) ---------- */
