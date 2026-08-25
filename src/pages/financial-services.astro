@@ -5,216 +5,179 @@ import '../styles/fileflex.css';
 import '../styles/platform.css';
 import '../styles/financial.css';
 
-const blogs = [
-  {
-    title: 'Zero Trust for FFIEC Compliance: Why ZTDA Is the Missing Link',
-    blurb: 'Modernize compliance with Zero Trust for FFIEC guidelines. The FFIEC Cybersecurity Assessment Tool outlines critical requirements for data protection — especially in "Domain 5: Data…"',
-    img: '/images/financial/iStock-537743911-web-e1731689756904-400x300.jpg',
-    href: '/blog/meeting-ffiec-guidelines-using-zero-trust-data-access/',
-  },
-  {
-    title: 'Advantages of Zero Trust Virtual Data Rooms for Banks and Credit Unions',
-    blurb: 'Zero Trust Virtual Data Rooms provide banks and credit unions with a secure, compliant, and efficient way to manage sensitive client interactions…',
-    img: '/images/financial/iStock-1296691609-web-e1731086221645-400x300.jpg',
-    href: '/blog/advantages-of-zero-trust-virtual-data-rooms-for-banks-and-credit-unions/',
-  },
-  {
-    title: 'Supporting Financial Services Cybersecurity Through Zero Trust Data Access',
-    blurb: 'Financial services cybersecurity is strengthened through the adoption of Zero Trust Data Access (ZTDA), which enhances data security and regulatory compliance…',
-    img: '/images/financial/Data-Sovereignty-2-e1730312868476-400x300.jpg',
-    href: '/blog/supporting-financial-services-cybersecurity-through-zero-trust-data-access/',
-  },
-  {
-    title: 'Zero Trust for GLBA Compliance: File-Level Data Protection',
-    blurb: 'Zero Trust for GLBA Compliance starts at the data level. GLBA requires financial institutions to safeguard customer data under its Safeguards Rule…',
-    img: '/images/financial/sociale-media-social-network-multimedia-online-P4H8N5F-e1733239547217-400x300.jpg',
-    href: '/blog/strengthening-glba-compliance-with-zero-trust-data-access/',
-  },
-  {
-    title: 'Zero Trust Cybersecurity for Credit Unions',
-    blurb: 'Zero Trust cybersecurity for credit unions must go beyond network control. Zero Trust Data Access (ZTDA) protects sensitive member data at the file level…',
-    img: '/images/financial/enterprise-people-400x300.jpg',
-    href: '/blog/strengthening-credit-union-cybersecurity-through-zero-trust-data-access/',
-  },
-  {
-    title: 'DORA Compliance for File Sharing, Access and Collaboration Using Zero Trust Data Access',
-    blurb: 'DORA compliance for file sharing, access and collaboration necessitates the implementation of Zero Trust Data Access (ZTDA). ZTDA has stringent security measures…',
-    img: '/images/financial/Supports-Privacy-by-Design-Mandates--e1704482747769-400x300.jpg',
-    href: '/blog/dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access/',
-  },
+const capabilities = [
+  { title: 'Data Stays in Place', text: 'Access existing information without migrating it into a new FileFlex repository. Data remains on the organization’s existing storage infrastructure.', icon: 'database' },
+  { title: 'Granular Access Controls', text: 'Apply least-privilege permissions at the file and folder level, including view-only, download, upload, edit and sharing permissions.', icon: 'lock' },
+  { title: 'Secure External Collaboration', text: 'Give customers, members, auditors, advisors, attorneys and other authorized third parties controlled access to the information they need without exposing the underlying storage infrastructure.', icon: 'users' },
+  { title: 'Centralized IT Control', text: 'Apply centralized policies across distributed financial data environments while maintaining control over access and sharing.', icon: 'control' },
+  { title: 'Detailed Activity Logging', text: 'Track user access and sharing activity across connected storage and export activity logs to SIEM or Syslog environments.', icon: 'audit' },
+  { title: 'Hybrid Infrastructure Support', text: 'Extend Zero Trust Data Access across existing on-premises, cloud, SharePoint and legacy storage environments.', icon: 'hybrid' },
 ];
+
+const workflows = [
+  { title: 'Banking', text: 'Provide employees, customers and authorized third parties secure access to sensitive banking information while maintaining centralized IT control.', image: '/images/banking/uc-treasury-management.webp', alt: 'Banking professional analyzing financial information', href: '/banking/', link: 'Explore FileFlex for Banks' },
+  { title: 'Credit Unions', text: 'Protect member information and enable secure collaboration across lending, member services, internal operations and external partners.', image: '/images/credit-unions/cu-member-expectations.webp', alt: 'Credit union advisor helping a member', href: '/credit-unions/', link: 'Explore FileFlex for Credit Unions' },
+  { title: 'Mortgage & Lending', text: 'Secure document collaboration among borrowers, loan officers, underwriters, brokers, appraisers, attorneys and other participants throughout the lending process.', image: '/images/banking/uc-mortgage-processing.webp', alt: 'Mortgage paperwork and house keys', href: '/secure-mortgage-collaboration/', link: 'Explore Secure Mortgage Collaboration' },
+  { title: 'Client & Member Portals', text: 'Provide customers and members secure, authenticated access to sensitive documents without relying on email attachments or open public links.', image: '/images/member-portals/members-want-digital.webp', alt: 'Financial services customer using a secure mobile portal', href: '/secure-member-portals/', link: 'Explore Secure Member Portals' },
+  { title: 'Virtual Data Rooms', text: 'Create controlled environments for due diligence, financial transactions, closings, M&A, regulatory reviews and other sensitive document workflows while keeping source data under organizational control.', image: '/images/mortgage/data-room.jpg', alt: 'Financial professionals collaborating in a secure data room', href: '/virtual-data-rooms/', link: 'Explore Zero Trust Virtual Data Rooms' },
+  { title: 'Professional & Third-Party Collaboration', text: 'Give auditors, legal counsel, consultants, advisors and other outside parties controlled access to specific files and folders without providing access to the underlying network or storage infrastructure.', image: '/images/credit-unions/cu-third-party-collaboration.webp', alt: 'Financial professionals collaborating with an external advisor' },
+];
+
+const benefits = [
+  { title: 'Reduce Data Exposure', text: 'Apply least-privilege access directly to sensitive files and folders so users receive access only to the information they are authorized to access.', image: '/images/banking/uc-compliance-banking.webp', alt: 'Compliance professional reviewing protected financial records' },
+  { title: 'Reduce Unnecessary Data Sprawl', text: 'Enable controlled access to existing information rather than creating unnecessary copies in separate collaboration repositories.', image: '/images/banking/uc-executive-collaboration.webp', alt: 'Executive team working from a shared source of financial information' },
+  { title: 'Secure Third-Party Access', text: 'Provide external users controlled access to specific information without exposing internal networks or underlying storage infrastructure.', image: '/images/credit-unions/cu-third-party-collaboration.webp', alt: 'External financial partners collaborating securely' },
+  { title: 'Modernize Legacy Data Access', text: 'Extend modern, policy-controlled remote access to existing file servers, NAS, FTP and other legacy infrastructure.', image: '/images/banking/secure-collaboration-for-banks.webp', alt: 'Modern secure collaboration connected to banking systems' },
+  { title: 'Improve Customer and Member Collaboration', text: 'Replace email attachments and uncontrolled sharing with authenticated, policy-controlled access to sensitive documents.', image: '/images/member-portals/members-want-digital.webp', alt: 'Customer accessing financial services securely from a phone' },
+  { title: 'Increase Visibility', text: 'Maintain detailed activity logs showing access and sharing actions across connected data repositories.', image: '/images/banking/banking-document-lifecycle.webp', alt: 'Financial document lifecycle with governance and visibility' },
+];
+
 ---
 
-<Layout
-  title="Financial Services — Secure Mortgage Workflow with FileFlex Enterprise"
-  description="Transforming secure mortgage workflow efficiency with FileFlex Enterprise. Zero Trust Data Access as a Virtual Data Room for banks, credit unions and lenders."
->
+<Layout title="Zero Trust Data Access for Financial Services | FileFlex" description="Protect sensitive financial data wherever it lives with FileFlex Enterprise. Apply Zero Trust Data Access across existing storage without moving or duplicating information.">
+  <Nav />
 
-<Nav />
-
-<!-- ============================================================
-     HERO
-     ============================================================ -->
-<section id="fin-hero" aria-labelledby="fin-hero-heading">
-  <div class="fin-hero__inner">
-    <p class="fin-hero__eyebrow">FINANCIAL SERVICES</p>
-    <h1 id="fin-hero-heading" class="fin-hero__title">
-      Transforming Secure Mortgage Workflow Efficiency with FileFlex Enterprise
-    </h1>
-  </div>
-</section>
-
-<!-- ============================================================
-     OVERVIEW — bright blue strip
-     ============================================================ -->
-<section id="fin-overview" aria-labelledby="fin-overview-heading">
-  <div class="fin-overview__inner">
-    <h2 id="fin-overview-heading" class="fin-h2 fin-h2--light">Overview</h2>
-    <p class="fin-p fin-p--light">
-      A leading financial institution sought a secure, efficient way to manage its
-      mortgage approval workflow. The organization needed to replace its traditional
-      document-sharing process, which relied on email, third-party file storage, and
-      physical paperwork, leading to security risks, compliance challenges, and inefficiencies.
-    </p>
-    <p class="fin-p fin-p--light">
-      After evaluating multiple solutions, the institution selected FileFlex Enterprise as
-      its Virtual Data Room (VDR) to enhance document security, streamline collaboration,
-      and improve efficiency across its mortgage workflow. The next steps involve
-      implementing FileFlex into their existing processes to realize these benefits.
-    </p>
-  </div>
-</section>
-
-<!-- ============================================================
-     BODY — Challenges, then 3 image+text rows
-     ============================================================ -->
-<section id="fin-body" class="fin-body" aria-label="Case study details">
-  <div class="fin-body__inner">
-
-    <!-- Challenges (full width, no image) -->
-    <div class="fin-block">
-      <h2 class="fin-h2" id="fin-challenges-heading">Challenges</h2>
-      <ul class="fin-list">
-        <li><strong>Security &amp; Compliance Risks:</strong> Sensitive financial documents were being emailed or stored on third-party platforms, creating data leakage risks.</li>
-        <li><strong>Inefficient Workflows:</strong> Manual document handling led to delays, misplaced files, and inconsistent communication.</li>
-        <li><strong>Lack of Centralized Access:</strong> Underwriters, loan processors, and external parties (appraisers, title officers) had limited visibility into key documents.</li>
+  <section id="fin-hero" aria-labelledby="fin-hero-heading">
+    <div class="fin-hero__content">
+      <p class="fin-eyebrow fin-eyebrow--light">Financial Services</p>
+      <h1 id="fin-hero-heading">Protect Financial Data Wherever It Lives</h1>
+      <p class="fin-hero__lede">Financial institutions manage some of the world’s most sensitive information. FileFlex Enterprise extends Zero Trust directly to the data layer, giving banks, credit unions and other financial organizations secure, policy-controlled access to financial data across existing storage — without moving or duplicating it.</p>
+      <ul class="fin-hero__proof">
+        <li>Protect Sensitive Data</li><li>Control Access</li><li>Support Compliance</li><li>Keep Data in Place</li>
       </ul>
+      <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request a Financial Services Demo &rsaquo;</a>
     </div>
+  </section>
 
-    <hr class="fin-sep" />
-
-    <!-- Solution + Planned Implementation (image left, text right) -->
-    <div class="fin-block fin-row">
-      <div class="fin-row__media">
-        <img src="/images/financial/The-solution.jpg" alt="The solution — FileFlex Enterprise as a secure VDR" loading="lazy" decoding="async" />
+  <section class="pf-section pf-section--white" aria-labelledby="fin-everywhere-heading">
+    <div class="pf-section__inner fin-split">
+      <div class="fin-copy">
+        <p class="pf-eyebrow">Financial Data Is Everywhere</p>
+        <h2 id="fin-everywhere-heading" class="pf-title">A Growing Data Access Challenge</h2>
+        <p>Financial institutions no longer operate within a single network, application or data repository.</p>
+        <p>Customer records, loan documents, financial statements, contracts, transaction records, regulatory documentation and other sensitive information are distributed across on-premises file servers, NAS, SharePoint, cloud storage and legacy systems.</p>
+        <p>At the same time, that information must be accessed by an increasingly diverse group of employees and outside parties — including customers, members, advisors, auditors, attorneys, contractors and business partners.</p>
+        <p class="fin-equation"><span>The challenge is straightforward:</span>More Data + More Locations + More Users + More External Collaboration = <strong>More Access Risk</strong></p>
       </div>
-      <div class="fin-row__copy">
-        <h2 class="fin-h2">Solution</h2>
-        <p class="fin-p">
-          <strong>Selecting FileFlex Enterprise as a Secure VDR</strong> — the institution chose
-          FileFlex for its zero-trust data access capabilities, ensuring authorized users can
-          securely access mortgage documents in place without moving files. Implementation is
-          planned to include:
-        </p>
-        <p class="fin-p"><strong>Planned Implementation</strong></p>
-        <ol class="fin-list fin-list--num">
-          <li><strong>Secure Document Storage:</strong> All mortgage files will remain in their original locations (on-premises servers or private cloud), accessible via FileFlex.</li>
-          <li><strong>Role-Based Access Controls (RBAC):</strong> Loan officers, underwriters, appraisers, and closing agents will receive granular permissions, ensuring data access on a need-to-know basis.</li>
-          <li><strong>Audit Trails &amp; Compliance:</strong> Every document access, modification, and download will be logged for compliance and auditing.</li>
-          <li><strong>Seamless Third-Party Collaboration:</strong> External parties (appraisers, title officers) will securely upload documents without exposing internal data.</li>
-        </ol>
-      </div>
+      <figure class="fin-photo"><img src="/images/financial-services/data-everywhere.webp" alt="Financial professionals reviewing sensitive information together" width="1400" height="788" loading="lazy" decoding="async" /></figure>
     </div>
+  </section>
 
-    <hr class="fin-sep" />
-
-    <!-- Expected Results -->
-    <div class="fin-block fin-row">
-      <div class="fin-row__media">
-        <img src="/images/financial/ip-LF-Panel3-web.jpg" alt="Expected results — improved workflow and collaboration" loading="lazy" decoding="async" />
+  <section class="pf-section pf-section--light" aria-labelledby="fin-gap-heading">
+    <div class="pf-section__inner fin-split fin-split--graphic">
+      <div class="fin-copy">
+        <p class="pf-eyebrow">The Zero Trust Data Gap</p>
+        <h2 id="fin-gap-heading" class="pf-title">Zero Trust Often Stops Before It Reaches the Data</h2>
+        <p>Financial institutions have invested heavily in identity management, multi-factor authentication, endpoint security, network segmentation and Zero Trust Network Access.</p>
+        <p>These technologies are essential. But they primarily protect identities, devices, networks and applications.</p>
+        <p>Ultimately, what users need is access to data.</p>
+        <p>Once an authenticated user reaches a repository or application, organizations still need to answer a more granular question:</p>
+        <blockquote>Should this user be allowed to access this particular file or folder, and under what permissions?</blockquote>
+        <p>That is the Zero Trust Data Gap. FileFlex Enterprise closes this gap by extending Zero Trust principles directly to data access and sharing across existing repositories.</p>
       </div>
-      <div class="fin-row__copy">
-        <h2 class="fin-h2">Expected Results</h2>
-        <ul class="fin-list">
-          <li><strong>Reduction in Processing Time:</strong> Faster document retrieval and approvals.</li>
-          <li><strong>Compliance with Data Security Policies:</strong> Eliminates email-based document sharing.</li>
-          <li><strong>Improved Collaboration:</strong> Real-time document access across multiple departments and external partners.</li>
-          <li><strong>Lower Operational Costs:</strong> Reduces reliance on third-party storage solutions.</li>
-        </ul>
-      </div>
+      <figure class="fin-infographic fin-infographic--portrait"><img src="/images/financial-services/zero-trust-data-gap.webp" alt="The Zero Trust Data Gap: identity, devices and applications are protected, while access to the underlying data remains the missing layer" width="1100" height="1375" loading="lazy" decoding="async" /></figure>
     </div>
+  </section>
 
-    <hr class="fin-sep" />
-
-    <!-- Conclusion -->
-    <div class="fin-block fin-row">
-      <div class="fin-row__media">
-        <img src="/images/financial/ip-LF-Panel4-web.jpg" alt="Conclusion — transforming the mortgage approval workflow" loading="lazy" decoding="async" />
+  <section class="pf-section pf-section--dark" aria-labelledby="fin-ztda-heading">
+    <div class="pf-section__inner">
+      <p class="pf-eyebrow pf-eyebrow--center">Zero Trust Data Access for Financial Services</p>
+      <h2 id="fin-ztda-heading" class="pf-title pf-title--center pf-title--light">Apply Zero Trust Directly to Sensitive Financial Information</h2>
+      <div class="fin-intro fin-intro--light">
+        <p>FileFlex Enterprise is an overlay service built ground-up for Zero Trust that applies Zero Trust Data Access to existing financial data infrastructure.</p>
+        <p>Rather than moving sensitive information into another repository, FileFlex governs access to data where it already resides. Every access request is authenticated and authorized before access is granted, while granular permissions determine the level of access provided to authorized users.</p>
       </div>
-      <div class="fin-row__copy">
-        <h2 class="fin-h2">Conclusion</h2>
-        <p class="fin-p">
-          By selecting FileFlex Enterprise, the institution is positioned to transform its
-          mortgage approval workflow into a secure, compliant, and efficient process. The
-          planned implementation will allow for greater security, streamlined workflows, and
-          improved collaboration. As the deployment progresses, the institution anticipates
-          expanding FileFlex to other financial departments.
-        </p>
+      <div class="fin-capabilities">
+        {capabilities.map((item) => (
+          <article class="fin-capability">
+            <svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              {item.icon === 'database' && <><ellipse cx="24" cy="10" rx="15" ry="6"/><path d="M9 10v12c0 3.3 6.7 6 15 6s15-2.7 15-6V10"/><path d="M9 22v12c0 3.3 6.7 6 15 6s15-2.7 15-6V22"/></>}
+              {item.icon === 'lock' && <><rect x="9" y="20" width="30" height="22" rx="4"/><path d="M16 20v-6a8 8 0 0 1 16 0v6M24 29v6"/></>}
+              {item.icon === 'users' && <><circle cx="19" cy="17" r="7"/><path d="M7 41c0-8 5.4-13 12-13s12 5 12 13M33 13a6 6 0 0 1 0 12M41 41c0-5-2.4-9-6.5-11"/></>}
+              {item.icon === 'control' && <><path d="M8 13h32M8 24h32M8 35h32"/><circle cx="18" cy="13" r="4"/><circle cx="31" cy="24" r="4"/><circle cx="21" cy="35" r="4"/></>}
+              {item.icon === 'audit' && <><path d="M14 6h20l7 7v29H14a5 5 0 0 1-5-5V11a5 5 0 0 1 5-5Z"/><path d="M34 6v9h7M17 24h16M17 31h16M17 38h10"/></>}
+              {item.icon === 'hybrid' && <><path d="M15 38h25a6 6 0 0 0 1-11.9A12 12 0 0 0 18.2 22 8 8 0 0 0 15 38Z"/><rect x="7" y="8" width="18" height="12" rx="2"/><path d="M12 14h8M16 20v7"/></>}
+            </svg>
+            <h3>{item.title}</h3><p>{item.text}</p>
+          </article>
+        ))}
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
-
-<!-- ============================================================
-     HOW VDR FACILITATES MORTGAGE WORKFLOW (diagram + advantages)
-     ============================================================ -->
-<section id="fin-vdr" class="fin-section fin-section--panel" aria-labelledby="fin-vdr-heading">
-  <div class="fin-section__inner">
-    <h2 id="fin-vdr-heading" class="fin-h2 fin-h2--center">
-      How FileFlex Enterprise VDR Capability Will Facilitate the Mortgage Workflow
-    </h2>
-    <p class="fin-p fin-p--center">
-      FileFlex Enterprise virtual data rooms can significantly enhance the mortgage
-      workflow, eliminating email sharing, keeping data on-premises and providing secure,
-      remote access to data without moving files, zero-trust security controls, and
-      role-based access management. Here's how each stage of the process could be
-      facilitated using FileFlex:
-    </p>
-    <figure class="fin-diagram">
-      <img src="/images/financial/Mortgage-flow-diagram.jpg" alt="Mortgage workflow diagram with FileFlex Enterprise" loading="lazy" decoding="async" />
-    </figure>
-
-    <h2 class="fin-h2 fin-h2--center">Key Advantages of Using FileFlex as a VDR for Mortgage Workflows</h2>
-    <ul class="fin-adv">
-      <li><strong>Zero-Trust Security:</strong> No files are moved, duplicated to the cloud, or shared via email, minimizing risk.</li>
-      <li><strong>Data Residency Compliance:</strong> Institutions retain full control of sensitive data stored on-premises.</li>
-      <li><strong>Granular Access Controls:</strong> Role-based permissions prevent unauthorized access.</li>
-      <li><strong>Real-Time Collaboration:</strong> Multiple stakeholders work securely without file duplication.</li>
-      <li><strong>Automated Compliance &amp; Audit Logging:</strong> Every access and action is logged.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ============================================================
-     RELATED BLOGS
-     ============================================================ -->
-<section id="fin-blogs" class="fin-section fin-section--white" aria-labelledby="fin-blogs-heading">
-  <div class="fin-section__inner">
-    <h2 id="fin-blogs-heading" class="fin-h2 fin-h2--center">Check Out These Related Blogs</h2>
-    <div class="fin-blog-grid">
-      {blogs.map((b) => (
-        <a class="fin-blog" href={b.href} target="_blank" rel="noopener">
-          <img class="fin-blog__img" src={b.img} alt="" loading="lazy" decoding="async" width="400" height="300" />
-          <div class="fin-blog__body">
-            <h3 class="fin-blog__title">{b.title}</h3>
-            <p class="fin-blog__blurb">{b.blurb}</p>
-            <span class="fin-blog__more">Read more →</span>
-          </div>
-        </a>
-      ))}
+  <section class="pf-section pf-section--white" aria-labelledby="fin-workflows-heading">
+    <div class="pf-section__inner">
+      <p class="pf-eyebrow pf-eyebrow--center">One Platform. Many Financial Services Workflows.</p>
+      <h2 id="fin-workflows-heading" class="pf-title pf-title--center">Secure Access and Collaboration Across the Financial Enterprise</h2>
+      <p class="pf-lede pf-lede--center pf-lede--soft">FileFlex Enterprise provides a common Zero Trust Data Access layer that can support multiple financial services workflows without creating separate data silos for each use case.</p>
+      <figure class="fin-ecosystem"><img src="/images/financial-services/ecosystem.webp" alt="Financial services ecosystem connected through FileFlex Enterprise Zero Trust Data Access" width="1400" height="1117" loading="lazy" decoding="async" /></figure>
+      <div class="fin-card-grid">
+        {workflows.map((item) => (
+          <article class="fin-photo-card">
+            <img src={item.image} alt={item.alt} loading="lazy" decoding="async" />
+            <div class="fin-photo-card__body">
+              <h3>{item.title}</h3><p>{item.text}</p>
+              {item.href && <a href={item.href}>{item.link} &rsaquo;</a>}
+            </div>
+          </article>
+        ))}
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section class="pf-section pf-section--light" aria-labelledby="fin-compliance-heading">
+    <div class="pf-section__inner fin-split fin-split--reverse">
+      <div class="fin-copy">
+        <p class="pf-eyebrow">Built for Highly Regulated Environments</p>
+        <h2 id="fin-compliance-heading" class="pf-title">Strengthen Data Access Governance and Support Compliance</h2>
+        <p>Financial institutions operate under extensive cybersecurity, privacy and data governance requirements.</p>
+        <p>FileFlex helps organizations support these requirements by applying identity-based, least-privilege controls directly to data access and maintaining detailed records of access and sharing activity.</p>
+        <p>FileFlex can support security and compliance programs associated with frameworks and regulations including:</p>
+        <p class="fin-regs">GLBA <span>•</span> FFIEC <span>•</span> NIST <span>•</span> DORA <span>•</span> GDPR <span>•</span> CCPA/CPRA <span>•</span> Local Privacy Requirements</p>
+        <p class="fin-note">FileFlex does not replace an organization’s broader compliance program. It provides technical controls that can help financial institutions demonstrate how access to sensitive unstructured information is governed.</p>
+      </div>
+      <figure class="fin-photo"><img src="/images/financial-services/regulated-environments.webp" alt="Financial professionals collaborating with clients in a regulated banking environment" width="1400" height="700" loading="lazy" decoding="async" /></figure>
+    </div>
+  </section>
+
+  <section class="pf-section pf-section--white" aria-labelledby="fin-governance-heading">
+    <div class="pf-section__inner fin-split fin-split--graphic">
+      <div class="fin-copy">
+        <p class="pf-eyebrow">Move Governance. Not Data.</p>
+        <h2 id="fin-governance-heading" class="pf-title">Add Zero Trust Without Replacing Your Existing Data Infrastructure</h2>
+        <p>Financial institutions have spent years building storage and information infrastructure. Securing access to that data should not require replacing it.</p>
+        <p>FileFlex Enterprise overlays existing infrastructure and provides a secure access layer between authorized users and the data they need.</p>
+        <p>Users do not connect directly to source storage. Access requests are authenticated and evaluated against policy before authorized information is retrieved from the appropriate source.</p>
+        <p>The result is centralized Zero Trust Data Access across heterogeneous storage environments — without creating another repository or requiring wholesale infrastructure change.</p>
+      </div>
+      <figure class="fin-infographic"><img src="/images/financial-services/governance-not-data.webp" alt="Move governance, not data: FileFlex applies a Zero Trust access layer across existing on-premises, cloud and legacy repositories" width="1400" height="976" loading="lazy" decoding="async" /></figure>
+    </div>
+  </section>
+
+  <section class="pf-section pf-section--light" aria-labelledby="fin-benefits-heading">
+    <div class="pf-section__inner">
+      <p class="pf-eyebrow pf-eyebrow--center">Protect Data Without Disrupting the Business</p>
+      <h2 id="fin-benefits-heading" class="pf-title pf-title--center">Security That Supports Financial Services Operations</h2>
+      <p class="pf-lede pf-lede--center pf-lede--soft">FileFlex Enterprise helps financial organizations strengthen data security while enabling the access and collaboration required for modern financial services.</p>
+      <div class="fin-card-grid fin-card-grid--benefits">
+        {benefits.map((item) => (
+          <article class="fin-photo-card">
+            <img src={item.image} alt={item.alt} loading="lazy" decoding="async" />
+            <div class="fin-photo-card__body"><h3>{item.title}</h3><p>{item.text}</p></div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="fin-final" aria-labelledby="fin-final-heading">
+    <div class="fin-final__content">
+      <p class="fin-eyebrow fin-eyebrow--light">Complete Your Zero Trust Architecture</p>
+      <h2 id="fin-final-heading">Extend Zero Trust All the Way to Your Financial Data</h2>
+      <p>Financial institutions have made significant investments securing identities, endpoints, networks and applications. The next step is extending those same Zero Trust principles to the information those systems were designed to protect.</p>
+      <p>FileFlex Enterprise provides the data layer of Zero Trust — applying secure, granular and policy-controlled access to sensitive financial information wherever it resides.</p>
+      <p class="fin-final__promise">Protect access to sensitive financial information without migrating data, replacing existing storage or disrupting established workflows.</p>
+      <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request a Financial Services Demo &rsaquo;</a>
+    </div>
+  </section>
 </Layout>
