@@ -39,12 +39,12 @@ import '../styles/credit-unions.css';
 
     <div class="cu-hero__video">
       <a
-        class="pf-btn pf-btn--lg pf-btn--uppercase"
-        href="https://youtu.be/Jw3cdgW-39w"
-        target="_blank"
-        rel="noopener noreferrer"
+        class="pf-btn pf-btn--lg"
+        href="#cu-video-modal"
+        aria-label="Watch: The Zero Trust Credit Union"
       >
-        Watch: The Zero Trust Credit Union
+        <span aria-hidden="true">▶</span>
+        <strong>Watch: The Zero Trust Credit Union</strong>
       </a>
     </div>
 
@@ -362,5 +362,22 @@ import '../styles/credit-unions.css';
     <a class="pf-btn pf-btn--uppercase pf-btn--outline" href="/demo-request/">Book a Demo &rsaquo;</a>
   </div>
 </section>
+
+<!-- ============================================================
+     VIDEO MODAL
+     ============================================================ -->
+<div class="pf-modal-overlay" id="cu-video-modal" role="dialog" aria-modal="true" aria-label="The Zero Trust Credit Union video">
+  <a class="pf-modal-backdrop" href="#!" aria-label="Close video"></a>
+  <div class="pf-modal">
+    <a class="pf-modal-close" href="#!" aria-label="Close video">&times;</a>
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/Jw3cdgW-39w?rel=0&modestbranding=1"
+      title="The Zero Trust Credit Union"
+      loading="lazy"
+      allow="encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
 
 </Layout>
