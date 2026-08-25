@@ -55,8 +55,9 @@
   line-height: 1.6;
   color: #d6dce4;
   max-width: 760px;
-  margin: 0 0 28px;
+  margin: 0 0 22px;
 }
+.cu-hero__video { margin: 0 0 30px; }
 
 /* audience pills */
 .cu-aud {
