@@ -3,102 +3,208 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import '../styles/fileflex.css';
 import '../styles/platform.css';
-import '../styles/financial.css';
 import '../styles/government.css';
 
-const rows = [
-  {
-    title: 'Aids Compliance with CMMC',
-    img: '/images/government/ip-GOV-Panel1-web-e1777996880665-1024x386.jpg',
-    body: `The Cybersecurity Maturity Model Certification (CMMC) is the Department of Defense’s (DoD’s) response to compromises to defense information held or processed by their contractors. It is a unified standard to better defend the vast attack surface of their supply chain, implement cybersecurity and better secure sensitive information located with their contractors. FileFlex Enterprise supports the published best “Access Control” practices for data access outlined in the Department of Defense's Cybersecurity Maturity Model Certification (CMMC).`,
-  },
-  {
-    title: 'Aids Compliance with GDPR',
-    img: '/images/government/ip-GOV-Panel2-web-e1758645190169-1024x493.jpg',
-    body: `The European General Data Protection Regulation (GDPR) requires organizations to comply with an increased focus on the protection of Personally Identifiable Information (PII) of EU citizens and residents. FileFlex Enterprise supports and augments an organization’s GDPR compliance endeavors by utilizing an organization’s existing investment in technology, a rapid deployment capability, and the ability to support enforcement of compliance and the auditability controls required by GDPR, achieved within Windows while supporting deduplication of data.`,
-  },
-  {
-    title: 'Aids Compliance with NIST and FedRAMP',
-    img: '/images/government/ip-GOV-Panel3-web-1024x1024.jpg',
-    body: `The National Institute of Standards and Technology (NIST) has put together a unified standard (NIST SP 800-171) to better defend the vast attack surface of the federal government supply chain. FileFlex Enterprise supports the published best “Access Control” practices for data access outlined in NIST SP-800-171v2.`,
-  },
-  {
-    title: 'Protect Your Government or DoD Client from Data Breaches',
-    img: '/images/government/ip-GOV-Panel4-web-e1695750125211-1024x544.jpg',
-    body: `The supply chain provides cybercriminals a potential weak-link entry point to sensitive government and/or DoD information. FileFlex Enterprise can help you avoid a data breach catastrophic to both you and your client with enhanced security features and a zero trust architecture. The ability to export the activity log to your SIEM software can alert and help you thwart ransomware attacks in process that you would be otherwise unaware of.`,
-  },
-  {
-    title: 'Windows Zero Trust Data Access and Sharing of CUI',
-    img: '/images/government/ip-GOV-Panel5-web-1024x891.jpg',
-    body: `The Zero Trust architecture and security controls of FileFlex Enterprise allow access and sharing of confidential Controlled Unclassified Information (CUI) from within Windows over the network or standard Internet connection. Integration into Windows means that remote storage locations look and act like a local drive federated under a single-pane-of-glass with easy access and no change in workflow.`,
-  },
-  {
-    title: 'IT Control Over CUI',
-    img: '/images/government/ip-GOV-Panel6-web-e1755273019719-1024x432.jpg',
-    body: `FileFlex Enterprise provides organizations with a management toolkit to control access to CUI and confidential information without it being copied to the servers of third parties. It allows them to control data access, set policies, and assign access on a user-by-user or group-by-group basis with storage location, folder, or even file-level granularity. Additionally, the activity log provides visibility over all access, sharing or modification of CUI for forensic investigations. And alerts and the ability to auto-export to SIEM software can flag suspicious activity.`,
-  },
+const capabilities = [
+  { title: 'Granular Access', text: 'Control access by user, group, storage repository, folder, or individual file.', icon: 'M12 3a4 4 0 0 1 4 4v2h1.5A2.5 2.5 0 0 1 20 11.5v7A2.5 2.5 0 0 1 17.5 21h-11A2.5 2.5 0 0 1 4 18.5v-7A2.5 2.5 0 0 1 6.5 9H8V7a4 4 0 0 1 4-4Zm0 2a2 2 0 0 0-2 2v2h4V7a2 2 0 0 0-2-2Z' },
+  { title: 'Controlled Collaboration', text: 'Govern whether authorized users can view, edit, download, upload, or share information.', icon: 'M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm8-1a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM2 21a6 6 0 0 1 12 0H2Zm11.5 0a5 5 0 0 1 8.5-3.57V21h-8.5Z' },
+  { title: 'Data Stays in Place', text: 'Provide secure access without migrating or duplicating information into another content repository.', icon: 'M4 5.5A2.5 2.5 0 0 1 6.5 3h3l2 2h6A2.5 2.5 0 0 1 20 7.5v9a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5v-11Zm8 3v7m0 0-3-3m3 3 3-3' },
+  { title: 'Complete Visibility', text: 'Maintain detailed activity logs of access and sharing activity across protected information.', icon: 'M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Zm9.5 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z' },
+  { title: 'Centralized Governance', text: 'Apply consistent access policies across distributed on-premises, cloud, and hybrid environments.', icon: 'M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7l-8-4Zm-3 9 2 2 4-4' },
 ];
 
-const blogs = [
-  { title: 'Zero Trust for California Privacy Compliance', blurb: 'Zero Trust for California Privacy Compliance requires controls beyond the network. CCPA and CPRA laws mandate granular data access protections, transparency, and breach […]', img: '/images/government/California-blog-cover-pic-400x300.jpg', href: '/blog/using-zero-trust-data-access-to-meet-california-privacy-and-cybersecurity-standards/' },
-  { title: 'Secure Zero Trust Access to FedRAMP-Compliant Data', blurb: 'Zero Trust Data Access (ZTDA) enhances data protection in FedRAMP-compliant environments by enforcing secure, file-level access. ZTDA does not replace or achieve FedRAMP […]', img: '/images/government/Screen-Shot-2022-12-12-at-12.38.17-PM-e1731086087275.jpg', href: '/blog/fedramp-compliance-and-zero-trust-data-access/' },
-  { title: 'Zero Trust Data Access for NIST Compliance', blurb: 'Achieving NIST compliance requires granular, auditable control over how sensitive data is accessed and shared. Zero Trust Data Access (ZTDA) complements NIST cybersecurity […]', img: '/images/government/Screen-Shot-2022-12-12-at-12.27.34-PM-e1699286190370-400x300.jpg', href: '/blog/using-zero-trust-data-access-for-nist-compliance/' },
-  { title: 'CMMC IT Control for DIB Organizations Over Remote Access and Sharing Using Zero Trust Architecture', blurb: 'CMMC IT control over the remote access and sharing of CUI unstructured data is achieved via a zero-trust data access platform to […]', img: '/images/government/iStock-841574382-web-e1714069209529-400x300.jpg', href: '/blog/cmmc-it-control-for-dib-organizations-over-remote-access-and-sharing-using-zero-trust-architecture/' },
-  { title: 'Zero Trust Data Access for DIB Cybersecurity Strategy', blurb: 'Zero Trust Data Access (ZTDA) is critical for DIB cybersecurity compliance. The 2024 DIB Cybersecurity Strategy demands granular control and logging of access to […]', img: '/images/government/iStock-1135951621-web-e1713903793502-400x300.jpg', href: '/blog/zero-trust-data-access-to-meet-dib-cybersecurity-strategy-2024/' },
-  { title: 'Zero Trust Data Access for CMMC Compliance', blurb: 'Zero Trust Data Access ensures secure CUI collaboration under CMMC. CMMC mandates granular protection of Controlled Unclassified Information. ZTDA adds continuous authentication, file-level […]', img: '/images/government/iStock-1175177391-web-1024x683-1-e1713455781895-400x300.jpg', href: '/blog/cmmc-compliance-for-file-sharing-access-and-collaboration-of-cui-using-zero-trust-data-access/' },
-  { title: 'GDPR-Compliant File Sharing: Secure, Legal & Easy with Zero Trust', blurb: 'GDPR-compliant file sharing means exchanging personal data in a way that meets the EU’s strict data protection rules. It requires encryption, strict […]', img: '/images/government/iStock-668751452-e1703105188127-400x300.jpg', href: '/blog/gdpr-compliant-file-sharing-using-zero-trust-data-access/' },
-  { title: 'Regulatory Compliance in the Digital Age: Unveiling Quebec Bill 64 and How FileFlex Enterprise Can Help', blurb: 'Regulatory compliance is a key concern for organizations in the digital age, as privacy regulations like Quebec Bill 64 emerge to protect […]', img: '/images/government/iStock-906002360-2022q4-e1690562130415-400x300.jpg', href: '/blog/regulatory-compliance-in-the-digital-age-unveiling-quebec-bill-64-and-how-fileflex-enterprise-can-help/' },
-  { title: 'How to Meet NIST SP-800-171v2 Access Control Practices for Remote Data Access', blurb: 'The Zero Trust Data Access architecture of FileFlex Enterprise can greatly aid in compliance with NIST access control requirements as outlined in […]', img: '/images/government/iStock-502806184-e1678994380758-400x300.jpg', href: '/blog/nist-sp-800-171v2-access-control-practices-for-remote-data-access-2/' },
-  { title: 'How to Meet CMMC Access Control Practices for Remote Data Access', blurb: 'The Zero Trust Data Access architecture of FileFlex Enterprise can greatly aid in compliance with CMMC requirements and provides remote access and […]', img: '/images/government/iStock-1158791540-e1678995967398-400x300.jpg', href: '/blog/how-fileflex-enterprise-helps-dod-contractors-meet-cmmc-best-practices-for-access-control/' },
-  { title: 'How to Meet NIST Guidelines for Zero Trust for Remote Data Access', blurb: 'The National Institute of Standards and Technology (NIST) has produced NIST Special Publication 800-207 outlining Zero Trust principles and guidelines that can […]', img: '/images/government/NIST-full-transparent-400x300.png', href: '/blog/nist-guidelines-for-zero-trust-and-meeting-them-for-remote-data-access/' },
+const ecosystem = [
+  { title: 'Government Workforce', text: 'Provide employees and authorized remote personnel with secure access to the information they need.', image: '/images/government-defense/secure-workstation.webp', alt: 'Military professional working at a secure computer workstation' },
+  { title: 'Defense Industrial Base', text: 'Enable controlled access to CUI and sensitive project information across prime contractors, subcontractors, suppliers, and other authorized DIB participants.', image: '/images/government/iStock-841574382-web-e1714069209529-400x300.jpg', alt: 'Defense industrial facility supporting sensitive government programs' },
+  { title: 'Contractors & External Partners', text: 'Provide narrowly scoped access to specific files and folders without broadly exposing internal networks or storage repositories.', image: '/images/government-defense/team-collaboration.webp', alt: 'Government and defense team collaborating around a secure computer' },
+  { title: 'Secure Data Rooms', text: 'Create controlled environments for procurement, regulatory review, investigations, projects, and other sensitive collaboration without moving information into another repository.', image: '/images/government/ip-GOV-Panel4-web-e1695750125211-1024x544.jpg', alt: 'Secure government facility used for sensitive collaboration' },
+];
+
+const compliance = [
+  { title: 'CMMC', text: 'FileFlex can help Defense Industrial Base organizations implement technical controls relevant to protecting CUI, including granular access control, least privilege, controlled remote access, and activity logging.', image: '/images/government/ip-GOV-Panel1-web-e1777996880665-1024x386.jpg' },
+  { title: 'NIST SP 800-171', text: 'FileFlex supports organizations implementing access-control and accountability practices designed to protect CUI within non-federal systems and environments.', image: '/images/government/ip-GOV-Panel3-web-1024x1024.jpg' },
+  { title: 'NIST Zero Trust Architecture', text: 'FileFlex extends Zero Trust principles beyond identity and network access by applying policy-based controls directly to access to files and folders.', image: '/images/government/ip-GOV-Panel5-web-1024x891.jpg' },
+  { title: 'FedRAMP Environments', text: 'FileFlex can provide Zero Trust Data Access to information residing within appropriately configured government cloud and hybrid environments.', image: '/images/government/Screen-Shot-2022-12-12-at-12.38.17-PM-e1731086087275.jpg' },
+];
+
+const benefits = [
+  { title: 'Zero Trust at the Data Layer', text: 'Extend Zero Trust principles directly to access to sensitive files and folders.', icon: 'M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7l-8-4Zm-3 9 2 2 4-4' },
+  { title: 'Protect CUI in Existing Infrastructure', text: 'Strengthen control over sensitive information without requiring wholesale storage replacement or data migration.', icon: 'M4 5.5A2.5 2.5 0 0 1 6.5 3h3l2 2h6A2.5 2.5 0 0 1 20 7.5v9a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5v-11Z' },
+  { title: 'File-Level Microsegmentation', text: 'Limit users to the specific repositories, folders, and files they are authorized to access.', icon: 'M5 4h6v6H5V4Zm8 0h6v6h-6V4ZM5 14h6v6H5v-6Zm8 0h6v6h-6v-6Z' },
+  { title: 'Data Stays Under Your Control', text: 'Sensitive files remain within existing government or contractor-controlled storage infrastructure.', icon: 'M12 21s7-3 7-9V5l-7-2-7 2v7c0 6 7 9 7 9Zm0-12v6m-3-3h6' },
+  { title: 'Protect Hybrid & Legacy Environments', text: 'Apply a common access layer across cloud, on-premises, and legacy storage systems.', icon: 'M7 18H5a3 3 0 0 1-.5-5.96A5 5 0 0 1 14 9.5 4 4 0 1 1 17 18h-2M9 14l3-3 3 3m-3-3v9' },
+  { title: 'Controlled External Collaboration', text: 'Provide contractors, subcontractors, partners, and other authorized users with granular access without broadly exposing internal infrastructure.', icon: 'M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm8-1a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM2 21a6 6 0 0 1 12 0H2Zm11.5 0a5 5 0 0 1 8.5-3.57V21h-8.5Z' },
+];
+
+const governanceFeatures = [
+  ['Least Privilege', 'M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7l-8-4'],
+  ['File-Level Microsegmentation', 'M5 4h6v6H5V4Zm8 0h6v6h-6V4ZM5 14h6v6H5v-6Zm8 0h6v6h-6v-6Z'],
+  ['Controlled Sharing', 'M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm8-1a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z'],
+  ['No Direct Storage Exposure', 'M4 5h16v14H4V5Zm3 3h10M8 12h8m-8 4h5'],
+  ['Activity Visibility', 'M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z'],
 ];
 ---
 
-<Layout title="Government and Military Contractors — Zero Trust Windows Productivity that Aids Compliance | FileFlex" description="FileFlex Enterprise gives government and DoD contractors Zero Trust Data Access and sharing of CUI from within Windows — aiding CMMC, NIST, FedRAMP and GDPR compliance.">
-<Nav />
+<Layout title="Zero Trust Data Access for Government & Defense | FileFlex" description="Protect CUI and sensitive government data wherever it resides with granular Zero Trust Data Access across existing government and defense infrastructure.">
+  <Nav />
 
-<section id="gov-hero" aria-labelledby="gov-hero-heading">
-  <div class="gov-hero__inner">
-    <p class="gov-hero__eyebrow">GOVERNMENT AND MILITARY CONTRACTORS</p>
-    <h1 id="gov-hero-heading" class="gov-hero__title">Zero Trust Windows Productivity That Aids Government Compliance</h1>
-  </div>
-</section>
+  <main>
+    <section id="gov-hero" aria-labelledby="gov-hero-heading">
+      <div class="gov-hero__inner">
+        <p class="gov-eyebrow gov-eyebrow--light">Government &amp; Defense</p>
+        <h1 id="gov-hero-heading">Protect Sensitive Government Data with Zero Trust</h1>
+        <p class="gov-hero__lead">Extend Zero Trust directly to CUI and sensitive information across government, defense, and contractor environments.</p>
+        <p>FileFlex Enterprise provides granular Zero Trust Data Access to sensitive information across existing on-premises, cloud, SharePoint, file server, NAS, and legacy infrastructure—without requiring data migration or disrupting established workflows.</p>
+        <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request a Government &amp; Defense Demonstration &rsaquo;</a>
+      </div>
+    </section>
 
-<section id="fin-body" class="fin-body" aria-label="Government use cases">
-  <div class="fin-body__inner">
-    {rows.map((r, i) => (
-      <>
-        <div class="fin-block fin-row">
-          <div class="fin-row__media">
-            <img src={r.img} alt={r.title} loading="lazy" decoding="async" />
-          </div>
-          <div class="fin-row__copy">
-            <h2 class="fin-h2">{r.title}</h2>
-            <p class="fin-p">{r.body}</p>
-          </div>
+    <section class="gov-section gov-section--white" aria-labelledby="gov-evolved-heading">
+      <div class="gov-inner gov-split gov-split--portrait">
+        <div class="gov-copy">
+          <p class="gov-eyebrow">The Missing Layer of Zero Trust</p>
+          <h2 id="gov-evolved-heading">Government Security Has Evolved. Sensitive Data Must Too.</h2>
+          <p>Government agencies and defense contractors have invested heavily in identity security, MFA, endpoint protection, network segmentation, ZTNA, and other Zero Trust technologies.</p>
+          <p>But the information these systems are ultimately designed to protect—Controlled Unclassified Information (CUI), engineering files, technical documentation, contracts, operational records, and other sensitive unstructured data—remains distributed across file servers, NAS systems, SharePoint, cloud storage, FTP servers, and legacy infrastructure.</p>
+          <p>Traditional Zero Trust technologies protect identities, devices, applications, and network connections.</p>
+          <p><strong>FileFlex Enterprise extends Zero Trust to the data layer.</strong></p>
+          <p>It applies granular, policy-based controls directly to access to files and folders, helping government and defense organizations protect sensitive information wherever it resides.</p>
         </div>
-        {i < rows.length - 1 && <hr class="fin-sep" />}
-      </>
-    ))}
-  </div>
-</section>
+        <figure class="gov-infographic gov-infographic--portrait">
+          <img src="/images/government-defense/missing-layer.webp" alt="Zero Trust layers progress from identity, devices, and network access to FileFlex Zero Trust Data Access protecting CUI and sensitive data" width="1024" height="1536" loading="lazy" decoding="async" />
+        </figure>
+      </div>
+    </section>
 
-<section id="fin-blogs" class="fin-section fin-section--white" aria-labelledby="gov-blogs-heading">
-  <div class="fin-section__inner">
-    <h2 id="gov-blogs-heading" class="fin-h2 fin-h2--center">Check Out These Related Blogs</h2>
-    <div class="fin-blog-grid">
-      {blogs.map((b) => (
-        <a class="fin-blog" href={b.href} target="_blank" rel="noopener noreferrer">
-          <img class="fin-blog__img" src={b.img} alt="" loading="lazy" decoding="async" width="400" height="300" />
-          <div class="fin-blog__body">
-            <h3 class="fin-blog__title">{b.title}</h3>
-            <p class="fin-blog__blurb">{b.blurb}</p>
-            <span class="fin-blog__more">Read more →</span>
+    <section class="gov-section gov-section--navy" aria-labelledby="gov-cui-heading">
+      <div class="gov-inner">
+        <p class="gov-eyebrow gov-eyebrow--light gov-center">Protect Controlled Unclassified Information</p>
+        <h2 id="gov-cui-heading" class="gov-title gov-title--light gov-center">Govern Access to CUI Wherever It Resides</h2>
+        <p class="gov-lede gov-lede--light gov-center">Government agencies, defense organizations, prime contractors, subcontractors, and other members of the Defense Industrial Base need to provide authorized users with access to Controlled Unclassified Information without unnecessarily exposing the systems where that information resides.</p>
+        <p class="gov-lede gov-lede--light gov-center">FileFlex Enterprise applies granular access controls directly to CUI and other sensitive information while allowing the data to remain within existing government or contractor-controlled infrastructure.</p>
+        <div class="gov-capabilities">
+          {capabilities.map((item) => (
+            <article class="gov-icon-card">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d={item.icon} /></svg>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="gov-section gov-section--light" aria-labelledby="gov-infrastructure-heading">
+      <div class="gov-inner gov-split gov-split--architecture">
+        <div class="gov-copy">
+          <p class="gov-eyebrow">Modernize Without Migration</p>
+          <h2 id="gov-infrastructure-heading">Secure Existing Government Infrastructure</h2>
+          <p>Government and defense environments rarely operate from a single storage platform.</p>
+          <p>Sensitive information may be distributed across data centers, facilities, file servers, NAS systems, SharePoint, cloud infrastructure, FTP servers, and legacy systems accumulated over many years.</p>
+          <p>Replacing or consolidating that infrastructure can introduce cost, complexity, operational disruption, and risk.</p>
+          <p>FileFlex takes a different approach.</p>
+          <p>FileFlex Enterprise overlays existing infrastructure with a common Zero Trust Data Access layer, allowing organizations to strengthen security and governance without replacing the systems that already store their information.</p>
+        </div>
+        <figure class="gov-infographic">
+          <img src="/images/government-defense/architecture.webp" alt="Authorized users connect through FileFlex Enterprise Zero Trust Data Access to existing file servers, NAS, SharePoint, cloud storage, FTP, and hybrid infrastructure" width="1122" height="1402" loading="lazy" decoding="async" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="gov-section gov-section--white" aria-labelledby="gov-exposure-heading">
+      <div class="gov-inner gov-split">
+        <figure class="gov-photo"><img src="/images/government-defense/secure-workstation.webp" alt="Military professional accessing information at a secure government workstation" width="1600" height="900" loading="lazy" decoding="async" /></figure>
+        <div class="gov-copy">
+          <p class="gov-eyebrow">Secure Access by Design</p>
+          <h2 id="gov-exposure-heading">Protect Data Without Exposing the Infrastructure</h2>
+          <p>Users do not connect directly to the underlying storage repositories. FileFlex mediates access requests and applies policy before authorized information is retrieved.</p>
+          <p>FileFlex Connector Agents operate behind the firewall using outbound HTTPS connections, eliminating the need to open inbound firewall ports to storage infrastructure. Customer files remain within the organization's existing storage environment rather than being moved into FileFlex.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gov-section gov-section--light" aria-labelledby="gov-ecosystem-heading">
+      <div class="gov-inner">
+        <div class="gov-split gov-split--reverse gov-split--intro">
+          <div class="gov-copy">
+            <p class="gov-eyebrow">Controlled Cross-Boundary Access</p>
+            <h2 id="gov-ecosystem-heading">Secure Collaboration Across the Government &amp; Defense Ecosystem</h2>
+            <p>Government and defense information frequently needs to cross organizational boundaries.</p>
+            <p>Employees, contractors, subcontractors, suppliers, partners, and other authorized third parties may all require access to sensitive information—but they do not all require access to the networks and storage systems where that information resides.</p>
+            <p>FileFlex enables organizations to provide controlled access to the information people need while maintaining governance over the underlying data.</p>
           </div>
-        </a>
-      ))}
-    </div>
-  </div>
-</section>
+          <figure class="gov-photo"><img src="/images/government-defense/team-collaboration.webp" alt="Military personnel and civilian defense professionals collaborating around a secure computer" width="1600" height="900" loading="lazy" decoding="async" /></figure>
+        </div>
+        <div class="gov-photo-grid">
+          {ecosystem.map((item) => (
+            <article class="gov-photo-card">
+              <img src={item.image} alt={item.alt} loading="lazy" decoding="async" />
+              <div><h3>{item.title}</h3><p>{item.text}</p></div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
 
+    <section class="gov-section gov-section--white gov-governance" aria-labelledby="gov-governance-heading">
+      <div class="gov-inner gov-governance__copy">
+        <p class="gov-eyebrow gov-center">Govern Distributed Environments</p>
+        <h2 id="gov-governance-heading" class="gov-title gov-center">Centralized Governance. Granular Enforcement.</h2>
+        <p class="gov-lede gov-center">Government and defense organizations frequently operate across multiple departments, facilities, programs, contractors, and administrative domains.</p>
+        <p class="gov-lede gov-center">FileFlex enables central IT and security teams to establish consistent access policies and maintain visibility while supporting granular administration of access to individual users, groups, repositories, folders, and files.</p>
+        <p class="gov-statement">Central policy. <span>Local administration.</span> Granular data access.</p>
+        <p class="gov-lede gov-center">At the same time, FileFlex helps reduce unnecessary exposure by separating users from the underlying storage infrastructure and limiting access to the information they are authorized to use.</p>
+        <ul class="gov-feature-strip">
+          {governanceFeatures.map(([label, icon]) => (
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d={icon} /></svg><span>{label}</span></li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="gov-section gov-section--light" aria-labelledby="gov-compliance-heading">
+      <div class="gov-inner">
+        <p class="gov-eyebrow gov-center">Technical Controls for Broader Programs</p>
+        <h2 id="gov-compliance-heading" class="gov-title gov-center">Support Government Security &amp; Compliance Initiatives</h2>
+        <p class="gov-lede gov-center">No single technology makes an organization compliant.</p>
+        <p class="gov-lede gov-center">FileFlex Enterprise provides technical capabilities that can support broader government and defense cybersecurity and compliance programs by strengthening access control, least privilege, secure data access, activity visibility, and controlled external collaboration.</p>
+        <div class="gov-compliance-grid">
+          {compliance.map((item) => (
+            <article class="gov-compliance-card">
+              <img src={item.image} alt="" loading="lazy" decoding="async" />
+              <div><h3>{item.title}</h3><p>{item.text}</p></div>
+            </article>
+          ))}
+        </div>
+        <p class="gov-compliance-note"><strong>FedRAMP note:</strong> FileFlex does not replace FedRAMP authorization or make an organization FedRAMP compliant. It provides a data-access security layer that can complement a broader FedRAMP-aligned architecture.</p>
+      </div>
+    </section>
+
+    <section class="gov-section gov-section--navy" aria-labelledby="gov-benefits-heading">
+      <div class="gov-inner">
+        <p class="gov-eyebrow gov-eyebrow--light gov-center">Purpose-Built Data Access Security</p>
+        <h2 id="gov-benefits-heading" class="gov-title gov-title--light gov-center">Why Government &amp; Defense Organizations Choose FileFlex</h2>
+        <div class="gov-benefit-grid">
+          {benefits.map((item) => (
+            <article class="gov-benefit-card">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d={item.icon} /></svg>
+              <div><h3>{item.title}</h3><p>{item.text}</p></div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="gov-final" aria-labelledby="gov-final-heading">
+      <div class="gov-final__inner">
+        <p class="gov-eyebrow gov-eyebrow--light">Complete Your Zero Trust Architecture</p>
+        <h2 id="gov-final-heading">Secure the Data Layer of Zero Trust.</h2>
+        <p>Government Zero Trust strategies have made significant progress securing identities, devices, applications, and networks.</p>
+        <p>But ultimately, those technologies exist to protect something more important:</p>
+        <p class="gov-final__data">The Data.</p>
+        <p>FileFlex Enterprise extends Zero Trust directly to CUI and other sensitive government information, providing granular control over who can access data and what they can do with it—while allowing that information to remain within existing infrastructure.</p>
+        <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request a Government &amp; Defense Demonstration &rsaquo;</a>
+      </div>
+    </section>
+  </main>
 </Layout>
