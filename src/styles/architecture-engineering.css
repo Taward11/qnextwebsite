@@ -3,6 +3,7 @@
 #ae-workflow-cards{scroll-margin-top:calc(var(--nav-h) + 24px)}
 .ae-graphic.ae-graphic--compact{width:75%;justify-self:center}
 .ae-graphic:has(img[src$="/graphic-6.webp"]){width:min(100%,380px);justify-self:center}
+.ae-graphic:has(img[src$="/graphic-7.webp"]){width:min(100%,340px);justify-self:center}
 @media(min-width:981px){.ae-split:has(img[src$="/graphic-6.webp"]){grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}}
 .ae-shell.ae-network{grid-template-columns:minmax(0,1fr) minmax(0,2fr);max-width:1180px}
 .ae-network .ae-copy{text-align:left}
