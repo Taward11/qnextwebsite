@@ -1,3 +1,4 @@
+.ae-graphic.ae-graphic--compact{width:75%;justify-self:center}
 .ae-shell.ae-network{grid-template-columns:minmax(0,1fr);max-width:1000px}
 .ae-network .ae-copy{text-align:center}
 :root{--ae-navy:#082b49;--ae-ink:#132d42;--ae-soft:#536b7b;--ae-orange:#e8590a;--ae-mist:#f3f7f8;--ae-line:#d9e3e8}
