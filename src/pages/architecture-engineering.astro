@@ -64,7 +64,24 @@ const protections = [
         <figure class="ae-photo"><img src="/images/architecture-engineering-updated/workflow.webp" alt="Engineer using a Windows workstation with a detailed CAD model" loading="lazy" decoding="async" /></figure>
         <div class="ae-copy"><p class="ae-eyebrow">Work the way you work</p><h2>Zero Trust That Fits the Engineering Workflow</h2><h3>Work From Windows. Not Another Portal.</h3><p>Engineering professionals spend their day working in specialized applications and familiar Windows workflows. Security shouldn't require them to adopt an entirely different way of working.</p><p>FileFlex Enterprise integrates into Windows, allowing authorized remote files to appear within familiar Windows workflows and supporting access through standard Open/Save operations used by applications such as AutoCAD, Adobe and other Windows applications.</p><p>Engineers can work with authorized project files while FileFlex Enterprise governs access behind the scenes.</p></div>
       </div>
-      <div class="ae-shell ae-workflow-points"><div><b>Familiar Windows Workflow</b><span>Access authorized remote project files through familiar Windows environments.</span></div><div><b>Application Integration</b><span>Work with files using standard Windows Open/Save workflows from supported applications.</span></div><div><b>Distributed Access</b><span>Provide controlled access to project data across offices and remote locations.</span></div><div><b>No Data Migration</b><span>Continue working with files in their existing storage locations.</span></div></div>
+      <div class="ae-shell ae-workflow-points" id="ae-workflow-cards">
+        <div>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="13" rx="2"/><path d="M8 21h8m-4-5v5M8 7h3v5H8zm5 0h3v5h-3z"/></svg>
+          <b>Familiar Windows Workflow</b><span>Access authorized remote project files through familiar Windows environments.</span>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="12" height="12" rx="2"/><path d="M2 7h12"/><rect x="10" y="11" width="12" height="10" rx="2"/><path d="m14 16 2 2 3-4"/></svg>
+          <b>Application Integration</b><span>Work with files using standard Windows Open/Save workflows from supported applications.</span>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-5h14v5"/></svg>
+          <b>Distributed Access</b><span>Provide controlled access to project data across offices and remote locations.</span>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Zm5 6 3 3 5-5"/></svg>
+          <b>No Data Migration</b><span>Continue working with files in their existing storage locations.</span>
+        </div>
+      </div>
     </section>
 
     <section class="ae-section ae-section--navy" aria-labelledby="ip-title"><div class="ae-shell"><div class="ae-intro ae-intro--light"><p class="ae-eyebrow ae-eyebrow--light">Protect what differentiates you</p><h2 id="ip-title">Protect the Intellectual Property Behind Every Project</h2><p>Architectural drawings, engineering designs, specifications, technical documentation and project records represent years of expertise and significant commercial value.</p><p>FileFlex Enterprise extends Zero Trust principles directly to access to that information, giving organizations granular control over who can access sensitive project files and what they can do with them.</p></div><div class="ae-protection-grid">{protections.map((item) => <article><svg viewBox="0 0 24 24" aria-hidden="true"><path d={item.icon}/></svg><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></div></section>
