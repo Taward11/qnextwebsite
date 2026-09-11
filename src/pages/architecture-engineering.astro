@@ -7,7 +7,7 @@ import '../styles/architecture-engineering.css';
 
 const challengeCards = [
   { title: 'Large Project Files', text: 'CAD drawings, renderings, specifications and other project files can be difficult to access and work with remotely.', image: '/images/architecture-engineering-updated/workflow.webp', alt: 'Engineering workstation showing a detailed digital project model' },
-  { title: 'Distributed Data', text: 'Project information may reside across offices, file servers, NAS, SharePoint, cloud repositories and hybrid infrastructure.', storage: true },
+  { title: 'Distributed Data', text: 'Project information may reside across offices, file servers, NAS, SharePoint, cloud repositories and hybrid infrastructure.', image: '/images/architecture-engineering-updated/distributed-data.webp', alt: 'Server and NAS storage equipment in a glass-walled engineering office IT room' },
   { title: 'External Collaboration', text: 'Consultants, contractors and project partners need controlled access to specific project information.', image: '/images/architecture-engineering-updated/collaboration.webp', alt: 'Architecture project team collaborating around plans' },
   { title: 'Valuable Intellectual Property', text: "Designs, drawings, specifications and engineering documentation represent some of the firm's most valuable information.", image: '/images/architecture-engineering-updated/landscape.webp', alt: 'Landscape architecture plans and design work' },
 ];
@@ -44,7 +44,7 @@ const protections = [
         <div class="ae-challenge-grid">
           {challengeCards.map((card) => (
             <article class="ae-challenge-card">
-              {card.storage ? <div class="ae-storage" aria-label="Distributed storage repositories visual"><svg viewBox="0 0 280 150" role="img"><path d="M140 23v38M49 74h182M49 74v30m91-30v30m91-30v30M24 105h50v25H24zm91 0h50v25h-50zm91 0h50v25h-50zM130 23a10 10 0 1 0 20 0 10 10 0 0 0-20 0Z" /></svg></div> : <img src={card.image} alt={card.alt} loading="lazy" decoding="async" />}
+              <img src={card.image} alt={card.alt} loading="lazy" decoding="async" />
               <div><h3>{card.title}</h3><p>{card.text}</p></div>
             </article>
           ))}
