@@ -3,92 +3,82 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import '../styles/fileflex.css';
 import '../styles/platform.css';
-import '../styles/financial.css';
-import '../styles/architecture.css';
+import '../styles/architecture-engineering.css';
 
-const rows = [
-  {
-    title: 'Access and Share Large Files From Within Windows Over the Internet',
-    img: '/images/architecture/ip-Arch-Panel1-web-e1732657705979-1024x609.jpg',
-    body: `Today’s architectural and engineering projects involve hundreds of very large CAD files. FileFlex Enterprise allows remote access and sharing of these critical schematics over the Internet from within Windows over a standard Internet connection. Full integration with Windows means that remote locations look and act like a local drive under a single-pane-of-glass with easy access and no change in workflow.`,
-  },
-  {
-    title: 'Access and Share Large Files from a Tablet or Smartphone',
-    img: '/images/architecture/ip-Arch-Panel2-web-1024x1024.jpg',
-    body: `Project managers and skilled workers need to access CAD files when on the worksite, often from a tablet or smartphone. FileFlex Enterprise allows remote workers to natively access large AutoCAD, Photoshop and Adobe files from within Windows. With FileFlex Enterprise you can now have super secure access and its plug-and-play from Windows using any smartphone or tablet without needing a license for the source application.`,
-  },
-  {
-    title: 'Protect Intellectual Property',
-    img: '/images/architecture/ip-Arch-Pane-web-1024x1024.jpg',
-    body: `The main competitive advantage for architects and engineers is their intellectual property. The Zero Trust Data Access technology of FileFlex Enterprise allows organizations to control access to confidential documents and can prohibit sharing or restrict sharing with downloading prohibited. Intellectual property can be located on-premises without being copied to the servers of third parties. Additionally, the activity log provides visibility to all access, sharing or modification of trade secrets for forensic investigations. Alerts and the ability to auto-export to SIEM software can flag suspicious activity.`,
-  },
-  {
-    title: 'Enable Contractors and Gig-Workers with Controlled Information Access',
-    img: '/images/architecture/ip-Arch-Panel4-web-1024x1024.jpg',
-    body: `Both large and small jobs require extensive use of skilled contractors that need access to design files. FileFlex Enterprise allows IT to control remote data access on their SharePoint or hybrid infrastructure to just the information needed, with least-privilege as needed policies to enable the remote contractor workforce.`,
-  },
-  {
-    title: 'Replace Reliance on VPN Connections with their Slow Upload and Download Speeds',
-    img: '/images/architecture/ip-Arch-Panel5-web-1024x1024.jpg',
-    body: `Traditionally your remote workforce must download job-related CAD files and open with a local copy of the CAD software over a VPN. Due to the large size of these files, this can be a slow and expensive process. FileFlex Enterprise provides remote access to files from their source locations over the Internet without the need for a VPN.`,
-  },
+const challengeCards = [
+  { title: 'Large Project Files', text: 'CAD drawings, renderings, specifications and other project files can be difficult to access and work with remotely.', image: '/images/architecture-engineering-updated/workflow.webp', alt: 'Engineering workstation showing a detailed digital project model' },
+  { title: 'Distributed Data', text: 'Project information may reside across offices, file servers, NAS, SharePoint, cloud repositories and hybrid infrastructure.', storage: true },
+  { title: 'External Collaboration', text: 'Consultants, contractors and project partners need controlled access to specific project information.', image: '/images/architecture-engineering-updated/collaboration.webp', alt: 'Architecture project team collaborating around plans' },
+  { title: 'Valuable Intellectual Property', text: "Designs, drawings, specifications and engineering documentation represent some of the firm's most valuable information.", image: '/images/architecture-engineering-updated/landscape.webp', alt: 'Landscape architecture plans and design work' },
 ];
 
-const blogs = [
-  {
-    title: 'Upholding Cybersecurity for Architects Through Zero Trust Data Access',
-    blurb: 'Cybersecurity for architects is vital as they navigate remote collaboration and digital tool integration, with Zero Trust Data Access (ZTDA) enhancing security […]',
-    img: '/images/architecture/ip-Arch-Panel1-web-e1732657705979-400x300.jpg',
-    href: '/blog/upholding-cybersecurity-for-architects-through-zero-trust-data-access/',
-  },
+const protections = [
+  { title: 'Least-Privilege Access', text: 'Give users access only to the project files and folders they are authorized to use.', icon: 'M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7l-8-4Zm-3 9 2 2 4-4' },
+  { title: 'Controlled External Collaboration', text: 'Provide contractors, consultants and outside parties with controlled access to specific project information without unnecessarily exposing underlying infrastructure.', icon: 'M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm8-1a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM2 21a6 6 0 0 1 12 0H2Zm11.5 0a5 5 0 0 1 8.5-3.57V21h-8.5Z' },
+  { title: 'Control Sharing and Downloading', text: 'Apply granular permissions including view-only, download and sharing restrictions where appropriate for sensitive information.', icon: 'M4 5.5A2.5 2.5 0 0 1 6.5 3h3l2 2h6A2.5 2.5 0 0 1 20 7.5v9a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5v-11Zm8 3v7m0 0-3-3m3 3 3-3' },
+  { title: 'Activity Visibility', text: 'Maintain an activity log of access and sharing actions and export activity to SIEM/Syslog environments for centralized security visibility.', icon: 'M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Zm9.5 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z' },
 ];
 ---
+<Layout title="Zero Trust Data Access for Architecture & Engineering | FileFlex" description="Protect CAD drawings, project files and engineering intellectual property with Zero Trust Data Access from FileFlex Enterprise.">
+  <Nav />
+  <main>
+    <section class="ae-hero" aria-labelledby="ae-title">
+      <div class="ae-shell ae-hero__inner">
+        <p class="ae-eyebrow ae-eyebrow--light">Architecture &amp; Engineering</p>
+        <h1 id="ae-title">Protect Engineering Data Without Disrupting How Engineers Work</h1>
+        <p class="ae-hero__lede">Secure Zero Trust Data Access to CAD drawings, project files and intellectual property across distributed teams, offices, contractors and clients — without moving the data or changing existing storage infrastructure.</p>
+        <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request a Demonstration</a>
+        <p class="ae-hero__tags">CAD &amp; Large Files <span>•</span> Distributed Project Teams <span>•</span> Contractor Access <span>•</span> Existing Storage <span>•</span> Zero Trust Data Access</p>
+      </div>
+    </section>
 
-<Layout title="Architecture and Engineering — Plug-And-Play Windows Zero Trust Access for Large CAD Files | FileFlex" description="FileFlex Enterprise enables architecture and engineering firms to securely access and share very large CAD files from Windows, tablets and smartphones using Zero Trust Data Access.">
-<Nav />
-
-<section id="ae-hero" aria-labelledby="ae-hero-heading">
-  <div class="ae-hero__inner">
-    <p class="ae-hero__eyebrow">ARCHITECTURE AND ENGINEERING</p>
-    <h1 id="ae-hero-heading" class="ae-hero__title">Now You Can Have a Plug-And-Play Windows Secure Zero Trust Data Access and Sharing of Very Large CAD Files for Your Distributed Workforce</h1>
-  </div>
-</section>
-
-<section id="fin-body" class="fin-body" aria-label="Architecture and engineering use cases">
-  <div class="fin-body__inner">
-    {rows.map((r, i) => (
-      <>
-        <div class="fin-block fin-row">
-          <div class="fin-row__media">
-            <img src={r.img} alt={r.title} loading="lazy" decoding="async" />
-          </div>
-          <div class="fin-row__copy">
-            <h2 class="fin-h2">{r.title}</h2>
-            <p class="fin-p">{r.body}</p>
-          </div>
+    <section class="ae-section ae-section--mist" aria-labelledby="challenge-title">
+      <div class="ae-shell">
+        <div class="ae-intro">
+          <p class="ae-eyebrow">A distributed reality</p>
+          <h2 id="challenge-title">Engineering Data Wasn't Designed for Today's Distributed Workforce</h2>
+          <p>Architecture and engineering firms depend on large, complex project files that may be distributed across file servers, NAS devices, SharePoint, cloud storage and multiple offices.</p>
+          <p>At the same time, architects, engineers, project managers, consultants and contractors need access to that information from different locations throughout the life of a project.</p>
+          <p>The challenge is providing secure, productive access to valuable project data without forcing firms to migrate information, expose infrastructure or disrupt established engineering workflows.</p>
         </div>
-        {i < rows.length - 1 && <hr class="fin-sep" />}
-      </>
-    ))}
-  </div>
-</section>
+        <div class="ae-challenge-grid">
+          {challengeCards.map((card) => (
+            <article class="ae-challenge-card">
+              {card.storage ? <div class="ae-storage" aria-label="Distributed storage repositories visual"><svg viewBox="0 0 280 150" role="img"><path d="M140 23v38M49 74h182M49 74v30m91-30v30m91-30v30M24 105h50v25H24zm91 0h50v25h-50zm91 0h50v25h-50zM130 23a10 10 0 1 0 20 0 10 10 0 0 0-20 0Z" /></svg></div> : <img src={card.image} alt={card.alt} loading="lazy" decoding="async" />}
+              <div><h3>{card.title}</h3><p>{card.text}</p></div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
 
-<section id="fin-blogs" class="fin-section fin-section--white" aria-labelledby="ae-blogs-heading">
-  <div class="fin-section__inner">
-    <h2 id="ae-blogs-heading" class="fin-h2 fin-h2--center">Check Out This Related Blog</h2>
-    <div class="fin-blog-grid ae-blog-grid">
-      {blogs.map((b) => (
-        <a class="fin-blog" href={b.href} target="_blank" rel="noopener noreferrer">
-          <img class="fin-blog__img" src={b.img} alt="" loading="lazy" decoding="async" width="400" height="300" />
-          <div class="fin-blog__body">
-            <h3 class="fin-blog__title">{b.title}</h3>
-            <p class="fin-blog__blurb">{b.blurb}</p>
-            <span class="fin-blog__more">Read more →</span>
-          </div>
-        </a>
-      ))}
-    </div>
-  </div>
-</section>
+    <section class="ae-section ae-section--white">
+      <div class="ae-shell ae-split">
+        <div class="ae-copy"><p class="ae-eyebrow">Keep data in place</p><h2>Move Access and Governance — Not the Data</h2><p>FileFlex Enterprise overlays existing architecture and engineering infrastructure to provide Zero Trust Data Access to project files wherever they already reside.</p><p>Instead of requiring organizations to move project information into another repository, FileFlex provides secure access to existing data across on-premises, cloud and hybrid environments.</p><p class="ae-emphasis">No mandatory migration. No parallel storage repository. No need to restructure existing project data.</p></div>
+        <figure class="ae-graphic"><img src="/images/architecture-engineering-updated/graphic-2.webp" alt="FileFlex access and governance overlay connecting to existing project data" loading="lazy" decoding="async" /></figure>
+      </div>
+    </section>
 
+    <section class="ae-section ae-section--tint">
+      <div class="ae-shell ae-split">
+        <figure class="ae-photo"><img src="/images/architecture-engineering-updated/workflow.webp" alt="Engineer using a Windows workstation with a detailed CAD model" loading="lazy" decoding="async" /></figure>
+        <div class="ae-copy"><p class="ae-eyebrow">Work the way you work</p><h2>Zero Trust That Fits the Engineering Workflow</h2><h3>Work From Windows. Not Another Portal.</h3><p>Engineering professionals spend their day working in specialized applications and familiar Windows workflows. Security shouldn't require them to adopt an entirely different way of working.</p><p>FileFlex Enterprise integrates into Windows, allowing authorized remote files to appear within familiar Windows workflows and supporting access through standard Open/Save operations used by applications such as AutoCAD, Adobe and other Windows applications.</p><p>Engineers can work with authorized project files while FileFlex Enterprise governs access behind the scenes.</p></div>
+      </div>
+      <div class="ae-shell ae-workflow-points"><div><b>Familiar Windows Workflow</b><span>Access authorized remote project files through familiar Windows environments.</span></div><div><b>Application Integration</b><span>Work with files using standard Windows Open/Save workflows from supported applications.</span></div><div><b>Distributed Access</b><span>Provide controlled access to project data across offices and remote locations.</span></div><div><b>No Data Migration</b><span>Continue working with files in their existing storage locations.</span></div></div>
+    </section>
+
+    <section class="ae-section ae-section--navy" aria-labelledby="ip-title"><div class="ae-shell"><div class="ae-intro ae-intro--light"><p class="ae-eyebrow ae-eyebrow--light">Protect what differentiates you</p><h2 id="ip-title">Protect the Intellectual Property Behind Every Project</h2><p>Architectural drawings, engineering designs, specifications, technical documentation and project records represent years of expertise and significant commercial value.</p><p>FileFlex Enterprise extends Zero Trust principles directly to access to that information, giving organizations granular control over who can access sensitive project files and what they can do with them.</p></div><div class="ae-protection-grid">{protections.map((item) => <article><svg viewBox="0 0 24 24" aria-hidden="true"><path d={item.icon}/></svg><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></div></section>
+
+    <section class="ae-section ae-section--white"><div class="ae-shell ae-split"><div class="ae-copy"><p class="ae-eyebrow">Collaborate without exposure</p><h2>One Project. Many Organizations. Controlled Data Access.</h2><p>Modern architecture and engineering projects extend far beyond the walls of a single firm.</p><p>Architects collaborate with structural, mechanical and electrical engineers. Project managers coordinate with contractors and consultants. Clients require access to project information. Teams may operate from different offices, companies and IT environments.</p><p>FileFlex Enterprise provides a controlled data access layer across this distributed project ecosystem while allowing the organization responsible for the data to maintain governance over access.</p></div><figure class="ae-graphic"><img src="/images/architecture-engineering-updated/graphic-4.webp" alt="Modern project collaboration ecosystem governed by FileFlex" loading="lazy" decoding="async" /></figure></div></section>
+
+    <section class="ae-section ae-section--tint"><div class="ae-shell ae-split"><figure class="ae-photo"><img src="/images/architecture-engineering-updated/collaboration.webp" alt="Architect and contractor collaborating on a project plan" loading="lazy" decoding="async" /></figure><div class="ae-copy"><p class="ae-eyebrow">Granular contractor access</p><h2>Give Contractors the Data They Need — Not Everything Around It</h2><p>Contractors and specialist consultants are essential to architecture and engineering projects, but they often require access to only a small portion of an organization's project information.</p><p>FileFlex Enterprise allows IT to provide granular access to specific files and folders based on the needs of the project.</p><p>Contractors can access authorized information while the underlying storage infrastructure remains protected and unnecessary access is restricted.</p><p class="ae-emphasis">Provide access to the project — not the entire environment.</p></div></div><div class="ae-shell ae-network"><div class="ae-copy"><p class="ae-eyebrow">Data, not the network</p><h2>Give Users Access to Data — Not the Network</h2><p>Traditional remote-access approaches can require organizations to extend network connectivity to users simply so they can reach the files they need.</p><p>FileFlex Enterprise changes that model.</p><p>Authorized users request access to specific data. FileFlex evaluates the request and provides access to approved files and folders without giving the user general access to the underlying corporate network or storage infrastructure.</p></div><figure class="ae-graphic"><img src="/images/architecture-engineering-updated/graphic-5.webp" alt="Comparison of data access and network access" loading="lazy" decoding="async" /></figure></div></section>
+
+    <section class="ae-section ae-section--white"><div class="ae-shell ae-split"><figure class="ae-graphic"><img src="/images/architecture-engineering-updated/graphic-6.webp" alt="Distributed engineering data environment connected through FileFlex" loading="lazy" decoding="async" /></figure><div class="ae-copy"><p class="ae-eyebrow">A common access layer</p><h2>Secure Access Across the Engineering Data Environment</h2><p>Architecture and engineering firms rarely store all project information in one place.</p><p>FileFlex Enterprise provides a common Zero Trust Data Access layer across heterogeneous storage environments, helping organizations govern access without forcing consolidation into a new repository.</p></div></div></section>
+
+    <section class="ae-section ae-section--tint"><div class="ae-shell ae-split"><div class="ae-copy"><p class="ae-eyebrow">Built for the project site</p><h2>Built for Real Engineering Workflows</h2><h3>Landscape Architecture</h3><p>Large design and project files can create significant challenges for distributed architecture teams, particularly when organizations want to preserve their existing storage infrastructure rather than move project information into another cloud repository.</p><p>FileFlex Enterprise enables remote access to large project files from their existing locations, helping distributed teams work with the information they need while maintaining centralized control over access.</p><p>The result: secure access to large project files without requiring a wholesale migration of existing data or a parallel storage environment.</p></div><figure class="ae-photo"><img src="/images/architecture-engineering-updated/landscape.webp" alt="Landscape architects working with a detailed site plan" loading="lazy" decoding="async" /></figure></div></section>
+
+    <section class="ae-section ae-section--white"><div class="ae-shell ae-split"><figure class="ae-graphic"><img src="/images/architecture-engineering-updated/graphic-7.webp" alt="How engineering data access works through FileFlex policy enforcement" loading="lazy" decoding="async" /></figure><div class="ae-copy"><p class="ae-eyebrow">Policy enforced</p><h2>Security That Works Behind the Scenes</h2><p>Every request for project data passes through FileFlex Enterprise policy enforcement before access is granted.</p><p>Users do not connect directly to the underlying storage system. FileFlex mediates the request, applies access policies and retrieves authorized information through its secure connector architecture.</p></div></div></section>
+    <section class="ae-section ae-section--tint"><div class="ae-shell ae-split"><div class="ae-copy"><p class="ae-eyebrow">The data layer</p><h2>Complete Zero Trust at the Data Layer</h2><p>Architecture and engineering firms have invested heavily in protecting identities, endpoints, networks and applications.</p><p>But those controls ultimately surround something even more valuable:</p><p class="ae-emphasis">The designs, drawings, specifications and intellectual property behind every project.</p><p>FileFlex Enterprise extends Zero Trust directly to that data, providing granular access control to files and folders across existing storage environments.</p></div><figure class="ae-graphic"><img src="/images/architecture-engineering-updated/graphic-8.webp" alt="Complete Zero Trust at the data layer" loading="lazy" decoding="async" /></figure></div></section>
+    <section class="ae-final"><div class="ae-shell"><p class="ae-eyebrow ae-eyebrow--light">FileFlex Enterprise</p><h2>Protect Engineering Data Without Rebuilding Your Infrastructure</h2><p>Your project data is already distributed across offices, storage systems, applications and project teams.</p><p>You shouldn't have to move it all somewhere else to secure it.</p><p>FileFlex Enterprise adds Zero Trust Data Access across your existing environment, helping architects and engineers securely access and collaborate on valuable project information while preserving the infrastructure and workflows they already use.</p><a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request an Architecture &amp; Engineering Demonstration</a></div></section>
+  </main>
 </Layout>
