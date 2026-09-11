@@ -1,3 +1,4 @@
+.ae-intro--light .ae-eyebrow--light{display:inline-block}
 .ae-workflow-points svg{display:block;width:40px;height:40px;margin-bottom:16px;fill:none;stroke:var(--ae-orange);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 #ae-workflow-cards{scroll-margin-top:calc(var(--nav-h) + 24px)}
 .ae-graphic.ae-graphic--compact{width:75%;justify-self:center}
