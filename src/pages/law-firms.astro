@@ -3,92 +3,49 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import '../styles/fileflex.css';
 import '../styles/platform.css';
-import '../styles/financial.css';
 import '../styles/lawfirms.css';
 
-const rows = [
-  {
-    title: 'Unified Secure Access Within Windows of Any Storage Location',
-    img: '/images/lawfirms/ip-LF-Panel1-web-e1777321165129-1024x507.jpg',
-    body: `Like most organizations today, law firms have vast amounts of unstructured data located on thousands of devices and in multiple offices in the form of legal documents. FileFlex Enterprise unifies access to these documents from any locations within Windows where they act as though they are on local drives. The files can be located on servers, server-attached, network-attached or storage of individual PCs, cloud-hosted storage of Amazon, Azure, Google, OneDrive or Box, or both self-hosted or Microsoft-hosted implementations of SharePoint.`,
-  },
-  {
-    title: 'Protect Personally Identifiable Information',
-    img: '/images/lawfirms/ip-LF-Panel2-web-e1734469679436-1024x577.jpg',
-    body: `Law firms are trusted with the most sensitive Personally Identifiable Information and confidential data that their clients have. And their clients trust them to keep that information protected. FileFlex Enterprise uses a Zero Trust Data Access architecture and extensive security controls over the access and sharing of these files. That includes the ability to restrict sharing and access of PII and client-confidential information to ‘access-only’ (no sharing) and ‘view-only’ (no downloading). Sensitive information can even be stored, access and shared from on-premises storage where it is not subject to secret legalized access and exfiltration from third parties, law enforcement, and foreign powers via the CLOUD Act.`,
-  },
-  {
-    title: 'Share With Clients Even If They Are Not Technology Savvy',
-    img: '/images/lawfirms/ip-LF-Panel3-web-1024x1024.jpg',
-    body: `Often legal documents need to be shared by lawyers and with clients who might not be technology savvy. For infrequent use, FileFlex Enterprise allows clients to access via a simple user app from within their browser that is easy and intuitive to use even for users that are not tech-savvy. Legal staff and clients that need heavy access can use the Windows Integrated Client and access storage locations as if they are on a local drive within Windows with no learning curve.`,
-  },
-  {
-    title: 'Create Secure and Private Virtual Data Rooms on a Client-by-Client Basis',
-    img: '/images/lawfirms/ip-LF-Panel4-web-1024x1007.jpg',
-    body: `The best way to receive and provide information to clients is via virtual data rooms. FileFlex Enterprise allows each legal firm user to easily set up and provide access to an unlimited number of virtual data rooms – one or more per client with many guests having access as required. Guest access can be restricted on a person-by-person basis with some or all can be access-controlled with ‘No downloading’ or ‘No sharing’ as needed. Users can track every access and every activity of every guest in their activity log.`,
-  },
-  {
-    title: 'Control Remote Access to Sensitive Legal Information',
-    img: '/images/lawfirms/ip-LF-Panel5-web-1024x891.jpg',
-    body: `Clients expect law firms to govern and control access to their information. FileFlex Enterprise has extensive governance abilities and an IT management toolkit to control access and sharing of any and all unstructured data including legal documents and an activity log with alerts that can be exported to SIEM software and be used to flag suspicious behavior or to aid in forensic investigation to support the firm’s needs to meet professional standards and privacy regulations.`,
-  },
+const challenges = [
+  { title: 'Confidential Client Information', text: 'Legal matters can contain highly sensitive client, personal, financial and business information that must remain carefully controlled.', image: '/images/law-firms-updated/workflow.webp', alt: 'Legal professional working with confidential documents' },
+  { title: 'Distributed Legal Data', text: 'Matter information may reside across file servers, NAS, SharePoint, cloud storage and multiple offices.', image: '/images/law-firms-updated/graphic-2.webp', alt: 'Distributed repositories connected through FileFlex' },
+  { title: 'External Collaboration', text: 'Attorneys regularly collaborate with clients, co-counsel, experts, consultants and other outside parties.', image: '/images/law-firms-updated/hero.webp', alt: 'Legal team collaborating in a modern office' },
+  { title: 'Access Governance', text: 'Firms need to control who can access matter information, what they can do with it and maintain visibility into access and sharing activity.', image: '/images/law-firms-updated/graphic-8.webp', alt: 'Matter access governance visual' },
 ];
 
-const blogs = [
-  {
-    title: 'Cybersecurity for Law Firms: The Priority of Zero Trust Data Access Security',
-    blurb: 'Cybersecurity and Zero Trust Data Access security is crucial for law firms to protect sensitive client data, mitigate insider threats, comply with […]',
-    img: '/images/lawfirms/iStock-825810126-web-e1727981340953-400x300.jpg',
-    href: '/blog/',
-  },
+const workflow = [
+  { title: 'Familiar Windows Access', text: 'Access authorized remote matter files through familiar Windows environments.', icon: '<rect x="3" y="3" width="18" height="13" rx="2"/><path d="M8 21h8m-4-5v5M8 7h3v5H8zm5 0h3v5h-3z"/>' },
+  { title: 'Application Integration', text: 'Work with files using standard Windows Open/Save workflows from supported applications.', icon: '<rect x="2" y="3" width="12" height="12" rx="2"/><path d="M2 7h12"/><rect x="10" y="11" width="12" height="10" rx="2"/><path d="m14 16 2 2 3-4"/>' },
+  { title: 'Distributed Access', text: 'Provide controlled access to legal information across offices and remote locations.', icon: '<rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-5h14v5"/>' },
+  { title: 'No Data Migration', text: 'Continue working with matter files in their existing storage locations.', icon: '<path d="M3 7V5a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Zm5 6 3 3 5-5"/>' },
+];
+
+const protections = [
+  { title: 'Least-Privilege Access', text: 'Give users access only to the matter files and folders they are authorized to use.', icon: 'M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7l-8-4Zm-3 9 2 2 4-4' },
+  { title: 'Control Sharing and Downloading', text: 'Apply view-only, download and sharing restrictions where appropriate.', icon: 'M4 5.5A2.5 2.5 0 0 1 6.5 3h3l2 2h6A2.5 2.5 0 0 1 20 7.5v9a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5v-11Zm8 3v7m0 0-3-3m3 3 3-3' },
+  { title: 'Controlled External Access', text: 'Provide clients and outside parties controlled access to specific information without unnecessarily exposing underlying infrastructure.', icon: 'M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm8-1a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM2 21a6 6 0 0 1 12 0H2Zm11.5 0a5 5 0 0 1 8.5-3.57V21h-8.5Z' },
+  { title: 'Activity Visibility', text: 'Maintain an activity log of access and sharing actions with export to SIEM/Syslog.', icon: 'M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Zm9.5 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z' },
 ];
 ---
+<Layout title="Zero Trust Data Access for Law Firms | FileFlex" description="Protect confidential client information with FileFlex Enterprise Zero Trust Data Access for law firms, without moving existing data or replacing familiar legal workflows.">
+  <Nav />
+  <main>
+    <section class="lfu-hero" aria-labelledby="law-title"><div class="lfu-shell lfu-hero__inner"><p class="lfu-eyebrow lfu-eyebrow--light">Law Firms</p><h1 id="law-title">Protect Client Information Without Disrupting How Legal Teams Work</h1><p>Secure Zero Trust Data Access to confidential client files, legal documents and matter information across attorneys, staff, clients and outside parties — without moving the data or replacing existing storage infrastructure.</p><a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request a Demonstration</a><small>Client Confidentiality <i>•</i> Matter Collaboration <i>•</i> Virtual Data Rooms <i>•</i> Existing Storage <i>•</i> Zero Trust Data Access</small></div></section>
 
-<Layout title="Law Firms — Secure and Controlled Access to Confidential Client Information | FileFlex" description="FileFlex Enterprise gives law firms unified, Zero Trust Data Access to legal documents across Windows, with virtual data rooms and full IT control.">
-<Nav />
+    <section class="lfu-section lfu-section--mist"><div class="lfu-shell"><div class="lfu-intro"><p class="lfu-eyebrow">Client data challenge</p><h2>Protecting Client Information in a More Connected Legal Environment</h2><p>Law firms manage some of their clients' most sensitive information while attorneys, staff, clients and outside parties increasingly need access from different locations.</p><p>The challenge is enabling that collaboration without unnecessarily exposing infrastructure, losing control over client information or disrupting established legal workflows.</p></div><div class="lfu-challenge-grid">{challenges.map((card) => <article><img src={card.image} alt={card.alt} loading="lazy" decoding="async" /><div><h3>{card.title}</h3><p>{card.text}</p></div></article>)}</div></div></section>
 
-<section id="lf-hero" aria-labelledby="lf-hero-heading">
-  <div class="lf-hero__inner">
-    <p class="lf-hero__eyebrow">LAW FIRMS</p>
-    <h1 id="lf-hero-heading" class="lf-hero__title">Secure and Controlled Access to Confidential Client Information</h1>
-  </div>
-</section>
+    <section class="lfu-section lfu-section--white"><div class="lfu-shell lfu-split"><div class="lfu-copy"><p class="lfu-eyebrow">Keep data in place</p><h2>Move Access and Governance — Not the Data</h2><p>FileFlex Enterprise overlays existing legal IT infrastructure to provide Zero Trust Data Access to matter files wherever they already reside.</p><p>Instead of requiring firms to move confidential information into another repository, FileFlex provides secure access across existing on-premises, cloud and hybrid environments.</p><p class="lfu-emphasis">No mandatory migration. No parallel storage repository. No need to restructure existing client data.</p></div><figure class="lfu-graphic"><img src="/images/law-firms-updated/graphic-2.webp" alt="FileFlex access and governance overlay over existing legal data" loading="lazy" decoding="async" /></figure></div></section>
 
-<section id="fin-body" class="fin-body" aria-label="Law firm use cases">
-  <div class="fin-body__inner">
-    {rows.map((r, i) => (
-      <>
-        <div class="fin-block fin-row">
-          <div class="fin-row__media">
-            <img src={r.img} alt={r.title} loading="lazy" decoding="async" />
-          </div>
-          <div class="fin-row__copy">
-            <h2 class="fin-h2">{r.title}</h2>
-            <p class="fin-p">{r.body}</p>
-          </div>
-        </div>
-        {i < rows.length - 1 && <hr class="fin-sep" />}
-      </>
-    ))}
-  </div>
-</section>
+    <section class="lfu-section lfu-section--tint"><div class="lfu-shell lfu-split"><div class="lfu-copy"><p class="lfu-eyebrow">Work the way you work</p><h2>Zero Trust That Fits the Legal Workflow</h2><h3>Work From Familiar Windows Applications and Workflows</h3><p>Attorneys and legal staff spend their day working with documents, correspondence and matter files through familiar Windows applications and workflows. Security shouldn't require them to adopt an entirely different way of working.</p><p>FileFlex Enterprise integrates into Windows, allowing authorized remote files to appear within familiar Windows environments and supporting standard Open/Save operations.</p><p>Legal teams work the way they already work while FileFlex governs access behind the scenes.</p></div><figure class="lfu-photo"><img src="/images/law-firms-updated/workflow.webp" alt="Attorney working naturally in a modern law office" loading="lazy" decoding="async" /></figure></div><div class="lfu-shell lfu-workflow">{workflow.map((item) => <article><svg viewBox="0 0 24 24" aria-hidden="true" set:html={item.icon}/><b>{item.title}</b><span>{item.text}</span></article>)}</div></section>
 
-<section id="fin-blogs" class="fin-section fin-section--white" aria-labelledby="lf-blogs-heading">
-  <div class="fin-section__inner">
-    <h2 id="lf-blogs-heading" class="fin-h2 fin-h2--center">Check Out This Related Blog</h2>
-    <div class="fin-blog-grid lf-blog-grid">
-      {blogs.map((b) => (
-        <a class="fin-blog" href={b.href} target="_blank" rel="noopener noreferrer">
-          <img class="fin-blog__img" src={b.img} alt="" loading="lazy" decoding="async" width="400" height="300" />
-          <div class="fin-blog__body">
-            <h3 class="fin-blog__title">{b.title}</h3>
-            <p class="fin-blog__blurb">{b.blurb}</p>
-            <span class="fin-blog__more">Read more →</span>
-          </div>
-        </a>
-      ))}
-    </div>
-  </div>
-</section>
+    <section class="lfu-section lfu-section--navy"><div class="lfu-shell"><div class="lfu-intro lfu-intro--light"><p class="lfu-eyebrow lfu-eyebrow--light">Protect what clients entrust to you</p><h2>Protect Confidential Client Information</h2><p>Legal matters can contain privileged communications, personally identifiable information, financial records, intellectual property and other highly confidential client information.</p><p>FileFlex Enterprise extends Zero Trust principles directly to access to that data, giving firms granular control over who can access specific files and folders and what they can do with them.</p></div><div class="lfu-protection-grid">{protections.map((item) => <article><svg viewBox="0 0 24 24" aria-hidden="true"><path d={item.icon}/></svg><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></div></section>
 
+    <section class="lfu-section lfu-section--white"><div class="lfu-shell lfu-split"><figure class="lfu-graphic"><img src="/images/law-firms-updated/graphic-4.webp" alt="Controlled legal matter collaboration ecosystem" loading="lazy" decoding="async" /></figure><div class="lfu-copy"><p class="lfu-eyebrow">Collaborate without exposure</p><h2>One Matter. Many Participants. Controlled Data Access.</h2><p>Modern legal matters frequently extend beyond the walls of a single law firm.</p><p>Attorneys collaborate with clients, co-counsel, experts, consultants and other outside parties. Different participants may need access to different documents at different stages of a matter.</p><p>FileFlex Enterprise provides a controlled data access layer across this distributed legal ecosystem while allowing the organization responsible for the information to maintain governance over access.</p></div></div></section>
+    <section class="lfu-section lfu-section--tint"><div class="lfu-shell lfu-split"><div class="lfu-copy"><p class="lfu-eyebrow">Secure client collaboration</p><h2>Create Secure Matter and Client Workspaces</h2><p>Legal teams frequently need controlled spaces for exchanging documents with clients and outside parties.</p><p>FileFlex Enterprise allows authorized users to create secure virtual data rooms around existing information, providing controlled access to specific files and folders without requiring the firm to move those documents into another data repository.</p><p class="lfu-emphasis">Create secure collaboration spaces around the data you already have.</p></div><figure class="lfu-graphic"><img src="/images/law-firms-updated/graphic-5.webp" alt="Secure virtual data room for legal matter collaboration" loading="lazy" decoding="async" /></figure></div></section>
+    <section class="lfu-section lfu-section--white"><div class="lfu-shell lfu-split"><figure class="lfu-graphic"><img src="/images/law-firms-updated/graphic-6.webp" alt="Data access without underlying law firm network access" loading="lazy" decoding="async" /></figure><div class="lfu-copy"><p class="lfu-eyebrow">Data, not the network</p><h2>Give Outside Parties Access to Data — Not the Network</h2><p>Clients, co-counsel, experts and consultants may need access to specific legal documents. They don't need access to the firm's underlying network or storage infrastructure.</p><p>FileFlex Enterprise mediates access to authorized data, allowing firms to provide granular external access without unnecessarily extending network access to outside parties.</p></div></div></section>
+    <section class="lfu-section lfu-section--tint"><div class="lfu-shell lfu-split"><div class="lfu-copy"><p class="lfu-eyebrow">Existing legal data</p><h2>One Access Layer Across Existing Data Repositories</h2><p>Law firms rarely store all client and matter information in one place.</p><p>FileFlex Enterprise provides a common Zero Trust Data Access layer across heterogeneous storage environments, helping firms govern access without forcing consolidation into a new repository.</p></div><figure class="lfu-graphic"><img src="/images/law-firms-updated/graphic-7.svg" alt="FileFlex access layer connecting file servers, NAS, SharePoint, cloud storage and multiple offices" loading="lazy" decoding="async" /></figure></div></section>
+    <section class="lfu-section lfu-section--white"><div class="lfu-shell lfu-split"><div class="lfu-copy"><p class="lfu-eyebrow">Built for real legal workflows</p><h2>Extend the Life of Existing Legal Storage Infrastructure</h2><p>Law firms can accumulate years of client and matter information on existing file servers and NAS infrastructure. Replacing or migrating those systems simply to enable modern remote access can introduce cost, complexity and disruption.</p><p>FileFlex Enterprise adds controlled remote access to existing storage, allowing firms to modernize how authorized users access legal information without requiring a wholesale migration to another repository.</p><p class="lfu-emphasis">Modernize access without unnecessarily replacing the infrastructure that already works.</p></div><figure class="lfu-photo"><img src="/images/law-firms-updated/infrastructure.webp" alt="Legal team working with documents in an established law office" loading="lazy" decoding="async" /></figure></div></section>
+    <section class="lfu-section lfu-section--tint"><div class="lfu-shell lfu-split"><figure class="lfu-graphic"><img src="/images/law-firms-updated/graphic-8.webp" alt="FileFlex policy enforcement for legal data access" loading="lazy" decoding="async" /></figure><div class="lfu-copy"><p class="lfu-eyebrow">Policy enforced</p><h2>Security That Works Behind the Scenes</h2><p>Every request for matter data passes through FileFlex Enterprise policy enforcement before access is granted.</p><p>Users do not connect directly to the underlying storage system. FileFlex mediates each request, applies access policies and retrieves only authorized information through its secure connector architecture.</p></div></div></section>
+    <section class="lfu-section lfu-section--white"><div class="lfu-shell lfu-split"><div class="lfu-copy"><p class="lfu-eyebrow">The data layer</p><h2>Complete Zero Trust at the Data Layer</h2><p>Law firms have invested in protecting identities, endpoints, networks and applications.</p><p>But those controls ultimately surround something even more important:</p><p class="lfu-emphasis">The confidential client information, legal documents and intellectual property entrusted to the firm.</p><p>FileFlex Enterprise extends Zero Trust directly to that data, providing granular access control to files and folders across existing storage environments.</p></div><figure class="lfu-graphic"><img src="/images/law-firms-updated/graphic-9.webp" alt="Complete Zero Trust security at the legal data layer" loading="lazy" decoding="async" /></figure></div></section>
+    <section class="lfu-final"><div class="lfu-final__backdrop"></div><div class="lfu-shell lfu-final__content"><p class="lfu-eyebrow lfu-eyebrow--light">Protect client information without rebuilding your infrastructure</p><h2>Your Client Data Is Already There. Secure Access to It.</h2><p>Your firm's client information is already distributed across storage systems, offices and legal workflows.</p><p>You shouldn't have to move it all somewhere else to secure it.</p><p>FileFlex Enterprise adds Zero Trust Data Access across your existing environment, helping legal teams securely access and collaborate on confidential client information while preserving the infrastructure and workflows they already use.</p><a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request a Law Firm Demonstration</a></div></section>
+  </main>
 </Layout>
