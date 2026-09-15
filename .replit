@@ -73,7 +73,6 @@ externalPort = 3002
 
 [deployment]
 deploymentTarget = "autoscale"
-publicDir = "dist"
 build = ["sh", "-c", "npm run lint:links && npm run build"]
 run = ["npm", "run", "start"]
 
