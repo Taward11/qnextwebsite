@@ -1,0 +1,107 @@
+---
+const controls = [
+  { label: 'View', state: 'allowed' },
+  { label: 'Download', state: 'restricted' },
+  { label: 'Share', state: 'restricted' },
+  { label: 'Edit', state: 'allowed' },
+  { label: 'Upload', state: 'allowed' },
+];
+
+const capabilities = [
+  { label: 'View Only', icon: 'eye' },
+  { label: 'No Download', icon: 'download', restricted: true },
+  { label: 'No Share', icon: 'share', restricted: true },
+  { label: 'Edit', icon: 'edit' },
+  { label: 'Upload', icon: 'upload' },
+  { label: 'Expiration', icon: 'clock' },
+  { label: 'User & Group Controls', icon: 'users' },
+];
+---
+
+<section class="permissions-panel" aria-labelledby="permissions-title">
+  <div class="permissions-panel__shell">
+    <div class="permissions-panel__copy">
+      <p class="permissions-panel__eyebrow">Protected Client Data</p>
+      <h2 id="permissions-title">Maintain Control of Sensitive Client Information</h2>
+      <p>Accounting and consulting firms handle some of their clients’ most sensitive information—from financial and tax records to PII, intellectual property and transaction documents.</p>
+      <p>FileFlex Enterprise applies granular access controls to that information while it remains in existing customer-controlled storage.</p>
+    </div>
+
+    <div class="permissions-panel__visual" role="group" aria-label="Illustrative client folder and permission settings">
+      <article class="client-folder">
+        <div class="client-folder__topline">
+          <span>Client: ACME Corporation</span>
+          <span>2026 Audit &amp; Advisory</span>
+        </div>
+        <div class="client-folder__heading">
+          <svg viewBox="0 0 32 26" aria-hidden="true"><path d="M2 6.5h10.2l2.8 3.1H30v13.1a1.8 1.8 0 0 1-1.8 1.8H3.8A1.8 1.8 0 0 1 2 22.7z"/><path d="M2 6.5a1.8 1.8 0 0 1 1.8-1.8h8l3 3.2"/></svg>
+          <span>Client Financial Records</span>
+        </div>
+        <ul class="client-folder__documents">
+          <li><span class="document-mark"></span>Financial Statements.pdf</li>
+          <li><span class="document-mark"></span>Tax Records.xlsx</li>
+          <li><span class="document-mark"></span>Transaction Documents</li>
+          <li><span class="document-mark"></span>Confidential Client Records</li>
+        </ul>
+      </article>
+
+      <aside class="access-control" aria-label="Illustrative permission settings">
+        <p class="access-control__title">Control What Users Can Do</p>
+        <ul>
+          {controls.map((control) => <li class:list={{ restricted: control.state === 'restricted' }}>
+            {control.state === 'allowed'
+              ? <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 10.3 3.5 3.5L16 5.5"/></svg>
+              : <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>}
+            <span>{control.label}</span>
+          </li>)}
+        </ul>
+        <div class="access-control__expiry">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.1"/><path d="M10 6v4.3l2.8 1.8"/></svg>
+          <span>Expires: Sep. 30</span>
+        </div>
+        <p class="access-control__team"><strong>Access:</strong> Audit Engagement Team</p>
+      </aside>
+    </div>
+  </div>
+
+  <div class="permissions-panel__strip">
+    <div class="permissions-panel__strip-inner">
+      <p>Granular Access Controls</p>
+      <ul>
+        {capabilities.map((capability) => <li class:list={{ restricted: capability.restricted }}>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            {capability.icon === 'eye' && <><path d="M2.5 12s3.4-5 9.5-5 9.5 5 9.5 5-3.4 5-9.5 5-9.5-5-9.5-5Z"/><circle cx="12" cy="12" r="2.1"/></>}
+            {capability.icon === 'download' && <><path d="M12 3v11M8 10l4 4 4-4M4 18h16"/><path d="m5 5 14 14"/></>}
+            {capability.icon === 'share' && <><circle cx="6" cy="12" r="2.1"/><circle cx="17.5" cy="6" r="2.1"/><circle cx="17.5" cy="18" r="2.1"/><path d="m7.9 10.9 7.7-3.8M7.9 13.1l7.7 3.8"/><path d="m5 5 14 14"/></>}
+            {capability.icon === 'edit' && <><path d="m5 16.8-.8 3 3-.8L18 8.2l-2.2-2.2zM14.6 5.8l2.2 2.2"/><path d="M4 21h16"/></>}
+            {capability.icon === 'upload' && <><path d="M12 15V4M8 8l4-4 4 4M4 18h16"/></>}
+            {capability.icon === 'clock' && <><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3.4 2"/></>}
+            {capability.icon === 'users' && <><circle cx="9" cy="8" r="3"/><path d="M3.5 19c.4-3.2 2.2-5 5.5-5s5.1 1.8 5.5 5M16.5 5.5a2.7 2.7 0 0 1 0 5.1M16.8 14.2c2 .4 3.2 1.9 3.6 4.2"/></>}
+          </svg>
+          <span>{capability.label}</span>
+        </li>)}
+      </ul>
+    </div>
+  </div>
+  <p class="permissions-panel__statement">Give users access to the information they need—not everything around it.</p>
+</section>
+
+<style>
+  .permissions-panel{background:linear-gradient(120deg,#062b49 0%,#0a3d60 100%);color:#f7fbfc;overflow:hidden}
+   .permissions-panel__shell{width:min(1180px,90vw);margin:auto;padding:102px 0 88px;display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:48px;align-items:center}
+  .permissions-panel__copy{max-width:630px}.permissions-panel__eyebrow{margin:0 0 18px;color:#fff;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;border-left:3px solid #e8590a;padding-left:11px}
+  .permissions-panel h2{margin:0 0 22px;font-size:clamp(34px,4.1vw,52px);line-height:1.07;letter-spacing:-.046em;color:#fff}
+  .permissions-panel__copy>p:not(.permissions-panel__eyebrow){margin:0 0 16px;color:#d2e1e9;font-size:16px;line-height:1.73}
+   .permissions-panel__visual{position:relative;padding-top:12px}
+  .client-folder{position:relative;background:#f6fafb;color:#12364d;border:1px solid rgba(166,207,221,.55);border-radius:5px;padding:23px 21px 20px;box-shadow:0 20px 45px rgba(0,19,34,.31)}
+  .client-folder:before{content:"";position:absolute;left:20px;top:-8px;width:153px;height:9px;background:#e4f0f4;border-radius:4px 4px 0 0}
+  .client-folder__topline{padding-bottom:17px;border-bottom:1px solid #d4e4ea;display:flex;justify-content:space-between;gap:12px;font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#587688}
+  .client-folder__heading{display:flex;align-items:center;gap:10px;padding:20px 0 16px;font-size:16px;font-weight:800}.client-folder__heading svg{width:29px;fill:#e8590a;stroke:#bd4206;stroke-width:1.3}
+  .client-folder__documents{padding:0;margin:0;list-style:none;border-top:1px solid #dce8ed}.client-folder__documents li{display:flex;align-items:center;gap:9px;padding:11px 3px;border-bottom:1px solid #dce8ed;font-size:12px;font-weight:650}.document-mark{width:11px;height:14px;display:block;border:1.5px solid #7192a3;border-radius:1px;position:relative}.document-mark:after{content:"";position:absolute;left:2px;right:2px;bottom:3px;border-top:1px solid #7192a3}
+   .access-control{position:relative;width:85%;margin:-8px -10px 0 auto;padding:18px 17px 15px;background:#fff;color:#183d54;border-radius:4px;border-top:3px solid #e8590a;box-shadow:0 18px 36px rgba(0,20,35,.35)}
+  .access-control__title{margin:0 0 13px;font-size:10px;line-height:1.35;font-weight:850;text-transform:uppercase;letter-spacing:.09em}.access-control ul{padding:0 0 11px;margin:0;list-style:none;border-bottom:1px solid #d8e5ea}.access-control li,.access-control__expiry{display:flex;align-items:center;gap:7px;margin:7px 0;font-size:11px;font-weight:750}.access-control li svg{width:14px;height:14px;fill:none;stroke:#15956d;stroke-width:2.4;stroke-linecap:round}.access-control li.restricted{color:#c54c0e}.access-control li.restricted svg{stroke:#e8590a}.access-control__expiry{margin:12px 0 11px;color:#587384}.access-control__expiry svg{width:14px;height:14px;fill:none;stroke:#6d8998;stroke-width:1.8}.access-control__team{margin:0;padding-top:10px;border-top:1px solid #d8e5ea;font-size:10px;line-height:1.45;color:#527082}.access-control__team strong{color:#1d4157}
+  .permissions-panel__strip{border-top:1px solid rgba(183,217,230,.2);border-bottom:1px solid rgba(183,217,230,.2);background:rgba(1,26,45,.2)}.permissions-panel__strip-inner{width:min(1180px,90vw);margin:auto;padding:27px 0 26px;display:grid;grid-template-columns:180px 1fr;gap:25px;align-items:center}.permissions-panel__strip p{margin:0;color:#b9d1dd;font-size:10px;font-weight:850;letter-spacing:.14em;line-height:1.45;text-transform:uppercase}.permissions-panel__strip ul{padding:0;margin:0;list-style:none;display:grid;grid-template-columns:repeat(7,1fr);gap:9px}.permissions-panel__strip li{display:grid;justify-items:center;gap:8px;color:#d5e4ea;font-size:9px;font-weight:800;letter-spacing:.055em;line-height:1.25;text-align:center;text-transform:uppercase}.permissions-panel__strip svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round}.permissions-panel__strip li.restricted{color:#e8590a}.permissions-panel__statement{width:min(1180px,90vw);margin:0 auto;padding:40px 0 45px;color:#fff;font-size:clamp(21px,2.5vw,31px);font-weight:730;line-height:1.24;letter-spacing:-.028em;text-align:center}
+   .access-control ul{display:grid;grid-template-columns:1fr 1fr;column-gap:14px}
+   @media(max-width:900px){.permissions-panel__shell{grid-template-columns:1fr;gap:43px;padding:78px 0 62px}.permissions-panel__copy{max-width:720px}.permissions-panel__visual{width:min(100%,530px);justify-self:center}.permissions-panel__strip-inner{grid-template-columns:1fr;gap:19px}.permissions-panel__strip p{text-align:center}.permissions-panel__strip ul{grid-template-columns:repeat(4,1fr);row-gap:23px}}
+   @media(max-width:560px){.permissions-panel__shell{padding:66px 0 51px}.client-folder{padding:19px 15px 16px}.client-folder__topline{font-size:9px;flex-wrap:wrap}.client-folder__heading{font-size:14px;padding:16px 0 13px}.client-folder__documents li{font-size:12px;padding:9px 2px}.access-control{width:90%;margin-right:0;padding:15px 14px}.permissions-panel__strip ul{grid-template-columns:repeat(2,1fr);gap:20px 12px}.permissions-panel__statement{padding:34px 0 38px;text-align:left}.permissions-panel h2{font-size:34px}}
+</style>
