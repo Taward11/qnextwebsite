@@ -3,92 +3,60 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import '../styles/fileflex.css';
 import '../styles/platform.css';
-import '../styles/financial.css';
 import '../styles/accounting.css';
 
-const rows = [
-  {
-    title: 'Unified Secure Access Within Windows of Any Storage Location',
-    img: '/images/accounting/ip-LF-Panel1-web-e1777321165129-1024x507.jpg',
-    body: `Like most organizations today, financial firms have vast amounts of unstructured data located on thousands of devices and in multiple offices. FileFlex Enterprise unifies the access of all locations from within Windows where they act as though they are on local drives. The files can be located on servers, server-attached, network-attached or storage of individual PCs, cloud-hosted storage of Amazon, Azure, Google, OneDrive or Box, or both self-hosted or Microsoft-hosted implementations of SharePoint.`,
-  },
-  {
-    title: 'Protect Personally Identifiable Information',
-    img: '/images/accounting/ip-LF-Panel2-web-e1734469679436-1024x577.jpg',
-    body: `Financial firms are trusted with the most sensitive Personally Identifiable Information and confidential data that their clients have. And their clients trust them to keep that information protected. FileFlex Enterprise uses a Zero Trust Data Access architecture and extensive security controls over remote access and sharing of these files. That includes the ability to restrict sharing and access of PII and sensitive financial information to ‘access-only’ (no sharing) and ‘view-only’ (no downloading). PII can even be stored, access and shared from on-premises storage where it is not subject to secret legalized access and exfiltration from third parties, law enforcement, and foreign powers via the CLOUD Act.`,
-  },
-  {
-    title: 'Share With Clients Even if They Are Not Technology Savvy',
-    img: '/images/accounting/ip-LF-Panel3-web-1024x1024.jpg',
-    body: `Often financial information needs to be shared with clients who might not be technology savvy. For infrequent use, FileFlex Enterprise allows clients to access via a simple user app from within their browser that is easy and intuitive to use even for users that are not tech-savvy. Clients that need heavy access can use the Windows Integrated Client and access storage locations as if they are on a local drive within Windows with no learning curve.`,
-  },
-  {
-    title: 'Create Secure and Private Virtual Data Rooms on a Client-by-Client Basis',
-    img: '/images/accounting/ip-LF-Panel4-web-1024x1007.jpg',
-    body: `The best way to receive and provide information to clients is via virtual data rooms. FileFlex Enterprise allows each financial firm user to easily set up and provide access to an unlimited number of virtual data rooms – one or more per client with many guests having access as required. Guest access can be restricted on a person-by-person basis with some or all can be access-controlled with ‘No downloading’ or ‘No sharing’ as needed. Users can track every access and every activity of every guest in their activity log.`,
-  },
-  {
-    title: 'Control Remote Access to Sensitive Financial Information',
-    img: '/images/accounting/ip-LF-Panel5-web-1024x891.jpg',
-    body: `Clients expect financial organizations to govern and control access to their information. FileFlex Enterprise has extensive governance abilities and an IT management toolkit to control access and sharing of any and all unstructured data including financial information and an activity log with alerts that can be exported to SIEM software and be used to flag suspicious behavior or to aid in forensic investigation to support the firm’s needs to meet professional standards and privacy regulations.`,
-  },
+const engagements = [
+  ['Audit & Assurance', 'Provide engagement teams and authorized clients controlled access to financial statements, working documents and supporting information.', 'engagement-audit.webp'],
+  ['Tax & Advisory', 'Securely access and exchange sensitive financial, tax and personally identifiable information with clients.', 'engagement-tax.webp'],
+  ['Consulting Engagements', 'Give project teams controlled access to client information and working documents across the lifecycle of an engagement.', 'engagement-consulting.webp'],
+  ['M&A & Due Diligence', 'Create secure virtual data rooms for transactions, due diligence and other confidential projects without moving information into another storage platform.', 'engagement-ma.webp'],
+  ['External Specialists', 'Provide lawyers, accountants, contractors and other outside advisors access only to the files and folders required for their work.', 'engagement-specialists.webp'],
+  ['Client Portals', 'Give clients an intuitive way to securely access and exchange documents while the firm maintains centralized control.', 'engagement-portal.webp'],
 ];
-
-const blogs = [
-  { title: 'Zero Trust for FFIEC Compliance: Why ZTDA Is the Missing Link', blurb: 'Modernize compliance with Zero Trust for FFIEC guidelines. The FFIEC Cybersecurity Assessment Tool outlines critical requirements for data protection—especially in “Domain 5: Data […]', img: '/images/accounting/iStock-537743911-web-e1731689756904-400x300.jpg', href: '/blog/meeting-ffiec-guidelines-using-zero-trust-data-access/' },
-  { title: 'Advantages of Zero Trust Virtual Data Rooms for Banks and Credit Unions', blurb: 'Zero Trust Virtual Data Rooms provide banks and credit unions with a secure, compliant, and efficient way to manage sensitive client interactions, […]', img: '/images/accounting/iStock-1296691609-web-e1731086221645-400x300.jpg', href: '/blog/advantages-of-zero-trust-virtual-data-rooms-for-banks-and-credit-unions/' },
-  { title: 'Supporting Financial Services Cybersecurity Through Zero Trust Data Access', blurb: 'Financial services cybersecurity is strengthened through the adoption of Zero Trust Data Access (ZTDA) which enhances data security and regulatory compliance, protecting […]', img: '/images/accounting/Data-Sovereignty-2-e1730312868476-400x300.jpg', href: '/blog/supporting-financial-services-cybersecurity-through-zero-trust-data-access/' },
-  { title: 'Zero Trust for GLBA Compliance: File-Level Data Protection', blurb: 'Zero Trust for GLBA Compliance starts at the data level. GLBA requires financial institutions to safeguard customer data under its Safeguards Rule. Traditional […]', img: '/images/accounting/sociale-media-social-network-multimedia-online-P4H8N5F-e1733239547217-400x300.jpg', href: '/blog/strengthening-glba-compliance-with-zero-trust-data-access/' },
-  { title: 'Zero Trust Cybersecurity for Credit Unions', blurb: 'Zero Trust cybersecurity for credit unions must go beyond network control. Zero Trust Data Access (ZTDA), protects sensitive member data at the file […]', img: '/images/accounting/enterprise-people-400x300.jpg', href: '/blog/strengthening-credit-union-cybersecurity-through-zero-trust-data-access/' },
-  { title: 'DORA Compliance for File Sharing, Access and Collaboration Using Zero Trust Data Access', blurb: 'DORA compliance for file sharing, access and collaboration necessitates the implementation of Zero Trust Data Access (ZTDA). ZTDA has stringent security measures […]', img: '/images/accounting/Supports-Privacy-by-Design-Mandates--e1704482747769-400x300.jpg', href: '/blog/dora-compliance-for-file-sharing-access-and-collaboration-using-zero-trust-data-access/' },
+const benefits = [
+  ['Protect Client Confidentiality', 'Apply granular controls to sensitive client information at the file and folder level.', 'shield'],
+  ['Simplify External Collaboration', 'Give clients and outside participants secure access without exposing the underlying storage infrastructure.', 'users'],
+  ['Keep Data in Place', 'Extend controlled access across existing repositories without migrating information into another storage platform.', 'storage'],
+  ['Maintain Visibility', 'Activity logging provides visibility into access and sharing actions across FileFlex-controlled data access.', 'eye'],
+  ['Support Existing Workflows', 'Give authorized users secure access to existing information without forcing the organization to replace its underlying storage infrastructure.', 'workflow'],
+  ['Strengthen Zero Trust', 'Extend Zero Trust beyond identities, endpoints, applications and networks to the data itself.', 'lock'],
 ];
+const graphic = (file: string) => `/images/accounting-consulting-updated/${file}`;
 ---
+<Layout title="Zero Trust Data Access for Accounting & Consulting Firms | FileFlex" description="FileFlex Enterprise helps accounting and consulting firms keep client data confidential across existing storage and familiar workflows.">
+  <Nav />
+  <main>
+    <section class="acu-hero" aria-labelledby="acu-title"><div class="acu-shell acu-hero__copy">
+      <p class="acu-eyebrow acu-eyebrow--light">Accounting &amp; Consulting</p>
+      <h1 id="acu-title">Protect Client Data Wherever the Work Happens</h1>
+      <p>Give employees, clients and external collaborators secure, controlled access to confidential information across existing storage—without moving the data.</p>
+      <p>FileFlex Enterprise extends Zero Trust to the data layer, giving accounting and consulting firms centralized control over who can access client information and what they can do with it.</p>
+      <a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request a Demo</a>
+    </div></section>
 
-<Layout title="Financial Services — Secure and Controlled Access to Confidential Client Information | FileFlex" description="FileFlex Enterprise gives accounting and consulting firms unified, Zero Trust Data Access to client information across Windows, with virtual data rooms and full IT control.">
-<Nav />
+    <section class="acu-section acu-section--mist"><div class="acu-shell acu-split">
+      <div class="acu-copy"><p class="acu-eyebrow">Client data reality</p><h2>Client Data Is Everywhere. Access Needs to Remain Controlled.</h2><p>Accounting and consulting firms operate across clients, offices, practices, project teams and external partners. Confidential information may reside across Windows file servers, NAS, SharePoint, cloud storage, FTP and private or hybrid infrastructure.</p><p>At the same time, employees need remote access, clients need to exchange documents, and outside specialists may need temporary access to specific information.</p><p class="acu-emphasis">The challenge isn't simply sharing files. It's controlling access to client data wherever that data resides.</p></div>
+      <figure class="acu-graphic"><img src={graphic('graphic-1.webp')} alt="Controlled access to distributed client data" loading="lazy" decoding="async" /></figure>
+    </div></section>
 
-<section id="acc-hero" aria-labelledby="acc-hero-heading">
-  <div class="acc-hero__inner">
-    <p class="acc-hero__eyebrow">FINANCIAL SERVICES</p>
-    <h1 id="acc-hero-heading" class="acc-hero__title">Secure and Controlled Access to Confidential Client Information</h1>
-  </div>
-</section>
+    <section class="acu-section acu-section--white"><div class="acu-shell acu-split">
+      <div class="acu-copy"><p class="acu-eyebrow">Every engagement</p><h2>Secure Collaboration Across Every Client Engagement</h2><p>From routine client services to highly sensitive transactions, professional-services firms need to give the right people access to the right information—without creating unnecessary copies or exposing underlying storage infrastructure.</p></div>
+      <figure class="acu-graphic"><img src={graphic('visual-2.webp')} alt="Professional services collaboration" loading="lazy" decoding="async" /></figure>
+    </div><div class="acu-shell acu-engagements">{engagements.map(([title, text, image]) => <article><img src={graphic(image)} alt="" loading="lazy" decoding="async" /><div><h3>{title}</h3><p>{text}</p></div></article>)}</div></section>
 
-<section id="fin-body" class="fin-body" aria-label="Financial services use cases">
-  <div class="fin-body__inner">
-    {rows.map((r, i) => (
-      <>
-        <div class="fin-block fin-row">
-          <div class="fin-row__media">
-            <img src={r.img} alt={r.title} loading="lazy" decoding="async" />
-          </div>
-          <div class="fin-row__copy">
-            <h2 class="fin-h2">{r.title}</h2>
-            <p class="fin-p">{r.body}</p>
-          </div>
-        </div>
-        {i < rows.length - 1 && <hr class="fin-sep" />}
-      </>
-    ))}
-  </div>
-</section>
+    <section class="acu-section acu-section--tint"><div class="acu-shell acu-split">
+      <figure class="acu-graphic"><img src={graphic('graphic-3.webp')} alt="Move governance, not data" loading="lazy" decoding="async" /></figure>
+      <div class="acu-copy"><p class="acu-eyebrow">Existing storage</p><h2>Protect Client Data Without Moving It</h2><p>Traditional collaboration platforms can require organizations to upload, copy or synchronize information into another repository before it can be remotely accessed or shared externally.</p><p>FileFlex takes a different approach.</p><p class="acu-emphasis">Data stays in place.</p><p>FileFlex Enterprise provides a secure access layer across existing storage infrastructure. There is no need to migrate client information into a FileFlex repository or create another storage silo.</p><p class="acu-list">Windows File Servers • NAS • SharePoint • Cloud Storage • FTP • Private &amp; Hybrid Infrastructure</p><p>Your firm maintains its existing storage architecture while FileFlex governs access to the data.</p></div>
+    </div></section>
 
-<section id="fin-blogs" class="fin-section fin-section--white" aria-labelledby="acc-blogs-heading">
-  <div class="fin-section__inner">
-    <h2 id="acc-blogs-heading" class="fin-h2 fin-h2--center">Check Out These Related Blogs</h2>
-    <div class="fin-blog-grid">
-      {blogs.map((b) => (
-        <a class="fin-blog" href={b.href} target="_blank" rel="noopener noreferrer">
-          <img class="fin-blog__img" src={b.img} alt="" loading="lazy" decoding="async" width="400" height="300" />
-          <div class="fin-blog__body">
-            <h3 class="fin-blog__title">{b.title}</h3>
-            <p class="fin-blog__blurb">{b.blurb}</p>
-            <span class="fin-blog__more">Read more →</span>
-          </div>
-        </a>
-      ))}
-    </div>
-  </div>
-</section>
+    <section class="acu-section acu-section--navy"><div class="acu-shell acu-controls"><div><p class="acu-eyebrow acu-eyebrow--light">Granular permissions</p><h2>Maintain Control of Sensitive Client Information</h2><p>Accounting and consulting firms routinely handle financial records, tax information, personally identifiable information, intellectual property, transaction documents and other confidential client data.</p><p>FileFlex Enterprise allows firms to apply granular access controls to that information while keeping it within existing customer-controlled storage environments.</p></div><div class="acu-control-box"><h3>Control What Users Can Do</h3><p class="acu-control-list">View Only <i>•</i> No Download <i>•</i> No Share <i>•</i> Edit <i>•</i> Upload <i>•</i> Expiration <i>•</i> User &amp; Group Controls</p><p>Access can be restricted to individual files and folders, helping firms provide users with only the information required for a particular client, project or engagement.</p></div></div></section>
 
+    <section class="acu-section acu-section--white"><div class="acu-shell acu-split"><div class="acu-copy"><p class="acu-eyebrow">Secure client workspaces</p><h2>Turn Existing Client Data Into Secure Virtual Data Rooms</h2><p>Client engagements, audits, transactions and due diligence frequently require firms to provide outside participants with controlled access to confidential information.</p><p>FileFlex Enterprise enables firms to create secure virtual data rooms without uploading that information into a separate VDR repository.</p><p>Authorized clients, advisors and project participants can access the information they need while the firm controls what they are permitted to do with it.</p><p class="acu-emphasis">The data stays in its existing repository. FileFlex governs access to it.</p></div><figure class="acu-graphic"><img src={graphic('graphic-4.webp')} alt="Secure client virtual data room" loading="lazy" decoding="async" /></figure></div></section>
+    <section class="acu-section acu-section--tint"><div class="acu-shell acu-split"><figure class="acu-graphic"><img src={graphic('graphic-5.webp')} alt="How client data access works" loading="lazy" decoding="async" /></figure><div class="acu-copy"><p class="acu-eyebrow">Policy enforced</p><h2>How Secure Client Data Access Works</h2><p>FileFlex Enterprise separates users from the underlying storage infrastructure. Users request information through FileFlex, access policies are evaluated, and only authorized data is retrieved.</p></div></div></section>
+    <section class="acu-section acu-section--white"><div class="acu-shell acu-split"><figure class="acu-graphic"><img src={graphic('graphic-6.webp')} alt="Centralized governance and distributed engagements" loading="lazy" decoding="async" /></figure><div class="acu-copy"><p class="acu-eyebrow">Governance at scale</p><h2>Centralized Governance. Distributed Client Engagements.</h2><p>Large accounting and consulting organizations often operate across multiple practices, offices, business units and client teams.</p><p>Corporate IT needs centralized governance and visibility, while authorized administrators need the flexibility to manage access for their own users, clients and engagements.</p><p>FileFlex Enterprise supports both.</p><p>Corporate IT can establish centralized policies and maintain visibility across the organization, while access can be administered closer to the individual practice, office or engagement.</p></div></div></section>
+    <section class="acu-section acu-section--tint"><div class="acu-shell acu-split"><div class="acu-copy"><p class="acu-eyebrow">The data layer</p><h2>Extend Zero Trust to Client Data</h2><p>Accounting and consulting firms have invested in identity, MFA, endpoint security and secure network access.</p><p>But verifying identity and securing a connection do not by themselves determine which individual files an authorized user should be permitted to access—or what that user should be permitted to do with them.</p><p class="acu-emphasis">FileFlex Enterprise extends Zero Trust to the data layer.</p></div><figure class="acu-graphic"><img src={graphic('graphic-7.webp')} alt="Complete Zero Trust at the data layer" loading="lazy" decoding="async" /></figure></div></section>
+
+    <section class="acu-section acu-section--mist"><div class="acu-shell"><div class="acu-center"><p class="acu-eyebrow">Professional services</p><h2>Zero Trust Data Access for Professional Services</h2></div><div class="acu-benefits">{benefits.map(([title, text, icon]) => <article><svg viewBox="0 0 48 48" aria-hidden="true"><use href={`/images/accounting-consulting-updated/icons.svg#${icon}`}></use></svg><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
+    <section class="acu-final"><div class="acu-final__veil"></div><div class="acu-shell acu-final__content"><p class="acu-eyebrow acu-eyebrow--light">FileFlex Enterprise</p><h2>Protect Client Data Without Changing Where It Lives</h2><p>Your clients trust you with some of their most sensitive information.</p><p>FileFlex Enterprise helps accounting and consulting firms protect that trust by extending Zero Trust directly to the data at the center of every client engagement.</p><p class="acu-final__line">Control access. Simplify collaboration. Keep data in place.</p><a class="pf-btn pf-btn--lg pf-btn--uppercase" href="/demo-request/">Request an Accounting &amp; Consulting Demo</a></div></section>
+  </main>
 </Layout>
