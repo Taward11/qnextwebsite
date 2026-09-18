@@ -41,8 +41,8 @@ const graphic = (file: string) => `/images/accounting-consulting-updated/${file}
     </div></section>
 
     <section class="acu-section acu-section--white"><div class="acu-shell acu-split">
-      <div class="acu-copy"><p class="acu-eyebrow">Every engagement</p><h2>Secure Collaboration Across Every Client Engagement</h2><p>From routine client services to highly sensitive transactions, professional-services firms need to give the right people access to the right information—without creating unnecessary copies or exposing underlying storage infrastructure.</p></div>
       <figure class="acu-graphic"><img src={graphic('visual-2.webp')} alt="Professional services collaboration" loading="lazy" decoding="async" /></figure>
+      <div class="acu-copy"><p class="acu-eyebrow">Every engagement</p><h2>Secure Collaboration Across Every Client Engagement</h2><p>From routine client services to highly sensitive transactions, professional-services firms need to give the right people access to the right information—without creating unnecessary copies or exposing underlying storage infrastructure.</p></div>
     </div><div class="acu-shell acu-engagements">{engagements.map(([title, text, image]) => <article><img src={graphic(image)} alt="" loading="lazy" decoding="async" /><div><h3>{title}</h3><p>{text}</p></div></article>)}</div></section>
 
     <section class="acu-section acu-section--tint"><div class="acu-shell acu-split">
