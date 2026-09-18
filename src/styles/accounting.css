@@ -1,5 +1,6 @@
 :root{--acu-navy:#062b49;--acu-ink:#132f45;--acu-soft:#526b7b;--acu-orange:#eb5b16;--acu-mist:#f1f6f7;--acu-line:#d4e0e6}
 .acu-graphic:has(img[src$="/graphic-5.webp"]){width:min(100%,320px);justify-self:center}
+.acu-graphic:has(img[src$="/graphic-6.webp"]){width:min(100%,400px);justify-self:center}
 @media(min-width:721px){
   .acu-split:has(img[src$="/graphic-5.webp"]) > .acu-copy{max-width:380px}
 }
