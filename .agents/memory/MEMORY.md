@@ -13,3 +13,4 @@
 - [Ad-blocker class-name collisions](ad-blocker-class-collisions.md) — uBlock/Brave cosmetic filters auto-hide elements with `gdpr-*`, `cookie-*`, `consent-*`, `banner-*`, `popup-*`, `newsletter-*` class prefixes; pick neutral prefixes (e.g. `zp-*`, `pf-*`, `tf-*`).
 - [Lending assessment tool](lending-assessment-tool.md) — /secure-lending-assessment/ overall normalized to /100 from a 105-pt max (spec's "67/100" is raw pts); email/PDF via Cloudflare Pages Function (functions/) + Resend, client-side jsPDF.
 - [ZT assessment report](zt-assessment-report.md) — /zero-trust-maturity-assessment/ has short (on-screen/email) vs detailed (PDF) text arrays, index-aligned; canonical PDF report format DOES show per-category scores.
+- [Mobile viewport overflow](mobile-viewport-overflow.md) — off-screen fixed navigation may originate from overflowing page content, not the navigation itself.
