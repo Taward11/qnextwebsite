@@ -5,9 +5,8 @@ description: "Qnext announces a strategic partnership with Service Credit Union 
 excerpt: "Qnext announces a strategic partnership with Service Credit Union and an investment from Service Ventures, complementing the lead investment from Ascent Capital Partners in its US $8 million rolling financing."
 date: 2026-09-24
 modified: 2026-09-24
-featuredImage: "/images/news/qnext-service-credit-union-ascent-capital/qnext-logo.png"
-featuredImageAlt: "Qnext"
-heroSize: small
+featuredImage: "/images/news/qnext-service-credit-union-ascent-capital/partnership-meeting.webp"
+featuredImageAlt: "AI-generated illustrative photograph of business professionals discussing a strategic financial-services partnership"
 readingTime: "4 min read"
 categories:
   - "News"
