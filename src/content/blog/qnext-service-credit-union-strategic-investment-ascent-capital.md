@@ -26,7 +26,9 @@ Ascent Capital, with offices in Arizona and Texas, has funded over US $2 million
 
 Service Credit Union is now preparing to broaden the platform’s reach and functionality, to further enhance data security for both employees and members across its global network. This initiative positions FileFlex Enterprise as a rare cybersecurity solution operating at consumer-scale within a heavily regulated environment. Service Credit Union has also joined as a strategic investor and platform partner, collaborating on product direction and supporting Qnext’s expansion across a network of over 3,000 credit unions in the United States.
 
-> “FileFlex provides a unique capability that we don’t typically see in data security solutions: it strengthens protection of sensitive information while making it easier for teams to share and collaborate, both internally and with external recipients,” said **Alexander Laham, AVP of Enterprise Risk and Security at Service Credit Union.**
+<blockquote class="news-pullquote">
+<p>“FileFlex provides a unique capability that we don’t typically see in data security solutions: it strengthens protection of sensitive information while making it easier for teams to share and collaborate, both internally and with external recipients,” said <strong>Alexander Laham, AVP of Enterprise Risk and Security at Service Credit Union.</strong></p>
+</blockquote>
 
 “Our investment reflects both confidence in the technology and our commitment to helping bring this capability to the broader credit union ecosystem.”
 
