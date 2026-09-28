@@ -603,6 +603,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"qnext-service-credit-union-strategic-investment-ascent-capital.md": {
+	id: "qnext-service-credit-union-strategic-investment-ascent-capital.md";
+  slug: "qnext-service-credit-union-strategic-investment-ascent-capital";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "ransomware-unstructured-data-double-trouble.md": {
 	id: "ransomware-unstructured-data-double-trouble.md";
   slug: "ransomware-unstructured-data-double-trouble";
