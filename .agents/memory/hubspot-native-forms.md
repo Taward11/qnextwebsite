@@ -57,3 +57,11 @@ A common pattern is `form.style.display = 'none'; setStatus('Thanks!', 'ok')`. I
 
 `subscriptionTypeId` for each consent checkbox comes from the form's JSON schema at
 `https://forms-na1.hsforms.com/embed/v3/form/{portal}/{form}/json` (look inside `metaData[].legalConsentOptions`).
+
+## Company association
+
+The user confirmed enabling HubSpot's built-in **Create and associate companies with contacts** setting. The choice about retroactive processing was not independently confirmed.
+
+**Why:** Company creation and domain-based contact matching should use HubSpot's native automation rather than duplicate website logic.
+
+**How to apply:** Check the native association behavior before adding custom company creation. Do not assume company-name matching or that personal-email submissions can be associated without a website value.
