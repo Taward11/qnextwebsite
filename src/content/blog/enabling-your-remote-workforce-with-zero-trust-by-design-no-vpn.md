@@ -74,6 +74,5 @@ Finally, FileFlex Enterprise is a low-cost, software-only solution that runs fro
 ## Related Reading
 
 - [Using Zero Trust Architecture (ZTA) to Protect Remote Data Access](/blog/using-zero-trust-architecture-zta-to-protect-remote-data-access/)
-- [Zero Trust Remote Access Protection for Internal Security Threats](/blog/zero-trust-remote-access-helps-protect-data-against-internal-security-threats/)
 - [From VPN Risk to Zero Trust Security: A Smarter Approach to Remote Access](/blog/from-vpn-risk-to-zero-trust-security-a-smarter-approach-to-remote-access/)
 - [FileFlex Enterprise is the Best Alternative to Varonis DatAnywhere](/blog/varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative/)

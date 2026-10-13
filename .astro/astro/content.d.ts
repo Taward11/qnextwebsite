@@ -897,13 +897,6 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"zero-trust-remote-access-helps-protect-data-against-internal-security-threats.md": {
-	id: "zero-trust-remote-access-helps-protect-data-against-internal-security-threats.md";
-  slug: "zero-trust-remote-access-helps-protect-data-against-internal-security-threats";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
 "zero-trust-security-model-must-include-zero-trust-data-access-ztda.md": {
 	id: "zero-trust-security-model-must-include-zero-trust-data-access-ztda.md";
   slug: "zero-trust-security-model-must-include-zero-trust-data-access-ztda";

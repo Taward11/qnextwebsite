@@ -89,6 +89,5 @@ For more reading on Zero Trust Architecture (ZTA) and Zero Trust Data Access (ZT
 ## Related Reading
 
 - [How to Enable Your Remote Workforce with Zero Trust-By-Design](/blog/enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn/)
-- [Zero Trust Remote Access Protection for Internal Security Threats](/blog/zero-trust-remote-access-helps-protect-data-against-internal-security-threats/)
 - [From VPN Risk to Zero Trust Security: A Smarter Approach to Remote Access](/blog/from-vpn-risk-to-zero-trust-security-a-smarter-approach-to-remote-access/)
 - [FileFlex Enterprise is the Best Alternative to Varonis DatAnywhere](/blog/varonis-is-discontinuing-support-for-datanywhere-fileflex-enterprise-is-the-best-alternative/)
