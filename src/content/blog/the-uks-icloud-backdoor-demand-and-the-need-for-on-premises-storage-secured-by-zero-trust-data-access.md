@@ -176,5 +176,4 @@ See also [Revitalizing On-Premises Storage with Zero Trust Data Access](/blog/mo
 
 - [Benefits of Zero Trust Least Privilege Access: 9 Key Reasons](/blog/9-top-reasons-why-your-organization-needs-zero-trust-least-privilege-access/)
 - [8 Benefits of Zero Trust Activity Monitoring](/blog/top-8-reasons-your-organization-needs-zero-trust-activity-tracking/)
-- [AI-Driven Cybercrime at Zettabyte Scale: Why Data Exfiltration Defines Modern Breaches](/blog/ai-driven-cybercrime-at-zettabyte-scale/)
 - [Top 10 Benefits of Restricting Direct Access to the Storage Infrastructure](/blog/top-10-benefits-of-restricting-direct-access-to-the-storage-infrastructure/)

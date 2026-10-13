@@ -197,13 +197,6 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"ai-driven-cybercrime-at-zettabyte-scale.md": {
-	id: "ai-driven-cybercrime-at-zettabyte-scale.md";
-  slug: "ai-driven-cybercrime-at-zettabyte-scale";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
 "anthony-decristofaro-speaks-at-hmg-global-ciso-leadership-summit.md": {
 	id: "anthony-decristofaro-speaks-at-hmg-global-ciso-leadership-summit.md";
   slug: "anthony-decristofaro-speaks-at-hmg-global-ciso-leadership-summit";
