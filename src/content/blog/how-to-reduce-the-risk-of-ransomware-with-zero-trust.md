@@ -114,5 +114,4 @@ To learn more, read [Ransomware + Unstructured Data = Double Trouble](/blog/ran
 
 - [Cyber Defense After the GoAnywhere and MOVEit Breaches](/blog/fortifying-cyber-defense-via-zero-trust-data-access-the-recent-goanywhere-and-moveit-ransomware-breaches/)
 - [How to Protect Your Data with Zero Trust Data Access (ZTDA)](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)
-- [Implement Zero Trust Security, Avoid This Nightmare](/blog/implement-zero-trust-security-avoid-this-nightmare-a-true-account/)
 - [Proposed ZTDA Action Plan for Enterprise](/blog/proposed-ztda-action-plan-for-enterprise/)

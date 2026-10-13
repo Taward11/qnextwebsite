@@ -63,6 +63,5 @@ Copyright © 2022 TAG Cyber LLC
 ## Related Reading
 
 - [How to Protect Your Data with Zero Trust Data Access (ZTDA)](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)
-- [Implement Zero Trust Security, Avoid This Nightmare](/blog/implement-zero-trust-security-avoid-this-nightmare-a-true-account/)
 - [Ransomware + Unstructured Data = Double Trouble](/blog/ransomware-unstructured-data-double-trouble/)
 - [Risks to Unstructured Data](/blog/risks-to-unstructured-data/)

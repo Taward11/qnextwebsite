@@ -498,13 +498,6 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"implement-zero-trust-security-avoid-this-nightmare-a-true-account.md": {
-	id: "implement-zero-trust-security-avoid-this-nightmare-a-true-account.md";
-  slug: "implement-zero-trust-security-avoid-this-nightmare-a-true-account";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
 "key-benefits-of-extending-office-365-with-fileflex-enterprise.md": {
 	id: "key-benefits-of-extending-office-365-with-fileflex-enterprise.md";
   slug: "key-benefits-of-extending-office-365-with-fileflex-enterprise";

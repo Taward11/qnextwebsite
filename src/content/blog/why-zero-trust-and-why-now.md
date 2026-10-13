@@ -81,4 +81,3 @@ For more information on how your organization can adopt Zero Trust, please visit
 - [How to Enable Your Remote Workforce with Zero Trust-By-Design](/blog/enabling-your-remote-workforce-with-zero-trust-by-design-no-vpn/)
 - [How to Protect Your Data with Zero Trust Data Access (ZTDA)](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)
 - [How Zero Trust Security Casts a Wide Net on Spear-Phishers](/blog/how-zero-trust-security-promises-to-cast-a-wide-net-on-spear-phishers/)
-- [Implement Zero Trust Security, Avoid This Nightmare](/blog/implement-zero-trust-security-avoid-this-nightmare-a-true-account/)

@@ -71,6 +71,5 @@ In closing, the FileFlex Enterprise platform provides secure ZTDA based remote d
 ## Related Reading
 
 - [How to Protect Your Data with Zero Trust Data Access (ZTDA)](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)
-- [Implement Zero Trust Security, Avoid This Nightmare](/blog/implement-zero-trust-security-avoid-this-nightmare-a-true-account/)
 - [Proposed ZTDA Action Plan for Enterprise](/blog/proposed-ztda-action-plan-for-enterprise/)
 - [Risks to Unstructured Data](/blog/risks-to-unstructured-data/)

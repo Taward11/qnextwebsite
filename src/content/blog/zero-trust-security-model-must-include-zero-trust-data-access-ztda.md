@@ -97,4 +97,3 @@ Infographics Source[: VentureBeat 2023](https://venturebeat.com/security/the-to
 - [From VPN Risk to Zero Trust Security: A Smarter Approach to Remote Access](/blog/from-vpn-risk-to-zero-trust-security-a-smarter-approach-to-remote-access/)
 - [Zero Trust Data Access as a VPN Alternative](/blog/a-vpn-alternative-zero-trust-data-access/)
 - [How to Protect Your Data with Zero Trust Data Access (ZTDA)](/blog/how-to-protect-your-data-with-zero-trust-data-access-ztda/)
-- [Implement Zero Trust Security, Avoid This Nightmare](/blog/implement-zero-trust-security-avoid-this-nightmare-a-true-account/)
