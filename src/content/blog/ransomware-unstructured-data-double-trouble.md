@@ -35,7 +35,7 @@ Of note, is that only 13 percent of organizations who were attacked ended up _no
 
 “As the greed of cyber miscreants has been fed, ransomware has evolved in sophistication, moving laterally, elevating privileges, actively evading detection, exfiltrating data and leveraging multifaceted extortion. Welcome to digital transformation’s dark side.”
 
-The issue here is that neither unstructured data which is growing in leaps and bounds, nor the cybercriminal is going to go away any time soon. According to cybersecurity expert, Ed Dubrovsky, CISSP, OSCP, “Ransomware has reached what can only be described as digital pandemic levels not seen before and with an extreme focus on unstructured data”.
+The issue here is that neither unstructured data which is growing in leaps and bounds, nor the cybercriminal is going to go away any time soon.
 
 ## Organizations must implement ways to protect unstructured data
 In order to avoid ransomware attacks and others such as the [incident](https://www.bankinfosecurity.com/pfizer-alleges-worker-took-covid-vaccine-other-trade-secrets-a-18014) in November when a rogue employee with Pfizer was successfully able to upload over 12,000 files that included confidential company documents, organizations must implement ways to protect remote access to unstructured data.
