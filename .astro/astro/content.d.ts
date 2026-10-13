@@ -841,13 +841,6 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"why-data-is-now-the-real-target.md": {
-	id: "why-data-is-now-the-real-target.md";
-  slug: "why-data-is-now-the-real-target";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
 "why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access.md": {
 	id: "why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access.md";
   slug: "why-microsoft-centric-security-isnt-enough-the-case-for-zero-trust-data-access";

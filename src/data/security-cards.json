@@ -1,11 +1,6 @@
 {
   "blogs": [
     {
-      "title": "Why Data Is Now the Real Target",
-      "href": "/blog/why-data-is-now-the-real-target/",
-      "thumb": "/images/security/iStock-1280171152-web-1-e1688134925238.webp"
-    },
-    {
       "title": "Zero Trust and Regulatory Compliance",
       "href": "/blog/zero-trust-and-regulatory-compliance/",
       "thumb": "/images/security/Compliance-blog-cover-pic.webp"
